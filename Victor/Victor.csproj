@@ -83,6 +83,18 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="01_View\04_Option\vwOption.Designer.cs" />
+    <Compile Include="02_Dialogue\Form_Msg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_Dialogue\Form_Msg.Designer.cs">
+      <DependentUpon>Form_Msg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="02_Dialogue\form_Textinput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_Dialogue\form_Textinput.Designer.cs">
+      <DependentUpon>form_Textinput.cs</DependentUpon>
+    </Compile>
     <Compile Include="11_Global\GV.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -102,6 +114,12 @@
       <DependentUpon>vwMaint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\04_Option\vwOption.resx" />
+    <EmbeddedResource Include="02_Dialogue\Form_Msg.resx">
+      <DependentUpon>Form_Msg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_Dialogue\form_Textinput.resx">
+      <DependentUpon>form_Textinput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>

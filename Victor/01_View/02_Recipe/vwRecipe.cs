@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Victor._02_Dialogue;
 
 namespace Victor
 {
@@ -30,6 +31,7 @@ namespace Victor
         public void Open()
         {
             m_iPage = 1;
+            _GrpListUp();
             //pnl_Menu.BringToFront();
 
             //vwAdd();
@@ -90,28 +92,30 @@ namespace Victor
 
         private void btnClick_New(object sender, EventArgs e)
         {
-            
             Button mBtn = sender as Button;
             BeginInvoke(new Action(() => mBtn.Enabled = false));
+            string sInput;
 
             string sPath = CGvar.PATH_DEVICE;
 
             try
             {
-                ////using (frmTxt mForm = new frmTxt("New sGroup sName", this))
-                //using (AlphaKeypad mForm = new AlphaKeypad(this.ParentForm))
-                //{
-                //    if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
+                using (form_Textinput mForm = new form_Textinput("New Group Name"))
+                {
+                    if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
 
-                //    if (Directory.Exists(sPath + mForm.Result))
-                //    {
-                //        CMsg.ShowMsg(EMsg.Error, CGvar.GetMsg("ExistGroupName", "sGroup name exist !!!"));
-                //        return;
-                //    }
-                //    sPath = sPath + mForm.Result; //190130  : Device에 New가 되지 않아 수정
-                //    Directory.CreateDirectory(sPath);
-                //    _GrpListUp();
-                //}
+                    sInput = sPath + mForm.Val;
+                    if (Directory.Exists(sPath + mForm.Val))
+                    {
+                        sInput = string.Format("{0} {1} Group name exist !!!", sPath , mForm.Val);
+                        Form_Msg mMsg = new Form_Msg("ExistGroupName", sInput);
+                        mMsg.ShowDialog();
+                        return;
+                    }
+                    sPath = sPath + mForm.Val;
+                    Directory.CreateDirectory(sPath);
+                    //_GrpListUp();
+                }
             }
             catch (Exception ex)
             {
@@ -120,7 +124,30 @@ namespace Victor
             finally
             {
                 BeginInvoke(new Action(() => mBtn.Enabled = true));
-            }            
+            }
+        }
+        private void _GrpListUp()
+        {
+            int iCnt = 0;
+            DirectoryInfo[] aVal;
+
+            if (!Directory.Exists(CGvar.PATH_DEVICE))
+            { Directory.CreateDirectory(CGvar.PATH_DEVICE); }
+
+            lbxM_Grp.Items.Clear();
+            DirectoryInfo mFile = new DirectoryInfo(CGvar.PATH_DEVICE);
+            aVal = mFile.GetDirectories();
+            iCnt = aVal.Length;
+            for (int i = 0; i < iCnt; i++)
+            {
+                lbxM_Grp.Items.Add(aVal[i].Name);
+            }
+
+            lbxM_Grp.ClearSelected();
+            lbxM_Dev.ClearSelected();
+            lbxM_Dev.Items.Clear();
+            m_sGrp = "";
+            m_sDev = "";
         }
 
     }
