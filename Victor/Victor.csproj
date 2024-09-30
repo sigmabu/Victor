@@ -79,6 +79,10 @@
     <Compile Include="01_View\03_Maint\vwMaint.Designer.cs">
       <DependentUpon>vwMaint.cs</DependentUpon>
     </Compile>
+    <Compile Include="01_View\04_Option\vwOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\04_Option\vwOption.Designer.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +100,7 @@
     <EmbeddedResource Include="01_View\03_Maint\vwMaint.resx">
       <DependentUpon>vwMaint.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="01_View\04_Option\vwOption.resx" />
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
