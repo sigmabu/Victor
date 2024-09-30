@@ -83,6 +83,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="01_View\04_Option\vwOption.Designer.cs" />
+    <Compile Include="11_Global\GV.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +149,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="01_View\02_Recipe\01_Gerber\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

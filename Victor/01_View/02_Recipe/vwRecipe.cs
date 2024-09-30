@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,12 @@ namespace Victor
 {
     public partial class vwRecipe : UserControl
     {
+        public delegate void ListEvt(bool bVal);
+        public event ListEvt GoParm;
+        private string m_sGrp;
+        private string m_sDev;
+
+
         private int m_iPage = 0;
 
         public vwRecipe()
@@ -80,5 +87,41 @@ namespace Victor
         {
 
         }
+
+        private void btnClick_New(object sender, EventArgs e)
+        {
+            
+            Button mBtn = sender as Button;
+            BeginInvoke(new Action(() => mBtn.Enabled = false));
+
+            string sPath = CGvar.PATH_DEVICE;
+
+            try
+            {
+                ////using (frmTxt mForm = new frmTxt("New sGroup sName", this))
+                //using (AlphaKeypad mForm = new AlphaKeypad(this.ParentForm))
+                //{
+                //    if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
+
+                //    if (Directory.Exists(sPath + mForm.Result))
+                //    {
+                //        CMsg.ShowMsg(EMsg.Error, CGvar.GetMsg("ExistGroupName", "sGroup name exist !!!"));
+                //        return;
+                //    }
+                //    sPath = sPath + mForm.Result; //190130  : Device에 New가 되지 않아 수정
+                //    Directory.CreateDirectory(sPath);
+                //    _GrpListUp();
+                //}
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                BeginInvoke(new Action(() => mBtn.Enabled = true));
+            }            
+        }
+
     }
 }
