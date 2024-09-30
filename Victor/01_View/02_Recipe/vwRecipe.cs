@@ -114,7 +114,7 @@ namespace Victor
                     }
                     sPath = sPath + mForm.Val;
                     Directory.CreateDirectory(sPath);
-                    //_GrpListUp();
+                    _GrpListUp();
                 }
             }
             catch (Exception ex)

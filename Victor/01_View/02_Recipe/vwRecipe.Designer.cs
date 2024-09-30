@@ -33,13 +33,10 @@
             this.pnl_Base = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
-            this.pnlM_Grp = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnM_GDel = new System.Windows.Forms.Button();
-            this.btnM_GCopy = new System.Windows.Forms.Button();
-            this.btnM_GNew = new System.Windows.Forms.Button();
-            this.label39 = new System.Windows.Forms.Label();
-            this.lbxM_Grp = new System.Windows.Forms.ListBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnM_DApp = new System.Windows.Forms.Button();
+            this.btnM_DBcr = new System.Windows.Forms.Button();
+            this.btnM_DCur = new System.Windows.Forms.Button();
             this.pnlM_Dev = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnM_DDel = new System.Windows.Forms.Button();
@@ -47,15 +44,18 @@
             this.btnM_DNew = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbxM_Dev = new System.Windows.Forms.ListBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnM_DApp = new System.Windows.Forms.Button();
-            this.btnM_DBcr = new System.Windows.Forms.Button();
-            this.btnM_DCur = new System.Windows.Forms.Button();
+            this.pnlM_Grp = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnM_GDel = new System.Windows.Forms.Button();
+            this.btnM_GCopy = new System.Windows.Forms.Button();
+            this.btnM_GNew = new System.Windows.Forms.Button();
+            this.label39 = new System.Windows.Forms.Label();
+            this.lbxM_Grp = new System.Windows.Forms.ListBox();
             this.pnl_Base.SuspendLayout();
             this.pnl_Menu.SuspendLayout();
-            this.pnlM_Grp.SuspendLayout();
-            this.pnlM_Dev.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.pnlM_Dev.SuspendLayout();
+            this.pnlM_Grp.SuspendLayout();
             this.SuspendLayout();
             // 
             // label46
@@ -98,6 +98,7 @@
             this.pnl_Base.Name = "pnl_Base";
             this.pnl_Base.Size = new System.Drawing.Size(237, 119);
             this.pnl_Base.TabIndex = 453;
+            this.pnl_Base.Visible = false;
             // 
             // button2
             // 
@@ -126,111 +127,66 @@
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 455;
             // 
-            // pnlM_Grp
+            // panel1
             // 
-            this.pnlM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pnlM_Grp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlM_Grp.Controls.Add(this.label1);
-            this.pnlM_Grp.Controls.Add(this.btnM_GDel);
-            this.pnlM_Grp.Controls.Add(this.btnM_GCopy);
-            this.pnlM_Grp.Controls.Add(this.btnM_GNew);
-            this.pnlM_Grp.Controls.Add(this.label39);
-            this.pnlM_Grp.Controls.Add(this.lbxM_Grp);
-            this.pnlM_Grp.Location = new System.Drawing.Point(38, 49);
-            this.pnlM_Grp.Name = "pnlM_Grp";
-            this.pnlM_Grp.Size = new System.Drawing.Size(601, 604);
-            this.pnlM_Grp.TabIndex = 187;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnM_DApp);
+            this.panel1.Controls.Add(this.btnM_DBcr);
+            this.panel1.Controls.Add(this.btnM_DCur);
+            this.panel1.Location = new System.Drawing.Point(38, 679);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1219, 119);
+            this.panel1.TabIndex = 455;
             // 
-            // label1
+            // btnM_DApp
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(0, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(599, 4);
-            this.label1.TabIndex = 185;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnM_DApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnM_DApp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnM_DApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnM_DApp.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnM_DApp.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnM_DApp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnM_DApp.Location = new System.Drawing.Point(510, 27);
+            this.btnM_DApp.Name = "btnM_DApp";
+            this.btnM_DApp.Size = new System.Drawing.Size(208, 78);
+            this.btnM_DApp.TabIndex = 186;
+            this.btnM_DApp.TabStop = false;
+            this.btnM_DApp.Text = "LOAD && APPLY";
+            this.btnM_DApp.UseVisualStyleBackColor = false;
             // 
-            // btnM_GDel
+            // btnM_DBcr
             // 
-            this.btnM_GDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnM_GDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnM_GDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnM_GDel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnM_GDel.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnM_GDel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnM_GDel.Location = new System.Drawing.Point(376, 491);
-            this.btnM_GDel.Name = "btnM_GDel";
-            this.btnM_GDel.Size = new System.Drawing.Size(131, 82);
-            this.btnM_GDel.TabIndex = 184;
-            this.btnM_GDel.TabStop = false;
-            this.btnM_GDel.Text = "DELETE";
-            this.btnM_GDel.UseVisualStyleBackColor = false;
+            this.btnM_DBcr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnM_DBcr.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnM_DBcr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnM_DBcr.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnM_DBcr.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnM_DBcr.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnM_DBcr.Location = new System.Drawing.Point(41, 27);
+            this.btnM_DBcr.Name = "btnM_DBcr";
+            this.btnM_DBcr.Size = new System.Drawing.Size(208, 78);
+            this.btnM_DBcr.TabIndex = 190;
+            this.btnM_DBcr.TabStop = false;
+            this.btnM_DBcr.Text = "INPUT BARCODE READ";
+            this.btnM_DBcr.UseVisualStyleBackColor = false;
+            this.btnM_DBcr.Visible = false;
             // 
-            // btnM_GCopy
+            // btnM_DCur
             // 
-            this.btnM_GCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnM_GCopy.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnM_GCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnM_GCopy.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnM_GCopy.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnM_GCopy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnM_GCopy.Location = new System.Drawing.Point(216, 491);
-            this.btnM_GCopy.Name = "btnM_GCopy";
-            this.btnM_GCopy.Size = new System.Drawing.Size(131, 82);
-            this.btnM_GCopy.TabIndex = 183;
-            this.btnM_GCopy.TabStop = false;
-            this.btnM_GCopy.Text = "SAVE AS";
-            this.btnM_GCopy.UseVisualStyleBackColor = false;
-            // 
-            // btnM_GNew
-            // 
-            this.btnM_GNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnM_GNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnM_GNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnM_GNew.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnM_GNew.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnM_GNew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnM_GNew.Location = new System.Drawing.Point(56, 491);
-            this.btnM_GNew.Name = "btnM_GNew";
-            this.btnM_GNew.Size = new System.Drawing.Size(131, 82);
-            this.btnM_GNew.TabIndex = 181;
-            this.btnM_GNew.TabStop = false;
-            this.btnM_GNew.Text = "NEW";
-            this.btnM_GNew.UseVisualStyleBackColor = false;
-            this.btnM_GNew.Click += new System.EventHandler(this.btnClick_New);
-            // 
-            // label39
-            // 
-            this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.label39.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.label39.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label39.Location = new System.Drawing.Point(0, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(599, 30);
-            this.label39.TabIndex = 58;
-            this.label39.Text = "  Group";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbxM_Grp
-            // 
-            this.lbxM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lbxM_Grp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbxM_Grp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.lbxM_Grp.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.lbxM_Grp.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbxM_Grp.HorizontalScrollbar = true;
-            this.lbxM_Grp.ItemHeight = 30;
-            this.lbxM_Grp.Location = new System.Drawing.Point(10, 50);
-            this.lbxM_Grp.Name = "lbxM_Grp";
-            this.lbxM_Grp.Size = new System.Drawing.Size(543, 422);
-            this.lbxM_Grp.TabIndex = 1;
-            this.lbxM_Grp.TabStop = false;
+            this.btnM_DCur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnM_DCur.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnM_DCur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnM_DCur.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnM_DCur.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnM_DCur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnM_DCur.Location = new System.Drawing.Point(880, 27);
+            this.btnM_DCur.Name = "btnM_DCur";
+            this.btnM_DCur.Size = new System.Drawing.Size(208, 78);
+            this.btnM_DCur.TabIndex = 188;
+            this.btnM_DCur.TabStop = false;
+            this.btnM_DCur.Text = "CURRENT";
+            this.btnM_DCur.UseVisualStyleBackColor = false;
             // 
             // pnlM_Dev
             // 
@@ -338,66 +294,111 @@
             this.lbxM_Dev.TabIndex = 1;
             this.lbxM_Dev.TabStop = false;
             // 
-            // panel1
+            // pnlM_Grp
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnM_DApp);
-            this.panel1.Controls.Add(this.btnM_DBcr);
-            this.panel1.Controls.Add(this.btnM_DCur);
-            this.panel1.Location = new System.Drawing.Point(38, 679);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1219, 119);
-            this.panel1.TabIndex = 455;
+            this.pnlM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pnlM_Grp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlM_Grp.Controls.Add(this.lbxM_Grp);
+            this.pnlM_Grp.Controls.Add(this.label1);
+            this.pnlM_Grp.Controls.Add(this.btnM_GDel);
+            this.pnlM_Grp.Controls.Add(this.btnM_GCopy);
+            this.pnlM_Grp.Controls.Add(this.btnM_GNew);
+            this.pnlM_Grp.Controls.Add(this.label39);
+            this.pnlM_Grp.Location = new System.Drawing.Point(38, 49);
+            this.pnlM_Grp.Name = "pnlM_Grp";
+            this.pnlM_Grp.Size = new System.Drawing.Size(601, 604);
+            this.pnlM_Grp.TabIndex = 187;
             // 
-            // btnM_DApp
+            // label1
             // 
-            this.btnM_DApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnM_DApp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnM_DApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnM_DApp.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnM_DApp.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnM_DApp.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnM_DApp.Location = new System.Drawing.Point(510, 27);
-            this.btnM_DApp.Name = "btnM_DApp";
-            this.btnM_DApp.Size = new System.Drawing.Size(208, 78);
-            this.btnM_DApp.TabIndex = 186;
-            this.btnM_DApp.TabStop = false;
-            this.btnM_DApp.Text = "LOAD && APPLY";
-            this.btnM_DApp.UseVisualStyleBackColor = false;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label1.Location = new System.Drawing.Point(0, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(599, 4);
+            this.label1.TabIndex = 185;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnM_DBcr
+            // btnM_GDel
             // 
-            this.btnM_DBcr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnM_DBcr.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnM_DBcr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnM_DBcr.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnM_DBcr.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnM_DBcr.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnM_DBcr.Location = new System.Drawing.Point(41, 27);
-            this.btnM_DBcr.Name = "btnM_DBcr";
-            this.btnM_DBcr.Size = new System.Drawing.Size(208, 78);
-            this.btnM_DBcr.TabIndex = 190;
-            this.btnM_DBcr.TabStop = false;
-            this.btnM_DBcr.Text = "INPUT BARCODE READ";
-            this.btnM_DBcr.UseVisualStyleBackColor = false;
-            this.btnM_DBcr.Visible = false;
+            this.btnM_GDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnM_GDel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnM_GDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnM_GDel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnM_GDel.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnM_GDel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnM_GDel.Location = new System.Drawing.Point(376, 491);
+            this.btnM_GDel.Name = "btnM_GDel";
+            this.btnM_GDel.Size = new System.Drawing.Size(131, 82);
+            this.btnM_GDel.TabIndex = 184;
+            this.btnM_GDel.TabStop = false;
+            this.btnM_GDel.Text = "DELETE";
+            this.btnM_GDel.UseVisualStyleBackColor = false;
             // 
-            // btnM_DCur
+            // btnM_GCopy
             // 
-            this.btnM_DCur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnM_DCur.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnM_DCur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnM_DCur.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
-            this.btnM_DCur.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnM_DCur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnM_DCur.Location = new System.Drawing.Point(880, 27);
-            this.btnM_DCur.Name = "btnM_DCur";
-            this.btnM_DCur.Size = new System.Drawing.Size(208, 78);
-            this.btnM_DCur.TabIndex = 188;
-            this.btnM_DCur.TabStop = false;
-            this.btnM_DCur.Text = "CURRENT";
-            this.btnM_DCur.UseVisualStyleBackColor = false;
+            this.btnM_GCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnM_GCopy.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnM_GCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnM_GCopy.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnM_GCopy.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnM_GCopy.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnM_GCopy.Location = new System.Drawing.Point(216, 491);
+            this.btnM_GCopy.Name = "btnM_GCopy";
+            this.btnM_GCopy.Size = new System.Drawing.Size(131, 82);
+            this.btnM_GCopy.TabIndex = 183;
+            this.btnM_GCopy.TabStop = false;
+            this.btnM_GCopy.Text = "SAVE AS";
+            this.btnM_GCopy.UseVisualStyleBackColor = false;
+            // 
+            // btnM_GNew
+            // 
+            this.btnM_GNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btnM_GNew.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnM_GNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnM_GNew.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnM_GNew.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnM_GNew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnM_GNew.Location = new System.Drawing.Point(56, 491);
+            this.btnM_GNew.Name = "btnM_GNew";
+            this.btnM_GNew.Size = new System.Drawing.Size(131, 82);
+            this.btnM_GNew.TabIndex = 181;
+            this.btnM_GNew.TabStop = false;
+            this.btnM_GNew.Text = "NEW";
+            this.btnM_GNew.UseVisualStyleBackColor = false;
+            this.btnM_GNew.Click += new System.EventHandler(this.btnClick_New);
+            // 
+            // label39
+            // 
+            this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label39.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label39.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label39.Location = new System.Drawing.Point(0, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(599, 30);
+            this.label39.TabIndex = 58;
+            this.label39.Text = "  Group";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbxM_Grp
+            // 
+            this.lbxM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.lbxM_Grp.ForeColor = System.Drawing.Color.White;
+            this.lbxM_Grp.FormattingEnabled = true;
+            this.lbxM_Grp.ItemHeight = 20;
+            this.lbxM_Grp.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.lbxM_Grp.Location = new System.Drawing.Point(10, 50);
+            this.lbxM_Grp.Name = "lbxM_Grp";
+            this.lbxM_Grp.Size = new System.Drawing.Size(563, 424);
+            this.lbxM_Grp.TabIndex = 186;
             // 
             // vwRecipe
             // 
@@ -412,9 +413,9 @@
             this.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Base.ResumeLayout(false);
             this.pnl_Menu.ResumeLayout(false);
-            this.pnlM_Grp.ResumeLayout(false);
-            this.pnlM_Dev.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.pnlM_Dev.ResumeLayout(false);
+            this.pnlM_Grp.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
