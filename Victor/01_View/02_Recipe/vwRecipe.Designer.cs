@@ -43,7 +43,6 @@
             this.btnM_DCopy = new System.Windows.Forms.Button();
             this.btnM_DNew = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbxM_Dev = new System.Windows.Forms.ListBox();
             this.pnlM_Grp = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnM_GDel = new System.Windows.Forms.Button();
@@ -51,6 +50,7 @@
             this.btnM_GNew = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
             this.lbxM_Grp = new System.Windows.Forms.ListBox();
+            this.lbxM_Dev = new System.Windows.Forms.ListBox();
             this.pnl_Base.SuspendLayout();
             this.pnl_Menu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -193,12 +193,12 @@
             this.pnlM_Dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pnlM_Dev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlM_Dev.Controls.Add(this.pnl_Base);
+            this.pnlM_Dev.Controls.Add(this.lbxM_Dev);
             this.pnlM_Dev.Controls.Add(this.label3);
             this.pnlM_Dev.Controls.Add(this.btnM_DDel);
             this.pnlM_Dev.Controls.Add(this.btnM_DCopy);
             this.pnlM_Dev.Controls.Add(this.btnM_DNew);
             this.pnlM_Dev.Controls.Add(this.label2);
-            this.pnlM_Dev.Controls.Add(this.lbxM_Dev);
             this.pnlM_Dev.Location = new System.Drawing.Point(674, 49);
             this.pnlM_Dev.Name = "pnlM_Dev";
             this.pnlM_Dev.Size = new System.Drawing.Size(583, 601);
@@ -278,21 +278,6 @@
             this.label2.TabIndex = 58;
             this.label2.Text = "  Recipe";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbxM_Dev
-            // 
-            this.lbxM_Dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lbxM_Dev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbxM_Dev.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.lbxM_Dev.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.lbxM_Dev.ForeColor = System.Drawing.SystemColors.Window;
-            this.lbxM_Dev.HorizontalScrollbar = true;
-            this.lbxM_Dev.ItemHeight = 30;
-            this.lbxM_Dev.Location = new System.Drawing.Point(10, 50);
-            this.lbxM_Dev.Name = "lbxM_Dev";
-            this.lbxM_Dev.Size = new System.Drawing.Size(543, 422);
-            this.lbxM_Dev.TabIndex = 1;
-            this.lbxM_Dev.TabStop = false;
             // 
             // pnlM_Grp
             // 
@@ -399,6 +384,18 @@
             this.lbxM_Grp.Name = "lbxM_Grp";
             this.lbxM_Grp.Size = new System.Drawing.Size(563, 424);
             this.lbxM_Grp.TabIndex = 186;
+            this.lbxM_Grp.SelectedIndexChanged += new System.EventHandler(this.lbxM_Grp_SelectedIndexChanged);
+            // 
+            // lbxM_Dev
+            // 
+            this.lbxM_Dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.lbxM_Dev.ForeColor = System.Drawing.Color.White;
+            this.lbxM_Dev.FormattingEnabled = true;
+            this.lbxM_Dev.ItemHeight = 20;
+            this.lbxM_Dev.Location = new System.Drawing.Point(14, 52);
+            this.lbxM_Dev.Name = "lbxM_Dev";
+            this.lbxM_Dev.Size = new System.Drawing.Size(540, 404);
+            this.lbxM_Dev.TabIndex = 454;
             // 
             // vwRecipe
             // 
@@ -437,7 +434,6 @@
         private System.Windows.Forms.Button btnM_DCopy;
         private System.Windows.Forms.Button btnM_DNew;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lbxM_Dev;
         private System.Windows.Forms.Panel pnlM_Grp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnM_GDel;
@@ -445,5 +441,6 @@
         private System.Windows.Forms.Button btnM_GNew;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.ListBox lbxM_Grp;
+        private System.Windows.Forms.ListBox lbxM_Dev;
     }
 }

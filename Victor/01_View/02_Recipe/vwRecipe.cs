@@ -150,5 +150,32 @@ namespace Victor
             m_sDev = "";
         }
 
+        private void lbxM_Grp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbxM_Grp.SelectedIndex >= 0)
+            {
+                m_sGrp = lbxM_Grp.SelectedItem.ToString();
+
+                _RcpListUp();
+            }
+        }
+        private void _RcpListUp()
+        {
+            string sPath = CGvar.PATH_DEVICE + m_sGrp + "\\";
+
+            if (Directory.Exists(sPath) == true)
+            {
+                lbxM_Dev.Items.Clear();
+                DirectoryInfo mFile = new DirectoryInfo(sPath);
+                foreach (FileSystemInfo mInfo in mFile.GetFileSystemInfos("*.dev"))
+                {
+                    lbxM_Dev.Items.Add(mInfo.Name.Replace(".dev", ""));
+                }
+            }
+
+            lbxM_Dev.ClearSelected();
+            m_sDev = "";
+            btnM_DApp.Enabled = false;
+        }
     }
 }
