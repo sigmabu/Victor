@@ -20,11 +20,16 @@ namespace Victor._02_Dialogue
             btnCANCEL
         }
 
-        public Form_Msg(string sTitle, string sData, BtnCancle_Type nCancle = 0)
+        public Form_Msg(string sTitle, string sData, eMsg emagtype, BtnCancle_Type nCancle = 0)
         {
             InitializeComponent();
             label_Title.Text = sTitle;
             label_Data.Text = sData;
+
+            if (emagtype == eMsg.Warning) label_Title.BackColor = Color.Yellow;
+            else if (emagtype == eMsg.Error) label_Title.BackColor = Color.Red;
+            else /*if (emagtype == eMsg.Notice) */label_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+
             if (nCancle == BtnCancle_Type.None)
             {
                 btn_Cancel.Visible = false;

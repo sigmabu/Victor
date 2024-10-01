@@ -38,19 +38,19 @@
             this.btnM_DBcr = new System.Windows.Forms.Button();
             this.btnM_DCur = new System.Windows.Forms.Button();
             this.pnlM_Dev = new System.Windows.Forms.Panel();
+            this.lbxM_Dev = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnM_DDel = new System.Windows.Forms.Button();
             this.btnM_DCopy = new System.Windows.Forms.Button();
             this.btnM_DNew = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlM_Grp = new System.Windows.Forms.Panel();
+            this.lbxM_Grp = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnM_GDel = new System.Windows.Forms.Button();
             this.btnM_GCopy = new System.Windows.Forms.Button();
             this.btnM_GNew = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
-            this.lbxM_Grp = new System.Windows.Forms.ListBox();
-            this.lbxM_Dev = new System.Windows.Forms.ListBox();
             this.pnl_Base.SuspendLayout();
             this.pnl_Menu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -204,6 +204,18 @@
             this.pnlM_Dev.Size = new System.Drawing.Size(583, 601);
             this.pnlM_Dev.TabIndex = 454;
             // 
+            // lbxM_Dev
+            // 
+            this.lbxM_Dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.lbxM_Dev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbxM_Dev.ForeColor = System.Drawing.Color.White;
+            this.lbxM_Dev.FormattingEnabled = true;
+            this.lbxM_Dev.ItemHeight = 20;
+            this.lbxM_Dev.Location = new System.Drawing.Point(14, 52);
+            this.lbxM_Dev.Name = "lbxM_Dev";
+            this.lbxM_Dev.Size = new System.Drawing.Size(540, 422);
+            this.lbxM_Dev.TabIndex = 454;
+            // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
@@ -294,6 +306,23 @@
             this.pnlM_Grp.Size = new System.Drawing.Size(601, 604);
             this.pnlM_Grp.TabIndex = 187;
             // 
+            // lbxM_Grp
+            // 
+            this.lbxM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.lbxM_Grp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbxM_Grp.ForeColor = System.Drawing.Color.White;
+            this.lbxM_Grp.FormattingEnabled = true;
+            this.lbxM_Grp.ItemHeight = 20;
+            this.lbxM_Grp.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.lbxM_Grp.Location = new System.Drawing.Point(10, 50);
+            this.lbxM_Grp.Name = "lbxM_Grp";
+            this.lbxM_Grp.Size = new System.Drawing.Size(563, 422);
+            this.lbxM_Grp.TabIndex = 186;
+            this.lbxM_Grp.SelectedIndexChanged += new System.EventHandler(this.lbxM_Grp_SelectedIndexChanged);
+            // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
@@ -322,6 +351,7 @@
             this.btnM_GDel.TabStop = false;
             this.btnM_GDel.Text = "DELETE";
             this.btnM_GDel.UseVisualStyleBackColor = false;
+            this.btnM_GDel.Click += new System.EventHandler(this.btnClick_Delete);
             // 
             // btnM_GCopy
             // 
@@ -338,6 +368,7 @@
             this.btnM_GCopy.TabStop = false;
             this.btnM_GCopy.Text = "SAVE AS";
             this.btnM_GCopy.UseVisualStyleBackColor = false;
+            this.btnM_GCopy.Click += new System.EventHandler(this.btnClick_SaveAs);
             // 
             // btnM_GNew
             // 
@@ -369,33 +400,6 @@
             this.label39.TabIndex = 58;
             this.label39.Text = "  Group";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbxM_Grp
-            // 
-            this.lbxM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lbxM_Grp.ForeColor = System.Drawing.Color.White;
-            this.lbxM_Grp.FormattingEnabled = true;
-            this.lbxM_Grp.ItemHeight = 20;
-            this.lbxM_Grp.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.lbxM_Grp.Location = new System.Drawing.Point(10, 50);
-            this.lbxM_Grp.Name = "lbxM_Grp";
-            this.lbxM_Grp.Size = new System.Drawing.Size(563, 424);
-            this.lbxM_Grp.TabIndex = 186;
-            this.lbxM_Grp.SelectedIndexChanged += new System.EventHandler(this.lbxM_Grp_SelectedIndexChanged);
-            // 
-            // lbxM_Dev
-            // 
-            this.lbxM_Dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lbxM_Dev.ForeColor = System.Drawing.Color.White;
-            this.lbxM_Dev.FormattingEnabled = true;
-            this.lbxM_Dev.ItemHeight = 20;
-            this.lbxM_Dev.Location = new System.Drawing.Point(14, 52);
-            this.lbxM_Dev.Name = "lbxM_Dev";
-            this.lbxM_Dev.Size = new System.Drawing.Size(540, 404);
-            this.lbxM_Dev.TabIndex = 454;
             // 
             // vwRecipe
             // 

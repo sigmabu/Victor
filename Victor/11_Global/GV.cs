@@ -26,7 +26,16 @@ public class CGvar
     /// Device Folder Path  StartUp\\Device\\
     /// </summary>
     public static readonly string PATH_DEVICE = Application.StartupPath + "\\Device\\";
+    
     #endregion
-   
+}
+public class CGcolor
+{
 
+    #region Color
+    public Color ColorBase = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+    public Color ColorNotic = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+    public Color ColorWarning = Color.Yellow;
+    public Color ColorError = Color.Red;
+    #endregion
 }

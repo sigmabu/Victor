@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -95,6 +96,7 @@
     <Compile Include="02_Dialogue\form_Textinput.Designer.cs">
       <DependentUpon>form_Textinput.cs</DependentUpon>
     </Compile>
+    <Compile Include="11_Global\Enum.cs" />
     <Compile Include="11_Global\GV.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>

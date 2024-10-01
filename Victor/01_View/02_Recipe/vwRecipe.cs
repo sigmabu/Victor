@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Microsoft.VisualBasic.FileIO;
 using Victor._02_Dialogue;
 
 namespace Victor
@@ -108,7 +109,7 @@ namespace Victor
                     if (Directory.Exists(sPath + mForm.Val))
                     {
                         sInput = string.Format("{0} {1} Group name exist !!!", sPath , mForm.Val);
-                        Form_Msg mMsg = new Form_Msg("ExistGroupName", sInput);
+                        Form_Msg mMsg = new Form_Msg("ExistGroupName", sInput,eMsg.Error);
                         mMsg.ShowDialog();
                         return;
                     }
@@ -125,6 +126,62 @@ namespace Victor
             {
                 BeginInvoke(new Action(() => mBtn.Enabled = true));
             }
+        }
+
+
+        private void btnClick_SaveAs(object sender, EventArgs e)
+        {
+            Button mBtn = sender as Button;
+            BeginInvoke(new Action(() => mBtn.Enabled = false));
+
+            string sSrc = "";
+            string sDst = "";
+
+            try
+            {
+                // 그룹 선택 여부 확인
+                if (lbxM_Grp.SelectedIndex < 0 || m_sGrp == "")
+                {
+                    Form_Msg mMsg = new Form_Msg("SelectGroupName", "Not selected group",eMsg.Error);
+                    mMsg.ShowDialog();
+
+                    return;
+                }
+
+                using (form_Textinput mForm = new form_Textinput("Save As Group Name"))
+                {
+                    if (mForm.ShowDialog() == DialogResult.OK)
+                    {
+                        sSrc = CGvar.PATH_DEVICE + lbxM_Grp.SelectedItem.ToString();
+                        sDst = CGvar.PATH_DEVICE + mForm.Val;
+
+                        if (Directory.Exists(CGvar.PATH_DEVICE + mForm.Val))
+                        {
+                            Form_Msg mMsg = new Form_Msg("ExistGroupName", "Group name exist !!!",eMsg.Error);
+                            mMsg.ShowDialog();
+
+                            return;
+                        }
+
+                        FileSystem.CopyDirectory(sSrc, sDst, UIOption.AllDialogs);
+                        //CCheckChange.SaveAs("DEVICE", sSrc, sDst); //200716 lks
+                        _GrpListUp();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                BeginInvoke(new Action(() => mBtn.Enabled = true));
+            }
+        }
+
+        private void btnClick_Delete(object sender, EventArgs e)
+        {
+
         }
         private void _GrpListUp()
         {

@@ -16,6 +16,7 @@ namespace Victor._02_Dialogue
         public form_Textinput(string sTitle)
         {
             InitializeComponent();
+            label_Title.Text = sTitle;
         }
 
         private void btn_OK_Click(object sender, EventArgs e)
