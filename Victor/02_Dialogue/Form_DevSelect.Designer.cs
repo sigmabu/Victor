@@ -48,19 +48,19 @@
             // 
             // lbl_Title
             // 
-            this.lbl_Title.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbl_Title.BackColor = System.Drawing.Color.White;
             this.lbl_Title.ForeColor = System.Drawing.Color.Black;
             this.lbl_Title.Location = new System.Drawing.Point(12, 9);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(206, 23);
+            this.lbl_Title.Size = new System.Drawing.Size(366, 23);
             this.lbl_Title.TabIndex = 8;
             // 
             // btn_Can
             // 
-            this.btn_Can.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Can.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btn_Can.FlatAppearance.BorderSize = 0;
-            this.btn_Can.ForeColor = System.Drawing.Color.Black;
-            this.btn_Can.Location = new System.Drawing.Point(301, 431);
+            this.btn_Can.ForeColor = System.Drawing.Color.White;
+            this.btn_Can.Location = new System.Drawing.Point(264, 431);
             this.btn_Can.Name = "btn_Can";
             this.btn_Can.Size = new System.Drawing.Size(75, 23);
             this.btn_Can.TabIndex = 6;
@@ -71,21 +71,19 @@
             // 
             // txt_Value
             // 
-            this.txt_Value.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.txt_Value.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Value.ForeColor = System.Drawing.Color.Black;
-            this.txt_Value.Location = new System.Drawing.Point(23, 350);
+            this.txt_Value.Location = new System.Drawing.Point(12, 390);
             this.txt_Value.Name = "txt_Value";
-            this.txt_Value.Size = new System.Drawing.Size(100, 21);
+            this.txt_Value.Size = new System.Drawing.Size(366, 21);
             this.txt_Value.TabIndex = 7;
             this.txt_Value.Tag = "0";
             // 
             // btn_Ok
             // 
-            this.btn_Ok.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Ok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.btn_Ok.FlatAppearance.BorderSize = 0;
-            this.btn_Ok.ForeColor = System.Drawing.Color.Black;
-            this.btn_Ok.Location = new System.Drawing.Point(220, 431);
+            this.btn_Ok.ForeColor = System.Drawing.Color.White;
+            this.btn_Ok.Location = new System.Drawing.Point(172, 431);
             this.btn_Ok.Name = "btn_Ok";
             this.btn_Ok.Size = new System.Drawing.Size(75, 23);
             this.btn_Ok.TabIndex = 5;
@@ -122,7 +120,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 73);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 110);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -133,7 +131,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(333, 271);
+            this.dataGridView1.Size = new System.Drawing.Size(364, 274);
             this.dataGridView1.TabIndex = 4;
             // 
             // Column1
@@ -143,45 +141,44 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 3;
+            this.label1.Text = "label1";
             // 
             // lb_gVal
             // 
-            this.lb_gVal.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lb_gVal.ForeColor = System.Drawing.Color.Black;
-            this.lb_gVal.Location = new System.Drawing.Point(186, 374);
+            this.lb_gVal.ForeColor = System.Drawing.Color.White;
+            this.lb_gVal.Location = new System.Drawing.Point(147, 68);
             this.lb_gVal.Name = "lb_gVal";
             this.lb_gVal.Size = new System.Drawing.Size(100, 23);
             this.lb_gVal.TabIndex = 2;
+            this.lb_gVal.Text = "lb_gVal";
             // 
             // lb_dVal
             // 
-            this.lb_dVal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lb_dVal.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lb_dVal.Location = new System.Drawing.Point(224, 24);
+            this.lb_dVal.Location = new System.Drawing.Point(147, 45);
             this.lb_dVal.Name = "lb_dVal";
             this.lb_dVal.Size = new System.Drawing.Size(100, 23);
             this.lb_dVal.TabIndex = 0;
+            this.lb_dVal.Text = "lb_dVal";
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(23, 374);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(23, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 1;
+            this.label3.Text = "label3";
             // 
             // Form_DevSelect
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.Orange;
-            this.ClientSize = new System.Drawing.Size(405, 466);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.ClientSize = new System.Drawing.Size(400, 480);
             this.Controls.Add(this.lb_dVal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lb_gVal);
