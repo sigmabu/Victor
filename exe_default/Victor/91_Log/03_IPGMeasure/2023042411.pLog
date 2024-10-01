@@ -1,0 +1,306 @@
+[20230424-110226 650]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 : IPG_Down = Up
+[20230424-110250 230]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 1 ,Table_Y Pos Check = 80.517, IPG Up  Data :CVar.dMaster_mm =  2, dMaster_mV = 10, dObject_mm = 2, dObject_mV = 10, dT_mm = 0, dT_mV = 0
+[20230424-110300 289]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 : IPG_Down = Down
+[20230424-110311 842]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 1 ,Table_Y Pos Check = 80.517, IPG Dn  Data :CVar.dMaster_mm =  0, dMaster_mV = 0, dObject_mm = 0, dObject_mV = 0, dT_mm = 0, dT_mV = 0
+[20230424-110318 473]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 : IPG_Down = Up
+[20230424-110334 666]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 1 ,Table_Y Pos Check = 80.517, IPG Dn  Data :CVar.dMaster_mm =  0, dMaster_mV = 0, dObject_mm = 0, dObject_mV = 0, dT_mm = 0, dT_mV = 0
+[20230424-110341 297]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 407, 010, 010, 000	[IPG master to Base] Measure Z Old [mV] =  CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 2,[mV] CVar.WaferMeasData[nStage].dAm_IBM2Base_meaValue = 10
+[20230424-110345 505]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 407, 010, 010, 000	[IPG master to Base] Measure Z New [mm] : CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 2,[mV] CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue = 10
+[20230424-110408 818]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	[IBM_IBO Cal] => Base to IPG Object
+pMeasuer_WaitPos.dSZ = 60.0000
+pMeasuer_WaitPos.dDZ = 0.5000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+pMeasuer_WaitPos.dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dSZ = 70.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dDZ = 0.1000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTY = 80.5170
+CVar.WaferMeasData[nStage].IPG_Object2BASE_SetPos.dTY = 153.0720
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230424-110446 933]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Down = Up
+[20230424-110448 441]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Coolant = Water_On
+[20230424-110450 370]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG Up/Cooler water open, Zaxis Position Move ,SP Z = 60,Dress Z = 0.5
+[20230424-110501 972]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 403, 010, 010, 000	Z Move Down 이동 Chcek : SP Z Position = 60, Dress Z Position = 0.499
+[20230424-110518 684]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 404, 010, 010, 000	IPG 측정 = True, Table Y 이동 = 153.072
+[20230424-110526 645]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 405, 010, 010, 000	IPG 측정 True, Check Table Y 이동 = 153.072
+[20230424-110546 545]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Up  Data :dT_mm =  2.0000, dMaster_mV= 10.0000, dObject_mm = 2.0000, dObject_mV = 10.0000, dT_mm = 0.0000, dT_mV = 0.0000
+[20230424-110558 050]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 : IPG Dn = Down
+[20230424-110635 570]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0208, dObject_mV = 0.1038, dT_mm = 0.0200, dT_mV = 0.1030
+[20230424-111050 625]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBM 측정 : IPG IPG_Down = Up
+[20230424-111103 901]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Up  Data :dT_mm =  2.0000, dMaster_mV= 10.0000, dObject_mm = 2.0000, dObject_mV = 10.0000, dT_mm = 0.0000, dT_mV = 0.0000
+[20230424-111105 326]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 : IPG Dn = Down
+[20230424-111113 369]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0203, dObject_mV = 0.1013, dT_mm = 0.0200, dT_mV = 0.1010
+[20230424-111126 775]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st eError : nMeasure_Cnt[0] = 1
+[20230424-111144 907]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0200, dObject_mV = 0.1001, dT_mm = 0.0200, dT_mV = 0.1000
+[20230424-111151 092]	Manual_Status	Proc_Error          ()	GrindStep : 002, 410, 010, 010, 000	eError : STAGE_1_IPG_IBM_UPDOWN_VALUE_INVALID_ERROR
+[20230424-111151 113]	Manual_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230424-112518 525]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+[20230424-112518 525]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230424-112518 525]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230424-112520 174]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230424-112530 628]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230424-112531 516]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230424-112531 516]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230424-112531 516]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230424-112531 558]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 10,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 10,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230424-112531 558]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230424-112535 750]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = IBM_to_IPG
+Wait Position => pMeasuer_WaitPos.dSZ = [ 60] ,pMeasuer_WaitPos.dDZ  = [ 0.5] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1] ,pMeasuer_WaitPos.dDR  = [ 0]
+Are you continue ?
+[20230424-112536 686]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 60
+[20230424-112536 689]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 0.5
+[20230424-112537 964]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 60, Dress Z axis move Wait = 0.5
+[20230424-112539 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = IBM_to_IPG,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230424-112541 427]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 401, 010, 010, 000	Measure Mode = IBM_to_IPG
+[20230424-112542 171]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 401, 010, 010, 000	Measure Mode = [IBM_to_IPG] Start, IBM Variable Initial !! 
+[20230424-112545 605]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	[IBM_IBO Cal] => Base to IPG Master
+pMeasuer_WaitPos.dSZ = 60.0000
+pMeasuer_WaitPos.dDZ = 0.5000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+pMeasuer_WaitPos.dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dSZ = 70.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dDZ = 0.1000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTY = 80.5170
+CVar.WaferMeasData[nStage].IPG_Object2BASE_SetPos.dTY = 153.0720
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230424-112545 612]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Down = Up
+[20230424-112545 612]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Coolant = Water_On
+[20230424-112545 612]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG Up/Cooler water open, Zaxis Position Move ,SP Z = 60,Dress Z = 0.5
+[20230424-112546 315]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 403, 010, 010, 000	Z Move Down 이동 Chcek : SP Z Position = 60, Dress Z Position = 0.5
+[20230424-112547 511]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 404, 010, 010, 000	IPG 측정 = False, Table Y 이동 = 80.517
+[20230424-112555 444]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 405, 010, 010, 000	IPG 측정 False, Check Table Y 이동 = 80.517
+[20230424-112556 550]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 0 ,Table_Y Pos Check = 80.517, IPG Up  Data :CVar.dMaster_mm =  2, dMaster_mV = 10, dObject_mm = 2, dObject_mV = 10, dT_mm = 0, dT_mV = 0
+[20230424-112556 550]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 : IPG_Down = Down
+[20230424-112637 841]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 0 ,Table_Y Pos Check = 80.517, IPG Dn  Data :CVar.dMaster_mm =  0, dMaster_mV = 0, dObject_mm = 0, dObject_mV = 0, dT_mm = 0, dT_mV = 0
+[20230424-112641 779]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 : IPG_Down = Up
+[20230424-112643 966]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 1 ,Table_Y Pos Check = 80.517, IPG Up  Data :CVar.dMaster_mm =  2, dMaster_mV = 10, dObject_mm = 2, dObject_mV = 10, dT_mm = 0, dT_mV = 0
+[20230424-112643 966]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 : IPG_Down = Down
+[20230424-112704 808]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 1 ,Table_Y Pos Check = 80.517, IPG Dn  Data :CVar.dMaster_mm =  0, dMaster_mV = 0, dObject_mm = 0, dObject_mV = 0, dT_mm = 0, dT_mV = 0
+[20230424-112707 937]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 : IPG_Down = Up
+[20230424-112716 545]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 1 ,Table_Y Pos Check = 80.517, IPG Dn  Data :CVar.dMaster_mm =  0, dMaster_mV = 0, dObject_mm = 0, dObject_mV = 0, dT_mm = 0, dT_mV = 0
+[20230424-112717 602]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 407, 010, 010, 000	[IPG master to Base] Measure Z Old [mV] =  CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 2,[mV] CVar.WaferMeasData[nStage].dAm_IBM2Base_meaValue = 10
+[20230424-112717 602]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 407, 010, 010, 000	[IPG master to Base] Measure Z New [mm] : CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 2,[mV] CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue = 10
+[20230424-112741 484]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	[IBM_IBO Cal] => Base to IPG Object
+pMeasuer_WaitPos.dSZ = 60.0000
+pMeasuer_WaitPos.dDZ = 0.5000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+pMeasuer_WaitPos.dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dSZ = 70.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dDZ = 0.1000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTY = 80.5170
+CVar.WaferMeasData[nStage].IPG_Object2BASE_SetPos.dTY = 153.0720
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230424-112741 489]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Down = Up
+[20230424-112741 489]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Coolant = Water_On
+[20230424-112741 489]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG Up/Cooler water open, Zaxis Position Move ,SP Z = 60,Dress Z = 0.5
+[20230424-112749 704]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 403, 010, 010, 000	Z Move Down 이동 Chcek : SP Z Position = 60, Dress Z Position = 0.499
+[20230424-112800 643]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 404, 010, 010, 000	IPG 측정 = True, Table Y 이동 = 153.072
+[20230424-112807 644]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 405, 010, 010, 000	IPG 측정 True, Check Table Y 이동 = 153.072
+[20230424-112821 169]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Up  Data :dT_mm =  2.0000, dMaster_mV= 10.0000, dObject_mm = 2.0000, dObject_mV = 10.0000, dT_mm = 0.0000, dT_mV = 0.0000
+[20230424-112822 621]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 : IPG Dn = Down
+[20230424-112832 081]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0192, dObject_mV = 0.0961, dT_mm = 0.0190, dT_mV = 0.0950
+[20230424-112843 620]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBM 측정 : IPG IPG_Down = Up
+[20230424-112941 545]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Up  Data :dT_mm =  2.0000, dMaster_mV= 10.0000, dObject_mm = 2.0000, dObject_mV = 10.0000, dT_mm = 0.0000, dT_mV = 0.0000
+[20230424-112945 694]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 : IPG Dn = Down
+[20230424-112953 345]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0191, dObject_mV = 0.0955, dT_mm = 0.0190, dT_mV = 0.0950
+[20230424-113000 360]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st eError : nMeasure_Cnt[0] = 1
+[20230424-113056 113]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0186, dObject_mV = 0.0925, dT_mm = 0.0180, dT_mV = 0.0920
+[20230424-113139 972]	Manual_Status	Proc_Error          ()	GrindStep : 002, 410, 010, 010, 000	eError : STAGE_1_IPG_IBM_UPDOWN_VALUE_INVALID_ERROR
+[20230424-113139 992]	Manual_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230424-114712 418]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+[20230424-114728 906]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230424-114728 906]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230424-114730 147]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230424-114731 348]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230424-114733 980]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230424-114733 980]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230424-114733 980]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230424-114734 001]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 10,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 10,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230424-114734 001]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230424-114743 203]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = IBM_to_IPG
+Wait Position => pMeasuer_WaitPos.dSZ = [ 60] ,pMeasuer_WaitPos.dDZ  = [ 0.5] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1] ,pMeasuer_WaitPos.dDR  = [ 0]
+Are you continue ?
+[20230424-114744 854]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 60
+[20230424-114744 857]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 0.5
+[20230424-114746 123]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 60, Dress Z axis move Wait = 0.5
+[20230424-114749 019]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = IBM_to_IPG,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230424-114751 379]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 401, 010, 010, 000	Measure Mode = IBM_to_IPG
+[20230424-114753 388]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 401, 010, 010, 000	Measure Mode = [IBM_to_IPG] Start, IBM Variable Initial !! 
+[20230424-114754 453]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	[IBM_IBO Cal] => Base to IPG Master
+pMeasuer_WaitPos.dSZ = 60.0000
+pMeasuer_WaitPos.dDZ = 0.5000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+pMeasuer_WaitPos.dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dSZ = 70.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dDZ = 0.1000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTY = 80.5170
+CVar.WaferMeasData[nStage].IPG_Object2BASE_SetPos.dTY = 153.0720
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230424-114754 458]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Down = Up
+[20230424-114754 458]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Coolant = Water_On
+[20230424-114754 458]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG Up/Cooler water open, Zaxis Position Move ,SP Z = 60,Dress Z = 0.5
+[20230424-114755 188]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 403, 010, 010, 000	Z Move Down 이동 Chcek : SP Z Position = 60, Dress Z Position = 0.499
+[20230424-114755 878]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 404, 010, 010, 000	IPG 측정 = False, Table Y 이동 = 80.517
+[20230424-114803 948]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 405, 010, 010, 000	IPG 측정 False, Check Table Y 이동 = 80.517
+[20230424-114804 598]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 0 ,Table_Y Pos Check = 80.517, IPG Up  Data :CVar.dMaster_mm =  2, dMaster_mV = 10, dObject_mm = 2, dObject_mV = 10, dT_mm = 0, dT_mV = 0
+[20230424-114804 598]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 : IPG_Down = Down
+[20230424-114807 940]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 0 ,Table_Y Pos Check = 80.517, IPG Dn  Data :CVar.dMaster_mm =  0, dMaster_mV = 0, dObject_mm = 0, dObject_mV = 0, dT_mm = 0, dT_mV = 0
+[20230424-114807 940]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 : IPG_Down = Up
+[20230424-114807 940]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 407, 010, 010, 000	[IPG master to Base] Measure Z Old [mV] =  CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 2,[mV] CVar.WaferMeasData[nStage].dAm_IBM2Base_meaValue = 10
+[20230424-114807 940]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 407, 010, 010, 000	[IPG master to Base] Measure Z New [mm] : CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 0,[mV] CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue = 0
+[20230424-114810 789]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	[IBM_IBO Cal] => Base to IPG Object
+pMeasuer_WaitPos.dSZ = 60.0000
+pMeasuer_WaitPos.dDZ = 0.5000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+pMeasuer_WaitPos.dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dSZ = 70.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dDZ = 0.1000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTY = 80.5170
+CVar.WaferMeasData[nStage].IPG_Object2BASE_SetPos.dTY = 153.0720
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230424-114810 794]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Down = Up
+[20230424-114810 794]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Coolant = Water_On
+[20230424-114810 794]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG Up/Cooler water open, Zaxis Position Move ,SP Z = 60,Dress Z = 0.5
+[20230424-114812 124]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 403, 010, 010, 000	Z Move Down 이동 Chcek : SP Z Position = 60, Dress Z Position = 0.5
+[20230424-114814 230]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 404, 010, 010, 000	IPG 측정 = True, Table Y 이동 = 153.072
+[20230424-114823 851]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 405, 010, 010, 000	IPG 측정 True, Check Table Y 이동 = 153.072
+[20230424-114825 190]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Up  Data :dT_mm =  2.0000, dMaster_mV= 10.0000, dObject_mm = 2.0000, dObject_mV = 10.0000, dT_mm = 0.0000, dT_mV = 0.0000
+[20230424-114825 190]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 : IPG Dn = Down
+[20230424-114826 789]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0205, dObject_mV = 0.1022, dT_mm = 0.0030, dT_mV = 0.0200
+[20230424-114826 789]	Manual_Status	Proc_Error          ()	GrindStep : 002, 410, 010, 010, 000	eError : STAGE_1_IPG_IBM_UPDOWN_VALUE_INVALID_ERROR
+[20230424-114826 809]	Manual_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230424-114907 335]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+[20230424-114907 335]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230424-114907 335]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230424-114915 793]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 989, 010, 010, 000	Cancle Finish
+[20230424-114937 520]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+[20230424-114937 520]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230424-114937 520]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230424-114938 651]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230424-114939 308]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230424-114939 914]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230424-114939 914]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230424-114939 914]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = IBM_to_IPG
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230424-114939 957]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 10,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 10,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230424-114939 957]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230424-114942 141]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = IBM_to_IPG
+Wait Position => pMeasuer_WaitPos.dSZ = [ 60] ,pMeasuer_WaitPos.dDZ  = [ 0.5] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1] ,pMeasuer_WaitPos.dDR  = [ 0]
+Are you continue ?
+[20230424-114942 485]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 60
+[20230424-114942 488]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 0.5
+[20230424-114943 012]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 60, Dress Z axis move Wait = 0.5
+[20230424-114943 939]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = IBM_to_IPG,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230424-114951 670]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 401, 010, 010, 000	Measure Mode = IBM_to_IPG
+[20230424-114957 245]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 401, 010, 010, 000	Measure Mode = [IBM_to_IPG] Start, IBM Variable Initial !! 
+[20230424-115009 085]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	[IBM_IBO Cal] => Base to IPG Master
+pMeasuer_WaitPos.dSZ = 60.0000
+pMeasuer_WaitPos.dDZ = 0.5000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+pMeasuer_WaitPos.dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dSZ = 70.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dDZ = 0.1000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTY = 80.5170
+CVar.WaferMeasData[nStage].IPG_Object2BASE_SetPos.dTY = 153.0720
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230424-115009 091]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Down = Up
+[20230424-115009 091]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Coolant = Water_On
+[20230424-115009 091]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG Up/Cooler water open, Zaxis Position Move ,SP Z = 60,Dress Z = 0.5
+[20230424-115009 868]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 403, 010, 010, 000	Z Move Down 이동 Chcek : SP Z Position = 60, Dress Z Position = 0.499
+[20230424-115010 454]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 404, 010, 010, 000	IPG 측정 = False, Table Y 이동 = 80.517
+[20230424-115018 091]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 405, 010, 010, 000	IPG 측정 False, Check Table Y 이동 = 80.517
+[20230424-115033 544]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 0 ,Table_Y Pos Check = 80.517, IPG Up  Data :CVar.dMaster_mm =  2, dMaster_mV = 10, dObject_mm = 2, dObject_mV = 10, dT_mm = 0, dT_mV = 0
+[20230424-115034 686]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 406, 010, 010, 000	IBM 측정 : IPG_Down = Down
+[20230424-115046 281]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 nMeasure_Cnt[0] = 0 ,Table_Y Pos Check = 80.517, IPG Dn  Data :CVar.dMaster_mm =  0, dMaster_mV = 0, dObject_mm = 0, dObject_mV = 0, dT_mm = 0, dT_mV = 0
+[20230424-115122 219]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 407, 010, 010, 000	IBM 측정 : IPG_Down = Up
+[20230424-115122 219]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 407, 010, 010, 000	[IPG master to Base] Measure Z Old [mV] =  CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 0,[mV] CVar.WaferMeasData[nStage].dAm_IBM2Base_meaValue = 0
+[20230424-115122 219]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 407, 010, 010, 000	[IPG master to Base] Measure Z New [mm] : CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 0,[mV] CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue = 0
+[20230424-115136 337]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	[IBM_IBO Cal] => Base to IPG Object
+pMeasuer_WaitPos.dSZ = 60.0000
+pMeasuer_WaitPos.dDZ = 0.5000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+pMeasuer_WaitPos.dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dSZ = 70.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dDZ = 0.1000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTR = 0.0000
+CVar.WaferMeasData[nStage].IPG_Master2BASE_SetPos.dTY = 80.5170
+CVar.WaferMeasData[nStage].IPG_Object2BASE_SetPos.dTY = 153.0720
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230424-115145 177]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Down = Up
+[20230424-115146 263]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG_Coolant = Water_On
+[20230424-115148 466]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 402, 010, 010, 000	IBM_IBO Cal,IPG Up/Cooler water open, Zaxis Position Move ,SP Z = 60,Dress Z = 0.5
+[20230424-115155 110]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 403, 010, 010, 000	Z Move Down 이동 Chcek : SP Z Position = 60, Dress Z Position = 0.5
+[20230424-115208 535]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 404, 010, 010, 000	IPG 측정 = True, Table Y 이동 = 153.072
+[20230424-115216 415]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 405, 010, 010, 000	IPG 측정 True, Check Table Y 이동 = 153.072
+[20230424-115233 713]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Up  Data :dT_mm =  2.0000, dMaster_mV= 10.0000, dObject_mm = 2.0000, dObject_mV = 10.0000, dT_mm = 0.0000, dT_mV = 0.0000
+[20230424-115235 687]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 409, 010, 010, 000	IBO 측정 : IPG Dn = Down
+[20230424-115303 602]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0189, dObject_mV = 0.0943, dT_mm = 0.0180, dT_mV = 0.0940
+[20230424-115623 870]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 410, 010, 010, 000	IBM 측정 : IPG IPG_Down = Up
+[20230424-115625 256]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 410, 010, 010, 000	[IPG Object to Base] Measure Z Old [mm] = CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue = 0,[mV] CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue = 0
+[20230424-115625 256]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 410, 010, 010, 000	IBO 측정 1'st: Table_Y Pos Check = 153.072, IPG Dn  Data :dT_mm =  0.0000, dMaster_mV= 0.0000, dObject_mm = 0.0189, dObject_mV = 0.0943, dT_mm = 0.0180, dT_mV = 0.0940
+[20230424-115625 256]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 410, 010, 010, 000	[IPG Object to Base] Measure Z New [mm] = CVar.WaferMeasData[nStage].dmm_IBO2Base_meaValue = 2,[mV] CVar.WaferMeasData[nStage].dmV_IBO2Base_meaValue = 10
+[20230424-115625 256]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 410, 010, 010, 000	[IPG Object to Base Gap] Cal [mm] = CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue - CVar.WaferMeasData[nStage].dmm_IBO2Base_meaValue = 0- 2= CVar.WaferMeasData[nStage].dmm_IBM2IBO_Gap_CalData  = -2
+[20230424-115625 256]	Manual_Status	Set_IPG_Base_Calibration()	GrindStep : 002, 410, 010, 010, 000	[IPG Object to Base Gap] Cal [mV] = CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue - CVar.WaferMeasData[nStage].dmV_IBO2Base_meaValue = 0- 10= CVar.WaferMeasData[nStage].dmV_IBM2IBO_Gap_CalData  = -10
+[20230424-115636 291]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 411, 010, 010, 000	[IBM_to_IPG]  Finish. bTblGrd_Bf_IPG2Base_Measure_Use = False
+[20230424-115640 003]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = IBM_to_IPG Save...
+[20230424-115640 010]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:07:00.6

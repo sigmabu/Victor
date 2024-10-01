@@ -1,0 +1,170 @@
+[Onloader_MGZ_Pusher]
+In_01_Name = Cylinder - Forward
+In_01_Addr = X00A5
+In_02_Name = Cylinder - Backward
+In_02_Addr = X00A6
+Out_01_Name = Pusher Backward / Forward
+Out_01_Addr = Y00A5
+Out_02_Name =
+Out_02_Addr =
+
+[Onloader_MGZ_Clamp]
+In_01_Name = Cylinder - Clamp On
+In_01_Addr = X00AA
+In_02_Name = Cylinder - Clamp Off
+In_02_Addr = X00AB
+Out_01_Name = MGZ Clamp On Off / On
+Out_01_Addr = Y00AA
+Out_02_Name = MGZ Clamp Off Off / On
+Out_02_Addr = Y00AB
+
+[InRail_Gripper_Clamp_Rear]
+In_01_Name = Cylinder - Gripper Clamp On-Rear(only U)
+In_01_Addr = X000B
+In_02_Name = Cylinder - Gripper Clamp Off-Rear(only U)
+In_02_Addr = X000C
+Out_01_Name = Clamp Off / On
+Out_01_Addr = Y0015
+Out_02_Name =
+Out_02_Addr =
+
+[InRail_Align_Guide]
+In_01_Name = Cylinder - Align Guide Forward
+In_01_Addr = X0012
+In_02_Name = Cylinder - Align Guide Backward
+In_02_Addr = X0013
+Out_01_Name = Align Guide Backward / Forward(A Port, 4 pi)
+Out_01_Addr = Y0012
+Out_02_Name =
+Out_02_Addr =
+
+[InRail_Gripper_Clamp]
+In_01_Name = Cylinder - Gripper Clamp On
+In_01_Addr = X0015
+In_02_Name = Cylinder - Gripper Clamp Off
+In_02_Addr = X0016
+Out_01_Name = [INR]SOL - Clamp Off / On(A PORT, 4 pi)
+Out_01_Addr = Y0015
+Out_02_Name =
+Out_02_Addr =
+
+[InRail_Lift]
+In_01_Name = Cylinder - Lift Up
+In_01_Addr = X0018
+In_02_Name = Cylinder - Lift Down
+In_02_Addr = X0019
+Out_01_Name = [INR]SOL - Lift Down / Up(A PORT, 4pi)
+Out_01_Addr = Y0018
+Out_02_Name =
+Out_02_Addr =
+
+[InRail_Probe]
+In_01_Name = Cylinder - Probe Up
+In_01_Addr = X001E
+In_02_Name = Cylinder - Probe Down
+In_02_Addr = X001F
+Out_01_Name = Probe Up / Down(A Port)
+Out_01_Addr = Y001E
+Out_02_Name =
+Out_02_Addr =
+
+[Onloader_Picker_Rotate]
+In_01_Name = Cylinder - Rotate 0' (Table)
+In_01_Addr = X0020
+In_02_Name = Cylinder - Rotate 90' (Table)
+In_02_Addr = X0021
+Out_01_Name = Rotate 0' Off / On
+Out_01_Addr = Y0020
+Out_02_Name = Rotate 90' Off / On
+Out_02_Addr = Y0021
+
+[Left_Table_Cleaner]
+In_01_Name = Cylinder - Cleaner Up / Down
+In_01_Addr = X0033
+In_02_Name =
+In_02_Addr =
+Out_01_Name = SOL - Cleaner Up / Down(A PORT, 4pi)
+Out_01_Addr = Y0033
+Out_02_Name =
+Out_02_Addr =
+
+[Left_Probe]
+In_01_Name = Sensor - Probe AMP Out3
+In_01_Addr = X003B
+In_02_Name =
+In_02_Addr =
+Out_01_Name = [GRL]SOL - Probe Up / Down
+Out_01_Addr = Y0038
+Out_02_Name = 
+Out_02_Addr =
+
+[Right_Table_Cleaner]
+In_01_Name = Cylinder - Cleaner Up / Down
+In_01_Addr = X004B
+In_02_Name = 
+In_02_Addr = 
+Out_01_Name = [GRR]SOL - Cleaner Up / Down(A PORT, 4pi)
+Out_01_Addr = Y004B
+Out_02_Name =
+Out_02_Addr =
+
+[Right_Probe]
+In_01_Name = Sensor - Probe AMP Out3
+In_01_Addr = X0053
+In_02_Name = 
+In_02_Addr = 
+Out_01_Name = [GRR]SOL - Probe Up / Down
+Out_01_Addr = Y0050
+Out_02_Name =
+Out_02_Addr =
+
+[Offloader_Picker_Rotate]
+In_01_Name = Cylinder - Rotate 0' (Table)
+In_01_Addr = X0060
+In_02_Name = Cylinder - Rotate 90' (Table)
+In_02_Addr = X0061
+Out_01_Name = [OFP]SOL - Rotate 0' Off / On    (A PORT, 6pi)
+Out_01_Addr = Y0060
+Out_02_Name = [OFP]SOL - Rotate 90' Off / On    (B PORT, 6pi)
+Out_02_Addr = Y0061
+
+[Offloader_MGZ1_UpDown]
+In_01_Name = Cylinder - Up
+In_01_Addr = X00C2
+In_02_Name = Cylinder - Down
+In_02_Addr = X00C3
+Out_01_Name = [TOP]SOL - Up Off / On(A PORT, 4pi)
+Out_01_Addr = Y00C2
+Out_02_Name = [TOP]SOL - Down Off / On(B PORT, 4pi)
+Out_02_Addr = Y00C3
+
+[Offloader_MGZ1_Clamp]
+In_01_Name = Cylinder - Clamp On
+In_01_Addr = X00C4
+In_02_Name = Cylinder - Clamp Off
+In_02_Addr = X00C5
+Out_01_Name = [TOP]SOL - MGZ Clamp On Off / On(A PORT, 4pi)
+Out_01_Addr = Y00C4
+Out_02_Name = [TOP]SOL - MGZ Clamp Off Off / On(B PORT, 4pi)
+Out_02_Addr = Y00C5
+
+[Offloader_MGZ2_UpDown]
+In_01_Name = Cylinder - Up
+In_01_Addr = X00CA
+In_02_Name = Cylinder - Down
+In_02_Addr = X00CB
+Out_01_Name = [BTM]SOL - Up Off / On(A PORT, 4pi)
+Out_01_Addr = Y00CA
+Out_02_Name = [BTM]SOL - Down Off / On(B PORT, 4pi)
+Out_02_Addr = Y00CB
+
+[Offloader_MGZ2_Clamp]
+In_01_Name = Cylinder - Clamp On
+In_01_Addr = X00CC
+In_02_Name = Cylinder - Clamp Off
+In_02_Addr = X00CD
+Out_01_Name = [BTM]SOL - MGZ Clamp On Off / On(A PORT, 4pi)
+Out_01_Addr = Y00CC
+Out_02_Name = [BTM]SOL - MGZ Clamp Off Off / On(B PORT, 4pi)
+Out_02_Addr = Y00CD
+

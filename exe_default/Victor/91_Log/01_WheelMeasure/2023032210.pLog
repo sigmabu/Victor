@@ -1,0 +1,1776 @@
+[20230322-101538 568]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+[20230322-101538 568]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230322-101538 568]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230322-101539 302]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-101539 318]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230322-101539 365]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230322-101539 365]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230322-101539 365]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-101539 396]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230322-101539 396]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230322-101541 291]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = WheelTip_to_WTS
+Wait Position => pMeasuer_WaitPos.dSZ = [ 89.047] ,pMeasuer_WaitPos.dDZ  = [ 10] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1]
+Are you continue ?
+[20230322-101541 307]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 89.047
+[20230322-101541 307]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 10
+[20230322-101559 929]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 89.04699, Dress Z axis move Wait = 9.999
+[20230322-101559 976]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 상태 확인: EMeasure.WheelBase_to_WTS =  WheelBase_to_WTS, EMeasure.WheelTip_to_WTS = WheelTip_to_WTS
+[20230322-101559 976]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,gWheel_rpm Stop Cmd
+[20230322-101600 022]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230322-101600 163]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = WheelTip_to_WTS
+[20230322-101600 210]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = [WheelTip_to_WTS] Start, WheelTip Measure Variable Initial !! 
+[20230322-101602 437]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	[WheelTip Measure]
+pMeasuer_WaitPos.dSZ = 89.0470
+pMeasuer_WaitPos.dDZ = 10.0000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dSZ = 114.5470
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dTY = 263.6960
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230322-101602 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	Wheel Spindle 정지  
+[20230322-101602 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Down = Up
+[20230322-101602 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Coolant = Water_On
+[20230322-101602 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG Up/Cooler water open, Zaxis Position Move: ,SP Z = 89.047,Dress Z = 10
+[20230322-101602 562]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 303, 010, 010, 000	Z Move Down 이동 Check : WheelBase Position = 89.04699, Dress Z Position = 9.999
+[20230322-101604 108]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 304, 010, 010, 000	Table Y 이동 = 263.696
+[20230322-101604 218]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 305, 010, 010, 000	Check Table Y 이동 = 263.696
+[20230322-101604 264]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 306, 010, 010, 000	WheelToolSetter 위치에서 Dress Zaxis Up 진행 이전 Toolsetter Off Check = True
+[20230322-101604 311]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.0470 + 1.0 = 89.54699
+Check_WheelToolsetter() = True
+[20230322-101604 311]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 89.54699
+[20230322-101605 170]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101605 217]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.5470 + 1.0 = 90.04698
+Check_WheelToolsetter() = True
+[20230322-101605 217]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.04698
+[20230322-101606 076]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101606 123]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.0470 + 1.0 = 90.54697
+Check_WheelToolsetter() = True
+[20230322-101606 123]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.54697
+[20230322-101606 936]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101606 982]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.5470 + 1.0 = 91.04696
+Check_WheelToolsetter() = True
+[20230322-101606 982]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.04696
+[20230322-101607 795]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101607 842]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.0470 + 1.0 = 91.54695
+Check_WheelToolsetter() = True
+[20230322-101607 842]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.54695
+[20230322-101608 670]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101608 716]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.5469 + 1.0 = 92.04694
+Check_WheelToolsetter() = True
+[20230322-101608 716]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.04694
+[20230322-101609 529]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101609 576]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.0469 + 1.0 = 92.54694
+Check_WheelToolsetter() = True
+[20230322-101609 576]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.54694
+[20230322-101610 388]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101610 435]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.5469 + 1.0 = 93.04694
+Check_WheelToolsetter() = True
+[20230322-101610 435]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.04694
+[20230322-101611 263]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101611 310]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.0469 + 1.0 = 93.54694
+Check_WheelToolsetter() = True
+[20230322-101611 310]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.54694
+[20230322-101612 170]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101612 216]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.5469 + 1.0 = 94.04694
+Check_WheelToolsetter() = True
+[20230322-101612 216]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.04694
+[20230322-101613 029]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101613 076]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.0469 + 1.0 = 94.54694
+Check_WheelToolsetter() = True
+[20230322-101613 076]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.54694
+[20230322-101613 935]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101613 982]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.5469 + 1.0 = 95.04694
+Check_WheelToolsetter() = True
+[20230322-101613 982]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.04694
+[20230322-101614 794]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101614 841]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.0469 + 1.0 = 95.54694
+Check_WheelToolsetter() = True
+[20230322-101614 841]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.54694
+[20230322-101615 653]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101615 700]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.5469 + 1.0 = 96.04694
+Check_WheelToolsetter() = True
+[20230322-101615 700]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.04694
+[20230322-101616 504]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101616 551]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.0469 + 1.0 = 96.54694
+Check_WheelToolsetter() = True
+[20230322-101616 551]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.54694
+[20230322-101617 363]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101617 410]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.5469 + 1.0 = 97.04694
+Check_WheelToolsetter() = True
+[20230322-101617 410]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.04694
+[20230322-101618 222]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101618 269]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.0469 + 1.0 = 97.54694
+Check_WheelToolsetter() = True
+[20230322-101618 269]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.54694
+[20230322-101619 128]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101619 175]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.5469 + 1.0 = 98.04693
+Check_WheelToolsetter() = True
+[20230322-101619 175]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.04693
+[20230322-101619 987]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101620 034]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.0469 + 1.0 = 98.54691
+Check_WheelToolsetter() = True
+[20230322-101620 034]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.54691
+[20230322-101620 893]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101620 940]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.5469 + 1.0 = 99.0469
+Check_WheelToolsetter() = True
+[20230322-101620 940]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.0469
+[20230322-101621 780]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101621 827]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.0469 + 1.0 = 99.54689
+Check_WheelToolsetter() = True
+[20230322-101621 827]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.54689
+[20230322-101622 641]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101622 688]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.5469 + 1.0 = 100.04688
+Check_WheelToolsetter() = True
+[20230322-101622 688]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.04688
+[20230322-101623 503]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101623 550]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.0469 + 1.0 = 100.54687
+Check_WheelToolsetter() = True
+[20230322-101623 550]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.54687
+[20230322-101624 409]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101624 456]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.5469 + 1.0 = 101.04686
+Check_WheelToolsetter() = True
+[20230322-101624 456]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.04686
+[20230322-101625 268]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101625 315]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.0469 + 1.0 = 101.54685
+Check_WheelToolsetter() = True
+[20230322-101625 315]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.54685
+[20230322-101626 174]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101626 221]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.5468 + 1.0 = 102.04684
+Check_WheelToolsetter() = True
+[20230322-101626 221]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.04684
+[20230322-101627 033]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101627 080]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.0468 + 1.0 = 102.54684
+Check_WheelToolsetter() = True
+[20230322-101627 080]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.54684
+[20230322-101627 939]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101627 986]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.5468 + 1.0 = 103.04684
+Check_WheelToolsetter() = True
+[20230322-101627 986]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.04684
+[20230322-101628 798]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101628 845]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.0468 + 1.0 = 103.54684
+Check_WheelToolsetter() = True
+[20230322-101628 845]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.54684
+[20230322-101629 658]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101629 704]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.5468 + 1.0 = 104.04684
+Check_WheelToolsetter() = True
+[20230322-101629 704]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.04684
+[20230322-101630 519]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101630 566]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 104.0468 + 1.0 = 104.54684
+Check_WheelToolsetter() = True
+[20230322-101630 566]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.54684
+[20230322-101630 769]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	SP Wheel Toolsetter 1'st (1mm) detected =   Pos : 104.09502mm
+[20230322-101631 302]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.44694
+Check_WheelToolsetter() = False
+[20230322-101631 302]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.44694
+[20230322-101631 834]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-101631 880]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.34694
+Check_WheelToolsetter() = False
+[20230322-101631 880]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.34694
+[20230322-101632 411]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-101632 458]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.24694
+Check_WheelToolsetter() = False
+[20230322-101632 458]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.24694
+[20230322-101632 989]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-101633 036]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.14694
+Check_WheelToolsetter() = False
+[20230322-101633 036]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.14694
+[20230322-101633 606]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-101633 653]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.04694
+Check_WheelToolsetter() = False
+[20230322-101633 653]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.04694
+[20230322-101633 950]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	SP Wheel Toolsetter (-0.1mm) Not detected =   Pos : 104.06765mm
+[20230322-101634 153]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0469 + 0.02 = 104.06693
+Check_DressToolsetter() = True
+[20230322-101634 153]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.06693
+[20230322-101634 544]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	Check SP Z axis 2'nd (0.02mm) Down...
+[20230322-101634 590]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0669 + 0.02 = 104.08692
+Check_DressToolsetter() = True
+[20230322-101634 590]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.08692
+[20230322-101634 793]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	SP Z axis 2'nd Down (0.02mm) Toolsetter detected =    Pos : 104.07992mm
+[20230322-101634 903]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08592
+[20230322-101635 153]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-101635 200]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08492
+[20230322-101635 450]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-101635 496]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08392
+[20230322-101635 746]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-101635 793]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08291
+[20230322-101636 043]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-101636 090]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08191
+[20230322-101636 340]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-101636 387]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08091
+[20230322-101636 590]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-101636 637]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07991
+[20230322-101636 887]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-101636 934]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07891
+[20230322-101637 090]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape up Toolsetter Not(-0.001mm) detected(-0.001mm) =   Pos : 104.07883mm
+[20230322-101637 105]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 3'rd Up (+0.001mm) = 104.0789 + 0.001 = 104.07986
+Check_WheelToolsetter() = True
+[20230322-101637 105]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis 3'rd (0.001mm) Down = 104.07986
+[20230322-101637 215]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	SP Z Toolsetter 3'rd (0.001mm) detected =   Pos : 104.07949mm
+[20230322-101646 168]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	[WheelTip Measure]
+Wheel Toolsetter 3'rd detected ! 
+WheelTip Z axis 3'rd Up (+0.001mm) = 104.0795
+Check_WheelToolsetter() = False
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] WheelTip measure 값 계산
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z Old Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old = 104.04799[mm]
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z New Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos = 104.07986[mm]
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip Old =  CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData_Old = 9.99901[mm]
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip New =  CVar.BPara[(int)eStage].dZ_WBase_to_WTS_MeasureValue - dZ_MeasurePos = 114.047 + 104.07986 = CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData = 9.96714[mm]
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Old : CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old =  100.04799[mm]
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel & Table contact Pos : dZ_MeasurePos - CVar.BPara[nStage].dH_Table_to_WTS_Gap_SetValue = 104.07986 - -4 = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07986
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Loss = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old - CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.04799 - 100.07986 = CVar.WaferMeasData[nStage].dH_WTs2Wtip_measure_Loss_Data = -0.03187[mm]
+[20230322-101646 168]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] CWheelManager.CWhldata[nStage].TipMax_Old = 9.99901,CWheelManager.CWhldata[nStage].TipMax = 9.96714,CWheelManager.CWhldata[nStage].TipLoss = 0.03187
+[20230322-101648 065]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	SP Z axis Measure End, Wait Position move Down : 89.047
+[20230322-101651 783]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 318, 010, 010, 000	[WheelTip_to_WTS]  Finish. SP Z axis Wait Position move =  89.047
+[20230322-101651 830]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = WheelTip_to_WTS Save...
+[20230322-101651 830]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:01:12.5
+[20230322-101651 845]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle
+[20230322-101651 845]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230322-101652 377]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle check
+[20230322-101652 423]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 60
+[20230322-101659 002]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230322-101710 288]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:18.4
+[20230322-101900 931]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+[20230322-101900 931]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230322-101900 931]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230322-101903 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-101903 467]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230322-101903 514]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230322-101903 514]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230322-101903 514]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-101903 545]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230322-101903 545]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230322-101907 370]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = WheelTip_to_WTS
+Wait Position => pMeasuer_WaitPos.dSZ = [ 89.047] ,pMeasuer_WaitPos.dDZ  = [ 10] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1]
+Are you continue ?
+[20230322-101907 385]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 89.047
+[20230322-101907 385]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 10
+[20230322-101913 966]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 89.04699, Dress Z axis move Wait = 9.999
+[20230322-101914 013]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 상태 확인: EMeasure.WheelBase_to_WTS =  WheelBase_to_WTS, EMeasure.WheelTip_to_WTS = WheelTip_to_WTS
+[20230322-101914 013]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,gWheel_rpm Stop Cmd
+[20230322-101914 059]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230322-101914 200]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = WheelTip_to_WTS
+[20230322-101914 247]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = [WheelTip_to_WTS] Start, WheelTip Measure Variable Initial !! 
+[20230322-101916 488]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	[WheelTip Measure]
+pMeasuer_WaitPos.dSZ = 89.0470
+pMeasuer_WaitPos.dDZ = 10.0000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dSZ = 114.5470
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dTY = 263.6960
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230322-101916 488]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	Wheel Spindle 정지  
+[20230322-101916 488]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Down = Up
+[20230322-101916 488]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Coolant = Water_On
+[20230322-101916 488]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG Up/Cooler water open, Zaxis Position Move: ,SP Z = 89.047,Dress Z = 10
+[20230322-101916 588]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 303, 010, 010, 000	Z Move Down 이동 Check : WheelBase Position = 89.04699, Dress Z Position = 9.999
+[20230322-101918 135]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 304, 010, 010, 000	Table Y 이동 = 263.696
+[20230322-101929 412]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 305, 010, 010, 000	Check Table Y 이동 = 263.696
+[20230322-101929 459]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 306, 010, 010, 000	WheelToolSetter 위치에서 Dress Zaxis Up 진행 이전 Toolsetter Off Check = True
+[20230322-101929 506]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.0470 + 1.0 = 89.54699
+Check_WheelToolsetter() = True
+[20230322-101929 506]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 89.54699
+[20230322-101930 318]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101930 365]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.5470 + 1.0 = 90.04698
+Check_WheelToolsetter() = True
+[20230322-101930 365]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.04698
+[20230322-101931 153]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101931 200]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.0470 + 1.0 = 90.54697
+Check_WheelToolsetter() = True
+[20230322-101931 200]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.54697
+[20230322-101932 059]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101932 106]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.5470 + 1.0 = 91.04696
+Check_WheelToolsetter() = True
+[20230322-101932 106]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.04696
+[20230322-101932 965]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101933 012]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.0470 + 1.0 = 91.54695
+Check_WheelToolsetter() = True
+[20230322-101933 012]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.54695
+[20230322-101933 824]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101933 871]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.5469 + 1.0 = 92.04694
+Check_WheelToolsetter() = True
+[20230322-101933 871]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.04694
+[20230322-101934 683]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101934 730]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.0469 + 1.0 = 92.54694
+Check_WheelToolsetter() = True
+[20230322-101934 730]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.54694
+[20230322-101935 589]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101935 636]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.5469 + 1.0 = 93.04694
+Check_WheelToolsetter() = True
+[20230322-101935 636]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.04694
+[20230322-101936 448]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101936 495]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.0469 + 1.0 = 93.54694
+Check_WheelToolsetter() = True
+[20230322-101936 495]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.54694
+[20230322-101937 299]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101937 315]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.5469 + 1.0 = 94.04694
+Check_WheelToolsetter() = True
+[20230322-101937 315]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.04694
+[20230322-101938 127]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101938 174]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.0469 + 1.0 = 94.54694
+Check_WheelToolsetter() = True
+[20230322-101938 174]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.54694
+[20230322-101939 027]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101939 074]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.5469 + 1.0 = 95.04694
+Check_WheelToolsetter() = True
+[20230322-101939 074]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.04694
+[20230322-101939 888]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101939 935]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.0469 + 1.0 = 95.54694
+Check_WheelToolsetter() = True
+[20230322-101939 935]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.54694
+[20230322-101940 748]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101940 794]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.5469 + 1.0 = 96.04694
+Check_WheelToolsetter() = True
+[20230322-101940 794]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.04694
+[20230322-101941 640]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101941 687]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.0469 + 1.0 = 96.54694
+Check_WheelToolsetter() = True
+[20230322-101941 687]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.54694
+[20230322-101942 546]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101942 593]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.5469 + 1.0 = 97.04694
+Check_WheelToolsetter() = True
+[20230322-101942 593]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.04694
+[20230322-101943 405]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101943 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.0469 + 1.0 = 97.54694
+Check_WheelToolsetter() = True
+[20230322-101943 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.54694
+[20230322-101944 264]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101944 311]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.5469 + 1.0 = 98.04693
+Check_WheelToolsetter() = True
+[20230322-101944 311]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.04693
+[20230322-101945 170]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101945 217]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.0469 + 1.0 = 98.54692
+Check_WheelToolsetter() = True
+[20230322-101945 217]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.54692
+[20230322-101946 030]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101946 076]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.5469 + 1.0 = 99.04691
+Check_WheelToolsetter() = True
+[20230322-101946 076]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.04691
+[20230322-101946 889]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101946 936]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.0469 + 1.0 = 99.5469
+Check_WheelToolsetter() = True
+[20230322-101946 936]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.5469
+[20230322-101947 795]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101947 842]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.5469 + 1.0 = 100.04689
+Check_WheelToolsetter() = True
+[20230322-101947 842]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.04689
+[20230322-101948 693]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101948 739]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.0469 + 1.0 = 100.54688
+Check_WheelToolsetter() = True
+[20230322-101948 739]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.54688
+[20230322-101949 552]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101949 599]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.5469 + 1.0 = 101.04687
+Check_WheelToolsetter() = True
+[20230322-101949 599]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.04687
+[20230322-101950 411]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101950 458]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.0469 + 1.0 = 101.54686
+Check_WheelToolsetter() = True
+[20230322-101950 458]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.54686
+[20230322-101951 297]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101951 344]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.5469 + 1.0 = 102.04685
+Check_WheelToolsetter() = True
+[20230322-101951 344]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.04685
+[20230322-101952 156]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101952 203]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.0469 + 1.0 = 102.54685
+Check_WheelToolsetter() = True
+[20230322-101952 203]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.54685
+[20230322-101953 062]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101953 109]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.5469 + 1.0 = 103.04685
+Check_WheelToolsetter() = True
+[20230322-101953 109]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.04685
+[20230322-101953 921]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101953 968]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.0469 + 1.0 = 103.54685
+Check_WheelToolsetter() = True
+[20230322-101953 968]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.54685
+[20230322-101954 780]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101954 827]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.5469 + 1.0 = 104.04685
+Check_WheelToolsetter() = True
+[20230322-101954 827]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.04685
+[20230322-101955 639]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-101955 686]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 104.0469 + 1.0 = 104.54685
+Check_WheelToolsetter() = True
+[20230322-101955 686]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.54685
+[20230322-101955 889]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	SP Wheel Toolsetter 1'st (1mm) detected =   Pos : 104.09034mm
+[20230322-101956 421]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.44698
+Check_WheelToolsetter() = False
+[20230322-101956 421]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.44698
+[20230322-101956 999]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-101957 045]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.34698
+Check_WheelToolsetter() = False
+[20230322-101957 045]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.34698
+[20230322-101957 577]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-101957 623]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.24698
+Check_WheelToolsetter() = False
+[20230322-101957 623]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.24698
+[20230322-101958 155]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-101958 201]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.14698
+Check_WheelToolsetter() = False
+[20230322-101958 201]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.14698
+[20230322-101958 732]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-101958 779]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.04698
+Check_WheelToolsetter() = False
+[20230322-101958 779]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.04698
+[20230322-101959 123]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	SP Wheel Toolsetter (-0.1mm) Not detected =   Pos : 104.05029mm
+[20230322-101959 232]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0469 + 0.02 = 104.06687
+Check_DressToolsetter() = True
+[20230322-101959 232]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.06687
+[20230322-101959 670]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	Check SP Z axis 2'nd (0.02mm) Down...
+[20230322-101959 717]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0669 + 0.02 = 104.08686
+Check_DressToolsetter() = True
+[20230322-101959 717]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.08686
+[20230322-101959 920]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	SP Z axis 2'nd Down (0.02mm) Toolsetter detected =    Pos : 104.08088mm
+[20230322-102000 029]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08586
+[20230322-102000 279]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102000 327]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08486
+[20230322-102000 530]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102000 577]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08386
+[20230322-102000 827]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102000 874]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08286
+[20230322-102001 110]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102001 157]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08186
+[20230322-102001 407]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102001 454]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08086
+[20230322-102001 704]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102001 751]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07986
+[20230322-102001 954]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102002 000]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07885
+[20230322-102002 250]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102002 297]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07785
+[20230322-102002 547]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102002 594]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07685
+[20230322-102002 844]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102002 891]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07585
+[20230322-102002 953]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape up Toolsetter Not(-0.001mm) detected(-0.001mm) =   Pos : 104.07685mm
+[20230322-102003 063]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 3'rd Up (+0.001mm) = 104.0758 + 0.001 = 104.07681
+Check_WheelToolsetter() = True
+[20230322-102003 063]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis 3'rd (0.001mm) Down = 104.07681
+[20230322-102003 313]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	Check SP Z axis 3'rd (0.001mm)Down...
+[20230322-102003 360]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 3'rd Up (+0.001mm) = 104.0768 + 0.001 = 104.07781
+Check_WheelToolsetter() = True
+[20230322-102003 360]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis 3'rd (0.001mm) Down = 104.07781
+[20230322-102003 469]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	SP Z Toolsetter 3'rd (0.001mm) detected =   Pos : 104.07789mm
+[20230322-102020 648]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	[WheelTip Measure]
+Wheel Toolsetter 3'rd detected ! 
+WheelTip Z axis 3'rd Up (+0.001mm) = 104.0779
+Check_WheelToolsetter() = False
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] WheelTip measure 값 계산
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z Old Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old = 104.07986[mm]
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z New Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos = 104.0778[mm]
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip Old =  CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData_Old = 9.96714[mm]
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip New =  CVar.BPara[(int)eStage].dZ_WBase_to_WTS_MeasureValue - dZ_MeasurePos = 114.047 + 104.0778 = CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData = 9.9692[mm]
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Old : CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old =  100.07986[mm]
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel & Table contact Pos : dZ_MeasurePos - CVar.BPara[nStage].dH_Table_to_WTS_Gap_SetValue = 104.0778 - -4 = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.0778
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Loss = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old - CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07986 - 100.0778 = CVar.WaferMeasData[nStage].dH_WTs2Wtip_measure_Loss_Data = 0.00206[mm]
+[20230322-102020 648]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] CWheelManager.CWhldata[nStage].TipMax_Old = 9.96714,CWheelManager.CWhldata[nStage].TipMax = 9.9692,CWheelManager.CWhldata[nStage].TipLoss = -0.00206
+[20230322-102022 179]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	SP Z axis Measure End, Wait Position move Down : 89.047
+[20230322-102025 900]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 318, 010, 010, 000	[WheelTip_to_WTS]  Finish. SP Z axis Wait Position move =  89.047
+[20230322-102025 946]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = WheelTip_to_WTS Save...
+[20230322-102025 946]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:01:22.4
+[20230322-102025 993]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle
+[20230322-102025 993]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230322-102026 499]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle check
+[20230322-102026 546]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 60
+[20230322-102033 085]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230322-102044 334]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:18.3
+[20230322-102101 442]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+[20230322-102101 442]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230322-102101 442]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230322-102106 887]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-102106 903]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230322-102106 950]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230322-102106 950]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230322-102106 950]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-102106 981]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230322-102106 981]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230322-102112 191]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = WheelTip_to_WTS
+Wait Position => pMeasuer_WaitPos.dSZ = [ 89.047] ,pMeasuer_WaitPos.dDZ  = [ 10] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1]
+Are you continue ?
+[20230322-102112 207]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 89.047
+[20230322-102112 207]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 10
+[20230322-102118 775]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 89.04699, Dress Z axis move Wait = 9.999
+[20230322-102118 822]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 상태 확인: EMeasure.WheelBase_to_WTS =  WheelBase_to_WTS, EMeasure.WheelTip_to_WTS = WheelTip_to_WTS
+[20230322-102118 822]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,gWheel_rpm Stop Cmd
+[20230322-102118 869]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230322-102119 009]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = WheelTip_to_WTS
+[20230322-102119 056]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = [WheelTip_to_WTS] Start, WheelTip Measure Variable Initial !! 
+[20230322-102124 812]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	[WheelTip Measure]
+pMeasuer_WaitPos.dSZ = 89.0470
+pMeasuer_WaitPos.dDZ = 10.0000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dSZ = 114.5470
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dTY = 263.6960
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230322-102124 812]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	Wheel Spindle 정지  
+[20230322-102124 812]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Down = Up
+[20230322-102124 812]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Coolant = Water_On
+[20230322-102124 812]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG Up/Cooler water open, Zaxis Position Move: ,SP Z = 89.047,Dress Z = 10
+[20230322-102124 921]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 303, 010, 010, 000	Z Move Down 이동 Check : WheelBase Position = 89.04699, Dress Z Position = 9.999
+[20230322-102126 468]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 304, 010, 010, 000	Table Y 이동 = 263.696
+[20230322-102137 781]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 305, 010, 010, 000	Check Table Y 이동 = 263.696
+[20230322-102137 828]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 306, 010, 010, 000	WheelToolSetter 위치에서 Dress Zaxis Up 진행 이전 Toolsetter Off Check = True
+[20230322-102137 875]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.0470 + 1.0 = 89.54699
+Check_WheelToolsetter() = True
+[20230322-102137 875]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 89.54699
+[20230322-102138 744]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102138 791]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.5470 + 1.0 = 90.04698
+Check_WheelToolsetter() = True
+[20230322-102138 791]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.04698
+[20230322-102139 595]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102139 642]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.0470 + 1.0 = 90.54696
+Check_WheelToolsetter() = True
+[20230322-102139 642]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.54696
+[20230322-102140 454]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102140 501]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.5470 + 1.0 = 91.04695
+Check_WheelToolsetter() = True
+[20230322-102140 501]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.04695
+[20230322-102141 314]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102141 360]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.0469 + 1.0 = 91.54694
+Check_WheelToolsetter() = True
+[20230322-102141 360]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.54694
+[20230322-102142 173]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102142 220]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.5469 + 1.0 = 92.04694
+Check_WheelToolsetter() = True
+[20230322-102142 220]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.04694
+[20230322-102143 079]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102143 126]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.0469 + 1.0 = 92.54694
+Check_WheelToolsetter() = True
+[20230322-102143 126]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.54694
+[20230322-102143 938]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102143 985]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.5469 + 1.0 = 93.04694
+Check_WheelToolsetter() = True
+[20230322-102143 985]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.04694
+[20230322-102144 844]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102144 891]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.0469 + 1.0 = 93.54694
+Check_WheelToolsetter() = True
+[20230322-102144 891]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.54694
+[20230322-102145 703]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102145 750]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.5469 + 1.0 = 94.04694
+Check_WheelToolsetter() = True
+[20230322-102145 750]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.04694
+[20230322-102146 562]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102146 609]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.0469 + 1.0 = 94.54694
+Check_WheelToolsetter() = True
+[20230322-102146 609]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.54694
+[20230322-102147 422]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102147 468]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.5469 + 1.0 = 95.04694
+Check_WheelToolsetter() = True
+[20230322-102147 468]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.04694
+[20230322-102148 328]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102148 374]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.0469 + 1.0 = 95.54694
+Check_WheelToolsetter() = True
+[20230322-102148 374]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.54694
+[20230322-102149 187]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102149 234]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.5469 + 1.0 = 96.04694
+Check_WheelToolsetter() = True
+[20230322-102149 234]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.04694
+[20230322-102150 062]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102150 109]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.0469 + 1.0 = 96.54694
+Check_WheelToolsetter() = True
+[20230322-102150 109]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.54694
+[20230322-102150 921]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102150 968]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.5469 + 1.0 = 97.04694
+Check_WheelToolsetter() = True
+[20230322-102150 968]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.04694
+[20230322-102151 812]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102151 859]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.0469 + 1.0 = 97.54694
+Check_WheelToolsetter() = True
+[20230322-102151 859]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.54694
+[20230322-102152 718]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102152 765]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.5469 + 1.0 = 98.04693
+Check_WheelToolsetter() = True
+[20230322-102152 765]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.04693
+[20230322-102153 626]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102153 673]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.0469 + 1.0 = 98.54692
+Check_WheelToolsetter() = True
+[20230322-102153 673]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.54692
+[20230322-102154 532]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102154 579]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.5469 + 1.0 = 99.04691
+Check_WheelToolsetter() = True
+[20230322-102154 579]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.04691
+[20230322-102155 431]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102155 478]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.0469 + 1.0 = 99.5469
+Check_WheelToolsetter() = True
+[20230322-102155 478]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.5469
+[20230322-102156 290]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102156 337]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.5469 + 1.0 = 100.04688
+Check_WheelToolsetter() = True
+[20230322-102156 337]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.04688
+[20230322-102157 170]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102157 185]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.0469 + 1.0 = 100.54687
+Check_WheelToolsetter() = True
+[20230322-102157 185]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.54687
+[20230322-102157 991]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102158 038]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.5469 + 1.0 = 101.04686
+Check_WheelToolsetter() = True
+[20230322-102158 038]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.04686
+[20230322-102158 850]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102158 897]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.0469 + 1.0 = 101.54685
+Check_WheelToolsetter() = True
+[20230322-102158 897]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.54685
+[20230322-102159 713]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102159 759]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.5468 + 1.0 = 102.04684
+Check_WheelToolsetter() = True
+[20230322-102159 759]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.04684
+[20230322-102200 599]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102200 649]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.0468 + 1.0 = 102.54684
+Check_WheelToolsetter() = True
+[20230322-102200 649]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.54684
+[20230322-102201 469]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102201 516]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.5468 + 1.0 = 103.04684
+Check_WheelToolsetter() = True
+[20230322-102201 516]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.04684
+[20230322-102202 384]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102202 431]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.0468 + 1.0 = 103.54684
+Check_WheelToolsetter() = True
+[20230322-102202 431]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.54684
+[20230322-102203 251]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102203 301]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.5468 + 1.0 = 104.04684
+Check_WheelToolsetter() = True
+[20230322-102203 301]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.04684
+[20230322-102204 121]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102204 173]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 104.0468 + 1.0 = 104.54684
+Check_WheelToolsetter() = True
+[20230322-102204 173]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.54684
+[20230322-102204 423]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	SP Wheel Toolsetter 1'st (1mm) detected =   Pos : 104.12398mm
+[20230322-102204 907]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.44696
+Check_WheelToolsetter() = False
+[20230322-102204 907]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.44696
+[20230322-102205 485]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102205 532]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.34696
+Check_WheelToolsetter() = False
+[20230322-102205 532]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.34696
+[20230322-102206 063]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102206 110]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.24696
+Check_WheelToolsetter() = False
+[20230322-102206 110]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.24696
+[20230322-102206 688]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102206 735]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.14696
+Check_WheelToolsetter() = False
+[20230322-102206 735]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.14696
+[20230322-102207 288]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102207 335]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.04696
+Check_WheelToolsetter() = False
+[20230322-102207 335]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.04696
+[20230322-102207 626]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	SP Wheel Toolsetter (-0.1mm) Not detected =   Pos : 104.07961mm
+[20230322-102207 833]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0470 + 0.02 = 104.06695
+Check_DressToolsetter() = True
+[20230322-102207 833]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.06695
+[20230322-102208 221]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	Check SP Z axis 2'nd (0.02mm) Down...
+[20230322-102208 271]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0669 + 0.02 = 104.08694
+Check_DressToolsetter() = True
+[20230322-102208 271]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.08694
+[20230322-102208 474]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	SP Z axis 2'nd Down (0.02mm) Toolsetter detected =    Pos : 104.08162mm
+[20230322-102208 584]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08593
+[20230322-102208 848]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102208 894]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08493
+[20230322-102209 139]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102209 186]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08393
+[20230322-102209 437]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102209 484]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08293
+[20230322-102209 687]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102209 734]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08193
+[20230322-102209 984]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102210 031]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08093
+[20230322-102210 299]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102210 346]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07993
+[20230322-102210 596]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102210 643]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07893
+[20230322-102210 895]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102210 942]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07793
+[20230322-102211 193]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102211 239]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07693
+[20230322-102211 489]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102211 536]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07593
+[20230322-102211 646]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102211 692]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07487
+[20230322-102211 942]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102211 989]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07387
+[20230322-102212 099]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape up Toolsetter Not(-0.001mm) detected(-0.001mm) =   Pos : 104.07377mm
+[20230322-102212 114]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 3'rd Up (+0.001mm) = 104.0738 + 0.001 = 104.07477
+Check_WheelToolsetter() = True
+[20230322-102212 114]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis 3'rd (0.001mm) Down = 104.07477
+[20230322-102212 224]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	SP Z Toolsetter 3'rd (0.001mm) detected =   Pos : 104.07485mm
+[20230322-102219 058]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	[WheelTip Measure]
+Wheel Toolsetter 3'rd detected ! 
+WheelTip Z axis 3'rd Up (+0.001mm) = 104.0749
+Check_WheelToolsetter() = False
+[20230322-102219 058]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] WheelTip measure 값 계산
+[20230322-102219 058]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z Old Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old = 104.0778[mm]
+[20230322-102219 058]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z New Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos = 104.07476[mm]
+[20230322-102219 058]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip Old =  CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData_Old = 9.9692[mm]
+[20230322-102219 073]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip New =  CVar.BPara[(int)eStage].dZ_WBase_to_WTS_MeasureValue - dZ_MeasurePos = 114.047 + 104.07476 = CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData = 9.97224[mm]
+[20230322-102219 073]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Old : CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old =  100.0778[mm]
+[20230322-102219 073]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel & Table contact Pos : dZ_MeasurePos - CVar.BPara[nStage].dH_Table_to_WTS_Gap_SetValue = 104.07476 - -4 = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07476
+[20230322-102219 073]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Loss = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old - CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.0778 - 100.07476 = CVar.WaferMeasData[nStage].dH_WTs2Wtip_measure_Loss_Data = 0.00304[mm]
+[20230322-102219 073]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] CWheelManager.CWhldata[nStage].TipMax_Old = 9.9692,CWheelManager.CWhldata[nStage].TipMax = 9.97224,CWheelManager.CWhldata[nStage].TipLoss = -0.00304
+[20230322-102221 948]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	SP Z axis Measure End, Wait Position move Down : 89.047
+[20230322-102225 611]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 318, 010, 010, 000	[WheelTip_to_WTS]  Finish. SP Z axis Wait Position move =  89.047
+[20230322-102225 658]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = WheelTip_to_WTS Save...
+[20230322-102225 658]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:01:18.7
+[20230322-102225 737]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle
+[20230322-102225 737]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230322-102226 250]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle check
+[20230322-102226 296]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 60
+[20230322-102232 819]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230322-102244 081]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:18.3
+[20230322-102255 882]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+[20230322-102255 882]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230322-102255 882]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230322-102257 023]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-102257 038]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230322-102257 085]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230322-102257 085]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230322-102257 085]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-102257 116]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230322-102257 116]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230322-102259 264]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = WheelTip_to_WTS
+Wait Position => pMeasuer_WaitPos.dSZ = [ 89.047] ,pMeasuer_WaitPos.dDZ  = [ 10] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1]
+Are you continue ?
+[20230322-102259 279]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 89.047
+[20230322-102259 279]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 10
+[20230322-102305 862]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 89.04699, Dress Z axis move Wait = 9.999
+[20230322-102305 902]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 상태 확인: EMeasure.WheelBase_to_WTS =  WheelBase_to_WTS, EMeasure.WheelTip_to_WTS = WheelTip_to_WTS
+[20230322-102305 902]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,gWheel_rpm Stop Cmd
+[20230322-102305 951]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230322-102306 092]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = WheelTip_to_WTS
+[20230322-102306 139]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = [WheelTip_to_WTS] Start, WheelTip Measure Variable Initial !! 
+[20230322-102307 639]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	[WheelTip Measure]
+pMeasuer_WaitPos.dSZ = 89.0470
+pMeasuer_WaitPos.dDZ = 10.0000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dSZ = 114.5470
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dTY = 263.6960
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230322-102307 639]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	Wheel Spindle 정지  
+[20230322-102307 639]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Down = Up
+[20230322-102307 639]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Coolant = Water_On
+[20230322-102307 639]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG Up/Cooler water open, Zaxis Position Move: ,SP Z = 89.047,Dress Z = 10
+[20230322-102307 765]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 303, 010, 010, 000	Z Move Down 이동 Check : WheelBase Position = 89.04699, Dress Z Position = 9.999
+[20230322-102309 312]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 304, 010, 010, 000	Table Y 이동 = 263.696
+[20230322-102320 601]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 305, 010, 010, 000	Check Table Y 이동 = 263.696
+[20230322-102320 648]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 306, 010, 010, 000	WheelToolSetter 위치에서 Dress Zaxis Up 진행 이전 Toolsetter Off Check = True
+[20230322-102320 695]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.0470 + 1.0 = 89.54699
+Check_WheelToolsetter() = True
+[20230322-102320 695]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 89.54699
+[20230322-102321 511]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102321 560]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.5470 + 1.0 = 90.04697
+Check_WheelToolsetter() = True
+[20230322-102321 562]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.04697
+[20230322-102322 370]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102322 417]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.0470 + 1.0 = 90.54696
+Check_WheelToolsetter() = True
+[20230322-102322 417]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.54696
+[20230322-102323 240]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102323 287]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.5470 + 1.0 = 91.04695
+Check_WheelToolsetter() = True
+[20230322-102323 287]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.04695
+[20230322-102324 097]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102324 144]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.0469 + 1.0 = 91.54694
+Check_WheelToolsetter() = True
+[20230322-102324 144]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.54694
+[20230322-102324 956]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102325 003]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.5469 + 1.0 = 92.04694
+Check_WheelToolsetter() = True
+[20230322-102325 003]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.04694
+[20230322-102325 862]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102325 909]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.0469 + 1.0 = 92.54694
+Check_WheelToolsetter() = True
+[20230322-102325 909]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.54694
+[20230322-102326 773]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102326 816]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.5469 + 1.0 = 93.04694
+Check_WheelToolsetter() = True
+[20230322-102326 816]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.04694
+[20230322-102327 632]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102327 679]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.0469 + 1.0 = 93.54694
+Check_WheelToolsetter() = True
+[20230322-102327 679]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.54694
+[20230322-102328 543]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102328 590]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.5469 + 1.0 = 94.04694
+Check_WheelToolsetter() = True
+[20230322-102328 590]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.04694
+[20230322-102329 433]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102329 480]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.0469 + 1.0 = 94.54694
+Check_WheelToolsetter() = True
+[20230322-102329 480]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.54694
+[20230322-102330 321]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102330 367]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.5469 + 1.0 = 95.04694
+Check_WheelToolsetter() = True
+[20230322-102330 367]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.04694
+[20230322-102331 228]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102331 274]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.0469 + 1.0 = 95.54694
+Check_WheelToolsetter() = True
+[20230322-102331 274]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.54694
+[20230322-102332 169]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102332 184]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.5469 + 1.0 = 96.04694
+Check_WheelToolsetter() = True
+[20230322-102332 184]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.04694
+[20230322-102333 034]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102333 073]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.0469 + 1.0 = 96.54694
+Check_WheelToolsetter() = True
+[20230322-102333 073]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.54694
+[20230322-102333 925]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102333 974]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.5469 + 1.0 = 97.04694
+Check_WheelToolsetter() = True
+[20230322-102333 974]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.04694
+[20230322-102334 832]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102334 879]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.0469 + 1.0 = 97.54694
+Check_WheelToolsetter() = True
+[20230322-102334 879]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.54694
+[20230322-102335 728]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102335 775]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.5469 + 1.0 = 98.04693
+Check_WheelToolsetter() = True
+[20230322-102335 775]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.04693
+[20230322-102336 587]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102336 634]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.0469 + 1.0 = 98.54692
+Check_WheelToolsetter() = True
+[20230322-102336 634]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.54692
+[20230322-102337 441]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102337 488]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.5469 + 1.0 = 99.04691
+Check_WheelToolsetter() = True
+[20230322-102337 488]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.04691
+[20230322-102338 309]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102338 356]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.0469 + 1.0 = 99.54689
+Check_WheelToolsetter() = True
+[20230322-102338 356]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.54689
+[20230322-102339 209]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102339 249]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.5469 + 1.0 = 100.04688
+Check_WheelToolsetter() = True
+[20230322-102339 249]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.04688
+[20230322-102340 084]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102340 131]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.0469 + 1.0 = 100.54687
+Check_WheelToolsetter() = True
+[20230322-102340 131]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.54687
+[20230322-102340 990]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102341 037]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.5469 + 1.0 = 101.04686
+Check_WheelToolsetter() = True
+[20230322-102341 037]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.04686
+[20230322-102341 887]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102341 934]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.0469 + 1.0 = 101.54685
+Check_WheelToolsetter() = True
+[20230322-102341 934]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.54685
+[20230322-102342 788]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102342 835]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.5468 + 1.0 = 102.04684
+Check_WheelToolsetter() = True
+[20230322-102342 835]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.04684
+[20230322-102343 695]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102343 741]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.0468 + 1.0 = 102.54684
+Check_WheelToolsetter() = True
+[20230322-102343 741]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.54684
+[20230322-102344 597]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102344 644]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.5468 + 1.0 = 103.04684
+Check_WheelToolsetter() = True
+[20230322-102344 644]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.04684
+[20230322-102345 520]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102345 567]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.0468 + 1.0 = 103.54684
+Check_WheelToolsetter() = True
+[20230322-102345 567]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.54684
+[20230322-102346 426]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102346 473]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.5468 + 1.0 = 104.04684
+Check_WheelToolsetter() = True
+[20230322-102346 473]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.04684
+[20230322-102347 337]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102347 384]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 104.0468 + 1.0 = 104.54684
+Check_WheelToolsetter() = True
+[20230322-102347 384]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.54684
+[20230322-102347 592]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	SP Wheel Toolsetter 1'st (1mm) detected =   Pos : 104.07026mm
+[20230322-102348 123]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.44686
+Check_WheelToolsetter() = False
+[20230322-102348 123]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.44686
+[20230322-102348 652]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102348 699]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.34686
+Check_WheelToolsetter() = False
+[20230322-102348 699]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.34686
+[20230322-102349 205]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102349 247]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.24686
+Check_WheelToolsetter() = False
+[20230322-102349 247]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.24686
+[20230322-102349 799]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102349 846]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.14686
+Check_WheelToolsetter() = False
+[20230322-102349 846]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.14686
+[20230322-102350 430]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102350 477]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.04686
+Check_WheelToolsetter() = False
+[20230322-102350 477]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.04686
+[20230322-102350 770]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	SP Wheel Toolsetter (-0.1mm) Not detected =   Pos : 104.07904mm
+[20230322-102350 927]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0467 + 0.02 = 104.06668
+Check_DressToolsetter() = True
+[20230322-102350 927]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.06668
+[20230322-102351 315]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	Check SP Z axis 2'nd (0.02mm) Down...
+[20230322-102351 362]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0667 + 0.02 = 104.08667
+Check_DressToolsetter() = True
+[20230322-102351 362]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.08667
+[20230322-102351 518]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	SP Z axis 2'nd Down (0.02mm) Toolsetter detected =    Pos : 104.07797mm
+[20230322-102351 674]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08567
+[20230322-102351 925]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102351 972]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08467
+[20230322-102352 254]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102352 269]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08367
+[20230322-102352 519]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102352 559]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08267
+[20230322-102352 815]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102352 862]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08167
+[20230322-102353 110]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102353 157]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08067
+[20230322-102353 407]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102353 454]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07967
+[20230322-102353 657]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102353 704]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07867
+[20230322-102353 954]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102354 001]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07767
+[20230322-102354 265]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102354 312]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07667
+[20230322-102354 561]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102354 611]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07567
+[20230322-102354 861]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102354 908]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07467
+[20230322-102355 158]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102355 195]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07367
+[20230322-102355 260]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape up Toolsetter Not(-0.001mm) detected(-0.001mm) =   Pos : 104.07448mm
+[20230322-102355 323]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 3'rd Up (+0.001mm) = 104.0736 + 0.001 = 104.07457
+Check_WheelToolsetter() = True
+[20230322-102355 323]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis 3'rd (0.001mm) Down = 104.07457
+[20230322-102355 559]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	Check SP Z axis 3'rd (0.001mm)Down...
+[20230322-102355 606]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 3'rd Up (+0.001mm) = 104.0746 + 0.001 = 104.07557
+Check_WheelToolsetter() = True
+[20230322-102355 606]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis 3'rd (0.001mm) Down = 104.07557
+[20230322-102355 715]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	SP Z Toolsetter 3'rd (0.001mm) detected =   Pos : 104.07485mm
+[20230322-102401 965]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	[WheelTip Measure]
+Wheel Toolsetter 3'rd detected ! 
+WheelTip Z axis 3'rd Up (+0.001mm) = 104.0749
+Check_WheelToolsetter() = False
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] WheelTip measure 값 계산
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z Old Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old = 104.07476[mm]
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z New Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos = 104.07556[mm]
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip Old =  CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData_Old = 9.97224[mm]
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip New =  CVar.BPara[(int)eStage].dZ_WBase_to_WTS_MeasureValue - dZ_MeasurePos = 114.047 + 104.07556 = CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData = 9.97144[mm]
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Old : CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old =  100.07476[mm]
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel & Table contact Pos : dZ_MeasurePos - CVar.BPara[nStage].dH_Table_to_WTS_Gap_SetValue = 104.07556 - -4 = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07556
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Loss = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old - CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07476 - 100.07556 = CVar.WaferMeasData[nStage].dH_WTs2Wtip_measure_Loss_Data = -0.0008[mm]
+[20230322-102401 965]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] CWheelManager.CWhldata[nStage].TipMax_Old = 9.97224,CWheelManager.CWhldata[nStage].TipMax = 9.97144,CWheelManager.CWhldata[nStage].TipLoss = 0.0008
+[20230322-102403 416]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	SP Z axis Measure End, Wait Position move Down : 89.047
+[20230322-102407 136]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 318, 010, 010, 000	[WheelTip_to_WTS]  Finish. SP Z axis Wait Position move =  89.047
+[20230322-102407 183]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = WheelTip_to_WTS Save...
+[20230322-102407 183]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:01:10.1
+[20230322-102407 261]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle
+[20230322-102407 261]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230322-102407 777]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle check
+[20230322-102407 823]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 60
+[20230322-102414 352]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230322-102425 604]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:18.3
+[20230322-102448 720]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+[20230322-102448 720]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230322-102448 720]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230322-102449 873]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-102449 889]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230322-102449 936]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230322-102449 936]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230322-102449 936]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-102449 967]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230322-102449 967]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230322-102452 021]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = WheelTip_to_WTS
+Wait Position => pMeasuer_WaitPos.dSZ = [ 89.047] ,pMeasuer_WaitPos.dDZ  = [ 10] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1]
+Are you continue ?
+[20230322-102452 036]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 89.047
+[20230322-102452 036]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 10
+[20230322-102458 616]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 89.04699, Dress Z axis move Wait = 9.999
+[20230322-102458 658]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 상태 확인: EMeasure.WheelBase_to_WTS =  WheelBase_to_WTS, EMeasure.WheelTip_to_WTS = WheelTip_to_WTS
+[20230322-102458 658]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,gWheel_rpm Stop Cmd
+[20230322-102458 705]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230322-102458 838]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = WheelTip_to_WTS
+[20230322-102458 885]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = [WheelTip_to_WTS] Start, WheelTip Measure Variable Initial !! 
+[20230322-102501 177]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	[WheelTip Measure]
+pMeasuer_WaitPos.dSZ = 89.0470
+pMeasuer_WaitPos.dDZ = 10.0000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dSZ = 114.5470
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dTY = 263.6960
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230322-102501 193]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	Wheel Spindle 정지  
+[20230322-102501 193]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Down = Up
+[20230322-102501 193]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Coolant = Water_On
+[20230322-102501 193]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG Up/Cooler water open, Zaxis Position Move: ,SP Z = 89.047,Dress Z = 10
+[20230322-102501 326]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 303, 010, 010, 000	Z Move Down 이동 Check : WheelBase Position = 89.04699, Dress Z Position = 9.999
+[20230322-102502 829]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 304, 010, 010, 000	Table Y 이동 = 263.696
+[20230322-102514 151]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 305, 010, 010, 000	Check Table Y 이동 = 263.696
+[20230322-102514 198]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 306, 010, 010, 000	WheelToolSetter 위치에서 Dress Zaxis Up 진행 이전 Toolsetter Off Check = True
+[20230322-102514 240]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.0470 + 1.0 = 89.54699
+Check_WheelToolsetter() = True
+[20230322-102514 240]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 89.54699
+[20230322-102515 093]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102515 140]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.5470 + 1.0 = 90.04698
+Check_WheelToolsetter() = True
+[20230322-102515 142]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.04698
+[20230322-102515 973]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102516 020]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.0470 + 1.0 = 90.54697
+Check_WheelToolsetter() = True
+[20230322-102516 020]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.54697
+[20230322-102516 825]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102516 875]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.5470 + 1.0 = 91.04696
+Check_WheelToolsetter() = True
+[20230322-102516 875]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.04696
+[20230322-102517 725]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102517 761]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.0470 + 1.0 = 91.54695
+Check_WheelToolsetter() = True
+[20230322-102517 761]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.54695
+[20230322-102518 626]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102518 672]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.5469 + 1.0 = 92.04694
+Check_WheelToolsetter() = True
+[20230322-102518 672]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.04694
+[20230322-102519 525]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102519 572]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.0469 + 1.0 = 92.54694
+Check_WheelToolsetter() = True
+[20230322-102519 572]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.54694
+[20230322-102520 385]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102520 432]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.5469 + 1.0 = 93.04694
+Check_WheelToolsetter() = True
+[20230322-102520 432]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.04694
+[20230322-102521 260]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102521 307]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.0469 + 1.0 = 93.54694
+Check_WheelToolsetter() = True
+[20230322-102521 307]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.54694
+[20230322-102522 166]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102522 215]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.5469 + 1.0 = 94.04694
+Check_WheelToolsetter() = True
+[20230322-102522 215]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.04694
+[20230322-102523 077]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102523 124]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.0469 + 1.0 = 94.54694
+Check_WheelToolsetter() = True
+[20230322-102523 124]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.54694
+[20230322-102523 983]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102524 030]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.5469 + 1.0 = 95.04694
+Check_WheelToolsetter() = True
+[20230322-102524 030]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.04694
+[20230322-102524 842]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102524 889]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.0469 + 1.0 = 95.54694
+Check_WheelToolsetter() = True
+[20230322-102524 889]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.54694
+[20230322-102525 748]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102525 795]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.5469 + 1.0 = 96.04694
+Check_WheelToolsetter() = True
+[20230322-102525 795]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.04694
+[20230322-102526 607]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102526 654]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.0469 + 1.0 = 96.54694
+Check_WheelToolsetter() = True
+[20230322-102526 654]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.54694
+[20230322-102527 514]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102527 560]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.5469 + 1.0 = 97.04694
+Check_WheelToolsetter() = True
+[20230322-102527 560]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.04694
+[20230322-102528 420]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102528 466]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.0469 + 1.0 = 97.54694
+Check_WheelToolsetter() = True
+[20230322-102528 466]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.54694
+[20230322-102529 279]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102529 326]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.5469 + 1.0 = 98.04693
+Check_WheelToolsetter() = True
+[20230322-102529 326]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.04693
+[20230322-102530 185]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102530 232]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.0469 + 1.0 = 98.54692
+Check_WheelToolsetter() = True
+[20230322-102530 232]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.54692
+[20230322-102531 044]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102531 091]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.5469 + 1.0 = 99.04691
+Check_WheelToolsetter() = True
+[20230322-102531 091]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.04691
+[20230322-102531 950]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102531 997]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.0469 + 1.0 = 99.5469
+Check_WheelToolsetter() = True
+[20230322-102531 997]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.5469
+[20230322-102532 856]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102532 903]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.5469 + 1.0 = 100.04689
+Check_WheelToolsetter() = True
+[20230322-102532 903]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.04689
+[20230322-102533 762]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102533 809]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.0469 + 1.0 = 100.54688
+Check_WheelToolsetter() = True
+[20230322-102533 809]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.54688
+[20230322-102534 621]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102534 668]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.5469 + 1.0 = 101.04687
+Check_WheelToolsetter() = True
+[20230322-102534 668]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.04687
+[20230322-102535 472]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102535 519]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.0469 + 1.0 = 101.54686
+Check_WheelToolsetter() = True
+[20230322-102535 519]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.54686
+[20230322-102536 378]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102536 425]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.5469 + 1.0 = 102.04685
+Check_WheelToolsetter() = True
+[20230322-102536 425]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.04685
+[20230322-102537 237]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102537 284]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.0469 + 1.0 = 102.54685
+Check_WheelToolsetter() = True
+[20230322-102537 284]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.54685
+[20230322-102538 096]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102538 143]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.5469 + 1.0 = 103.04685
+Check_WheelToolsetter() = True
+[20230322-102538 143]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.04685
+[20230322-102539 013]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102539 059]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.0469 + 1.0 = 103.54685
+Check_WheelToolsetter() = True
+[20230322-102539 059]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.54685
+[20230322-102539 872]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102539 919]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.5469 + 1.0 = 104.04685
+Check_WheelToolsetter() = True
+[20230322-102539 919]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.04685
+[20230322-102540 778]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102540 825]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 104.0469 + 1.0 = 104.54685
+Check_WheelToolsetter() = True
+[20230322-102540 825]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.54685
+[20230322-102541 028]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	SP Wheel Toolsetter 1'st (1mm) detected =   Pos : 104.06929mm
+[20230322-102541 559]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.44704
+Check_WheelToolsetter() = False
+[20230322-102541 559]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.44704
+[20230322-102542 090]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102542 137]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.34704
+Check_WheelToolsetter() = False
+[20230322-102542 137]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.34704
+[20230322-102542 694]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102542 741]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.24704
+Check_WheelToolsetter() = False
+[20230322-102542 741]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.24704
+[20230322-102543 284]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102543 331]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.14704
+Check_WheelToolsetter() = False
+[20230322-102543 331]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.14704
+[20230322-102543 862]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102543 909]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.04704
+Check_WheelToolsetter() = False
+[20230322-102543 909]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.04704
+[20230322-102544 205]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	SP Wheel Toolsetter (-0.1mm) Not detected =   Pos : 104.076mm
+[20230322-102544 408]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0470 + 0.02 = 104.06703
+Check_DressToolsetter() = True
+[20230322-102544 408]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.06703
+[20230322-102544 846]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	Check SP Z axis 2'nd (0.02mm) Down...
+[20230322-102544 893]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0670 + 0.02 = 104.08702
+Check_DressToolsetter() = True
+[20230322-102544 893]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.08702
+[20230322-102545 049]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	SP Z axis 2'nd Down (0.02mm) Toolsetter detected =    Pos : 104.0718mm
+[20230322-102545 205]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08602
+[20230322-102545 455]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102545 502]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08502
+[20230322-102545 752]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102545 799]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08402
+[20230322-102546 049]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102546 096]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08302
+[20230322-102546 345]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102546 392]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08202
+[20230322-102546 642]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102546 689]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08102
+[20230322-102546 939]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102546 986]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08002
+[20230322-102547 236]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102547 283]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07902
+[20230322-102547 533]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102547 580]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07802
+[20230322-102547 829]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102547 876]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07702
+[20230322-102548 126]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102548 173]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07602
+[20230322-102548 423]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102548 470]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07502
+[20230322-102548 720]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102548 767]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07402
+[20230322-102548 876]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102548 923]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07292
+[20230322-102549 032]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape up Toolsetter Not(-0.001mm) detected(-0.001mm) =   Pos : 104.07333mm
+[20230322-102549 048]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 3'rd Up (+0.001mm) = 104.0728 + 0.001 = 104.07382
+Check_WheelToolsetter() = True
+[20230322-102549 048]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis 3'rd (0.001mm) Down = 104.07382
+[20230322-102549 157]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	SP Z Toolsetter 3'rd (0.001mm) detected =   Pos : 104.07358mm
+[20230322-102614 361]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	[WheelTip Measure]
+Wheel Toolsetter 3'rd detected ! 
+WheelTip Z axis 3'rd Up (+0.001mm) = 104.0736
+Check_WheelToolsetter() = False
+[20230322-102614 361]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] WheelTip measure 값 계산
+[20230322-102614 361]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z Old Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old = 104.07556[mm]
+[20230322-102614 377]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z New Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos = 104.07381[mm]
+[20230322-102614 377]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip Old =  CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData_Old = 9.97144[mm]
+[20230322-102614 377]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip New =  CVar.BPara[(int)eStage].dZ_WBase_to_WTS_MeasureValue - dZ_MeasurePos = 114.047 + 104.07381 = CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData = 9.97319[mm]
+[20230322-102614 377]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Old : CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old =  100.07556[mm]
+[20230322-102614 377]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel & Table contact Pos : dZ_MeasurePos - CVar.BPara[nStage].dH_Table_to_WTS_Gap_SetValue = 104.07381 - -4 = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07381
+[20230322-102614 377]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Loss = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old - CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07556 - 100.07381 = CVar.WaferMeasData[nStage].dH_WTs2Wtip_measure_Loss_Data = 0.00175[mm]
+[20230322-102614 377]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] CWheelManager.CWhldata[nStage].TipMax_Old = 9.97144,CWheelManager.CWhldata[nStage].TipMax = 9.97319,CWheelManager.CWhldata[nStage].TipLoss = -0.00175
+[20230322-102615 289]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	SP Z axis Measure End, Wait Position move Down : 89.047
+[20230322-102619 028]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 318, 010, 010, 000	[WheelTip_to_WTS]  Finish. SP Z axis Wait Position move =  89.047
+[20230322-102619 075]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = WheelTip_to_WTS Save...
+[20230322-102619 075]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:01:29.1
+[20230322-102619 122]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle
+[20230322-102619 122]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230322-102619 666]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle check
+[20230322-102619 713]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 60
+[20230322-102626 239]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230322-102637 460]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:18.3
+[20230322-102654 390]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+[20230322-102654 390]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230322-102654 390]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230322-102700 010]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-102700 026]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230322-102700 073]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230322-102700 073]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230322-102700 073]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230322-102700 104]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step = 00,Use = True,Air_Cut = 0.1,Cycle_Depth = 0.01,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1.5,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+Step = 01,Use = True,Air_Cut = 0,Cycle_Depth = 0,Wheel_rpm = 100,WheelZ_dn_speed = 0.01,Table_rpm = 100,Target = 1,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use = False,ipg_daqcount = 0,nipg_end_delaytime = 0,nipg_tarrival_ZHold_rpm = 0,
+→bShortDress_use = False,dWheelRpm = 0,dDressRpm = 0,dDress_cycle_Depth = 0,dTotal = 0,dCycleDownDelay = 0,
+spindleload = 0,fDiffGapError = 0
+[20230322-102700 104]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230322-102713 537]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = WheelTip_to_WTS
+Wait Position => pMeasuer_WaitPos.dSZ = [ 89.047] ,pMeasuer_WaitPos.dDZ  = [ 10] ,pMeasuer_WaitPos.dTR  = [ 0] ,pMeasuer_WaitPos.dTY  = [ 1]
+Are you continue ?
+[20230322-102713 584]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => SP Z axis move Wait = 89.047
+[20230322-102713 584]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Wait move => Dress Z axis move Wait = 10
+[20230322-102720 170]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	Wait move Check => SP Z axis move Wait = 89.04699, Dress Z axis move Wait = 9.999
+[20230322-102720 217]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 상태 확인: EMeasure.WheelBase_to_WTS =  WheelBase_to_WTS, EMeasure.WheelTip_to_WTS = WheelTip_to_WTS
+[20230322-102720 217]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,gWheel_rpm Stop Cmd
+[20230322-102720 264]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = WheelTip_to_WTS,회전축 정지 Delay : Check eTableR axis  = 0,Check Wheel Rpm = 0,Check Dress Rpm = 0
+[20230322-102720 405]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = WheelTip_to_WTS
+[20230322-102720 452]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = [WheelTip_to_WTS] Start, WheelTip Measure Variable Initial !! 
+[20230322-102726 459]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	[WheelTip Measure]
+pMeasuer_WaitPos.dSZ = 89.0470
+pMeasuer_WaitPos.dDZ = 10.0000
+pMeasuer_WaitPos.dTR = 0.0000
+pMeasuer_WaitPos.dTY = 1.0000
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dSZ = 114.5470
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dTY = 263.6960
+IPG_Down = Up
+IPG_Coolant = Water_On
+[20230322-102726 474]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	Wheel Spindle 정지  
+[20230322-102726 474]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Down = Up
+[20230322-102726 474]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Coolant = Water_On
+[20230322-102726 474]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG Up/Cooler water open, Zaxis Position Move: ,SP Z = 89.047,Dress Z = 10
+[20230322-102726 615]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 303, 010, 010, 000	Z Move Down 이동 Check : WheelBase Position = 89.04699, Dress Z Position = 9.999
+[20230322-102728 161]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 304, 010, 010, 000	Table Y 이동 = 263.696
+[20230322-102739 490]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 305, 010, 010, 000	Check Table Y 이동 = 263.696
+[20230322-102739 537]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 306, 010, 010, 000	WheelToolSetter 위치에서 Dress Zaxis Up 진행 이전 Toolsetter Off Check = True
+[20230322-102739 584]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.0470 + 1.0 = 89.54699
+Check_WheelToolsetter() = True
+[20230322-102739 584]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 89.54699
+[20230322-102740 396]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102740 443]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 89.5470 + 1.0 = 90.04697
+Check_WheelToolsetter() = True
+[20230322-102740 443]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.04697
+[20230322-102741 302]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102741 349]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.0470 + 1.0 = 90.54696
+Check_WheelToolsetter() = True
+[20230322-102741 349]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 90.54696
+[20230322-102742 161]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102742 208]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 90.5470 + 1.0 = 91.04695
+Check_WheelToolsetter() = True
+[20230322-102742 208]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.04695
+[20230322-102743 020]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102743 067]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.0469 + 1.0 = 91.54694
+Check_WheelToolsetter() = True
+[20230322-102743 067]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 91.54694
+[20230322-102743 879]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102743 926]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 91.5469 + 1.0 = 92.04694
+Check_WheelToolsetter() = True
+[20230322-102743 926]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.04694
+[20230322-102744 739]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102744 785]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.0469 + 1.0 = 92.54694
+Check_WheelToolsetter() = True
+[20230322-102744 785]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 92.54694
+[20230322-102745 598]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102745 645]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 92.5469 + 1.0 = 93.04694
+Check_WheelToolsetter() = True
+[20230322-102745 645]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.04694
+[20230322-102746 457]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102746 504]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.0469 + 1.0 = 93.54694
+Check_WheelToolsetter() = True
+[20230322-102746 504]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 93.54694
+[20230322-102747 316]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102747 363]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 93.5469 + 1.0 = 94.04694
+Check_WheelToolsetter() = True
+[20230322-102747 363]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.04694
+[20230322-102748 222]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102748 269]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.0469 + 1.0 = 94.54694
+Check_WheelToolsetter() = True
+[20230322-102748 269]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 94.54694
+[20230322-102749 081]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102749 128]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 94.5469 + 1.0 = 95.04694
+Check_WheelToolsetter() = True
+[20230322-102749 128]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.04694
+[20230322-102749 983]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102750 030]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.0469 + 1.0 = 95.54694
+Check_WheelToolsetter() = True
+[20230322-102750 030]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 95.54694
+[20230322-102750 843]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102750 889]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 95.5469 + 1.0 = 96.04694
+Check_WheelToolsetter() = True
+[20230322-102750 889]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.04694
+[20230322-102751 749]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102751 795]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.0469 + 1.0 = 96.54694
+Check_WheelToolsetter() = True
+[20230322-102751 795]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 96.54694
+[20230322-102752 608]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102752 655]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 96.5469 + 1.0 = 97.04694
+Check_WheelToolsetter() = True
+[20230322-102752 655]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.04694
+[20230322-102753 514]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102753 561]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.0469 + 1.0 = 97.54694
+Check_WheelToolsetter() = True
+[20230322-102753 561]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 97.54694
+[20230322-102754 365]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102754 412]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 97.5469 + 1.0 = 98.04693
+Check_WheelToolsetter() = True
+[20230322-102754 412]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.04693
+[20230322-102755 224]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102755 271]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.0469 + 1.0 = 98.54692
+Check_WheelToolsetter() = True
+[20230322-102755 271]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 98.54692
+[20230322-102756 083]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102756 130]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 98.5469 + 1.0 = 99.04691
+Check_WheelToolsetter() = True
+[20230322-102756 130]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.04691
+[20230322-102756 989]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102757 036]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.0469 + 1.0 = 99.5469
+Check_WheelToolsetter() = True
+[20230322-102757 036]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 99.5469
+[20230322-102757 848]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102757 895]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 99.5469 + 1.0 = 100.04688
+Check_WheelToolsetter() = True
+[20230322-102757 895]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.04688
+[20230322-102758 707]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102758 754]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.0469 + 1.0 = 100.54687
+Check_WheelToolsetter() = True
+[20230322-102758 754]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 100.54687
+[20230322-102759 566]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102759 613]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 100.5469 + 1.0 = 101.04686
+Check_WheelToolsetter() = True
+[20230322-102759 613]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.04686
+[20230322-102800 425]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102800 472]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.0469 + 1.0 = 101.54685
+Check_WheelToolsetter() = True
+[20230322-102800 472]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 101.54685
+[20230322-102801 284]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102801 331]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 101.5468 + 1.0 = 102.04683
+Check_WheelToolsetter() = True
+[20230322-102801 331]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.04683
+[20230322-102802 143]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102802 190]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.0468 + 1.0 = 102.54682
+Check_WheelToolsetter() = True
+[20230322-102802 190]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 102.54682
+[20230322-102803 049]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102803 096]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 102.5468 + 1.0 = 103.04681
+Check_WheelToolsetter() = True
+[20230322-102803 096]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.04681
+[20230322-102803 908]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102803 955]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.0468 + 1.0 = 103.5468
+Check_WheelToolsetter() = True
+[20230322-102803 955]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 103.5468
+[20230322-102804 768]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102804 814]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 103.5468 + 1.0 = 104.0468
+Check_WheelToolsetter() = True
+[20230322-102804 814]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.0468
+[20230322-102805 627]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (1mm) Down...
+[20230322-102805 674]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Next Down (+0.5mm) = 104.0468 + 1.0 = 104.5468
+Check_WheelToolsetter() = True
+[20230322-102805 674]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis 1'st (1mm) move Down = 104.5468
+[20230322-102805 877]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	SP Wheel Toolsetter 1'st (1mm) detected =   Pos : 104.09183mm
+[20230322-102806 408]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.44691
+Check_WheelToolsetter() = False
+[20230322-102806 408]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.44691
+[20230322-102806 939]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102806 986]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.34691
+Check_WheelToolsetter() = False
+[20230322-102806 986]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.34691
+[20230322-102807 517]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102807 564]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.24691
+Check_WheelToolsetter() = False
+[20230322-102807 564]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.24691
+[20230322-102808 095]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102808 142]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.14691
+Check_WheelToolsetter() = False
+[20230322-102808 142]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.14691
+[20230322-102808 673]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	Check SP Z axis escape (-0.1 mm) Up... 
+[20230322-102808 720]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 1'st Escape Down (-1mm) = 9.9990 - 0.1 = 104.04691
+Check_WheelToolsetter() = False
+[20230322-102808 720]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis escape (-0.1mm) Up  = 104.04691
+[20230322-102809 063]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	SP Wheel Toolsetter (-0.1mm) Not detected =   Pos : 104.06039mm
+[20230322-102809 173]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0468 + 0.02 = 104.0668
+Check_DressToolsetter() = True
+[20230322-102809 173]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.0668
+[20230322-102809 563]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	Check SP Z axis 2'nd (0.02mm) Down...
+[20230322-102809 610]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 2'nd Up (+0.02mm) = 104.0668 + 0.02 = 104.08679
+Check_DressToolsetter() = True
+[20230322-102809 610]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis 2'nd (0.02mm) Down = 104.08679
+[20230322-102809 813]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	SP Z axis 2'nd Down (0.02mm) Toolsetter detected =    Pos : 104.0843mm
+[20230322-102809 922]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08583
+[20230322-102810 172]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102810 219]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08483
+[20230322-102810 469]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102810 516]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08383
+[20230322-102810 719]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102810 766]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08282
+[20230322-102811 007]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102811 054]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08182
+[20230322-102811 257]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102811 304]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.08082
+[20230322-102811 554]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102811 601]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07982
+[20230322-102811 851]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102811 898]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07882
+[20230322-102812 148]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102812 195]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07782
+[20230322-102812 445]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102812 492]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07682
+[20230322-102812 741]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102812 788]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07582
+[20230322-102813 038]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102813 085]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07482
+[20230322-102813 304]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102813 351]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07382
+[20230322-102813 601]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape (-0.001mm) Up...
+[20230322-102813 647]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis move escape (-0.001mm) Up =  104.07282
+[20230322-102813 804]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape up Toolsetter Not(-0.001mm) detected(-0.001mm) =   Pos : 104.07276mm
+[20230322-102813 819]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	[WheelTip Measure]
+Wheel Z axis 3'rd Up (+0.001mm) = 104.0728 + 0.001 = 104.07379
+Check_WheelToolsetter() = True
+[20230322-102813 819]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis 3'rd (0.001mm) Down = 104.07379
+[20230322-102813 929]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	SP Z Toolsetter 3'rd (0.001mm) detected =   Pos : 104.07387mm
+[20230322-102831 940]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	[WheelTip Measure]
+Wheel Toolsetter 3'rd detected ! 
+WheelTip Z axis 3'rd Up (+0.001mm) = 104.0739
+Check_WheelToolsetter() = False
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] WheelTip measure 값 계산
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z Old Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old = 104.07381[mm]
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z New Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos = 104.07378[mm]
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip Old =  CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData_Old = 9.97319[mm]
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip New =  CVar.BPara[(int)eStage].dZ_WBase_to_WTS_MeasureValue - dZ_MeasurePos = 114.047 + 104.07378 = CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData = 9.97322[mm]
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Old : CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old =  100.07381[mm]
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel & Table contact Pos : dZ_MeasurePos - CVar.BPara[nStage].dH_Table_to_WTS_Gap_SetValue = 104.07378 - -4 = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07378
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Loss = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old - CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData = 100.07381 - 100.07378 = CVar.WaferMeasData[nStage].dH_WTs2Wtip_measure_Loss_Data = 3E-05[mm]
+[20230322-102831 940]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] CWheelManager.CWhldata[nStage].TipMax_Old = 9.97319,CWheelManager.CWhldata[nStage].TipMax = 9.97322,CWheelManager.CWhldata[nStage].TipLoss = -3E-05
+[20230322-102833 292]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	SP Z axis Measure End, Wait Position move Down : 89.047
+[20230322-102837 002]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 318, 010, 010, 000	[WheelTip_to_WTS]  Finish. SP Z axis Wait Position move =  89.047
+[20230322-102837 048]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = WheelTip_to_WTS Save...
+[20230322-102837 048]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:01:37.0
+[20230322-102837 127]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle
+[20230322-102837 127]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230322-102837 642]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm , Dress rpm StopSpindle check
+[20230322-102837 689]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 60
+[20230322-102844 244]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230322-102855 461]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:18.3

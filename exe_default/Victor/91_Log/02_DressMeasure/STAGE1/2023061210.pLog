@@ -1,0 +1,374 @@
+[20230612-102328 300]	All_Initial_Status	StartEvent_Init_Measure_Flag()	GrindStep : 000, 010, 010, 010, 000	bStart_IPG2Base_Measure_Use = True,bStart_Drs_Measure_Use = True,bStart_Whl_Measure_Use = True,bStart_Tbl_Measure_Use = True
+[20230612-102328 316]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	■ Servo On = True
+[20230612-102328 441]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Spindle Servo On = True
+[20230612-102328 550]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	AllServo =  True
+[20230612-102329 698]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 011, 010, 010, 000	AllServo Finish =  True
+[20230612-102335 965]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	■ Home = False
+[20230612-102335 965]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	Already Servo On = True
+[20230612-102336 981]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 012, 010, 010, 000	IPG_Down = Up
+[20230612-102338 543]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 013, 010, 010, 000	IPG_Down = Up Delay
+[20230612-102338 558]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 014, 010, 010, 000	Wheel_rpm Stop
+[20230612-102339 074]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 015, 010, 010, 000	Wheel_rpm Stop check
+[20230612-102339 090]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	SpindleZ Home Cmd
+[20230612-102339 090]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	DressZ Home Cmd
+[20230612-102349 926]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	SpindleZ Home = True,DressZ Home = True
+[20230612-102349 926]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableR axis Home Cmd
+[20230612-102349 926]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableY axis Home Cmd
+[20230612-102349 926]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	DressR axis Home Cmd
+[20230612-102402 615]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 022, 010, 010, 000	DressR Home = TrueTableR Home = True,TableY Home = True
+[20230612-102402 724]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	SP Z axis move Ready = 75
+[20230612-102402 724]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	Dress Z axis move Ready = 0.1
+[20230612-102418 638]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 024, 010, 010, 000	Check SP Z axis move Ready =  75.00012, Check Dress Z axis move Ready =  0.101
+[20230612-102418 654]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 999, 010, 010, 000	Unit_Home Finish
+[20230612-102418 654]	All_Initial_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230612-102507 287]	All_Initial_Status	StartEvent_Init_Measure_Flag()	GrindStep : 000, 010, 010, 010, 000	bStart_IPG2Base_Measure_Use = True,bStart_Drs_Measure_Use = True,bStart_Whl_Measure_Use = True,bStart_Tbl_Measure_Use = True
+[20230612-102507 303]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	■ Servo On = True
+[20230612-102507 428]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Spindle Servo On = True
+[20230612-102507 474]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Already Servo On = True
+[20230612-102508 478]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 999, 010, 010, 000	Finish. Tack time : 00:00:01.1
+[20230612-102508 494]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	■ Home = False
+[20230612-102508 572]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	Already Servo On = True
+[20230612-102509 587]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 012, 010, 010, 000	IPG_Down = Up
+[20230612-102511 103]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 013, 010, 010, 000	IPG_Down = Up Delay
+[20230612-102511 118]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 014, 010, 010, 000	Wheel_rpm Stop
+[20230612-102511 626]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 015, 010, 010, 000	Wheel_rpm Stop check
+[20230612-102511 642]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	SpindleZ Home Cmd
+[20230612-102511 642]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	DressZ Home Cmd
+[20230612-102601 424]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	SpindleZ Home = True,DressZ Home = True
+[20230612-102601 424]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableR axis Home Cmd
+[20230612-102601 424]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableY axis Home Cmd
+[20230612-102601 424]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	DressR axis Home Cmd
+[20230612-102612 895]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 022, 010, 010, 000	DressR Home = TrueTableR Home = True,TableY Home = True
+[20230612-102613 004]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	SP Z axis move Ready = 75
+[20230612-102613 004]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	Dress Z axis move Ready = 0.1
+[20230612-102628 847]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 024, 010, 010, 000	Check SP Z axis move Ready =  75.00017, Check Dress Z axis move Ready =  0.1
+[20230612-102628 863]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 999, 010, 010, 000	Unit_Home Finish
+[20230612-102628 863]	All_Initial_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230612-102905 187]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = Dress_to_DTS
+[20230612-102908 040]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230612-102944 162]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230612-103005 914]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = Dress_to_DTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230612-103009 179]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230612-103040 060]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230612-103040 076]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230612-103040 076]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = Dress_to_DTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230612-103040 076]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step (00),Use = True,Air_Cut = 0.8,Cycle_Depth = 0.01,Wheel_rpm = -1000,WheelZ_dn_speed = 0.001,Table_rpm = 300,Target = 0.78,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use (True),nipg_Spark Cut = 0,ipg_daqcount = 0,nipg_end_delaytime = 0,
+→bShortDress_use (False),dWheelRpm = 0,dDressRpm = 1000,dDress_cycle_Depth = 0.001,dTotal = 0.01,dCycleDownDelay = 11,
+→spindleload (0),fDiffGapError = 0
+[20230612-103040 076]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230612-103133 618]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = Dress_to_DTS
+Wait Position : pMeasuer_WaitPos.dSZ (80), .dDZ = (0.5), .dTR = (0), .dTY = (1), .dDR = (0)
+Are you continue ?
+[20230612-103159 425]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	SP Z axis move Wait (80)
+[20230612-103208 577]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Dress Z axis move Wait (0.5)
+[20230612-103230 656]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	SP Z axis move Wait (80), Dress Z axis move Wait (0.499)
+[20230612-103244 043]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = (Dress_to_DTS) , 회전축 정지 : EMeasure.Dress_to_DTS (Dress_to_DTS) +, dTemp_Pos[(int)mAxis.TY] (0), dTemp_Pos[(int)mAxis.DR] (0)
+[20230612-103257 822]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = Dress_to_DTS,Dress rpm Stop Cmd
+[20230612-103316 911]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = (Dress_to_DTS), 회전축 정지 Delay : Check eTableR axis (0), Check Wheel Rpm (0), , Check Dress Rpm (0)
+[20230612-103329 578]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 101, 010, 010, 000	Measure Mode = Dress_to_DTS
+[20230612-103350 642]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 101, 010, 010, 000	Measure Mode = [Dress_to_DTS] Start, Dress Measure Variable Initial !! 
+[20230612-103423 988]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 102, 010, 010, 000	Dress Motor 정지  
+[20230612-103433 925]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 102, 010, 010, 000	Dress Measure, IPG Up/Cooler water open, Zaxis Position Move: ,SP Z (80), Dress Z (0.5)
+[20230612-103455 079]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 103, 010, 010, 000	Z Move Down 이동 Check : SP Z Position = 79.99999, Dress Z Position = 0.499
+[20230612-103536 150]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 104, 010, 010, 000	Table Y 이동 = 1
+[20230612-103622 844]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 105, 010, 010, 000	Check Table Y 이동 = 1
+[20230612-103659 960]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 106, 010, 010, 000	nMeasure_Cnt[0] = (0),DressToolSetter 위치에서 Dress Zaxis Up 진행, 이전 Toolsetter Off Check = (True)
+[20230612-103826 300]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 0.499 ,Next 1'st (1.0 mm) Up = 1.499
+[20230612-103827 282]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 1.5
+[20230612-103831 142]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 1.499 ,Next 1'st (1.0 mm) Up = 2.499
+[20230612-103832 109]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 2.5
+[20230612-103832 138]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 2.5 ,Next 1'st (1.0 mm) Up = 3.5
+[20230612-103833 107]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 3.501
+[20230612-103833 136]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 3.501 ,Next 1'st (1.0 mm) Up = 4.501
+[20230612-103834 043]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 4.501
+[20230612-103834 069]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 4.501 ,Next 1'st (1.0 mm) Up = 5.501
+[20230612-103835 013]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 5.502
+[20230612-103835 029]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 5.502 ,Next 1'st (1.0 mm) Up = 6.502
+[20230612-103835 978]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 6.502
+[20230612-103836 012]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 6.502 ,Next 1'st (1.0 mm) Up = 7.502
+[20230612-103836 953]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 7.503
+[20230612-103836 978]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 7.503 ,Next 1'st (1.0 mm) Up = 8.503
+[20230612-103837 934]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 8.504
+[20230612-103837 963]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 8.504 ,Next 1'st (1.0 mm) Up = 9.504
+[20230612-103838 896]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 9.505
+[20230612-103838 924]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 9.505 ,Next 1'st (1.0 mm) Up = 10.505
+[20230612-103839 910]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 10.506
+[20230612-103839 923]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 10.506 ,Next 1'st (1.0 mm) Up = 11.506
+[20230612-103840 880]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 11.507
+[20230612-103840 915]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 11.507 ,Next 1'st (1.0 mm) Up = 12.507
+[20230612-103841 848]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 12.508
+[20230612-103841 862]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 12.508 ,Next 1'st (1.0 mm) Up = 13.508
+[20230612-103842 817]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 13.508
+[20230612-103842 832]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 13.508 ,Next 1'st (1.0 mm) Up = 14.508
+[20230612-103843 764]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 14.507
+[20230612-103843 794]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 14.507 ,Next 1'st (1.0 mm) Up = 15.507
+[20230612-103844 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 15.508
+[20230612-103844 766]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 15.508 ,Next 1'st (1.0 mm) Up = 16.508
+[20230612-103845 734]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 16.509
+[20230612-103845 762]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 16.509 ,Next 1'st (1.0 mm) Up = 17.509
+[20230612-103846 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 17.50999
+[20230612-103846 763]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 17.50999 ,Next 1'st (1.0 mm) Up = 18.50999
+[20230612-103847 693]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 18.50999
+[20230612-103847 718]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 18.50999 ,Next 1'st (1.0 mm) Up = 19.50999
+[20230612-103848 639]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 19.50999
+[20230612-103848 666]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 19.50999 ,Next 1'st (1.0 mm) Up = 20.50999
+[20230612-103849 631]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 20.509
+[20230612-103849 661]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 20.509 ,Next 1'st (1.0 mm) Up = 21.509
+[20230612-103850 583]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 21.51
+[20230612-103850 610]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 21.51 ,Next 1'st (1.0 mm) Up = 22.51
+[20230612-103851 552]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 22.51
+[20230612-103851 577]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 22.51 ,Next 1'st (1.0 mm) Up = 23.51
+[20230612-103852 532]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 23.511
+[20230612-103852 547]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 23.511 ,Next 1'st (1.0 mm) Up = 24.511
+[20230612-103853 472]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 24.512
+[20230612-103853 501]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 24.512 ,Next 1'st (1.0 mm) Up = 25.512
+[20230612-103854 427]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 25.513
+[20230612-103854 455]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 25.513 ,Next 1'st (1.0 mm) Up = 26.513
+[20230612-103855 397]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 26.513
+[20230612-103855 431]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 26.513 ,Next 1'st (1.0 mm) Up = 27.513
+[20230612-103856 403]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 27.514
+[20230612-103856 435]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 27.514 ,Next 1'st (1.0 mm) Up = 28.514
+[20230612-103857 403]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 28.515
+[20230612-103857 417]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 28.515 ,Next 1'st (1.0 mm) Up = 29.515
+[20230612-103858 350]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 29.516
+[20230612-103858 375]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 29.516 ,Next 1'st (1.0 mm) Up = 30.516
+[20230612-103859 304]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 30.517
+[20230612-103859 329]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 30.517 ,Next 1'st (1.0 mm) Up = 31.517
+[20230612-103900 300]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 31.518
+[20230612-103900 336]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 31.518 ,Next 1'st (1.0 mm) Up = 32.518
+[20230612-103901 280]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 32.519
+[20230612-103901 315]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 32.519 ,Next 1'st (1.0 mm) Up = 33.519
+[20230612-103902 225]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 33.51999
+[20230612-103902 263]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 33.51999 ,Next 1'st (1.0 mm) Up = 34.51999
+[20230612-103903 225]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 34.51999
+[20230612-103903 257]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 34.519 ,Next 1'st (1.0 mm) Up = 35.519
+[20230612-103904 219]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 35.51999
+[20230612-103904 244]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 35.51999 ,Next 1'st (1.0 mm) Up = 36.51999
+[20230612-103905 184]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 36.51999
+[20230612-103905 216]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 36.519 ,Next 1'st (1.0 mm) Up = 37.519
+[20230612-103905 469]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Dress Toolsetter 1'st (1.0 mm) detected =   Pos : 36.62599mm
+[20230612-103905 588]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 109, 010, 010, 000	Dress Z axis Curr Pos = 36.67199 ,Next 1'st escape (-0.1mm) Down  = 36.57199
+[20230612-103905 838]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 110, 010, 010, 000	Dress Toolsetter 1'st Not detected(-0.1mm) =   Pos : 36.604mm
+[20230612-103905 949]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 111, 010, 010, 000	Dress Z axis Curr Pos = 36.59599 ,Next 2'nd (0.02mm) Up = 36.61599
+[20230612-103905 972]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 112, 010, 010, 000	Check Dress Toolsetter 2'nd (0.02 mm) Up End = 36.59599
+[20230612-103906 223]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 111, 010, 010, 000	Dress Z axis Curr Pos = 36.615 ,Next 2'nd (0.02mm) Up = 36.635
+[20230612-103906 234]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 112, 010, 010, 000	Check Dress Toolsetter 2'nd (0.02 mm) Up End = 36.615
+[20230612-103906 469]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 111, 010, 010, 000	Dress Toolsetter 2'nd (0.02mm) Already detected = 36.635
+[20230612-103906 574]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.63599 ,Next escape (-0.001mm) Down  = 36.634
+[20230612-103906 597]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.63599
+[20230612-103906 689]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.634 ,Next escape (-0.001mm) Down  = 36.633
+[20230612-103906 712]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.634
+[20230612-103906 796]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.633 ,Next escape (-0.001mm) Down  = 36.632
+[20230612-103906 993]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.632
+[20230612-103907 007]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.632 ,Next escape (-0.001mm) Down  = 36.631
+[20230612-103907 033]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.632
+[20230612-103907 151]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.631 ,Next escape (-0.001mm) Down  = 36.63
+[20230612-103907 174]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.631
+[20230612-103907 281]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.63 ,Next escape (-0.001mm) Down  = 36.629
+[20230612-103907 443]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.629
+[20230612-103907 468]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.629 ,Next escape (-0.001mm) Down  = 36.628
+[20230612-103907 491]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.629
+[20230612-103907 599]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.628 ,Next escape (-0.001mm) Down  = 36.627
+[20230612-103907 612]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.628
+[20230612-103907 704]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.627 ,Next escape (-0.001mm) Down  = 36.626
+[20230612-103907 730]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.627
+[20230612-103907 813]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.62599 ,Next escape (-0.001mm) Down  = 36.625
+[20230612-103907 836]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.62599
+[20230612-103907 908]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.625 ,Next escape (-0.001mm) Down  = 36.624
+[20230612-103907 919]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.625
+[20230612-103908 015]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.624 ,Next escape (-0.001mm) Down  = 36.623
+[20230612-103908 038]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.624
+[20230612-103908 132]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.62299 ,Next escape (-0.001mm) Down  = 36.622
+[20230612-103908 155]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.62299
+[20230612-103908 276]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.622 ,Next escape (-0.001mm) Down  = 36.621
+[20230612-103908 453]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.621
+[20230612-103908 484]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.621 ,Next escape (-0.001mm) Down  = 36.62
+[20230612-103908 497]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.621
+[20230612-103908 590]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.61999 ,Next escape (-0.001mm) Down  = 36.619
+[20230612-103908 764]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.619
+[20230612-103908 797]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.619 ,Next escape (-0.001mm) Down  = 36.618
+[20230612-103908 820]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Check Dress Z axis escape (-0.001 mm) Down End = 36.619
+[20230612-103908 911]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis Curr Pos = 36.618 ,Next escape (-0.001mm) Down  = 36.617
+[20230612-103908 952]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 114, 010, 010, 000	Dress Z axis move escape down Toolsetter Not detected(-0.001mm) =   Pos : 36.616mm
+[20230612-103909 060]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 115, 010, 010, 000	Dress Z axis Curr Pos = 36.61699 ,Next 3'rd (0.001mm) Up = 36.61899
+[20230612-103909 085]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 116, 010, 010, 000	Check Dress Z axis 3'rd (0.001mm) Up End = 36.61699
+[20230612-103909 204]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 115, 010, 010, 000	Dress Z axis Curr Pos = 36.619 ,Next 3'rd (0.001mm) Up = 36.621
+[20230612-103912 529]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 116, 010, 010, 000	[DTS 이용 Dress Measure]
+Dress Toolsetter 3'rd detected ! 
+Dress Z axis 3'rd Up (+0.001mm) = 36.6190
+Check_DressToolsetter() = False
+[20230612-104141 739]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress measure 값 계산 bMeasure = True
+[20230612-104141 739]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress Measure Z Old Pos = CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos_Old[0] = 36.627[mm]
+[20230612-104141 739]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress Measure Z New Pos = CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos[0] = 36.619[mm]
+[20230612-104141 739]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Base Data Update : CVar.BPara[nStage].dZ_DBoard_MeasureValue Update = 36.619 
+[20230612-104141 739]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress measure 감소량 계산 dMeasure_Decrease_amount_00 (0.008) =  CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos_Old[0] (36.627) - CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos[0] (36.619)
+[20230612-104141 740]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress Table contact Old : CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData_Old (33.167)
+[20230612-104141 740]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress Table Contact (이전 - 변화값) (비교용) CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData (33.159) = CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData_Old (33.167) - dMeasure_Decrease_amount_00 (0.008) 
+[20230612-104141 740]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress Table Contact (측정값 - Gap) dDress_Table_contact_01 (33.1590) =  CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos[0] (36.619) - CVar.BPara[nStage].dH_Table_to_DTS_Gap_SetValue (3.46) 
+[20230612-104141 740]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress Table Contact (측정값 - Gap) CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData (33.159) 
+[20230612-104141 740]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress measure 감소량 계산 dMeasure_Decrease_amount_01 (0.0080) =  CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData_Old (33.167) - CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData (33.159)
+[20230612-104141 740]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress Thickness Old = CVar.WaferMeasData[nStage].dH_Dress_Thickness_CalData_Old = 28.3730
+[20230612-104141 740]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress Thickness New = CVar.WaferMeasData[nStage].dH_Dress_Thickness_CalData (28.3810) = CVar.BPara[nStage].dZ_DBase_MeasureValue (65) - CVar.BPara[nStage].dZ_DBoard_MeasureValue (36.619) 
+[20230612-104141 740]	Manual_Status	Set_Measure_DTs2Dress()	GrindStep : 002, 116, 010, 010, 000	[Dress to DTs] Dress measure 값 계산 bMeasure = True 
+[Dress to DTs] Dress Measure Z Old Pos = CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos_Old[0] = 36.627[mm] 
+[Dress to DTs] Dress Measure Z New Pos = CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos[0] = 36.619[mm] 
+[Dress to DTs] Base Data Update : CVar.BPara[nStage].dZ_DBoard_MeasureValue Update = 36.619  
+[Dress to DTs] Dress measure 감소량 계산 dMeasure_Decrease_amount_00 (0.008) =  CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos_Old[0] (36.627) - CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos[0] (36.619) 
+[Dress to DTs] Dress Table contact Old : CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData_Old (33.167) 
+[Dress to DTs] Dress Table Contact (이전 - 변화값) (비교용) CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData (33.159) = CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData_Old (33.167) - dMeasure_Decrease_amount_00 (0.008)  
+[Dress to DTs] Dress Table Contact (측정값 - Gap) dDress_Table_contact_01 (33.1590) =  CVar.WaferMeasData[nStage].dZ_DTs2Dress_meaPos[0] (36.619) - CVar.BPara[nStage].dH_Table_to_DTS_Gap_SetValue (3.46)  
+[Dress to DTs] Dress Table Contact (측정값 - Gap) CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData (33.159)  
+[Dress to DTs] Dress measure 감소량 계산 dMeasure_Decrease_amount_01 (0.0080) =  CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData_Old (33.167) - CVar.WaferMeasData[nStage].dZ_Dress2Table_Contact_CalData (33.159) 
+[Dress to DTs] Dress Thickness Old = CVar.WaferMeasData[nStage].dH_Dress_Thickness_CalData_Old = 28.3730 
+[Dress to DTs] Dress Thickness New = CVar.WaferMeasData[nStage].dH_Dress_Thickness_CalData (28.3810) = CVar.BPara[nStage].dZ_DBase_MeasureValue (65) - CVar.BPara[nStage].dZ_DBoard_MeasureValue (36.619)  
+[Dress to DTs] CData.DrsBf[nStage] = 28.373, CData.DrsAf[nStage] = 28.381, CVar.WaferMeasData[nStage].dH_Dress_Loss_CalValue = -0.008
+[20230612-104220 441]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 117, 010, 010, 000	Wait Position : pMeasuer_WaitPos.dSZ = 75 ,.dDZ  = 0.1 ,.dTR  = 0 ,.dTY  = 0 ,.dDR  = 0
+[20230612-104232 753]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 117, 010, 010, 000	Dress Z axis Measure End, Curr Pos = 36.616 ,Wait Position move Down =0.1
+[20230612-104246 508]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 118, 010, 010, 000	[Dress_to_DTS]  Finish. Dress Z axis Wait Position move =  0.1
+[20230612-104339 953]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 997, 010, 010, 000	IPG_Down = Up
+[20230612-104348 762]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 997, 010, 010, 000	All Motor Stop
+[20230612-104357 478]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 998, 010, 010, 000	IPG_Down (Up),eTableR RPM (0), Spindle Rpm (0) 
+[20230612-104401 490]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 998, 010, 010, 000	[Dress_to_DTS]  Finish.
+[20230612-104429 197]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = Dress_to_DTS Save...
+[20230612-104431 185]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:14:11.2
+[20230612-104443 001]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm StopSpindle
+[20230612-104443 004]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230612-104443 519]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230612-104443 544]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 80
+[20230612-104443 547]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eDressZ Move : 0.5
+[20230612-104444 252]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230612-104444 282]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:01.3
+[20230612-104536 020]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = Dress_to_DTS
+[20230612-104540 605]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230612-104543 205]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230612-104601 967]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = Dress_to_DTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230612-104610 064]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230612-104624 449]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230612-104624 449]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230612-104624 449]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = Dress_to_DTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230612-104624 470]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step (00),Use = True,Air_Cut = 0.8,Cycle_Depth = 0.01,Wheel_rpm = -1000,WheelZ_dn_speed = 0.001,Table_rpm = 300,Target = 0.78,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use (True),nipg_Spark Cut = 0,ipg_daqcount = 0,nipg_end_delaytime = 0,
+→bShortDress_use (False),dWheelRpm = 0,dDressRpm = 1000,dDress_cycle_Depth = 0.001,dTotal = 0.01,dCycleDownDelay = 11,
+→spindleload (0),fDiffGapError = 0
+[20230612-104624 470]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230612-104645 098]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = Dress_to_DTS
+Wait Position : pMeasuer_WaitPos.dSZ (80), .dDZ = (0.5), .dTR = (0), .dTY = (1), .dDR = (0)
+Are you continue ?
+[20230612-104656 545]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	SP Z axis move Wait (80)
+[20230612-104700 292]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Dress Z axis move Wait (0.5)
+[20230612-104714 313]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	SP Z axis move Wait (79.99999), Dress Z axis move Wait (0.499)
+[20230612-104732 115]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = (Dress_to_DTS) , 회전축 정지 : EMeasure.Dress_to_DTS (Dress_to_DTS) +, dTemp_Pos[(int)mAxis.TY] (1), dTemp_Pos[(int)mAxis.DR] (0)
+[20230612-104744 830]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = Dress_to_DTS,Dress rpm Stop Cmd
+[20230612-104805 513]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = (Dress_to_DTS), 회전축 정지 Delay : Check eTableR axis (0), Check Wheel Rpm (0), , Check Dress Rpm (0)
+[20230612-104810 294]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 101, 010, 010, 000	Measure Mode = Dress_to_DTS
+[20230612-104828 775]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 101, 010, 010, 000	Measure Mode = [Dress_to_DTS] Start, Dress Measure Variable Initial !! 
+[20230612-104859 036]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 102, 010, 010, 000	Dress Motor 정지  
+[20230612-104910 281]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 102, 010, 010, 000	Dress Measure, IPG Up/Cooler water open, Zaxis Position Move: ,SP Z (80), Dress Z (0.5)
+[20230612-104924 050]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 103, 010, 010, 000	Z Move Down 이동 Check : SP Z Position = 79.99999, Dress Z Position = 0.499
+[20230612-104938 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 104, 010, 010, 000	Table Y 이동 = 1
+[20230612-104957 870]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 105, 010, 010, 000	Check Table Y 이동 = 1.0001
+[20230612-105046 177]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 106, 010, 010, 000	nMeasure_Cnt[0] = (0),DressToolSetter 위치에서 Dress Zaxis Up 진행, 이전 Toolsetter Off Check = (True)
+[20230612-105133 684]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 0.499 ,Next 1'st (1.0 mm) Up = 1.499
+[20230612-105134 626]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 1.5
+[20230612-105134 658]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 1.5 ,Next 1'st (1.0 mm) Up = 2.5
+[20230612-105135 622]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 2.501
+[20230612-105135 648]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 2.501 ,Next 1'st (1.0 mm) Up = 3.501
+[20230612-105136 572]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 3.501
+[20230612-105136 601]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 3.501 ,Next 1'st (1.0 mm) Up = 4.501
+[20230612-105137 542]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 4.5
+[20230612-105137 571]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 4.5 ,Next 1'st (1.0 mm) Up = 5.5
+[20230612-105138 518]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 5.501
+[20230612-105138 544]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 5.501 ,Next 1'st (1.0 mm) Up = 6.501
+[20230612-105139 495]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 6.502
+[20230612-105139 520]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 6.502 ,Next 1'st (1.0 mm) Up = 7.502
+[20230612-105140 478]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 7.503
+[20230612-105140 510]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 7.503 ,Next 1'st (1.0 mm) Up = 8.503
+[20230612-105141 437]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 8.504
+[20230612-105141 462]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 8.504 ,Next 1'st (1.0 mm) Up = 9.504
+[20230612-105142 410]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 9.505
+[20230612-105142 438]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 9.505 ,Next 1'st (1.0 mm) Up = 10.505
+[20230612-105143 339]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 10.506
+[20230612-105143 367]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 10.506 ,Next 1'st (1.0 mm) Up = 11.506
+[20230612-105144 298]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 11.507
+[20230612-105144 323]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 11.507 ,Next 1'st (1.0 mm) Up = 12.507
+[20230612-105145 232]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 12.508
+[20230612-105145 246]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 12.508 ,Next 1'st (1.0 mm) Up = 13.508
+[20230612-105146 169]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 13.508
+[20230612-105146 194]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 13.508 ,Next 1'st (1.0 mm) Up = 14.508
+[20230612-105147 123]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 14.507
+[20230612-105147 148]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 14.507 ,Next 1'st (1.0 mm) Up = 15.507
+[20230612-105148 114]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 15.508
+[20230612-105148 139]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 15.508 ,Next 1'st (1.0 mm) Up = 16.508
+[20230612-105149 076]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 16.509
+[20230612-105149 101]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 16.509 ,Next 1'st (1.0 mm) Up = 17.509
+[20230612-105150 054]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 17.50999
+[20230612-105150 082]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 17.50999 ,Next 1'st (1.0 mm) Up = 18.50999
+[20230612-105151 044]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 18.509
+[20230612-105151 062]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 18.509 ,Next 1'st (1.0 mm) Up = 19.509
+[20230612-105152 023]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 19.50999
+[20230612-105152 051]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 19.50999 ,Next 1'st (1.0 mm) Up = 20.50999
+[20230612-105152 987]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 20.50999
+[20230612-105153 016]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 20.50999 ,Next 1'st (1.0 mm) Up = 21.50999
+[20230612-105153 951]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 21.51
+[20230612-105153 979]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 21.51 ,Next 1'st (1.0 mm) Up = 22.51
+[20230612-105154 933]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 22.511
+[20230612-105154 969]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 22.511 ,Next 1'st (1.0 mm) Up = 23.511
+[20230612-105155 902]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 23.512
+[20230612-105155 937]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 23.512 ,Next 1'st (1.0 mm) Up = 24.512
+[20230612-105156 886]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 24.513
+[20230612-105156 919]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 24.513 ,Next 1'st (1.0 mm) Up = 25.513
+[20230612-105157 891]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 25.514
+[20230612-105157 905]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 25.514 ,Next 1'st (1.0 mm) Up = 26.514
+[20230612-105158 841]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 26.515
+[20230612-105158 866]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 26.515 ,Next 1'st (1.0 mm) Up = 27.515
+[20230612-105159 801]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 27.515
+[20230612-105159 815]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 27.515 ,Next 1'st (1.0 mm) Up = 28.515
+[20230612-105200 767]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 28.516
+[20230612-105200 782]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 28.516 ,Next 1'st (1.0 mm) Up = 29.516
+[20230612-105201 726]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 29.517
+[20230612-105201 743]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 29.517 ,Next 1'st (1.0 mm) Up = 30.517
+[20230612-105202 709]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 30.518
+[20230612-105202 738]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 30.518 ,Next 1'st (1.0 mm) Up = 31.518
+[20230612-105203 680]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 31.519
+[20230612-105203 712]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 31.519 ,Next 1'st (1.0 mm) Up = 32.519
+[20230612-105204 666]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 32.51999
+[20230612-105204 695]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 32.51999 ,Next 1'st (1.0 mm) Up = 33.51999
+[20230612-105205 622]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 33.51999
+[20230612-105205 647]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 33.51999 ,Next 1'st (1.0 mm) Up = 34.51999
+[20230612-105206 602]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 34.519
+[20230612-105206 632]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 34.519 ,Next 1'st (1.0 mm) Up = 35.519
+[20230612-105207 571]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 35.51999
+[20230612-105207 596]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 35.51999 ,Next 1'st (1.0 mm) Up = 36.51999
+[20230612-105208 551]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Check Dress Toolsetter 1'st (1.0 mm) Up End = 36.51999
+[20230612-105208 564]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 107, 010, 010, 000	Dress Z axis Curr Pos = 36.519 ,Next 1'st (1.0 mm) Up = 37.519
+[20230612-105208 822]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 108, 010, 010, 000	Dress Toolsetter 1'st (1.0 mm) detected =   Pos : 36.633mm
+[20230612-105208 926]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 109, 010, 010, 000	Dress Z axis Curr Pos = 36.68099 ,Next 1'st escape (-0.1mm) Down  = 36.58099
+[20230612-105209 169]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 110, 010, 010, 000	Dress Toolsetter 1'st Not detected(-0.1mm) =   Pos : 36.624mm
+[20230612-105209 284]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 111, 010, 010, 000	Dress Z axis Curr Pos = 36.609 ,Next 2'nd (0.02mm) Up = 36.629
+[20230612-105209 407]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 112, 010, 010, 000	Dress Toolsetter 2'nd (0.02mm) detected = 36.615
+[20230612-105209 512]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 113, 010, 010, 000	Dress Z axis move escape down Toolsetter Already Not detected(-0.001mm) =   Pos : 36.61999mm
+[20230612-105209 620]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 115, 010, 010, 000	Dress Z axis Curr Pos = 36.621 ,Next 3'rd (0.001mm) Up = 36.623
+[20230612-105209 643]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 116, 010, 010, 000	Check Dress Z axis 3'rd (0.001mm) Up End = 36.621
+[20230612-105209 746]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 115, 010, 010, 000	Dress Z axis Curr Pos = 36.625 ,Next 3'rd (0.001mm) Up = 36.627
+[20230612-105213 494]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 116, 010, 010, 000	[DTS 이용 Dress Measure]
+Dress Toolsetter 3'rd detected ! 
+Dress Z axis 3'rd Up (+0.001mm) = 36.6250
+Check_DressToolsetter() = False
+[20230612-105227 715]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 116, 010, 010, 000	Dress measure Fail (0) , Avr = (36.6230)
+[20230612-105343 841]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 121, 010, 010, 000	Dress Z axis Curr Pos = 31.62299 ,Next down = 31.623
+[20230612-105429 375]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 122, 010, 010, 000	 Dress Z axis move Wait (31.62299)

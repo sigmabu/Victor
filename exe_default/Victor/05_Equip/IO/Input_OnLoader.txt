@@ -1,0 +1,32 @@
+X0090	[A] Button - MGZ Belt Run
+X0091	
+X0092	[B] EMG - Front
+X0093	[B] EMG - Rear
+X0094	[A] Sensor - Door Front
+X0095	[A] Sensor - Door Left
+X0096	[A] Sensor - Door Rear
+X0097	[B] Sensor - Light Curtain
+X0098	
+X0099	
+X009A	
+X009B	
+X009C	[B] Sensor - MGZ Detect
+X009D	[B] Sensor - MGZ Detect Full
+X009E	
+X009F	
+X00A0	[B] Sensor - MGZ Detect
+X00A1	
+X00A2	
+X00A3	
+X00A4	[B] Sensor - Pusher Overload
+X00A5	[A] Cylinder - Forward
+X00A6	[A] Cylinder - Backward
+X00A7	
+X00A8	[A] Sensor - MGZ Detect #1
+X00A9	[A] Sensor - MGZ Detect #2
+X00AA	[A] Cylinder - Clamp On
+X00AB	[A] Cylinder - Clamp Off
+X00AC	
+X00AD	
+X00AE	
+X00AF	

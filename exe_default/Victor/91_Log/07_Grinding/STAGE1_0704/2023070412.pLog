@@ -1,0 +1,4 @@
+[20230704-121102 131]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 063, 116, 010, 010, 000	Dress Remeasure nMeasure_Cnt[0] = (0) , Value = (11.7700)
+[20230704-121102 133]	Manual_Status	Proc_Error          ()	GrindStep : 063, 116, 010, 010, 000	Error : STAGE_1_DRESS_THICKNESS_ERROR
+[20230704-121102 154]	Manual_Status	_Set_LastWork       ()	GrindStep : 063, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230704-121102 183]	Err_Status[310057]	Stage_Manual_Run    ()	GrindStep : 063, 010, 010, 010, 000	Stage_Manual_Run() Finish : pFlags.manual [false], eUnitDone[Error]

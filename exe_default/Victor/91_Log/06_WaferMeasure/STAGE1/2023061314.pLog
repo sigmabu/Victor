@@ -1,0 +1,1397 @@
+[20230613-140317 085]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+[20230613-140317 085]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230613-140317 085]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230613-140318 245]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230613-140318 248]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230613-140318 353]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230613-140318 353]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230613-140318 353]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230613-140318 384]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step (00),Use = True,Air_Cut = 0.8,Cycle_Depth = 0.01,Wheel_rpm = -1000,WheelZ_dn_speed = 0.001,Table_rpm = 300,Target = 0.78,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use (True),nipg_Spark Cut = 30,ipg_daqcount = 0,nipg_end_delaytime = 30,
+→bShortDress_use (False),dWheelRpm = 0,dDressRpm = 1000,dDress_cycle_Depth = 0.001,dTotal = 0.01,dCycleDownDelay = 11,
+→spindleload (0),fDiffGapError = 0
+[20230613-140318 384]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230613-140319 920]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = WheelTip_to_WTS
+Wait Position : pMeasuer_WaitPos.dSZ (93.0074), .dDZ = (0.5), .dTR = (0), .dTY = (1), .dDR = (0)
+Are you continue ?
+[20230613-140319 925]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	SP Z axis move Wait (93.0074)
+[20230613-140319 927]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Dress Z axis move Wait (0.5)
+[20230613-140323 518]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	SP Z axis move Wait (93.00779), Dress Z axis move Wait (0.499)
+[20230613-140323 565]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = (WheelTip_to_WTS) , 회전축 정지 : EMeasure.WheelTip_to_WTS (WheelTip_to_WTS) +, dTemp_Pos[(int)mAxis.TY] (0), dTemp_Pos[(int)mAxis.DR] (263.03)
+[20230613-140323 565]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,Wheel_rpm Stop Cmd
+[20230613-140323 565]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,Table R Stop Cmd
+[20230613-140323 581]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = (WheelTip_to_WTS), 회전축 정지 Delay : Check eTableR axis (0), Check Wheel Rpm (0), , Check Dress Rpm (0)
+[20230613-140323 690]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = WheelTip_to_WTS
+[20230613-140323 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = [WheelTip_to_WTS] Start, WheelTip Measure Variable Initial !! 
+[20230613-140323 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	[WheelTip Measure],.dSZ = 93.0074,.dDZ = 0.5000,.dTR = 0.0000,.dTY = 1.0000,.dDR = 0.0000
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dSZ = 114.5074,CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dTY = 263.0300
+IPG_Down = Up,IPG_Coolant = Water_On
+[20230613-140323 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	Wheel Spindle 정지  
+[20230613-140323 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Down = Up
+[20230613-140323 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Coolant = Water_On
+[20230613-140323 737]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG Up/Cooler water open, Zaxis Position Move: ,Wheel Z = 93.0074,Dress Z = 0.5
+[20230613-140323 847]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 303, 010, 010, 000	Z Move Down 이동 Check : Wheel Z Position = 93.00742, Dress Z Position = 0.499
+[20230613-140325 360]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 304, 010, 010, 000	Table Y 이동 = 263.03
+[20230613-140335 008]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 305, 010, 010, 000	Check Table Y 이동 = 263.0302
+[20230613-140335 055]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 306, 010, 010, 000	nMeasure_Cnt[0] = (0) , WheelToolSetter 위치에서 Dress Zaxis Up 진행 이전 Toolsetter Off Check (True)
+[20230613-140335 102]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 93.00739 ,Next 1'st (0.5mm) Down = 93.50739
+[20230613-140336 392]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 93.50765
+[20230613-140336 439]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 93.5075 ,Next 1'st (0.5mm) Down = 94.0075
+[20230613-140337 618]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 94.00768
+[20230613-140337 665]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 94.00759 ,Next 1'st (0.5mm) Down = 94.50759
+[20230613-140338 809]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 94.50788
+[20230613-140338 856]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 94.50784 ,Next 1'st (0.5mm) Down = 95.00784
+[20230613-140340 027]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 95.00808
+[20230613-140340 074]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 95.00793 ,Next 1'st (0.5mm) Down = 95.50793
+[20230613-140341 392]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 95.50819
+[20230613-140341 408]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 95.50819 ,Next 1'st (0.5mm) Down = 96.00819
+[20230613-140342 727]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 96.0084
+[20230613-140342 774]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 96.00836 ,Next 1'st (0.5mm) Down = 96.50836
+[20230613-140343 892]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 96.50864
+[20230613-140343 915]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 96.50849 ,Next 1'st (0.5mm) Down = 97.00864
+[20230613-140344 977]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 97.00874
+[20230613-140345 033]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 97.00867 ,Next 1'st (0.5mm) Down = 97.50867
+[20230613-140346 048]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 97.50887
+[20230613-140346 095]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 97.50883 ,Next 1'st (0.5mm) Down = 98.00883
+[20230613-140347 180]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 98.00899
+[20230613-140347 227]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 98.0089 ,Next 1'st (0.5mm) Down = 98.5089
+[20230613-140348 392]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 98.50933
+[20230613-140348 438]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 98.50923 ,Next 1'st (0.5mm) Down = 99.00923
+[20230613-140349 561]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 99.00945
+[20230613-140349 608]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 99.00942 ,Next 1'st (0.5mm) Down = 99.50942
+[20230613-140350 764]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 99.50962
+[20230613-140350 779]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 99.50962 ,Next 1'st (0.5mm) Down = 100.00962
+[20230613-140351 901]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 100.00988
+[20230613-140351 939]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 100.00971 ,Next 1'st (0.5mm) Down = 100.50971
+[20230613-140353 220]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 100.51004
+[20230613-140353 267]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 100.50997 ,Next 1'st (0.5mm) Down = 101.00997
+[20230613-140354 446]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 101.01022
+[20230613-140354 493]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 101.01014 ,Next 1'st (0.5mm) Down = 101.51014
+[20230613-140355 602]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 101.5103
+[20230613-140355 649]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 101.51021 ,Next 1'st (0.5mm) Down = 102.01021
+[20230613-140356 664]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 102.01042
+[20230613-140356 711]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 102.01031 ,Next 1'st (0.5mm) Down = 102.51031
+[20230613-140357 773]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 102.51041
+[20230613-140357 820]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 102.51035 ,Next 1'st (0.5mm) Down = 103.01035
+[20230613-140358 874]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 103.01076
+[20230613-140358 921]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 103.01051 ,Next 1'st (0.5mm) Down = 103.51051
+[20230613-140400 046]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 103.51085
+[20230613-140400 093]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 103.51074 ,Next 1'st (0.5mm) Down = 104.01074
+[20230613-140401 220]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 104.01091
+[20230613-140401 236]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 104.01091 ,Next 1'st (0.5mm) Down = 104.51091
+[20230613-140402 415]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 104.511
+[20230613-140402 430]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 104.511 ,Next 1'st (0.5mm) Down = 105.011
+[20230613-140403 540]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 105.01107
+[20230613-140403 586]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 105.01101 ,Next 1'st (0.5mm) Down = 105.51101
+[20230613-140403 758]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	SP Wheel Toolsetter 1'st (0.5mm) detected =   Pos : 105.01785mm
+[20230613-140403 821]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis Curr Pos = 105.06122 ,Next escape (-0.1mm) Up = 104.96122
+[20230613-140404 063]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	SP Wheel Toolsetter (-0.1mm) Not detected =   Pos : 105.00279mm
+[20230613-140404 126]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis Curr Pos = 104.9837 ,Next 2'nd (0.02mm) Down = 105.0037
+[20230613-140404 464]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	Check SP Z axis 2'nd (0.02mm) Down End = 105.00395
+[20230613-140404 511]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis Curr Pos = 105.00395 ,Next 2'nd (0.02mm) Down = 105.02395
+[20230613-140404 683]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	SP Z axis 2'nd Down (0.02mm) Toolsetter detected =    Pos : 105.01839mm
+[20230613-140404 745]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.02328 ,Next escape (-0.001mm) Up  = 105.02128
+[20230613-140404 985]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.0214
+[20230613-140405 032]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.02135 ,Next escape (-0.001mm) Up  = 105.01935
+[20230613-140405 751]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.01912
+[20230613-140405 798]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.01925 ,Next escape (-0.001mm) Up  = 105.01725
+[20230613-140406 102]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.01765
+[20230613-140406 149]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.01745 ,Next escape (-0.001mm) Up  = 105.01545
+[20230613-140406 368]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape up Toolsetter Not(-0.001mm) detected(-0.001mm) =   Pos : 105.01395mm
+[20230613-140406 383]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis Curr Pos = 105.01395 ,Next 3'rd (0.001mm) Down = 105.01495
+[20230613-140406 899]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	Check SP Z axis 3'rd (0.001mm) Down End = 105.01465
+[20230613-140406 946]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis Curr Pos = 105.01478 ,Next 3'rd (0.001mm) Down = 105.01578
+[20230613-140407 055]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	SP Z Toolsetter 3'rd (0.001mm) detected =   Pos : 105.01661mm
+[20230613-140407 055]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	[WheelTip Measure]
+Wheel Toolsetter 3'rd detected ! 
+WheelTip Z axis 3'rd Up (+0.001mm) = 105.0166
+Check_WheelToolsetter() = False
+[20230613-140411 727]	Manual_Status	Wheel_Measure_Loss_Abnormal_Check()	GrindStep : 002, 316, 010, 010, 000	Dress Loss Amount Max Abnormal = (0.0021) , Whlmea_LossMaxLimit(0.02)  ~ Min (-0.01)
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] WheelTip measure 값 계산
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z Old Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old = 105.0187[mm]
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z New Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos = 105.01661[mm]
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel measure 감소량 계산 dMeasure_Decrease_amount_00 (0.0021) = CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old (105.0187) - CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos (105.01661)
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Old : CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old (102.8997)
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact (이전 - 변화값) (비교용) CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData (102.9018) = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old (102.8997) + dMeasure_Decrease_amount_00 (0.0021) 
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table Contact (측정값 + Gap) dWheel_Table_contact_01 (102.8976) =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos (105.01661) + CVar.BPara[nStage].dH_Table_to_WTS_Gap_SetValue (-2.119) 
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Pos (측정값 + Gap) CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData (102.8976) 
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Table Contact 감소량 계산 dMeasure_Decrease_amount_01 (0.0021) =  CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old (102.8997) - CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData (102.8976)
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip Old =  CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData_Old (8.9887)
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip New = CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData (8.9908) = CVar.BPara[nStage].dZ_WBase_to_WTS_MeasureValue (114.0074) - CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos (105.01661) 
+[20230613-140411 727]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] CWheelManager.CWhldata[nStage].TipMax_Old = 8.9887,CWheelManager.CWhldata[nStage].TipMax = 8.9908,CWheelManager.CWhldata[nStage].TipLoss = -0.0021
+[20230613-140415 185]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	Wait Position : pMeasuer_WaitPos.dSZ = 75 ,.dDZ  = 0.1 ,.dTR  = 0 ,.dTY  = 0 ,.dDR  = 0
+[20230613-140415 185]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	SP Z axis Measure End, Curr Pos = 105.01577 ,Wait Position move Down =75
+[20230613-140422 176]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 318, 010, 010, 000	[WheelTip_to_WTS]  Finish. SP Z axis Wait Position move =  75
+[20230613-140422 191]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 997, 010, 010, 000	IPG_Down = Up
+[20230613-140422 207]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 997, 010, 010, 000	All Motor Stop
+[20230613-140423 743]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 998, 010, 010, 000	IPG_Down (Up),eTableR RPM (0), Spindle Rpm (0) 
+[20230613-140423 743]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 998, 010, 010, 000	[WheelTip_to_WTS]  Finish.
+[20230613-140423 806]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = WheelTip_to_WTS Save...
+[20230613-140423 806]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:01:05.5
+[20230613-140423 837]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm StopSpindle
+[20230613-140423 837]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230613-140424 376]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230613-140424 423]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 80
+[20230613-140424 423]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eDressZ Move : 0.5
+[20230613-140426 182]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	Air Knife Open
+[20230613-140426 182]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230613-140426 198]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 214]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 260]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 307]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 354]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 401]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 448]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 463]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 510]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 557]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 604]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 651]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 698]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 713]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 760]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 807]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 854]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 901]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 923]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 939]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140426 986]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 032]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 079]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 126]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 173]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 189]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 235]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 282]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 329]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 376]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 423]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 439]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 485]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 532]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 579]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 626]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 673]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 688]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 735]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 782]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 829]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 876]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 923]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 938]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140427 985]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 032]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 079]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 126]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 173]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 188]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 235]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 282]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 329]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 376]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 423]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 438]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 485]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 532]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 579]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 626]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 672]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 680]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 719]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 766]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 813]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 860]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 907]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 922]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140428 970]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 017]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 064]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 111]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 158]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 174]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 220]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 267]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 314]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 361]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 408]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 423]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 470]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 517]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 564]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 611]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 658]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 673]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 720]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 767]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 814]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 861]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 908]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 923]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140429 970]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 017]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 064]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 111]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 158]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 173]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 220]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 267]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 314]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 361]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 408]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 423]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 470]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 517]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 564]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 611]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 658]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 673]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 720]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 767]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 814]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 861]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 908]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 923]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140430 970]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 017]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 064]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 111]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 157]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 173]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 220]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 267]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 314]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 361]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 407]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 423]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 470]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 517]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 564]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 610]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 657]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 673]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 720]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 767]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 814]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 860]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 907]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 923]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140431 970]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 017]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 064]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 110]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 157]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 173]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 220]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 267]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 313]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 360]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 408]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 424]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 471]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 518]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 565]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 611]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 658]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 674]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 721]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 768]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 815]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 861]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 900]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 946]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140432 993]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 040]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 087]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 134]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 181]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 196]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 243]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 290]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 337]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 384]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 431]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 446]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 493]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 540]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 587]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 634]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 681]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 696]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 743]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 790]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 837]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 884]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 931]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 946]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140433 993]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 040]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 087]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 134]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 181]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 196]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 243]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 290]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 337]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 384]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 430]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 446]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 493]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 540]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 587]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 634]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 680]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 696]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 743]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 790]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 837]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 883]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 930]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 946]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140434 993]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 040]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 087]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 133]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 180]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 196]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 243]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 290]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 337]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 383]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 430]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 446]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 493]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 540]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 586]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 633]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 680]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-140435 696]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:11.8
+[20230613-141813 536]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+[20230613-141813 536]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230613-141813 536]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230613-141814 894]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230613-141814 938]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230613-141815 032]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230613-141815 032]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230613-141815 032]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = WheelTip_to_WTS
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230613-141815 063]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step (00),Use = True,Air_Cut = 0.8,Cycle_Depth = 0.01,Wheel_rpm = -1000,WheelZ_dn_speed = 0.001,Table_rpm = 300,Target = 0.78,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use (True),nipg_Spark Cut = 30,ipg_daqcount = 0,nipg_end_delaytime = 30,
+→bShortDress_use (False),dWheelRpm = 0,dDressRpm = 1000,dDress_cycle_Depth = 0.001,dTotal = 0.01,dCycleDownDelay = 11,
+→spindleload (0),fDiffGapError = 0
+[20230613-141815 063]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230613-141816 098]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = WheelTip_to_WTS
+Wait Position : pMeasuer_WaitPos.dSZ (93.0074), .dDZ = (0.5), .dTR = (0), .dTY = (1), .dDR = (0)
+Are you continue ?
+[20230613-141816 107]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	SP Z axis move Wait (93.0074)
+[20230613-141816 109]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 013, 010, 010, 000	Dress Z axis move Wait (0.5)
+[20230613-141830 626]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 014, 010, 010, 000	SP Z axis move Wait (93.00759), Dress Z axis move Wait (0.499)
+[20230613-141830 673]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = (WheelTip_to_WTS) , 회전축 정지 : EMeasure.WheelTip_to_WTS (WheelTip_to_WTS) +, dTemp_Pos[(int)mAxis.TY] (0), dTemp_Pos[(int)mAxis.DR] (263.03)
+[20230613-141830 673]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,Wheel_rpm Stop Cmd
+[20230613-141830 673]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = WheelTip_to_WTS,Table R Stop Cmd
+[20230613-141830 688]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = (WheelTip_to_WTS), 회전축 정지 Delay : Check eTableR axis (0), Check Wheel Rpm (0), , Check Dress Rpm (0)
+[20230613-141830 798]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = WheelTip_to_WTS
+[20230613-141830 845]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 301, 010, 010, 000	Measure Mode = [WheelTip_to_WTS] Start, WheelTip Measure Variable Initial !! 
+[20230613-141830 845]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	[WheelTip Measure],.dSZ = 93.0074,.dDZ = 0.5000,.dTR = 0.0000,.dTY = 1.0000,.dDR = 0.0000
+CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dSZ = 114.5074,CVar.WaferMeasData[nStage].WTs2Wt_SetPos.dTY = 263.0300
+IPG_Down = Up,IPG_Coolant = Water_On
+[20230613-141830 845]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	Wheel Spindle 정지  
+[20230613-141830 845]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Down = Up
+[20230613-141830 845]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG_Coolant = Water_On
+[20230613-141830 845]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 302, 010, 010, 000	WheelTip Measure,IPG Up/Cooler water open, Zaxis Position Move: ,Wheel Z = 93.0074,Dress Z = 0.5
+[20230613-141830 986]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 303, 010, 010, 000	Z Move Down 이동 Check : Wheel Z Position = 93.00744, Dress Z Position = 0.499
+[20230613-141832 515]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 304, 010, 010, 000	Table Y 이동 = 263.03
+[20230613-141842 142]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 305, 010, 010, 000	Check Table Y 이동 = 263.0303
+[20230613-141842 189]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 306, 010, 010, 000	nMeasure_Cnt[0] = (0) , WheelToolSetter 위치에서 Dress Zaxis Up 진행 이전 Toolsetter Off Check (True)
+[20230613-141842 236]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 93.0074 ,Next 1'st (0.5mm) Down = 93.5074
+[20230613-141843 180]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 93.50778
+[20230613-141843 227]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 93.50776 ,Next 1'st (0.5mm) Down = 94.00776
+[20230613-141844 127]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 94.00794
+[20230613-141844 174]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 94.0079 ,Next 1'st (0.5mm) Down = 94.5079
+[20230613-141845 043]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 94.50815
+[20230613-141845 089]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 94.50805 ,Next 1'st (0.5mm) Down = 95.00805
+[20230613-141846 360]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 95.00833
+[20230613-141846 407]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 95.00833 ,Next 1'st (0.5mm) Down = 95.50833
+[20230613-141847 620]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 95.50868
+[20230613-141847 634]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 95.50868 ,Next 1'st (0.5mm) Down = 96.00868
+[20230613-141848 548]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 96.00881
+[20230613-141848 564]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 96.00881 ,Next 1'st (0.5mm) Down = 96.50881
+[20230613-141849 501]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 96.50918
+[20230613-141849 548]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 96.50917 ,Next 1'st (0.5mm) Down = 97.00917
+[20230613-141850 610]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 97.00935
+[20230613-141850 657]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 97.00932 ,Next 1'st (0.5mm) Down = 97.50932
+[20230613-141851 688]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 97.50954
+[20230613-141851 735]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 97.50942 ,Next 1'st (0.5mm) Down = 98.00942
+[20230613-141852 797]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 98.00968
+[20230613-141852 844]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 98.00955 ,Next 1'st (0.5mm) Down = 98.50955
+[20230613-141853 793]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 98.50964
+[20230613-141853 840]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 98.5096 ,Next 1'st (0.5mm) Down = 99.0096
+[20230613-141854 793]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 99.00983
+[20230613-141854 840]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 99.00983 ,Next 1'st (0.5mm) Down = 99.50983
+[20230613-141855 746]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 99.50998
+[20230613-141855 793]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 99.50998 ,Next 1'st (0.5mm) Down = 100.00998
+[20230613-141856 871]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 100.01041
+[20230613-141856 917]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 100.01018 ,Next 1'st (0.5mm) Down = 100.51018
+[20230613-141858 064]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 100.51053
+[20230613-141858 111]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 100.51051 ,Next 1'st (0.5mm) Down = 101.01051
+[20230613-141859 056]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 101.01054
+[20230613-141859 103]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 101.01052 ,Next 1'st (0.5mm) Down = 101.51052
+[20230613-141900 267]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 101.51084
+[20230613-141900 314]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 101.51082 ,Next 1'st (0.5mm) Down = 102.01082
+[20230613-141901 385]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 102.01097
+[20230613-141901 432]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 102.01087 ,Next 1'st (0.5mm) Down = 102.51087
+[20230613-141902 494]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 102.51096
+[20230613-141902 541]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 102.5109 ,Next 1'st (0.5mm) Down = 103.0109
+[20230613-141903 557]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 103.0111
+[20230613-141903 604]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 103.01099 ,Next 1'st (0.5mm) Down = 103.51099
+[20230613-141904 497]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 103.51112
+[20230613-141904 512]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 103.51112 ,Next 1'st (0.5mm) Down = 104.01112
+[20230613-141905 416]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 104.01159
+[20230613-141905 463]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 104.01158 ,Next 1'st (0.5mm) Down = 104.51158
+[20230613-141906 385]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 104.51204
+[20230613-141906 432]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 104.51203 ,Next 1'st (0.5mm) Down = 105.01203
+[20230613-141907 588]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	Check SP Z axis 1'st (0.5mm) Down End = 105.01225
+[20230613-141907 603]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 307, 010, 010, 000	SP Z axis Curr Pos = 105.01225 ,Next 1'st (0.5mm) Down = 105.51225
+[20230613-141907 807]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 308, 010, 010, 000	SP Wheel Toolsetter 1'st (0.5mm) detected =   Pos : 105.0589mm
+[20230613-141907 869]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 309, 010, 010, 000	SP Z axis Curr Pos = 105.09871 ,Next escape (-0.1mm) Up = 104.99871
+[20230613-141908 228]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 310, 010, 010, 000	SP Wheel Toolsetter (-0.1mm) Not detected =   Pos : 105.00512mm
+[20230613-141908 244]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis Curr Pos = 104.99648 ,Next 2'nd (0.02mm) Down = 105.01648
+[20230613-141908 933]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	Check SP Z axis 2'nd (0.02mm) Down End = 105.016
+[20230613-141908 948]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 311, 010, 010, 000	SP Z axis Curr Pos = 105.01602 ,Next 2'nd (0.02mm) Down = 105.03602
+[20230613-141909 080]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 312, 010, 010, 000	SP Z axis 2'nd Down (0.02mm) Toolsetter detected =    Pos : 105.02302mm
+[20230613-141909 143]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.03087 ,Next escape (-0.001mm) Up  = 105.02887
+[20230613-141909 299]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.02921
+[20230613-141909 346]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.02901 ,Next escape (-0.001mm) Up  = 105.02701
+[20230613-141909 565]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.02725
+[20230613-141909 611]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.02716 ,Next escape (-0.001mm) Up  = 105.02516
+[20230613-141910 221]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.02494
+[20230613-141910 268]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.02505 ,Next escape (-0.001mm) Up  = 105.02305
+[20230613-141910 596]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.02317
+[20230613-141910 642]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.02308 ,Next escape (-0.001mm) Up  = 105.02108
+[20230613-141910 978]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.02085
+[20230613-141910 994]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.02085 ,Next escape (-0.001mm) Up  = 105.01885
+[20230613-141911 186]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	Check SP Z axis escape (-0.001 mm) Up End = 105.0192
+[20230613-141911 202]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 313, 010, 010, 000	SP Z axis Curr Pos = 105.0192 ,Next escape (-0.001mm) Up  = 105.0172
+[20230613-141911 311]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 314, 010, 010, 000	SP Z axis move escape up Toolsetter Not(-0.001mm) detected(-0.001mm) =   Pos : 105.01774mm
+[20230613-141911 327]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis Curr Pos = 105.01725 ,Next 3'rd (0.001mm) Down = 105.01825
+[20230613-141911 546]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	Check SP Z axis 3'rd (0.001mm) Down End = 105.01789
+[20230613-141911 592]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 315, 010, 010, 000	SP Z axis Curr Pos = 105.01809 ,Next 3'rd (0.001mm) Down = 105.01909
+[20230613-141911 702]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	SP Z Toolsetter 3'rd (0.001mm) detected =   Pos : 105.01922mm
+[20230613-141911 702]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 316, 010, 010, 000	[WheelTip Measure]
+Wheel Toolsetter 3'rd detected ! 
+WheelTip Z axis 3'rd Up (+0.001mm) = 105.0192
+Check_WheelToolsetter() = False
+[20230613-141911 702]	Manual_Status	Wheel_Measure_Loss_Abnormal_Check()	GrindStep : 002, 316, 010, 010, 000	Dress Loss Amount Max Abnormal = (-0.0026) , Whlmea_LossMaxLimit(0.02)  ~ Min (-0.01)
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] WheelTip measure 값 계산
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z Old Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old = 105.0166[mm]
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Measure Z New Pos =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos = 105.01922[mm]
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel measure 감소량 계산 dMeasure_Decrease_amount_00 (-0.0026) = CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos_Old (105.0166) - CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos (105.01922)
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Old : CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old (102.896)
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact (이전 - 변화값) (비교용) CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData (102.8934) = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old (102.896) + dMeasure_Decrease_amount_00 (-0.0026) 
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table Contact (측정값 + Gap) dWheel_Table_contact_01 (102.8986) =  CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos (105.01922) + CVar.BPara[nStage].dH_Table_to_WTS_Gap_SetValue (-2.1206) 
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Table contact Pos (측정값 + Gap) CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData (102.8986) 
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Table Contact 감소량 계산 dMeasure_Decrease_amount_01 (-0.0026) =  CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData_Old (102.896) - CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData (102.8986)
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip Old =  CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData_Old (8.9908)
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] Wheel Wheel Tip New = CVar.WaferMeasData[nStage].dH_WTs2Wt_Tip_Thickness_CalData (8.9882) = CVar.BPara[nStage].dZ_WBase_to_WTS_MeasureValue (114.0074) - CVar.WaferMeasData[nStage].dZ_WTs2Wt_MaxVal_MeaPos (105.01922) 
+[20230613-141911 702]	Manual_Status	Set_Measure_WTs2Wtip()	GrindStep : 002, 316, 010, 010, 000	[WheelTip to WheelToolsetter] CWheelManager.CWhldata[nStage].TipMax_Old = 8.9908,CWheelManager.CWhldata[nStage].TipMax = 8.9882,CWheelManager.CWhldata[nStage].TipLoss = 0.0026
+[20230613-142012 552]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	Wait Position : pMeasuer_WaitPos.dSZ = 75 ,.dDZ  = 0.1 ,.dTR  = 0 ,.dTY  = 0 ,.dDR  = 0
+[20230613-142012 552]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 317, 010, 010, 000	SP Z axis Measure End, Curr Pos = 105.01909 ,Wait Position move Down =75
+[20230613-142019 500]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 318, 010, 010, 000	[WheelTip_to_WTS]  Finish. SP Z axis Wait Position move =  75
+[20230613-142019 547]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 997, 010, 010, 000	IPG_Down = Up
+[20230613-142019 562]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 997, 010, 010, 000	All Motor Stop
+[20230613-142021 072]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 998, 010, 010, 000	IPG_Down (Up),eTableR RPM (0), Spindle Rpm (0) 
+[20230613-142021 072]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 998, 010, 010, 000	[WheelTip_to_WTS]  Finish.
+[20230613-142021 134]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = WheelTip_to_WTS Save...
+[20230613-142021 134]	Manual_Status	Unit_Measure_Meca   ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:02:06.2
+[20230613-142021 165]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm StopSpindle
+[20230613-142021 165]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230613-142021 681]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230613-142021 697]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 80
+[20230613-142021 697]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eDressZ Move : 0.5
+[20230613-142023 546]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	Air Knife Open
+[20230613-142023 546]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230613-142023 562]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 609]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 656]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 703]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 749]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 796]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 812]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 859]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 906]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 928]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 931]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 939]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 942]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142023 979]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 025]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 072]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 119]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 166]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 182]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 229]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 275]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 322]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 369]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 416]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 432]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 478]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 525]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 572]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 619]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 666]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 682]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 728]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 775]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 822]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 869]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 916]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 931]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142024 978]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 025]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 072]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 119]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 166]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 181]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 228]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 275]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 322]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 369]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 416]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 431]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 478]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 525]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 572]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 619]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 666]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 681]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 728]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 775]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 822]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 869]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 916]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 931]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142025 978]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 025]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 072]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 119]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 166]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 181]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 228]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 275]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 322]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 369]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 416]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 431]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 478]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 525]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 572]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 619]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 665]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 681]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 728]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 775]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 822]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 869]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 915]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 931]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142026 978]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 025]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 072]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 118]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 165]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 181]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 228]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 275]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 322]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 368]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 415]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 431]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 478]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 525]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 571]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 618]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 665]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 681]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 728]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 775]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 821]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 868]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 915]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 931]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142027 978]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 025]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 071]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 118]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 165]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 181]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 228]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 274]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 321]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 368]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 415]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 431]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 465]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 514]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 570]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 620]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 667]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 683]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 733]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 780]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 826]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 873]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 912]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 915]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142028 962]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 009]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 056]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 103]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 149]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 165]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 212]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 259]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 306]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 353]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 399]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 415]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 462]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 509]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 556]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 603]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 649]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 665]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 712]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 759]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 806]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 852]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 899]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 915]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 938]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 942]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 945]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142029 986]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 033]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 049]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 096]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 143]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 190]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 236]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 283]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 299]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 346]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 393]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 439]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 486]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 533]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 549]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 596]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 643]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 689]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 736]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 783]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 799]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 846]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 893]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 939]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142030 986]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 033]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 049]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 096]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 142]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 189]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 236]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 283]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 299]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 346]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 392]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 439]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 486]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 533]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 549]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 595]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 642]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 689]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 736]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 783]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 799]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 845]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 892]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 926]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142031 963]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 009]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 025]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 072]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 119]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 166]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 212]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 259]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 275]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 322]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 369]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 416]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 462]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 509]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 525]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 603]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 619]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 665]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 712]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 759]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 775]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 822]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 869]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 915]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 938]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 947]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142032 986]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142033 033]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-142033 080]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:11.9
+[20230613-142411 576]	Manual_Status	Init_Manual_Wafer_Measure_Flag()	GrindStep : 002, 010, 010, 010, 000	bStrMea_TblRef_Measure_Use = False
+[20230613-142434 673]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = Wafer_to_IPG
+[20230613-142437 042]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230613-142438 617]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230613-142447 570]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 010, 010, 010, 000	[■ Measure_Meca] = Wafer_to_IPG
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230613-142453 833]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 011, 010, 010, 000	--- OK
+[20230613-142529 190]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230613-142529 190]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230613-142529 190]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	[■ Measure_Meca] = Wafer_to_IPG
+Check_All MT() OKCheck_All Water() 
+ Are you Continue ? 
+[20230613-142529 211]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step (00),Use = True,Air_Cut = 0.8,Cycle_Depth = 0.01,Wheel_rpm = -1000,WheelZ_dn_speed = 0.001,Table_rpm = 300,Target = 0.78,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use (True),nipg_Spark Cut = 30,ipg_daqcount = 0,nipg_end_delaytime = 30,
+→bShortDress_use (False),dWheelRpm = 0,dDressRpm = 1000,dDress_cycle_Depth = 0.001,dTotal = 0.01,dCycleDownDelay = 11,
+→spindleload (0),fDiffGapError = 0
+[20230613-142529 211]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 012, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230613-142542 409]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 012, 010, 010, 000	[측정을 위해 모터 대기 위치 계산 ]
+Measure Mode = Wafer_to_IPG
+Wait Position : pMeasuer_WaitPos.dSZ (80), .dDZ = (0.5), .dTR = (0), .dTY = (1), .dDR = (0)
+Are you continue ?
+[20230613-142558 564]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 013, 010, 010, 000	SP Z axis move Wait (80)
+[20230613-142558 564]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 013, 010, 010, 000	Dress Z axis move Wait (0.5)
+[20230613-142613 249]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 014, 010, 010, 000	SP Z axis move Wait (79.99999), Dress Z axis move Wait (0.499)
+[20230613-142631 803]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = (Wafer_to_IPG) , 회전축 정지 : EMeasure.Table_to_IPG (Table_to_IPG) +, dTemp_Pos[(int)mAxis.TY] (300), dTemp_Pos[(int)mAxis.DR] (459.2549)
+[20230613-142638 603]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 015, 010, 010, 000	Measure Mode = Wafer_to_IPG,TableR Stop Cmd
+[20230613-142654 993]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 016, 010, 010, 000	Measure Mode = (Wafer_to_IPG), 회전축 정지 Delay : Check eTableR axis (300), Check Wheel Rpm (0), , Check Dress Rpm (0)
+[20230613-142701 289]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 601, 010, 010, 000	Measure Mode = Wafer_to_IPG
+[20230613-142723 715]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 601, 010, 010, 000	Measure Mode = [Wafer_to_IPG] Start, Wafer Measure Variable Initial !! 
+[20230613-142744 372]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 602, 010, 010, 000	[Wafer Measure],.dSZ = 80.0000..dDZ = 0.5000..dTR = 0.0000..dTY = 1.0000..dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG2Wafer_SetPos[0].dTY = 459.2549
+IPG_Down = Up,IPG_Coolant = Water_On
+[20230613-142802 837]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 602, 010, 010, 000	Wafer Measure ,IPG_Down = Up
+[20230613-142818 158]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 602, 010, 010, 000	Wafer Measure ,IPG_Coolant = Water_On
+[20230613-142818 158]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 602, 010, 010, 000	Wafer Measure ,IPG Up/Cooler water open, Zaxis Position Move: ,SP Z = 80,Dress Z = 0.5
+[20230613-142854 524]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 603, 010, 010, 000	Z Move Down 이동 Check, SP Z Position = 79.99999, Dress Z Position = 0.499
+[20230613-142918 015]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 604, 010, 010, 000	IPG 측정,Table Y 이동 = 459.2549
+[20230613-143444 381]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 605, 010, 010, 000	IPG 측정 : Check Table Y 이동 = 459.2549
+[20230613-143444 459]	Manual_Status	Get_WaferMeasure_Recipe()	GrindStep : 002, 606, 010, 010, 000	Grind 위해 Recipe -> pGrd_Rcp_temp Copy
+[20230613-143444 459]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 606, 010, 010, 000	default : EGrindmode = Wafer_Surface,CData.Dev.MData[0].gStep -> pGrd_Rcp_temp 이동
+[20230613-143444 459]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 606, 010, 010, 000	[Wafer Measure],.dSZ = 80.0000..dDZ = 0.5000..dTR = 0.0000..dTY = 1.0000..dDR = 0.0000
+CVar.WaferMeasData[nStage].IPG2Wafer_SetPos[0].dTY = 459.2549
+IPG_Down = Up,IPG_Coolant = Water_On
+[20230613-143444 459]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 606, 010, 010, 000	Get_GrindRecipe_from_SrcRcp ( Wafer_Surface,out Grind_RecipeStep ,_eGrdtarget = Target)
+GrindTarget Mode = Target,nStage = 0
+Step (00),Use = True,Air_Cut = 0.8,Cycle_Depth = 0.01,Wheel_rpm = -1000,WheelZ_dn_speed = 0.001,Table_rpm = 300,Target = 0.78,gTarget_accur = 0.002,gCycleDownDelay = 0,
+→ipg_use (True),nipg_Spark Cut = 30,ipg_daqcount = 0,nipg_end_delaytime = 30,
+→bShortDress_use (False),dWheelRpm = 0,dDressRpm = 1000,dDress_cycle_Depth = 0.001,dTotal = 0.01,dCycleDownDelay = 11,
+→spindleload (0),fDiffGapError = 0
+[20230613-143444 459]	Manual_Status	Get_GrindRecipe_from_SrcRcp()	GrindStep : 002, 606, 010, 010, 000	Grind 위해 진행 Recipe 초기화
+[20230613-143452 784]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 606, 010, 010, 000	Wafer Measure: nMeasure_Cnt[0] = 1 ,Table_Y Pos Check = 459.2549 ,Table_R RPM Cmd = 0
+ IPG Dn  Master :dT_mm = 0.0000 (dMaster_mV = 0.0000)
+ Object :dT_mm = 0.0000 (dObject_mV = 0.0000)
+ Wafer  dT_mm = 0.0000 (dT_mV = 0.0000)
+[20230613-143452 784]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 606, 010, 010, 000	IPG_Down = Down
+[20230613-143647 677]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 607, 010, 010, 000	Table R axis Run Rpm =  300
+[20230613-143749 079]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 608, 010, 010, 000	Wafer Measure: nMeasure_Cnt[0] = 1 ,Table_Y Pos Check = 459.2549 ,Table_R RPM Check = 300.473
+ IPG Dn  Master :dT_mm = 0.0552 (dMaster_mV = 0.2759)
+ Object :dT_mm = 0.8375 (dObject_mV = 4.1876)
+ Wafer  dT_mm = 0.7820 (dT_mV = 3.9100)
+[20230613-143756 027]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG master to Table] Measure Z Old [mm] = CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue (0.1270),CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue (0.0000)
+[20230613-143756 027]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG master to Base] Measure Z New : [mm] CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue (0.0568),[mV] CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue (0.2808)
+[20230613-143756 027]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG master to Base] Cal [mm] = CVar.WaferMeasData[nStage].dmm_IBM2_Tbase2_IPGBase_diff_CalData (-1.9432) = CVar.WaferMeasData[nStage].dmm_IBM2_Tbase_meaValue(0.0568) -CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue (2.0000) 
+[20230613-143756 027]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG master to Base] Cal [mV] = CVar.WaferMeasData[nStage].dmV_IBM2_Tbase2_IPGBase_diff_CalData (-9.7192) = CVar.WaferMeasData[nStage].dmV_IBM2_Tbase_meaValue(0.280778856131356) - CVar.WaferMeasData[nStage].dmV_IBM2Base_meaValue(10)
+[20230613-143756 027]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG Object to Wafer] Measure Z Old [mm] = CVar.WaferMeasData[nStage].dmm_IBO2_Wafer_meaValue (0.8160),CVar.WaferMeasData[nStage].dmV_IBO2_Wafer_meaValue (4.0830)
+[20230613-143756 043]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG Object to Wafer] Measure Z New : [mm] CVar.WaferMeasData[nStage].dmm_IBO2_Wafer_meaValue (0.8397),[mV] CVar.WaferMeasData[nStage].dmV_IBO2_Wafer_meaValue (4.1983)
+[20230613-143756 043]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG Object to Wafer] dmm_Wafer_Thickness_meaValue (0.7820)
+[20230613-143756 043]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG Object to Wafer] Cal [mm] = CVar.WaferMeasData[nStage].dH_Wafer2_IPGBase_diff_CalData[0] (1.1603) = CVar.WaferMeasData[nStage].dmm_IBM2Base_meaValue (2.0000) - CVar.WaferMeasData[nStage].dmm_IBO2_Wafer_meaValue (0.8397) 
+[20230613-143756 043]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG Object to Wafer] WTip to Wafer Contact Old = CVar.WaferMeasData[nStage].dZ_Wtip2_Wafer_Contact_CalData_Old (102.0800)
+[20230613-143756 043]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	[IPG Object to Wafer] WTip to Wafer Contact New = CVar.WaferMeasData[nStage].dZ_Wtip2_Wafer_Contact_CalData (102.1140) = CVar.WaferMeasData[nStage].dZ_Wtip2Table_ContactPos_CalData (102.8960) - CVar.WaferMeasData[nStage].dmm_Wafer_Thickness_meaValue[0] (0.7820) 
+[20230613-143758 532]	Manual_Status	Check_WaferMeasure_Thickness_Invalid()	GrindStep : 002, 608, 010, 010, 000	CMeasureData.Save(nStage =   0)
+[20230613-143825 227]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 608, 010, 010, 000	IPG_Down = Up
+[20230613-143931 601]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 608, 010, 010, 000	All Motor Stop
+[20230613-143942 763]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 609, 010, 010, 000	IPG_Down (Up),eTableR RPM (0), Spindle Rpm (0) 
+[20230613-143942 763]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 609, 010, 010, 000	[Wafer_to_IPG]  Finish.
+[20230613-143950 476]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 997, 010, 010, 000	IPG_Down = Up
+[20230613-143950 491]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 997, 010, 010, 000	All Motor Stop
+[20230613-143957 443]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 998, 010, 010, 000	IPG_Down (Up),eTableR RPM (0), Spindle Rpm (0) 
+[20230613-143957 443]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 998, 010, 010, 000	[Wafer_to_IPG]  Finish.
+[20230613-143957 505]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 999, 010, 010, 000	Measure Mode = Wafer_to_IPG Save...
+[20230613-143957 505]	Manual_Status	Unit_Measure_Wafer  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:14:59.3
+[20230613-143957 539]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Wheel_rpm StopSpindle
+[20230613-143957 539]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 010, 010, 010, 000	Water close
+[20230613-143958 081]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 011, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230613-143958 128]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eSpindleZ Move : 80
+[20230613-143958 128]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 012, 010, 010, 000	[Wait Posistion Move] eDressZ Move : 0.5
+[20230613-143958 190]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	Air Knife Open
+[20230613-143958 190]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 014, 010, 010, 000	[Wait Posistion Move] eTableY Move : 1
+[20230613-143958 206]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 253]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 299]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 346]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 362]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 384]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 407]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 410]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 433]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 463]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 467]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 470]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 473]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 496]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 499]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 527]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 551]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 554]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 577]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 580]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 583]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 590]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 593]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 596]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 599]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 602]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 605]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 631]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 634]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 657]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 681]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 684]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 707]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 714]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 717]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 753]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 776]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 799]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 802]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 829]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 832]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 835]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 837]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 839]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 842]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 849]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 852]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 875]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 898]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 901]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 904]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 910]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 913]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 936]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 960]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 984]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 988]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 995]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143958 998]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 001]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 025]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 048]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 051]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 058]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 083]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 086]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 088]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 111]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 155]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 184]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 207]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 210]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 213]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 236]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 239]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 266]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 269]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 272]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 296]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 319]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 343]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 370]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 393]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 396]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 399]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 401]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 403]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 430]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 433]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 436]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 438]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 441]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 444]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 451]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 454]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 477]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 500]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 503]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 553]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 604]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 608]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 611]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 635]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 657]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 680]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 686]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 691]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 714]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 716]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 718]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 721]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 728]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 731]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 733]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 736]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 739]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 742]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 749]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 772]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 795]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 798]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 822]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 845]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 874]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 897]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 920]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 923]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 926]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 929]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 936]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 939]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-143959 988]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 035]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 058]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 061]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 068]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 071]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 074]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 076]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 078]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 102]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 130]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 152]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 175]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 178]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 201]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 225]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 251]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 255]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 258]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 261]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 264]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 266]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 272]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 275]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 278]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 280]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 282]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 284]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 313]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 317]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 319]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 321]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 344]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 367]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 374]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 377]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 400]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 441]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 488]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 535]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 582]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 597]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 644]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 667]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 690]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 693]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 720]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 723]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 726]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 729]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 731]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 734]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 741]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 764]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 767]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 790]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 813]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 816]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 843]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 866]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 889]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 913]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 916]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 939]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 945]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 948]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 951]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 974]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144000 997]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 046]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 093]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 109]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 156]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 203]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 249]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 296]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 343]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 359]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 406]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 453]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 499]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 546]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 593]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 609]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 656]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 702]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 749]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 772]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 802]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 805]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 828]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 851]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 854]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 877]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 904]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 928]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 931]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 934]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 937]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 939]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 945]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 948]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 972]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 975]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144001 978]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 001]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 028]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 031]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 034]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 056]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 079]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 102]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 143]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 159]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 206]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 252]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 299]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 346]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 393]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 409]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 456]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 502]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 549]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 596]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 643]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 659]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 706]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 752]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 799]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 846]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 893]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 909]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144002 955]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 002]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 049]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 096]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 143]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 159]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 205]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 252]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 299]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 346]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 393]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 408]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 455]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 502]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 549]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 596]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 643]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 658]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 705]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 752]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 799]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 846]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 893]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 908]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144003 955]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 002]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 049]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 096]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 143]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 158]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 205]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 252]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 299]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 346]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 393]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 408]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 455]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 502]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 549]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 596]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 643]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 658]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 705]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 752]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 799]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 846]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 903]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 918]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144004 965]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 012]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 059]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 106]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 152]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 168]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 215]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 262]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 309]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 356]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 402]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 418]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 465]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 512]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 559]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 605]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 652]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 668]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 715]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 762]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 809]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 855]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 902]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 918]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144005 965]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 012]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 059]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 105]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 152]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 168]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 215]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 262]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 308]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 355]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 402]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 418]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 465]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 512]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 558]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 605]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 652]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 668]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 715]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 761]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 808]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 855]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 902]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 918]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144006 965]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 011]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 058]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 105]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 152]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 168]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 214]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 261]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 308]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 355]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 402]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 418]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 464]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 543]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 558]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 605]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 652]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 668]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 714]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 761]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 808]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 855]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 902]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 914]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144007 962]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 009]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 056]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 102]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 149]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 165]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 212]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 259]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 305]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 352]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 399]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 415]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 462]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 509]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 555]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 602]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 649]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 665]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 712]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 758]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 805]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 852]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 905]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144008 955]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 001]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 048]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 095]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 142]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 189]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 204]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 251]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 298]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 345]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 392]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 439]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 454]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 501]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 548]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 595]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 642]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 689]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 704]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 751]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 798]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 845]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 892]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 939]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144009 954]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 001]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 048]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 095]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 142]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 189]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 204]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 251]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 298]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 345]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 392]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 439]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 454]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 501]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 548]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 595]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 642]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 688]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 704]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 751]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 798]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 845]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 892]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 938]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 954]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 977]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 979]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 982]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 985]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144010 993]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 011]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 057]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 091]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 094]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 097]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 104]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 107]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 146]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 193]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 240]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 286]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 333]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 349]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 365]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 411]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 458]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 505]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 552]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 568]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 615]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 661]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 708]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 755]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 802]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 818]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 864]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 911]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144011 958]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 005]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 044]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 090]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 137]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 184]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 231]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 277]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 324]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 340]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 387]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 434]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 480]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 527]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 574]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 590]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 637]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 684]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 730]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 777]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 824]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 840]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 887]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 933]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144012 980]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 027]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 074]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 090]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 137]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 183]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 230]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 277]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 324]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 340]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 387]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 433]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 480]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 527]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 574]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 590]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 636]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 656]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 703]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 750]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 796]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 812]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 859]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 906]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 953]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144013 976]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144014 026]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144014 042]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144014 089]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144014 135]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144014 182]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144014 229]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 015, 010, 010, 000	Air Knife Close
+[20230613-144014 276]	Manual_Status	Unit_Wait_Pos_Move  ()	GrindStep : 002, 999, 010, 010, 000	Finish, Tack time : 00:00:16.7
+[20230613-145929 180]	Manual_Status	Set_WaferGrd_Measure_Flag()	GrindStep : 002, 010, 010, 010, 000	bGrind_Bf_IPG2Base_Measure_Use = False,bGrind_Bf_Drs_Measure_Use = True,bGrind_Bf_Whl_Measure_Use = True,bGrind_Bf_Tbl_Measure_Use = False,bGrind_Af_Drs_Measure_Use = False,bGrind_Af_Whl_Measure_Use = True,bGrind_Af_Tbl_Measure_Use = False,bIsAfterMeasure = False,CData.bNewMeasure[nStage] = False

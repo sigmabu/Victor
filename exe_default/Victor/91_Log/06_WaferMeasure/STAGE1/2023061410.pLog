@@ -1,0 +1,381 @@
+[20230614-101119 003]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 010, 010, 010, 000	■ WarmUp .
+[20230614-101119 018]	Manual_Status	Proc_Error          ()	GrindStep : 000, 010, 010, 010, 000	Error : EQ_STAG1_DRESS_Z_SERVO_IS_OFF
+[20230614-101119 034]	Manual_Status	_Set_LastWork       ()	GrindStep : 000, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-101208 855]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 010, 010, 010, 000	■ WarmUp .
+[20230614-101208 855]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 010, 010, 010, 000	Check_All MT() OK
+[20230614-101208 855]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 010, 010, 010, 000	Check_All Water() OK
+[20230614-101208 855]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 010, 010, 010, 000	IPG_Down = Up
+[20230614-101210 370]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 011, 010, 010, 000	[IPG Up Delay Time
+[20230614-101210 386]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 012, 010, 010, 000	Wheel_rpm StopSpindle
+[20230614-101210 901]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 013, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230614-101210 917]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 014, 010, 010, 000	HW.SP.Check_Spl_R(eWSpl, 0) = 0
+Next Move Position
+Spindle Zaxis Wait Pos = 75
+Dress Zaxis Wait Pos = 0.1
+[20230614-101210 917]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 014, 010, 010, 000	Wheel Z axis move Wait 75
+[20230614-101210 917]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 014, 010, 010, 000	Dress Z axis move Wait 0.1
+[20230614-101226 742]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 015, 010, 010, 000	Check SP Z axiss move Wait 75.00025, Check Dress Z axis move Wait 0.1
+[20230614-101226 758]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 016, 010, 010, 000	HW.SCol_Whl.nRpm  = 0
+Current Position
+Spindle Zaxis Wait Pos = 75.00022
+Dress Zaxis Wait Pos = 0.1
+Next Move Position
+Table Yaxis Wait Pos = 1
+Table Raxis Wait Pos = 0
+Dress Raxis Wait Pos = 0
+[20230614-101226 758]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 016, 010, 010, 000	Table Y axis move Wait 1
+[20230614-101227 539]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 017, 010, 010, 000	Check Table Y axis move Wait 1.0002
+[20230614-101227 539]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 017, 010, 010, 000	Warm Up Water & Air On
+[20230614-101227 539]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 000, 017, 010, 010, 000	wheel servo On
+[20230614-101257 548]	Manual_Status	Proc_Error          ()	GrindStep : 000, 019, 010, 010, 000	Error : EQ_SPINDLE1_SERVO_ON_TIMEOUT_ERROR
+[20230614-101257 564]	Manual_Status	_Set_LastWork       ()	GrindStep : 000, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-101436 503]	All_Initial_Status	StartEvent_Init_Measure_Flag()	GrindStep : 000, 010, 010, 010, 000	bStart_IPG2Base_Measure_Use = True,bStart_Drs_Measure_Use = True,bStart_Whl_Measure_Use = True,bStart_Tbl_Measure_Use = True
+[20230614-101436 518]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	■ Servo On = True
+[20230614-101436 643]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Spindle Servo On = True
+[20230614-101436 643]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Already Servo On = True
+[20230614-101437 659]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 999, 010, 010, 000	Finish. Tack time : 00:00:01.1
+[20230614-101437 674]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	■ Home = False
+[20230614-101437 674]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	Already Servo On = True
+[20230614-101438 690]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 012, 010, 010, 000	IPG_Down = Up
+[20230614-101440 205]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 013, 010, 010, 000	IPG_Down = Up Delay
+[20230614-101440 220]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 014, 010, 010, 000	Wheel_rpm Stop
+[20230614-101440 736]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 015, 010, 010, 000	Wheel_rpm Stop check
+[20230614-101440 752]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	SpindleZ Home Cmd
+[20230614-101440 752]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	DressZ Home Cmd
+[20230614-101529 869]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	SpindleZ Home = True,DressZ Home = True
+[20230614-101529 869]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableR axis Home Cmd
+[20230614-101529 869]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableY axis Home Cmd
+[20230614-101529 869]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	DressR axis Home Cmd
+[20230614-101543 176]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 022, 010, 010, 000	DressR Home = TrueTableR Home = True,TableY Home = True
+[20230614-101543 285]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	SP Z axis move Ready = 75
+[20230614-101543 285]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	Dress Z axis move Ready = 0.1
+[20230614-101559 114]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 024, 010, 010, 000	Check SP Z axis move Ready =  75.0002, Check Dress Z axis move Ready =  0.1
+[20230614-101559 130]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 999, 010, 010, 000	Unit_Home Finish
+[20230614-101559 130]	All_Initial_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-101605 496]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	■ WarmUp .
+[20230614-101605 496]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230614-101605 496]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230614-101605 496]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	IPG_Down = Up
+[20230614-101607 011]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 011, 010, 010, 000	[IPG Up Delay Time
+[20230614-101607 027]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 012, 010, 010, 000	Wheel_rpm StopSpindle
+[20230614-101607 542]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 013, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230614-101607 558]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	HW.SP.Check_Spl_R(eWSpl, 0) = 0
+Next Move Position
+Spindle Zaxis Wait Pos = 75
+Dress Zaxis Wait Pos = 0.1
+[20230614-101607 558]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Wheel Z axis move Wait 75
+[20230614-101607 558]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Dress Z axis move Wait 0.1
+[20230614-101607 667]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 015, 010, 010, 000	Check SP Z axiss move Wait 74.99999, Check Dress Z axis move Wait 0.1
+[20230614-101607 683]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	HW.SCol_Whl.nRpm  = 0
+Current Position
+Spindle Zaxis Wait Pos = 74.99999
+Dress Zaxis Wait Pos = 0.1
+Next Move Position
+Table Yaxis Wait Pos = 1
+Table Raxis Wait Pos = 0
+Dress Raxis Wait Pos = 0
+[20230614-101607 683]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	Table Y axis move Wait 1
+[20230614-101608 464]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Check Table Y axis move Wait 1.0003
+[20230614-101608 464]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Warm Up Water & Air On
+[20230614-101608 464]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	wheel servo On
+[20230614-101638 466]	Manual_Status	Proc_Error          ()	GrindStep : 002, 019, 010, 010, 000	Error : EQ_SPINDLE1_SERVO_ON_TIMEOUT_ERROR
+[20230614-101638 481]	Manual_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-102727 451]	All_Initial_Status	StartEvent_Init_Measure_Flag()	GrindStep : 000, 010, 010, 010, 000	bStart_IPG2Base_Measure_Use = True,bStart_Drs_Measure_Use = True,bStart_Whl_Measure_Use = True,bStart_Tbl_Measure_Use = True
+[20230614-102727 467]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	■ Servo On = True
+[20230614-102727 592]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Spindle Servo On = True
+[20230614-102727 592]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	AllServo =  True
+[20230614-102728 685]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 011, 010, 010, 000	AllServo Finish =  True
+[20230614-102728 716]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	■ Home = False
+[20230614-102728 716]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	Already Servo On = True
+[20230614-102729 732]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 012, 010, 010, 000	IPG_Down = Up
+[20230614-102731 247]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 013, 010, 010, 000	IPG_Down = Up Delay
+[20230614-102731 263]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 014, 010, 010, 000	Wheel_rpm Stop
+[20230614-102731 778]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 015, 010, 010, 000	Wheel_rpm Stop check
+[20230614-102731 794]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	SpindleZ Home Cmd
+[20230614-102731 794]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	DressZ Home Cmd
+[20230614-102742 653]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	SpindleZ Home = True,DressZ Home = True
+[20230614-102742 653]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableR axis Home Cmd
+[20230614-102742 653]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableY axis Home Cmd
+[20230614-102742 653]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	DressR axis Home Cmd
+[20230614-102755 288]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 022, 010, 010, 000	DressR Home = TrueTableR Home = True,TableY Home = True
+[20230614-102755 397]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	SP Z axis move Ready = 75
+[20230614-102755 397]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	Dress Z axis move Ready = 0.1
+[20230614-102811 211]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 024, 010, 010, 000	Check SP Z axis move Ready =  75.00018, Check Dress Z axis move Ready =  0.1
+[20230614-102811 226]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 999, 010, 010, 000	Unit_Home Finish
+[20230614-102811 226]	All_Initial_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-102815 022]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	■ WarmUp .
+[20230614-102815 022]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230614-102815 022]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230614-102815 022]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	IPG_Down = Up
+[20230614-102816 538]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 011, 010, 010, 000	[IPG Up Delay Time
+[20230614-102816 553]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 012, 010, 010, 000	Wheel_rpm StopSpindle
+[20230614-102817 069]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 013, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230614-102817 084]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	HW.SP.Check_Spl_R(eWSpl, 0) = 0
+Next Move Position
+Spindle Zaxis Wait Pos = 75
+Dress Zaxis Wait Pos = 0.1
+[20230614-102817 084]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Wheel Z axis move Wait 75
+[20230614-102817 084]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Dress Z axis move Wait 0.1
+[20230614-102817 194]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 015, 010, 010, 000	Check SP Z axiss move Wait 74.99999, Check Dress Z axis move Wait 0.101
+[20230614-102817 209]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	HW.SCol_Whl.nRpm  = 0
+Current Position
+Spindle Zaxis Wait Pos = 74.99999
+Dress Zaxis Wait Pos = 0.101
+Next Move Position
+Table Yaxis Wait Pos = 1
+Table Raxis Wait Pos = 0
+Dress Raxis Wait Pos = 0
+[20230614-102817 209]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	Table Y axis move Wait 1
+[20230614-102817 990]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Check Table Y axis move Wait 1.0004
+[20230614-102817 990]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Warm Up Water & Air On
+[20230614-102817 990]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	wheel servo On
+[20230614-102847 998]	Manual_Status	Proc_Error          ()	GrindStep : 002, 019, 010, 010, 000	Error : EQ_SPINDLE1_SERVO_ON_TIMEOUT_ERROR
+[20230614-102848 013]	Manual_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-103142 600]	All_Initial_Status	StartEvent_Init_Measure_Flag()	GrindStep : 000, 010, 010, 010, 000	bStart_IPG2Base_Measure_Use = True,bStart_Drs_Measure_Use = True,bStart_Whl_Measure_Use = True,bStart_Tbl_Measure_Use = True
+[20230614-103142 609]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	■ Servo On = True
+[20230614-103142 712]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Spindle Servo On = True
+[20230614-103142 724]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	AllServo =  True
+[20230614-103143 788]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 011, 010, 010, 000	AllServo Finish =  True
+[20230614-103143 798]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	■ Home = False
+[20230614-103143 799]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	Already Servo On = True
+[20230614-103144 806]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 012, 010, 010, 000	IPG_Down = Up
+[20230614-103146 328]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 013, 010, 010, 000	IPG_Down = Up Delay
+[20230614-103146 331]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 014, 010, 010, 000	Wheel_rpm Stop
+[20230614-103146 832]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 015, 010, 010, 000	Wheel_rpm Stop check
+[20230614-103146 836]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	SpindleZ Home Cmd
+[20230614-103146 836]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	DressZ Home Cmd
+[20230614-103235 922]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	SpindleZ Home = True,DressZ Home = True
+[20230614-103235 922]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableR axis Home Cmd
+[20230614-103235 922]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableY axis Home Cmd
+[20230614-103235 923]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	DressR axis Home Cmd
+[20230614-103248 597]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 022, 010, 010, 000	DressR Home = TrueTableR Home = True,TableY Home = True
+[20230614-103248 702]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	SP Z axis move Ready = 75
+[20230614-103248 704]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	Dress Z axis move Ready = 0.1
+[20230614-103304 499]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 024, 010, 010, 000	Check SP Z axis move Ready =  75.00037, Check Dress Z axis move Ready =  0.1
+[20230614-103304 501]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 999, 010, 010, 000	Unit_Home Finish
+[20230614-103304 501]	All_Initial_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-103313 187]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	■ WarmUp .
+[20230614-103313 187]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230614-103313 191]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230614-103313 191]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	IPG_Down = Up
+[20230614-103314 692]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 011, 010, 010, 000	[IPG Up Delay Time
+[20230614-103314 699]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 012, 010, 010, 000	Wheel_rpm StopSpindle
+[20230614-103315 199]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 013, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230614-103315 201]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	HW.SP.Check_Spl_R(eWSpl, 0) = 0
+Next Move Position
+Spindle Zaxis Wait Pos = 75
+Dress Zaxis Wait Pos = 0.1
+[20230614-103315 203]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Wheel Z axis move Wait 75
+[20230614-103315 205]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Dress Z axis move Wait 0.1
+[20230614-103315 310]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 015, 010, 010, 000	Check SP Z axiss move Wait 74.99999, Check Dress Z axis move Wait 0.1
+[20230614-103315 313]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	HW.SCol_Whl.nRpm  = 0
+Current Position
+Spindle Zaxis Wait Pos = 74.99999
+Dress Zaxis Wait Pos = 0.1
+Next Move Position
+Table Yaxis Wait Pos = 1
+Table Raxis Wait Pos = 0
+Dress Raxis Wait Pos = 0
+[20230614-103315 315]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	Table Y axis move Wait 1
+[20230614-103316 081]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Check Table Y axis move Wait 1.0005
+[20230614-103316 082]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Warm Up Water & Air On
+[20230614-103316 082]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	wheel servo On
+[20230614-103317 192]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 019, 010, 010, 000	Wheel SP RunSpindle : 500
+[20230614-103317 194]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 019, 010, 010, 000	Table Raxis RunSpindle : true 
+[20230614-103317 196]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 019, 010, 010, 000	Dress Raxis RunSpindle : true 
+[20230614-103319 136]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 020, 010, 010, 000	HW.SCol_Whl.nRpm = 500
+dY_WarmUpStartPos = 100, dY_WarmUpEndPos = 400
+ CData.Warm = 2023-06-14 오전 11:03:19
+[20230614-103319 141]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-103324 957]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-103324 959]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-103324 963]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-103340 902]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-103340 905]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-103340 909]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-103343 417]	EMG_Status	_Set_LastWork       ()	GrindStep : 002, 022, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-104644 393]	All_Initial_Status	StartEvent_Init_Measure_Flag()	GrindStep : 000, 010, 010, 010, 000	bStart_IPG2Base_Measure_Use = True,bStart_Drs_Measure_Use = True,bStart_Whl_Measure_Use = True,bStart_Tbl_Measure_Use = True
+[20230614-104644 397]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	■ Servo On = True
+[20230614-104644 501]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Spindle Servo On = True
+[20230614-104644 561]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	AllServo =  True
+[20230614-104645 665]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 011, 010, 010, 000	AllServo Finish =  True
+[20230614-104645 680]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	■ Home = False
+[20230614-104645 681]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	Already Servo On = True
+[20230614-104646 687]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 012, 010, 010, 000	IPG_Down = Up
+[20230614-104648 189]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 013, 010, 010, 000	IPG_Down = Up Delay
+[20230614-104648 192]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 014, 010, 010, 000	Wheel_rpm Stop
+[20230614-104648 695]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 015, 010, 010, 000	Wheel_rpm Stop check
+[20230614-104648 700]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	SpindleZ Home Cmd
+[20230614-104648 700]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	DressZ Home Cmd
+[20230614-104658 856]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	SpindleZ Home = True,DressZ Home = True
+[20230614-104658 857]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableR axis Home Cmd
+[20230614-104658 857]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableY axis Home Cmd
+[20230614-104658 858]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	DressR axis Home Cmd
+[20230614-104734 644]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 022, 010, 010, 000	DressR Home = TrueTableR Home = True,TableY Home = True
+[20230614-104734 747]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	SP Z axis move Ready = 75
+[20230614-104734 750]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	Dress Z axis move Ready = 0.1
+[20230614-104750 516]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 024, 010, 010, 000	Check SP Z axis move Ready =  75.00014, Check Dress Z axis move Ready =  0.1
+[20230614-104750 519]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 999, 010, 010, 000	Unit_Home Finish
+[20230614-104750 519]	All_Initial_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230614-104825 000]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	■ WarmUp .
+[20230614-104825 000]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230614-104825 002]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230614-104825 002]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	IPG_Down = Up
+[20230614-104826 507]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 011, 010, 010, 000	[IPG Up Delay Time
+[20230614-104826 530]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 012, 010, 010, 000	Wheel_rpm StopSpindle
+[20230614-104827 040]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 013, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230614-104828 512]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	HW.SP.Check_Spl_R(eWSpl, 0) = 0
+Next Move Position
+Spindle Zaxis Wait Pos = 75
+Dress Zaxis Wait Pos = 0.1
+[20230614-104828 514]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Wheel Z axis move Wait 75
+[20230614-104828 516]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Dress Z axis move Wait 0.1
+[20230614-104828 635]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 015, 010, 010, 000	Check SP Z axiss move Wait 75, Check Dress Z axis move Wait 0.1
+[20230614-104829 784]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	HW.SCol_Whl.nRpm  = 0
+Current Position
+Spindle Zaxis Wait Pos = 75
+Dress Zaxis Wait Pos = 0.1
+Next Move Position
+Table Yaxis Wait Pos = 1
+Table Raxis Wait Pos = 0
+Dress Raxis Wait Pos = 0
+[20230614-104829 786]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	Table Y axis move Wait 1
+[20230614-104830 464]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Check Table Y axis move Wait 1.0006
+[20230614-104830 464]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Warm Up Water & Air On
+[20230614-104830 464]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	wheel servo On
+[20230614-104831 603]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 019, 010, 010, 000	Wheel SP RunSpindle : 500
+[20230614-104831 605]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 019, 010, 010, 000	Table Raxis RunSpindle : true 
+[20230614-104831 607]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 019, 010, 010, 000	Dress Raxis RunSpindle : true 
+[20230614-104835 035]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 020, 010, 010, 000	HW.SCol_Whl.nRpm = 500
+dY_WarmUpStartPos = 100, dY_WarmUpEndPos = 400
+ CData.Warm = 2023-06-14 오전 11:18:33
+[20230614-104835 053]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-104840 868]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-104840 891]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-104840 916]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-104856 798]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-104856 805]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-104856 830]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-104912 828]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-104912 831]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-104912 836]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-104928 748]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-104928 771]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-104928 777]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-104944 736]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-104944 743]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-104944 748]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105000 656]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105000 659]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105000 690]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105016 663]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105016 686]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105016 712]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105032 656]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105032 683]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105032 708]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105048 713]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105048 736]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105048 746]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105104 706]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105104 729]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105104 754]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105120 730]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105120 733]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105120 758]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105136 710]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105136 733]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105136 738]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105152 698]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105152 701]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105152 711]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105208 668]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105208 671]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105208 677]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105224 651]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105224 654]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105224 659]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105240 598]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105240 620]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105240 649]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105256 640]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105256 643]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105256 668]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105312 594]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105312 621]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105312 647]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105328 632]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105328 655]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105328 660]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105344 625]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105344 628]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105344 633]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105400 638]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105400 660]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105400 685]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105416 625]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105416 649]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105416 654]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105432 628]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105432 651]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105432 660]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105448 611]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105448 614]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105448 619]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105504 628]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105504 652]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105504 657]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105520 615]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105520 639]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105520 668]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105536 681]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105536 705]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105536 731]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105552 645]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105552 648]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105552 673]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105608 624]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105608 631]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105608 658]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105624 566]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105624 590]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105624 619]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105640 607]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105640 610]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105640 635]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105656 572]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105656 575]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105656 585]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105712 577]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105712 580]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105712 585]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105728 547]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105728 574]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105728 579]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105744 544]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105744 547]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105744 572]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105800 522]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105800 551]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105800 556]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105816 558]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105816 581]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105816 591]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105832 512]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105832 519]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105832 525]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105848 530]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105848 534]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105848 540]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105904 520]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105904 523]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105904 528]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105920 495]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105920 498]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105920 513]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400
+[20230614-105936 482]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 400
+[20230614-105936 485]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105936 510]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp Start Pos : 100
+[20230614-105952 498]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 022, 010, 010, 000	Check Y axis move 100
+[20230614-105952 521]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 023, 010, 010, 000	Loop continue.
+[20230614-105952 527]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 021, 010, 010, 000	Table Y move WarmUp End Pos : 400

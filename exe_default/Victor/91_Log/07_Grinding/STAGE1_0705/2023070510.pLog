@@ -1,0 +1,49 @@
+[20230705-100016 060]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 124, 010, 010, 000	IPG 미사용 Grinding => Z axis Cycle Down Finish : 106.25878  >> 106.20863, nCurrGrind_Step = 2, nCurrStep_into_ZDown_Cnt(4)/ CVar.GDo_Stage_rcp[nStage].nZ_StepDn_Cnt(1),nCurrGrind_into_ZDown_Cnt = 3,dCurrStep_into_HDown_Pos = -0.0502
+[20230705-100016 060]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 124, 010, 010, 000	Wafer Grinding => Tact Time 00:00:50.7
+[20230705-100016 060]	Manual_Status	Set_WaferGrind_IPGSkip_FinishData()	GrindStep : 033, 124, 010, 010, 000	bGStepEscape = True,dZ_StartPos = 106.2588, dH_GrindAmount = -0.0502
+[20230705-100016 153]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 101, 010, 010, 000	[Wafer_Surface] All Step Grind finish, nCurrGrind_Step = 4
+[20230705-100016 153]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 951, 010, 010, 000	HIGH_PRESSURE_PUMP_RUN = STOP
+[20230705-100016 153]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 951, 010, 010, 000	Wait Position : SZ Curr_pos = 106.2089, pMeasuer_WaitPos.dSZ = 75 ,.dDZ  = 0.1 ,.dTR  = 0 ,.dTY  = 0 ,.dDR  = 0
+[20230705-100016 153]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 951, 010, 010, 000	[Error Event] SP Z axis move Wait = 75
+[20230705-100016 153]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 951, 010, 010, 000	[Error Event] Dress Z axis move Wait 0.1
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 952, 010, 010, 000	[Error Event] Check SP Z axis move Wait 74.99987, Check Dress Z axis move Wait 0.09899
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 952, 010, 010, 000	[Error Event] eError =  NONE
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 952, 010, 010, 000	HighPressure Off
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 952, 010, 010, 000	IPG Up
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 952, 010, 010, 000	Spindle Stop
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 952, 010, 010, 000	[Error Event] Check SP Z axis move Wait 74.99989, Check Dress Z axis move Wait 0.09899
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 952, 010, 010, 000	[Error Event] eError =  NONE
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 997, 010, 010, 000	HIGH_PRESSURE_PUMP_RUN = STOP
+[20230705-100023 389]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 997, 010, 010, 000	IPG_Down = Up
+[20230705-100023 404]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 997, 010, 010, 000	All Motor Stop
+[20230705-100039 654]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 998, 010, 010, 000	IPG_Down (Up),eTableR RPM (0), Spindle Rpm (-1) 
+[20230705-100039 654]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 998, 010, 010, 000	[Wafer_Surface]  Finish.
+[20230705-100039 700]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 999, 010, 010, 000	Wafer Grinding => Tact Time 00:02:56.3
+[20230705-100039 700]	Manual_Status	Unit_Grind          ()	GrindStep : 033, 999, 010, 010, 000	 Finish
+[20230705-100039 794]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 010, 010, 010, 000	Start Clean Wafer, Clean mode is = WaferCheck_Wafer, Wafer = Exist
+[20230705-100041 314]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 011, 010, 010, 000	Check_All MT() OK
+[20230705-100041 314]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 011, 010, 010, 000	Check_All Water() OK
+[20230705-100041 314]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 011, 010, 010, 000	[IPG Up Initial cmd !
+[20230705-100042 852]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 012, 010, 010, 000	[IPG Up Delay Time
+[20230705-100042 868]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 013, 010, 010, 000	SP Z axis move Ready 75
+[20230705-100042 868]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 013, 010, 010, 000	Dress Z axis move Ready 0.1
+[20230705-100042 977]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 014, 010, 010, 000	Check SP Z axis move Ready 75, Check Dress Z axis move Ready 0.09899
+[20230705-100043 024]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 015, 010, 010, 000	Table Y axis move Ready 75
+[20230705-100059 281]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 016, 010, 010, 000	Check Table Y axis move Ready -0.00059
+[20230705-100059 843]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 018, 010, 010, 000	Air Knife Open -> True
+[20230705-100059 843]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 018, 010, 010, 000	Table Y move Wafer Clean Start Pos : 100
+[20230705-100105 748]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 019, 010, 010, 000	Check Y axis move :100
+[20230705-100105 764]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 020, 010, 010, 000	Loop [1] End
+[20230705-100105 764]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 020, 010, 010, 000	Loop continue: CData.Dev.MData[0].nTpAirCnt  = 4, nTableClean_Cnt = 1
+[20230705-100105 811]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 018, 010, 010, 000	Air Knife Open -> False
+[20230705-100105 811]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 018, 010, 010, 000	Table Y move Wafer Clean End Pos : 400
+[20230705-100121 691]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 019, 010, 010, 000	Check Y axis move :400
+[20230705-100121 707]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 020, 010, 010, 000	Loop [2] End
+[20230705-100121 707]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 020, 010, 010, 000	Loop continue: CData.Dev.MData[0].nTpAirCnt  = 4, nTableClean_Cnt = 2
+[20230705-100121 754]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 018, 010, 010, 000	Air Knife Open -> True
+[20230705-100121 754]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 018, 010, 010, 000	Table Y move Wafer Clean Start Pos : 100
+[20230705-100137 624]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 019, 010, 010, 000	Check Y axis move :100
+[20230705-100137 671]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 020, 010, 010, 000	Loop [3] End
+[20230705-100137 671]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 020, 010, 010, 000	Loop continue: CData.Dev.MData[0].nTpAirCnt  = 4, nTableClean_Cnt = 3
+[20230705-100137 687]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 018, 010, 010, 000	Air Knife Open -> False
+[20230705-100137 687]	Manual_Status	Unit_Clean_Y        ()	GrindStep : 041, 018, 010, 010, 000	Table Y move Wafer Clean End Pos : 400

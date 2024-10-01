@@ -1,0 +1,15 @@
+[PROBE LEFT]
+Port=COM3
+Baudrate=9600
+Databits=8
+Parity=None
+Stopbits=One
+Rts=True
+
+[PROBE RIGHT]
+Port=COM4
+Baudrate=9600
+Databits=8
+Parity=None
+Stopbits=One
+Rts=False

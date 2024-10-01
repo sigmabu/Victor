@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Microsoft.VisualBasic.FileIO;
+using Victor;
 using Victor._02_Dialogue;
 
 namespace Victor
@@ -128,7 +129,6 @@ namespace Victor
             }
         }
 
-
         private void btnClick_SaveAs(object sender, EventArgs e)
         {
             Button mBtn = sender as Button;
@@ -164,7 +164,7 @@ namespace Victor
                         }
 
                         FileSystem.CopyDirectory(sSrc, sDst, UIOption.AllDialogs);
-                        //CCheckChange.SaveAs("DEVICE", sSrc, sDst); //200716 lks
+                        CCheckFile.SaveAs("DEVICE", sSrc, sDst); 
                         _GrpListUp();
                     }
                 }
@@ -181,8 +181,44 @@ namespace Victor
 
         private void btnClick_Delete(object sender, EventArgs e)
         {
+            Button mBtn = sender as Button;
+            BeginInvoke(new Action(() => mBtn.Enabled = false));
 
+            string sPath = CGvar.PATH_DEVICE;
+            string sText;
+            Form_Msg mMsg;
+
+            try
+            {
+                if (lbxM_Grp.SelectedIndex < 0 || m_sGrp == "")
+                {
+                    mMsg = new Form_Msg("SelectGroupName", "Not selected group", eMsg.Error);
+                    mMsg.ShowDialog();
+
+                    return;
+                }
+                sPath += m_sGrp;
+                if (Directory.Exists(sPath))
+                {
+                    sText = string.Format("{0} selected group Delete!!", sPath);
+                    mMsg = new Form_Msg("SelectGroupName", sText, eMsg.Warning);
+                    if (mMsg.ShowDialog() == DialogResult.OK)
+                    {
+                        FileSystem.DeleteDirectory(sPath, DeleteDirectoryOption.DeleteAllContents);
+                    }
+                }
+                _GrpListUp();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                BeginInvoke(new Action(() => mBtn.Enabled = true));
+            }
         }
+
         private void _GrpListUp()
         {
             int iCnt = 0;
@@ -216,6 +252,193 @@ namespace Victor
                 _RcpListUp();
             }
         }
+
+        private void btnClick_NewFile(object sender, EventArgs e)
+        {
+            Button mBtn = sender as Button;
+            BeginInvoke(new Action(() => mBtn.Enabled = false));
+            Form_Msg mMsg;
+            string sInput;
+            string sPath = CGvar.PATH_DEVICE;
+
+            try
+            {
+                if (lbxM_Grp.SelectedIndex < 0 || m_sGrp == "")
+                {
+                    mMsg = new Form_Msg("SelectGroupName", "Not selected group",eMsg.Error);
+                    mMsg.ShowDialog();
+
+                    return;
+                }
+
+                sPath += m_sGrp + "\\";
+
+                using (form_Textinput mForm = new form_Textinput("New Device Name"))
+                {
+                    if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
+
+                    sInput = sPath + mForm.Val;
+                    if (File.Exists(sPath + mForm.Val + ".dev"))
+                    {
+                        mMsg = new Form_Msg("ExistGroupName", "Group name exist !!!", eMsg.Error);
+                        mMsg.ShowDialog();
+
+                        return;
+                    }
+
+                    if (Directory.Exists(sPath + mForm.Val))
+                    {
+                        sInput = string.Format("{0} {1} File name exist !!!", sPath, mForm.Val);
+                        mMsg = new Form_Msg("ExistGroupName", sInput, eMsg.Error);
+                        mMsg.ShowDialog();
+                        return;
+                    }
+                    sPath += mForm.Val + ".dev";
+                    tRecipe tRcp;
+                    CRecipe.It.InitRecipe(out tRcp);
+                    tRcp.sDeviceName = mForm.Val;
+                    CRecipe.It.Save(sPath, ref tRcp);
+
+                    _RcpListUp();
+
+                    mMsg = new Form_Msg("CreateDeviceFile", "Device file create success", eMsg.Notice);
+                    mMsg.ShowDialog();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                BeginInvoke(new Action(() => mBtn.Enabled = true));
+            }
+        }
+
+        private void btnClick_SaveAsFile(object sender, EventArgs e)
+        {
+            Button mBtn = sender as Button;
+            BeginInvoke(new Action(() => mBtn.Enabled = false));
+            Form_Msg mMsg;
+            string sInput;
+            string sPath = CGvar.PATH_DEVICE;
+
+
+            string sSrc = "";
+            string sDst = "";
+
+            try
+            {
+                if (lbxM_Grp.SelectedIndex < 0 || m_sGrp == "")
+                {
+                    mMsg = new Form_Msg("SelectGroupName", "Not selected group", eMsg.Error);
+                    mMsg.ShowDialog();
+
+                    return;
+                }
+
+                if (lbxM_Dev.SelectedIndex < 0 || m_sDev == "")
+                {
+                    mMsg = new Form_Msg("SelectDeviceName", "Not selected device", eMsg.Error);
+                    mMsg.ShowDialog();
+
+                    return;
+                }
+
+                using (Form_DevSelect mForm = new Form_DevSelect(lbxM_Grp.Items, m_sGrp, m_sDev))
+                {
+                    if (mForm.ShowDialog() == DialogResult.OK)
+                    {
+                        sSrc = CGvar.PATH_DEVICE + m_sGrp + "\\" + m_sDev + ".dev";
+                        sDst = CGvar.PATH_DEVICE + mForm.gVal + "\\" + mForm.dVal + ".dev";
+
+                        // 원본과 동일한 이름인지 판단
+                        if (sSrc == sDst)
+                        {
+                            mMsg = new Form_Msg("SameDeviceName", "Device name same !!!", eMsg.Error);
+                            mMsg.ShowDialog();
+
+                            return;
+                        }
+
+                        // 동일한 이름 존재하는지 판단
+                        if (File.Exists(CGvar.PATH_DEVICE + mForm.gVal + "\\" + mForm.dVal + ".dev"))
+                        {
+                            mMsg = new Form_Msg("ExistDeviceName", "Device name exist !!!", eMsg.Error);
+                            mMsg.ShowDialog();
+
+                            return;
+                        }
+
+                        FileSystem.CopyFile(sSrc, sDst, UIOption.AllDialogs);
+
+                        _RcpListUp();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                BeginInvoke(new Action(() => mBtn.Enabled = true));
+            }
+        }
+
+
+
+
+
+        private void btnClick_DeleteFile(object sender, EventArgs e)
+        {
+            Button mBtn = sender as Button;
+            BeginInvoke(new Action(() => mBtn.Enabled = false));
+
+            string sPath = CGvar.PATH_DEVICE;
+            string sText;
+            Form_Msg mMsg;
+
+            try
+            {
+                if (lbxM_Grp.SelectedIndex < 0 || m_sGrp == "")
+                {
+                    mMsg = new Form_Msg("SelectFileName", "Not selected file", eMsg.Error);
+                    mMsg.ShowDialog();
+
+                    return;
+                }
+                sPath += m_sGrp + "\\";
+                if (lbxM_Dev.SelectedIndex < 0 || m_sDev == "")
+                {
+                    mMsg = new Form_Msg("SelectDeviceName", "Not selected device", eMsg.Error);
+                    mMsg.ShowDialog();
+
+                    return;
+                }
+                sPath += m_sDev + ".dev";
+
+                mMsg = new Form_Msg("Warning", "Delete File " + m_sDev + ".dev. Do you want delete?", eMsg.Warning);
+
+                if (mMsg.ShowDialog() == DialogResult.Cancel)
+                {
+                    return;
+                }
+
+                FileSystem.DeleteFile(sPath);
+
+                _RcpListUp();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                BeginInvoke(new Action(() => mBtn.Enabled = true));
+            }
+        }
+
         private void _RcpListUp()
         {
             string sPath = CGvar.PATH_DEVICE + m_sGrp + "\\";
@@ -233,6 +456,14 @@ namespace Victor
             lbxM_Dev.ClearSelected();
             m_sDev = "";
             btnM_DApp.Enabled = false;
+        }
+
+        private void lbxM_Dev_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbxM_Dev.SelectedIndex >= 0)
+            {
+                m_sDev = lbxM_Dev.SelectedItem.ToString();
+            }
         }
     }
 }

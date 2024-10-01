@@ -1,0 +1,32 @@
+Y0090	Button Lamp - MGZ Belt Off / On
+Y0091	
+Y0092	
+Y0093	
+Y0094	Door Lock - Front, Left, Rear Off / On
+Y0095	
+Y0096	
+Y0097	
+Y0098	
+Y0099	
+Y009A	
+Y009B	
+Y009C	Conveyor - Belt Run Off / On
+Y009D	
+Y009E	
+Y009F	
+Y00A0	Conveyor - Belt Run Off / On
+Y00A1	Conveyor - Belt CW / CCW
+Y00A2	
+Y00A3	
+Y00A4	
+Y00A5	SOL - Pusher Backward / Forward    (A PORT, 4pi)
+Y00A6	
+Y00A7	
+Y00A8	
+Y00A9	
+Y00AA	SOL - MGZ Clamp On Off / On    (A PORT , 4pi)
+Y00AB	SOL - MGZ Clamp Off Off / On    (B PORT , 4pi)
+Y00AC	
+Y00AD	
+Y00AE	
+Y00AF	

@@ -1,0 +1,144 @@
+[20231016-164317 588]	vwEqu_02Mot.cs cmb_Axis_SelectedIndexChanged() Click, Select eAxs : Spindle1_Z Lv:Master
+[20231016-164321 319]	vwEqu_02Mot.cs btnM_H_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164331 129]	vwEqu_02Mot.cs cmb_Axis_SelectedIndexChanged() Click, Select eAxs : Table1_Y Lv:Master
+[20231016-164334 550]	vwEqu_02Mot.cs btnM_H_Click() Click, Axis : Table1_Y Lv:Master
+[20231016-164444 810]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-164445 012]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00101, Add Pulse 0.001  Lv:Master
+[20231016-164445 105]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00178, Add Pulse 0.001  Lv:Master
+[20231016-164449 895]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00289, Add Pulse 0.001  Lv:Master
+[20231016-164450 005]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00381, Add Pulse 0.001  Lv:Master
+[20231016-164450 097]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00472, Add Pulse 0.001  Lv:Master
+[20231016-164450 227]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00575, Add Pulse 0.001  Lv:Master
+[20231016-164450 355]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00675, Add Pulse 0.001  Lv:Master
+[20231016-164450 428]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00747, Add Pulse -0.001  Lv:Master
+[20231016-164453 542]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00649, Add Pulse 0.001  Lv:Master
+[20231016-164453 604]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00664, Add Pulse 0.001  Lv:Master
+[20231016-164453 676]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0077, Add Pulse 0.001  Lv:Master
+[20231016-164453 771]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00867, Add Pulse 0.001  Lv:Master
+[20231016-164542 137]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-164542 137]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164559 722]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-164559 894]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00021, Add Pulse 0.001  Lv:Master
+[20231016-164600 114]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00071, Add Pulse 0.001  Lv:Master
+[20231016-164620 286]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-164620 286]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164633 565]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-164633 692]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00013, Add Pulse 0.001  Lv:Master
+[20231016-164645 317]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-164645 317]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164649 424]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-164649 534]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0001, Add Pulse 0.001  Lv:Master
+[20231016-164657 041]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-164657 042]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164702 474]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-164702 552]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 8E-05, Add Pulse 0.001  Lv:Master
+[20231016-164722 890]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-164722 890]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164726 581]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-164726 646]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 6E-05, Add Pulse 0.001  Lv:Master
+[20231016-164744 782]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-164744 783]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164748 520]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-164748 613]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 8E-05, Add Pulse 0.001  Lv:Master
+[20231016-164750 567]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0011, Add Pulse 0.001  Lv:Master
+[20231016-164750 628]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00115, Add Pulse 0.001  Lv:Master
+[20231016-164752 598]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00209, Add Pulse 0.001  Lv:Master
+[20231016-164752 660]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0022, Add Pulse 0.001  Lv:Master
+[20231016-164754 527]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00309, Add Pulse 0.001  Lv:Master
+[20231016-164754 589]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00321, Add Pulse 0.001  Lv:Master
+[20231016-164756 361]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00409, Add Pulse 0.001  Lv:Master
+[20231016-164756 428]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0042, Add Pulse 0.001  Lv:Master
+[20231016-164815 674]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-164815 674]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164822 349]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-164822 425]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 7E-05, Add Pulse 0.001  Lv:Master
+[20231016-164822 511]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00018, Add Pulse 0.001  Lv:Master
+[20231016-164824 410]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00119, Add Pulse 0.001  Lv:Master
+[20231016-164824 496]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00129, Add Pulse 0.001  Lv:Master
+[20231016-164826 255]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00229, Add Pulse 0.001  Lv:Master
+[20231016-164826 363]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00246, Add Pulse 0.001  Lv:Master
+[20231016-164828 130]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00339, Add Pulse 0.001  Lv:Master
+[20231016-164828 225]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00353, Add Pulse 0.001  Lv:Master
+[20231016-164829 847]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00449, Add Pulse 0.001  Lv:Master
+[20231016-164829 941]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00462, Add Pulse 0.001  Lv:Master
+[20231016-164846 320]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-164846 320]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-164859 943]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.01  Lv:Master
+[20231016-164900 020]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 6E-05, Add Pulse 0.01  Lv:Master
+[20231016-164900 097]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00017, Add Pulse 0.01  Lv:Master
+[20231016-164912 520]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0102, Add Pulse 0.01  Lv:Master
+[20231016-164918 785]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.02019, Add Pulse 0.01  Lv:Master
+[20231016-164918 879]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.02031, Add Pulse 0.01  Lv:Master
+[20231016-164925 114]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.03029, Add Pulse 0.01  Lv:Master
+[20231016-164925 181]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.03034, Add Pulse 0.01  Lv:Master
+[20231016-164931 515]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.04029, Add Pulse 0.01  Lv:Master
+[20231016-164931 592]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.04038, Add Pulse 0.01  Lv:Master
+[20231016-165100 147]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-165100 147]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-165142 504]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-165142 567]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 6E-05, Add Pulse 0.001  Lv:Master
+[20231016-165142 659]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00016, Add Pulse -0.001  Lv:Master
+[20231016-165142 741]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00024, Add Pulse -0.001  Lv:Master
+[20231016-165155 620]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-165155 621]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-165200 269]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-165220 255]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00099, Add Pulse 0.001  Lv:Master
+[20231016-165220 339]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00108, Add Pulse 0.001  Lv:Master
+[20231016-165257 318]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00209, Add Pulse 0.001  Lv:Master
+[20231016-165300 942]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00309, Add Pulse 0.001  Lv:Master
+[20231016-165301 035]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00317, Add Pulse 0.001  Lv:Master
+[20231016-165302 652]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00419, Add Pulse 0.001  Lv:Master
+[20231016-165303 864]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0052, Add Pulse 0.001  Lv:Master
+[20231016-165304 996]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0062, Add Pulse 0.001  Lv:Master
+[20231016-165306 084]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0072, Add Pulse 0.001  Lv:Master
+[20231016-165307 144]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00821, Add Pulse 0.001  Lv:Master
+[20231016-165308 338]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0092, Add Pulse 0.001  Lv:Master
+[20231016-165309 463]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0102, Add Pulse 0.001  Lv:Master
+[20231016-165310 603]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0112, Add Pulse 0.002  Lv:Master
+[20231016-165310 679]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01126, Add Pulse 0.001  Lv:Master
+[20231016-165311 381]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01232, Add Pulse 0.001  Lv:Master
+[20231016-165312 675]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0133, Add Pulse 0.001  Lv:Master
+[20231016-165312 739]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01334, Add Pulse 0.001  Lv:Master
+[20231016-165314 805]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01429, Add Pulse 0.001  Lv:Master
+[20231016-165315 213]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01503, Add Pulse 0.001  Lv:Master
+[20231016-165315 567]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01574, Add Pulse 0.001  Lv:Master
+[20231016-165315 634]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01588, Add Pulse 0.001  Lv:Master
+[20231016-165315 987]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01659, Add Pulse 0.001  Lv:Master
+[20231016-165316 070]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01676, Add Pulse 0.001  Lv:Master
+[20231016-165316 349]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01731, Add Pulse 0.001  Lv:Master
+[20231016-165321 666]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-165321 666]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-165337 646]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0, Add Pulse 0.001  Lv:Master
+[20231016-165337 727]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 7E-05, Add Pulse 0.001  Lv:Master
+[20231016-165338 089]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0008, Add Pulse 0.001  Lv:Master
+[20231016-165338 498]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00163, Add Pulse 0.001  Lv:Master
+[20231016-165338 863]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00237, Add Pulse 0.001  Lv:Master
+[20231016-165338 943]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00251, Add Pulse 0.001  Lv:Master
+[20231016-165339 151]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00295, Add Pulse 0.001  Lv:Master
+[20231016-165339 223]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00309, Add Pulse 0.001  Lv:Master
+[20231016-165339 339]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00329, Add Pulse -0.001  Lv:Master
+[20231016-165345 317]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00229, Add Pulse 0.001  Lv:Master
+[20231016-165345 398]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00237, Add Pulse 0.001  Lv:Master
+[20231016-165345 777]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00313, Add Pulse 0.001  Lv:Master
+[20231016-165346 084]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00375, Add Pulse 0.001  Lv:Master
+[20231016-165346 151]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00388, Add Pulse 0.001  Lv:Master
+[20231016-165346 215]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00402, Add Pulse 0.001  Lv:Master
+[20231016-165346 495]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0046, Add Pulse 0.001  Lv:Master
+[20231016-165346 612]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0048, Add Pulse 0.001  Lv:Master
+[20231016-165346 801]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00521, Add Pulse 0.001  Lv:Master
+[20231016-165349 161]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00619, Add Pulse 0.001  Lv:Master
+[20231016-165349 223]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00624, Add Pulse 0.001  Lv:Master
+[20231016-165349 505]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00683, Add Pulse 0.001  Lv:Master
+[20231016-165349 568]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00693, Add Pulse 0.001  Lv:Master
+[20231016-165349 880]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00758, Add Pulse 0.001  Lv:Master
+[20231016-165350 160]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00813, Add Pulse 0.001  Lv:Master
+[20231016-165350 494]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.0088, Add Pulse 0.001  Lv:Master
+[20231016-165352 401]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.00979, Add Pulse 0.001  Lv:Master
+[20231016-165352 710]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01034, Add Pulse 0.001  Lv:Master
+[20231016-165353 035]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01099, Add Pulse 0.001  Lv:Master
+[20231016-165353 119]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01116, Add Pulse 0.001  Lv:Master
+[20231016-165353 402]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01173, Add Pulse 0.001  Lv:Master
+[20231016-165353 799]	vwEqu_18MPG.cs moveByPulse() Move by pulse : Axis Spindle1_Z ,Current_pos = 0.01252, Add Pulse 0.001  Lv:Master
+[20231016-165359 556]	[Option base setup view        ]  [Lv:Master    ]  Button event Move
+[20231016-165359 557]	vwEqu_18MPG.cs btn_Move_Click() Click, Axis : Spindle1_Z Lv:Master
+[20231016-165418 766]	vwEqu_18MPG.cs btnExit_Click() Click, MPG Exit Lv:Master

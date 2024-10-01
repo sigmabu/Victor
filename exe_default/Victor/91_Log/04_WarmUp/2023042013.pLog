@@ -1,0 +1,50 @@
+[20230420-135127 513]	All_Initial_Status	StartEvent_Init_Measure_Flag()	GrindStep : 000, 010, 010, 010, 000	bStart_IPG2Base_Measure_Use = True,bStart_Drs_Measure_Use = True,bStart_Whl_Measure_Use = True,bStart_Tbl_Measure_Use = True
+[20230420-135127 516]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	■ Servo On = True
+[20230420-135127 517]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 010, 010, 010, 000	Already Servo On = True
+[20230420-135128 517]	All_Initial_Status	Unit_Servo          ()	GrindStep : 001, 999, 010, 010, 000	Finish. Tack time : 00:00:01.0
+[20230420-135356 054]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	■ Home = False
+[20230420-135356 055]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	Already Servo On = True
+[20230420-135505 723]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	■ Home = False
+[20230420-135505 724]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 010, 010, 010, 000	Already Servo On = True
+[20230420-135506 726]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 012, 010, 010, 000	IPG_Down = Up
+[20230420-135508 305]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 013, 010, 010, 000	IPG_Down = Up Delay
+[20230420-135508 307]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 014, 010, 010, 000	Wheel_rpm Stop
+[20230420-135508 808]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 015, 010, 010, 000	Wheel_rpm Stop check
+[20230420-135508 811]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	SpindleZ Home Cmd
+[20230420-135508 814]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 020, 010, 010, 000	DressZ Home Cmd
+[20230420-135537 799]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	SpindleZ Home = True,DressZ Home = True
+[20230420-135537 799]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableR axis Home Cmd
+[20230420-135537 800]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	TableY axis Home Cmd
+[20230420-135537 801]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 021, 010, 010, 000	DressR axis Home Cmd
+[20230420-135548 578]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 022, 010, 010, 000	DressR Home = TrueTableR Home = True,TableY Home = True
+[20230420-135548 683]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	SP Z axis move Ready = 70
+[20230420-135548 685]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 023, 010, 010, 000	Dress Z axis move Ready = 0.1
+[20230420-135603 434]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 024, 010, 010, 000	Check SP Z axis move Ready =  69.99999, Check Dress Z axis move Ready =  0.1
+[20230420-135603 436]	All_Initial_Status	Unit_Home           ()	GrindStep : 002, 999, 010, 010, 000	Unit_Home Finish
+[20230420-135603 437]	All_Initial_Status	_Set_LastWork       ()	GrindStep : 002, 000, 010, 010, 000	_lastWork : empty_val, eStagestep : empty_val
+[20230420-135711 841]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	■ WarmUp .
+[20230420-135714 865]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All MT() OK
+[20230420-135717 704]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	Check_All Water() OK
+[20230420-135721 089]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 010, 010, 010, 000	IPG_Down = Up
+[20230420-135727 007]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 011, 010, 010, 000	[IPG Up Delay Time
+[20230420-135731 231]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 012, 010, 010, 000	Wheel_rpm StopSpindle
+[20230420-135740 832]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 013, 010, 010, 000	Wheel_rpm StopSpindle check
+[20230420-135750 120]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	HW.SP.Check_Spl_R(eWSpl, 0) = 0
+Next Move Position
+Spindle Zaxis Wait Pos = 70
+Dress Zaxis Wait Pos = 0.1
+[20230420-135752 873]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Wheel Z axis move Wait 70
+[20230420-135755 380]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 014, 010, 010, 000	Dress Z axis move Wait 0.1
+[20230420-135804 938]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 015, 010, 010, 000	Check SP Z axiss move Wait 69.99999, Check Dress Z axis move Wait 0.1
+[20230420-135812 145]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	HW.SCol_Whl.nRpm  = 0
+Current Position
+Spindle Zaxis Wait Pos = 69.99999
+Dress Zaxis Wait Pos = 0.1
+Next Move Position
+Table Yaxis Wait Pos = 1
+Table Raxis Wait Pos = 0
+Dress Raxis Wait Pos = 0
+[20230420-135817 652]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 016, 010, 010, 000	Table Y axis move Wait 1
+[20230420-135827 624]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Check Table Y axis move Wait 1
+[20230420-135829 016]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	Warm Up Water & Air On
+[20230420-135830 281]	Manual_Status	Unit_Warm_Up_Doing  ()	GrindStep : 002, 017, 010, 010, 000	wheel servo On

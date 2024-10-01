@@ -1,0 +1,30 @@
+[Probe Left]
+Port=COM12
+Baudrate=38400
+DeviceNo = 0
+Databits=8
+Parity=None
+Stopbits=One
+Rts=True
+LX=0
+LY=436.465
+
+[Probe Right]
+Port=COM13
+Baudrate=38400
+DeviceNo = 3
+Databits=8
+Parity=None
+Stopbits=One
+Rts=False
+RX=0
+RY=430.701
+
+[Probe Inrail]
+Port=COM5
+Baudrate=9600
+Databits=8
+Parity=None
+Stopbits=One
+Rts=False
+

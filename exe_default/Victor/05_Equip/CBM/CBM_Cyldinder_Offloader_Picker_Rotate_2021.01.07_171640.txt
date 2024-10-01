@@ -1,0 +1,13 @@
+#1  [Auto Off -> On]  Time: 2126 ms
+#2  [Auto On -> Off]  Time: 2124 ms
+#3  [Auto Off -> On]  Time: 2121 ms
+#4  [Auto On -> Off]  Time: 2123 ms
+#5  [Auto Off -> On]  Time: 2184 ms
+#6  [Auto On -> Off]  Time: 2123 ms
+#7  [Auto Off -> On]  Time: 2124 ms
+#8  [Auto On -> Off]  Time: 2125 ms
+#9  [Auto Off -> On]  Time: 2123 ms
+#10  [Auto On -> Off]  Time: 2125 ms
+Min : 2121 ms,   Max : 2184 ms,   Average : 2129 ms
+
+

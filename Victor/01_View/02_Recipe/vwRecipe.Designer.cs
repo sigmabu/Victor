@@ -215,6 +215,7 @@
             this.lbxM_Dev.Name = "lbxM_Dev";
             this.lbxM_Dev.Size = new System.Drawing.Size(540, 422);
             this.lbxM_Dev.TabIndex = 454;
+            this.lbxM_Dev.SelectedIndexChanged += new System.EventHandler(this.lbxM_Dev_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -244,6 +245,7 @@
             this.btnM_DDel.TabStop = false;
             this.btnM_DDel.Text = "DELETE";
             this.btnM_DDel.UseVisualStyleBackColor = false;
+            this.btnM_DDel.Click += new System.EventHandler(this.btnClick_DeleteFile);
             // 
             // btnM_DCopy
             // 
@@ -260,6 +262,7 @@
             this.btnM_DCopy.TabStop = false;
             this.btnM_DCopy.Text = "SAVE AS";
             this.btnM_DCopy.UseVisualStyleBackColor = false;
+            this.btnM_DCopy.Click += new System.EventHandler(this.btnClick_SaveAsFile);
             // 
             // btnM_DNew
             // 
@@ -276,6 +279,7 @@
             this.btnM_DNew.TabStop = false;
             this.btnM_DNew.Text = "NEW";
             this.btnM_DNew.UseVisualStyleBackColor = false;
+            this.btnM_DNew.Click += new System.EventHandler(this.btnClick_NewFile);
             // 
             // label2
             // 

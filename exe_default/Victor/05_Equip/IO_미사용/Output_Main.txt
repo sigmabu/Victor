@@ -1,0 +1,144 @@
+Y0000	Main Controller Off / On
+Y0001	
+Y0002	Tower Lamp - Red Off / On
+Y0003	Tower Lamp - Yellow Off / On
+Y0004	Tower Lamp - Green Off / On
+Y0005	Buzzer - K1 Off / On
+Y0006	Buzzer - K2 Off / On
+Y0007	Buzzer - K3 Off / On
+Y0008	Button Lamp - Start Off / On
+Y0009	Button Lamp - Stop Off / On
+Y000A	Button Lamp - Reset Off / On
+Y000B	
+Y000C	Room Lamp Off / On
+Y000D	Mc4 off / on (Z Axis Servo Main Power)
+Y000E	
+Y000F	
+Y0010	
+Y0011	
+Y0012	[INR]SOL - Align Guide Backward / Forward    (A Port, 4 pi) 
+Y0013	
+Y0014	
+Y0015	[INR]SOL - Clamp Off / On    (A PORT, 4 pi)
+Y0016	
+Y0017	
+Y0018	[INR]SOL - Lift Down / Up    (A PORT, 4pi)
+Y0019	[INR]SOL - On Picker Air Blow Off/On
+Y001A	[INR]SOL - On Picker Blow Backward / Forward
+Y001B	[INR]SOL - BCR Air Blow Off / On
+Y001C	[INR]Flow - Cleaner Off / On
+Y001D	
+Y001E	[INR]SOL - Probe Up / Down    (A Port)
+Y001F	[INR]SOL - Probe Air Blow Off / On    (A Port)
+Y0020	[ONP]SOL - Rotate 0' Off / On    (A PORT, 6pi)
+Y0021	[ONP]SOL - Rotate 90' Off / On    (B PORT, 6pi)
+Y0022	[ONP]SOL - Vacuum #1 Off / On    (Left, 10pi)
+Y0023	[ONP]SOL - Vacuum #2 Off / On    (Right, 10pi)
+Y0024	[ONP]SOL - Ejector Off / On    (CENTER, 10pi)
+Y0025	[ONP]SOL - Drain Off / On
+Y0026	
+Y0027	
+Y0028	[GRD]Door Lock - Front, Rear Off / On
+Y0029	
+Y002A	
+Y002B	
+Y002C	[GRD]Flow - Front Water
+Y002D	
+Y002E	[GRL]Flow & SOL - Wheel Cleaner Water Off / On
+Y002F	[GRR]Flow & SOL - Wheel Cleaner Water Off / On
+Y0030	[GRL]SOL - Ejector Off / On
+Y0031	[GRL]SOL - Vacuum Off / On
+Y0032	[GRL]Flow - Water Off / On
+Y0033	[GRL]SOL - Cleaner Up / Down    (A PORT, 4pi)
+Y0034	[GRL]SOL - Cleaner Air Blow Off / On    (A PORT, 6pi)
+Y0035	[GRL]Flow - Cleaner Water Off / On
+Y0036	[GRL]Flow & SOL - Water Knife Off / On
+Y0037	
+Y0038	[GRL]SOL - Probe Up / Down
+Y0039	[GRL]SOL - Probe Air Blow Off / On
+Y003A	[GRL]SOL - Probe Ejector Off / On
+Y003B	
+Y003C	[GRL]Inverter Main Power Off / On
+Y003D	[GRL]SOL - CDA Off / On    (6pi)
+Y003E	[GRL]Flow - Coolant Off / On
+Y003F	[GRL]SOL - Unit #1 Vacuum Off / On (only U)
+Y0040	[GRL]Flow - Spindle Off / On
+Y0041	[GRL]SOL - Unit #2 Vacuum Off / On (only U)
+Y0042	[GRL]Flow & SOL - Bottom Bubble Off / On
+Y0043	[GRL]SOL - Unit #3 Vacuum Off / On (only U)
+Y0044	[GRL]SOL - Unit #4 Vacuum Off / On (only U)
+Y0045	[GRL]Inverter - Quick Stop Off / On    (X16-PIN2)
+Y0046	[GRL]Inverter - Switch Type On Off / On    (X16-PIN1,PIN3)
+Y0047	[GRL]Inverter - Error Reset    (X16-PIN7)
+Y0048	[GRR]SOL - Ejector Off / On
+Y0049	[GRR]SOL - Vacuum Off / On
+Y004A	[GRR]Flow - Water Off / On
+Y004B	[GRR]SOL - Cleaner Up / Down    (A PORT, 4pi)
+Y004C	[GRR]SOL - Cleaner Air Blow Off / On    (A PORT, 6pi)
+Y004D	[GRR]Flow - Cleaner Water Off / On
+Y004E	[GRR]Flow & SOL - Water Knife Off / On
+Y004F	
+Y0050	[GRR]SOL - Probe Up / Down
+Y0051	[GRR]SOL - Probe Air Blow Off / On
+Y0052	[GRR]SOL - Probe Ejector Off / On
+Y0053	
+Y0054	[GRR]Inverter Main Power Off / On
+Y0055	[GRR]SOL - CDA Off / On    (6pi)
+Y0056	[GRR]Flow - Coolant Off / On
+Y0057	[GRR]SOL - Unit #1 Vacuum Off / On (only U)
+Y0058	[GRR]Flow - Spindle Off / On
+Y0059	[GRR]SOL - Unit #2 Vacuum Off / On (only U)
+Y005A	[GRR]Flow & SOL - Bottom Bubble Off / On
+Y005B	[GRR]SOL - Unit #3 Vacuum Off / On (only U)
+Y005C	[GRR]SOL - Unit #4 Vacuum Off / On (only U)
+Y005D	[GRR]Inverter - Quick Stop Off / On    (X16-PIN2)
+Y005E	[GRR]Inverter - Switch Type On Off / On    (X16-PIN1,PIN3)
+Y005F	[GRR]Inverter - Error Reset    (X16-PIN7)
+Y0060	[OFP]SOL - Rotate 0' Off / On    (A PORT, 6pi)
+Y0061	[OFP]SOL - Rotate 90' Off / On    (B PORT, 6pi)
+Y0062	[OFP]SOL - Vacuum #1 Off / On    (Left, 10pi)
+Y0063	[OFP]SOL - Vacuum #2 Off / On    (Right, 10pi)
+Y0064	[OFP]SOL - Ejector Off / On    (CENTER, 10pi)
+Y0065	[OFP]SOL - Drain Off / On
+Y0066	
+Y0067	
+Y0068	[DRY]SOL - Top Air Knif Blow Off / On (only U)
+Y0069	[DRY]SOL - Bottom Air Knif Blow Off / On (only U)
+Y006A	[DRY]SOL - Top Air Blow Off / On
+Y006B	[DRY]SOL - Bottom Air Blow Off / On
+Y006C	[DRY]SOL - Bottom Air Blower Stadby Position
+Y006D	[DRY]SOL - Bottom Air Blower Target Position
+Y006E	[DRY]SOL - Out Rail Air Blow Off / On    (4pi)
+Y006F	[DRY]Flow - Cleaner Off / On
+Y0070	[LEFT PUMP]Pump - Run Off / On
+Y0071	
+Y0072	
+Y0073	
+Y0074	
+Y0075	
+Y0076	[RIGHT PUMP]Pump - Run Off / On
+Y0077	
+Y0078	
+Y0079	
+Y007A	
+Y007B	
+Y007C	[LEFT IONIZER]Ionizer - Power #1 Off / On
+Y007D	[RIGHT IONIZER]Ionizer - Power #2 Off / On
+Y007E	[TABLE IONIZER]Ionizer - Power #3 Off / On(Talble)
+Y007F	[DRY IONIZER]Ionizer - Power #4 Off / On(Out Rail)
+Y0080	TENKEY - DATA 1 - 1
+Y0081	TENKEY - DATA 1 - 2
+Y0082	TENKEY - DATA 1 - 4
+Y0083	TENKEY - DATA 1 - 8
+Y0084	TENKEY - DATA 10 - 1
+Y0085	TENKEY - DATA 10 - 2
+Y0086	TENKEY - DATA 10 - 4
+Y0087	TENKEY - DATA 10 - 8
+Y0088	TENKEY - DATA 100 - 1
+Y0089	
+Y008A	
+Y008B	
+Y008C	
+Y008D	
+Y008E	
+Y008F	

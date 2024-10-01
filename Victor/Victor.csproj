@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>게시\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,16 +25,15 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\exe_default\Victor\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -84,6 +84,12 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="01_View\04_Option\vwOption.Designer.cs" />
+    <Compile Include="02_Dialogue\Form_DevSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_Dialogue\Form_DevSelect.Designer.cs">
+      <DependentUpon>Form_DevSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="02_Dialogue\Form_Msg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,14 @@
     </Compile>
     <Compile Include="11_Global\Enum.cs" />
     <Compile Include="11_Global\GV.cs" />
+    <Compile Include="11_Global\Struct\Struct_Device.cs" />
+    <Compile Include="12_File\CCheckFile.cs" />
+    <Compile Include="12_File\CData.cs" />
+    <Compile Include="12_File\CIni.cs" />
+    <Compile Include="12_File\CLast.cs" />
+    <Compile Include="12_File\CRecipe.cs" />
+    <Compile Include="12_File\IniFile.cs" />
+    <Compile Include="12_File\SingleTone.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +130,9 @@
       <DependentUpon>vwMaint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\04_Option\vwOption.resx" />
+    <EmbeddedResource Include="02_Dialogue\Form_DevSelect.resx">
+      <DependentUpon>Form_DevSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="02_Dialogue\Form_Msg.resx">
       <DependentUpon>Form_Msg.cs</DependentUpon>
     </EmbeddedResource>

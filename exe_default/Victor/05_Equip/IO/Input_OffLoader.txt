@@ -1,0 +1,32 @@
+X00B0	[A] Button - MGZ Belt Top Run
+X00B1	[A] Button - MGZ Belt Bottom Run
+X00B2	[B] EMG - Front
+X00B3	[B] EMG - Rear
+X00B4	[A] Sensor - Door Front
+X00B5	[A] Sensor - Door Right
+X00B6	[A] Sensor - Door Rear
+X00B7	[B] Sensor - Light Curtain
+X00B8	[B] Sensor - MGZ Detect
+X00B9	[B] Sensor - MGZ Detect Full
+X00BA	
+X00BB	[B] Sensor - MGZ Detect
+X00BC	
+X00BD	
+X00BE	[B] Sensor - MGZ Detect
+X00BF	[B] Sensor - MGZ Detect Full
+X00C0	[A] Sensor - MGZ Detect #1
+X00C1	[A] Sensor - MGZ Detect #2
+X00C2	[A] Cylinder - Up
+X00C3	[A] Cylinder - Down
+X00C4	[A] Cylinder - Clamp On
+X00C5	[A] Cylinder - Clamp Off
+X00C6	
+X00C7	
+X00C8	[A] Sensor - MGZ Detect #1
+X00C9	[A] Sensor - MGZ Detect #2
+X00CA	[A] Cylinder - Up
+X00CB	[A] Cylinder - Down
+X00CC	[A] Cylinder - Clamp On
+X00CD	[A] Cylinder - Clamp Off
+X00CE	
+X00CF	

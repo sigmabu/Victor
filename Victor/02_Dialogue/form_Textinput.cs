@@ -13,10 +13,11 @@ namespace Victor._02_Dialogue
     public partial class form_Textinput : Form
     {
         public string Val { get; private set; }
-        public form_Textinput(string sTitle)
+        public form_Textinput(string sTitle , string sData = "")
         {
             InitializeComponent();
             label_Title.Text = sTitle;
+            textBox_Input.Text = sData;
         }
 
         private void btn_OK_Click(object sender, EventArgs e)

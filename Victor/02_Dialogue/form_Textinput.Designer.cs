@@ -41,9 +41,9 @@
             this.label_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.label_Title.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label_Title.ForeColor = System.Drawing.Color.White;
-            this.label_Title.Location = new System.Drawing.Point(43, 9);
+            this.label_Title.Location = new System.Drawing.Point(47, 21);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(387, 40);
+            this.label_Title.Size = new System.Drawing.Size(387, 26);
             this.label_Title.TabIndex = 0;
             this.label_Title.Text = "label_Title";
             this.label_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -51,7 +51,7 @@
             // textBox_Input
             // 
             this.textBox_Input.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_Input.Location = new System.Drawing.Point(46, 67);
+            this.textBox_Input.Location = new System.Drawing.Point(50, 72);
             this.textBox_Input.Name = "textBox_Input";
             this.textBox_Input.Size = new System.Drawing.Size(384, 26);
             this.textBox_Input.TabIndex = 1;

@@ -26,9 +26,21 @@ namespace Victor._02_Dialogue
             label_Title.Text = sTitle;
             label_Data.Text = sData;
 
-            if (emagtype == eMsg.Warning) label_Title.BackColor = Color.Yellow;
-            else if (emagtype == eMsg.Error) label_Title.BackColor = Color.Red;
-            else /*if (emagtype == eMsg.Notice) */label_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            if (emagtype == eMsg.Warning)
+            {
+                label_Title.BackColor = Color.Yellow;
+                label_Title.ForeColor = Color.DarkRed;
+            }
+            else if (emagtype == eMsg.Error)
+            {
+                label_Title.BackColor = Color.DarkRed;
+                label_Title.ForeColor = Color.White;
+            }
+            else /*if (emagtype == eMsg.Notice) */
+            {
+                label_Title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+                label_Title.ForeColor = Color.White;
+            }
 
             if (nCancle == BtnCancle_Type.None)
             {
@@ -39,11 +51,13 @@ namespace Victor._02_Dialogue
 
         private void btn_OK_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.OK;
             Close();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
     }
