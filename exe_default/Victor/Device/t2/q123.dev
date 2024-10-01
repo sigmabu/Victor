@@ -1,0 +1,8 @@
+[Information]
+Name=tr2
+
+[Common Data]
+Bool Value=False
+Integer Value=0
+Double Value=0
+

@@ -344,36 +344,36 @@ namespace Victor
 
                     return;
                 }
+                sSrc = CGvar.PATH_DEVICE + m_sGrp + "\\" + m_sDev + ".dev";
 
-                using (Form_DevSelect mForm = new Form_DevSelect(lbxM_Grp.Items, m_sGrp, m_sDev))
+                using (form_Textinput mForm = new form_Textinput(m_sDev + ".dev file SaveAs Device."))
                 {
-                    if (mForm.ShowDialog() == DialogResult.OK)
+                    if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
+
+
+                    sDst = CGvar.PATH_DEVICE + m_sGrp + "\\" + mForm.Val + ".dev";
+
+                    // 원본과 동일한 이름인지 판단
+                    if (sSrc == sDst)
                     {
-                        sSrc = CGvar.PATH_DEVICE + m_sGrp + "\\" + m_sDev + ".dev";
-                        sDst = CGvar.PATH_DEVICE + mForm.gVal + "\\" + mForm.dVal + ".dev";
+                        mMsg = new Form_Msg("SameDeviceName", "Device name same !!!", eMsg.Error);
+                        mMsg.ShowDialog();
 
-                        // 원본과 동일한 이름인지 판단
-                        if (sSrc == sDst)
-                        {
-                            mMsg = new Form_Msg("SameDeviceName", "Device name same !!!", eMsg.Error);
-                            mMsg.ShowDialog();
-
-                            return;
-                        }
-
-                        // 동일한 이름 존재하는지 판단
-                        if (File.Exists(CGvar.PATH_DEVICE + mForm.gVal + "\\" + mForm.dVal + ".dev"))
-                        {
-                            mMsg = new Form_Msg("ExistDeviceName", "Device name exist !!!", eMsg.Error);
-                            mMsg.ShowDialog();
-
-                            return;
-                        }
-
-                        FileSystem.CopyFile(sSrc, sDst, UIOption.AllDialogs);
-
-                        _RcpListUp();
+                        return;
                     }
+
+                    // 동일한 이름 존재하는지 판단
+                    if (File.Exists(sDst))
+                    {
+                        mMsg = new Form_Msg("ExistDeviceName", "Device name exist !!!", eMsg.Error);
+                        mMsg.ShowDialog();
+
+                        return;
+                    }
+
+                    FileSystem.CopyFile(sSrc, sDst, UIOption.AllDialogs);
+
+                    _RcpListUp();
                 }
             }
             catch (Exception ex)
@@ -385,10 +385,6 @@ namespace Victor
                 BeginInvoke(new Action(() => mBtn.Enabled = true));
             }
         }
-
-
-
-
 
         private void btnClick_DeleteFile(object sender, EventArgs e)
         {

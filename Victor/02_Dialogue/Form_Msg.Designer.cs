@@ -102,8 +102,10 @@
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.label_Data);
             this.Controls.Add(this.label_Title);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Msg";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Msg";
             this.ResumeLayout(false);
