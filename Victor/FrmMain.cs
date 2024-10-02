@@ -17,7 +17,7 @@ namespace Victor
         private bool isClickedLevelButton = false;
 
         private vwMain      m_vwMain;
-        private vwRecipe    m_vwRecipe;
+        private vwRecipeList    m_vwRecipe;
         private vwMaint     m_vwMaint;
 
         public FrmMain()
@@ -32,7 +32,7 @@ namespace Victor
             m_iPage = 0;
 
             m_vwMain = new vwMain();
-            m_vwRecipe  = new vwRecipe();
+            m_vwRecipe  = new vwRecipeList();
             m_vwMaint   = new vwMaint();
 
             rdb_Main.Checked = true;

@@ -14,19 +14,20 @@ using Victor;
 
 namespace Victor
 {
-    public partial class vwRecipe : UserControl
+    public partial class vwRecipeList : UserControl
     {
         public delegate void ListEvt(bool bVal);
         public event ListEvt GoParm;
         private string m_sGrp;
         private string m_sDev;
-
+        private vwRecipMain m_vwRecipeMain;
 
         private int m_iPage = 0;
 
-        public vwRecipe()
+        public vwRecipeList()
         {
             InitializeComponent();
+            m_vwRecipeMain = new vwRecipMain("Recipe : Loader");
         }
 
         public void Open()
@@ -49,7 +50,7 @@ namespace Victor
             switch (m_iPage)
             {
                 case 11:
-                    
+
                     break;
                 case 21:
                     //m_vw02Prm.Open();
@@ -82,7 +83,7 @@ namespace Victor
 
         private void hideMenu()
         {
-            
+
         }
 
 
@@ -108,8 +109,8 @@ namespace Victor
                     sInput = sPath + mForm.Val;
                     if (Directory.Exists(sPath + mForm.Val))
                     {
-                        sInput = string.Format("{0} {1} Group name exist !!!", sPath , mForm.Val);
-                        Form_Msg mMsg = new Form_Msg("ExistGroupName", sInput,eMsg.Error);
+                        sInput = string.Format("{0} {1} Group name exist !!!", sPath, mForm.Val);
+                        Form_Msg mMsg = new Form_Msg("ExistGroupName", sInput, eMsg.Error);
                         mMsg.ShowDialog();
                         return;
                     }
@@ -141,7 +142,7 @@ namespace Victor
                 // 그룹 선택 여부 확인
                 if (lbxM_Grp.SelectedIndex < 0 || m_sGrp == "")
                 {
-                    Form_Msg mMsg = new Form_Msg("SelectGroupName", "Not selected group",eMsg.Error);
+                    Form_Msg mMsg = new Form_Msg("SelectGroupName", "Not selected group", eMsg.Error);
                     mMsg.ShowDialog();
 
                     return;
@@ -156,14 +157,14 @@ namespace Victor
 
                         if (Directory.Exists(CGvar.PATH_DEVICE + mForm.Val))
                         {
-                            Form_Msg mMsg = new Form_Msg("ExistGroupName", "Group name exist !!!",eMsg.Error);
+                            Form_Msg mMsg = new Form_Msg("ExistGroupName", "Group name exist !!!", eMsg.Error);
                             mMsg.ShowDialog();
 
                             return;
                         }
 
                         FileSystem.CopyDirectory(sSrc, sDst, UIOption.AllDialogs);
-                        CCheckFile.SaveAs("DEVICE", sSrc, sDst); 
+                        CCheckFile.SaveAs("DEVICE", sSrc, sDst);
                         _GrpListUp();
                     }
                 }
@@ -264,7 +265,7 @@ namespace Victor
             {
                 if (lbxM_Grp.SelectedIndex < 0 || m_sGrp == "")
                 {
-                    mMsg = new Form_Msg("SelectGroupName", "Not selected group",eMsg.Error);
+                    mMsg = new Form_Msg("SelectGroupName", "Not selected group", eMsg.Error);
                     mMsg.ShowDialog();
 
                     return;
@@ -431,7 +432,7 @@ namespace Victor
             finally
             {
                 BeginInvoke(new Action(() => mBtn.Enabled = true));
-            } 
+            }
         }
 
         private void _RcpListUp()
@@ -458,6 +459,75 @@ namespace Victor
             if (lbxM_Dev.SelectedIndex >= 0)
             {
                 m_sDev = lbxM_Dev.SelectedItem.ToString();
+            }
+            btnM_DApp.Enabled = true;
+            //_RcpListUp();
+        }
+
+        private void btnM_DApp_Click(object sender, EventArgs e)
+        {
+            Button mBtn = sender as Button;
+            int iTag = int.Parse(mBtn.Tag.ToString());
+
+            BeginInvoke(new Action(() => mBtn.Enabled = false));
+
+            m_iPage = iTag;
+
+            string sPath = CGvar.PATH_DEVICE + m_sGrp + "\\";
+            string sRecipe = m_sGrp + "\\";
+
+            string sHead = "";
+            string sMsg = "";
+            int nRet = 0;
+            Form_Msg mMsg;
+
+            try
+            {
+                if (lbxM_Dev.SelectedIndex < 0 || m_sDev == "")
+                {
+                    mMsg = new Form_Msg("SelectDeviceName", "Not selected device", eMsg.Error);
+                    mMsg.ShowDialog();
+
+                    return;
+                }
+                sPath = sPath + m_sDev + ".dev";
+
+                CData.RecipeCur = sPath;
+                CRecipe.It.Load(sPath, true);
+
+
+                CRecipe.It.m_sGrp = this.m_sGrp;
+                CData.RecipeGr = CRecipe.It.m_sGrp;
+
+                Call_ViewRecipeItem();
+            }
+
+            catch (Exception ex)
+            {
+
+            }
+            finally { BeginInvoke(new Action(() => mBtn.Enabled = true)); }
+            //GoParm(true);
+        }
+
+        private void Call_ViewRecipeItem()
+        {
+            pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
+
+            switch (m_iPage)    // 신규 뷰 Open 및 표시
+            {
+                case 1:
+                    //pnl_Base.Controls.Add(m_vwMain);
+                    //m_vwMain.Open();
+                    break;
+                case 2:
+                    pnl_Menu.Controls.Add(m_vwRecipeMain);
+                    m_vwRecipeMain.Open_PageView();
+                    break;
+                case 3:
+                    //pnl_Base.Controls.Add(m_vwMaint);
+                    //m_vwMaint.Open();
+                    break;
             }
         }
     }
