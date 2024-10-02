@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Victor._02_Dialogue
+namespace Victor
 {
     public partial class Form_Msg : Form
     {
@@ -19,6 +19,8 @@ namespace Victor._02_Dialogue
             btnNO,
             btnCANCEL
         }
+
+        private Color boardColor = Color.LimeGreen;
 
         public Form_Msg(string sTitle, string sData, eMsg emagtype, BtnCancle_Type nCancle = 0)
         {
@@ -47,7 +49,11 @@ namespace Victor._02_Dialogue
                 btn_Cancel.Visible = false;
             }
         }
-        
+
+        private void Form_Msg_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, ClientRectangle, boardColor, ButtonBorderStyle.Solid);
+        }
 
         private void btn_OK_Click(object sender, EventArgs e)
         {

@@ -96,11 +96,11 @@
     <Compile Include="02_Dialogue\Form_Msg.Designer.cs">
       <DependentUpon>Form_Msg.cs</DependentUpon>
     </Compile>
-    <Compile Include="02_Dialogue\form_Textinput.cs">
+    <Compile Include="02_Dialogue\Form_Textinput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="02_Dialogue\form_Textinput.Designer.cs">
-      <DependentUpon>form_Textinput.cs</DependentUpon>
+    <Compile Include="02_Dialogue\Form_Textinput.Designer.cs">
+      <DependentUpon>Form_Textinput.cs</DependentUpon>
     </Compile>
     <Compile Include="11_Global\Enum.cs" />
     <Compile Include="11_Global\GV.cs" />
@@ -136,8 +136,8 @@
     <EmbeddedResource Include="02_Dialogue\Form_Msg.resx">
       <DependentUpon>Form_Msg.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="02_Dialogue\form_Textinput.resx">
-      <DependentUpon>form_Textinput.cs</DependentUpon>
+    <EmbeddedResource Include="02_Dialogue\Form_Textinput.resx">
+      <DependentUpon>Form_Textinput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

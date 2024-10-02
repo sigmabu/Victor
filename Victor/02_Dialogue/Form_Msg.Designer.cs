@@ -1,4 +1,4 @@
-﻿namespace Victor._02_Dialogue
+﻿namespace Victor
 {
     partial class Form_Msg
     {
@@ -108,6 +108,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_Msg";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form_Msg_Paint);
             this.ResumeLayout(false);
 
         }

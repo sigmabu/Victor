@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
-namespace Victor._02_Dialogue
+namespace Victor
 {
     public partial class Form_DevSelect : Form
     {

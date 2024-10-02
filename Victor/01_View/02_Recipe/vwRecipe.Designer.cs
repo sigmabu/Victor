@@ -81,7 +81,7 @@
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button1.Location = new System.Drawing.Point(-1, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 50);
+            this.button1.Size = new System.Drawing.Size(86, 27);
             this.button1.TabIndex = 1;
             this.button1.Tag = "1";
             this.button1.Text = "Recipe #1";
@@ -94,9 +94,9 @@
             this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Base.Controls.Add(this.button2);
             this.pnl_Base.Controls.Add(this.button1);
-            this.pnl_Base.Location = new System.Drawing.Point(269, 15);
+            this.pnl_Base.Location = new System.Drawing.Point(983, 32);
             this.pnl_Base.Name = "pnl_Base";
-            this.pnl_Base.Size = new System.Drawing.Size(237, 119);
+            this.pnl_Base.Size = new System.Drawing.Size(207, 45);
             this.pnl_Base.TabIndex = 453;
             this.pnl_Base.Visible = false;
             // 
@@ -108,9 +108,9 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(-1, 59);
+            this.button2.Location = new System.Drawing.Point(91, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 50);
+            this.button2.Size = new System.Drawing.Size(99, 25);
             this.button2.TabIndex = 2;
             this.button2.Tag = "2";
             this.button2.Text = "Recipe # 2";
@@ -119,6 +119,7 @@
             // pnl_Menu
             // 
             this.pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.pnl_Menu.Controls.Add(this.pnl_Base);
             this.pnl_Menu.Controls.Add(this.panel1);
             this.pnl_Menu.Controls.Add(this.pnlM_Dev);
             this.pnl_Menu.Controls.Add(this.pnlM_Grp);
@@ -192,7 +193,6 @@
             // 
             this.pnlM_Dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pnlM_Dev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlM_Dev.Controls.Add(this.pnl_Base);
             this.pnlM_Dev.Controls.Add(this.lbxM_Dev);
             this.pnlM_Dev.Controls.Add(this.label3);
             this.pnlM_Dev.Controls.Add(this.btnM_DDel);

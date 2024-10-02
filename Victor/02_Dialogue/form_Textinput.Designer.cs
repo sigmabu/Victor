@@ -1,6 +1,6 @@
-﻿namespace Victor._02_Dialogue
+﻿namespace Victor
 {
-    partial class form_Textinput
+    partial class Form_Textinput
     {
         /// <summary>
         /// Required designer variable.
@@ -91,20 +91,24 @@
             this.btn_Cancel.UseVisualStyleBackColor = false;
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
-            // form_Textinput
+            // Form_Textinput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(480, 150);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.textBox_Input);
             this.Controls.Add(this.label_Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "form_Textinput";
+            this.Name = "Form_Textinput";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "form_Textinput";
+            this.Text = "Form_Textinput";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form_Textinput_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

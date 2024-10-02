@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Microsoft.VisualBasic.FileIO;
 using Victor;
-using Victor._02_Dialogue;
 
 namespace Victor
 {
@@ -102,7 +101,7 @@ namespace Victor
 
             try
             {
-                using (form_Textinput mForm = new form_Textinput("New Group Name"))
+                using (Form_Textinput mForm = new Form_Textinput("New Group Name"))
                 {
                     if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
 
@@ -148,7 +147,7 @@ namespace Victor
                     return;
                 }
 
-                using (form_Textinput mForm = new form_Textinput("Save As Group Name"))
+                using (Form_Textinput mForm = new Form_Textinput("Save As Group Name"))
                 {
                     if (mForm.ShowDialog() == DialogResult.OK)
                     {
@@ -273,7 +272,7 @@ namespace Victor
 
                 sPath += m_sGrp + "\\";
 
-                using (form_Textinput mForm = new form_Textinput("New Device Name"))
+                using (Form_Textinput mForm = new Form_Textinput("New Device Name"))
                 {
                     if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
 
@@ -346,7 +345,7 @@ namespace Victor
                 }
                 sSrc = CGvar.PATH_DEVICE + m_sGrp + "\\" + m_sDev + ".dev";
 
-                using (form_Textinput mForm = new form_Textinput(m_sDev + ".dev file SaveAs Device."))
+                using (Form_Textinput mForm = new Form_Textinput(m_sDev + ".dev file SaveAs Device."))
                 {
                     if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
 
@@ -432,7 +431,7 @@ namespace Victor
             finally
             {
                 BeginInvoke(new Action(() => mBtn.Enabled = true));
-            }
+            } 
         }
 
         private void _RcpListUp()

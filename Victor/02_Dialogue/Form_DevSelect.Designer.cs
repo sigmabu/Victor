@@ -1,4 +1,4 @@
-﻿namespace Victor._02_Dialogue
+﻿namespace Victor
 {
     partial class Form_DevSelect
     {
