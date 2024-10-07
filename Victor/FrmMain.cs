@@ -12,6 +12,7 @@ using System.Xml.Linq;
 namespace Victor
 {
     public delegate void MoveToMenuEventHandler();
+
     public partial class FrmMain : Form
     {
         private int m_iPage;
@@ -66,10 +67,10 @@ namespace Victor
                 case 11:
                     m_vwMain.Close();
                     break;
-                case 22:
+                case 21:
                     m_vwRecipeList.Close();
                     break;
-                case 21:
+                case 22:
                     m_vwRecipeItem.Close();
                     break;
                 case 31:
@@ -97,11 +98,11 @@ namespace Victor
                     pnl_Base.Controls.Add(m_vwMain);
                     m_vwMain.Open();
                     break;
-                case 22:
+                case 21:
                     pnl_Base.Controls.Add(m_vwRecipeList);
                     m_vwRecipeList.Open();
                     break;
-                case 21:
+                case 22:
                     pnl_Base.Controls.Add(m_vwRecipeItem);
                     m_vwRecipeItem.Open();
                     break;

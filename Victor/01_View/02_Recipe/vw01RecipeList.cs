@@ -60,11 +60,9 @@ namespace Victor
             switch (m_iPage)
             {
                 case 11:
-                    pnl_Menu.BringToFront();
-                    pnl_Menu.Visible = true;
-                    //this.Open();
-                    //pnl_Base.Controls.Add(this);
-
+                    //pnl_Menu.BringToFront();
+                    //pnl_Menu.Visible = true;
+                    
                     break;
                 case 21:
                     //m_vw02Prm.Open();
@@ -522,7 +520,7 @@ namespace Victor
 
         private void Call_ViewRecipeItem()
         {
-            //pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
+            pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
 
             switch (m_iPage)    // 신규 뷰 Open 및 표시
             {
@@ -533,12 +531,9 @@ namespace Victor
 
                     break;
                 case 2:
-                    //ToDo : 1007
-                    FrmMain frmMain = new FrmMain();
-                    frmMain.Call_PnlBase_Change(22);
+                    m_vw02Item.Open();
+                    pnl_Menu.Controls.Add(m_vw02Item);
 
-                    //pnl_Menu.Controls.Add(m_vwRecipeItem);
-                    //m_vwRecipeItem.Open();
                     break;
                 case 3:
                     //pnl_Base.Controls.Add(m_vwMaint);
