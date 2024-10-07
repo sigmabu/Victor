@@ -32,7 +32,7 @@
             this.rdb_Unloader = new System.Windows.Forms.RadioButton();
             this.rdb_Loader = new System.Windows.Forms.RadioButton();
             this.rdb_Bank00 = new System.Windows.Forms.RadioButton();
-            this.lbx_List = new System.Windows.Forms.ListBox();
+            this.pnl_Base = new System.Windows.Forms.ListBox();
             this.radio_Save = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
@@ -115,17 +115,17 @@
             this.rdb_Bank00.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdb_Bank00.UseVisualStyleBackColor = false;
             // 
-            // lbx_List
+            // pnl_Base
             // 
-            this.lbx_List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.lbx_List.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbx_List.ForeColor = System.Drawing.Color.White;
-            this.lbx_List.FormattingEnabled = true;
-            this.lbx_List.ItemHeight = 12;
-            this.lbx_List.Location = new System.Drawing.Point(4, 35);
-            this.lbx_List.Name = "lbx_List";
-            this.lbx_List.Size = new System.Drawing.Size(1144, 770);
-            this.lbx_List.TabIndex = 457;
+            this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Base.ForeColor = System.Drawing.Color.White;
+            this.pnl_Base.FormattingEnabled = true;
+            this.pnl_Base.ItemHeight = 12;
+            this.pnl_Base.Location = new System.Drawing.Point(4, 35);
+            this.pnl_Base.Name = "pnl_Base";
+            this.pnl_Base.Size = new System.Drawing.Size(1144, 770);
+            this.pnl_Base.TabIndex = 457;
             // 
             // radio_Save
             // 
@@ -149,20 +149,20 @@
             this.radio_Save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radio_Save.UseVisualStyleBackColor = false;
             // 
-            // vwRecipMain
+            // vw02RecipeItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1280, 804);
-            this.Controls.Add(this.lbx_List);
+            this.Controls.Add(this.pnl_Base);
             this.Controls.Add(this.rdb_Unloader);
             this.Controls.Add(this.radio_Save);
             this.Controls.Add(this.rdb_Loader);
             this.Controls.Add(this.rdb_Bank00);
             this.Controls.Add(this.lbl_Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "vwRecipMain";
+            this.Name = "vw02RecipeItem";
             this.Text = "vwRecipMain";
             this.ResumeLayout(false);
 
@@ -174,7 +174,7 @@
         private System.Windows.Forms.RadioButton rdb_Unloader;
         private System.Windows.Forms.RadioButton rdb_Loader;
         private System.Windows.Forms.RadioButton rdb_Bank00;
-        private System.Windows.Forms.ListBox lbx_List;
+        private System.Windows.Forms.ListBox pnl_Base;
         private System.Windows.Forms.RadioButton radio_Save;
     }
 }

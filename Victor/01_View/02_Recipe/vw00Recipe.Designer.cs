@@ -28,38 +28,44 @@
         /// 디자이너 지원에 필요한 메서드입니다. 
         /// 이 메서드의 내용을 코드 편집기로 수정하지 마세요.
         /// </summary>
-        //private void InitializeComponent()
-        //{
-        //    System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vw00Recipe));
-        //    this.pnl_Base = new System.Windows.Forms.Panel();
-        //    this.label46 = new System.Windows.Forms.Label();
-        //    this.SuspendLayout();
-        //    // 
-        //    // pnl_Base
-        //    // 
-        //    this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-        //    resources.ApplyResources(this.pnl_Base, "pnl_Base");
-        //    this.pnl_Base.Name = "pnl_Base";
-        //    // 
-        //    // label46
-        //    // 
-        //    this.label46.BackColor = System.Drawing.SystemColors.HotTrack;
-        //    resources.ApplyResources(this.label46, "label46");
-        //    this.label46.ForeColor = System.Drawing.SystemColors.Control;
-        //    this.label46.Name = "label46";
-        //    // 
-        //    // vw00Recipe
-        //    // 
-        //    this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-        //    this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-        //    this.Controls.Add(this.label46);
-        //    this.Controls.Add(this.pnl_Base);
-        //    this.DoubleBuffered = true;
-        //    resources.ApplyResources(this, "$this");
-        //    this.Name = "vw00Recipe";
-        //    this.ResumeLayout(false);
+        private void InitializeComponent()
+        {
+            this.pnl_Base = new System.Windows.Forms.Panel();
+            this.label46 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // pnl_Base
+            // 
+            this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.pnl_Base.Location = new System.Drawing.Point(0, 30);
+            this.pnl_Base.Name = "pnl_Base";
+            this.pnl_Base.Size = new System.Drawing.Size(1280, 804);
+            this.pnl_Base.TabIndex = 1;
+            // 
+            // label46
+            // 
+            this.label46.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label46.ForeColor = System.Drawing.SystemColors.Control;
+            this.label46.Location = new System.Drawing.Point(0, 0);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(1280, 30);
+            this.label46.TabIndex = 0;
+            this.label46.Text = "Recipe";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // vw00Recipe
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.pnl_Base);
+            this.DoubleBuffered = true;
+            this.Name = "vw00Recipe";
+            this.Size = new System.Drawing.Size(1280, 804);
+            this.ResumeLayout(false);
 
-        //}
+        }
 
         #endregion
         private System.Windows.Forms.Panel pnl_Base;

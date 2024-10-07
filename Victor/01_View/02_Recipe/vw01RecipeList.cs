@@ -20,23 +20,23 @@ namespace Victor
         public event ListEvt GoParm;
         private string m_sGrp;
         private string m_sDev;
-        private vw02RecipeItem m_vwRecipeMain;
+        private vw02RecipeItem m_vwRecipeItem;
 
         private int m_iPage = 0;
 
         public vw01RecipeList()
         {
             InitializeComponent();
-            m_vwRecipeMain = new vw02RecipeItem("Recipe : Loader");
+            m_vwRecipeItem = new vw02RecipeItem("Recipe : Loader");
         }
 
         public void Open()
         {
-            m_iPage = 1;
+            m_iPage = 11;
             _GrpListUp();
             //pnl_Menu.BringToFront();
 
-            //vwAdd();
+            vwAdd();
             //hideMenu();
         }
 
@@ -521,8 +521,8 @@ namespace Victor
                     //m_vwMain.Open();
                     break;
                 case 2:
-                    pnl_Menu.Controls.Add(m_vwRecipeMain);
-                    m_vwRecipeMain.Open_PageView();
+                    pnl_Menu.Controls.Add(m_vwRecipeItem);
+                    m_vwRecipeItem.Open_PageView();
                     break;
                 case 3:
                     //pnl_Base.Controls.Add(m_vwMaint);

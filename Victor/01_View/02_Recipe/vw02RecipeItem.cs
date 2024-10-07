@@ -36,10 +36,51 @@ namespace Victor
         }
         public void Open_PageView()
         {
-            nPage = 0;
+            nPage = 1;
+            _VwAdd();
         }
         public void Close_PageView()
         {
         }
+
+        private void _VwAdd()
+        {
+            //switch (nPage)
+            //{
+            //    case 1:
+            //        m_vw1Wafer.Open();
+            //        pnl_Base.Controls.Add(m_vw1Wafer);
+            //        break;
+            //    case 2:
+            //        {
+            //            m_vw2Step.Open();
+            //            pnl_Base.Controls.Add(m_vw2Step);
+
+            //        }
+            //        break;
+
+            //}
+        }
+
+        private void _VwClr()
+        {
+            //switch (nPage)
+            //{
+            //    case 1:
+            //        {
+            //            m_vw1Wafer.Close();
+            //        }
+            //        break;
+            //    case 2:
+            //        {
+            //            m_vw2Step.Close();
+            //        }
+            //        break;
+                
+            //}
+
+            pnl_Base.Controls.Clear();
+        }
+
     }
 }

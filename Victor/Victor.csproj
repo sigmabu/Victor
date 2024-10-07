@@ -71,7 +71,9 @@
     <Compile Include="01_View\02_Recipe\vw00Recipe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="01_View\02_Recipe\vw00Recipe.Designer.cs" />
+    <Compile Include="01_View\02_Recipe\vw00Recipe.Designer.cs">
+      <DependentUpon>vw00Recipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="01_View\02_Recipe\vw01RecipeList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -132,6 +134,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="01_View\01 Main\vwMain.resx">
       <DependentUpon>vwMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\02_Recipe\vw00Recipe.resx">
+      <DependentUpon>vw00Recipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\02_Recipe\vw01RecipeList.resx">
       <DependentUpon>vw01RecipeList.cs</DependentUpon>
