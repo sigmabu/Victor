@@ -14,20 +14,20 @@ using Victor;
 
 namespace Victor
 {
-    public partial class vwRecipeList : UserControl
+    public partial class vw01RecipeList : UserControl
     {
         public delegate void ListEvt(bool bVal);
         public event ListEvt GoParm;
         private string m_sGrp;
         private string m_sDev;
-        private vwRecipMain m_vwRecipeMain;
+        private vw02RecipItem m_vwRecipeMain;
 
         private int m_iPage = 0;
 
-        public vwRecipeList()
+        public vw01RecipeList()
         {
             InitializeComponent();
-            m_vwRecipeMain = new vwRecipMain("Recipe : Loader");
+            m_vwRecipeMain = new vw02RecipItem("Recipe : Loader");
         }
 
         public void Open()

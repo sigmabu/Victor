@@ -1,6 +1,6 @@
 ﻿namespace Victor
 {
-    partial class vwRecipMain
+    partial class vw02RecipItem
     {
         /// <summary>
         /// Required designer variable.
