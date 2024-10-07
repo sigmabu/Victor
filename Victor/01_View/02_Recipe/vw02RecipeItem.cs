@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Victor
 {
-    public partial class vw02RecipItem : Form
+    public partial class vw02RecipeItem : Form
     {
         private int nPage = 0;
-        public vw02RecipItem(string sTitle)
+        public vw02RecipeItem(string sTitle)
         {
             InitializeComponent();
             nPage = 0;

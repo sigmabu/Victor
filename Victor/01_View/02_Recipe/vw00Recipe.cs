@@ -4,7 +4,7 @@ using Victor;
 
 namespace Victor
 {
-    public partial class vwRecipe : UserControl
+    public partial class vw00Recipe : UserControl
     {
         /// <summary>
         /// 화면에 정보 업데이트 타이머
@@ -13,11 +13,11 @@ namespace Victor
 
         private int m_iPage = 0;
 
-        private vwRecipeList m_vwList = new vwRecipeList();
-        private vwRecipeItem m_vwItem = new vwRecipeItem("Recipe Item Loader");
+        private vw01RecipeList m_vwList = new vw01RecipeList();
+        private vw02RecipeItem m_vwItem = new vw02RecipeItem("Recipe Item Loader");
         //private vwSetPos_Recipe m_vw03Set = new vwSetPos_Recipe(EProc.STAG1, EGuiPosType.Recipe);
 
-        public vwRecipe()
+        public vw00Recipe()
         {
             InitializeComponent();
 
@@ -153,7 +153,7 @@ namespace Victor
                     pnl_Base.Controls.Add(m_vwList);
                     break;
                 case 2:
-                    m_vwItem.Open();
+                   // m_vwItem.Open();
                     pnl_Base.Controls.Add(m_vwItem);
                     break;
                 case 3:
@@ -373,18 +373,18 @@ namespace Victor
             this.label46.Text = "RECIPE";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // vwRecipe
+            // vw00Recipe
             // 
             this.Controls.Add(this.pnl_Base);
             this.Controls.Add(this.label46);
-            this.Name = "vwRecipe";
+            this.Name = "vw00Recipe";
             this.Size = new System.Drawing.Size(1280, 804);
             this.ResumeLayout(false);
 
         }
 
-        private System.Windows.Forms.Panel pnl_Base;
-        private System.Windows.Forms.Label label46;
+        //private System.Windows.Forms.Panel pnl_Base;
+        //private System.Windows.Forms.Label label46;
 
     }
 }

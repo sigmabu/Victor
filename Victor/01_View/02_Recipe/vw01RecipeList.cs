@@ -20,14 +20,14 @@ namespace Victor
         public event ListEvt GoParm;
         private string m_sGrp;
         private string m_sDev;
-        private vw02RecipItem m_vwRecipeMain;
+        private vw02RecipeItem m_vwRecipeMain;
 
         private int m_iPage = 0;
 
         public vw01RecipeList()
         {
             InitializeComponent();
-            m_vwRecipeMain = new vw02RecipItem("Recipe : Loader");
+            m_vwRecipeMain = new vw02RecipeItem("Recipe : Loader");
         }
 
         public void Open()

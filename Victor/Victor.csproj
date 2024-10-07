@@ -68,17 +68,21 @@
     <Compile Include="01_View\01 Main\vwMain.Designer.cs">
       <DependentUpon>vwMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="01_View\02_Recipe\vw00Recipe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\02_Recipe\vw00Recipe.Designer.cs" />
     <Compile Include="01_View\02_Recipe\vw01RecipeList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="01_View\02_Recipe\vw01RecipeList.Designer.cs">
       <DependentUpon>vw01RecipeList.cs</DependentUpon>
     </Compile>
-    <Compile Include="01_View\02_Recipe\vw02RecipItem.cs">
+    <Compile Include="01_View\02_Recipe\vw02RecipeItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="01_View\02_Recipe\vw02RecipItem.Designer.cs">
-      <DependentUpon>vw02RecipItem.cs</DependentUpon>
+    <Compile Include="01_View\02_Recipe\vw02RecipeItem.Designer.cs">
+      <DependentUpon>vw02RecipeItem.cs</DependentUpon>
     </Compile>
     <Compile Include="01_View\03_Maint\vwMaint.cs">
       <SubType>UserControl</SubType>
@@ -132,8 +136,8 @@
     <EmbeddedResource Include="01_View\02_Recipe\vw01RecipeList.resx">
       <DependentUpon>vw01RecipeList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="01_View\02_Recipe\vw02RecipItem.resx">
-      <DependentUpon>vw02RecipItem.cs</DependentUpon>
+    <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeItem.resx">
+      <DependentUpon>vw02RecipeItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\03_Maint\vwMaint.resx">
       <DependentUpon>vwMaint.cs</DependentUpon>
