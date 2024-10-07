@@ -11,13 +11,15 @@ using System.Xml.Linq;
 
 namespace Victor
 {
+    public delegate void MoveToMenuEventHandler();
     public partial class FrmMain : Form
     {
         private int m_iPage;
         private bool isClickedLevelButton = false;
 
         private vwMain      m_vwMain;
-        private vw01RecipeList    m_vwRecipe;
+        private vw00Recipe    m_vwRecipe;
+        private vw02RecipeItem m_vwRecipeItem;
         private vwMaint     m_vwMaint;
 
         public FrmMain()
@@ -32,7 +34,7 @@ namespace Victor
             m_iPage = 0;
 
             m_vwMain = new vwMain();
-            m_vwRecipe  = new vw01RecipeList();
+            m_vwRecipe  = new vw00Recipe();
             m_vwMaint   = new vwMaint();
 
             rdb_Main.Checked = true;
@@ -41,7 +43,7 @@ namespace Victor
         private void Click_Exit(object sender, EventArgs e)
         {
             Application.Exit();
-        }    
+        }
 
         private void rdb_Menu_CheckedChanged(object sender, EventArgs e)
         {
@@ -52,53 +54,61 @@ namespace Victor
             {
                 return;
             }
-            else
+            Call_PnlBase_Change(iTag);
+        }
+        public void Call_PnlBase_Change(int nTag)
+        { 
+            switch (m_iPage)    // 이전 뷰 Close
             {
+                case 11:
+                    m_vwMain.Close();
+                    break;
+                case 21:
+                    m_vwRecipe.Close();
+                    break;
+                case 22:
+                    m_vwRecipeItem.Close();
+                    break;
+                case 31:
+                    m_vwMaint.Close();
+                    break;
 
-                switch (m_iPage)    // 이전 뷰 Close
-                {
-                    case 11:
-                        m_vwMain.Close();
-                        break;
-                    case 21:
-                        m_vwRecipe.Close();
-                        break;
-                    case 31:
-                        m_vwMaint.Close();
-                        break;
+                case 99:
+                    //m_vwLogIn.Close();
+                    break;
+            }
 
-                    case 99:
-                        //m_vwLogIn.Close();
-                        break;
-                }
+            pnl_Base.Controls.Clear();    // Panel 에서 이전 뷰 삭제
 
-                pnl_Base.Controls.Clear();    // Panel 에서 이전 뷰 삭제
+            // Log In 화면 Button 을 Click 하였을 때는 기존 뷰 삭제만 진행.
+            if (isClickedLevelButton)
+            {
+                return;
+            }
 
-                // Log In 화면 Button 을 Click 하였을 때는 기존 뷰 삭제만 진행.
-                if (isClickedLevelButton)
-                {
-                    return;
-                }
+            m_iPage = nTag;    // 인덱스 변경
 
-                m_iPage = iTag;    // 인덱스 변경
-
-                switch (m_iPage)    // 신규 뷰 Open 및 표시
-                {
-                    case 11:
-                        pnl_Base.Controls.Add(m_vwMain);
-                        m_vwMain.Open();
-                        break;
-                    case 21:
-                        pnl_Base.Controls.Add(m_vwRecipe);
-                        m_vwRecipe.Open();
-                        break;
-                    case 31:
-                        pnl_Base.Controls.Add(m_vwMaint);
-                        m_vwMaint.Open();
-                        break;
-                }
+            switch (m_iPage)    // 신규 뷰 Open 및 표시
+            {
+                case 11:
+                    pnl_Base.Controls.Add(m_vwMain);
+                    m_vwMain.Open();
+                    break;
+                case 21:
+                    pnl_Base.Controls.Add(m_vwRecipe);
+                    m_vwRecipe.Open();
+                    break;
+                case 22:
+                    pnl_Base.Controls.Add(m_vwRecipeItem);
+                    m_vwRecipeItem.Open();
+                    break;
+                case 31:
+                    pnl_Base.Controls.Add(m_vwMaint);
+                    m_vwMaint.Open();
+                    break;
             }
         }
+
 
         #region Mouse move GUI
         private System.Drawing.Point mouseDownLocation;

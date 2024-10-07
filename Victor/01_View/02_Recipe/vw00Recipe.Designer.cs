@@ -30,45 +30,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label_Recipe = new System.Windows.Forms.Label();
             this.pnl_Base = new System.Windows.Forms.Panel();
-            this.label46 = new System.Windows.Forms.Label();
+            this.pnl_Base.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label_Recipe
+            // 
+            this.label_Recipe.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.label_Recipe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label_Recipe.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Recipe.Location = new System.Drawing.Point(0, 0);
+            this.label_Recipe.Name = "label_Recipe";
+            this.label_Recipe.Size = new System.Drawing.Size(350, 30);
+            this.label_Recipe.TabIndex = 0;
+            this.label_Recipe.Text = "Recipe";
+            this.label_Recipe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_Base
             // 
             this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.pnl_Base.Location = new System.Drawing.Point(0, 30);
+            this.pnl_Base.Controls.Add(this.label_Recipe);
+            this.pnl_Base.Location = new System.Drawing.Point(0, 0);
             this.pnl_Base.Name = "pnl_Base";
             this.pnl_Base.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Base.TabIndex = 1;
-            // 
-            // label46
-            // 
-            this.label46.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label46.ForeColor = System.Drawing.SystemColors.Control;
-            this.label46.Location = new System.Drawing.Point(0, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(1280, 30);
-            this.label46.TabIndex = 0;
-            this.label46.Text = "Recipe";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // vw00Recipe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.Controls.Add(this.label46);
             this.Controls.Add(this.pnl_Base);
             this.DoubleBuffered = true;
             this.Name = "vw00Recipe";
             this.Size = new System.Drawing.Size(1280, 804);
+            this.pnl_Base.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Panel pnl_Base;
-        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label_Recipe;
     }
 }

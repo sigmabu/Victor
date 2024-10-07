@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 //using Util;
 using Victor;
@@ -7,72 +8,36 @@ namespace Victor
 {
     public partial class vw00Recipe : UserControl
     {
-        /// <summary>
-        /// 화면에 정보 업데이트 타이머
-        /// </summary>
-        private readonly Timer _timer; // 220317 syc : 1000U Auto 상황 버튼 비활성화
 
         private int m_iPage = 0;
 
-        //private vwDev_01Lst m_vw01Lst = new vwDev_01Lst();
-        //private vwDev_02Prm m_vw02Prm = new vwDev_02Prm();
-        //private vwSetPos_Recipe m_vw03Set = new vwSetPos_Recipe(EProc.STAG1, EGuiPosType.Recipe);
+        private vw01RecipeList m_vw01List = new vw01RecipeList();
+        private vw02RecipeItem m_vw02Item = new vw02RecipeItem("Recipe Loader");
 
         public vw00Recipe()
         {
             InitializeComponent();
 
-            //m_vw01Lst.GoParm += Apply;
+            m_vw01List.GoParm += Apply;
 
-            //m_vw02Prm.OnMoveBack += returnToList;
-            //m_vw02Prm.OnGoToPosition += goToPosition;
+            m_vw02Item.OnMoveBack += returnToList;
+            m_vw02Item.OnGoToPosition += goToPosition;
             //m_vw03Set.OnMoveBack += returnToParameter;
 
-
-            // 220317 syc : 1000U Auto 상황 버튼 비활성화
-            // 화면 갱신 타이머
-            _timer = new Timer();
-            _timer.Interval = 50;
-//            _timer.Tick += _timer_Tick;
 
         }
 
         public void Open()
         {
-            //if(!CLicense.isDF)
-            //{
-            //    CData.Dev.bDynamicSkip = true;
-            //}
+            m_iPage = 11;
 
-            //rdbMn_Parm.Visible = false;
-            //rdbMn_Set.Visible = false;
-
-            //if (CData.bDevOnlyView == false)
-            //{
-            //    CData.Dev.bBcrKeyInSkip = false;
-            //}
-
-            m_iPage = 1;
-
-            _VwAdd();
-            //_HideMenu();
-
-            // 타이머 멈춤 상태면 타이머 다시 시작
-            if (!_timer.Enabled)
-            {
-                _timer.Start();
-            }
+            _vwAdd();
+            _HideMenu();
         }
 
         public void Close()
         {
             _VwClr();
-
-            // 타이머 실행 중이면 타이머 멈춤
-            if (_timer.Enabled)
-            {
-                _timer.Stop();
-            }
         }
 
         /// <summary>
@@ -80,8 +45,8 @@ namespace Victor
         /// </summary>
         public void Release()
         {
-            //m_vw01Lst.Dispose();
-            //m_vw02Prm.Dispose();
+            m_vw01List.Dispose();
+            m_vw02Item.Dispose();
             //m_vw03Set.Dispose();
         }
 
@@ -89,36 +54,29 @@ namespace Victor
         {
             _VwClr();
 
-            m_iPage = 1;
+            m_iPage = 11;
 
-            _VwAdd();
+            _vwAdd();
         }
         private void returnToParameter()
         {
             _VwClr();
 
-            m_iPage = 2;
+            m_iPage = 21;
 
-            _VwAdd();
+            _vwAdd();
         }
         private void goToPosition()
         {
             _VwClr();
 
-            m_iPage = 3;
+            m_iPage = 31;
 
-            _VwAdd();
+            _vwAdd();
         }
 
         public void Apply(bool bVal)
         {
-            //btn_Save.Visible = bVal;
-            //rdbMn_Parm.Visible = bVal;
-            //20191204 ghk_level
-            //if (bVal && (int)CData.Lev >= CData.SPara.iLvDvPosView)
-            //{ rdbMn_Set.Visible = true; }
-            //else
-            //{ rdbMn_Set.Visible = false; }
 
             if (bVal)
             {
@@ -126,9 +84,9 @@ namespace Victor
 
                 _VwClr();
 
-                m_iPage = 2;
+                m_iPage = 21;
 
-                _VwAdd();
+                _vwAdd();
 
                 //m_vw02Prm.Set();
                 //m_vw03Set.Set();
@@ -145,46 +103,45 @@ namespace Victor
             Apply(true);
         }
 
-        private void _VwAdd()
+        private void _vwAdd()
         {
-            //switch (m_iPage)
-            //{
-            //    case 1:
-            //        m_vw01Lst.Open();
-            //        pnl_Base.Controls.Add(m_vw01Lst);
-            //        break;
-            //    case 2:
-            //        m_vw02Prm.Open();
-            //        pnl_Base.Controls.Add(m_vw02Prm);
-            //        break;
+            switch (m_iPage)
+            {
+                case 11:
+                    m_vw01List.Open();
+                    pnl_Base.Controls.Add(m_vw01List);
+                    break;
+                case 21:
+                    m_vw02Item.Open();
+                    pnl_Base.Controls.Add(m_vw02Item);
+                    break;
             //    case 3:
             //        m_vw03Set.Open();
             //        pnl_Base.Controls.Add(m_vw03Set);
             //        break;
-            //}
+            }
         }
 
         private void _VwClr()
         {
-        //    switch (m_iPage)
-        //    {
-        //        case 1:
-        //            m_vw01Lst.Close();
-        //            break;
-        //        case 2:
-        //            m_vw02Prm.Close();
-        //            break;
+            switch (m_iPage)
+            {
+                case 11:
+                    m_vw01List.Close();
+                    break;
+                case 21:
+                    m_vw02Item.Close();
+                    break;
         //        case 3:
         //            m_vw03Set.Close();
         //            break;
-        //    }
-
-        //    pnl_Base.Controls.Clear();
+            }
+            pnl_Base.Controls.Clear();
         }
 
         private void _HideMenu()
         {
-            
+            label_Recipe.Visible = false;
         }
 
         /// <summary>
@@ -213,7 +170,7 @@ namespace Victor
 
             //    m_iPage = iNext;
 
-            //    _VwAdd();
+            //    _vwAdd();
             //}
         }
 
@@ -227,11 +184,6 @@ namespace Victor
         {
  
             return true;
-        }
-
-        private void _timer_Tick(object sender, EventArgs e)
-        {
-           
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_Title = new System.Windows.Forms.Label();
+            this.label_RecipeItem = new System.Windows.Forms.Label();
             this.rdb_Unloader = new System.Windows.Forms.RadioButton();
             this.rdb_Loader = new System.Windows.Forms.RadioButton();
             this.rdb_Bank00 = new System.Windows.Forms.RadioButton();
@@ -36,18 +36,18 @@
             this.radio_Save = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // lbl_Title
+            // label_RecipeItem
             // 
-            this.lbl_Title.BackColor = System.Drawing.Color.Indigo;
-            this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Title.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_Title.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbl_Title.Location = new System.Drawing.Point(0, 0);
-            this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(1280, 30);
-            this.lbl_Title.TabIndex = 453;
-            this.lbl_Title.Text = "RECIPE Item";
-            this.lbl_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_RecipeItem.BackColor = System.Drawing.Color.Indigo;
+            this.label_RecipeItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.label_RecipeItem.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_RecipeItem.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label_RecipeItem.Location = new System.Drawing.Point(0, 0);
+            this.label_RecipeItem.Name = "label_RecipeItem";
+            this.label_RecipeItem.Size = new System.Drawing.Size(1280, 30);
+            this.label_RecipeItem.TabIndex = 453;
+            this.label_RecipeItem.Text = "RECIPE Item";
+            this.label_RecipeItem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rdb_Unloader
             // 
@@ -160,7 +160,7 @@
             this.Controls.Add(this.radio_Save);
             this.Controls.Add(this.rdb_Loader);
             this.Controls.Add(this.rdb_Bank00);
-            this.Controls.Add(this.lbl_Title);
+            this.Controls.Add(this.label_RecipeItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "vw02RecipeItem";
             this.Text = "vwRecipMain";
@@ -170,7 +170,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl_Title;
+        private System.Windows.Forms.Label label_RecipeItem;
         private System.Windows.Forms.RadioButton rdb_Unloader;
         private System.Windows.Forms.RadioButton rdb_Loader;
         private System.Windows.Forms.RadioButton rdb_Bank00;

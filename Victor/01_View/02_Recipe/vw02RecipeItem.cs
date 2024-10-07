@@ -12,17 +12,20 @@ namespace Victor
 {
     public partial class vw02RecipeItem : Form
     {
-        private int nPage = 0;
+        public event MoveToMenuEventHandler OnMoveBack;
+        public event MoveToMenuEventHandler OnGoToPosition;
+
+        private int m_iPage = 1;
         public vw02RecipeItem(string sTitle)
         {
             InitializeComponent();
-            nPage = 0;
-            lbl_Title.Text = sTitle;
+            m_iPage = 0;
+            label_RecipeItem.Text = sTitle;
         }
 
         private void Init_PageView()
         {
-            switch (nPage)
+            switch (m_iPage)
             {
                 case 0:
                     break;
@@ -34,12 +37,12 @@ namespace Victor
                     break;
             }
         }
-        public void Open_PageView()
+        public void Open()
         {
-            nPage = 1;
+            m_iPage = 1;
             _VwAdd();
         }
-        public void Close_PageView()
+        public void Close()
         {
         }
 
@@ -80,6 +83,32 @@ namespace Victor
             //}
 
             pnl_Base.Controls.Clear();
+        }
+
+        private void rdb_SubMenu_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton mRdb = sender as RadioButton;
+            int iNext = int.Parse(mRdb.Tag.ToString());
+
+
+            if (m_iPage != iNext)
+            {
+                _VwClr();
+
+                m_iPage = iNext;
+
+                _VwAdd();
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.OnMoveBack?.Invoke();
+        }
+
+        private void btnPosition_Click(object sender, EventArgs e)
+        {
+            this.OnGoToPosition?.Invoke();
         }
 
     }

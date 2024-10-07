@@ -19,30 +19,40 @@ namespace Victor
         public delegate void ListEvt(bool bVal);
         public event ListEvt GoParm;
         private string m_sGrp;
+
         private string m_sDev;
-        private vw02RecipeItem m_vwRecipeItem;
+        //private FrmMain m_vwFrmMain = new FrmMain();
+        private vw02RecipeItem m_vw02Item = new vw02RecipeItem("Recipe Loader");
 
         private int m_iPage = 0;
 
         public vw01RecipeList()
         {
             InitializeComponent();
-            m_vwRecipeItem = new vw02RecipeItem("Recipe : Loader");
+            m_vw02Item = new vw02RecipeItem("Recipe : Loader");
         }
 
         public void Open()
         {
             m_iPage = 11;
-            _GrpListUp();
-            //pnl_Menu.BringToFront();
+            //vwAdd();
+            hideMenu();
 
-            vwAdd();
-            //hideMenu();
+            _GrpListUp();
+            
+            //pnl_Menu.Visible = true;
+            //label_RecipeList.BringToFront();
         }
+
+        private void hideMenu()
+        {
+
+        }
+
 
         public void Close()
         {
-            vwClear();
+            //vwClear();
         }
 
         private void vwAdd()
@@ -50,6 +60,10 @@ namespace Victor
             switch (m_iPage)
             {
                 case 11:
+                    pnl_Menu.BringToFront();
+                    pnl_Menu.Visible = true;
+                    //this.Open();
+                    //pnl_Base.Controls.Add(this);
 
                     break;
                 case 21:
@@ -81,10 +95,6 @@ namespace Victor
             //pnl_Base.Controls.Clear();
         }
 
-        private void hideMenu()
-        {
-
-        }
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -517,12 +527,14 @@ namespace Victor
             switch (m_iPage)    // 신규 뷰 Open 및 표시
             {
                 case 1:
-                    //pnl_Base.Controls.Add(m_vwMain);
-                    //m_vwMain.Open();
+                    //m_vwFrmMain.Call_PnlBase_Change(22);
+                    //m_vwRecipeList.Open();
+                    //pnl_Menu.Controls.Add(m_vwRecipeItem);
+
                     break;
                 case 2:
-                    pnl_Menu.Controls.Add(m_vwRecipeItem);
-                    m_vwRecipeItem.Open_PageView();
+                    //pnl_Menu.Controls.Add(m_vwRecipeItem);
+                    //m_vwRecipeItem.Open();
                     break;
                 case 3:
                     //pnl_Base.Controls.Add(m_vwMaint);
