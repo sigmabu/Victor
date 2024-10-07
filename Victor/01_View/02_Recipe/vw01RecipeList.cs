@@ -522,7 +522,7 @@ namespace Victor
 
         private void Call_ViewRecipeItem()
         {
-            pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
+            //pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
 
             switch (m_iPage)    // 신규 뷰 Open 및 표시
             {
@@ -533,6 +533,10 @@ namespace Victor
 
                     break;
                 case 2:
+                    //ToDo : 1007
+                    FrmMain frmMain = new FrmMain();
+                    frmMain.Call_PnlBase_Change(22);
+
                     //pnl_Menu.Controls.Add(m_vwRecipeItem);
                     //m_vwRecipeItem.Open();
                     break;

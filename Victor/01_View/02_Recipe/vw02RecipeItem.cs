@@ -7,10 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Microsoft.VisualBasic.FileIO;
+using Victor;
+
 
 namespace Victor
 {
-    public partial class vw02RecipeItem : Form
+    public partial class vw02RecipeItem : UserControl
     {
         public event MoveToMenuEventHandler OnMoveBack;
         public event MoveToMenuEventHandler OnGoToPosition;
@@ -48,12 +52,12 @@ namespace Victor
 
         private void _VwAdd()
         {
-            //switch (nPage)
-            //{
-            //    case 1:
-            //        m_vw1Wafer.Open();
-            //        pnl_Base.Controls.Add(m_vw1Wafer);
-            //        break;
+            switch (m_iPage)
+            {
+                case 1:
+                    //m_vw1Wafer.Open();
+                    //pnl_Base.Controls.Add(m_vw1Wafer);
+                    break;
             //    case 2:
             //        {
             //            m_vw2Step.Open();
@@ -62,7 +66,7 @@ namespace Victor
             //        }
             //        break;
 
-            //}
+            }
         }
 
         private void _VwClr()

@@ -81,7 +81,7 @@
       <DependentUpon>vw01RecipeList.cs</DependentUpon>
     </Compile>
     <Compile Include="01_View\02_Recipe\vw02RecipeItem.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="01_View\02_Recipe\vw02RecipeItem.Designer.cs">
       <DependentUpon>vw02RecipeItem.cs</DependentUpon>

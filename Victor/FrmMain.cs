@@ -17,10 +17,11 @@ namespace Victor
         private int m_iPage;
         private bool isClickedLevelButton = false;
 
-        private vwMain      m_vwMain;
-        private vw00Recipe    m_vwRecipe;
-        private vw02RecipeItem m_vwRecipeItem;
-        private vwMaint     m_vwMaint;
+        private vwMain          m_vwMain;
+        private vw00Recipe      m_vwRecipe;
+        private vw01RecipeList m_vwRecipeList;
+        private vw02RecipeItem  m_vwRecipeItem;
+        private vwMaint         m_vwMaint;
 
         public FrmMain()
         {
@@ -35,6 +36,8 @@ namespace Victor
 
             m_vwMain = new vwMain();
             m_vwRecipe  = new vw00Recipe();
+            m_vwRecipeList = new vw01RecipeList();
+            m_vwRecipeItem = new vw02RecipeItem("Recipe Loader");
             m_vwMaint   = new vwMaint();
 
             rdb_Main.Checked = true;
@@ -64,7 +67,7 @@ namespace Victor
                     m_vwMain.Close();
                     break;
                 case 21:
-                    m_vwRecipe.Close();
+                    m_vwRecipeList.Close();
                     break;
                 case 22:
                     m_vwRecipeItem.Close();
@@ -95,8 +98,10 @@ namespace Victor
                     m_vwMain.Open();
                     break;
                 case 21:
-                    pnl_Base.Controls.Add(m_vwRecipe);
-                    m_vwRecipe.Open();
+                    //pnl_Base.Controls.Add(m_vwRecipe);
+                    //m_vwRecipe.Open();
+                    pnl_Base.Controls.Add(m_vwRecipeList);
+                    m_vwRecipeList.Open();
                     break;
                 case 22:
                     pnl_Base.Controls.Add(m_vwRecipeItem);

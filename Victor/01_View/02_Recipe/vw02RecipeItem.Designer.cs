@@ -34,6 +34,7 @@
             this.rdb_Bank00 = new System.Windows.Forms.RadioButton();
             this.pnl_Base = new System.Windows.Forms.ListBox();
             this.radio_Save = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label_RecipeItem
@@ -149,22 +150,34 @@
             this.radio_Save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radio_Save.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(333, 256);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 12);
+            this.label1.TabIndex = 458;
+            this.label1.Text = "TEST...";
+            // 
             // vw02RecipeItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1280, 804);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnl_Base);
             this.Controls.Add(this.rdb_Unloader);
             this.Controls.Add(this.radio_Save);
             this.Controls.Add(this.rdb_Loader);
             this.Controls.Add(this.rdb_Bank00);
             this.Controls.Add(this.label_RecipeItem);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "vw02RecipeItem";
             this.Text = "vwRecipMain";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,5 +189,6 @@
         private System.Windows.Forms.RadioButton rdb_Bank00;
         private System.Windows.Forms.ListBox pnl_Base;
         private System.Windows.Forms.RadioButton radio_Save;
+        private System.Windows.Forms.Label label1;
     }
 }
