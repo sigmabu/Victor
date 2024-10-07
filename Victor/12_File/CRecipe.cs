@@ -98,7 +98,7 @@ namespace Victor
                 InitRecipe(out CData.Recipe);
             }
             CIni mIni = new CIni(sPath);
-            int FindDot = sPath.IndexOf(".");
+            int FindDot = sPath.LastIndexOf(".");
             int Lastsp = sPath.LastIndexOf("\\");
 
             Temp = sPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
