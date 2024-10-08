@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Victor
 {
@@ -60,6 +61,7 @@ namespace Victor
             }
             catch (Exception err)
             {
+                MessageBox.Show(err.Message);
                 //CLog.Register(eLog.DSL, title + " : Error - log (" + path + ") Msg : " + err.Message);
             }
         }

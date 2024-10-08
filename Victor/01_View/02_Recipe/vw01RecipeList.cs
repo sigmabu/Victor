@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Microsoft.VisualBasic.FileIO;
 using Victor;
+using static System.Windows.Forms.AxHost;
 
 namespace Victor
 {
@@ -35,7 +36,7 @@ namespace Victor
         public void Open()
         {
             m_iPage = 11;
-            //vwAdd();
+            vwAdd();
             hideMenu();
 
             _GrpListUp();
@@ -52,7 +53,8 @@ namespace Victor
 
         public void Close()
         {
-            //vwClear();
+            vwClear();
+            //pnl_Menu.Controls.Clear();
         }
 
         private void vwAdd()
@@ -60,9 +62,15 @@ namespace Victor
             switch (m_iPage)
             {
                 case 11:
-                    //pnl_Menu.BringToFront();
-                    //pnl_Menu.Visible = true;
-                    
+                    pnl_Menu.Controls.Add(pnlM_Grp);
+                    pnl_Menu.Controls.Add(pnlM_List);
+                    pnl_Menu.Controls.Add(pnl_Btn);
+                    //lbxM_Grp.SelectedIndex = eRecipeTitleText.GroupName;
+                    //eRecipeTitleText.FullPath = sPath;
+                    eRecipeTitleText.GroupName = m_sGrp;
+                    eRecipeTitleText.RecipeName = m_sDev + ".dev";
+
+
                     break;
                 case 21:
                     //m_vw02Prm.Open();
@@ -90,7 +98,7 @@ namespace Victor
             //        break;
             //}
 
-            //pnl_Base.Controls.Clear();
+            pnl_Menu.Controls.Clear();
         }
 
 
@@ -127,9 +135,9 @@ namespace Victor
                     _GrpListUp();
                 }
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
-
+                MessageBox.Show(err.Message);
             }
             finally
             {
@@ -177,9 +185,9 @@ namespace Victor
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
-
+                MessageBox.Show(err.Message);
             }
             finally
             {
@@ -217,9 +225,9 @@ namespace Victor
                 }
                 _GrpListUp();
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
-
+                MessageBox.Show(err.Message);
             }
             finally
             {
@@ -313,9 +321,9 @@ namespace Victor
                     mMsg.ShowDialog();
                 }
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
-
+                MessageBox.Show(err.Message);
             }
             finally
             {
@@ -328,9 +336,7 @@ namespace Victor
             Button mBtn = sender as Button;
             BeginInvoke(new Action(() => mBtn.Enabled = false));
             Form_Msg mMsg;
-            string sInput;
             string sPath = CGvar.PATH_DEVICE;
-
 
             string sSrc = "";
             string sDst = "";
@@ -384,9 +390,9 @@ namespace Victor
                     _RcpListUp();
                 }
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
-
+                MessageBox.Show(err.Message);
             }
             finally
             {
@@ -433,9 +439,9 @@ namespace Victor
 
                 _RcpListUp();
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
-
+                MessageBox.Show(err.Message);
             }
             finally
             {
@@ -503,6 +509,9 @@ namespace Victor
                 CData.RecipeCur = sPath;
                 CRecipe.It.Load(sPath, true);
 
+                eRecipeTitleText.FullPath = sPath;
+                eRecipeTitleText.GroupName = m_sGrp;
+                eRecipeTitleText.RecipeName = m_sDev + ".dev";
 
                 CRecipe.It.m_sGrp = this.m_sGrp;
                 CData.RecipeGr = CRecipe.It.m_sGrp;
@@ -510,14 +519,13 @@ namespace Victor
                 Call_ViewRecipeItem();
             }
 
-            catch (Exception ex)
+            catch (Exception err)
             {
-
+                MessageBox.Show(err.Message);
             }
             finally { BeginInvoke(new Action(() => mBtn.Enabled = true)); }
             //GoParm(true);
         }
-
         private void Call_ViewRecipeItem()
         {
             pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
@@ -525,15 +533,13 @@ namespace Victor
             switch (m_iPage)    // 신규 뷰 Open 및 표시
             {
                 case 1:
-                    //m_vwFrmMain.Call_PnlBase_Change(22);
-                    //m_vwRecipeList.Open();
-                    //pnl_Menu.Controls.Add(m_vwRecipeItem);
+                    vwAdd();
 
                     break;
                 case 2:
-                    m_vw02Item.Open();
+                    label_RecipeList.Visible = false;
                     pnl_Menu.Controls.Add(m_vw02Item);
-
+                    m_vw02Item.Open();
                     break;
                 case 3:
                     //pnl_Base.Controls.Add(m_vwMaint);

@@ -1487,3 +1487,13 @@ public enum eMsg
     Warning,
     Error
 }
+
+public enum eRecipGroup
+{
+    Common,
+    Loader,
+    Bank,
+    Unloader,
+    End
+}
+

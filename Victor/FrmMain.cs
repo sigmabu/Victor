@@ -113,6 +113,12 @@ namespace Victor
             }
         }
 
+        private void Display_Recipe()
+        {
+            lbl_RecipeGroup.Text = eRecipeTitleText.GroupName;
+            lblRecipeName.Text = eRecipeTitleText.RecipeName;
+        }
+
 
         #region Mouse move GUI
         private System.Drawing.Point mouseDownLocation;
@@ -140,6 +146,8 @@ namespace Victor
             DateTime datetime = DateTime.Now;
 
             lbl_Time.Text = datetime.ToString();
+
+            Display_Recipe();
         }
     }
 }

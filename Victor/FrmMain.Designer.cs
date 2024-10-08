@@ -43,8 +43,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.btn_printScreen = new System.Windows.Forms.Button();
             this.pnlRecipe = new System.Windows.Forms.Panel();
-            this.lbl_Grp = new System.Windows.Forms.Label();
-            this.lbl_Dev = new System.Windows.Forms.Label();
+            this.lbl_RecipeGroup = new System.Windows.Forms.Label();
+            this.lblRecipeName = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -177,24 +177,24 @@
             // 
             this.pnlRecipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.pnlRecipe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlRecipe.Controls.Add(this.lbl_Grp);
-            this.pnlRecipe.Controls.Add(this.lbl_Dev);
+            this.pnlRecipe.Controls.Add(this.lbl_RecipeGroup);
+            this.pnlRecipe.Controls.Add(this.lblRecipeName);
             this.pnlRecipe.Controls.Add(this.label7);
             this.pnlRecipe.Controls.Add(this.label11);
             resources.ApplyResources(this.pnlRecipe, "pnlRecipe");
             this.pnlRecipe.Name = "pnlRecipe";
             // 
-            // lbl_Grp
+            // lbl_RecipeGroup
             // 
-            resources.ApplyResources(this.lbl_Grp, "lbl_Grp");
-            this.lbl_Grp.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_Grp.Name = "lbl_Grp";
+            resources.ApplyResources(this.lbl_RecipeGroup, "lbl_RecipeGroup");
+            this.lbl_RecipeGroup.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lbl_RecipeGroup.Name = "lbl_RecipeGroup";
             // 
-            // lbl_Dev
+            // lblRecipeName
             // 
-            resources.ApplyResources(this.lbl_Dev, "lbl_Dev");
-            this.lbl_Dev.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_Dev.Name = "lbl_Dev";
+            resources.ApplyResources(this.lblRecipeName, "lblRecipeName");
+            this.lblRecipeName.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.lblRecipeName.Name = "lblRecipeName";
             // 
             // label7
             // 
@@ -364,8 +364,8 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button btn_printScreen;
         private System.Windows.Forms.Panel pnlRecipe;
-        private System.Windows.Forms.Label lbl_Grp;
-        private System.Windows.Forms.Label lbl_Dev;
+        private System.Windows.Forms.Label lbl_RecipeGroup;
+        private System.Windows.Forms.Label lblRecipeName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel4;

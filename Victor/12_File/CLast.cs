@@ -64,7 +64,6 @@ namespace Victor
             eMsg em;
             string sHead = "";
             string sMsg = "";
-            int nRet = 0;
 
             if (File.Exists(_path) == false)
             {

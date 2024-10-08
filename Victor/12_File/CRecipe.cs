@@ -84,10 +84,6 @@ namespace Victor
             int iRet = 0;
             string sSc = "";
             string Temp = "";
-                        
-            bool bStepExistBf = false;
-            bool bStepExistAf = false;
-            //....
 
             if (File.Exists(sPath) == false)
             { return -1; } // Error code

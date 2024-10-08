@@ -26,9 +26,17 @@ public class CGvar
     /// Device Folder Path  StartUp\\Device\\
     /// </summary>
     public static readonly string PATH_DEVICE = Application.StartupPath + "\\Device\\";
-    
+
     #endregion
 }
+
+public class eRecipeTitleText
+{
+    public static string FullPath = "FullPath = ";
+    public static string GroupName = "GroupName = ";
+    public static string RecipeName = "RecipeName = ";
+}
+
 public class CGcolor
 {
 

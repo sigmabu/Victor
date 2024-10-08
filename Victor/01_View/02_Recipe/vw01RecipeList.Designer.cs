@@ -32,26 +32,26 @@
             this.label_RecipeList = new System.Windows.Forms.Label();
             this.pnlM_Grp = new System.Windows.Forms.Panel();
             this.lbxM_Grp = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnM_GDel = new System.Windows.Forms.Button();
             this.btnM_GCopy = new System.Windows.Forms.Button();
             this.btnM_GNew = new System.Windows.Forms.Button();
             this.label39 = new System.Windows.Forms.Label();
-            this.pnlM_Dev = new System.Windows.Forms.Panel();
+            this.pnlM_List = new System.Windows.Forms.Panel();
             this.lbxM_Dev = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnM_DDel = new System.Windows.Forms.Button();
             this.btnM_DCopy = new System.Windows.Forms.Button();
             this.btnM_DNew = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnl_Btn = new System.Windows.Forms.Panel();
             this.btnM_DApp = new System.Windows.Forms.Button();
             this.btnM_DBcr = new System.Windows.Forms.Button();
             this.btnM_DCur = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlM_Grp.SuspendLayout();
-            this.pnlM_Dev.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlM_List.SuspendLayout();
+            this.pnl_Btn.SuspendLayout();
             this.pnl_Menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,12 +66,12 @@
             // 
             this.pnlM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pnlM_Grp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlM_Grp.Controls.Add(this.label39);
             this.pnlM_Grp.Controls.Add(this.lbxM_Grp);
             this.pnlM_Grp.Controls.Add(this.label1);
             this.pnlM_Grp.Controls.Add(this.btnM_GDel);
             this.pnlM_Grp.Controls.Add(this.btnM_GCopy);
             this.pnlM_Grp.Controls.Add(this.btnM_GNew);
-            this.pnlM_Grp.Controls.Add(this.label39);
             resources.ApplyResources(this.pnlM_Grp, "pnlM_Grp");
             this.pnlM_Grp.Name = "pnlM_Grp";
             // 
@@ -88,13 +88,6 @@
             resources.GetString("lbxM_Grp.Items2")});
             this.lbxM_Grp.Name = "lbxM_Grp";
             this.lbxM_Grp.SelectedIndexChanged += new System.EventHandler(this.lbxM_Grp_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Name = "label1";
             // 
             // btnM_GDel
             // 
@@ -136,18 +129,18 @@
             this.label39.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label39.Name = "label39";
             // 
-            // pnlM_Dev
+            // pnlM_List
             // 
-            this.pnlM_Dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.pnlM_Dev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlM_Dev.Controls.Add(this.lbxM_Dev);
-            this.pnlM_Dev.Controls.Add(this.label3);
-            this.pnlM_Dev.Controls.Add(this.btnM_DDel);
-            this.pnlM_Dev.Controls.Add(this.btnM_DCopy);
-            this.pnlM_Dev.Controls.Add(this.btnM_DNew);
-            this.pnlM_Dev.Controls.Add(this.label2);
-            resources.ApplyResources(this.pnlM_Dev, "pnlM_Dev");
-            this.pnlM_Dev.Name = "pnlM_Dev";
+            this.pnlM_List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pnlM_List.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlM_List.Controls.Add(this.label2);
+            this.pnlM_List.Controls.Add(this.lbxM_Dev);
+            this.pnlM_List.Controls.Add(this.label3);
+            this.pnlM_List.Controls.Add(this.btnM_DDel);
+            this.pnlM_List.Controls.Add(this.btnM_DCopy);
+            this.pnlM_List.Controls.Add(this.btnM_DNew);
+            resources.ApplyResources(this.pnlM_List, "pnlM_List");
+            this.pnlM_List.Name = "pnlM_List";
             // 
             // lbxM_Dev
             // 
@@ -158,13 +151,6 @@
             resources.ApplyResources(this.lbxM_Dev, "lbxM_Dev");
             this.lbxM_Dev.Name = "lbxM_Dev";
             this.lbxM_Dev.SelectedIndexChanged += new System.EventHandler(this.lbxM_Dev_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Name = "label3";
             // 
             // btnM_DDel
             // 
@@ -206,15 +192,15 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Name = "label2";
             // 
-            // panel1
+            // pnl_Btn
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnM_DApp);
-            this.panel1.Controls.Add(this.btnM_DBcr);
-            this.panel1.Controls.Add(this.btnM_DCur);
-            resources.ApplyResources(this.panel1, "panel1");
-            this.panel1.Name = "panel1";
+            this.pnl_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pnl_Btn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Btn.Controls.Add(this.btnM_DApp);
+            this.pnl_Btn.Controls.Add(this.btnM_DBcr);
+            this.pnl_Btn.Controls.Add(this.btnM_DCur);
+            resources.ApplyResources(this.pnl_Btn, "pnl_Btn");
+            this.pnl_Btn.Name = "pnl_Btn";
             // 
             // btnM_DApp
             // 
@@ -253,11 +239,25 @@
             // pnl_Menu
             // 
             this.pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            this.pnl_Menu.Controls.Add(this.panel1);
-            this.pnl_Menu.Controls.Add(this.pnlM_Dev);
+            this.pnl_Menu.Controls.Add(this.pnl_Btn);
+            this.pnl_Menu.Controls.Add(this.pnlM_List);
             this.pnl_Menu.Controls.Add(this.pnlM_Grp);
             resources.ApplyResources(this.pnl_Menu, "pnl_Menu");
             this.pnl_Menu.Name = "pnl_Menu";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Name = "label3";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Name = "label1";
             // 
             // vw01RecipeList
             // 
@@ -269,8 +269,8 @@
             resources.ApplyResources(this, "$this");
             this.Name = "vw01RecipeList";
             this.pnlM_Grp.ResumeLayout(false);
-            this.pnlM_Dev.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnlM_List.ResumeLayout(false);
+            this.pnl_Btn.ResumeLayout(false);
             this.pnl_Menu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -281,22 +281,22 @@
         private System.Windows.Forms.Label label_RecipeList;
         private System.Windows.Forms.Panel pnlM_Grp;
         private System.Windows.Forms.ListBox lbxM_Grp;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnM_GDel;
         private System.Windows.Forms.Button btnM_GCopy;
         private System.Windows.Forms.Button btnM_GNew;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Panel pnlM_Dev;
+        private System.Windows.Forms.Panel pnlM_List;
         private System.Windows.Forms.ListBox lbxM_Dev;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnM_DDel;
         private System.Windows.Forms.Button btnM_DCopy;
         private System.Windows.Forms.Button btnM_DNew;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnl_Btn;
         private System.Windows.Forms.Button btnM_DApp;
         private System.Windows.Forms.Button btnM_DBcr;
         private System.Windows.Forms.Button btnM_DCur;
         private System.Windows.Forms.Panel pnl_Menu;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

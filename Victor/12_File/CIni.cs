@@ -2,6 +2,7 @@
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Victor
 {
@@ -79,8 +80,9 @@ namespace Victor
                     sVal = "0";
                 return Convert.ToInt32(sVal);
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
+                MessageBox.Show(err.Message);
                 return 0;
             }
         }
@@ -100,8 +102,9 @@ namespace Victor
                     sVal = "0";
                 return Convert.ToDouble(sVal);
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
+                MessageBox.Show(err.Message);
                 return 0;
             }
         }
