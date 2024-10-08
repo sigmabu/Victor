@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Text;
 using System;
+using static System.Windows.Forms.AxHost;
 
 namespace Victor
 {
@@ -56,6 +57,48 @@ namespace Victor
 
 
             ini.Save(_path);
+        }
+
+        public static void Save_LastConfig()
+        {
+            IniFile ini = new IniFile();
+
+            ini["Recipe"]["Path"] = CRecipe.It.FullPath;
+            ini["Recipe"]["Group"] = CRecipe.It.Group;
+            ini["Recipe"]["Name"] = CRecipe.It.Name;
+
+            ini.Save(_path);
+        }
+
+        public static void Load_LastConfig()
+        {
+            string temp;
+            if (File.Exists(_path) == false)
+            {
+                Save();
+                return;
+            }
+
+            IniFile ini = new IniFile();
+            ini.Load(_path);
+
+            CRecipe.It.FullPath = ini["Recipe"]["Path"].ToString();
+            CRecipe.It.Group = ini["Recipe"]["Group"].ToString();
+            CRecipe.It.Name = ini["Recipe"]["Name"].ToString();
+
+            temp = CRecipe.It.FullPath;
+            if (temp != "")
+            {
+                // 마지막 디바이스 파일 실제 존재 유무 판단
+                // 없으면 디바이스 파일 로딩 안함 
+
+                if (File.Exists(temp))
+                {
+                    CRecipe.It.Load(temp, true);
+                }
+                else
+                { temp = ""; }
+            }
         }
 
         public static void Load()

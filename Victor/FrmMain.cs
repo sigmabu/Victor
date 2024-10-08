@@ -29,6 +29,8 @@ namespace Victor
             InitializeComponent();
             Init_Screen();
             timer1.Start();
+
+            Init_App();
         }
 
         private void Init_Screen()
@@ -115,8 +117,9 @@ namespace Victor
 
         private void Display_Recipe()
         {
-            lbl_RecipeGroup.Text = eRecipeTitleText.GroupName;
-            lblRecipeName.Text = eRecipeTitleText.RecipeName;
+            lbl_RecipeGroup.Text = CRecipe.It.Group;
+            lblRecipeName.Text = CRecipe.It.Name;
+
         }
 
 
@@ -149,5 +152,11 @@ namespace Victor
 
             Display_Recipe();
         }
+
+        private void Init_App()
+        {
+            CLast.Load_LastConfig();
+        }
+
     }
 }

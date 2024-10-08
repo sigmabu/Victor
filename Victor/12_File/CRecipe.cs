@@ -14,9 +14,10 @@ namespace Victor
     {
         public string m_sGrp = "";
 
-        public string Group { get; private set; }
+        public string FullPath { get; set; }
+        public string Group { get; set; }
 
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
         private CRecipe()
         {

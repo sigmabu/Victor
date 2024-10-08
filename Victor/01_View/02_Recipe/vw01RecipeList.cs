@@ -57,6 +57,15 @@ namespace Victor
             //pnl_Menu.Controls.Clear();
         }
 
+        private void SetRecipeTitle(string sPath)
+        {
+            CRecipe.It.FullPath = sPath;
+            CRecipe.It.Group = m_sGrp;
+            CRecipe.It.Name = m_sDev + ".dev";
+
+            CLast.Save_LastConfig();
+
+        }
         private void vwAdd()
         {
             switch (m_iPage)
@@ -65,10 +74,9 @@ namespace Victor
                     pnl_Menu.Controls.Add(pnlM_Grp);
                     pnl_Menu.Controls.Add(pnlM_List);
                     pnl_Menu.Controls.Add(pnl_Btn);
+                    //lbxM_Grp.ValueMember = eRecipeTitleText.GroupName;
                     //lbxM_Grp.SelectedIndex = eRecipeTitleText.GroupName;
                     //eRecipeTitleText.FullPath = sPath;
-                    eRecipeTitleText.GroupName = m_sGrp;
-                    eRecipeTitleText.RecipeName = m_sDev + ".dev";
 
 
                     break;
@@ -509,12 +517,9 @@ namespace Victor
                 CData.RecipeCur = sPath;
                 CRecipe.It.Load(sPath, true);
 
-                eRecipeTitleText.FullPath = sPath;
-                eRecipeTitleText.GroupName = m_sGrp;
-                eRecipeTitleText.RecipeName = m_sDev + ".dev";
-
                 CRecipe.It.m_sGrp = this.m_sGrp;
                 CData.RecipeGr = CRecipe.It.m_sGrp;
+                SetRecipeTitle(sPath);
 
                 Call_ViewRecipeItem();
             }
