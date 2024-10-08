@@ -31,6 +31,7 @@ namespace Victor
         {
             InitializeComponent();
             m_vw02Item = new vw02RecipeItem("Recipe : Loader");
+            this.lbxM_Dev.DrawItem += lbxM_Dev_DrawItem;
         }
 
         public void Open()
@@ -64,20 +65,23 @@ namespace Victor
             CRecipe.It.Name = m_sDev + ".dev";
 
             CLast.Save_LastConfig();
-
+        }
+        private void GetRecipeTitle()
+        {
+            //CRecipe.It.FullPath = sPath;
+            m_sGrp = CRecipe.It.Group;
+            m_sDev = CRecipe.It.Name;
+            
         }
         private void vwAdd()
         {
             switch (m_iPage)
             {
                 case 11:
+                    GetRecipeTitle();
                     pnl_Menu.Controls.Add(pnlM_Grp);
                     pnl_Menu.Controls.Add(pnlM_List);
                     pnl_Menu.Controls.Add(pnl_Btn);
-                    //lbxM_Grp.ValueMember = eRecipeTitleText.GroupName;
-                    //lbxM_Grp.SelectedIndex = eRecipeTitleText.GroupName;
-                    //eRecipeTitleText.FullPath = sPath;
-
 
                     break;
                 case 21:
@@ -260,11 +264,15 @@ namespace Victor
                 lbxM_Grp.Items.Add(aVal[i].Name);
             }
 
+            lbxM_Grp.SelectedItem = null;
             lbxM_Grp.ClearSelected();
             lbxM_Dev.ClearSelected();
             lbxM_Dev.Items.Clear();
-            m_sGrp = "";
-            m_sDev = "";
+            //m_sGrp = "";
+            //m_sDev = "";
+
+            _RcpListUp();
+
         }
 
         private void lbxM_Grp_SelectedIndexChanged(object sender, EventArgs e)
@@ -539,7 +547,6 @@ namespace Victor
             {
                 case 1:
                     vwAdd();
-
                     break;
                 case 2:
                     label_RecipeList.Visible = false;
@@ -551,6 +558,64 @@ namespace Victor
                     //m_vwMaint.Open();
                     break;
             }
+        }
+        
+        private void lbxM_Dev_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (lbxM_Dev.Items.Count == 0)
+                return;
+            // owner draw를 사용하여 ListBox에 색칠하기
+            Brush myBrush;
+            string strText = lbxM_Dev.Items[e.Index].ToString();
+            lbxM_Dev.DrawMode = DrawMode.OwnerDrawFixed;
+
+            if (strText.Contains("ERROR") == true)
+            {
+                // ERROR문자가 있으면 붉게 칠한다.
+                myBrush = Brushes.Red;
+            }
+            //else if (strText.Contains("SUCCESS") == true)
+            else if (strText.Contains("456") == true)
+            {
+                // SUCCESS문자가 있으면 파랗게 칠한다.
+                myBrush = Brushes.Blue;
+            }
+            else
+            {
+                // 위 두가지 경우 외에는 모두 검게 칠한다.
+                myBrush = Brushes.White;
+            }
+            e.Graphics.DrawString(lbxM_Dev.Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();           
+        }
+
+        private void DrawItem_RecipeList(object sender, DrawItemEventArgs e)
+        {
+            if (lbxM_Dev.Items.Count == 0)
+                return;
+            // owner draw를 사용하여 ListBox에 색칠하기
+            Brush myBrush;
+            string strText = lbxM_Dev.Items[e.Index].ToString();
+            lbxM_Dev.DrawMode = DrawMode.OwnerDrawFixed;
+
+            if (strText.Contains("ERROR") == true)
+            {
+                // ERROR문자가 있으면 붉게 칠한다.
+                myBrush = Brushes.Red;
+            }
+            //else if (strText.Contains("SUCCESS") == true)
+            else if (strText.Contains("456") == true)
+            {
+                // SUCCESS문자가 있으면 파랗게 칠한다.
+                myBrush = Brushes.Blue;
+            }
+            else
+            {
+                // 위 두가지 경우 외에는 모두 검게 칠한다.
+                myBrush = Brushes.White;
+            }
+            e.Graphics.DrawString(lbxM_Dev.Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
         }
     }
 }

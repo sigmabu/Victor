@@ -83,8 +83,8 @@ namespace Victor
             ini.Load(_path);
 
             CRecipe.It.FullPath = ini["Recipe"]["Path"].ToString();
-            CRecipe.It.Group = ini["Recipe"]["Group"].ToString();
-            CRecipe.It.Name = ini["Recipe"]["Name"].ToString();
+            CRecipe.It.Group    = ini["Recipe"]["Group"].ToString();
+            CRecipe.It.Name     = ini["Recipe"]["Name"].ToString();
 
             temp = CRecipe.It.FullPath;
             if (temp != "")

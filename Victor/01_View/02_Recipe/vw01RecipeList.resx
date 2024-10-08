@@ -159,6 +159,117 @@
   <metadata name="label39.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="lbxM_Grp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnM_GDel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnM_GCopy.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnM_GNew.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;label39.Name" xml:space="preserve">
+    <value>label39</value>
+  </data>
+  <data name="&gt;&gt;label39.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
+    <value>pnlM_Grp</value>
+  </data>
+  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbxM_Grp.Name" xml:space="preserve">
+    <value>lbxM_Grp</value>
+  </data>
+  <data name="&gt;&gt;lbxM_Grp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbxM_Grp.Parent" xml:space="preserve">
+    <value>pnlM_Grp</value>
+  </data>
+  <data name="&gt;&gt;lbxM_Grp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>pnlM_Grp</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnM_GDel.Name" xml:space="preserve">
+    <value>btnM_GDel</value>
+  </data>
+  <data name="&gt;&gt;btnM_GDel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnM_GDel.Parent" xml:space="preserve">
+    <value>pnlM_Grp</value>
+  </data>
+  <data name="&gt;&gt;btnM_GDel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnM_GCopy.Name" xml:space="preserve">
+    <value>btnM_GCopy</value>
+  </data>
+  <data name="&gt;&gt;btnM_GCopy.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnM_GCopy.Parent" xml:space="preserve">
+    <value>pnlM_Grp</value>
+  </data>
+  <data name="&gt;&gt;btnM_GCopy.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnM_GNew.Name" xml:space="preserve">
+    <value>btnM_GNew</value>
+  </data>
+  <data name="&gt;&gt;btnM_GNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnM_GNew.Parent" xml:space="preserve">
+    <value>pnlM_Grp</value>
+  </data>
+  <data name="&gt;&gt;btnM_GNew.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pnlM_Grp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 49</value>
+  </data>
+  <data name="pnlM_Grp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>601, 604</value>
+  </data>
+  <data name="pnlM_Grp.TabIndex" type="System.Int32, mscorlib">
+    <value>187</value>
+  </data>
+  <data name="&gt;&gt;pnlM_Grp.Name" xml:space="preserve">
+    <value>pnlM_Grp</value>
+  </data>
+  <data name="&gt;&gt;pnlM_Grp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlM_Grp.Parent" xml:space="preserve">
+    <value>pnl_Menu</value>
+  </data>
+  <data name="&gt;&gt;pnlM_Grp.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="label39.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="label39.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
@@ -374,27 +485,6 @@
   </data>
   <data name="&gt;&gt;btnM_GNew.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="pnlM_Grp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 49</value>
-  </data>
-  <data name="pnlM_Grp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>601, 604</value>
-  </data>
-  <data name="pnlM_Grp.TabIndex" type="System.Int32, mscorlib">
-    <value>187</value>
-  </data>
-  <data name="&gt;&gt;pnlM_Grp.Name" xml:space="preserve">
-    <value>pnlM_Grp</value>
-  </data>
-  <data name="&gt;&gt;pnlM_Grp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlM_Grp.Parent" xml:space="preserve">
-    <value>pnl_Menu</value>
-  </data>
-  <data name="&gt;&gt;pnlM_Grp.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <metadata name="pnlM_List.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -636,6 +726,72 @@
   <metadata name="btnM_DApp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="btnM_DBcr.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnM_DCur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="&gt;&gt;btnM_DApp.Name" xml:space="preserve">
+    <value>btnM_DApp</value>
+  </data>
+  <data name="&gt;&gt;btnM_DApp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnM_DApp.Parent" xml:space="preserve">
+    <value>pnl_Btn</value>
+  </data>
+  <data name="&gt;&gt;btnM_DApp.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnM_DBcr.Name" xml:space="preserve">
+    <value>btnM_DBcr</value>
+  </data>
+  <data name="&gt;&gt;btnM_DBcr.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnM_DBcr.Parent" xml:space="preserve">
+    <value>pnl_Btn</value>
+  </data>
+  <data name="&gt;&gt;btnM_DBcr.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnM_DCur.Name" xml:space="preserve">
+    <value>btnM_DCur</value>
+  </data>
+  <data name="&gt;&gt;btnM_DCur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnM_DCur.Parent" xml:space="preserve">
+    <value>pnl_Btn</value>
+  </data>
+  <data name="&gt;&gt;btnM_DCur.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pnl_Btn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 679</value>
+  </data>
+  <data name="pnl_Btn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1219, 119</value>
+  </data>
+  <data name="pnl_Btn.TabIndex" type="System.Int32, mscorlib">
+    <value>455</value>
+  </data>
+  <data name="&gt;&gt;pnl_Btn.Name" xml:space="preserve">
+    <value>pnl_Btn</value>
+  </data>
+  <data name="&gt;&gt;pnl_Btn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl_Btn.Parent" xml:space="preserve">
+    <value>pnl_Menu</value>
+  </data>
+  <data name="&gt;&gt;pnl_Btn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="btnM_DApp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="btnM_DApp.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -743,27 +899,6 @@
   </data>
   <data name="&gt;&gt;btnM_DCur.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="pnl_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 679</value>
-  </data>
-  <data name="pnl_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1219, 119</value>
-  </data>
-  <data name="pnl_Btn.TabIndex" type="System.Int32, mscorlib">
-    <value>455</value>
-  </data>
-  <data name="&gt;&gt;pnl_Btn.Name" xml:space="preserve">
-    <value>pnl_Btn</value>
-  </data>
-  <data name="&gt;&gt;pnl_Btn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnl_Btn.Parent" xml:space="preserve">
-    <value>pnl_Menu</value>
-  </data>
-  <data name="&gt;&gt;pnl_Btn.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="pnl_Menu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

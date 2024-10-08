@@ -203,9 +203,6 @@
     <None Include="Properties\Resources\STC.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Resources\Login.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="01_View\02_Recipe\01_Gerber\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
