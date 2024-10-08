@@ -1482,13 +1482,13 @@
 </value>
   </data>
   <data name="pb_Login.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 30</value>
+    <value>171, 7</value>
   </data>
   <data name="pb_Login.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 62</value>
+    <value>78, 97</value>
   </data>
   <data name="pb_Login.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+    <value>Zoom</value>
   </data>
   <data name="pb_Login.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
