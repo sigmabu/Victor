@@ -36,6 +36,7 @@ namespace Victor
 
             string sSection = "Information";
             ini[sSection]["Name"] = rcp.sDeviceName = sPath;
+            ini[sSection]["Bool Value"]     = rcp.bSaveValue;
             ini[sSection]["Integer Value"]  = rcp.nSaveValue;
             ini[sSection]["Double Value"]   = rcp.dSaveValue;
             ini[sSection]["Last Update"]    = rcp.dtEditLast;
@@ -67,6 +68,7 @@ namespace Victor
             rcp = new mRecipe();
 
             //rcp.sDeviceName = (string.IsNullOrEmpty(rcp.sDeviceName)) ? "Default" : rcp.sDeviceName;
+            rcp.bSaveValue = false;
             rcp.nSaveValue = 0;
             rcp.dSaveValue = 0.0;
             DateTime datetime = DateTime.Now;
@@ -112,28 +114,29 @@ namespace Victor
 
             IniFile ini = new IniFile();
             sSection = GVar.ini_RecipeSection[0];
-            ini[sSection][GVar.ini_RecipeKey[0]] = rcp.sDeviceName;
-            ini[sSection][GVar.ini_RecipeKey[1]] = rcp.nSaveValue;
-            ini[sSection][GVar.ini_RecipeKey[2]] = rcp.dSaveValue;
-            ini[sSection][GVar.ini_RecipeKey[3]] = rcp.dtEditLast;
+            ini[sSection][GVar.RecipeKeyName[0][0]] = rcp.sDeviceName;
+            ini[sSection][GVar.RecipeKeyName[0][1]] = rcp.bSaveValue;
+            ini[sSection][GVar.RecipeKeyName[0][2]] = rcp.nSaveValue;
+            ini[sSection][GVar.RecipeKeyName[0][3]] = rcp.dSaveValue;
+            ini[sSection][GVar.RecipeKeyName[0][4]] = rcp.dtEditLast;
 
             sSection = GVar.ini_RecipeSection[1];
-            ini[sSection][GVar.ini_RecipeKey[0]] = rcp.C_Data.bCValue;
-            ini[sSection][GVar.ini_RecipeKey[1]] = rcp.C_Data.nCValue;
-            ini[sSection][GVar.ini_RecipeKey[2]] = rcp.C_Data.dCValue;
-            ini[sSection][GVar.ini_RecipeKey[3]] = rcp.C_Data.sCValue;
+            ini[sSection][GVar.RecipeKeyName[1][0]] = rcp.C_Data.bCValue;
+            ini[sSection][GVar.RecipeKeyName[1][1]] = rcp.C_Data.nCValue;
+            ini[sSection][GVar.RecipeKeyName[1][2]] = rcp.C_Data.dCValue;
+            ini[sSection][GVar.RecipeKeyName[1][3]] = rcp.C_Data.sCValue;
 
             sSection = GVar.ini_RecipeSection[2];
-            ini[sSection][GVar.ini_RecipeKey[0]] = rcp.L_Data.bLValue;
-            ini[sSection][GVar.ini_RecipeKey[1]] = rcp.L_Data.nLValue;
-            ini[sSection][GVar.ini_RecipeKey[2]] = rcp.L_Data.dLValue;
-            ini[sSection][GVar.ini_RecipeKey[3]] = rcp.L_Data.sLValue;
+            ini[sSection][GVar.RecipeKeyName[2][0]] = rcp.L_Data.bLValue;
+            ini[sSection][GVar.RecipeKeyName[2][1]] = rcp.L_Data.nLValue;
+            ini[sSection][GVar.RecipeKeyName[2][2]] = rcp.L_Data.dLValue;
+            ini[sSection][GVar.RecipeKeyName[2][3]] = rcp.L_Data.sLValue;
 
             sSection = GVar.ini_RecipeSection[3];
-            ini[sSection][GVar.ini_RecipeKey[0]] = rcp.Ul_Data.bULValue;
-            ini[sSection][GVar.ini_RecipeKey[1]] = rcp.Ul_Data.nULValue;
-            ini[sSection][GVar.ini_RecipeKey[2]] = rcp.Ul_Data.dULValue;
-            ini[sSection][GVar.ini_RecipeKey[3]] = rcp.Ul_Data.sULValue;
+            ini[sSection][GVar.RecipeKeyName[3][0]] = rcp.Ul_Data.bULValue;
+            ini[sSection][GVar.RecipeKeyName[3][1]] = rcp.Ul_Data.nULValue;
+            ini[sSection][GVar.RecipeKeyName[3][2]] = rcp.Ul_Data.dULValue;
+            ini[sSection][GVar.RecipeKeyName[3][3]] = rcp.Ul_Data.sULValue;
 
             ini.Save(sPath);
             CLast.Save();
@@ -171,28 +174,29 @@ namespace Victor
             CData.Recipe.dtEditLast = File.GetLastWriteTime(sPath).ToString();
 
             sSection = GVar.ini_RecipeSection[0];
-            bool.TryParse  (mIni.Read(sSection, GVar.ini_RecipeKey[0]), out CData.Recipe.bSaveValue);
-            int.TryParse   (mIni.Read(sSection, GVar.ini_RecipeKey[1]), out CData.Recipe.nSaveValue);
-            double.TryParse(mIni.Read(sSection, GVar.ini_RecipeKey[2]), out CData.Recipe.dSaveValue);
-            CData.Recipe.dtEditLast = mIni.Read(sSection, GVar.ini_RecipeKey[3]);
+            CData.Recipe.sDeviceName = mIni.Read(sSection, GVar.RecipeKeyName[0][0]);
+            bool.TryParse  (mIni.Read(sSection, GVar.RecipeKeyName[0][1]), out CData.Recipe.bSaveValue);
+            int.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[0][2]), out CData.Recipe.nSaveValue);
+            double.TryParse(mIni.Read(sSection, GVar.RecipeKeyName[0][3]), out CData.Recipe.dSaveValue);
+            CData.Recipe.dtEditLast = mIni.Read(sSection, GVar.RecipeKeyName[0][4]);
 
             sSection = GVar.ini_RecipeSection[1];
-            bool.TryParse(mIni.Read(sSection, GVar.ini_RecipeKey[0]), out CData.Recipe.C_Data.bCValue);
-            int.TryParse(mIni.Read(sSection, GVar.ini_RecipeKey[1]), out CData.Recipe.C_Data.nCValue);
-            double.TryParse(mIni.Read(sSection, GVar.ini_RecipeKey[2]), out CData.Recipe.C_Data.dCValue);
-            CData.Recipe.C_Data.sCValue = mIni.Read(sSection, GVar.ini_RecipeKey[3]);
+            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[1][0]), out CData.Recipe.C_Data.bCValue);
+            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[1][1]), out CData.Recipe.C_Data.nCValue);
+            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[1][2]), out CData.Recipe.C_Data.dCValue);
+            CData.Recipe.C_Data.sCValue = mIni.Read(sSection, GVar.RecipeKeyName[1][3]);
 
             sSection = GVar.ini_RecipeSection[2];
-            bool.TryParse   (mIni.Read(sSection, GVar.ini_RecipeKey[0]), out CData.Recipe.L_Data.bLValue);
-            int.TryParse    (mIni.Read(sSection, GVar.ini_RecipeKey[1]), out CData.Recipe.L_Data.nLValue);
-            double.TryParse (mIni.Read(sSection, GVar.ini_RecipeKey[2]), out CData.Recipe.L_Data.dLValue);
-            CData.Recipe.L_Data.sLValue = mIni.Read(sSection, GVar.ini_RecipeKey[3]);
+            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[2][0]), out CData.Recipe.L_Data.bLValue);
+            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[2][1]), out CData.Recipe.L_Data.nLValue);
+            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[2][2]), out CData.Recipe.L_Data.dLValue);
+            CData.Recipe.L_Data.sLValue = mIni.Read(sSection, GVar.RecipeKeyName[2][3]);
 
             sSection = GVar.ini_RecipeSection[3];
-            bool.TryParse   (mIni.Read(sSection, GVar.ini_RecipeKey[0]), out CData.Recipe.Ul_Data.bULValue);
-            int.TryParse    (mIni.Read(sSection, GVar.ini_RecipeKey[1]), out CData.Recipe.Ul_Data.nULValue);
-            double.TryParse (mIni.Read(sSection, GVar.ini_RecipeKey[2]), out CData.Recipe.Ul_Data.dULValue);
-            CData.Recipe.Ul_Data.sULValue = mIni.Read(sSection, GVar.ini_RecipeKey[3]);
+            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[3][0]), out CData.Recipe.Ul_Data.bULValue);
+            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[3][1]), out CData.Recipe.Ul_Data.nULValue);
+            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[3][2]), out CData.Recipe.Ul_Data.dULValue);
+            CData.Recipe.Ul_Data.sULValue = mIni.Read(sSection, GVar.RecipeKeyName[3][3]);
             return iRet;
         }
     }

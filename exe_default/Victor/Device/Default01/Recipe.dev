@@ -1,0 +1,25 @@
+[Information]
+Name=D:\01_Source\Victor\exe_default\Victor\Device\Default\Recipe.dev
+Bool Value=False
+Integer Value=0
+Double Value=0
+Last Update=24-10-09,수 오후 4:42:31
+
+[Common]
+Bool Value=False
+Integer Value=1
+Double Value=1
+string Value=Common = 1.0
+
+[Loader]
+Bool Value=False
+Integer Value=2
+Double Value=2
+string Value=Loader = 2.0
+
+[Unloader]
+Bool Value=False
+Integer Value=3
+Double Value=3
+string Value=UnLoader = 3.0
+

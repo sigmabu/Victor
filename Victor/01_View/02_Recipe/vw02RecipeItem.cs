@@ -10,15 +10,13 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Microsoft.VisualBasic.FileIO;
 using Victor;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.Button;
 
 
 namespace Victor
 {
     public partial class vw02RecipeItem : UserControl
     {
-        public event MoveToMenuEventHandler OnMoveBack;
-        public event MoveToMenuEventHandler OnGoToPosition;
         private string m_sTitle;
 
         private int m_iPage = 1;
@@ -40,12 +38,12 @@ namespace Victor
             int nRcpGroup = Convert.ToInt32(eRecipGroup.End);
 
             int nBtnMargin = 0;
-            int nBtn_w = 172;
+            int nBtn_w = 133;
             int nBtn_h = 72;
             int nBtn_s = 80;
-            int nBtn_Px = 1095;
+            int nBtn_Px = 5;// 1138;// 1095;
             int nBtn_Py = 35;
-            
+
             Button[] btn = new Button[nRcpGroup];
             for (int i = 0; i < nRcpGroup; i++)
             {
@@ -60,14 +58,44 @@ namespace Victor
                 btn[i].Text = EnumToString((eRecipGroup)i);
                 btn[i].Size = new Size( nBtn_w, nBtn_h);
                 btn[i].Location = new Point(nBtn_Px , nBtn_Py + (nBtn_s * i));
-                btn[i].Click += btn_Click;
+                btn[i].Click += Click_SectionMenu;
 
-                Pnl_Item.Controls.Add(btn[i]);
+                Pnl_Button.Controls.Add(btn[i]);
             }
         }
-        private void btn_Click(object sender, EventArgs e)
+        private void Click_SectionMenu(object sender, EventArgs e)
         {
             Button button = sender as Button;
+            
+            if (button.Text == EnumToString((eRecipGroup)1))
+            {
+                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
+                m_sTitle = "Recipe : " + button.Text;
+                label_RecipeItem.Text = m_sTitle;
+                Load_CommonData();
+            }
+            else if (button.Text == EnumToString((eRecipGroup)2))
+            {
+                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
+                m_sTitle = "Recipe : " + button.Text;
+                label_RecipeItem.Text = m_sTitle;
+                label_RecipeItem.Text = m_sTitle;
+                Load_LoaderData();
+            }
+            else if (button.Text == EnumToString((eRecipGroup)3))
+            {
+                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
+                m_sTitle = "Recipe : " + button.Text;
+                label_RecipeItem.Text = m_sTitle;
+                Load_UnloaderData();
+            }
+            else //if(button.Text == EnumToString((eRecipGroup)0))
+            {
+                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
+                m_sTitle = "Recipe : " + button.Text;
+                label_RecipeItem.Text = m_sTitle;
+                Load_InformationData();
+            }
             MessageBox.Show(button.Text + "번 버튼이 눌렸습니다.");
         }
 
@@ -102,7 +130,7 @@ namespace Victor
                 case 1:
 
                     //pnl_Base.Controls.Add(Pnl_Item);
-
+                    Load_InformationData();
 
                     break;
             //    case 2:
@@ -152,26 +180,77 @@ namespace Victor
             //}
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void Load_InformationData()
         {
-            this.OnMoveBack?.Invoke();
+            checkBox1.Text = GVar.RecipeKeyName[0][1]; checkBox1.Checked = (CData.Recipe.bSaveValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[0][2]; textBox2.Text = string.Format("{0}", CData.Recipe.nSaveValue);
+            label3.Text = GVar.RecipeKeyName[0][3]; textBox3.Text = string.Format("{0}", CData.Recipe.dSaveValue);
+            //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.Recipe.nSaveValue);
         }
 
-        private void btnPosition_Click(object sender, EventArgs e)
+        private void Get_InformationData()
         {
-            this.OnGoToPosition?.Invoke();
+            CData.Recipe.bSaveValue = (checkBox1.Checked == false) ? false : true;
+            CData.Recipe.nSaveValue = int.Parse(textBox2.Text);
+            CData.Recipe.dSaveValue = int.Parse(textBox3.Text);
+            //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.Recipe.nSaveValue);
         }
 
-        private void radio_Save_CheckedChanged(object sender, EventArgs e)
+
+        private void Load_CommonData()
         {
+            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
+            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
+            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
         }
 
         private void Get_CommonData()
         {
-            //checkBox1.Name = CData.Recipe.C_Data.
-            checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false)? false: true;
+            CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
+            CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
+            CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
+            CData.Recipe.C_Data.sCValue = textBox4.Text;
+        }
 
+        private void Load_LoaderData()
+        {
+            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
+            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
+            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
+        }
 
+        private void Get_LoaderData()
+        {
+            CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
+            CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
+            CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
+            CData.Recipe.C_Data.sCValue = textBox4.Text;
+        }
+
+        private void Load_UnloaderData()
+        {
+            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
+            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
+            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
+        }
+
+        private void Get_UnloaderData()
+        {
+            CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
+            CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
+            CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
+            CData.Recipe.C_Data.sCValue = textBox4.Text;
+        }
+
+        private void Click_Save(object sender, EventArgs e)
+        {
+            Get_InformationData();
+            Get_CommonData();
+            CRecipe.It.Save(CRecipe.It.FullPath);
+            CRecipe.It.Load(CRecipe.It.FullPath);
         }
     }
 }

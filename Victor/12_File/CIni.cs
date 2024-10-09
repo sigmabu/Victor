@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
@@ -48,12 +49,18 @@ namespace Victor
             //if (strPath.Contains(".ini") == false)
             //    strPath += ".ini";
 
+            int nCount = 0;
             m_sPath = sPath;
+            if (ExistINI() == false) return;
 
             GVar.ini_RecipeSection = GetSectionNames(m_sPath);
             foreach (string str in GVar.ini_RecipeSection)
             {
                 GVar.ini_RecipeKey = GetEntryNames(m_sPath, str);
+                GVar.RecipeKeyName[nCount] = new string[] { };
+                GVar.RecipeKeyName[nCount] = GetEntryNames(m_sPath, str);
+
+                nCount++;
             }
         }
 

@@ -39,6 +39,7 @@ public class GVar
     /// </summary>
     public static string[] ini_RecipeSection { get; set; }
     public static string[] ini_RecipeKey { get; set; }
+    public static string[][] RecipeKeyName = new string[100][];
 
 }
 
