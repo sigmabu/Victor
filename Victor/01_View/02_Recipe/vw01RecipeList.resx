@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="label_RecipeList.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label_RecipeList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
@@ -153,126 +156,6 @@
   <data name="&gt;&gt;label_RecipeList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="pnlM_Grp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label39.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lbxM_Grp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnM_GDel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnM_GCopy.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="btnM_GNew.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="&gt;&gt;label39.Name" xml:space="preserve">
-    <value>label39</value>
-  </data>
-  <data name="&gt;&gt;label39.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label39.Parent" xml:space="preserve">
-    <value>pnlM_Grp</value>
-  </data>
-  <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbxM_Grp.Name" xml:space="preserve">
-    <value>lbxM_Grp</value>
-  </data>
-  <data name="&gt;&gt;lbxM_Grp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbxM_Grp.Parent" xml:space="preserve">
-    <value>pnlM_Grp</value>
-  </data>
-  <data name="&gt;&gt;lbxM_Grp.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>pnlM_Grp</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnM_GDel.Name" xml:space="preserve">
-    <value>btnM_GDel</value>
-  </data>
-  <data name="&gt;&gt;btnM_GDel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnM_GDel.Parent" xml:space="preserve">
-    <value>pnlM_Grp</value>
-  </data>
-  <data name="&gt;&gt;btnM_GDel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnM_GCopy.Name" xml:space="preserve">
-    <value>btnM_GCopy</value>
-  </data>
-  <data name="&gt;&gt;btnM_GCopy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnM_GCopy.Parent" xml:space="preserve">
-    <value>pnlM_Grp</value>
-  </data>
-  <data name="&gt;&gt;btnM_GCopy.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;btnM_GNew.Name" xml:space="preserve">
-    <value>btnM_GNew</value>
-  </data>
-  <data name="&gt;&gt;btnM_GNew.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnM_GNew.Parent" xml:space="preserve">
-    <value>pnlM_Grp</value>
-  </data>
-  <data name="&gt;&gt;btnM_GNew.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pnlM_Grp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 49</value>
-  </data>
-  <data name="pnlM_Grp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>601, 604</value>
-  </data>
-  <data name="pnlM_Grp.TabIndex" type="System.Int32, mscorlib">
-    <value>187</value>
-  </data>
-  <data name="&gt;&gt;pnlM_Grp.Name" xml:space="preserve">
-    <value>pnlM_Grp</value>
-  </data>
-  <data name="&gt;&gt;pnlM_Grp.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnlM_Grp.Parent" xml:space="preserve">
-    <value>pnl_Menu</value>
-  </data>
-  <data name="&gt;&gt;pnlM_Grp.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="label39.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label39.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <data name="label39.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt, style=Bold</value>
   </data>
@@ -280,10 +163,10 @@
     <value>NoControl</value>
   </data>
   <data name="label39.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 4</value>
+    <value>0, 7</value>
   </data>
   <data name="label39.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 30</value>
+    <value>598, 30</value>
   </data>
   <data name="label39.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -306,9 +189,6 @@
   <data name="&gt;&gt;label39.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="lbxM_Grp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lbxM_Grp.ItemHeight" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
@@ -325,7 +205,7 @@
     <value>10, 50</value>
   </data>
   <data name="lbxM_Grp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>563, 422</value>
+    <value>574, 422</value>
   </data>
   <data name="lbxM_Grp.TabIndex" type="System.Int32, mscorlib">
     <value>186</value>
@@ -342,12 +222,6 @@
   <data name="&gt;&gt;lbxM_Grp.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt, style=Bold</value>
   </data>
@@ -358,7 +232,7 @@
     <value>0, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>599, 4</value>
+    <value>598, 5</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>185</value>
@@ -486,14 +360,26 @@
   <data name="&gt;&gt;btnM_GNew.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <metadata name="pnlM_List.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="pnlM_Grp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 49</value>
+  </data>
+  <data name="pnlM_Grp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>600, 600</value>
+  </data>
+  <data name="pnlM_Grp.TabIndex" type="System.Int32, mscorlib">
+    <value>187</value>
+  </data>
+  <data name="&gt;&gt;pnlM_Grp.Name" xml:space="preserve">
+    <value>pnlM_Grp</value>
+  </data>
+  <data name="&gt;&gt;pnlM_Grp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlM_Grp.Parent" xml:space="preserve">
+    <value>pnl_Menu</value>
+  </data>
+  <data name="&gt;&gt;pnlM_Grp.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt, style=Bold</value>
@@ -502,10 +388,10 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 4</value>
+    <value>0, 7</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 30</value>
+    <value>598, 30</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>58</value>
@@ -528,17 +414,14 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="lbxM_Dev.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="lbxM_Dev.ItemHeight" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
   <data name="lbxM_Dev.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 52</value>
+    <value>10, 50</value>
   </data>
   <data name="lbxM_Dev.Size" type="System.Drawing.Size, System.Drawing">
-    <value>540, 422</value>
+    <value>574, 422</value>
   </data>
   <data name="lbxM_Dev.TabIndex" type="System.Int32, mscorlib">
     <value>454</value>
@@ -555,12 +438,6 @@
   <data name="&gt;&gt;lbxM_Dev.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="label3.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="label3.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10pt, style=Bold</value>
   </data>
@@ -571,7 +448,7 @@
     <value>0, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>581, 4</value>
+    <value>598, 4</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>188</value>
@@ -700,10 +577,10 @@
     <value>5</value>
   </data>
   <data name="pnlM_List.Location" type="System.Drawing.Point, System.Drawing">
-    <value>674, 49</value>
+    <value>654, 49</value>
   </data>
   <data name="pnlM_List.Size" type="System.Drawing.Size, System.Drawing">
-    <value>583, 601</value>
+    <value>600, 600</value>
   </data>
   <data name="pnlM_List.TabIndex" type="System.Int32, mscorlib">
     <value>454</value>
@@ -726,9 +603,6 @@
   <metadata name="btnM_DApp.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="btnM_DBcr.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <metadata name="btnM_DCur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -744,18 +618,6 @@
   <data name="&gt;&gt;btnM_DApp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;btnM_DBcr.Name" xml:space="preserve">
-    <value>btnM_DBcr</value>
-  </data>
-  <data name="&gt;&gt;btnM_DBcr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnM_DBcr.Parent" xml:space="preserve">
-    <value>pnl_Btn</value>
-  </data>
-  <data name="&gt;&gt;btnM_DBcr.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="&gt;&gt;btnM_DCur.Name" xml:space="preserve">
     <value>btnM_DCur</value>
   </data>
@@ -766,13 +628,13 @@
     <value>pnl_Btn</value>
   </data>
   <data name="&gt;&gt;btnM_DCur.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="pnl_Btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 679</value>
+    <value>18, 679</value>
   </data>
   <data name="pnl_Btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1219, 119</value>
+    <value>1235, 119</value>
   </data>
   <data name="pnl_Btn.TabIndex" type="System.Int32, mscorlib">
     <value>455</value>
@@ -802,7 +664,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnM_DApp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>510, 27</value>
+    <value>184, 14</value>
   </data>
   <data name="btnM_DApp.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 78</value>
@@ -825,45 +687,6 @@
   <data name="&gt;&gt;btnM_DApp.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="btnM_DBcr.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnM_DBcr.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnM_DBcr.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 9pt, style=Bold</value>
-  </data>
-  <data name="btnM_DBcr.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnM_DBcr.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 27</value>
-  </data>
-  <data name="btnM_DBcr.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 78</value>
-  </data>
-  <data name="btnM_DBcr.TabIndex" type="System.Int32, mscorlib">
-    <value>190</value>
-  </data>
-  <data name="btnM_DBcr.Text" xml:space="preserve">
-    <value>INPUT BARCODE READ</value>
-  </data>
-  <data name="btnM_DBcr.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnM_DBcr.Name" xml:space="preserve">
-    <value>btnM_DBcr</value>
-  </data>
-  <data name="&gt;&gt;btnM_DBcr.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnM_DBcr.Parent" xml:space="preserve">
-    <value>pnl_Btn</value>
-  </data>
-  <data name="&gt;&gt;btnM_DBcr.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="btnM_DCur.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -877,7 +700,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnM_DCur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>880, 27</value>
+    <value>783, 14</value>
   </data>
   <data name="btnM_DCur.Size" type="System.Drawing.Size, System.Drawing">
     <value>208, 78</value>
@@ -898,11 +721,8 @@
     <value>pnl_Btn</value>
   </data>
   <data name="&gt;&gt;btnM_DCur.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
-  <metadata name="pnl_Menu.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="pnl_Menu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>

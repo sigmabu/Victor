@@ -42,8 +42,9 @@ namespace Victor
 
             _GrpListUp();
             
-            //pnl_Menu.Visible = true;
-            //label_RecipeList.BringToFront();
+            // 초기 ListBox Data 설정
+            lbxM_Grp.SelectedItem = CRecipe.It.Group;
+            lbxM_Dev.SelectedItem = CRecipe.It.Name.Replace(".dev", "");
         }
 
         private void hideMenu()
@@ -270,9 +271,7 @@ namespace Victor
             lbxM_Dev.Items.Clear();
             //m_sGrp = "";
             //m_sDev = "";
-
             _RcpListUp();
-
         }
 
         private void lbxM_Grp_SelectedIndexChanged(object sender, EventArgs e)
@@ -480,8 +479,9 @@ namespace Victor
             }
 
             lbxM_Dev.ClearSelected();
-            m_sDev = "";
-            btnM_DApp.Enabled = false;
+            //lbxM_Dev.SelectedItem = m_sDev;
+            //m_sDev = "";
+            //btnM_DApp.Enabled = false;
         }
 
         private void lbxM_Dev_SelectedIndexChanged(object sender, EventArgs e)
@@ -562,59 +562,19 @@ namespace Victor
         
         private void lbxM_Dev_DrawItem(object sender, DrawItemEventArgs e)
         {
-            if (lbxM_Dev.Items.Count == 0)
-                return;
-            // owner draw를 사용하여 ListBox에 색칠하기
-            Brush myBrush;
-            string strText = lbxM_Dev.Items[e.Index].ToString();
-            lbxM_Dev.DrawMode = DrawMode.OwnerDrawFixed;
+            if (e.Index < 0) { return; }
 
-            if (strText.Contains("ERROR") == true)
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
             {
-                // ERROR문자가 있으면 붉게 칠한다.
-                myBrush = Brushes.Red;
+                e = new DrawItemEventArgs(e.Graphics, e.Font, e.Bounds, e.Index, e.State ^ DrawItemState.Selected, e.ForeColor, Color.DarkCyan);
             }
-            //else if (strText.Contains("SUCCESS") == true)
-            else if (strText.Contains("456") == true)
-            {
-                // SUCCESS문자가 있으면 파랗게 칠한다.
-                myBrush = Brushes.Blue;
-            }
-            else
-            {
-                // 위 두가지 경우 외에는 모두 검게 칠한다.
-                myBrush = Brushes.White;
-            }
-            e.Graphics.DrawString(lbxM_Dev.Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
-            e.DrawFocusRectangle();           
-        }
 
-        private void DrawItem_RecipeList(object sender, DrawItemEventArgs e)
-        {
-            if (lbxM_Dev.Items.Count == 0)
-                return;
-            // owner draw를 사용하여 ListBox에 색칠하기
-            Brush myBrush;
-            string strText = lbxM_Dev.Items[e.Index].ToString();
-            lbxM_Dev.DrawMode = DrawMode.OwnerDrawFixed;
+            ListBox mLbx = sender as ListBox;
+            int iX = e.Bounds.X + (e.Font.Height / 2);
+            int iY = e.Bounds.Y + (e.Font.Height / 2);
 
-            if (strText.Contains("ERROR") == true)
-            {
-                // ERROR문자가 있으면 붉게 칠한다.
-                myBrush = Brushes.Red;
-            }
-            //else if (strText.Contains("SUCCESS") == true)
-            else if (strText.Contains("456") == true)
-            {
-                // SUCCESS문자가 있으면 파랗게 칠한다.
-                myBrush = Brushes.Blue;
-            }
-            else
-            {
-                // 위 두가지 경우 외에는 모두 검게 칠한다.
-                myBrush = Brushes.White;
-            }
-            e.Graphics.DrawString(lbxM_Dev.Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
+            e.DrawBackground();
+            e.Graphics.DrawString(mLbx.Items[e.Index].ToString(), e.Font, Brushes.White, iX, iY, StringFormat.GenericDefault);
             e.DrawFocusRectangle();
         }
     }

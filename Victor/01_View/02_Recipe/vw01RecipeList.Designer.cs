@@ -46,7 +46,6 @@
             this.btnM_DNew = new System.Windows.Forms.Button();
             this.pnl_Btn = new System.Windows.Forms.Panel();
             this.btnM_DApp = new System.Windows.Forms.Button();
-            this.btnM_DBcr = new System.Windows.Forms.Button();
             this.btnM_DCur = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
             this.pnlM_Grp.SuspendLayout();
@@ -160,7 +159,6 @@
             // 
             this.lbxM_Dev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.lbxM_Dev.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbxM_Dev.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lbxM_Dev.ForeColor = System.Drawing.Color.White;
             this.lbxM_Dev.FormattingEnabled = true;
             resources.ApplyResources(this.lbxM_Dev, "lbxM_Dev");
@@ -169,7 +167,7 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(166)))), ((int)(((byte)(255)))));
+            this.label3.BackColor = System.Drawing.Color.Gray;
             resources.ApplyResources(this.label3, "label3");
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Name = "label3";
@@ -212,7 +210,6 @@
             this.pnl_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pnl_Btn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Btn.Controls.Add(this.btnM_DApp);
-            this.pnl_Btn.Controls.Add(this.btnM_DBcr);
             this.pnl_Btn.Controls.Add(this.btnM_DCur);
             resources.ApplyResources(this.pnl_Btn, "pnl_Btn");
             this.pnl_Btn.Name = "pnl_Btn";
@@ -228,17 +225,6 @@
             this.btnM_DApp.Tag = "2";
             this.btnM_DApp.UseVisualStyleBackColor = false;
             this.btnM_DApp.Click += new System.EventHandler(this.btnM_DApp_Click);
-            // 
-            // btnM_DBcr
-            // 
-            this.btnM_DBcr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btnM_DBcr.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            resources.ApplyResources(this.btnM_DBcr, "btnM_DBcr");
-            this.btnM_DBcr.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnM_DBcr.Name = "btnM_DBcr";
-            this.btnM_DBcr.TabStop = false;
-            this.btnM_DBcr.Tag = "1";
-            this.btnM_DBcr.UseVisualStyleBackColor = false;
             // 
             // btnM_DCur
             // 
@@ -294,7 +280,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnl_Btn;
         private System.Windows.Forms.Button btnM_DApp;
-        private System.Windows.Forms.Button btnM_DBcr;
         private System.Windows.Forms.Button btnM_DCur;
         private System.Windows.Forms.Panel pnl_Menu;
         private System.Windows.Forms.Label label1;
