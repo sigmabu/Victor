@@ -24,7 +24,7 @@ namespace Victor
 
     public class CLast
     {
-        private static string _path = CGvar.PATH_CONFIG + "LastStatus.cfg";
+        private static string _path = GVar.PATH_CONFIG + "LastStatus.cfg";
         private static TLastStatus tLast = new TLastStatus();
 
         private static void _Init()

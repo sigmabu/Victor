@@ -3,10 +3,32 @@ using System.Collections;
 using System.Drawing;
 
 
+public struct TCommon
+{
+    public bool bCValue;
+    public int  nCValue;
+    public double dCValue;
+    public string sCValue;
+}
+public struct TLoader
+{
+    public bool bLValue;
+    public int nLValue;
+    public double dLValue;
+    public string sLValue;
+}
+
+public struct TUnloader
+{
+    public bool bULValue;
+    public int nULValue;
+    public double dULValue;
+    public string sULValue;
+}
 /// <summary>
 /// 디바이스 전체적인 구조체
 /// </summary>
-public struct tRecipe
+public struct mRecipe
 {
     /// <summary>
     /// 디바이스 이름
@@ -33,6 +55,10 @@ public struct tRecipe
     /// </summary>
     public string dtEditLast;
 
+    public TCommon C_Data;
+    public TLoader L_Data;
+    public TUnloader Ul_Data;
+
     public object GetVal(string name)
     {
         return GetType().GetField(name).GetValue(this);
@@ -48,7 +74,7 @@ public struct tRecipe
     {
         object obj = this;
         GetType().GetField(name).SetValue(obj, val);
-        this = (tRecipe)obj;
+        this = (mRecipe)obj;
     }
 
     public void SetVal(string name, object val, int index)
@@ -57,6 +83,7 @@ public struct tRecipe
         IList arr = (IList)GetType().GetField(name).GetValue(obj);
         arr[index] = val;
         GetType().GetField(name).SetValue(obj, arr);
-        this = (tRecipe)obj;
+        this = (mRecipe)obj;
     }
+
 }

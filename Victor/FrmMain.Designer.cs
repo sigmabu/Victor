@@ -90,6 +90,7 @@
             this.rdb_Maint.Tag = "31";
             this.rdb_Maint.UseVisualStyleBackColor = false;
             this.rdb_Maint.CheckedChanged += new System.EventHandler(this.rdb_Menu_CheckedChanged);
+            this.rdb_Maint.Click += new System.EventHandler(this.Click_MenuRadioButton);
             // 
             // rdb_Main
             // 
@@ -102,6 +103,7 @@
             this.rdb_Main.Tag = "11";
             this.rdb_Main.UseVisualStyleBackColor = false;
             this.rdb_Main.CheckedChanged += new System.EventHandler(this.rdb_Menu_CheckedChanged);
+            this.rdb_Main.Click += new System.EventHandler(this.Click_MenuRadioButton);
             // 
             // rdb_Recie
             // 
@@ -114,6 +116,7 @@
             this.rdb_Recie.Tag = "21";
             this.rdb_Recie.UseVisualStyleBackColor = false;
             this.rdb_Recie.CheckedChanged += new System.EventHandler(this.rdb_Menu_CheckedChanged);
+            this.rdb_Recie.Click += new System.EventHandler(this.Click_MenuRadioButton);
             // 
             // pnl_Base
             // 

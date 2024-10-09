@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Microsoft.VisualBasic.FileIO;
 using Victor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 
 namespace Victor
@@ -137,18 +138,18 @@ namespace Victor
 
         private void rdb_SubMenu_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton mRdb = sender as RadioButton;
-            int iNext = int.Parse(mRdb.Tag.ToString());
+            //RadioButton mRdb = sender as RadioButton;
+            //int iNext = int.Parse(mRdb.Tag.ToString());
 
 
-            if (m_iPage != iNext)
-            {
-                _VwClr();
+            //if (m_iPage != iNext)
+            //{
+            //    _VwClr();
 
-                m_iPage = iNext;
+            //    m_iPage = iNext;
 
-                _VwAdd();
-            }
+            //    _VwAdd();
+            //}
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -161,5 +162,16 @@ namespace Victor
             this.OnGoToPosition?.Invoke();
         }
 
+        private void radio_Save_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void Get_CommonData()
+        {
+            //checkBox1.Name = CData.Recipe.C_Data.
+            checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false)? false: true;
+
+
+        }
     }
 }

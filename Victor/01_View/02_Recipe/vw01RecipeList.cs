@@ -20,31 +20,27 @@ namespace Victor
         public delegate void ListEvt(bool bVal);
         public event ListEvt GoParm;
         private string m_sGrp;
-
         private string m_sDev;
-        //private FrmMain m_vwFrmMain = new FrmMain();
-        private vw02RecipeItem m_vw02Item = new vw02RecipeItem("Recipe Loader");
 
-        private int m_iPage = 0;
+        private vw02RecipeItem m_vw02Item = new vw02RecipeItem("Recipe : " + eRecipGroup.Common.ToString());
 
         public vw01RecipeList()
         {
-            InitializeComponent();
-            m_vw02Item = new vw02RecipeItem("Recipe : Loader");
+            InitializeComponent();            
             this.lbxM_Dev.DrawItem += lbxM_Dev_DrawItem;
         }
 
         public void Open()
         {
-            m_iPage = 11;
+            GVar.m_iPage = 21;
             vwAdd();
             hideMenu();
 
             _GrpListUp();
             
             // 초기 ListBox Data 설정
-            lbxM_Grp.SelectedItem = CRecipe.It.Group;
-            lbxM_Dev.SelectedItem = CRecipe.It.Name.Replace(".dev", "");
+            lbxM_Grp.SelectedItem = (string.IsNullOrEmpty(CRecipe.It.Group) == false) ? CRecipe.It.Group : "Empty";
+            lbxM_Dev.SelectedItem = (string.IsNullOrEmpty(CRecipe.It.Name) == false) ? CRecipe.It.Name.Replace(".dev", "") : "Empty";
         }
 
         private void hideMenu()
@@ -76,16 +72,17 @@ namespace Victor
         }
         private void vwAdd()
         {
-            switch (m_iPage)
+            switch (GVar.m_iPage)
             {
-                case 11:
+                case 21:
+                    pnl_Menu.Controls.Clear();
                     GetRecipeTitle();
                     pnl_Menu.Controls.Add(pnlM_Grp);
                     pnl_Menu.Controls.Add(pnlM_List);
                     pnl_Menu.Controls.Add(pnl_Btn);
 
                     break;
-                case 21:
+                case 22:
                     //m_vw02Prm.Open();
                     //pnl_Base.Controls.Add(m_vw02Prm);
                     break;
@@ -127,7 +124,7 @@ namespace Victor
             BeginInvoke(new Action(() => mBtn.Enabled = false));
             string sInput;
 
-            string sPath = CGvar.PATH_DEVICE;
+            string sPath = GVar.PATH_DEVICE;
 
             try
             {
@@ -181,10 +178,10 @@ namespace Victor
                 {
                     if (mForm.ShowDialog() == DialogResult.OK)
                     {
-                        sSrc = CGvar.PATH_DEVICE + lbxM_Grp.SelectedItem.ToString();
-                        sDst = CGvar.PATH_DEVICE + mForm.Val;
+                        sSrc = GVar.PATH_DEVICE + lbxM_Grp.SelectedItem.ToString();
+                        sDst = GVar.PATH_DEVICE + mForm.Val;
 
-                        if (Directory.Exists(CGvar.PATH_DEVICE + mForm.Val))
+                        if (Directory.Exists(GVar.PATH_DEVICE + mForm.Val))
                         {
                             Form_Msg mMsg = new Form_Msg("ExistGroupName", "Group name exist !!!", eMsg.Error);
                             mMsg.ShowDialog();
@@ -213,7 +210,7 @@ namespace Victor
             Button mBtn = sender as Button;
             BeginInvoke(new Action(() => mBtn.Enabled = false));
 
-            string sPath = CGvar.PATH_DEVICE;
+            string sPath = GVar.PATH_DEVICE;
             string sText;
             Form_Msg mMsg;
 
@@ -237,6 +234,7 @@ namespace Victor
                     }
                 }
                 _GrpListUp();
+                btnM_DApp.Enabled = false;
             }
             catch (Exception err)
             {
@@ -253,11 +251,11 @@ namespace Victor
             int iCnt = 0;
             DirectoryInfo[] aVal;
 
-            if (!Directory.Exists(CGvar.PATH_DEVICE))
-            { Directory.CreateDirectory(CGvar.PATH_DEVICE); }
+            if (!Directory.Exists(GVar.PATH_DEVICE))
+            { Directory.CreateDirectory(GVar.PATH_DEVICE); }
 
             lbxM_Grp.Items.Clear();
-            DirectoryInfo mFile = new DirectoryInfo(CGvar.PATH_DEVICE);
+            DirectoryInfo mFile = new DirectoryInfo(GVar.PATH_DEVICE);
             aVal = mFile.GetDirectories();
             iCnt = aVal.Length;
             for (int i = 0; i < iCnt; i++)
@@ -290,7 +288,7 @@ namespace Victor
             BeginInvoke(new Action(() => mBtn.Enabled = false));
             Form_Msg mMsg;
             string sInput;
-            string sPath = CGvar.PATH_DEVICE;
+            string sPath = GVar.PATH_DEVICE;
 
             try
             {
@@ -325,10 +323,9 @@ namespace Victor
                         return;
                     }
                     sPath += mForm.Val + ".dev";
-                    tRecipe tRcp;
-                    CRecipe.It.InitRecipe(out tRcp);
-                    tRcp.sDeviceName = mForm.Val;
-                    CRecipe.It.Save(sPath, ref tRcp);
+                    mRecipe rcp;
+                    rcp.sDeviceName = mForm.Val;
+                    CRecipe.It.CreateRecipe(sPath);
 
                     _RcpListUp();
 
@@ -351,7 +348,7 @@ namespace Victor
             Button mBtn = sender as Button;
             BeginInvoke(new Action(() => mBtn.Enabled = false));
             Form_Msg mMsg;
-            string sPath = CGvar.PATH_DEVICE;
+            string sPath = GVar.PATH_DEVICE;
 
             string sSrc = "";
             string sDst = "";
@@ -373,14 +370,14 @@ namespace Victor
 
                     return;
                 }
-                sSrc = CGvar.PATH_DEVICE + m_sGrp + "\\" + m_sDev + ".dev";
+                sSrc = GVar.PATH_DEVICE + m_sGrp + "\\" + m_sDev + ".dev";
 
                 using (Form_Textinput mForm = new Form_Textinput(m_sDev + ".dev file SaveAs Device."))
                 {
                     if (mForm.ShowDialog() == DialogResult.Cancel) { return; }
 
 
-                    sDst = CGvar.PATH_DEVICE + m_sGrp + "\\" + mForm.Val + ".dev";
+                    sDst = GVar.PATH_DEVICE + m_sGrp + "\\" + mForm.Val + ".dev";
 
                     // 원본과 동일한 이름인지 판단
                     if (sSrc == sDst)
@@ -420,7 +417,7 @@ namespace Victor
             Button mBtn = sender as Button;
             BeginInvoke(new Action(() => mBtn.Enabled = false));
 
-            string sPath = CGvar.PATH_DEVICE;
+            string sPath = GVar.PATH_DEVICE;
             string sText;
             Form_Msg mMsg;
 
@@ -453,6 +450,7 @@ namespace Victor
                 FileSystem.DeleteFile(sPath);
 
                 _RcpListUp();
+                btnM_DApp.Enabled = false;
             }
             catch (Exception err)
             {
@@ -466,7 +464,7 @@ namespace Victor
 
         private void _RcpListUp()
         {
-            string sPath = CGvar.PATH_DEVICE + m_sGrp + "\\";
+            string sPath = GVar.PATH_DEVICE + m_sGrp + "\\";
 
             if (Directory.Exists(sPath) == true)
             {
@@ -501,9 +499,9 @@ namespace Victor
 
             BeginInvoke(new Action(() => mBtn.Enabled = false));
 
-            m_iPage = iTag;
+            GVar.m_iPage = iTag;
 
-            string sPath = CGvar.PATH_DEVICE + m_sGrp + "\\";
+            string sPath = GVar.PATH_DEVICE + m_sGrp + "\\";
             string sRecipe = m_sGrp + "\\";
 
             string sHead = "";
@@ -523,7 +521,7 @@ namespace Victor
                 sPath = sPath + m_sDev + ".dev";
 
                 CData.RecipeCur = sPath;
-                CRecipe.It.Load(sPath, true);
+                CRecipe.It.Load(sPath);
 
                 CRecipe.It.m_sGrp = this.m_sGrp;
                 CData.RecipeGr = CRecipe.It.m_sGrp;
@@ -543,12 +541,12 @@ namespace Victor
         {
             pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
 
-            switch (m_iPage)    // 신규 뷰 Open 및 표시
+            switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
             {
-                case 1:
+                case 21:
                     vwAdd();
                     break;
-                case 2:
+                case 22:
                     label_RecipeList.Visible = false;
                     pnl_Menu.Controls.Add(m_vw02Item);
                     m_vw02Item.Open();

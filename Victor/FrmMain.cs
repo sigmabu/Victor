@@ -15,13 +15,12 @@ namespace Victor
 
     public partial class FrmMain : Form
     {
-        private int m_iPage;
         private bool isClickedLevelButton = false;
 
         private vwMain          m_vwMain;
         private vw00Recipe      m_vwRecipe;
         private vw01RecipeList m_vwRecipeList;
-        private vw02RecipeItem  m_vwRecipeItem;
+        private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("Recipe : " + eRecipGroup.Common.ToString());
         private vwMaint         m_vwMaint;
 
         public FrmMain()
@@ -35,12 +34,12 @@ namespace Victor
 
         private void Init_Screen()
         {
-            m_iPage = 0;
+            GVar.m_iPage = 0;
 
             m_vwMain = new vwMain();
             m_vwRecipe  = new vw00Recipe();
             m_vwRecipeList = new vw01RecipeList();
-            m_vwRecipeItem = new vw02RecipeItem("Recipe Loader");
+            
             m_vwMaint   = new vwMaint();
 
             rdb_Main.Checked = true;
@@ -51,12 +50,25 @@ namespace Victor
             Application.Exit();
         }
 
-        private void rdb_Menu_CheckedChanged(object sender, EventArgs e)
+        private void Click_MenuRadioButton(object sender, EventArgs e)
         {
             RadioButton mBtn = sender as RadioButton;
             int iTag = int.Parse(mBtn.Tag.ToString());
 
-            if (iTag == m_iPage && !isClickedLevelButton)
+            if (iTag == GVar.m_iPage && !isClickedLevelButton)
+            {
+                return;
+            }
+            Call_PnlBase_Change(iTag);
+        }
+
+        private void rdb_Menu_CheckedChanged(object sender, EventArgs e)
+        {
+            return;
+            RadioButton mBtn = sender as RadioButton;
+            int iTag = int.Parse(mBtn.Tag.ToString());
+
+            if (iTag == GVar.m_iPage && !isClickedLevelButton)
             {
                 return;
             }
@@ -64,7 +76,7 @@ namespace Victor
         }
         public void Call_PnlBase_Change(int nTag)
         { 
-            switch (m_iPage)    // 이전 뷰 Close
+            switch (GVar.m_iPage)    // 이전 뷰 Close
             {
                 case 11:
                     m_vwMain.Close();
@@ -92,9 +104,9 @@ namespace Victor
                 return;
             }
 
-            m_iPage = nTag;    // 인덱스 변경
+            GVar.m_iPage = nTag;    // 인덱스 변경
 
-            switch (m_iPage)    // 신규 뷰 Open 및 표시
+            switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
             {
                 case 11:
                     pnl_Base.Controls.Add(m_vwMain);

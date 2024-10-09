@@ -10,7 +10,7 @@ using Victor;
 /// <summary>
 /// Global Variable
 /// </summary>
-public class CGvar
+public class GVar
 {
     #region Path
     public static readonly string PATH_START = Application.StartupPath + "\\";
@@ -28,6 +28,18 @@ public class CGvar
     public static readonly string PATH_DEVICE = Application.StartupPath + "\\Device\\";
 
     #endregion
+
+    /// <summary>
+    /// UI 화면 Page
+    /// </summary>
+    public static int m_iPage { get; set; }
+
+    /// <summary>
+    /// ini 화일 Section 과 Key 설정
+    /// </summary>
+    public static string[] ini_RecipeSection { get; set; }
+    public static string[] ini_RecipeKey { get; set; }
+
 }
 
 public class CGcolor

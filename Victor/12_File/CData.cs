@@ -22,7 +22,7 @@ namespace Victor
         /// <summary>
         /// 디바이스 구조체
         /// </summary>
-        public static tRecipe Recipe = new tRecipe();
+        public static mRecipe Recipe = new mRecipe();
         /// <summary>
         /// 현재 사용중인 디바이스 파일의 경로
         /// </summary>

@@ -9,27 +9,17 @@ namespace Victor
     public partial class vw00Recipe : UserControl
     {
 
-        private int m_iPage = 0;
-
         private vw01RecipeList m_vw01List = new vw01RecipeList();
-        private vw02RecipeItem m_vw02Item = new vw02RecipeItem("Recipe Loader");
+        private vw02RecipeItem m_vw02Item = new vw02RecipeItem("Recipe :" + eRecipGroup.Common.ToString());
 
         public vw00Recipe()
         {
             InitializeComponent();
-
-            m_vw01List.GoParm += Apply;
-
-            m_vw02Item.OnMoveBack += returnToList;
-            m_vw02Item.OnGoToPosition += goToPosition;
-            //m_vw03Set.OnMoveBack += returnToParameter;
-
-
         }
 
         public void Open()
         {
-            m_iPage = 11;
+            GVar.m_iPage = 11;
 
             _vwAdd();
             _HideMenu();
@@ -50,68 +40,15 @@ namespace Victor
             //m_vw03Set.Dispose();
         }
 
-        private void returnToList()
-        {
-            _VwClr();
-
-            m_iPage = 11;
-
-            _vwAdd();
-        }
-        private void returnToParameter()
-        {
-            _VwClr();
-
-            m_iPage = 21;
-
-            _vwAdd();
-        }
-        private void goToPosition()
-        {
-            _VwClr();
-
-            m_iPage = 31;
-
-            _vwAdd();
-        }
-
-        public void Apply(bool bVal)
-        {
-
-            if (bVal)
-            {
-                //rdbMn_Parm.Checked = true;
-
-                _VwClr();
-
-                m_iPage = 21;
-
-                _vwAdd();
-
-                //m_vw02Prm.Set();
-                //m_vw03Set.Set();
-            }
-            else
-            {
-                //rdbMn_List.Checked = true;
-            }
-        }
-
-        public void LinkSelectpage()
-        {
-            m_iPage = 0;
-            Apply(true);
-        }
-
         private void _vwAdd()
         {
-            switch (m_iPage)
+            switch (GVar.m_iPage)
             {
-                case 11:
+                case 21:
                     m_vw01List.Open();
                     pnl_Base.Controls.Add(m_vw01List);
                     break;
-                case 21:
+                case 22:
                     m_vw02Item.Open();
                     pnl_Base.Controls.Add(m_vw02Item);
                     break;
@@ -124,12 +61,12 @@ namespace Victor
 
         private void _VwClr()
         {
-            switch (m_iPage)
+            switch (GVar.m_iPage)
             {
-                case 11:
+                case 21:
                     m_vw01List.Close();
                     break;
-                case 21:
+                case 22:
                     m_vw02Item.Close();
                     break;
         //        case 3:
@@ -177,13 +114,6 @@ namespace Victor
         private void btn_Save_Click(object sender, EventArgs e)
         {
            
-        }
-
-        //20200424  : 회전형 드라이 동작 타임아웃 시간 체크
-        private bool Check_DryTime()
-        {
- 
-            return true;
         }
     }
 }

@@ -30,9 +30,14 @@
         {
             this.label_RecipeItem = new System.Windows.Forms.Label();
             this.radio_Save = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Pnl_Item = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.Pnl_Item.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,20 +76,12 @@
             this.radio_Save.Text = "Save";
             this.radio_Save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radio_Save.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(105, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 458;
-            this.label1.Text = "label1";
+            this.radio_Save.CheckedChanged += new System.EventHandler(this.radio_Save_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(105, 90);
+            this.label2.Location = new System.Drawing.Point(58, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 459;
@@ -93,14 +90,71 @@
             // Pnl_Item
             // 
             this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Pnl_Item.Controls.Add(this.checkBox1);
+            this.Pnl_Item.Controls.Add(this.textBox4);
+            this.Pnl_Item.Controls.Add(this.textBox3);
+            this.Pnl_Item.Controls.Add(this.textBox2);
             this.Pnl_Item.Controls.Add(this.label_RecipeItem);
             this.Pnl_Item.Controls.Add(this.radio_Save);
+            this.Pnl_Item.Controls.Add(this.label4);
+            this.Pnl_Item.Controls.Add(this.label3);
             this.Pnl_Item.Controls.Add(this.label2);
-            this.Pnl_Item.Controls.Add(this.label1);
             this.Pnl_Item.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Item.Name = "Pnl_Item";
             this.Pnl_Item.Size = new System.Drawing.Size(1281, 804);
             this.Pnl_Item.TabIndex = 460;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(58, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.TabIndex = 459;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(58, 173);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.TabIndex = 459;
+            this.label4.Text = "label4";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(132, 103);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(113, 26);
+            this.textBox2.TabIndex = 460;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(132, 135);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(113, 26);
+            this.textBox3.TabIndex = 460;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(132, 167);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(113, 26);
+            this.textBox4.TabIndex = 460;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBox1.Location = new System.Drawing.Point(62, 62);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox1.Size = new System.Drawing.Size(103, 24);
+            this.checkBox1.TabIndex = 461;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // vw02RecipeItem
             // 
@@ -123,8 +177,13 @@
 
         private System.Windows.Forms.Label label_RecipeItem;
         private System.Windows.Forms.RadioButton radio_Save;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel Pnl_Item;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

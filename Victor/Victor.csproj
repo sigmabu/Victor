@@ -115,7 +115,7 @@
       <DependentUpon>Form_Textinput.cs</DependentUpon>
     </Compile>
     <Compile Include="11_Global\Enum.cs" />
-    <Compile Include="11_Global\GV.cs" />
+    <Compile Include="11_Global\GVar.cs" />
     <Compile Include="11_Global\Struct\Struct_Device.cs" />
     <Compile Include="12_File\CCheckFile.cs" />
     <Compile Include="12_File\CData.cs" />
