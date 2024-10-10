@@ -95,7 +95,7 @@ namespace Victor
 
         private void vwClear()
         {
-            //switch (m_iPage)
+            //switch (nPage)
             //{
             //    case 11:
             //        m_vw01Lst.Close();

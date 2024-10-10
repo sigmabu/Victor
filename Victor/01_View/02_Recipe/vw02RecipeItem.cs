@@ -19,13 +19,13 @@ namespace Victor
     {
         private string m_sTitle;
 
-        private int m_iPage = 1;
+        private int nPage = 1;
         private vw02RecipeLoader m_vw02Loader = new vw02RecipeLoader();
         public vw02RecipeItem(string sTitle)
         {
             InitializeComponent();
             m_sTitle = sTitle;
-            m_iPage = 0;
+            nPage = 0;
             label_RecipeItem.Text = m_sTitle;
             CreateRecipeGroupButton();
         }
@@ -73,6 +73,10 @@ namespace Victor
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
+
+                _VwClr();
+                nPage = 1;
+                _VwAdd();
                 Load_CommonData();
             }
             else if (button.Text == EnumToString((eRecipGroup)1))
@@ -81,6 +85,10 @@ namespace Victor
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 label_RecipeItem.Text = m_sTitle;
+                _VwClr();
+                nPage = 2;
+                _VwAdd();
+
                 Load_LoaderData();
             }
             else if (button.Text == EnumToString((eRecipGroup)2))
@@ -95,6 +103,10 @@ namespace Victor
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
+                _VwClr();
+                nPage = 1;
+                _VwAdd();
+
                 Load_InformationData();
             }
             MessageBox.Show(button.Text + "번 버튼이 눌렸습니다.");
@@ -102,7 +114,7 @@ namespace Victor
 
         private void Init_PageView()
         {
-            switch (m_iPage)
+            switch (nPage)
             {
                 case 0:
                     break;
@@ -116,7 +128,7 @@ namespace Victor
         }
         public void Open()
         {
-            m_iPage = 1;
+            nPage = 1;
             _VwAdd();
         }
         public void Close()
@@ -126,45 +138,42 @@ namespace Victor
 
         private void _VwAdd()
         {
-            switch (m_iPage)
+            switch (nPage)
             {
                 case 1:
 
                     //pnl_Base.Controls.Add(Pnl_Item);
-                    Pnl_Item.Controls.Clear();
-                    Pnl_Item.Controls.Add(m_vw02Loader);
-                    Load_InformationData();
+                    //Pnl_Item.Controls.Clear();
+                    //Pnl_Item.Controls.Add(m_vw02Loader);
+                    //Load_InformationData();
 
                     break;
-            //    case 2:
-            //        {
-            //            m_vw2Step.Open();
-            //            pnl_Base.Controls.Add(m_vw2Step);
-
-            //        }
-            //        break;
-
+                case 2:
+                    //Pnl_Item.Controls.Clear();
+                    Pnl_Item.Controls.Add(m_vw02Loader);
+                    Load_InformationData();
+                    break;
             }
         }
 
         private void _VwClr()
         {
-            //switch (nPage)
-            //{
-            //    case 1:
-            //        {
-            //            m_vw1Wafer.Close();
-            //        }
-            //        break;
-            //    case 2:
-            //        {
-            //            m_vw2Step.Close();
-            //        }
-            //        break;
-                
-            //}
+            switch (nPage)
+            {
+                case 1:
+                    {
+                        //m_vw1Wafer.Close();
+                    }
+                    break;
+                case 2:
+                    {
+                        m_vw02Loader.Close();
+                        Pnl_Item.Controls.Remove(m_vw02Loader);
+                    }
+                    break;                
+            }
 
-            //pnl_Base.Controls.Clear();
+            //Pnl_Item.Controls.Clear();
         }
 
         private void Load_InformationData()

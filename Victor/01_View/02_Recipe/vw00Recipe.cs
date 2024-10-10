@@ -100,12 +100,12 @@ namespace Victor
             //RadioButton mRdb = sender as RadioButton;
             //int iNext = int.Parse(mRdb.Tag.ToString());
 
-            //_SetLog(string.Format("N, {0} -> {1}", m_iPage, iNext));
-            //if (m_iPage != iNext)
+            //_SetLog(string.Format("N, {0} -> {1}", nPage, iNext));
+            //if (nPage != iNext)
             //{
             //    _VwClr();
 
-            //    m_iPage = iNext;
+            //    nPage = iNext;
 
             //    _vwAdd();
             //}
