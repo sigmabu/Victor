@@ -80,6 +80,12 @@
     <Compile Include="01_View\02_Recipe\vw01RecipeList.Designer.cs">
       <DependentUpon>vw01RecipeList.cs</DependentUpon>
     </Compile>
+    <Compile Include="01_View\02_Recipe\vw02RecipeILoader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\02_Recipe\vw02RecipeILoader.Designer.cs">
+      <DependentUpon>vw02RecipeILoader.cs</DependentUpon>
+    </Compile>
     <Compile Include="01_View\02_Recipe\vw02RecipeItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\02_Recipe\vw01RecipeList.resx">
       <DependentUpon>vw01RecipeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeILoader.resx">
+      <DependentUpon>vw02RecipeILoader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeItem.resx">
       <DependentUpon>vw02RecipeItem.cs</DependentUpon>

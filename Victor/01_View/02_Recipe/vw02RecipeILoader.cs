@@ -15,91 +15,21 @@ using static System.Windows.Forms.Button;
 
 namespace Victor
 {
-    public partial class vw02RecipeItem : UserControl
+    public partial class vw02RecipeLoader : UserControl
     {
-        private string m_sTitle;
 
         private int m_iPage = 1;
-        private vw02RecipeLoader m_vw02Loader = new vw02RecipeLoader();
-        public vw02RecipeItem(string sTitle)
+        public vw02RecipeLoader()
         {
             InitializeComponent();
-            m_sTitle = sTitle;
             m_iPage = 0;
-            label_RecipeItem.Text = m_sTitle;
-            CreateRecipeGroupButton();
         }
 
         string EnumToString(eRecipGroup eGroup)
         {
             return eGroup.ToString();
         }
-        private void CreateRecipeGroupButton()
-        {
-            int nRcpGroup = Convert.ToInt32(eRecipGroup.End);
-
-            int nBtnMargin = 0;
-            int nBtn_w = 133;
-            int nBtn_h = 72;
-            int nBtn_s = 80;
-            int nBtn_Px = 5;// 1138;// 1095;
-            int nBtn_Py = 35;
-
-            Button[] btn = new Button[nRcpGroup];
-            for (int i = 0; i < nRcpGroup; i++)
-            {
-                btn[i] = new Button();
-                btn[i].FlatStyle = FlatStyle.Flat;
-                btn[i].FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-                btn[i].FlatAppearance.BorderSize = 1;
-                btn[i].FlatAppearance.CheckedBackColor = Color.SteelBlue;
-                btn[i].BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-                btn[i].Margin = new Padding(nBtnMargin);
-                btn[i].Padding = new Padding(0,0,7,0);
-                btn[i].Text = EnumToString((eRecipGroup)i);
-                btn[i].Size = new Size( nBtn_w, nBtn_h);
-                btn[i].Location = new Point(nBtn_Px , nBtn_Py + (nBtn_s * i));
-                btn[i].Click += Click_SectionMenu;
-
-                Pnl_Button.Controls.Add(btn[i]);
-            }
-        }
-        private void Click_SectionMenu(object sender, EventArgs e)
-        {
-            Button button = sender as Button;
-            
-            if (button.Text == EnumToString((eRecipGroup)0))
-            {
-                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
-                label_RecipeItem.Text = m_sTitle;
-                Load_CommonData();
-            }
-            else if (button.Text == EnumToString((eRecipGroup)1))
-            {
-                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
-                label_RecipeItem.Text = m_sTitle;
-                label_RecipeItem.Text = m_sTitle;
-                Load_LoaderData();
-            }
-            else if (button.Text == EnumToString((eRecipGroup)2))
-            {
-                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
-                label_RecipeItem.Text = m_sTitle;
-                Load_UnloaderData();
-            }
-            else //if(button.Text == EnumToString((eRecipGroup)0))
-            {
-                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
-                label_RecipeItem.Text = m_sTitle;
-                Load_InformationData();
-            }
-            MessageBox.Show(button.Text + "번 버튼이 눌렸습니다.");
-        }
-
+       
         private void Init_PageView()
         {
             switch (m_iPage)
@@ -131,8 +61,6 @@ namespace Victor
                 case 1:
 
                     //pnl_Base.Controls.Add(Pnl_Item);
-                    Pnl_Item.Controls.Clear();
-                    Pnl_Item.Controls.Add(m_vw02Loader);
                     Load_InformationData();
 
                     break;
