@@ -67,14 +67,14 @@ namespace Victor
         {
             Button button = sender as Button;
             
-            if (button.Text == EnumToString((eRecipGroup)1))
+            if (button.Text == EnumToString((eRecipGroup)0))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 Load_CommonData();
             }
-            else if (button.Text == EnumToString((eRecipGroup)2))
+            else if (button.Text == EnumToString((eRecipGroup)1))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
                 m_sTitle = "Recipe : " + button.Text;
@@ -82,7 +82,7 @@ namespace Victor
                 label_RecipeItem.Text = m_sTitle;
                 Load_LoaderData();
             }
-            else if (button.Text == EnumToString((eRecipGroup)3))
+            else if (button.Text == EnumToString((eRecipGroup)2))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
                 m_sTitle = "Recipe : " + button.Text;
@@ -164,22 +164,6 @@ namespace Victor
             //pnl_Base.Controls.Clear();
         }
 
-        private void rdb_SubMenu_CheckedChanged(object sender, EventArgs e)
-        {
-            //RadioButton mRdb = sender as RadioButton;
-            //int iNext = int.Parse(mRdb.Tag.ToString());
-
-
-            //if (m_iPage != iNext)
-            //{
-            //    _VwClr();
-
-            //    m_iPage = iNext;
-
-            //    _VwAdd();
-            //}
-        }
-
         private void Load_InformationData()
         {
             checkBox1.Text = GVar.RecipeKeyName[0][1]; checkBox1.Checked = (CData.Recipe.bSaveValue == false) ? false : true;
@@ -215,34 +199,34 @@ namespace Victor
 
         private void Load_LoaderData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
-            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
-            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
+            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.L_Data.bLValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.L_Data.nLValue);
+            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.L_Data.dLValue);
+            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.L_Data.sLValue);
         }
 
         private void Get_LoaderData()
         {
-            CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
-            CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
-            CData.Recipe.C_Data.sCValue = textBox4.Text;
+            CData.Recipe.L_Data.bLValue = (checkBox1.Checked == false) ? false : true;
+            CData.Recipe.L_Data.nLValue = int.Parse(textBox2.Text);
+            CData.Recipe.L_Data.dLValue = int.Parse(textBox3.Text);
+            CData.Recipe.L_Data.sLValue = textBox4.Text;
         }
 
         private void Load_UnloaderData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
-            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
-            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
+            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.Ul_Data.bULValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.Ul_Data.nULValue);
+            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.Ul_Data.dULValue);
+            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.Ul_Data.sULValue);
         }
 
         private void Get_UnloaderData()
         {
-            CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
-            CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
-            CData.Recipe.C_Data.sCValue = textBox4.Text;
+            CData.Recipe.Ul_Data.bULValue = (checkBox1.Checked == false) ? false : true;
+            CData.Recipe.Ul_Data.nULValue = int.Parse(textBox2.Text);
+            CData.Recipe.Ul_Data.dULValue = int.Parse(textBox3.Text);
+            CData.Recipe.Ul_Data.sULValue = textBox4.Text;
         }
 
         private void Click_Save(object sender, EventArgs e)
