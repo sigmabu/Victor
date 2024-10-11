@@ -28,20 +28,16 @@ namespace Victor
             label_MaintBase.Text = m_sTitle;
         }
 
-        string EnumToString(eRecipGroup eGroup)
-        {
-            return eGroup.ToString();
-        }
 
-        private void _VwAdd()
+        public void vw_Open()
         {
-            switch (mViewPage.nRcpPage)
+            switch (mViewPage.nMaintPage)
             {
                 case 0:
                     Load_CfgData();                    
 
                     break;
-                case 1:
+                case 32:
                     //Pnl_Item.Controls.Remove(m_vw02Loader);
                     //m_vw02Loader.Close();
                     //Pnl_Item.Controls.Remove(m_vw02Bank);
@@ -53,7 +49,7 @@ namespace Victor
                     m_vwSerial.Open();                   
 
                     break;
-                case 2:
+                case 33:
                     //Pnl_Item.Controls.Add(m_vw02Loader);
                     //m_vw02Loader.Open();
 
@@ -62,21 +58,21 @@ namespace Victor
 
             }
         }
-        private void _VwClr()
+        public void vw_Clear()
         {
-            switch (mViewPage.nRcpPage)
+            switch (mViewPage.nMaintPage)
             {
                 case 0:
                     {
                     }
                     break;
-                case 1:
+                case 32:
                     {
                         Pnl_Item.Controls.Remove(m_vwSerial);
                         m_vwSerial.Close();                      
                     }
                     break;
-                case 2:
+                case 33:
                     {
                         //m_vw02Loader.Close();
                         //Pnl_Item.Controls.Remove(m_vw02Loader);

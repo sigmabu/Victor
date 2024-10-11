@@ -92,6 +92,9 @@ namespace Victor
                 case 31:
                     m_vwMaint.Close();
                     break;
+                case 32:
+                    m_vwMaint.Close();
+                    break;
 
                 case 99:
                     //m_vwLogIn.Close();
@@ -127,6 +130,9 @@ namespace Victor
                     mViewPage.mCurrViewPage = mViewPage.nViewRecipeItem;
                     break;
                 case 31:
+                case 32:
+
+
                     pnl_Base.Controls.Add(m_vwMaint);
                     m_vwMaint.Open();
                     mViewPage.mCurrViewPage = mViewPage.nViewMaint;

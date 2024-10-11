@@ -36,7 +36,7 @@ namespace Victor
                     Load_CfgData();                    
 
                     break;
-                case 1:
+                case 32:
                     //Pnl_Item.Controls.Remove(m_vw02Loader);
                     //m_vw02Loader.Close();
                     //Pnl_Item.Controls.Remove(m_vw02Bank);

@@ -13,13 +13,8 @@ namespace Victor
 {
     public partial class vwMaint : UserControl
     {
-        /// <summary>
-        /// 현재 화면이 Menu 화면인지 확인하기 위한 Flag.
-        /// </summary>
-        public bool IsMenuScreen { get; private set; } = false;
-
-        private int m_iPage = 0;
-
+        // private vwSerial m_vwSerial = new vwSerial("Recipe : " + eRecipGroup.Common.ToString());
+        private vwSerial m_vwSerial = new vwSerial();
         public vwMaint()
         {
             InitializeComponent();
@@ -27,7 +22,6 @@ namespace Victor
 
         public void Open()
         {
-            m_iPage = 1;
 
             //pnl_Menu.BringToFront();
 
@@ -42,7 +36,7 @@ namespace Victor
 
         private void vwAdd()
         {
-            switch (m_iPage)
+            switch (GVar.m_iPage)
             {
                 case 11:
 
@@ -60,28 +54,55 @@ namespace Victor
 
         private void vwClear()
         {
-            //switch (nPage)
-            //{
+            switch (GVar.m_iPage)
+            {
             //    case 11:
             //        m_vw01Lst.Close();
             //        break;
             //    case 21:
             //        m_vw02Prm.Close();
             //        break;
-            //    case 31:
-            //        m_vw03Set.Close();
-            //        break;
-            //}
+                case 32:
+                m_vwSerial.Close();
+                    pnl_Menu.Controls.Remove(m_vwSerial);
+                    break;
+            }
 
             //panel1.Controls.Clear();
             //panel2.Controls.Clear();
             //panel3.Controls.Clear();
         }
 
-        private void hideMenu()
+        private void Click_Button(object sender, EventArgs e)
         {
+            Button mBtn = sender as Button;
+            GVar.m_iPage = int.Parse(mBtn.Tag.ToString());
+            Call_ViewRecipeItem();
 
         }
+            private void Call_ViewRecipeItem()
+            {
+                pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
 
-    }
+                switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
+                {
+                    case 31:
+                        vwAdd();
+                        break;
+                    case 32:
+                        panel1.Visible = false;
+                        panel2.Visible = false;
+                        panel3.Visible = false;
+                        pnl_Menu.Controls.Add(m_vwSerial);
+                        GVar.m_iPage = 32;
+                        mViewPage.nMaintPage = 32;
+                        m_vwSerial.Open();
+                        break;
+                    case 33:
+                        //pnl_Base.Controls.Add(m_vwMaint);
+                        //m_vwMaint.Open();
+                        break;
+                }
+            }
+        }
 }

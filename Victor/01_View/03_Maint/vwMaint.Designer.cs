@@ -50,10 +50,11 @@
             // label46
             // 
             this.label46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(86)))), ((int)(((byte)(29)))));
+            this.label46.Dock = System.Windows.Forms.DockStyle.Top;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.label46.ForeColor = System.Drawing.SystemColors.Control;
             this.label46.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label46.Location = new System.Drawing.Point(-3, 0);
+            this.label46.Location = new System.Drawing.Point(0, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(1280, 30);
             this.label46.TabIndex = 452;
@@ -72,9 +73,10 @@
             this.btn_Serial.Name = "btn_Serial";
             this.btn_Serial.Size = new System.Drawing.Size(180, 50);
             this.btn_Serial.TabIndex = 1;
-            this.btn_Serial.Tag = "1";
+            this.btn_Serial.Tag = "32";
             this.btn_Serial.Text = "Serial Comm";
             this.btn_Serial.UseVisualStyleBackColor = false;
+            this.btn_Serial.Click += new System.EventHandler(this.Click_Button);
             // 
             // label1
             // 
@@ -84,7 +86,7 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(26, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 29);
+            this.label1.Size = new System.Drawing.Size(106, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Optic";
             // 
@@ -112,9 +114,10 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 50);
             this.button2.TabIndex = 2;
-            this.button2.Tag = "2";
+            this.button2.Tag = "33";
             this.button2.Text = "Optic # 2";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Click_Button);
             // 
             // panel2
             // 
@@ -168,7 +171,7 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(26, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 29);
+            this.label2.Size = new System.Drawing.Size(112, 40);
             this.label2.TabIndex = 0;
             this.label2.Text = "Laser";
             // 
@@ -224,7 +227,7 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(26, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 29);
+            this.label3.Size = new System.Drawing.Size(131, 40);
             this.label3.TabIndex = 0;
             this.label3.Text = "Motion";
             // 
