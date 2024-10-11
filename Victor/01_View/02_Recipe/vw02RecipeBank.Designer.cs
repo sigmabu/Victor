@@ -2,7 +2,7 @@
 
 namespace Victor
 {
-    partial class vw02RecipeLoader
+    partial class vw02RecipeBank
     {
         /// <summary>
         /// Required designer variable.
@@ -44,7 +44,7 @@ namespace Victor
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 103);
+            this.label2.Location = new System.Drawing.Point(366, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 459;
@@ -52,7 +52,7 @@ namespace Victor
             // 
             // Pnl_Item
             // 
-            this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(100)))));
+            this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
             this.Pnl_Item.Controls.Add(this.checkBox1);
             this.Pnl_Item.Controls.Add(this.textBox4);
             this.Pnl_Item.Controls.Add(this.textBox3);
@@ -69,7 +69,7 @@ namespace Victor
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.checkBox1.Location = new System.Drawing.Point(62, 62);
+            this.checkBox1.Location = new System.Drawing.Point(403, 123);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.checkBox1.Size = new System.Drawing.Size(103, 24);
@@ -81,7 +81,7 @@ namespace Victor
             // textBox4
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(165, 167);
+            this.textBox4.Location = new System.Drawing.Point(506, 228);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(113, 19);
             this.textBox4.TabIndex = 460;
@@ -90,7 +90,7 @@ namespace Victor
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(165, 135);
+            this.textBox3.Location = new System.Drawing.Point(506, 196);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(113, 19);
             this.textBox3.TabIndex = 460;
@@ -99,7 +99,7 @@ namespace Victor
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(165, 103);
+            this.textBox2.Location = new System.Drawing.Point(506, 164);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(113, 19);
             this.textBox2.TabIndex = 460;
@@ -108,7 +108,7 @@ namespace Victor
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 173);
+            this.label4.Location = new System.Drawing.Point(366, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 459;
@@ -117,13 +117,13 @@ namespace Victor
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 135);
+            this.label3.Location = new System.Drawing.Point(366, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 459;
             this.label3.Text = "label3";
             // 
-            // vw02RecipeLoader
+            // vw02RecipeBank
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
@@ -132,7 +132,7 @@ namespace Victor
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "vw02RecipeLoader";
+            this.Name = "vw02RecipeBank";
             this.Size = new System.Drawing.Size(1136, 771);
             this.Pnl_Item.ResumeLayout(false);
             this.Pnl_Item.PerformLayout();

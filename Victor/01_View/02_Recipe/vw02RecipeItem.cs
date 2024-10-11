@@ -19,13 +19,14 @@ namespace Victor
     {
         private string m_sTitle;
 
-        private int nPage = 1;
-        private vw02RecipeLoader m_vw02Loader = new vw02RecipeLoader();
+        private vw02RecipeCommon    m_vw02Common = new vw02RecipeCommon();
+        private vw02RecipeLoader    m_vw02Loader   = new vw02RecipeLoader();
+        private vw02RecipeBank      m_vw02Bank     = new vw02RecipeBank();
+        private vw02RecipeULoader   m_vw02Uloader   = new vw02RecipeULoader();
         public vw02RecipeItem(string sTitle)
         {
             InitializeComponent();
             m_sTitle = sTitle;
-            nPage = 0;
             label_RecipeItem.Text = m_sTitle;
             CreateRecipeGroupButton();
         }
@@ -75,9 +76,8 @@ namespace Victor
                 label_RecipeItem.Text = m_sTitle;
 
                 _VwClr();
-                nPage = 1;
+                GVar.nRcpPage = 1;
                 _VwAdd();
-                Load_CommonData();
             }
             else if (button.Text == EnumToString((eRecipGroup)1))
             {
@@ -86,35 +86,45 @@ namespace Victor
                 label_RecipeItem.Text = m_sTitle;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
-                nPage = 2;
+                GVar.nRcpPage = 2;
                 _VwAdd();
-
-                Load_LoaderData();
             }
             else if (button.Text == EnumToString((eRecipGroup)2))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
-                Load_UnloaderData();
+                _VwClr();
+                GVar.nRcpPage = 3;
+                _VwAdd();
             }
+            else if (button.Text == EnumToString((eRecipGroup)3))
+            {
+                Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
+                m_sTitle = "Recipe : " + button.Text;
+                label_RecipeItem.Text = m_sTitle;
+                _VwClr();
+                GVar.nRcpPage = 4;
+                _VwAdd();
+            }
+
             else //if(button.Text == EnumToString((eRecipGroup)0))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
-                nPage = 1;
+                GVar.nRcpPage = 0;
                 _VwAdd();
 
                 Load_InformationData();
             }
-            MessageBox.Show(button.Text + "번 버튼이 눌렸습니다.");
+            //MessageBox.Show(button.Text + "번 버튼이 눌렸습니다.");
         }
 
         private void Init_PageView()
         {
-            switch (nPage)
+            switch (GVar.nRcpPage)
             {
                 case 0:
                     break;
@@ -128,41 +138,68 @@ namespace Victor
         }
         public void Open()
         {
-            nPage = 1;
             _VwAdd();
         }
         public void Close()
         {
-            //pnl_Base.Controls.Clear();
+            _VwClr();
         }
 
         private void _VwAdd()
         {
-            switch (nPage)
+            switch (GVar.nRcpPage)
             {
-                case 1:
+                case 0:
+                    Load_InformationData();                    
 
-                    //pnl_Base.Controls.Add(Pnl_Item);
-                    //Pnl_Item.Controls.Clear();
-                    //Pnl_Item.Controls.Add(m_vw02Loader);
+                    break;
+                case 1:
+                    Pnl_Item.Controls.Remove(m_vw02Loader);
+                    m_vw02Loader.Close();
+                    Pnl_Item.Controls.Remove(m_vw02Bank);
+                    m_vw02Bank.Close();
+                    Pnl_Item.Controls.Remove(m_vw02Uloader);
+                    m_vw02Uloader.Close();
                     //Load_InformationData();
+                    Pnl_Item.Controls.Add(m_vw02Common);
+                    m_vw02Common.Open();                   
 
                     break;
                 case 2:
-                    //Pnl_Item.Controls.Clear();
                     Pnl_Item.Controls.Add(m_vw02Loader);
-                    Load_InformationData();
+                    m_vw02Loader.Open();
+
                     break;
+                case 3:
+                    Pnl_Item.Controls.Add(m_vw02Bank);
+                    m_vw02Bank.Open();
+                    break;
+                case 4:
+                    Pnl_Item.Controls.Add(m_vw02Uloader);
+                    m_vw02Uloader.Open();
+                    break;
+
             }
         }
 
         private void _VwClr()
         {
-            switch (nPage)
+            switch (GVar.nRcpPage)
             {
+                case 0:
+                    {
+                    }
+                    break;
                 case 1:
                     {
-                        //m_vw1Wafer.Close();
+                        Pnl_Item.Controls.Remove(m_vw02Common);
+                        m_vw02Common.Close();
+                        Pnl_Item.Controls.Remove(m_vw02Loader);
+                        m_vw02Loader.Close();
+                        Pnl_Item.Controls.Remove(m_vw02Bank);
+                        m_vw02Bank.Close();
+                        Pnl_Item.Controls.Remove(m_vw02Uloader);
+                        m_vw02Uloader.Close();
                     }
                     break;
                 case 2:
@@ -170,81 +207,95 @@ namespace Victor
                         m_vw02Loader.Close();
                         Pnl_Item.Controls.Remove(m_vw02Loader);
                     }
-                    break;                
+                    break;
+                case 3:
+                    {
+                        m_vw02Bank.Close();
+                        Pnl_Item.Controls.Remove(m_vw02Bank);
+                    }
+                    break;
+                case 4:
+                    {
+                        m_vw02Uloader.Close();
+                        Pnl_Item.Controls.Remove(m_vw02Uloader);
+                    }
+                    break;
             }
-
-            //Pnl_Item.Controls.Clear();
         }
 
         private void Load_InformationData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[0][1]; checkBox1.Checked = (CData.Recipe.bSaveValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[0][2]; textBox2.Text = string.Format("{0}", CData.Recipe.nSaveValue);
-            label3.Text = GVar.RecipeKeyName[0][3]; textBox3.Text = string.Format("{0}", CData.Recipe.dSaveValue);
+            //checkBox1.Text = GVar.RecipeKeyName[0][1]; checkBox1.Checked = (CData.Recipe.bSaveValue == false) ? false : true;
+            //label2.Text = GVar.RecipeKeyName[0][2]; textBox2.Text = string.Format("{0}", CData.Recipe.nSaveValue);
+            //label3.Text = GVar.RecipeKeyName[0][3]; textBox3.Text = string.Format("{0}", CData.Recipe.dSaveValue);
             //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.Recipe.nSaveValue);
         }
 
         private void Get_InformationData()
         {
-            CData.Recipe.bSaveValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.nSaveValue = int.Parse(textBox2.Text);
-            CData.Recipe.dSaveValue = int.Parse(textBox3.Text);
+            //CData.Recipe.bSaveValue = (checkBox1.Checked == false) ? false : true;
+            //CData.Recipe.nSaveValue = int.Parse(textBox2.Text);
+            //CData.Recipe.dSaveValue = int.Parse(textBox3.Text);
             //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.Recipe.nSaveValue);
         }
 
 
         private void Load_CommonData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
-            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
-            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
+            //checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
+            //label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
+            //label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
+            //label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
         }
 
         private void Get_CommonData()
         {
-            CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
-            CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
-            CData.Recipe.C_Data.sCValue = textBox4.Text;
+            //CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
+            //CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
+            //CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
+            //CData.Recipe.C_Data.sCValue = textBox4.Text;
         }
 
         private void Load_LoaderData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.L_Data.bLValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.L_Data.nLValue);
-            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.L_Data.dLValue);
-            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.L_Data.sLValue);
+            //checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.L_Data.bLValue == false) ? false : true;
+            //label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.L_Data.nLValue);
+            //label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.L_Data.dLValue);
+            //label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.L_Data.sLValue);
         }
 
         private void Get_LoaderData()
         {
-            CData.Recipe.L_Data.bLValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.L_Data.nLValue = int.Parse(textBox2.Text);
-            CData.Recipe.L_Data.dLValue = int.Parse(textBox3.Text);
-            CData.Recipe.L_Data.sLValue = textBox4.Text;
+            //CData.Recipe.L_Data.bLValue = (checkBox1.Checked == false) ? false : true;
+            //CData.Recipe.L_Data.nLValue = int.Parse(textBox2.Text);
+            //CData.Recipe.L_Data.dLValue = int.Parse(textBox3.Text);
+            //CData.Recipe.L_Data.sLValue = textBox4.Text;
         }
 
         private void Load_UnloaderData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.Ul_Data.bULValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.Ul_Data.nULValue);
-            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.Ul_Data.dULValue);
-            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.Ul_Data.sULValue);
+            //checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.Ul_Data.bULValue == false) ? false : true;
+            //label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.Ul_Data.nULValue);
+            //label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.Ul_Data.dULValue);
+            //label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.Ul_Data.sULValue);
         }
 
         private void Get_UnloaderData()
         {
-            CData.Recipe.Ul_Data.bULValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.Ul_Data.nULValue = int.Parse(textBox2.Text);
-            CData.Recipe.Ul_Data.dULValue = int.Parse(textBox3.Text);
-            CData.Recipe.Ul_Data.sULValue = textBox4.Text;
+            //CData.Recipe.Ul_Data.bULValue = (checkBox1.Checked == false) ? false : true;
+            //CData.Recipe.Ul_Data.nULValue = int.Parse(textBox2.Text);
+            //CData.Recipe.Ul_Data.dULValue = int.Parse(textBox3.Text);
+            //CData.Recipe.Ul_Data.sULValue = textBox4.Text;
         }
 
         private void Click_Save(object sender, EventArgs e)
         {
             Get_InformationData();
-            Get_CommonData();
+            if (GVar.nRcpPage == 1) Get_CommonData();
+            if(GVar.nRcpPage == 2)m_vw02Loader.Get_LoaderData();
+            else if(GVar.nRcpPage == 3) m_vw02Bank.Get_BankData();
+            else if (GVar.nRcpPage == 4) m_vw02Uloader.Get_UnloaderData();
+
             CRecipe.It.Save(CRecipe.It.FullPath);
             CRecipe.It.Load(CRecipe.It.FullPath);
         }

@@ -80,17 +80,35 @@
     <Compile Include="01_View\02_Recipe\vw01RecipeList.Designer.cs">
       <DependentUpon>vw01RecipeList.cs</DependentUpon>
     </Compile>
-    <Compile Include="01_View\02_Recipe\vw02RecipeILoader.cs">
+    <Compile Include="01_View\02_Recipe\vw02RecipeBank.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="01_View\02_Recipe\vw02RecipeILoader.Designer.cs">
-      <DependentUpon>vw02RecipeILoader.cs</DependentUpon>
+    <Compile Include="01_View\02_Recipe\vw02RecipeBank.Designer.cs">
+      <DependentUpon>vw02RecipeBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_View\02_Recipe\vw02RecipeCommon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\02_Recipe\vw02RecipeCommon.Designer.cs">
+      <DependentUpon>vw02RecipeCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_View\02_Recipe\vw02RecipeLoader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\02_Recipe\vw02RecipeLoader.Designer.cs">
+      <DependentUpon>vw02RecipeLoader.cs</DependentUpon>
     </Compile>
     <Compile Include="01_View\02_Recipe\vw02RecipeItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="01_View\02_Recipe\vw02RecipeItem.Designer.cs">
       <DependentUpon>vw02RecipeItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_View\02_Recipe\vw02RecipeULoader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\02_Recipe\vw02RecipeULoader.Designer.cs">
+      <DependentUpon>vw02RecipeULoader.cs</DependentUpon>
     </Compile>
     <Compile Include="01_View\03_Maint\vwMaint.cs">
       <SubType>UserControl</SubType>
@@ -147,11 +165,20 @@
     <EmbeddedResource Include="01_View\02_Recipe\vw01RecipeList.resx">
       <DependentUpon>vw01RecipeList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeILoader.resx">
-      <DependentUpon>vw02RecipeILoader.cs</DependentUpon>
+    <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeBank.resx">
+      <DependentUpon>vw02RecipeBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeCommon.resx">
+      <DependentUpon>vw02RecipeCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeLoader.resx">
+      <DependentUpon>vw02RecipeLoader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeItem.resx">
       <DependentUpon>vw02RecipeItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeULoader.resx">
+      <DependentUpon>vw02RecipeULoader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\03_Maint\vwMaint.resx">
       <DependentUpon>vwMaint.cs</DependentUpon>
