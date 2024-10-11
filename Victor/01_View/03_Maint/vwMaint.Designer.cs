@@ -75,7 +75,6 @@
             this.btn_Serial.Tag = "1";
             this.btn_Serial.Text = "Serial Comm";
             this.btn_Serial.UseVisualStyleBackColor = false;
-            this.btn_Serial.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 

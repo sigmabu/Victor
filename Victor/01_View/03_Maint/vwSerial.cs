@@ -28,7 +28,7 @@ namespace Victor
             return eGroup.ToString();
         }
 
-        private void _VwAdd()
+        public void Open()
         {
             switch (mViewPage.nRcpPage)
             {
@@ -57,7 +57,7 @@ namespace Victor
 
             }
         }
-        private void _VwClr()
+        public void Close()
         {
             switch (mViewPage.nRcpPage)
             {

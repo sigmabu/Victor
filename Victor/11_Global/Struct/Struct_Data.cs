@@ -94,7 +94,12 @@ public static class mViewPage
     public static int nViewRecipeList = 21;
     public static int nViewRecipeItem = 22;
     public static int nViewMaint = 31;
+    public static int nViewMaintSerial = 32;
+    public static int nViewMaintEthernet = 33;
 
     public static int nRcpPage { get; set; }
+
+    public static int nMaintPage { get; set; }
     public static int mCurrViewPage  {get;set;  }
 }
+

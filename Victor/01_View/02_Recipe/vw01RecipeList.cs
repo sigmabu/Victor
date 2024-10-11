@@ -17,8 +17,6 @@ namespace Victor
 {
     public partial class vw01RecipeList : UserControl
     {
-        public delegate void ListEvt(bool bVal);
-        public event ListEvt GoParm;
         private string m_sGrp;
         private string m_sDev;
 

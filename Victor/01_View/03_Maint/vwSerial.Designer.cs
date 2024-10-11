@@ -28,52 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_MaintBase = new System.Windows.Forms.Label();
             this.Pnl_Item = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Pnl_Item.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label_MaintBase
-            // 
-            this.label_MaintBase.BackColor = System.Drawing.Color.Indigo;
-            this.label_MaintBase.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_MaintBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label_MaintBase.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_MaintBase.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label_MaintBase.Location = new System.Drawing.Point(0, 0);
-            this.label_MaintBase.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_MaintBase.Name = "label_MaintBase";
-            this.label_MaintBase.Size = new System.Drawing.Size(1280, 30);
-            this.label_MaintBase.TabIndex = 453;
-            this.label_MaintBase.Text = "Maint Base";
-            this.label_MaintBase.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Pnl_Item
             // 
             this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Pnl_Item.Location = new System.Drawing.Point(0, 33);
+            this.Pnl_Item.Controls.Add(this.label1);
+            this.Pnl_Item.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Item.Name = "Pnl_Item";
             this.Pnl_Item.Size = new System.Drawing.Size(1280, 768);
             this.Pnl_Item.TabIndex = 460;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(649, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Serial";
             // 
             // vwSerial
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label_MaintBase);
             this.Controls.Add(this.Pnl_Item);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "vwSerial";
-            this.Size = new System.Drawing.Size(1280, 804);
+            this.Size = new System.Drawing.Size(1280, 768);
+            this.Pnl_Item.ResumeLayout(false);
+            this.Pnl_Item.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label_MaintBase;
         private System.Windows.Forms.Panel Pnl_Item;
+        private System.Windows.Forms.Label label1;
     }
 }

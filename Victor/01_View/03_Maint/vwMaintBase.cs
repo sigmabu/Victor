@@ -49,8 +49,8 @@ namespace Victor
                     //Pnl_Item.Controls.Remove(m_vw02Uloader);
                     //m_vw02Uloader.Close();
 
-                    //Pnl_Item.Controls.Add(m_vw02Common);
-                    //m_vw02Common.Open();                   
+                    Pnl_Item.Controls.Add(m_vwSerial);
+                    m_vwSerial.Open();                   
 
                     break;
                 case 2:
@@ -72,8 +72,8 @@ namespace Victor
                     break;
                 case 1:
                     {
-                        //Pnl_Item.Controls.Remove(m_vw02Common);
-                        //m_vw02Common.Close();                      
+                        Pnl_Item.Controls.Remove(m_vwSerial);
+                        m_vwSerial.Close();                      
                     }
                     break;
                 case 2:
