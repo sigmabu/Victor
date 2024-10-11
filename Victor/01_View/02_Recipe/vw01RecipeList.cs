@@ -549,7 +549,7 @@ namespace Victor
                 case 22:
                     label_RecipeList.Visible = false;
                     pnl_Menu.Controls.Add(m_vw02Item);
-                    GVar.nRcpPage = 1;
+                    mViewPage.nRcpPage = 1;
                     m_vw02Item.Open();
                     break;
                 case 3:

@@ -40,8 +40,7 @@ public class GVar
     public static string[] ini_RecipeSection { get; set; }
     public static string[] ini_RecipeKey { get; set; }
     public static string[][] RecipeKeyName = new string[100][];
-
-    public static int nRcpPage{  get; set;   }
+        
 }
 
 public class CGcolor

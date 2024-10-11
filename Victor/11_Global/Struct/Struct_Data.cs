@@ -87,3 +87,14 @@ public struct mRecipe
     }
 
 }
+
+public static class mViewPage
+{
+    public static int nViewMain = 11;
+    public static int nViewRecipeList = 21;
+    public static int nViewRecipeItem = 22;
+    public static int nViewMaint = 31;
+
+    public static int nRcpPage { get; set; }
+    public static int mCurrViewPage  {get;set;  }
+}

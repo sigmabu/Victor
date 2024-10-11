@@ -19,9 +19,9 @@ namespace Victor
     {
         private string m_sTitle;
 
-        private vw02RecipeCommon    m_vw02Common = new vw02RecipeCommon();
-        private vw02RecipeLoader    m_vw02Loader   = new vw02RecipeLoader();
-        private vw02RecipeBank      m_vw02Bank     = new vw02RecipeBank();
+        private vw02RecipeCommon    m_vw02Common    = new vw02RecipeCommon();
+        private vw02RecipeLoader    m_vw02Loader    = new vw02RecipeLoader();
+        private vw02RecipeBank      m_vw02Bank      = new vw02RecipeBank();
         private vw02RecipeULoader   m_vw02Uloader   = new vw02RecipeULoader();
         public vw02RecipeItem(string sTitle)
         {
@@ -57,6 +57,7 @@ namespace Victor
                 btn[i].BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
                 btn[i].Margin = new Padding(nBtnMargin);
                 btn[i].Padding = new Padding(0,0,7,0);
+                btn[i].Name = "btn_"+EnumToString((eRecipGroup)i);
                 btn[i].Text = EnumToString((eRecipGroup)i);
                 btn[i].Size = new Size( nBtn_w, nBtn_h);
                 btn[i].Location = new Point(nBtn_Px , nBtn_Py + (nBtn_s * i));
@@ -67,8 +68,8 @@ namespace Victor
         }
         private void Click_SectionMenu(object sender, EventArgs e)
         {
-            Button button = sender as Button;
-            
+            Button button = sender as Button;            
+
             if (button.Text == EnumToString((eRecipGroup)0))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
@@ -76,7 +77,7 @@ namespace Victor
                 label_RecipeItem.Text = m_sTitle;
 
                 _VwClr();
-                GVar.nRcpPage = 1;
+                mViewPage.nRcpPage = 1;
                 _VwAdd();
             }
             else if (button.Text == EnumToString((eRecipGroup)1))
@@ -86,7 +87,7 @@ namespace Victor
                 label_RecipeItem.Text = m_sTitle;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
-                GVar.nRcpPage = 2;
+                mViewPage.nRcpPage = 2;
                 _VwAdd();
             }
             else if (button.Text == EnumToString((eRecipGroup)2))
@@ -95,7 +96,7 @@ namespace Victor
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
-                GVar.nRcpPage = 3;
+                mViewPage.nRcpPage = 3;
                 _VwAdd();
             }
             else if (button.Text == EnumToString((eRecipGroup)3))
@@ -104,7 +105,7 @@ namespace Victor
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
-                GVar.nRcpPage = 4;
+                mViewPage.nRcpPage = 4;
                 _VwAdd();
             }
 
@@ -114,7 +115,7 @@ namespace Victor
                 m_sTitle = "Recipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
-                GVar.nRcpPage = 0;
+                mViewPage.nRcpPage = 0;
                 _VwAdd();
 
                 Load_InformationData();
@@ -124,7 +125,7 @@ namespace Victor
 
         private void Init_PageView()
         {
-            switch (GVar.nRcpPage)
+            switch (mViewPage.nRcpPage)
             {
                 case 0:
                     break;
@@ -147,7 +148,7 @@ namespace Victor
 
         private void _VwAdd()
         {
-            switch (GVar.nRcpPage)
+            switch (mViewPage.nRcpPage)
             {
                 case 0:
                     Load_InformationData();                    
@@ -160,7 +161,7 @@ namespace Victor
                     m_vw02Bank.Close();
                     Pnl_Item.Controls.Remove(m_vw02Uloader);
                     m_vw02Uloader.Close();
-                    //Load_InformationData();
+                    //Load_CfgData();
                     Pnl_Item.Controls.Add(m_vw02Common);
                     m_vw02Common.Open();                   
 
@@ -184,7 +185,7 @@ namespace Victor
 
         private void _VwClr()
         {
-            switch (GVar.nRcpPage)
+            switch (mViewPage.nRcpPage)
             {
                 case 0:
                     {
@@ -199,7 +200,7 @@ namespace Victor
                         Pnl_Item.Controls.Remove(m_vw02Bank);
                         m_vw02Bank.Close();
                         Pnl_Item.Controls.Remove(m_vw02Uloader);
-                        m_vw02Uloader.Close();
+                        m_vw02Uloader.Close();                        
                     }
                     break;
                 case 2:
@@ -239,62 +240,13 @@ namespace Victor
             //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.Recipe.nSaveValue);
         }
 
-
-        private void Load_CommonData()
-        {
-            //checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
-            //label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
-            //label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
-            //label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
-        }
-
-        private void Get_CommonData()
-        {
-            //CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
-            //CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
-            //CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
-            //CData.Recipe.C_Data.sCValue = textBox4.Text;
-        }
-
-        private void Load_LoaderData()
-        {
-            //checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.L_Data.bLValue == false) ? false : true;
-            //label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.L_Data.nLValue);
-            //label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.L_Data.dLValue);
-            //label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.L_Data.sLValue);
-        }
-
-        private void Get_LoaderData()
-        {
-            //CData.Recipe.L_Data.bLValue = (checkBox1.Checked == false) ? false : true;
-            //CData.Recipe.L_Data.nLValue = int.Parse(textBox2.Text);
-            //CData.Recipe.L_Data.dLValue = int.Parse(textBox3.Text);
-            //CData.Recipe.L_Data.sLValue = textBox4.Text;
-        }
-
-        private void Load_UnloaderData()
-        {
-            //checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.Ul_Data.bULValue == false) ? false : true;
-            //label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.Ul_Data.nULValue);
-            //label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.Ul_Data.dULValue);
-            //label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.Ul_Data.sULValue);
-        }
-
-        private void Get_UnloaderData()
-        {
-            //CData.Recipe.Ul_Data.bULValue = (checkBox1.Checked == false) ? false : true;
-            //CData.Recipe.Ul_Data.nULValue = int.Parse(textBox2.Text);
-            //CData.Recipe.Ul_Data.dULValue = int.Parse(textBox3.Text);
-            //CData.Recipe.Ul_Data.sULValue = textBox4.Text;
-        }
-
         private void Click_Save(object sender, EventArgs e)
         {
             Get_InformationData();
-            if (GVar.nRcpPage == 1) Get_CommonData();
-            if(GVar.nRcpPage == 2)m_vw02Loader.Get_LoaderData();
-            else if(GVar.nRcpPage == 3) m_vw02Bank.Get_BankData();
-            else if (GVar.nRcpPage == 4) m_vw02Uloader.Get_UnloaderData();
+            if (mViewPage.nRcpPage == 1) m_vw02Common.Get_CommonData();
+            if(mViewPage.nRcpPage == 2)m_vw02Loader.Get_LoaderData();
+            else if(mViewPage.nRcpPage == 3) m_vw02Bank.Get_BankData();
+            else if (mViewPage.nRcpPage == 4) m_vw02Uloader.Get_UnloaderData();
 
             CRecipe.It.Save(CRecipe.It.FullPath);
             CRecipe.It.Load(CRecipe.It.FullPath);

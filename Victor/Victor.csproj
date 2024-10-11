@@ -116,6 +116,18 @@
     <Compile Include="01_View\03_Maint\vwMaint.Designer.cs">
       <DependentUpon>vwMaint.cs</DependentUpon>
     </Compile>
+    <Compile Include="01_View\03_Maint\vwMaintBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\03_Maint\vwMaintBase.Designer.cs">
+      <DependentUpon>vwMaintBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_View\03_Maint\vwSerial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\03_Maint\vwSerial.Designer.cs">
+      <DependentUpon>vwSerial.cs</DependentUpon>
+    </Compile>
     <Compile Include="01_View\04_Option\vwOption.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -140,7 +152,7 @@
     </Compile>
     <Compile Include="11_Global\Enum.cs" />
     <Compile Include="11_Global\GVar.cs" />
-    <Compile Include="11_Global\Struct\Struct_Device.cs" />
+    <Compile Include="11_Global\Struct\Struct_Data.cs" />
     <Compile Include="12_File\CCheckFile.cs" />
     <Compile Include="12_File\CData.cs" />
     <Compile Include="12_File\CIni.cs" />
@@ -182,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\03_Maint\vwMaint.resx">
       <DependentUpon>vwMaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\03_Maint\vwMaintBase.resx">
+      <DependentUpon>vwMaintBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\03_Maint\vwSerial.resx">
+      <DependentUpon>vwSerial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\04_Option\vwOption.resx" />
     <EmbeddedResource Include="02_Dialogue\Form_DevSelect.resx">

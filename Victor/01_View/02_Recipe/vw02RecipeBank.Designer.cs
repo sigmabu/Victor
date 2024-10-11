@@ -52,7 +52,7 @@ namespace Victor
             // 
             // Pnl_Item
             // 
-            this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
+            this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Pnl_Item.Controls.Add(this.checkBox1);
             this.Pnl_Item.Controls.Add(this.textBox4);
             this.Pnl_Item.Controls.Add(this.textBox3);
@@ -62,7 +62,7 @@ namespace Victor
             this.Pnl_Item.Controls.Add(this.label2);
             this.Pnl_Item.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Item.Name = "Pnl_Item";
-            this.Pnl_Item.Size = new System.Drawing.Size(1136, 771);
+            this.Pnl_Item.Size = new System.Drawing.Size(1136, 768);
             this.Pnl_Item.TabIndex = 460;
             // 
             // checkBox1
@@ -126,14 +126,14 @@ namespace Victor
             // vw02RecipeBank
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.Pnl_Item);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "vw02RecipeBank";
-            this.Size = new System.Drawing.Size(1136, 771);
+            this.Size = new System.Drawing.Size(1136, 768);
             this.Pnl_Item.ResumeLayout(false);
             this.Pnl_Item.PerformLayout();
             this.ResumeLayout(false);

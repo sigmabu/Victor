@@ -61,11 +61,11 @@
             this.radio_Save.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.radio_Save.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radio_Save.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radio_Save.Location = new System.Drawing.Point(14, 657);
+            this.radio_Save.Location = new System.Drawing.Point(5, 657);
             this.radio_Save.Margin = new System.Windows.Forms.Padding(0);
             this.radio_Save.Name = "radio_Save";
             this.radio_Save.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.radio_Save.Size = new System.Drawing.Size(94, 72);
+            this.radio_Save.Size = new System.Drawing.Size(133, 72);
             this.radio_Save.TabIndex = 455;
             this.radio_Save.Tag = "11";
             this.radio_Save.Text = "Save";
@@ -78,12 +78,12 @@
             this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Pnl_Item.Location = new System.Drawing.Point(0, 33);
             this.Pnl_Item.Name = "Pnl_Item";
-            this.Pnl_Item.Size = new System.Drawing.Size(1136, 771);
+            this.Pnl_Item.Size = new System.Drawing.Size(1136, 768);
             this.Pnl_Item.TabIndex = 460;
             // 
             // Pnl_Button
             // 
-            this.Pnl_Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.Pnl_Button.BackColor = System.Drawing.Color.Black;
             this.Pnl_Button.Controls.Add(this.radio_Save);
             this.Pnl_Button.Location = new System.Drawing.Point(1136, 33);
             this.Pnl_Button.Name = "Pnl_Button";
@@ -93,7 +93,7 @@
             // vw02RecipeItem
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.label_RecipeItem);
             this.Controls.Add(this.Pnl_Button);

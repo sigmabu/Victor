@@ -3,7 +3,7 @@ Name=D:\01_Source\Victor\exe_default\Victor\Device\Default\A0123.dev
 Bool Value=False
 Integer Value=1
 Double Value=2
-Last Update=24-10-11,금 오후 3:10:20
+Last Update=24-10-11,금 오후 3:44:35
 
 [Common]
 Bool Value=False
@@ -14,7 +14,7 @@ string Value=Common7 = 1.0
 [Loader]
 Bool Value=False
 Integer Value=2
-Double Value=2
+Double Value=34
 string Value=Loader = 2.0
 
 [Unloader]

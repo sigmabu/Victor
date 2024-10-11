@@ -43,6 +43,8 @@ namespace Victor
             m_vwMaint   = new vwMaint();
 
             rdb_Main.Checked = true;
+
+            Call_PnlBase_Change(mViewPage.nViewMain);
         }
 
         private void Click_Exit(object sender, EventArgs e)
@@ -104,25 +106,30 @@ namespace Victor
                 return;
             }
 
-            GVar.m_iPage = nTag;    // 인덱스 변경
+            GVar.m_iPage = nTag;    // 인덱스 변경            
 
             switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
             {
                 case 11:
                     pnl_Base.Controls.Add(m_vwMain);
                     m_vwMain.Open();
+                    mViewPage.mCurrViewPage = mViewPage.nViewMain;
                     break;
                 case 21:
                     pnl_Base.Controls.Add(m_vwRecipeList);
                     m_vwRecipeList.Open();
+                    mViewPage.mCurrViewPage = mViewPage.nViewRecipeList;
                     break;
                 case 22:
                     pnl_Base.Controls.Add(m_vwRecipeItem);
+                    mViewPage.nRcpPage = 1;
                     m_vwRecipeItem.Open();
+                    mViewPage.mCurrViewPage = mViewPage.nViewRecipeItem;
                     break;
                 case 31:
                     pnl_Base.Controls.Add(m_vwMaint);
                     m_vwMaint.Open();
+                    mViewPage.mCurrViewPage = mViewPage.nViewMaint;
                     break;
             }
         }
@@ -170,5 +177,9 @@ namespace Victor
             CLast.Load_LastConfig();
         }
 
+        private void Click_TitleRecipe(object sender, EventArgs e)
+        {            
+            Call_PnlBase_Change(mViewPage.nViewRecipeItem);
+        }
     }
 }

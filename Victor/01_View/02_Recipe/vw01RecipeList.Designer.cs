@@ -239,7 +239,7 @@
             // 
             // pnl_Menu
             // 
-            this.pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.pnl_Menu.BackColor = System.Drawing.Color.Black;
             this.pnl_Menu.Controls.Add(this.pnl_Btn);
             this.pnl_Menu.Controls.Add(this.pnlM_List);
             this.pnl_Menu.Controls.Add(this.pnlM_Grp);
@@ -249,7 +249,7 @@
             // vw01RecipeList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.label_RecipeList);
             this.Controls.Add(this.pnl_Menu);
             this.DoubleBuffered = true;

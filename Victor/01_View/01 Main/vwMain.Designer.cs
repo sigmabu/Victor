@@ -97,7 +97,7 @@ namespace Victor
             // 
             // pnl_Menu
             // 
-            this.pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.pnl_Menu.BackColor = System.Drawing.Color.Black;
             this.pnl_Menu.Location = new System.Drawing.Point(0, 0);
             this.pnl_Menu.Name = "pnl_Menu";
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
