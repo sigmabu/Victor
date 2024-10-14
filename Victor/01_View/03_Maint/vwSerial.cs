@@ -98,61 +98,36 @@ namespace Victor
             bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
         }
 
-
-        List<String> x = new List<string>();
-        List<String> y = new List<string>();
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            StreamReader file = new StreamReader(GVar.PATH_CONFIG_Serial);
-
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Set Value");
-            dt.Columns.Add("설명");
-
-            while (!file.EndOfStream)
-            {
-                string line = file.ReadLine();
-
-                string[] data = line.Split(',');
-                dt.Rows.Add(data[0], data[1]);
-
-                x.Add(data[0]);
-                y.Add(data[0]);
-            }
-            dataGridView1.DataSource = dt;
-        }
-
         private void Display_File_SerialConfig()
         {
             int nCount = 0;
-            DataTable dt = new DataTable();
-            foreach (var vr in CData.tSerial)
-            {
-                dt.Columns.Add("Set Value");
-                dt.Columns.Add("설명");
-            }
-        https://okky.kr/questions/1161729
+        //    DataTable dt = new DataTable();
+        //    foreach (var vr in CData.tSerial)
+        //    {
+        //        dt.Columns.Add("Set Value");
+        //        dt.Columns.Add("설명");
+        //    }
+        //https://okky.kr/questions/1161729
 
-            dt.Columns.Add(new DataColumn("FileName"));
+        //    dt.Columns.Add(new DataColumn("FileName"));
 
-            dt.Columns.Add(new DataColumn("PDF"));
+        //    dt.Columns.Add(new DataColumn("PDF"));
 
-            dt.Columns.Add(new DataColumn("CopyCount"));
+        //    dt.Columns.Add(new DataColumn("CopyCount"));
 
-            dt.Columns.Add(new DataColumn("WaterMark"));
+        //    dt.Columns.Add(new DataColumn("WaterMark"));
 
-            DataRow dr = dt.NewRow(); 
-                    dt.rows.Add(dr); 
-                    dt["FileName"] = "Newfile"; 
-                    dt["PDF"] = true; 
-                    dt["CopyCount"] = 1; 
-                    dt["WaterMark"] = true;
+        //    DataRow dr = dt.NewRow(); 
+        //            dt.rows.Add(dr); 
+        //            dt["FileName"] = "Newfile"; 
+        //            dt["PDF"] = true; 
+        //            dt["CopyCount"] = 1; 
+        //            dt["WaterMark"] = true;
 
 
-            dr = dt.NewRow(); dt.rows.Add(dr); dt["FileName"] = "Newfile"; dt["PDF"] = true; dt["CopyCount"] = 2;
+        //    dr = dt.NewRow(); dt.rows.Add(dr); dt["FileName"] = "Newfile"; dt["PDF"] = true; dt["CopyCount"] = 2;
 
-            dataGridView1.DataSource = new BindingSource() { DataSource = dt };
+        //    dataGridView1.DataSource = new BindingSource() { DataSource = dt };
 
         }
 
@@ -164,6 +139,8 @@ namespace Victor
 
         public int Read_File_SerialConfig()
         {
+            dataGridView1.DataSource = readCSV(sSerialPath);
+
             sCsvData = CCsv.OpenCSVFile(this.sSerialPath);
             int nArrayCnt = 0;
 
@@ -211,6 +188,28 @@ namespace Victor
         {
             //Get_UiData();
             Save_UiData();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = readCSV(sSerialPath);
+        }
+        public DataTable readCSV(string filePath)
+        { 
+            var dt = new DataTable();
+
+            // 첫번째 행을 읽어 컬럼명으로 세팅
+            File.ReadLines(filePath).Take(1)
+                .SelectMany(x => x.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                .ToList()
+                .ForEach(x => dt.Columns.Add(x.Trim()));
+
+            // 나머지 행을 읽어 데이터로 세팅
+            File.ReadLines(filePath).Skip(1)
+                .Select(x => x.Split(','))
+                .ToList()
+                .ForEach(line => dt.Rows.Add(line));
+            return dt;
         }
     }
 }
