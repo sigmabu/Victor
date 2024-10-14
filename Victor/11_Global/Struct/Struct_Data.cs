@@ -90,12 +90,12 @@ public struct mRecipe
 
 public static class mViewPage
 {
-    public static int nViewMain = 11;
-    public static int nViewRecipeList = 21;
-    public static int nViewRecipeItem = 22;
-    public static int nViewMaint = 31;
-    public static int nViewMaintSerial = 32;
-    public static int nViewMaintEthernet = 33;
+    public static int nViewMain = 111;
+    public static int nViewRecipeList = 211;
+    public static int nViewRecipeItem = 212;
+    public static int nViewMaint = 311;
+    public static int nViewMaintSerial = 312;
+    public static int nViewMaintEthernet = 313;
 
     public static int nRcpPage { get; set; }
 

@@ -30,9 +30,8 @@ namespace Victor
 
         public void Open()
         {
-            GVar.m_iPage = 21;
+            GVar.m_iPage = 211;
             vwAdd();
-            hideMenu();
 
             _GrpListUp();
             
@@ -41,16 +40,9 @@ namespace Victor
             lbxM_Dev.SelectedItem = (string.IsNullOrEmpty(CRecipe.It.Name) == false) ? CRecipe.It.Name.Replace(".dev", "") : "Empty";
         }
 
-        private void hideMenu()
-        {
-
-        }
-
-
         public void Close()
         {
-            vwClear();
-            //pnl_Menu.Controls.Clear();
+            pnl_Menu.Controls.Clear();
         }
 
         private void SetRecipeTitle(string sPath)
@@ -72,7 +64,7 @@ namespace Victor
         {
             switch (GVar.m_iPage)
             {
-                case 21:
+                case 211:
                     pnl_Menu.Controls.Clear();
                     GetRecipeTitle();
                     pnl_Menu.Controls.Add(pnlM_Grp);
@@ -80,36 +72,16 @@ namespace Victor
                     pnl_Menu.Controls.Add(pnl_Btn);
 
                     break;
-                case 22:
+                case 212:
                     //m_vw02Prm.Open();
                     //pnl_Base.Controls.Add(m_vw02Prm);
                     break;
-                case 31:
+                case 213:
                     //m_vw03Set.Open();
                     //pnl_Base.Controls.Add(m_vw03Set);
                     break;
             }
         }
-
-        private void vwClear()
-        {
-            //switch (nPage)
-            //{
-            //    case 11:
-            //        m_vw01Lst.Close();
-            //        break;
-            //    case 21:
-            //        m_vw02Prm.Close();
-            //        break;
-            //    case 31:
-            //        m_vw03Set.Close();
-            //        break;
-            //}
-
-            pnl_Menu.Controls.Clear();
-        }
-
-
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -541,16 +513,16 @@ namespace Victor
 
             switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
             {
-                case 21:
+                case 211:
                     vwAdd();
                     break;
-                case 22:
+                case 212:
                     label_RecipeList.Visible = false;
                     pnl_Menu.Controls.Add(m_vw02Item);
                     mViewPage.nRcpPage = 1;
                     m_vw02Item.Open();
                     break;
-                case 3:
+                case 213:
                     //pnl_Base.Controls.Add(m_vwMaint);
                     //m_vwMaint.Open();
                     break;

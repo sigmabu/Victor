@@ -222,7 +222,7 @@
             this.btnM_DApp.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnM_DApp.Name = "btnM_DApp";
             this.btnM_DApp.TabStop = false;
-            this.btnM_DApp.Tag = "22";
+            this.btnM_DApp.Tag = "212";
             this.btnM_DApp.UseVisualStyleBackColor = false;
             this.btnM_DApp.Click += new System.EventHandler(this.btnM_DApp_Click);
             // 
@@ -234,7 +234,7 @@
             this.btnM_DCur.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnM_DCur.Name = "btnM_DCur";
             this.btnM_DCur.TabStop = false;
-            this.btnM_DCur.Tag = "22";
+            this.btnM_DCur.Tag = "212";
             this.btnM_DCur.UseVisualStyleBackColor = false;
             // 
             // pnl_Menu

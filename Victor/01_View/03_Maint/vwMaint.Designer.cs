@@ -73,7 +73,7 @@
             this.btn_Serial.Name = "btn_Serial";
             this.btn_Serial.Size = new System.Drawing.Size(180, 50);
             this.btn_Serial.TabIndex = 1;
-            this.btn_Serial.Tag = "32";
+            this.btn_Serial.Tag = "312";
             this.btn_Serial.Text = "Serial Comm";
             this.btn_Serial.UseVisualStyleBackColor = false;
             this.btn_Serial.Click += new System.EventHandler(this.Click_Button);
@@ -86,7 +86,7 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(26, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 40);
+            this.label1.Size = new System.Drawing.Size(75, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Optic";
             // 
@@ -171,7 +171,7 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(26, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 40);
+            this.label2.Size = new System.Drawing.Size(78, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Laser";
             // 
@@ -227,7 +227,7 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(26, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 40);
+            this.label3.Size = new System.Drawing.Size(92, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "Motion";
             // 

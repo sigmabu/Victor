@@ -87,9 +87,8 @@
             this.rdb_Maint.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
             this.rdb_Maint.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.rdb_Maint.Name = "rdb_Maint";
-            this.rdb_Maint.Tag = "31";
+            this.rdb_Maint.Tag = "311";
             this.rdb_Maint.UseVisualStyleBackColor = false;
-            this.rdb_Maint.CheckedChanged += new System.EventHandler(this.rdb_Menu_CheckedChanged);
             this.rdb_Maint.Click += new System.EventHandler(this.Click_MenuRadioButton);
             // 
             // rdb_Main
@@ -100,9 +99,8 @@
             this.rdb_Main.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
             this.rdb_Main.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.rdb_Main.Name = "rdb_Main";
-            this.rdb_Main.Tag = "11";
+            this.rdb_Main.Tag = "111";
             this.rdb_Main.UseVisualStyleBackColor = false;
-            this.rdb_Main.CheckedChanged += new System.EventHandler(this.rdb_Menu_CheckedChanged);
             this.rdb_Main.Click += new System.EventHandler(this.Click_MenuRadioButton);
             // 
             // rdb_Recie
@@ -113,9 +111,8 @@
             this.rdb_Recie.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
             this.rdb_Recie.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.rdb_Recie.Name = "rdb_Recie";
-            this.rdb_Recie.Tag = "21";
+            this.rdb_Recie.Tag = "211";
             this.rdb_Recie.UseVisualStyleBackColor = false;
-            this.rdb_Recie.CheckedChanged += new System.EventHandler(this.rdb_Menu_CheckedChanged);
             this.rdb_Recie.Click += new System.EventHandler(this.Click_MenuRadioButton);
             // 
             // pnl_Base

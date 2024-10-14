@@ -22,6 +22,7 @@ namespace Victor
         private vw01RecipeList m_vwRecipeList;
         private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("Recipe : " + eRecipGroup.Common.ToString());
         private vwMaint         m_vwMaint;
+        private vwSerial        m_vwSerial = new vwSerial();
 
         public FrmMain()
         {
@@ -64,39 +65,28 @@ namespace Victor
             Call_PnlBase_Change(iTag);
         }
 
-        private void rdb_Menu_CheckedChanged(object sender, EventArgs e)
-        {
-            return;
-            RadioButton mBtn = sender as RadioButton;
-            int iTag = int.Parse(mBtn.Tag.ToString());
-
-            if (iTag == GVar.m_iPage && !isClickedLevelButton)
-            {
-                return;
-            }
-            Call_PnlBase_Change(iTag);
-        }
         public void Call_PnlBase_Change(int nTag)
         { 
             switch (GVar.m_iPage)    // 이전 뷰 Close
             {
-                case 11:
+                case 111:
                     m_vwMain.Close();
                     break;
-                case 21:
+                case 211:
                     m_vwRecipeList.Close();
                     break;
-                case 22:
+                case 212:
                     m_vwRecipeItem.Close();
                     break;
-                case 31:
+                case 311:
                     m_vwMaint.Close();
                     break;
-                case 32:
+                case 312:
+                    m_vwSerial.Close();
                     m_vwMaint.Close();
                     break;
 
-                case 99:
+                case 999:
                     //m_vwLogIn.Close();
                     break;
             }
@@ -113,29 +103,33 @@ namespace Victor
 
             switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
             {
-                case 11:
+                case 111:
                     pnl_Base.Controls.Add(m_vwMain);
                     m_vwMain.Open();
                     mViewPage.mCurrViewPage = mViewPage.nViewMain;
                     break;
-                case 21:
+                case 211:
                     pnl_Base.Controls.Add(m_vwRecipeList);
                     m_vwRecipeList.Open();
                     mViewPage.mCurrViewPage = mViewPage.nViewRecipeList;
                     break;
-                case 22:
+                case 212:
                     pnl_Base.Controls.Add(m_vwRecipeItem);
                     mViewPage.nRcpPage = 1;
                     m_vwRecipeItem.Open();
                     mViewPage.mCurrViewPage = mViewPage.nViewRecipeItem;
                     break;
-                case 31:
-                case 32:
-
-
+                case 311:
                     pnl_Base.Controls.Add(m_vwMaint);
                     m_vwMaint.Open();
                     mViewPage.mCurrViewPage = mViewPage.nViewMaint;
+                    break;
+                case 312:
+
+
+                    pnl_Base.Controls.Add(m_vwSerial);
+                    m_vwSerial.Open();
+                    mViewPage.mCurrViewPage = mViewPage.nViewMaintSerial;
                     break;
             }
         }

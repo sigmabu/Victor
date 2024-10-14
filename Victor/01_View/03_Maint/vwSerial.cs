@@ -36,21 +36,10 @@ namespace Victor
                     Load_CfgData();                    
 
                     break;
-                case 32:
-                    //Pnl_Item.Controls.Remove(m_vw02Loader);
-                    //m_vw02Loader.Close();
-                    //Pnl_Item.Controls.Remove(m_vw02Bank);
-                    //m_vw02Bank.Close();
-                    //Pnl_Item.Controls.Remove(m_vw02Uloader);
-                    //m_vw02Uloader.Close();
-
-                    //Pnl_Item.Controls.Add(m_vw02Common);
-                    //m_vw02Common.Open();                   
+                case 312:
 
                     break;
-                case 2:
-                    //Pnl_Item.Controls.Add(m_vw02Loader);
-                    //m_vw02Loader.Open();
+                case 313:
 
                     break;
                 default: break;
@@ -65,13 +54,13 @@ namespace Victor
                     {
                     }
                     break;
-                case 1:
+                case 311:
                     {
                         //Pnl_Item.Controls.Remove(m_vw02Common);
                         //m_vw02Common.Close();                      
                     }
                     break;
-                case 2:
+                case 312:
                     {
                         //m_vw02Loader.Close();
                         //Pnl_Item.Controls.Remove(m_vw02Loader);

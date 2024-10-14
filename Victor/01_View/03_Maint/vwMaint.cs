@@ -13,7 +13,6 @@ namespace Victor
 {
     public partial class vwMaint : UserControl
     {
-        // private vwSerial m_vwSerial = new vwSerial("Recipe : " + eRecipGroup.Common.ToString());
         private vwSerial m_vwSerial = new vwSerial();
         public vwMaint()
         {
@@ -22,11 +21,8 @@ namespace Victor
 
         public void Open()
         {
-
-            //pnl_Menu.BringToFront();
-
-            //vwAdd();
-            //hideMenu();
+            GVar.m_iPage = 311;
+            vwAdd();
         }
 
         public void Close()
@@ -38,14 +34,19 @@ namespace Victor
         {
             switch (GVar.m_iPage)
             {
-                case 11:
+                case 311:
+
+                    panel1.Visible = true;
+                    panel2.Visible = true;
+                    panel3.Visible = true;
+
 
                     break;
-                case 21:
+                case 312:
                     //m_vw02Prm.Open();
                     //pnl_Base.Controls.Add(m_vw02Prm);
                     break;
-                case 31:
+                case 313:
                     //m_vw03Set.Open();
                     //pnl_Base.Controls.Add(m_vw03Set);
                     break;
@@ -62,15 +63,13 @@ namespace Victor
             //    case 21:
             //        m_vw02Prm.Close();
             //        break;
-                case 32:
-                m_vwSerial.Close();
+                case 312:
+                    m_vwSerial.Close();
                     pnl_Menu.Controls.Remove(m_vwSerial);
                     break;
             }
 
-            //panel1.Controls.Clear();
-            //panel2.Controls.Clear();
-            //panel3.Controls.Clear();
+            pnl_Menu.Controls.Clear();
         }
 
         private void Click_Button(object sender, EventArgs e)
@@ -86,19 +85,20 @@ namespace Victor
 
                 switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
                 {
-                    case 31:
+                    case 311:
                         vwAdd();
                         break;
-                    case 32:
+                    case 312:
                         panel1.Visible = false;
                         panel2.Visible = false;
                         panel3.Visible = false;
                         pnl_Menu.Controls.Add(m_vwSerial);
-                        GVar.m_iPage = 32;
-                        mViewPage.nMaintPage = 32;
+                    m_vwSerial.Location = new Point(0, 32);
+                        GVar.m_iPage = 312;
+                        mViewPage.nMaintPage = 312;
                         m_vwSerial.Open();
                         break;
-                    case 33:
+                    case 313:
                         //pnl_Base.Controls.Add(m_vwMaint);
                         //m_vwMaint.Open();
                         break;

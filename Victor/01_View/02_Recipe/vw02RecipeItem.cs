@@ -129,9 +129,9 @@ namespace Victor
             {
                 case 0:
                     break;
-                case 11:
+                case 111:
                     break;
-                case 21:
+                case 211:
                     break;
                 default:
                     break;

@@ -19,7 +19,7 @@ namespace Victor
 
         public void Open()
         {
-            GVar.m_iPage = 11;
+            GVar.m_iPage = 111;
 
             _vwAdd();
             _HideMenu();
