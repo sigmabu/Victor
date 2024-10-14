@@ -52,8 +52,8 @@ namespace Victor
         {
             IniFile ini = new IniFile();
 
-            ini["Recipe"]["Group"] = CRecipe.It.m_sGrp;
-            ini["Recipe"]["Name"] = CData.RecipeCur;
+            ini["tRecipe"]["Group"] = CRecipe.It.m_sGrp;
+            ini["tRecipe"]["Name"] = CData.RecipeCur;
 
 
             ini.Save(_path);
@@ -63,9 +63,9 @@ namespace Victor
         {
             IniFile ini = new IniFile();
 
-            ini["Recipe"]["Path"] = CRecipe.It.FullPath;
-            ini["Recipe"]["Group"] = CRecipe.It.Group;
-            ini["Recipe"]["Name"] = CRecipe.It.Name;
+            ini["tRecipe"]["Path"] = CRecipe.It.FullPath;
+            ini["tRecipe"]["Group"] = CRecipe.It.Group;
+            ini["tRecipe"]["Name"] = CRecipe.It.Name;
 
             ini.Save(_path);
         }
@@ -82,9 +82,9 @@ namespace Victor
             IniFile ini = new IniFile();
             ini.Load(_path);
 
-            CRecipe.It.FullPath = ini["Recipe"]["Path"].ToString();
-            CRecipe.It.Group    = ini["Recipe"]["Group"].ToString();
-            CRecipe.It.Name     = ini["Recipe"]["Name"].ToString();
+            CRecipe.It.FullPath = ini["tRecipe"]["Path"].ToString();
+            CRecipe.It.Group    = ini["tRecipe"]["Group"].ToString();
+            CRecipe.It.Name     = ini["tRecipe"]["Name"].ToString();
 
             temp = CRecipe.It.FullPath;
             if (temp != "")

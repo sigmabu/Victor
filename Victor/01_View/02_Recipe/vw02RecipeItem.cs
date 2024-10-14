@@ -73,7 +73,7 @@ namespace Victor
             if (button.Text == EnumToString((eRecipGroup)0))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
+                m_sTitle = "tRecipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
 
                 _VwClr();
@@ -83,7 +83,7 @@ namespace Victor
             else if (button.Text == EnumToString((eRecipGroup)1))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
+                m_sTitle = "tRecipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
@@ -93,7 +93,7 @@ namespace Victor
             else if (button.Text == EnumToString((eRecipGroup)2))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
+                m_sTitle = "tRecipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
                 mViewPage.nRcpPage = 3;
@@ -102,7 +102,7 @@ namespace Victor
             else if (button.Text == EnumToString((eRecipGroup)3))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
+                m_sTitle = "tRecipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
                 mViewPage.nRcpPage = 4;
@@ -112,7 +112,7 @@ namespace Victor
             else //if(button.Text == EnumToString((eRecipGroup)0))
             {
                 Console.WriteLine(button.Text + "번 버튼이 눌렸습니다.");
-                m_sTitle = "Recipe : " + button.Text;
+                m_sTitle = "tRecipe : " + button.Text;
                 label_RecipeItem.Text = m_sTitle;
                 _VwClr();
                 mViewPage.nRcpPage = 0;
@@ -226,18 +226,18 @@ namespace Victor
 
         private void Load_InformationData()
         {
-            //checkBox1.Text = GVar.RecipeKeyName[0][1]; checkBox1.Checked = (CData.Recipe.bSaveValue == false) ? false : true;
-            //label2.Text = GVar.RecipeKeyName[0][2]; textBox2.Text = string.Format("{0}", CData.Recipe.nSaveValue);
-            //label3.Text = GVar.RecipeKeyName[0][3]; textBox3.Text = string.Format("{0}", CData.Recipe.dSaveValue);
-            //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.Recipe.nSaveValue);
+            //checkBox1.Text = GVar.RecipeKeyName[0][1]; checkBox1.Checked = (CData.tRecipe.bSaveValue == false) ? false : true;
+            //label2.Text = GVar.RecipeKeyName[0][2]; textBox2.Text = string.Format("{0}", CData.tRecipe.nSaveValue);
+            //label3.Text = GVar.RecipeKeyName[0][3]; textBox3.Text = string.Format("{0}", CData.tRecipe.dSaveValue);
+            //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.tRecipe.nSaveValue);
         }
 
         private void Get_InformationData()
         {
-            //CData.Recipe.bSaveValue = (checkBox1.Checked == false) ? false : true;
-            //CData.Recipe.nSaveValue = int.Parse(textBox2.Text);
-            //CData.Recipe.dSaveValue = int.Parse(textBox3.Text);
-            //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.Recipe.nSaveValue);
+            //CData.tRecipe.bSaveValue = (checkBox1.Checked == false) ? false : true;
+            //CData.tRecipe.nSaveValue = int.Parse(textBox2.Text);
+            //CData.tRecipe.dSaveValue = int.Parse(textBox3.Text);
+            //label4.Text = GVar.RecipeKeyName[0][4]; textBox4.Text = string.Format("{0}", CData.tRecipe.nSaveValue);
         }
 
         private void Click_Save(object sender, EventArgs e)

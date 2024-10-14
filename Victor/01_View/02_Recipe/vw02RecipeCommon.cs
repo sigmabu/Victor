@@ -49,18 +49,18 @@ namespace Victor
 
         private void Load_CommonData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.C_Data.bCValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.C_Data.nCValue);
-            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.C_Data.dCValue);
-            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.C_Data.sCValue);
+            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.tRecipe.C_Data.bCValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.tRecipe.C_Data.nCValue);
+            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.tRecipe.C_Data.dCValue);
+            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.tRecipe.C_Data.sCValue);
         }
 
         public void Get_CommonData()
         {
-            CData.Recipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.C_Data.nCValue = int.Parse(textBox2.Text);
-            CData.Recipe.C_Data.dCValue = int.Parse(textBox3.Text);
-            CData.Recipe.C_Data.sCValue = textBox4.Text;
+            CData.tRecipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
+            CData.tRecipe.C_Data.nCValue = int.Parse(textBox2.Text);
+            CData.tRecipe.C_Data.dCValue = int.Parse(textBox3.Text);
+            CData.tRecipe.C_Data.sCValue = textBox4.Text;
         }
     }
 }

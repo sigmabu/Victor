@@ -49,18 +49,18 @@ namespace Victor
 
         private void Load_LoaderData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.Recipe.L_Data.bLValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.Recipe.L_Data.nLValue);
-            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.Recipe.L_Data.dLValue);
-            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.Recipe.L_Data.sLValue);
+            checkBox1.Text = GVar.RecipeKeyName[1][0]; checkBox1.Checked = (CData.tRecipe.L_Data.bLValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[1][1]; textBox2.Text = string.Format("{0}", CData.tRecipe.L_Data.nLValue);
+            label3.Text = GVar.RecipeKeyName[1][2]; textBox3.Text = string.Format("{0}", CData.tRecipe.L_Data.dLValue);
+            label4.Text = GVar.RecipeKeyName[1][3]; textBox4.Text = string.Format("{0}", CData.tRecipe.L_Data.sLValue);
         }
 
         public void Get_LoaderData()
         {
-            CData.Recipe.L_Data.bLValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.L_Data.nLValue = int.Parse(textBox2.Text);
-            CData.Recipe.L_Data.dLValue = int.Parse(textBox3.Text);
-            CData.Recipe.L_Data.sLValue = textBox4.Text;
+            CData.tRecipe.L_Data.bLValue = (checkBox1.Checked == false) ? false : true;
+            CData.tRecipe.L_Data.nLValue = int.Parse(textBox2.Text);
+            CData.tRecipe.L_Data.dLValue = int.Parse(textBox3.Text);
+            CData.tRecipe.L_Data.sLValue = textBox4.Text;
         }
     }
 }

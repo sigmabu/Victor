@@ -20,9 +20,9 @@ namespace Victor
         private vwMain          m_vwMain;
         private vw00Recipe      m_vwRecipe;
         private vw01RecipeList m_vwRecipeList;
-        private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("Recipe : " + eRecipGroup.Common.ToString());
+        private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("tRecipe : " + eRecipGroup.Common.ToString());
         private vwMaint         m_vwMaint;
-        private vwSerial        m_vwSerial = new vwSerial();
+        //private vwSerial        m_vwSerial = new vwSerial();
 
         public FrmMain()
         {
@@ -82,7 +82,7 @@ namespace Victor
                     m_vwMaint.Close();
                     break;
                 case 312:
-                    m_vwSerial.Close();
+                    //m_vwSerial.Close();
                     m_vwMaint.Close();
                     break;
 
@@ -125,11 +125,9 @@ namespace Victor
                     mViewPage.mCurrViewPage = mViewPage.nViewMaint;
                     break;
                 case 312:
-
-
-                    pnl_Base.Controls.Add(m_vwSerial);
-                    m_vwSerial.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewMaintSerial;
+                    //pnl_Base.Controls.Add(m_vwSerial);
+                    //m_vwSerial.Open();
+                    //mViewPage.mCurrViewPage = mViewPage.nViewMaintSerial;
                     break;
             }
         }

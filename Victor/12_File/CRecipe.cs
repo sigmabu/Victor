@@ -95,12 +95,12 @@ namespace Victor
         public int Save(string group, string name)
         {
             string path = GetPath(group, name);
-            return Save(path, ref CData.Recipe);
+            return Save(path, ref CData.tRecipe);
         }
 
         public int Save(string sPath)
         {
-            return Save(sPath, ref CData.Recipe);
+            return Save(sPath, ref CData.tRecipe);
         }
 
         public int Save(string sPath, ref mRecipe rcp)
@@ -162,7 +162,7 @@ namespace Victor
             // 불러오기전 디바이스 구조체 초기화 (배열 메모리 할당)
             if (Init)
             {
-                InitRecipe(out CData.Recipe);
+                InitRecipe(out CData.tRecipe);
             }
             CIni mIni = new CIni(sPath);
             int FindDot = sPath.LastIndexOf(".");
@@ -170,33 +170,33 @@ namespace Victor
 
             Temp = sPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
 
-            CData.Recipe.sDeviceName = Temp;
-            CData.Recipe.dtEditLast = File.GetLastWriteTime(sPath).ToString();
+            CData.tRecipe.sDeviceName = Temp;
+            CData.tRecipe.dtEditLast = File.GetLastWriteTime(sPath).ToString();
 
             sSection = GVar.ini_RecipeSection[0];
-            CData.Recipe.sDeviceName = mIni.Read(sSection, GVar.RecipeKeyName[0][0]);
-            bool.TryParse  (mIni.Read(sSection, GVar.RecipeKeyName[0][1]), out CData.Recipe.bSaveValue);
-            int.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[0][2]), out CData.Recipe.nSaveValue);
-            double.TryParse(mIni.Read(sSection, GVar.RecipeKeyName[0][3]), out CData.Recipe.dSaveValue);
-            CData.Recipe.dtEditLast = mIni.Read(sSection, GVar.RecipeKeyName[0][4]);
+            CData.tRecipe.sDeviceName = mIni.Read(sSection, GVar.RecipeKeyName[0][0]);
+            bool.TryParse  (mIni.Read(sSection, GVar.RecipeKeyName[0][1]), out CData.tRecipe.bSaveValue);
+            int.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[0][2]), out CData.tRecipe.nSaveValue);
+            double.TryParse(mIni.Read(sSection, GVar.RecipeKeyName[0][3]), out CData.tRecipe.dSaveValue);
+            CData.tRecipe.dtEditLast = mIni.Read(sSection, GVar.RecipeKeyName[0][4]);
 
             sSection = GVar.ini_RecipeSection[1];
-            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[1][0]), out CData.Recipe.C_Data.bCValue);
-            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[1][1]), out CData.Recipe.C_Data.nCValue);
-            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[1][2]), out CData.Recipe.C_Data.dCValue);
-            CData.Recipe.C_Data.sCValue = mIni.Read(sSection, GVar.RecipeKeyName[1][3]);
+            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[1][0]), out CData.tRecipe.C_Data.bCValue);
+            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[1][1]), out CData.tRecipe.C_Data.nCValue);
+            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[1][2]), out CData.tRecipe.C_Data.dCValue);
+            CData.tRecipe.C_Data.sCValue = mIni.Read(sSection, GVar.RecipeKeyName[1][3]);
 
             sSection = GVar.ini_RecipeSection[2];
-            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[2][0]), out CData.Recipe.L_Data.bLValue);
-            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[2][1]), out CData.Recipe.L_Data.nLValue);
-            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[2][2]), out CData.Recipe.L_Data.dLValue);
-            CData.Recipe.L_Data.sLValue = mIni.Read(sSection, GVar.RecipeKeyName[2][3]);
+            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[2][0]), out CData.tRecipe.L_Data.bLValue);
+            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[2][1]), out CData.tRecipe.L_Data.nLValue);
+            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[2][2]), out CData.tRecipe.L_Data.dLValue);
+            CData.tRecipe.L_Data.sLValue = mIni.Read(sSection, GVar.RecipeKeyName[2][3]);
 
             sSection = GVar.ini_RecipeSection[3];
-            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[3][0]), out CData.Recipe.Ul_Data.bULValue);
-            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[3][1]), out CData.Recipe.Ul_Data.nULValue);
-            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[3][2]), out CData.Recipe.Ul_Data.dULValue);
-            CData.Recipe.Ul_Data.sULValue = mIni.Read(sSection, GVar.RecipeKeyName[3][3]);
+            bool.TryParse   (mIni.Read(sSection, GVar.RecipeKeyName[3][0]), out CData.tRecipe.Ul_Data.bULValue);
+            int.TryParse    (mIni.Read(sSection, GVar.RecipeKeyName[3][1]), out CData.tRecipe.Ul_Data.nULValue);
+            double.TryParse (mIni.Read(sSection, GVar.RecipeKeyName[3][2]), out CData.tRecipe.Ul_Data.dULValue);
+            CData.tRecipe.Ul_Data.sULValue = mIni.Read(sSection, GVar.RecipeKeyName[3][3]);
             return iRet;
         }
     }

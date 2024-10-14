@@ -93,7 +93,7 @@ namespace Victor
                         panel2.Visible = false;
                         panel3.Visible = false;
                         pnl_Menu.Controls.Add(m_vwSerial);
-                    m_vwSerial.Location = new Point(0, 32);
+                        m_vwSerial.Location = new Point(0, 32);
                         GVar.m_iPage = 312;
                         mViewPage.nMaintPage = 312;
                         m_vwSerial.Open();

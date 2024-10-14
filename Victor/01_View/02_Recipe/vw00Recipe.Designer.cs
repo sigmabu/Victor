@@ -44,7 +44,7 @@
             this.label_Recipe.Name = "label_Recipe";
             this.label_Recipe.Size = new System.Drawing.Size(350, 30);
             this.label_Recipe.TabIndex = 0;
-            this.label_Recipe.Text = "Recipe";
+            this.label_Recipe.Text = "tRecipe";
             this.label_Recipe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnl_Base

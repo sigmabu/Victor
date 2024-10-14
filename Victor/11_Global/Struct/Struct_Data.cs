@@ -88,6 +88,16 @@ public struct mRecipe
 
 }
 
+public struct mSerial
+{
+    public int nNo;
+    public string sPort_Name;
+    public string sBaud_Rate;
+    public string sParit_bit;
+    public string sStop_bit;
+    public string sFlow_Control;
+}
+
 public static class mViewPage
 {
     public static int nViewMain = 111;

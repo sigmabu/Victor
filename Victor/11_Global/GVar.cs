@@ -13,15 +13,15 @@ using Victor;
 public class GVar
 {
     #region Path
+
+
     public static readonly string PATH_START = Application.StartupPath + "\\";
     /// <summary>
     /// settingConfigs Folder Path  StartUp\\settingConfigs\\
     /// </summary>
     public static readonly string PATH_CONFIG = Application.StartupPath + "\\04_Config\\";
-    /// <summary>
-    /// Wheel Folder Path  StartUp\\Wheel\\
-    /// </summary>
-    public static readonly string PATH_WHEEL = Application.StartupPath + "\\Wheel\\";
+    public static readonly string PATH_CONFIG_Serial = Application.StartupPath + "\\04_Config\\Serial.csv";
+
     /// <summary>
     /// Device Folder Path  StartUp\\Device\\
     /// </summary>

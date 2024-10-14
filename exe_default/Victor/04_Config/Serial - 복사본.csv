@@ -1,0 +1,5 @@
+# Port_no,Name,Baud Rate[bit/s],Data Bit[7/8],Parity Bit[Odd/Even],Stop Bit,Flow control;
+10,COM_10,9600,8,NONE,Odd,Xon;
+11,COM_11,9600,8,NONE,Odd,Xon;
+12,COM_11,9600,8,NONE,Odd,Xon;
+13,COM_11,9600,8,NONE,Odd,Xon;

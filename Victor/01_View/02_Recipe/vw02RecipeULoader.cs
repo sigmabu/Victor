@@ -61,18 +61,18 @@ namespace Victor
 
         private void Load_UnloaderData()
         {
-            checkBox1.Text = GVar.RecipeKeyName[3][0]; checkBox1.Checked = (CData.Recipe.Ul_Data.bULValue == false) ? false : true;
-            label2.Text = GVar.RecipeKeyName[3][1]; textBox2.Text = string.Format("{0}", CData.Recipe.Ul_Data.nULValue);
-            label3.Text = GVar.RecipeKeyName[3][2]; textBox3.Text = string.Format("{0}", CData.Recipe.Ul_Data.dULValue);
-            label4.Text = GVar.RecipeKeyName[3][3]; textBox4.Text = string.Format("{0}", CData.Recipe.Ul_Data.sULValue);
+            checkBox1.Text = GVar.RecipeKeyName[3][0]; checkBox1.Checked = (CData.tRecipe.Ul_Data.bULValue == false) ? false : true;
+            label2.Text = GVar.RecipeKeyName[3][1]; textBox2.Text = string.Format("{0}", CData.tRecipe.Ul_Data.nULValue);
+            label3.Text = GVar.RecipeKeyName[3][2]; textBox3.Text = string.Format("{0}", CData.tRecipe.Ul_Data.dULValue);
+            label4.Text = GVar.RecipeKeyName[3][3]; textBox4.Text = string.Format("{0}", CData.tRecipe.Ul_Data.sULValue);
         }
 
         public void Get_UnloaderData()
         {
-            CData.Recipe.Ul_Data.bULValue = (checkBox1.Checked == false) ? false : true;
-            CData.Recipe.Ul_Data.nULValue = int.Parse(textBox2.Text);
-            CData.Recipe.Ul_Data.dULValue = int.Parse(textBox3.Text);
-            CData.Recipe.Ul_Data.sULValue = textBox4.Text;
+            CData.tRecipe.Ul_Data.bULValue = (checkBox1.Checked == false) ? false : true;
+            CData.tRecipe.Ul_Data.nULValue = int.Parse(textBox2.Text);
+            CData.tRecipe.Ul_Data.dULValue = int.Parse(textBox3.Text);
+            CData.tRecipe.Ul_Data.sULValue = textBox4.Text;
         }
 
     }

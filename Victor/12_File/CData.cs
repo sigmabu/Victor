@@ -22,7 +22,7 @@ namespace Victor
         /// <summary>
         /// 디바이스 구조체
         /// </summary>
-        public static mRecipe Recipe = new mRecipe();
+        public static mRecipe tRecipe = new mRecipe();
         /// <summary>
         /// 현재 사용중인 디바이스 파일의 경로
         /// </summary>
@@ -30,6 +30,9 @@ namespace Victor
 
         public static string RecipeGr = "";
 
-
+        /// <summary>
+        /// Serial Port 설정
+        /// </summary>
+        public static mSerial[] tSerial = new mSerial[20];
     }
 }

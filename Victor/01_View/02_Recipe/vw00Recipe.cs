@@ -10,7 +10,7 @@ namespace Victor
     {
 
         private vw01RecipeList m_vw01List = new vw01RecipeList();
-        private vw02RecipeItem m_vw02Item = new vw02RecipeItem("Recipe :" + eRecipGroup.Common.ToString());
+        private vw02RecipeItem m_vw02Item = new vw02RecipeItem("tRecipe :" + eRecipGroup.Common.ToString());
 
         public vw00Recipe()
         {
