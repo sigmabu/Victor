@@ -9,10 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Microsoft.Build.Tasks;
 using Microsoft.VisualBasic.FileIO;
 using Victor;
-using static System.Windows.Forms.AxHost;
-using static System.Windows.Forms.Button;
 
 
 namespace Victor
@@ -45,11 +44,11 @@ namespace Victor
             switch (mViewPage.nRcpPage)
             {
                 case 0:
-                    Load_CfgDefaultData();
+                    Read_File_SerialConfig();
 
                     break;
                 case 312:
-                    Load_CfgData();
+                    Read_File_SerialConfig();
                     break;
                 case 313:
 
@@ -95,32 +94,10 @@ namespace Victor
 
         private void Save_UiData()
         {
+
+            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
         }
 
-        private void radio_Save_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radio_Save_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FileFolder_Exist()
-        {
-
-            if (!Directory.Exists(this.sFolderPath))
-            {
-                Directory.CreateDirectory(this.sFolderPath);
-            }
-
-            FileInfo fileInfo = new FileInfo(sSerialPath);
-            if (!fileInfo.Exists)// 파일이 있는지 체크
-            {
-                //log("File이 없습니다.");
-            }
-        }
 
         List<String> x = new List<string>();
         List<String> y = new List<string>();
@@ -146,6 +123,40 @@ namespace Victor
             dataGridView1.DataSource = dt;
         }
 
+        private void Display_File_SerialConfig()
+        {
+            int nCount = 0;
+            DataTable dt = new DataTable();
+            foreach (var vr in CData.tSerial)
+            {
+                dt.Columns.Add("Set Value");
+                dt.Columns.Add("설명");
+            }
+        https://okky.kr/questions/1161729
+
+            dt.Columns.Add(new DataColumn("FileName"));
+
+            dt.Columns.Add(new DataColumn("PDF"));
+
+            dt.Columns.Add(new DataColumn("CopyCount"));
+
+            dt.Columns.Add(new DataColumn("WaterMark"));
+
+            DataRow dr = dt.NewRow(); 
+                    dt.rows.Add(dr); 
+                    dt["FileName"] = "Newfile"; 
+                    dt["PDF"] = true; 
+                    dt["CopyCount"] = 1; 
+                    dt["WaterMark"] = true;
+
+
+            dr = dt.NewRow(); dt.rows.Add(dr); dt["FileName"] = "Newfile"; dt["PDF"] = true; dt["CopyCount"] = 2;
+
+            dataGridView1.DataSource = new BindingSource() { DataSource = dt };
+
+        }
+
+        static string[,] sCsvData;
         public int Get_UI_SerialConfig()
         {
             return 0;
@@ -153,33 +164,24 @@ namespace Victor
 
         public int Read_File_SerialConfig()
         {
-            FileInfo fileInfo = new FileInfo("path");
+            sCsvData = CCsv.OpenCSVFile(this.sSerialPath);
+            int nArrayCnt = 0;
 
-            if (!fileInfo.Exists)// 파일이 있는지 체크
+            foreach (string str in sCsvData)
             {
-                //log("File이 없습니다.")
+                if (string.IsNullOrEmpty(sCsvData[nArrayCnt + 1, (int)eSerial.Port_Name]))
+                {
+                    return -1;
+                }
+                //CData.tSerial[0].nNo = sCsvData[1, (int)eSerial.No]; 
+                CData.tSerial[nArrayCnt].sPort_Name = sCsvData[nArrayCnt + 1, (int)eSerial.Port_Name];
+                CData.tSerial[nArrayCnt].sBaud_Rate = sCsvData[nArrayCnt + 1, (int)eSerial.Baud_Rate];
+                CData.tSerial[nArrayCnt].sData_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Data_bit];
+                CData.tSerial[nArrayCnt].sParity_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Parity_bit];
+                CData.tSerial[nArrayCnt].sStop_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Stop_bit];
+                CData.tSerial[nArrayCnt].sFlow_Control = sCsvData[nArrayCnt + 1, (int)eSerial.Flow_Control];
+                nArrayCnt++;
             }
-
-            //using (FileStream fs = new FileStream("path"))
-            //{
-            //    using (StreamReader sr = new StreamReader(fs, Encoding.UTF8, false))
-            //    {
-            //        string strLineValue = null;    // 한번씩 읽어올 문자열
-            //        string[] values = null;        // 문자열을 나눔
-            //        while ((strLineValue = sr.ReadLine()) != null)
-            //        {
-            //            values = strLineValue.Split(',');    // ,로 Split을해 데이터를 나눈다.
-            //            if (values[0].Contains("#"))        // #이 있을 경우에는 데이터 필드
-            //                continue;
-
-            //            foreach (var data in datalist)
-            //            {
-            //                data.data1 = values[0];
-            //                data.data2 = values[1];
-            //            }
-            //        }
-            //    }
-            //}
 
             return 0;
         }
@@ -197,16 +199,18 @@ namespace Victor
             return 0;
         }
 
-        static string[,] sCsvData;
+
+        
         private void Click_Open(object sender, EventArgs e)
         {
-            sCsvData = CCsv.OpenCSVFile(this.sSerialPath);
+            Read_File_SerialConfig();
+            Display_File_SerialConfig();
+
         }
         private void Click_Save(object sender, EventArgs e)
         {
             //Get_UiData();
-            //Save_UiData();
-            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
+            Save_UiData();
         }
     }
 }

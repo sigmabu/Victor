@@ -138,12 +138,16 @@ namespace Victor
                             string[] split = strs[i].Split(',');
                             int FindDot = strs[i].LastIndexOf(",");
 
-                            if (FindDot < 1) break;
+                            if ((FindDot < 1) && (strs[i] != "EOF")) 
+                            {
+                                break;
+                            }
                             else
-                            {                             
+                            {
                                 for (int j = 0; j < result.GetLength(1); j++)
                                 {
                                     result[i, j] = split[j];
+                                    if (strs[i] == "EOF") break;
                                 }
                             }
                         }
@@ -162,10 +166,9 @@ namespace Victor
         public static bool SaveCSVFile(string spath, string[,] sData, bool overwrite = true, bool writeHeader = true)
         {
             int nCount = 0;
-            int nCol = 0;
+            int nArrayCnt = 0;
             StringBuilder sb = new StringBuilder();
             StreamWriter writer;
-            sData[0, 0] += "--";
             try
             {
                 CreatePathFolder(spath);
@@ -175,21 +178,27 @@ namespace Victor
                 {
                     using (writer = new StreamWriter(Path.Combine(spath), false, Encoding.Default))
                     {
+                        nArrayCnt = sData.Length / sData.GetLength(0);
                         foreach (string str in sData)
                         {
-                            if (str.Contains(";"))
+
+                            if (str == "EOF")
+                            {
+                                sb.AppendLine("EOF");
+                                break;
+                            }
+                            else if ((nCount +1) >= nArrayCnt)
                             {
                                 sb.AppendLine(str);
-                                //sb.AppendLine("\n");
-                                {
-                                    //writer.Write(sb);
-                                }
+                                nCount = 0;
                             }
                             else
                             {
                                 sb.Append(str);
                                 sb.Append(",");
+                                nCount++;
                             }
+                            
                         }
                         writer.WriteLine(sb);
                         writer.Close();

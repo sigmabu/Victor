@@ -1496,3 +1496,15 @@ public enum eRecipGroup
     Unloader,
     End
 }
+
+public enum eSerial
+{
+    No = 0,
+    Port_Name = 1,
+    Baud_Rate = 2,
+    Data_bit = 3,
+    Parity_bit =4,
+    Stop_bit = 5,
+    Flow_Control = 6,
+    End
+}

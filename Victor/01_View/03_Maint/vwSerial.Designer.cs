@@ -104,7 +104,6 @@
             this.radio_Save.Text = "Save";
             this.radio_Save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.radio_Save.UseVisualStyleBackColor = false;
-            this.radio_Save.CheckedChanged += new System.EventHandler(this.radio_Save_CheckedChanged);
             this.radio_Save.Click += new System.EventHandler(this.Click_Save);
             // 
             // label1
