@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 
 namespace Victor
 {
-    public partial class vwSerial : UserControl
+    public partial class vwEthernet : UserControl
     {
         private string sSerialPath;
         private string sFolderPath;
@@ -20,7 +20,7 @@ namespace Victor
         static int nSelRow;
         private SerialPort m232_01 = new SerialPort();
 
-        public vwSerial()
+        public vwEthernet()
         {
             InitializeComponent();
             Init_View_Set();

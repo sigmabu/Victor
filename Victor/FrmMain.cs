@@ -22,7 +22,7 @@ namespace Victor
         private vw01RecipeList m_vwRecipeList;
         private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("tRecipe : " + eRecipGroup.Common.ToString());
         private vwMaint         m_vwMaint;
-        //private vwSerial        m_vwSerial = new vwSerial();
+        //private vwSerial        m_vwSerial;
 
         public FrmMain()
         {
@@ -42,9 +42,8 @@ namespace Victor
             m_vwRecipeList = new vw01RecipeList();
             
             m_vwMaint   = new vwMaint();
-
             rdb_Main.Checked = true;
-
+            
             Call_PnlBase_Change(mViewPage.nViewMain);
         }
 

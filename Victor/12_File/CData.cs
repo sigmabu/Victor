@@ -34,5 +34,6 @@ namespace Victor
         /// Serial Port 설정
         /// </summary>
         public static mSerial[] tSerial = new mSerial[20];
+
     }
 }

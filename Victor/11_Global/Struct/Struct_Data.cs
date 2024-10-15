@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Drawing;
+using System.Security.Cryptography;
+using System.Security.Policy;
 
 
 public struct TCommon
@@ -96,14 +98,15 @@ public struct mSerial
     public string sData_bit;
     public string sParity_bit;
     public string sStop_bit;
-    public string sFlow_Control;
-
+    //public string sFlow_Control;
+}
+public static class mSerial_Env
+{ 
     public static String[] sName = new String[4] { "COM10", "COM11", "COM12", "COM13" };
     public static int[]    nBaud = new int[10] { 300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 74880, 115200 };
     public static int[]    nData = new int[2] { 8, 7 };
-    public static int[]    nParity = new int[2] { 1, 0 };
-    public static String[] nStop = new String[2] { "Xon", "Xoff" };
-
+    public static String[] nStop = new String[4] { "None", "One", "Two", "OnePointFive" };
+    public static String[]    nParity = new String[5] { "None", "Odd", "Even", "Mark", "Space" };
 }
 
 

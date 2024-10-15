@@ -52,7 +52,7 @@ namespace Victor
             // 
             // Pnl_Item
             // 
-            this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.Pnl_Item.Controls.Add(this.checkBox1);
             this.Pnl_Item.Controls.Add(this.textBox4);
             this.Pnl_Item.Controls.Add(this.textBox3);

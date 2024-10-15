@@ -1,7 +1,7 @@
-# Port_no,Name,Baud Rate[bit/s],Data Bit[7/8],Parity Bit[Odd/Even],Stop Bit,Flow control
-10,COM_10,9600,8,ODD,1,Xoff
-11,COM_11,9600,8,ODD,0,Xon
-12,COM_12,9600,8,ODD,1,Xon
-13,COM_13,9600,5,EVEN,0,Xon
+Port_no,Name,Baud Rate[bit/s],Data Bit[7/8],Stop Bit,Parity Bit[Odd/Even]
+10,COM3,9600,8,None,Odd
+11,COM4,9600,8,None,Even
+12,COM5,9600,8,Two,Odd
+13,COM6,9600,8,OnePointFive,Mark
 EOF
 

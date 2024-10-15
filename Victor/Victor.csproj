@@ -111,6 +111,12 @@
     <Compile Include="01_View\02_Recipe\vw02RecipeULoader.Designer.cs">
       <DependentUpon>vw02RecipeULoader.cs</DependentUpon>
     </Compile>
+    <Compile Include="01_View\03_Maint\vwEthernet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\03_Maint\vwEthernet.Designer.cs">
+      <DependentUpon>vwEthernet.cs</DependentUpon>
+    </Compile>
     <Compile Include="01_View\03_Maint\vwMaint.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeULoader.resx">
       <DependentUpon>vw02RecipeULoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\03_Maint\vwEthernet.resx">
+      <DependentUpon>vwEthernet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\03_Maint\vwMaint.resx">
       <DependentUpon>vwMaint.cs</DependentUpon>

@@ -1503,8 +1503,8 @@ public enum eSerial
     Port_Name = 1,
     Baud_Rate = 2,
     Data_bit = 3,
-    Parity_bit =4,
-    Stop_bit = 5,
+    Stop_bit = 4,
+    Parity_bit = 5,
     Flow_Control = 6,
     End
 }
