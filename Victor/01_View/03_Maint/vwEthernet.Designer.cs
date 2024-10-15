@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pnl_Item = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,8 +41,8 @@
             this.cb_Proc = new System.Windows.Forms.ComboBox();
             this.cb_Host = new System.Windows.Forms.ComboBox();
             this.btn_WriteClient = new System.Windows.Forms.Button();
-            this.btn_Close = new System.Windows.Forms.Button();
-            this.btn_Open = new System.Windows.Forms.Button();
+            this.btn_ServerDisconn = new System.Windows.Forms.Button();
+            this.btn_ServerConn = new System.Windows.Forms.Button();
             this.btn_WriteServer = new System.Windows.Forms.Button();
             this.tb_No = new System.Windows.Forms.TextBox();
             this.tb_Port = new System.Windows.Forms.TextBox();
@@ -62,6 +62,8 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.rTB_ServerStatus = new System.Windows.Forms.RichTextBox();
             this.rTB_ClientStatus = new System.Windows.Forms.RichTextBox();
+            this.btn_ClientConn = new System.Windows.Forms.Button();
+            this.btn_ClientDisconn = new System.Windows.Forms.Button();
             this.Pnl_Item.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_EthernetList)).BeginInit();
@@ -121,8 +123,10 @@
             this.groupBox1.Controls.Add(this.cb_Proc);
             this.groupBox1.Controls.Add(this.cb_Host);
             this.groupBox1.Controls.Add(this.btn_WriteClient);
-            this.groupBox1.Controls.Add(this.btn_Close);
-            this.groupBox1.Controls.Add(this.btn_Open);
+            this.groupBox1.Controls.Add(this.btn_ClientDisconn);
+            this.groupBox1.Controls.Add(this.btn_ClientConn);
+            this.groupBox1.Controls.Add(this.btn_ServerDisconn);
+            this.groupBox1.Controls.Add(this.btn_ServerConn);
             this.groupBox1.Controls.Add(this.btn_WriteServer);
             this.groupBox1.Controls.Add(this.tb_No);
             this.groupBox1.Controls.Add(this.tb_Port);
@@ -172,7 +176,7 @@
             this.btn_WriteClient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btn_WriteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_WriteClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
-            this.btn_WriteClient.Location = new System.Drawing.Point(842, 128);
+            this.btn_WriteClient.Location = new System.Drawing.Point(1093, 131);
             this.btn_WriteClient.Name = "btn_WriteClient";
             this.btn_WriteClient.Size = new System.Drawing.Size(115, 48);
             this.btn_WriteClient.TabIndex = 463;
@@ -180,33 +184,33 @@
             this.btn_WriteClient.UseVisualStyleBackColor = false;
             this.btn_WriteClient.Click += new System.EventHandler(this.Click_ClientWrite);
             // 
-            // btn_Close
+            // btn_ServerDisconn
             // 
-            this.btn_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_Close.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_Close.Location = new System.Drawing.Point(320, 131);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(115, 48);
-            this.btn_Close.TabIndex = 463;
-            this.btn_Close.Text = "Close";
-            this.btn_Close.UseVisualStyleBackColor = false;
-            this.btn_Close.Click += new System.EventHandler(this.Click_PortClose);
+            this.btn_ServerDisconn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ServerDisconn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ServerDisconn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ServerDisconn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ServerDisconn.Location = new System.Drawing.Point(320, 131);
+            this.btn_ServerDisconn.Name = "btn_ServerDisconn";
+            this.btn_ServerDisconn.Size = new System.Drawing.Size(115, 48);
+            this.btn_ServerDisconn.TabIndex = 463;
+            this.btn_ServerDisconn.Text = "DisCon";
+            this.btn_ServerDisconn.UseVisualStyleBackColor = false;
+            this.btn_ServerDisconn.Click += new System.EventHandler(this.Click_PortClose);
             // 
-            // btn_Open
+            // btn_ServerConn
             // 
-            this.btn_Open.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_Open.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_Open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Open.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_Open.Location = new System.Drawing.Point(199, 131);
-            this.btn_Open.Name = "btn_Open";
-            this.btn_Open.Size = new System.Drawing.Size(115, 48);
-            this.btn_Open.TabIndex = 463;
-            this.btn_Open.Text = "Open";
-            this.btn_Open.UseVisualStyleBackColor = false;
-            this.btn_Open.Click += new System.EventHandler(this.Click_PortOpen);
+            this.btn_ServerConn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ServerConn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ServerConn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ServerConn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ServerConn.Location = new System.Drawing.Point(199, 131);
+            this.btn_ServerConn.Name = "btn_ServerConn";
+            this.btn_ServerConn.Size = new System.Drawing.Size(115, 48);
+            this.btn_ServerConn.TabIndex = 463;
+            this.btn_ServerConn.Text = "Connect";
+            this.btn_ServerConn.UseVisualStyleBackColor = false;
+            this.btn_ServerConn.Click += new System.EventHandler(this.Click_PortOpen);
             // 
             // btn_WriteServer
             // 
@@ -368,37 +372,37 @@
             this.dGV_EthernetList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGV_EthernetList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dGV_EthernetList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_EthernetList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_EthernetList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dGV_EthernetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGV_EthernetList.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGV_EthernetList.DefaultCellStyle = dataGridViewCellStyle6;
             this.dGV_EthernetList.Location = new System.Drawing.Point(12, 14);
             this.dGV_EthernetList.Name = "dGV_EthernetList";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_EthernetList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_EthernetList.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dGV_EthernetList.RowHeadersVisible = false;
             this.dGV_EthernetList.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dGV_EthernetList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dGV_EthernetList.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dGV_EthernetList.RowTemplate.Height = 23;
             this.dGV_EthernetList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGV_EthernetList.Size = new System.Drawing.Size(1257, 125);
@@ -420,6 +424,34 @@
             this.rTB_ClientStatus.Size = new System.Drawing.Size(533, 50);
             this.rTB_ClientStatus.TabIndex = 460;
             this.rTB_ClientStatus.Text = "Client Statue";
+            // 
+            // btn_ClientConn
+            // 
+            this.btn_ClientConn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ClientConn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ClientConn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ClientConn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ClientConn.Location = new System.Drawing.Point(851, 131);
+            this.btn_ClientConn.Name = "btn_ClientConn";
+            this.btn_ClientConn.Size = new System.Drawing.Size(115, 48);
+            this.btn_ClientConn.TabIndex = 463;
+            this.btn_ClientConn.Text = "Connect";
+            this.btn_ClientConn.UseVisualStyleBackColor = false;
+            this.btn_ClientConn.Click += new System.EventHandler(this.Click_PortOpen);
+            // 
+            // btn_ClientDisconn
+            // 
+            this.btn_ClientDisconn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ClientDisconn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ClientDisconn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ClientDisconn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.btn_ClientDisconn.Location = new System.Drawing.Point(972, 131);
+            this.btn_ClientDisconn.Name = "btn_ClientDisconn";
+            this.btn_ClientDisconn.Size = new System.Drawing.Size(115, 48);
+            this.btn_ClientDisconn.TabIndex = 463;
+            this.btn_ClientDisconn.Text = "DisCon";
+            this.btn_ClientDisconn.UseVisualStyleBackColor = false;
+            this.btn_ClientDisconn.Click += new System.EventHandler(this.Click_PortClose);
             // 
             // vwEthernet
             // 
@@ -461,8 +493,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_WriteServer;
         private System.Windows.Forms.Button btn_WriteClient;
-        private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.Button btn_Open;
+        private System.Windows.Forms.Button btn_ServerDisconn;
+        private System.Windows.Forms.Button btn_ServerConn;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.TextBox tb_Port;
         private System.Windows.Forms.TextBox tb_IP;
@@ -470,5 +502,7 @@
         private System.Windows.Forms.ComboBox cb_Host;
         private System.Windows.Forms.RichTextBox rTB_ServerStatus;
         private System.Windows.Forms.RichTextBox rTB_ClientStatus;
+        private System.Windows.Forms.Button btn_ClientDisconn;
+        private System.Windows.Forms.Button btn_ClientConn;
     }
 }

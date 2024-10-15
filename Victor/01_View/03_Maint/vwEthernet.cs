@@ -8,7 +8,7 @@ using System.IO;
 using System.Threading;
 using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Contexts;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Runtime.InteropServices;
 
 
 namespace Victor
@@ -22,12 +22,14 @@ namespace Victor
         private static string[,] sCsvData;
         static int nSelRow;
 
-
+        private static Thread thread_Server;
+        private static Thread thread_Client;
 
         public vwEthernet()
         {
             InitializeComponent();
             Init_View_Set();
+            
         }
 
         #region Server 함수
@@ -42,13 +44,19 @@ namespace Victor
 
         private void Thread_Server_Start()
         {
-            Thread thread1 = new Thread(Server_connect); // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
-            thread1.IsBackground = true; // Form이 종료되면 thread1도 종료.
-            thread1.Start(); // thread1 시작.
+            thread_Server = new Thread(Server_connect); // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
+            thread_Server.IsBackground = true; // Form이 종료되면 thread1도 종료.
+            thread_Server.Start(); // thread1 시작.
+        }
+
+        private void Thread_Server_Stop()
+        {
+            thread_Server.Abort();            
         }
 
         private void Server_connect()  // thread1에 연결된 함수. 메인폼과는 별도로 동작한다.
         {
+            Console.WriteLine($"Input Value {IPAddress.Parse(tb_IP.Text)},{int.Parse(tb_Port.Text)}");
             TcpListener tcpListener1 = new TcpListener(IPAddress.Parse(tb_IP.Text), int.Parse(tb_Port.Text)); // 서버 객체 생성 및 IP주소와 Port번호를 할당
             tcpListener1.Start();  // 서버 시작
             writeServer_RichTextbox("서버 준비...클라이언트 기다리는 중...");
@@ -92,11 +100,16 @@ namespace Victor
         StreamReader streamReader;  // 데이타 읽기 위한 스트림리더
         StreamWriter streamWriter;  // 데이타 쓰기 위한 스트림라이터 
 
-        private void Thread_Client_Start(object sender, EventArgs e)  // '연결하기' 버튼이 클릭되면
+        private void Thread_Client_Start()  // '연결하기' 버튼이 클릭되면
         {
-            Thread thread1 = new Thread(Client_connect);  // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
-            thread1.IsBackground = true;  // Form이 종료되면 thread1도 종료.
-            thread1.Start();  // thread1 시작.
+            thread_Client = new Thread(Client_connect);  // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
+            thread_Client.IsBackground = true;  // Form이 종료되면 thread1도 종료.
+            thread_Client.Start();  // thread1 시작.
+        }
+
+        private void Thread_Client_Stop()
+        {
+            thread_Client.Abort();
         }
 
         private void Client_connect()  // thread1에 연결된 함수. 메인폼과는 별도로 동작한다.
@@ -314,34 +327,30 @@ namespace Victor
         //https://yeolco.tistory.com/31?category=757612
         private void Click_PortOpen(object sender, EventArgs e)
         {
-            //string[] PortNames = SerialPort.GetPortNames();
-            //foreach (string portnumber in PortNames)
-            //{
-            //    Console.WriteLine($"Port {portnumber}");
-            //}
-
-            //if (m232_01.IsOpen == false) //닫혀있을때
-            //{
-            //    try
-            //    {
-            //        m232_01.PortName = tb_Name.Text.ToString(); //콤보박스에서 고른 것을 포트네임으로 넣어준다
-            //        m232_01.BaudRate = int.Parse(cb_Baud.SelectedItem.ToString()); //콤보박스에서 고른 것(string)을 int로 변경해서 넣어준다.
-            //        m232_01.DataBits = int.Parse(cb_Data.SelectedItem.ToString()); // 8비트 데이터 전송은 고정
-            //        m232_01.StopBits = StopBits.One; // stop비트는 1로 고정
-            //        m232_01.Parity = Parity.None; // 패리티비트는 없는 걸로
-
-            //        m232_01.Open(); // 포트를 열어준다
-            //    }
-            //    catch (Exception Err)
-            //    {
-            //        MessageBox.Show(Err.ToString());
-            //    }
-            //}
+            Button mBtn = sender as Button;
+            string sName = mBtn.Name.ToString();
+            if (sName == "btn_ServerConn")
+            {
+                Thread_Server_Start(); ;
+            }
+            else if (sName == "btn_ClientConn")
+            {
+                Thread_Client_Start(); ;
+            }
         }
 
         private void Click_PortClose(object sender, EventArgs e)
         {
-
+            Button mBtn = sender as Button;
+            string sName = mBtn.Name.ToString();
+            if (sName == "btn_ServerConn")
+            {
+                Thread_Server_Start(); ;
+            }
+            else if (sName == "btn_ClientConn")
+            {
+                Thread_Client_Start(); ;
+            }
         }
 
         public void PortOpen()
