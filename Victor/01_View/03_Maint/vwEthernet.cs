@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Data;
-using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using System.IO.Ports;
+using System.Net;
 using System.Net.Sockets;
+using System.IO;
 using System.Threading;
+using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Contexts;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace Victor
@@ -19,22 +22,113 @@ namespace Victor
         private static string[,] sCsvData;
         static int nSelRow;
 
-        TcpListener Server;
-        TcpClient Client;
 
-        StreamReader Reader;
-        StreamWriter Writer;
-        NetworkStream stream;
-
-        Thread ReceiveThread;
-
-        bool Connected;
 
         public vwEthernet()
         {
             InitializeComponent();
             Init_View_Set();
         }
+
+        #region Server 함수
+        /// <summary>
+        /// Server 함수
+        /// https://unininu.tistory.com/475
+        /// 
+        /// </summary>
+        /// 
+        public StreamReader streamReader1 { get; private set; }
+        public StreamWriter streamWriter1 { get; private set; }
+
+        private void Thread_Server_Start()
+        {
+            Thread thread1 = new Thread(Server_connect); // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
+            thread1.IsBackground = true; // Form이 종료되면 thread1도 종료.
+            thread1.Start(); // thread1 시작.
+        }
+
+        private void Server_connect()  // thread1에 연결된 함수. 메인폼과는 별도로 동작한다.
+        {
+            TcpListener tcpListener1 = new TcpListener(IPAddress.Parse(tb_IP.Text), int.Parse(tb_Port.Text)); // 서버 객체 생성 및 IP주소와 Port번호를 할당
+            tcpListener1.Start();  // 서버 시작
+            writeServer_RichTextbox("서버 준비...클라이언트 기다리는 중...");
+
+            TcpClient tcpClient1 = tcpListener1.AcceptTcpClient(); // 클라이언트 접속 확인
+            writeServer_RichTextbox("클라이언트 연결됨...");
+
+            streamReader1 = new StreamReader(tcpClient1.GetStream());  // 읽기 스트림 연결
+            streamWriter1 = new StreamWriter(tcpClient1.GetStream());  // 쓰기 스트림 연결
+            streamWriter1.AutoFlush = true;  // 쓰기 버퍼 자동으로 뭔가 처리..
+
+            while (tcpClient1.Connected)  // 클라이언트가 연결되어 있는 동안
+            {
+                string receiveData1 = streamReader1.ReadLine();  // 수신 데이타를 읽어서 receiveData1 변수에 저장
+                writeServer_RichTextbox(receiveData1); // 데이타를 수신창에 쓰기                  
+            }
+        }
+
+        private void writeServer_RichTextbox(string str)  // richTextbox1 에 쓰기 함수
+        {
+            rTB_ServerStatus.Invoke((MethodInvoker)delegate { rTB_ServerStatus.AppendText(str + "\r\n"); }); // 데이타를 수신창에 표시, 반드시 invoke 사용. 충돌피함.
+            rTB_ServerStatus.Invoke((MethodInvoker)delegate { rTB_ServerStatus.ScrollToCaret(); });  // 스크롤을 젤 밑으로.
+        }
+
+
+        private void Click_ServerWrite(object sender, EventArgs e)
+        {
+            string sendData1 = rTB_ServerData.Text;  // testBox3 의 내용을 sendData1 변수에 저장
+            streamWriter1.WriteLine(sendData1);  // 스트림라이터를 통해 데이타를 전송
+        }
+
+        #endregion
+
+        #region Client 함수
+        /// <summary>
+        /// Client 함수
+        /// https://unininu.tistory.com/475
+        /// 
+        /// </summary>
+        /// 
+        StreamReader streamReader;  // 데이타 읽기 위한 스트림리더
+        StreamWriter streamWriter;  // 데이타 쓰기 위한 스트림라이터 
+
+        private void Thread_Client_Start(object sender, EventArgs e)  // '연결하기' 버튼이 클릭되면
+        {
+            Thread thread1 = new Thread(Client_connect);  // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
+            thread1.IsBackground = true;  // Form이 종료되면 thread1도 종료.
+            thread1.Start();  // thread1 시작.
+        }
+
+        private void Client_connect()  // thread1에 연결된 함수. 메인폼과는 별도로 동작한다.
+        {
+            TcpClient tcpClient1 = new TcpClient();  // TcpClient 객체 생성
+            IPEndPoint ipEnd = new IPEndPoint(IPAddress.Parse(tb_IP.Text), int.Parse(tb_Port.Text));  // IP주소와 Port번호를 할당
+            tcpClient1.Connect(ipEnd);  // 서버에 연결 요청
+            writeClient_RichTextbox("서버 연결됨...");
+
+            streamReader = new StreamReader(tcpClient1.GetStream());  // 읽기 스트림 연결
+            streamWriter = new StreamWriter(tcpClient1.GetStream());  // 쓰기 스트림 연결
+            streamWriter.AutoFlush = true;  // 쓰기 버퍼 자동으로 뭔가 처리..
+
+            while (tcpClient1.Connected)  // 클라이언트가 연결되어 있는 동안
+            {
+                string receiveData1 = streamReader.ReadLine();  // 수신 데이타를 읽어서 receiveData1 변수에 저장
+                writeClient_RichTextbox(receiveData1);  // 데이타를 수신창에 쓰기
+            }
+        }
+
+        private void writeClient_RichTextbox(string data)  // richTextbox1 에 쓰기 함수
+        {
+            rTB_ClientStatus.Invoke((MethodInvoker)delegate { rTB_ClientStatus.AppendText(data + "\r\n"); }); //  데이타를 수신창에 표시, 반드시 invoke 사용. 충돌피함.
+            rTB_ClientStatus.Invoke((MethodInvoker)delegate { rTB_ClientStatus.ScrollToCaret(); });  // 스크롤을 젤 밑으로.
+        }
+
+        private void Click_ClientWrite(object sender, EventArgs e)
+        {
+            string sendData1 = rTB_ClientData.Text;  // testBox3 의 내용을 sendData1 변수에 저장
+            streamWriter.WriteLine(sendData1);   // 스트림라이터를 통해 데이타를 전송
+        }
+        #endregion
         private void Init_View_Set()
         {
             int i = 0;
@@ -142,9 +236,7 @@ namespace Victor
                 CData.tEthernet[nArrayCnt].sPort = sCsvData[nArrayCnt + 1, (int)eEthernet.Port_no];
                 CData.tEthernet[nArrayCnt].sHost = sCsvData[nArrayCnt + 1, (int)eEthernet.Host];
                 CData.tEthernet[nArrayCnt].sProtocol = sCsvData[nArrayCnt + 1, (int)eEthernet.Protocol];
-
-                //CData.tSerial[nArrayCnt].sFlow_Control = sCsvData[nArrayCnt + 1, (int)eEthernet.Flow_Control];
-                nArrayCnt++;
+                 nArrayCnt++;
             }
 
             dGV_EthernetList.Rows[0].Selected = true;
@@ -222,11 +314,11 @@ namespace Victor
         //https://yeolco.tistory.com/31?category=757612
         private void Click_PortOpen(object sender, EventArgs e)
         {
-            string[] PortNames = SerialPort.GetPortNames();
-            foreach (string portnumber in PortNames)
-            {
-                Console.WriteLine($"Port {portnumber}");
-            }
+            //string[] PortNames = SerialPort.GetPortNames();
+            //foreach (string portnumber in PortNames)
+            //{
+            //    Console.WriteLine($"Port {portnumber}");
+            //}
 
             //if (m232_01.IsOpen == false) //닫혀있을때
             //{
@@ -256,5 +348,7 @@ namespace Victor
         {
             Console.WriteLine($"PortOpen");
         }
+
+
     }
 }

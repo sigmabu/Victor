@@ -40,17 +40,17 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cb_Proc = new System.Windows.Forms.ComboBox();
             this.cb_Host = new System.Windows.Forms.ComboBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_WriteClient = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Open = new System.Windows.Forms.Button();
-            this.btn_Write = new System.Windows.Forms.Button();
+            this.btn_WriteServer = new System.Windows.Forms.Button();
             this.tb_No = new System.Windows.Forms.TextBox();
             this.tb_Port = new System.Windows.Forms.TextBox();
             this.tb_IP = new System.Windows.Forms.TextBox();
             this.tb_Name = new System.Windows.Forms.TextBox();
             this.radio_Save = new System.Windows.Forms.RadioButton();
-            this.rTB_Read = new System.Windows.Forms.RichTextBox();
-            this.rTB_Write = new System.Windows.Forms.RichTextBox();
+            this.rTB_ClientData = new System.Windows.Forms.RichTextBox();
+            this.rTB_ServerData = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lb_Portno = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@
             this.lb_Protocol = new System.Windows.Forms.Label();
             this.dGV_EthernetList = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.rTB_ServerStatus = new System.Windows.Forms.RichTextBox();
+            this.rTB_ClientStatus = new System.Windows.Forms.RichTextBox();
             this.Pnl_Item.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_EthernetList)).BeginInit();
@@ -118,17 +120,19 @@
             // 
             this.groupBox1.Controls.Add(this.cb_Proc);
             this.groupBox1.Controls.Add(this.cb_Host);
-            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.btn_WriteClient);
             this.groupBox1.Controls.Add(this.btn_Close);
             this.groupBox1.Controls.Add(this.btn_Open);
-            this.groupBox1.Controls.Add(this.btn_Write);
+            this.groupBox1.Controls.Add(this.btn_WriteServer);
             this.groupBox1.Controls.Add(this.tb_No);
             this.groupBox1.Controls.Add(this.tb_Port);
             this.groupBox1.Controls.Add(this.tb_IP);
             this.groupBox1.Controls.Add(this.tb_Name);
             this.groupBox1.Controls.Add(this.radio_Save);
-            this.groupBox1.Controls.Add(this.rTB_Read);
-            this.groupBox1.Controls.Add(this.rTB_Write);
+            this.groupBox1.Controls.Add(this.rTB_ClientData);
+            this.groupBox1.Controls.Add(this.rTB_ClientStatus);
+            this.groupBox1.Controls.Add(this.rTB_ServerStatus);
+            this.groupBox1.Controls.Add(this.rTB_ServerData);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lb_Portno);
@@ -162,18 +166,19 @@
             this.cb_Host.Size = new System.Drawing.Size(68, 37);
             this.cb_Host.TabIndex = 464;
             // 
-            // button4
+            // btn_WriteClient
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
-            this.button4.Location = new System.Drawing.Point(842, 128);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 48);
-            this.button4.TabIndex = 463;
-            this.button4.Text = "Read";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btn_WriteClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_WriteClient.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_WriteClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_WriteClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
+            this.btn_WriteClient.Location = new System.Drawing.Point(842, 128);
+            this.btn_WriteClient.Name = "btn_WriteClient";
+            this.btn_WriteClient.Size = new System.Drawing.Size(115, 48);
+            this.btn_WriteClient.TabIndex = 463;
+            this.btn_WriteClient.Text = "Write";
+            this.btn_WriteClient.UseVisualStyleBackColor = false;
+            this.btn_WriteClient.Click += new System.EventHandler(this.Click_ClientWrite);
             // 
             // btn_Close
             // 
@@ -203,18 +208,19 @@
             this.btn_Open.UseVisualStyleBackColor = false;
             this.btn_Open.Click += new System.EventHandler(this.Click_PortOpen);
             // 
-            // btn_Write
+            // btn_WriteServer
             // 
-            this.btn_Write.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_Write.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_Write.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Write.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
-            this.btn_Write.Location = new System.Drawing.Point(441, 131);
-            this.btn_Write.Name = "btn_Write";
-            this.btn_Write.Size = new System.Drawing.Size(115, 48);
-            this.btn_Write.TabIndex = 463;
-            this.btn_Write.Text = "Write";
-            this.btn_Write.UseVisualStyleBackColor = false;
+            this.btn_WriteServer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_WriteServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_WriteServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_WriteServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
+            this.btn_WriteServer.Location = new System.Drawing.Point(441, 131);
+            this.btn_WriteServer.Name = "btn_WriteServer";
+            this.btn_WriteServer.Size = new System.Drawing.Size(115, 48);
+            this.btn_WriteServer.TabIndex = 463;
+            this.btn_WriteServer.Text = "Write";
+            this.btn_WriteServer.UseVisualStyleBackColor = false;
+            this.btn_WriteServer.Click += new System.EventHandler(this.Click_ServerWrite);
             // 
             // tb_No
             // 
@@ -222,6 +228,7 @@
             this.tb_No.Name = "tb_No";
             this.tb_No.Size = new System.Drawing.Size(87, 35);
             this.tb_No.TabIndex = 461;
+            this.tb_No.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_Port
             // 
@@ -230,6 +237,7 @@
             this.tb_Port.Size = new System.Drawing.Size(68, 35);
             this.tb_Port.TabIndex = 461;
             this.tb_Port.Text = "1000";
+            this.tb_Port.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_IP
             // 
@@ -238,6 +246,7 @@
             this.tb_IP.Size = new System.Drawing.Size(134, 35);
             this.tb_IP.TabIndex = 461;
             this.tb_IP.Text = "192.168.0.1";
+            this.tb_IP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_Name
             // 
@@ -246,6 +255,7 @@
             this.tb_Name.Size = new System.Drawing.Size(68, 35);
             this.tb_Name.TabIndex = 461;
             this.tb_Name.Text = "Net00";
+            this.tb_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // radio_Save
             // 
@@ -270,21 +280,21 @@
             this.radio_Save.UseVisualStyleBackColor = false;
             this.radio_Save.Click += new System.EventHandler(this.Click_Save);
             // 
-            // rTB_Read
+            // rTB_ClientData
             // 
-            this.rTB_Read.Location = new System.Drawing.Point(675, 185);
-            this.rTB_Read.Name = "rTB_Read";
-            this.rTB_Read.Size = new System.Drawing.Size(533, 381);
-            this.rTB_Read.TabIndex = 460;
-            this.rTB_Read.Text = "Client Data";
+            this.rTB_ClientData.Location = new System.Drawing.Point(675, 185);
+            this.rTB_ClientData.Name = "rTB_ClientData";
+            this.rTB_ClientData.Size = new System.Drawing.Size(533, 325);
+            this.rTB_ClientData.TabIndex = 460;
+            this.rTB_ClientData.Text = "Client Data";
             // 
-            // rTB_Write
+            // rTB_ServerData
             // 
-            this.rTB_Write.Location = new System.Drawing.Point(23, 185);
-            this.rTB_Write.Name = "rTB_Write";
-            this.rTB_Write.Size = new System.Drawing.Size(533, 381);
-            this.rTB_Write.TabIndex = 460;
-            this.rTB_Write.Text = "Server Data";
+            this.rTB_ServerData.Location = new System.Drawing.Point(23, 185);
+            this.rTB_ServerData.Name = "rTB_ServerData";
+            this.rTB_ServerData.Size = new System.Drawing.Size(533, 325);
+            this.rTB_ServerData.TabIndex = 460;
+            this.rTB_ServerData.Text = "Server Data";
             // 
             // label3
             // 
@@ -395,6 +405,22 @@
             this.dGV_EthernetList.TabIndex = 457;
             this.dGV_EthernetList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
             // 
+            // rTB_ServerStatus
+            // 
+            this.rTB_ServerStatus.Location = new System.Drawing.Point(23, 516);
+            this.rTB_ServerStatus.Name = "rTB_ServerStatus";
+            this.rTB_ServerStatus.Size = new System.Drawing.Size(533, 50);
+            this.rTB_ServerStatus.TabIndex = 460;
+            this.rTB_ServerStatus.Text = "Server Status";
+            // 
+            // rTB_ClientStatus
+            // 
+            this.rTB_ClientStatus.Location = new System.Drawing.Point(675, 522);
+            this.rTB_ClientStatus.Name = "rTB_ClientStatus";
+            this.rTB_ClientStatus.Size = new System.Drawing.Size(533, 50);
+            this.rTB_ClientStatus.TabIndex = 460;
+            this.rTB_ClientStatus.Text = "Client Statue";
+            // 
             // vwEthernet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -421,10 +447,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.RichTextBox rTB_Write;
+        private System.Windows.Forms.RichTextBox rTB_ServerData;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox rTB_Read;
+        private System.Windows.Forms.RichTextBox rTB_ClientData;
         private System.Windows.Forms.Label lb_IPaddress;
         private System.Windows.Forms.Label lb_Portno;
         private System.Windows.Forms.Label lb_IP;
@@ -433,8 +459,8 @@
         private System.Windows.Forms.TextBox tb_Name;
         private System.Windows.Forms.TextBox tb_No;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_Write;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_WriteServer;
+        private System.Windows.Forms.Button btn_WriteClient;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Button btn_Open;
         private System.IO.Ports.SerialPort serialPort1;
@@ -442,5 +468,7 @@
         private System.Windows.Forms.TextBox tb_IP;
         private System.Windows.Forms.ComboBox cb_Proc;
         private System.Windows.Forms.ComboBox cb_Host;
+        private System.Windows.Forms.RichTextBox rTB_ServerStatus;
+        private System.Windows.Forms.RichTextBox rTB_ClientStatus;
     }
 }
