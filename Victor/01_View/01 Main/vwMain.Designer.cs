@@ -53,13 +53,13 @@ namespace Victor
             // 
             // pnl_Base
             // 
-            this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Base.Controls.Add(this.button2);
             this.pnl_Base.Controls.Add(this.button1);
-            this.pnl_Base.Location = new System.Drawing.Point(24, 55);
+            this.pnl_Base.Location = new System.Drawing.Point(3, 33);
             this.pnl_Base.Name = "pnl_Base";
-            this.pnl_Base.Size = new System.Drawing.Size(1225, 679);
+            this.pnl_Base.Size = new System.Drawing.Size(1274, 768);
             this.pnl_Base.TabIndex = 453;
             // 
             // button2

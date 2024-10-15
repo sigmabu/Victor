@@ -63,7 +63,7 @@
             // 
             // pnlM_Grp
             // 
-            this.pnlM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pnlM_Grp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnlM_Grp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlM_Grp.Controls.Add(this.label39);
             this.pnlM_Grp.Controls.Add(this.lbxM_Grp);
@@ -76,7 +76,7 @@
             // 
             // label39
             // 
-            this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             resources.ApplyResources(this.label39, "label39");
             this.label39.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label39.Name = "label39";
@@ -137,7 +137,7 @@
             // 
             // pnlM_List
             // 
-            this.pnlM_List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pnlM_List.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnlM_List.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlM_List.Controls.Add(this.label2);
             this.pnlM_List.Controls.Add(this.lbxM_Dev);
@@ -150,7 +150,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             resources.ApplyResources(this.label2, "label2");
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.label2.Name = "label2";
@@ -207,7 +207,7 @@
             // 
             // pnl_Btn
             // 
-            this.pnl_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.pnl_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_Btn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Btn.Controls.Add(this.btnM_DApp);
             this.pnl_Btn.Controls.Add(this.btnM_DCur);

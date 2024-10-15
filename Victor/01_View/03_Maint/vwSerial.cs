@@ -139,7 +139,7 @@ namespace Victor
 
         public int Read_File_SerialConfig()
         {
-            dataGridView1.DataSource = readCSV(sSerialPath);
+            dGV_SerialList.DataSource = readCSV(sSerialPath);
 
             sCsvData = CCsv.OpenCSVFile(this.sSerialPath);
             int nArrayCnt = 0;
@@ -192,9 +192,42 @@ namespace Victor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = readCSV(sSerialPath);
+            dGV_SerialList.DataSource = readCSV(sSerialPath);
         }
+
         public DataTable readCSV(string filePath)
+        {
+            int nRowCnt = 0;
+            var dt = new DataTable();
+
+            // 첫번째 행을 읽어 컬럼명으로 세팅
+            foreach (var headerLine in File.ReadLines(filePath).Take(1))
+            {
+                foreach (var headerItem in headerLine.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    dt.Columns.Add(headerItem.Trim());
+                }
+            }
+
+            // 나머지 행을 읽어 데이터로 세팅
+            foreach (var line in File.ReadLines(filePath).Skip(1))
+            {
+                if (line.Contains("EOF") || 
+                    (line.Contains(",") == false) ||
+                    string.IsNullOrEmpty(line))
+                {
+                    Console.WriteLine(line);
+                }
+                else
+                {
+                    dt.Rows.Add(line.Split(','));
+                    nRowCnt++;
+                }
+            }
+            return dt;
+        }
+
+        public DataTable readCSV_(string filePath)
         { 
             var dt = new DataTable();
 
