@@ -43,26 +43,26 @@
             this.btn_Open = new System.Windows.Forms.Button();
             this.btn_Write = new System.Windows.Forms.Button();
             this.tb_No = new System.Windows.Forms.TextBox();
-            this.cb_Stop = new System.Windows.Forms.ComboBox();
-            this.cb_Parity = new System.Windows.Forms.ComboBox();
-            this.cb_Data = new System.Windows.Forms.ComboBox();
-            this.cb_Baud = new System.Windows.Forms.ComboBox();
             this.tb_Name = new System.Windows.Forms.TextBox();
             this.radio_Save = new System.Windows.Forms.RadioButton();
             this.rTB_Read = new System.Windows.Forms.RichTextBox();
             this.rTB_Write = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lb_Data = new System.Windows.Forms.Label();
-            this.lb_Baud = new System.Windows.Forms.Label();
-            this.lb_Stop = new System.Windows.Forms.Label();
-            this.lb_ComPort = new System.Windows.Forms.Label();
-            this.lb_Parity = new System.Windows.Forms.Label();
-            this.dGV_SerialList = new System.Windows.Forms.DataGridView();
+            this.lb_Portno = new System.Windows.Forms.Label();
+            this.lb_IP = new System.Windows.Forms.Label();
+            this.lb_Host = new System.Windows.Forms.Label();
+            this.lb_IPaddress = new System.Windows.Forms.Label();
+            this.lb_Protocol = new System.Windows.Forms.Label();
+            this.dGV_EthernetList = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.tb_IP = new System.Windows.Forms.TextBox();
+            this.tb_Port = new System.Windows.Forms.TextBox();
+            this.cb_Host = new System.Windows.Forms.ComboBox();
+            this.cb_Proc = new System.Windows.Forms.ComboBox();
             this.Pnl_Item.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_SerialList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_EthernetList)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Item
@@ -72,7 +72,7 @@
             this.Pnl_Item.Controls.Add(this.button2);
             this.Pnl_Item.Controls.Add(this.button1);
             this.Pnl_Item.Controls.Add(this.groupBox1);
-            this.Pnl_Item.Controls.Add(this.dGV_SerialList);
+            this.Pnl_Item.Controls.Add(this.dGV_EthernetList);
             this.Pnl_Item.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Item.Name = "Pnl_Item";
             this.Pnl_Item.Size = new System.Drawing.Size(1280, 768);
@@ -116,26 +116,26 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cb_Proc);
+            this.groupBox1.Controls.Add(this.cb_Host);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.btn_Close);
             this.groupBox1.Controls.Add(this.btn_Open);
             this.groupBox1.Controls.Add(this.btn_Write);
             this.groupBox1.Controls.Add(this.tb_No);
-            this.groupBox1.Controls.Add(this.cb_Stop);
-            this.groupBox1.Controls.Add(this.cb_Parity);
-            this.groupBox1.Controls.Add(this.cb_Data);
-            this.groupBox1.Controls.Add(this.cb_Baud);
+            this.groupBox1.Controls.Add(this.tb_Port);
+            this.groupBox1.Controls.Add(this.tb_IP);
             this.groupBox1.Controls.Add(this.tb_Name);
             this.groupBox1.Controls.Add(this.radio_Save);
             this.groupBox1.Controls.Add(this.rTB_Read);
             this.groupBox1.Controls.Add(this.rTB_Write);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lb_Data);
-            this.groupBox1.Controls.Add(this.lb_Baud);
-            this.groupBox1.Controls.Add(this.lb_Stop);
-            this.groupBox1.Controls.Add(this.lb_ComPort);
-            this.groupBox1.Controls.Add(this.lb_Parity);
+            this.groupBox1.Controls.Add(this.lb_Portno);
+            this.groupBox1.Controls.Add(this.lb_IP);
+            this.groupBox1.Controls.Add(this.lb_Host);
+            this.groupBox1.Controls.Add(this.lb_IPaddress);
+            this.groupBox1.Controls.Add(this.lb_Protocol);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 155);
             this.groupBox1.Name = "groupBox1";
@@ -205,48 +205,13 @@
             this.tb_No.Size = new System.Drawing.Size(87, 26);
             this.tb_No.TabIndex = 461;
             // 
-            // cb_Stop
-            // 
-            this.cb_Stop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Stop.FormattingEnabled = true;
-            this.cb_Stop.Location = new System.Drawing.Point(255, 82);
-            this.cb_Stop.Name = "cb_Stop";
-            this.cb_Stop.Size = new System.Drawing.Size(68, 28);
-            this.cb_Stop.TabIndex = 462;
-            // 
-            // cb_Parity
-            // 
-            this.cb_Parity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Parity.FormattingEnabled = true;
-            this.cb_Parity.Location = new System.Drawing.Point(333, 82);
-            this.cb_Parity.Name = "cb_Parity";
-            this.cb_Parity.Size = new System.Drawing.Size(68, 28);
-            this.cb_Parity.TabIndex = 462;
-            // 
-            // cb_Data
-            // 
-            this.cb_Data.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Data.FormattingEnabled = true;
-            this.cb_Data.Location = new System.Drawing.Point(176, 81);
-            this.cb_Data.Name = "cb_Data";
-            this.cb_Data.Size = new System.Drawing.Size(68, 28);
-            this.cb_Data.TabIndex = 462;
-            // 
-            // cb_Baud
-            // 
-            this.cb_Baud.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Baud.FormattingEnabled = true;
-            this.cb_Baud.Location = new System.Drawing.Point(93, 81);
-            this.cb_Baud.Name = "cb_Baud";
-            this.cb_Baud.Size = new System.Drawing.Size(68, 28);
-            this.cb_Baud.TabIndex = 462;
-            // 
             // tb_Name
             // 
             this.tb_Name.Location = new System.Drawing.Point(19, 82);
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(68, 26);
             this.tb_Name.TabIndex = 461;
+            this.tb_Name.Text = "Net00";
             // 
             // radio_Save
             // 
@@ -277,7 +242,7 @@
             this.rTB_Read.Name = "rTB_Read";
             this.rTB_Read.Size = new System.Drawing.Size(533, 381);
             this.rTB_Read.TabIndex = 460;
-            this.rTB_Read.Text = "Read Data List";
+            this.rTB_Read.Text = "Client Data";
             // 
             // rTB_Write
             // 
@@ -285,7 +250,7 @@
             this.rTB_Write.Name = "rTB_Write";
             this.rTB_Write.Size = new System.Drawing.Size(533, 381);
             this.rTB_Write.TabIndex = 460;
-            this.rTB_Write.Text = "Write Data List";
+            this.rTB_Write.Text = "Server Data";
             // 
             // label3
             // 
@@ -293,9 +258,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label3.Location = new System.Drawing.Point(678, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 31);
+            this.label3.Size = new System.Drawing.Size(84, 31);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Read Data  ";
+            this.label3.Text = "Client";
             // 
             // label2
             // 
@@ -303,62 +268,62 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label2.Location = new System.Drawing.Point(25, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 31);
+            this.label2.Size = new System.Drawing.Size(94, 31);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Write Data  ";
+            this.label2.Text = "Server";
             // 
-            // lb_Data
+            // lb_Portno
             // 
-            this.lb_Data.AutoSize = true;
-            this.lb_Data.Location = new System.Drawing.Point(177, 58);
-            this.lb_Data.Name = "lb_Data";
-            this.lb_Data.Size = new System.Drawing.Size(67, 20);
-            this.lb_Data.TabIndex = 0;
-            this.lb_Data.Text = "Data Bit";
+            this.lb_Portno.AutoSize = true;
+            this.lb_Portno.Location = new System.Drawing.Point(177, 58);
+            this.lb_Portno.Name = "lb_Portno";
+            this.lb_Portno.Size = new System.Drawing.Size(60, 20);
+            this.lb_Portno.TabIndex = 0;
+            this.lb_Portno.Text = "Port no";
             // 
-            // lb_Baud
+            // lb_IP
             // 
-            this.lb_Baud.AutoSize = true;
-            this.lb_Baud.Location = new System.Drawing.Point(84, 58);
-            this.lb_Baud.Name = "lb_Baud";
-            this.lb_Baud.Size = new System.Drawing.Size(86, 20);
-            this.lb_Baud.TabIndex = 0;
-            this.lb_Baud.Text = "Baud Rate";
+            this.lb_IP.AutoSize = true;
+            this.lb_IP.Location = new System.Drawing.Point(84, 58);
+            this.lb_IP.Name = "lb_IP";
+            this.lb_IP.Size = new System.Drawing.Size(87, 20);
+            this.lb_IP.TabIndex = 0;
+            this.lb_IP.Text = "IP Address";
             // 
-            // lb_Stop
+            // lb_Host
             // 
-            this.lb_Stop.AutoSize = true;
-            this.lb_Stop.Location = new System.Drawing.Point(256, 59);
-            this.lb_Stop.Name = "lb_Stop";
-            this.lb_Stop.Size = new System.Drawing.Size(66, 20);
-            this.lb_Stop.TabIndex = 0;
-            this.lb_Stop.Text = "Stop Bit";
+            this.lb_Host.AutoSize = true;
+            this.lb_Host.Location = new System.Drawing.Point(256, 59);
+            this.lb_Host.Name = "lb_Host";
+            this.lb_Host.Size = new System.Drawing.Size(43, 20);
+            this.lb_Host.TabIndex = 0;
+            this.lb_Host.Text = "Host";
             // 
-            // lb_ComPort
+            // lb_IPaddress
             // 
-            this.lb_ComPort.AutoSize = true;
-            this.lb_ComPort.Location = new System.Drawing.Point(28, 58);
-            this.lb_ComPort.Name = "lb_ComPort";
-            this.lb_ComPort.Size = new System.Drawing.Size(51, 20);
-            this.lb_ComPort.TabIndex = 0;
-            this.lb_ComPort.Text = "Name";
+            this.lb_IPaddress.AutoSize = true;
+            this.lb_IPaddress.Location = new System.Drawing.Point(28, 58);
+            this.lb_IPaddress.Name = "lb_IPaddress";
+            this.lb_IPaddress.Size = new System.Drawing.Size(51, 20);
+            this.lb_IPaddress.TabIndex = 0;
+            this.lb_IPaddress.Text = "Name";
             // 
-            // lb_Parity
+            // lb_Protocol
             // 
-            this.lb_Parity.AutoSize = true;
-            this.lb_Parity.Location = new System.Drawing.Point(332, 59);
-            this.lb_Parity.Name = "lb_Parity";
-            this.lb_Parity.Size = new System.Drawing.Size(71, 20);
-            this.lb_Parity.TabIndex = 0;
-            this.lb_Parity.Text = "Parity Bit";
+            this.lb_Protocol.AutoSize = true;
+            this.lb_Protocol.Location = new System.Drawing.Point(316, 59);
+            this.lb_Protocol.Name = "lb_Protocol";
+            this.lb_Protocol.Size = new System.Drawing.Size(67, 20);
+            this.lb_Protocol.TabIndex = 0;
+            this.lb_Protocol.Text = "Protocol";
             // 
-            // dGV_SerialList
+            // dGV_EthernetList
             // 
-            this.dGV_SerialList.AllowUserToAddRows = false;
-            this.dGV_SerialList.AllowUserToDeleteRows = false;
-            this.dGV_SerialList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGV_SerialList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dGV_SerialList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dGV_EthernetList.AllowUserToAddRows = false;
+            this.dGV_EthernetList.AllowUserToDeleteRows = false;
+            this.dGV_EthernetList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGV_EthernetList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dGV_EthernetList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -366,8 +331,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_SerialList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dGV_SerialList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGV_EthernetList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGV_EthernetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -375,9 +340,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGV_SerialList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dGV_SerialList.Location = new System.Drawing.Point(12, 14);
-            this.dGV_SerialList.Name = "dGV_SerialList";
+            this.dGV_EthernetList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGV_EthernetList.Location = new System.Drawing.Point(12, 14);
+            this.dGV_EthernetList.Name = "dGV_EthernetList";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -385,16 +350,50 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_SerialList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dGV_SerialList.RowHeadersVisible = false;
-            this.dGV_SerialList.RowHeadersWidth = 62;
+            this.dGV_EthernetList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dGV_EthernetList.RowHeadersVisible = false;
+            this.dGV_EthernetList.RowHeadersWidth = 62;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dGV_SerialList.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dGV_SerialList.RowTemplate.Height = 23;
-            this.dGV_SerialList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV_SerialList.Size = new System.Drawing.Size(1257, 125);
-            this.dGV_SerialList.TabIndex = 457;
-            this.dGV_SerialList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
+            this.dGV_EthernetList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dGV_EthernetList.RowTemplate.Height = 23;
+            this.dGV_EthernetList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dGV_EthernetList.Size = new System.Drawing.Size(1257, 125);
+            this.dGV_EthernetList.TabIndex = 457;
+            this.dGV_EthernetList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
+            // 
+            // tb_IP
+            // 
+            this.tb_IP.Location = new System.Drawing.Point(93, 82);
+            this.tb_IP.Name = "tb_IP";
+            this.tb_IP.Size = new System.Drawing.Size(68, 26);
+            this.tb_IP.TabIndex = 461;
+            this.tb_IP.Text = "192.168.0.1";
+            // 
+            // tb_Port
+            // 
+            this.tb_Port.Location = new System.Drawing.Point(169, 82);
+            this.tb_Port.Name = "tb_Port";
+            this.tb_Port.Size = new System.Drawing.Size(68, 26);
+            this.tb_Port.TabIndex = 461;
+            this.tb_Port.Text = "1000";
+            // 
+            // cb_Host
+            // 
+            this.cb_Host.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Host.FormattingEnabled = true;
+            this.cb_Host.Location = new System.Drawing.Point(243, 81);
+            this.cb_Host.Name = "cb_Host";
+            this.cb_Host.Size = new System.Drawing.Size(68, 28);
+            this.cb_Host.TabIndex = 464;
+            // 
+            // cb_Proc
+            // 
+            this.cb_Proc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Proc.FormattingEnabled = true;
+            this.cb_Proc.Location = new System.Drawing.Point(317, 82);
+            this.cb_Proc.Name = "cb_Proc";
+            this.cb_Proc.Size = new System.Drawing.Size(68, 28);
+            this.cb_Proc.TabIndex = 464;
             // 
             // vwEthernet
             // 
@@ -410,7 +409,7 @@
             this.Pnl_Item.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_SerialList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_EthernetList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,7 +417,7 @@
         #endregion
         private System.Windows.Forms.Panel Pnl_Item;
         private System.Windows.Forms.RadioButton radio_Save;
-        private System.Windows.Forms.DataGridView dGV_SerialList;
+        private System.Windows.Forms.DataGridView dGV_EthernetList;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -426,22 +425,22 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox rTB_Read;
-        private System.Windows.Forms.Label lb_ComPort;
-        private System.Windows.Forms.Label lb_Data;
-        private System.Windows.Forms.Label lb_Baud;
-        private System.Windows.Forms.Label lb_Stop;
-        private System.Windows.Forms.Label lb_Parity;
-        private System.Windows.Forms.ComboBox cb_Baud;
+        private System.Windows.Forms.Label lb_IPaddress;
+        private System.Windows.Forms.Label lb_Portno;
+        private System.Windows.Forms.Label lb_IP;
+        private System.Windows.Forms.Label lb_Host;
+        private System.Windows.Forms.Label lb_Protocol;
         private System.Windows.Forms.TextBox tb_Name;
         private System.Windows.Forms.TextBox tb_No;
-        private System.Windows.Forms.ComboBox cb_Parity;
-        private System.Windows.Forms.ComboBox cb_Data;
-        private System.Windows.Forms.ComboBox cb_Stop;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_Write;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Button btn_Open;
         private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.TextBox tb_Port;
+        private System.Windows.Forms.TextBox tb_IP;
+        private System.Windows.Forms.ComboBox cb_Proc;
+        private System.Windows.Forms.ComboBox cb_Host;
     }
 }

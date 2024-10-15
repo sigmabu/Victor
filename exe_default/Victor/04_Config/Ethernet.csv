@@ -1,0 +1,7 @@
+No,Name, IP,Port,Server/Client,TCP/UDP
+0,Net00,192.168.0.100,1000,Server,TCP
+1,Net01,192.168.0.101,1000,Server,UDP
+2,Net02,192.168.0.102,1000,Server,UDP
+3,Net03,192.168.0.103,1000,Client,UDP
+EOF
+

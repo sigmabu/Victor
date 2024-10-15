@@ -1497,6 +1497,17 @@ public enum eRecipGroup
     End
 }
 
+public enum eEthernet
+{
+    No = 0,
+    Port_Name = 1,
+    IPaddress = 2,
+    Port_no = 3,
+    Host = 4,
+    Protocol = 5,
+    End
+}
+
 public enum eSerial
 {
     No = 0,

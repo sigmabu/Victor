@@ -35,5 +35,10 @@ namespace Victor
         /// </summary>
         public static mSerial[] tSerial = new mSerial[20];
 
+        /// <summary>
+        /// Ethernet 설정
+        /// </summary>
+        public static mEthernet[] tEthernet = new mEthernet[20];
+
     }
 }

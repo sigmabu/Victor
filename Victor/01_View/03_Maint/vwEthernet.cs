@@ -4,21 +4,33 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO.Ports;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Runtime.CompilerServices;
+using System.Net.Sockets;
+using System.Threading;
 
 
 namespace Victor
 {
+    //https://soeun-87.tistory.com/31
+
     public partial class vwEthernet : UserControl
     {
-        private string sSerialPath;
+        private string sEthernetPath;
         private string sFolderPath;
         private string sFileName;
 
-        static string[,] sCsvData;
+        private static string[,] sCsvData;
         static int nSelRow;
-        private SerialPort m232_01 = new SerialPort();
+
+        TcpListener Server;
+        TcpClient Client;
+
+        StreamReader Reader;
+        StreamWriter Writer;
+        NetworkStream stream;
+
+        Thread ReceiveThread;
+
+        bool Connected;
 
         public vwEthernet()
         {
@@ -28,33 +40,25 @@ namespace Victor
         private void Init_View_Set()
         {
             int i = 0;
-            for (i = 0; i < mSerial_Env.nBaud.Length; i++)
+            for (i = 0; i < mEthernet_Env.sHost.Length; i++)
             {
-                cb_Baud.Items.Add(mSerial_Env.nBaud[i]);
+                cb_Host.Items.Add(mEthernet_Env.sHost[i]);
             }
-            for (i = 0; i < mSerial_Env.nData.Length; i++)
+            for (i = 0; i < mEthernet_Env.sProtocol.Length; i++)
             {
-                cb_Data.Items.Add(mSerial_Env.nData[i]);
-            }
-            for (i = 0; i < mSerial_Env.nStop.Length; i++)
-            {
-                cb_Stop.Items.Add(mSerial_Env.nStop[i]);
-            }
-            for (i = 0; i < mSerial_Env.nParity.Length; i++)
-            {
-                cb_Parity.Items.Add(mSerial_Env.nParity[i]);
+                cb_Proc.Items.Add(mEthernet_Env.sProtocol[i]);
             }
 
             nSelRow = 0;
-            dGV_SerialList.ReadOnly = true;
+            dGV_EthernetList.ReadOnly = true;
 
-            sSerialPath = GVar.PATH_CONFIG_Serial;
-            int FindDot = sSerialPath.LastIndexOf(".");
-            int Lastsp = sSerialPath.LastIndexOf("\\");
+            sEthernetPath = GVar.PATH_CONFIG_Ethernet;
+            int FindDot = sEthernetPath.LastIndexOf(".");
+            int Lastsp = sEthernetPath.LastIndexOf("\\");
 
-            sFileName = sSerialPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
-            sFolderPath = sSerialPath.Replace(sFileName + ".csv", "");
-            Read_File_SerialConfig();
+            sFileName = sEthernetPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
+            sFolderPath = sEthernetPath.Replace(sFileName + ".csv", "");
+            Read_File_EthernetConfig();
         }
 
         string EnumToString(eRecipGroup eGroup)
@@ -67,11 +71,11 @@ namespace Victor
             switch (mViewPage.nRcpPage)
             {
                 case 0:
-                    Read_File_SerialConfig();
+                    Read_File_EthernetConfig();
 
                     break;
                 case 312:
-                    Read_File_SerialConfig();
+                    Read_File_EthernetConfig();
                     break;
                 case 313:
 
@@ -108,51 +112,49 @@ namespace Victor
         private void Save_UiData()
         {
 
-            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
+            bool create = CCsv.SaveCSVFile(this.sEthernetPath, sCsvData, overwrite: true);
         }
         public int Get_UI_SerialConfig()
         {
-            sCsvData[nSelRow + 1, (int)eSerial.No] = tb_No.Text;
-            sCsvData[nSelRow + 1, (int)eSerial.Port_Name] = tb_Name.Text ;
-            sCsvData[nSelRow + 1, (int)eSerial.Baud_Rate] = cb_Baud.SelectedItem.ToString();
-            sCsvData[nSelRow + 1, (int)eSerial.Data_bit] = cb_Data.SelectedItem.ToString();
-            sCsvData[nSelRow + 1, (int)eSerial.Stop_bit] = cb_Stop.SelectedItem.ToString();
-            sCsvData[nSelRow + 1, (int)eSerial.Parity_bit] = cb_Parity.SelectedItem.ToString();
-            //sCsvData[nSelRow + 1, (int)eSerial.Flow_Control] = cb_Flow.SelectedItem.ToString();                        
+            sCsvData[nSelRow + 1, (int)eEthernet.No] = tb_No.Text;
+            sCsvData[nSelRow + 1, (int)eEthernet.Port_Name] = tb_Name.Text ;
+            sCsvData[nSelRow + 1, (int)eEthernet.IPaddress] = tb_IP.Text;
+            sCsvData[nSelRow + 1, (int)eEthernet.Port_no] = tb_Port.Text;
+            sCsvData[nSelRow + 1, (int)eEthernet.Host] = cb_Host.SelectedItem.ToString();
+            sCsvData[nSelRow + 1, (int)eEthernet.Protocol] = cb_Proc.SelectedItem.ToString();
 
             return 0;
         }
 
-        public int Read_File_SerialConfig()
+        public int Read_File_EthernetConfig()
         {
-            dGV_SerialList.DataSource = Display_File_SerialConfig(sSerialPath);
+            dGV_EthernetList.DataSource = Display_File_SerialConfig(sEthernetPath);
 
-            sCsvData = CCsv.OpenCSVFile(this.sSerialPath);
+            sCsvData = CCsv.OpenCSVFile(this.sEthernetPath);
             int nArrayCnt = 0;
 
             foreach (string str in sCsvData)
             {
-                if (string.IsNullOrEmpty(sCsvData[nArrayCnt + 1, (int)eSerial.Port_Name]))
+                if (string.IsNullOrEmpty(sCsvData[nArrayCnt + 1, (int)eEthernet.Port_Name]))
                 {
                     return -1;
                 }
-                //CData.tSerial[0].nNo = sCsvData[1, (int)eSerial.No]; 
-                CData.tSerial[nArrayCnt].sPort_Name = sCsvData[nArrayCnt + 1, (int)eSerial.Port_Name];
-                CData.tSerial[nArrayCnt].sBaud_Rate = sCsvData[nArrayCnt + 1, (int)eSerial.Baud_Rate];
-                CData.tSerial[nArrayCnt].sData_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Data_bit];
-                CData.tSerial[nArrayCnt].sStop_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Stop_bit];
-                CData.tSerial[nArrayCnt].sParity_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Parity_bit];
+                CData.tEthernet[nArrayCnt].sName = sCsvData[nArrayCnt + 1, (int)eEthernet.Port_Name];
+                CData.tEthernet[nArrayCnt].sIPaddress = sCsvData[nArrayCnt + 1, (int)eEthernet.IPaddress];
+                CData.tEthernet[nArrayCnt].sPort = sCsvData[nArrayCnt + 1, (int)eEthernet.Port_no];
+                CData.tEthernet[nArrayCnt].sHost = sCsvData[nArrayCnt + 1, (int)eEthernet.Host];
+                CData.tEthernet[nArrayCnt].sProtocol = sCsvData[nArrayCnt + 1, (int)eEthernet.Protocol];
 
-                //CData.tSerial[nArrayCnt].sFlow_Control = sCsvData[nArrayCnt + 1, (int)eSerial.Flow_Control];
+                //CData.tSerial[nArrayCnt].sFlow_Control = sCsvData[nArrayCnt + 1, (int)eEthernet.Flow_Control];
                 nArrayCnt++;
             }
 
-            dGV_SerialList.Rows[0].Selected = true;
+            dGV_EthernetList.Rows[0].Selected = true;
             return 0;
         }
         public int Write_File_SerialConfig()
         {
-            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
+            bool create = CCsv.SaveCSVFile(this.sEthernetPath, sCsvData, overwrite: true);
             return 0;
         }
 
@@ -160,7 +162,7 @@ namespace Victor
         
         private void Click_Open(object sender, EventArgs e)
         {
-            Read_File_SerialConfig();
+            Read_File_EthernetConfig();
             //Display_File_SerialConfig();
 
         }
@@ -168,12 +170,12 @@ namespace Victor
         {
             Get_UI_SerialConfig();
             Write_File_SerialConfig();
-            Read_File_SerialConfig();
+            Read_File_EthernetConfig();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_SerialList.DataSource = Display_File_SerialConfig(sSerialPath);
+            dGV_EthernetList.DataSource = Display_File_SerialConfig(sEthernetPath);
         }
 
         public DataTable Display_File_SerialConfig(string filePath)
@@ -207,15 +209,15 @@ namespace Victor
 
         private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dGV_SerialList.SelectedRows[0];   //선택된 Row 값 가져옴.
+            DataGridViewRow row = dGV_EthernetList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index;
-            tb_No.Text      = row.Cells[(int)eSerial.No].Value.ToString();        // row의 컬럼(Cells[0]) = name
-            tb_Name.Text    = row.Cells[(int)eSerial.Port_Name].Value.ToString();
-            cb_Baud.Text    = row.Cells[(int)eSerial.Baud_Rate].Value.ToString();
-            cb_Data.Text    = row.Cells[(int)eSerial.Data_bit].Value.ToString();
-            cb_Stop.Text    = row.Cells[(int)eSerial.Stop_bit].Value.ToString();
-            cb_Parity.Text  = row.Cells[(int)eSerial.Parity_bit].Value.ToString();
-            //cb_Flow.Text    = row.Cells[6].Value.ToString();
+            tb_No.Text      = row.Cells[(int)eEthernet.No].Value.ToString();        // row의 컬럼(Cells[0]) = name
+            tb_Name.Text    = row.Cells[(int)eEthernet.Port_Name].Value.ToString();
+            tb_IP.Text    = row.Cells[(int)eEthernet.IPaddress].Value.ToString();
+            tb_Port.Text    = row.Cells[(int)eEthernet.Port_no].Value.ToString();
+            cb_Host.Text    = row.Cells[(int)eEthernet.Host].Value.ToString();
+            cb_Proc.Text  = row.Cells[(int)eEthernet.Protocol].Value.ToString();
+      
         }
         
         private void Click_PortOpen(object sender, EventArgs e)
@@ -226,23 +228,23 @@ namespace Victor
                 Console.WriteLine($"Port {portnumber}");
             }
 
-            if (m232_01.IsOpen == false) //닫혀있을때
-            {
-                try
-                {
-                    m232_01.PortName = tb_Name.Text.ToString(); //콤보박스에서 고른 것을 포트네임으로 넣어준다
-                    m232_01.BaudRate = int.Parse(cb_Baud.SelectedItem.ToString()); //콤보박스에서 고른 것(string)을 int로 변경해서 넣어준다.
-                    m232_01.DataBits = int.Parse(cb_Data.SelectedItem.ToString()); // 8비트 데이터 전송은 고정
-                    m232_01.StopBits = StopBits.One; // stop비트는 1로 고정
-                    m232_01.Parity = Parity.None; // 패리티비트는 없는 걸로
+            //if (m232_01.IsOpen == false) //닫혀있을때
+            //{
+            //    try
+            //    {
+            //        m232_01.PortName = tb_Name.Text.ToString(); //콤보박스에서 고른 것을 포트네임으로 넣어준다
+            //        m232_01.BaudRate = int.Parse(cb_Baud.SelectedItem.ToString()); //콤보박스에서 고른 것(string)을 int로 변경해서 넣어준다.
+            //        m232_01.DataBits = int.Parse(cb_Data.SelectedItem.ToString()); // 8비트 데이터 전송은 고정
+            //        m232_01.StopBits = StopBits.One; // stop비트는 1로 고정
+            //        m232_01.Parity = Parity.None; // 패리티비트는 없는 걸로
 
-                    m232_01.Open(); // 포트를 열어준다
-                }
-                catch (Exception Err)
-                {
-                    MessageBox.Show(Err.ToString());
-                }
-            }
+            //        m232_01.Open(); // 포트를 열어준다
+            //    }
+            //    catch (Exception Err)
+            //    {
+            //        MessageBox.Show(Err.ToString());
+            //    }
+            //}
         }
 
         private void Click_PortClose(object sender, EventArgs e)
