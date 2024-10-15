@@ -12,26 +12,34 @@ using System.Xml.Linq;
 using Microsoft.Build.Tasks;
 using Microsoft.VisualBasic.FileIO;
 using Victor;
+using static System.Net.Mime.MediaTypeNames;
 
 
 namespace Victor
 {
     public partial class vwSerial : UserControl
     {
-
         private string sSerialPath;
         private string sFolderPath;
         private string sFileName;
 
+        static string[,] sCsvData;
+        static int nSelRow;
+
+
         public vwSerial()
         {
             InitializeComponent();
+            nSelRow = 0;
+            dGV_SerialList.ReadOnly = true;
+
             sSerialPath = GVar.PATH_CONFIG_Serial;
             int FindDot = sSerialPath.LastIndexOf(".");
             int Lastsp = sSerialPath.LastIndexOf("\\");
 
             sFileName = sSerialPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sSerialPath.Replace(sFileName + ".csv", "");
+            Read_File_SerialConfig();
         }
 
         string EnumToString(eRecipGroup eGroup)
@@ -81,65 +89,28 @@ namespace Victor
             }
         }
 
-        private void Load_CfgDefaultData()
-        {
-        }
-        private void Load_CfgData()
-        {
-        }
-
-        private void Get_UiData()
-        {
-        }
 
         private void Save_UiData()
         {
 
             bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
         }
-
-        private void Display_File_SerialConfig()
-        {
-            int nCount = 0;
-        //    DataTable dt = new DataTable();
-        //    foreach (var vr in CData.tSerial)
-        //    {
-        //        dt.Columns.Add("Set Value");
-        //        dt.Columns.Add("설명");
-        //    }
-        //https://okky.kr/questions/1161729
-
-        //    dt.Columns.Add(new DataColumn("FileName"));
-
-        //    dt.Columns.Add(new DataColumn("PDF"));
-
-        //    dt.Columns.Add(new DataColumn("CopyCount"));
-
-        //    dt.Columns.Add(new DataColumn("WaterMark"));
-
-        //    DataRow dr = dt.NewRow(); 
-        //            dt.rows.Add(dr); 
-        //            dt["FileName"] = "Newfile"; 
-        //            dt["PDF"] = true; 
-        //            dt["CopyCount"] = 1; 
-        //            dt["WaterMark"] = true;
-
-
-        //    dr = dt.NewRow(); dt.rows.Add(dr); dt["FileName"] = "Newfile"; dt["PDF"] = true; dt["CopyCount"] = 2;
-
-        //    dataGridView1.DataSource = new BindingSource() { DataSource = dt };
-
-        }
-
-        static string[,] sCsvData;
         public int Get_UI_SerialConfig()
         {
+            sCsvData[nSelRow + 1, (int)eSerial.No] = tb_No.Text;
+            sCsvData[nSelRow + 1, (int)eSerial.Port_Name] = tb_Name.Text ;
+            sCsvData[nSelRow + 1, (int)eSerial.Baud_Rate] = cb_Baud.SelectedItem.ToString();
+            sCsvData[nSelRow + 1, (int)eSerial.Data_bit] = cb_Data.SelectedItem.ToString();
+            sCsvData[nSelRow + 1, (int)eSerial.Parity_bit] = cb_Parity.SelectedItem.ToString();
+            sCsvData[nSelRow + 1, (int)eSerial.Stop_bit] = cb_Stop.SelectedItem.ToString();
+            sCsvData[nSelRow + 1, (int)eSerial.Flow_Control] = cb_Flow.SelectedItem.ToString();                        
+
             return 0;
         }
 
         public int Read_File_SerialConfig()
         {
-            dGV_SerialList.DataSource = readCSV(sSerialPath);
+            dGV_SerialList.DataSource = Display_File_SerialConfig(sSerialPath);
 
             sCsvData = CCsv.OpenCSVFile(this.sSerialPath);
             int nArrayCnt = 0;
@@ -164,15 +135,7 @@ namespace Victor
         }
         public int Write_File_SerialConfig()
         {
-            using (StreamWriter wr = new StreamWriter("path"))
-            {
-                wr.WriteLine("#TYPE,MoveSpeed");
-
-                //foreach (var data in datalist)
-                //{
-                //    wr.WriteLine("{0},{1}", data.data1, data.data2);
-                //}
-            }
+            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
             return 0;
         }
 
@@ -181,23 +144,23 @@ namespace Victor
         private void Click_Open(object sender, EventArgs e)
         {
             Read_File_SerialConfig();
-            Display_File_SerialConfig();
+            //Display_File_SerialConfig();
 
         }
         private void Click_Save(object sender, EventArgs e)
         {
-            //Get_UiData();
-            Save_UiData();
+            Get_UI_SerialConfig();
+            Write_File_SerialConfig();
+            Read_File_SerialConfig();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_SerialList.DataSource = readCSV(sSerialPath);
+            dGV_SerialList.DataSource = Display_File_SerialConfig(sSerialPath);
         }
 
-        public DataTable readCSV(string filePath)
+        public DataTable Display_File_SerialConfig(string filePath)
         {
-            int nRowCnt = 0;
             var dt = new DataTable();
 
             // 첫번째 행을 읽어 컬럼명으로 세팅
@@ -208,7 +171,6 @@ namespace Victor
                     dt.Columns.Add(headerItem.Trim());
                 }
             }
-
             // 나머지 행을 읽어 데이터로 세팅
             foreach (var line in File.ReadLines(filePath).Skip(1))
             {
@@ -221,28 +183,32 @@ namespace Victor
                 else
                 {
                     dt.Rows.Add(line.Split(','));
-                    nRowCnt++;
                 }
             }
             return dt;
         }
 
-        public DataTable readCSV_(string filePath)
-        { 
-            var dt = new DataTable();
+        private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dGV_SerialList.SelectedRows[0];   //선택된 Row 값 가져옴.
+            nSelRow = row.Index;
+            tb_No.Text      = row.Cells[0].Value.ToString();        // row의 컬럼(Cells[0]) = name
+            tb_Name.Text    = row.Cells[1].Value.ToString();
+            cb_Baud.Text    = row.Cells[2].Value.ToString();
+            cb_Data.Text    = row.Cells[3].Value.ToString();
+            cb_Parity.Text  = row.Cells[4].Value.ToString();
+            cb_Stop.Text    = row.Cells[5].Value.ToString();
+            cb_Flow.Text    = row.Cells[6].Value.ToString();
+        }
 
-            // 첫번째 행을 읽어 컬럼명으로 세팅
-            File.ReadLines(filePath).Take(1)
-                .SelectMany(x => x.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                .ToList()
-                .ForEach(x => dt.Columns.Add(x.Trim()));
+        private void Click_PortOpen(object sender, EventArgs e)
+        {
 
-            // 나머지 행을 읽어 데이터로 세팅
-            File.ReadLines(filePath).Skip(1)
-                .Select(x => x.Split(','))
-                .ToList()
-                .ForEach(line => dt.Rows.Add(line));
-            return dt;
+        }
+
+        private void Click_PortClose(object sender, EventArgs e)
+        {
+
         }
     }
 }
