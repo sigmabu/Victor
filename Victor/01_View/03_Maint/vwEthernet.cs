@@ -10,8 +10,6 @@ using System.Threading;
 
 namespace Victor
 {
-    //https://soeun-87.tistory.com/31
-
     public partial class vwEthernet : UserControl
     {
         private string sEthernetPath;
@@ -219,7 +217,9 @@ namespace Victor
             cb_Proc.Text  = row.Cells[(int)eEthernet.Protocol].Value.ToString();
       
         }
-        
+
+        //https://soeun-87.tistory.com/31
+        //https://yeolco.tistory.com/31?category=757612
         private void Click_PortOpen(object sender, EventArgs e)
         {
             string[] PortNames = SerialPort.GetPortNames();

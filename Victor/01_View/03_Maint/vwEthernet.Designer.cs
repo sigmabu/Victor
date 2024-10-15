@@ -38,11 +38,15 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cb_Proc = new System.Windows.Forms.ComboBox();
+            this.cb_Host = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Open = new System.Windows.Forms.Button();
             this.btn_Write = new System.Windows.Forms.Button();
             this.tb_No = new System.Windows.Forms.TextBox();
+            this.tb_Port = new System.Windows.Forms.TextBox();
+            this.tb_IP = new System.Windows.Forms.TextBox();
             this.tb_Name = new System.Windows.Forms.TextBox();
             this.radio_Save = new System.Windows.Forms.RadioButton();
             this.rTB_Read = new System.Windows.Forms.RichTextBox();
@@ -56,10 +60,6 @@
             this.lb_Protocol = new System.Windows.Forms.Label();
             this.dGV_EthernetList = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.tb_IP = new System.Windows.Forms.TextBox();
-            this.tb_Port = new System.Windows.Forms.TextBox();
-            this.cb_Host = new System.Windows.Forms.ComboBox();
-            this.cb_Proc = new System.Windows.Forms.ComboBox();
             this.Pnl_Item.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_EthernetList)).BeginInit();
@@ -144,6 +144,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "IP no                       ";
             // 
+            // cb_Proc
+            // 
+            this.cb_Proc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Proc.FormattingEnabled = true;
+            this.cb_Proc.Location = new System.Drawing.Point(378, 82);
+            this.cb_Proc.Name = "cb_Proc";
+            this.cb_Proc.Size = new System.Drawing.Size(68, 37);
+            this.cb_Proc.TabIndex = 464;
+            // 
+            // cb_Host
+            // 
+            this.cb_Host.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Host.FormattingEnabled = true;
+            this.cb_Host.Location = new System.Drawing.Point(306, 81);
+            this.cb_Host.Name = "cb_Host";
+            this.cb_Host.Size = new System.Drawing.Size(68, 37);
+            this.cb_Host.TabIndex = 464;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
@@ -202,14 +220,30 @@
             // 
             this.tb_No.Location = new System.Drawing.Point(88, 0);
             this.tb_No.Name = "tb_No";
-            this.tb_No.Size = new System.Drawing.Size(87, 26);
+            this.tb_No.Size = new System.Drawing.Size(87, 35);
             this.tb_No.TabIndex = 461;
+            // 
+            // tb_Port
+            // 
+            this.tb_Port.Location = new System.Drawing.Point(231, 82);
+            this.tb_Port.Name = "tb_Port";
+            this.tb_Port.Size = new System.Drawing.Size(68, 35);
+            this.tb_Port.TabIndex = 461;
+            this.tb_Port.Text = "1000";
+            // 
+            // tb_IP
+            // 
+            this.tb_IP.Location = new System.Drawing.Point(93, 82);
+            this.tb_IP.Name = "tb_IP";
+            this.tb_IP.Size = new System.Drawing.Size(134, 35);
+            this.tb_IP.TabIndex = 461;
+            this.tb_IP.Text = "192.168.0.1";
             // 
             // tb_Name
             // 
             this.tb_Name.Location = new System.Drawing.Point(19, 82);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(68, 26);
+            this.tb_Name.Size = new System.Drawing.Size(68, 35);
             this.tb_Name.TabIndex = 461;
             this.tb_Name.Text = "Net00";
             // 
@@ -258,7 +292,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label3.Location = new System.Drawing.Point(678, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 31);
+            this.label3.Size = new System.Drawing.Size(122, 46);
             this.label3.TabIndex = 0;
             this.label3.Text = "Client";
             // 
@@ -268,16 +302,16 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label2.Location = new System.Drawing.Point(25, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 31);
+            this.label2.Size = new System.Drawing.Size(136, 46);
             this.label2.TabIndex = 0;
             this.label2.Text = "Server";
             // 
             // lb_Portno
             // 
             this.lb_Portno.AutoSize = true;
-            this.lb_Portno.Location = new System.Drawing.Point(177, 58);
+            this.lb_Portno.Location = new System.Drawing.Point(239, 58);
             this.lb_Portno.Name = "lb_Portno";
-            this.lb_Portno.Size = new System.Drawing.Size(60, 20);
+            this.lb_Portno.Size = new System.Drawing.Size(90, 29);
             this.lb_Portno.TabIndex = 0;
             this.lb_Portno.Text = "Port no";
             // 
@@ -286,16 +320,16 @@
             this.lb_IP.AutoSize = true;
             this.lb_IP.Location = new System.Drawing.Point(84, 58);
             this.lb_IP.Name = "lb_IP";
-            this.lb_IP.Size = new System.Drawing.Size(87, 20);
+            this.lb_IP.Size = new System.Drawing.Size(130, 29);
             this.lb_IP.TabIndex = 0;
             this.lb_IP.Text = "IP Address";
             // 
             // lb_Host
             // 
             this.lb_Host.AutoSize = true;
-            this.lb_Host.Location = new System.Drawing.Point(256, 59);
+            this.lb_Host.Location = new System.Drawing.Point(319, 59);
             this.lb_Host.Name = "lb_Host";
-            this.lb_Host.Size = new System.Drawing.Size(43, 20);
+            this.lb_Host.Size = new System.Drawing.Size(62, 29);
             this.lb_Host.TabIndex = 0;
             this.lb_Host.Text = "Host";
             // 
@@ -304,16 +338,16 @@
             this.lb_IPaddress.AutoSize = true;
             this.lb_IPaddress.Location = new System.Drawing.Point(28, 58);
             this.lb_IPaddress.Name = "lb_IPaddress";
-            this.lb_IPaddress.Size = new System.Drawing.Size(51, 20);
+            this.lb_IPaddress.Size = new System.Drawing.Size(78, 29);
             this.lb_IPaddress.TabIndex = 0;
             this.lb_IPaddress.Text = "Name";
             // 
             // lb_Protocol
             // 
             this.lb_Protocol.AutoSize = true;
-            this.lb_Protocol.Location = new System.Drawing.Point(316, 59);
+            this.lb_Protocol.Location = new System.Drawing.Point(377, 59);
             this.lb_Protocol.Name = "lb_Protocol";
-            this.lb_Protocol.Size = new System.Drawing.Size(67, 20);
+            this.lb_Protocol.Size = new System.Drawing.Size(103, 29);
             this.lb_Protocol.TabIndex = 0;
             this.lb_Protocol.Text = "Protocol";
             // 
@@ -360,40 +394,6 @@
             this.dGV_EthernetList.Size = new System.Drawing.Size(1257, 125);
             this.dGV_EthernetList.TabIndex = 457;
             this.dGV_EthernetList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
-            // 
-            // tb_IP
-            // 
-            this.tb_IP.Location = new System.Drawing.Point(93, 82);
-            this.tb_IP.Name = "tb_IP";
-            this.tb_IP.Size = new System.Drawing.Size(68, 26);
-            this.tb_IP.TabIndex = 461;
-            this.tb_IP.Text = "192.168.0.1";
-            // 
-            // tb_Port
-            // 
-            this.tb_Port.Location = new System.Drawing.Point(169, 82);
-            this.tb_Port.Name = "tb_Port";
-            this.tb_Port.Size = new System.Drawing.Size(68, 26);
-            this.tb_Port.TabIndex = 461;
-            this.tb_Port.Text = "1000";
-            // 
-            // cb_Host
-            // 
-            this.cb_Host.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Host.FormattingEnabled = true;
-            this.cb_Host.Location = new System.Drawing.Point(243, 81);
-            this.cb_Host.Name = "cb_Host";
-            this.cb_Host.Size = new System.Drawing.Size(68, 28);
-            this.cb_Host.TabIndex = 464;
-            // 
-            // cb_Proc
-            // 
-            this.cb_Proc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Proc.FormattingEnabled = true;
-            this.cb_Proc.Location = new System.Drawing.Point(317, 82);
-            this.cb_Proc.Name = "cb_Proc";
-            this.cb_Proc.Size = new System.Drawing.Size(68, 28);
-            this.cb_Proc.TabIndex = 464;
             // 
             // vwEthernet
             // 
