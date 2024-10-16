@@ -55,6 +55,7 @@ namespace Victor
             sFileName = sSerialPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sSerialPath.Replace(sFileName + ".csv", "");
             Read_File_SerialConfig();
+            dGV_SerialList_SelNum(false);
         }
 
         string EnumToString(eRecipGroup eGroup)
@@ -71,7 +72,7 @@ namespace Victor
 
                     break;
                 case 312:
-                    Read_File_SerialConfig();
+                    Init_View_Set();
                     break;
                 case 313:
 
@@ -207,6 +208,14 @@ namespace Victor
 
         private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            dGV_SerialList_SelNum(true);
+        }
+        private void dGV_SerialList_SelNum(bool bsel = false)
+        {
+            if (bsel == false)
+            {
+                dGV_SerialList.Rows[0].Selected = true;
+            }
             DataGridViewRow row = dGV_SerialList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index;
             tb_No.Text      = row.Cells[(int)eSerial.No].Value.ToString();        // row의 컬럼(Cells[0]) = name

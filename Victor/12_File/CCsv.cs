@@ -126,7 +126,7 @@ namespace Victor
 
                 if (File.Exists(path))
                 {
-                    string[] strs = File.ReadAllLines(path);
+                    string[] strs = File.ReadAllLines(path,Encoding.Default);
                     if ( strs != null && strs.Length > 0)
                     {
                         int col = strs[0].Split(',').Length;
@@ -139,6 +139,61 @@ namespace Victor
                             int FindDot = strs[i].LastIndexOf(",");
 
                             if ((FindDot < 1) && (strs[i] != "EOF")) 
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                for (int j = 0; j < result.GetLength(1); j++)
+                                {
+                                    result[i, j] = split[j];
+                                    if (strs[i] == "EOF") break;
+                                }
+                            }
+                        }
+                        return result;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// 텍스트 파일 열기
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static string[,] OpenCSVFile(string path, out int nRowCnt)
+        {
+            nRowCnt = 0;
+            try
+            {
+                if (path.Contains(".csv") == false)
+                {
+                    path += ".csv";
+                }
+
+                if (File.Exists(path))
+                {
+                    string[] strs = File.ReadAllLines(path, Encoding.Default);
+                    if (strs != null && strs.Length > 0)
+                    {
+                        int col = strs[0].Split(',').Length;
+                        int row = strs.Length;
+                        nRowCnt = row;
+
+                        string[,] result = new string[row, col];
+                        for (int i = 0; i < result.GetLength(0); i++)
+                        {
+                            string[] split = strs[i].Split(',');
+                            int FindDot = strs[i].LastIndexOf(",");
+
+                            if ((FindDot < 1) && (strs[i] != "EOF"))
                             {
                                 break;
                             }

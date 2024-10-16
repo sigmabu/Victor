@@ -193,6 +193,7 @@ namespace Victor
             sFileName = sEthernetPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sEthernetPath.Replace(sFileName + ".csv", "");
             Read_File_EthernetConfig();
+            dGV_SerialList_SelNum(false);
         }
 
         string EnumToString(eRecipGroup eGroup)
@@ -202,7 +203,7 @@ namespace Victor
 
         public void Open()
         {
-            switch (mViewPage.nRcpPage)
+            switch (mViewPage.nMaintPage)
             {
                 case 0:
                     Read_File_EthernetConfig();
@@ -212,6 +213,7 @@ namespace Victor
                     Read_File_EthernetConfig();
                     break;
                 case 313:
+                    Init_View_Set();
 
                     break;
                 default: break;
@@ -220,7 +222,7 @@ namespace Victor
         }
         public void Close()
         {
-            switch (mViewPage.nRcpPage)
+            switch (mViewPage.nMaintPage)
             {
                 case 0:
                     {
@@ -273,6 +275,7 @@ namespace Victor
                 {
                     return -1;
                 }
+                CData.tEthernet[nArrayCnt].sNo  = sCsvData[nArrayCnt + 1, (int)eEthernet.No];
                 CData.tEthernet[nArrayCnt].sName = sCsvData[nArrayCnt + 1, (int)eEthernet.Port_Name];
                 CData.tEthernet[nArrayCnt].sIPaddress = sCsvData[nArrayCnt + 1, (int)eEthernet.IPaddress];
                 CData.tEthernet[nArrayCnt].sPort = sCsvData[nArrayCnt + 1, (int)eEthernet.Port_no];
@@ -341,6 +344,14 @@ namespace Victor
 
         private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            dGV_SerialList_SelNum(true);
+        }
+        private void dGV_SerialList_SelNum(bool bsel = false)
+        { 
+            if(bsel == false)
+            {
+                dGV_EthernetList.Rows[0].Selected = true;
+            }
             DataGridViewRow row = dGV_EthernetList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index;
             tb_No.Text      = row.Cells[(int)eEthernet.No].Value.ToString();        // row의 컬럼(Cells[0]) = name

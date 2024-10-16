@@ -9,6 +9,7 @@ namespace Victor
     {
         private vwSerial m_vwSerial = new vwSerial();
         private vwEthernet m_vwEthernet = new vwEthernet();
+        private vwIOList m_vwIOList = new vwIOList();
         public vwMaint()
         {
             InitializeComponent();
@@ -59,6 +60,10 @@ namespace Victor
                     m_vwEthernet.Close();
                     pnl_Menu.Controls.Remove(m_vwEthernet);
                     break;
+                case 314:
+                    m_vwIOList.Close();
+                    pnl_Menu.Controls.Remove(m_vwIOList);
+                    break;
                 default: break;
             }
 
@@ -103,6 +108,18 @@ namespace Victor
                     mViewPage.nMaintPage = mViewPage.nViewMaintEthernet;
                     m_vwEthernet.Open();
                     
+                    break;
+                case 314:
+                    panel1.Visible = false;
+                    panel2.Visible = false;
+                    panel3.Visible = false;
+
+                    pnl_Menu.Controls.Add(m_vwIOList);
+                    m_vwIOList.Location = new Point(0, 32);
+                    GVar.m_iPage = mViewPage.nViewMaintIOList;
+                    mViewPage.nMaintPage = mViewPage.nViewMaintIOList;
+                    m_vwIOList.Open();
+
                     break;
             }
         }

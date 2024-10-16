@@ -1519,3 +1519,14 @@ public enum eSerial
     Flow_Control = 6,
     End
 }
+
+public enum eIOArray
+{
+    Label = 0,
+    InOut = 1,
+    Name = 2,
+    Coil = 3,
+    Part = 4,
+    Desc = 5,
+    End
+}

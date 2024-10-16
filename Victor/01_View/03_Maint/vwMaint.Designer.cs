@@ -42,6 +42,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_Menu = new System.Windows.Forms.Panel();
+            this.btn_IOList = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -86,7 +87,7 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(26, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 29);
+            this.label1.Size = new System.Drawing.Size(129, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Option";
             // 
@@ -94,6 +95,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_IOList);
             this.panel1.Controls.Add(this.btn_Network);
             this.panel1.Controls.Add(this.btn_Serial);
             this.panel1.Controls.Add(this.label1);
@@ -171,7 +173,7 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(26, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 29);
+            this.label2.Size = new System.Drawing.Size(112, 40);
             this.label2.TabIndex = 0;
             this.label2.Text = "Laser";
             // 
@@ -227,7 +229,7 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(26, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 29);
+            this.label3.Size = new System.Drawing.Size(131, 40);
             this.label3.TabIndex = 0;
             this.label3.Text = "Motion";
             // 
@@ -238,6 +240,23 @@
             this.pnl_Menu.Name = "pnl_Menu";
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 454;
+            // 
+            // btn_IOList
+            // 
+            this.btn_IOList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_IOList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btn_IOList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_IOList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_IOList.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_IOList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_IOList.Location = new System.Drawing.Point(31, 232);
+            this.btn_IOList.Name = "btn_IOList";
+            this.btn_IOList.Size = new System.Drawing.Size(323, 50);
+            this.btn_IOList.TabIndex = 2;
+            this.btn_IOList.Tag = "314";
+            this.btn_IOList.Text = "In Out List";
+            this.btn_IOList.UseVisualStyleBackColor = false;
+            this.btn_IOList.Click += new System.EventHandler(this.Click_OptionButton);
             // 
             // vwMaint
             // 
@@ -279,5 +298,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnl_Menu;
+        private System.Windows.Forms.Button btn_IOList;
     }
 }

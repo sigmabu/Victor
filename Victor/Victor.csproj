@@ -48,7 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Victor.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Build.Tasks.v4.0" />
@@ -119,6 +120,12 @@
     </Compile>
     <Compile Include="01_View\03_Maint\vwEthernet.Designer.cs">
       <DependentUpon>vwEthernet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="01_View\03_Maint\vwIOList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\03_Maint\vwIOList.Designer.cs">
+      <DependentUpon>vwIOList.cs</DependentUpon>
     </Compile>
     <Compile Include="01_View\03_Maint\vwMaint.cs">
       <SubType>UserControl</SubType>
@@ -200,6 +207,9 @@
     <EmbeddedResource Include="01_View\03_Maint\vwEthernet.resx">
       <DependentUpon>vwEthernet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="01_View\03_Maint\vwIOList.resx">
+      <DependentUpon>vwIOList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="01_View\03_Maint\vwMaint.resx">
       <DependentUpon>vwMaint.cs</DependentUpon>
     </EmbeddedResource>
@@ -263,9 +273,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01_View\02_Recipe\01_Gerber\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Victor.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

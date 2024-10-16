@@ -23,6 +23,7 @@ public class GVar
     public static readonly string PATH_CONFIG_Serial = Application.StartupPath + "\\04_Config\\Serial.csv";
     public static readonly string PATH_CONFIG_Ethernet = Application.StartupPath + "\\04_Config\\Ethernet.csv";
 
+    public static readonly string PATH_EQUIP_IOList = Application.StartupPath + "\\05_Equip\\IO\\IOList.csv";
     /// <summary>
     /// Device Folder Path  StartUp\\Device\\
     /// </summary>

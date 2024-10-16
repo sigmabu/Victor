@@ -40,5 +40,7 @@ namespace Victor
         /// </summary>
         public static mEthernet[] tEthernet = new mEthernet[20];
 
+        public static mIOList[] tInList = new mIOList[1024];
+        public static mIOList[] tOutList = new mIOList[1024];
     }
 }
