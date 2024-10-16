@@ -84,6 +84,9 @@ namespace Victor
                     //m_vwSerial.Close();
                     m_vwMaint.Close();
                     break;
+                case 313:
+                    m_vwMaint.Close();
+                    break;
 
                 case 999:
                     //m_vwLogIn.Close();
@@ -178,5 +181,11 @@ namespace Victor
         {            
             Call_PnlBase_Change(mViewPage.nViewRecipeItem);
         }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

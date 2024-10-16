@@ -22,14 +22,39 @@ namespace Victor
         private static string[,] sCsvData;
         static int nSelRow;
 
+        #region 서버용 설정 변수
+        // 데이타 읽기 위한 스트림리더
+        public StreamReader streamServerReader { get; private set; }
+
+        // 데이타 쓰기 위한 스트림라이터
+        public StreamWriter streamServerWriter { get; private set; }
+
         private static Thread thread_Server;
+        #endregion
+
+        #region 클라이언트용 변수
+
+        // 데이타 읽기 위한 스트림리더
+        public StreamReader streamClientReader { get; private set; }
+
+        // 데이타 쓰기 위한 스트림라이터
+        public StreamWriter streamClientWriter { get; private set; }
         private static Thread thread_Client;
+        #endregion
 
         public vwEthernet()
         {
             InitializeComponent();
             Init_View_Set();
-            
+        }
+
+        private bool _Release()
+        {
+            Thread_Server_Stop();
+
+            Thread_Client_Stop();
+
+            return true;
         }
 
         #region Server 함수
@@ -39,22 +64,24 @@ namespace Victor
         /// 
         /// </summary>
         /// 
-        public StreamReader streamReader1 { get; private set; }
-        public StreamWriter streamWriter1 { get; private set; }
 
         private void Thread_Server_Start()
         {
-            thread_Server = new Thread(Server_connect); // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
+            thread_Server = new Thread(Server_Open); // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
             thread_Server.IsBackground = true; // Form이 종료되면 thread1도 종료.
             thread_Server.Start(); // thread1 시작.
         }
 
         private void Thread_Server_Stop()
         {
-            thread_Server.Abort();            
+            if (thread_Server != null)
+            {
+                thread_Server.Abort();
+                thread_Server = null;
+            }
         }
 
-        private void Server_connect()  // thread1에 연결된 함수. 메인폼과는 별도로 동작한다.
+        private void Server_Open()  // thread1에 연결된 함수. 메인폼과는 별도로 동작한다.
         {
             Console.WriteLine($"Input Value {IPAddress.Parse(tb_IP.Text)},{int.Parse(tb_Port.Text)}");
             TcpListener tcpListener1 = new TcpListener(IPAddress.Parse(tb_IP.Text), int.Parse(tb_Port.Text)); // 서버 객체 생성 및 IP주소와 Port번호를 할당
@@ -64,13 +91,13 @@ namespace Victor
             TcpClient tcpClient1 = tcpListener1.AcceptTcpClient(); // 클라이언트 접속 확인
             writeServer_RichTextbox("클라이언트 연결됨...");
 
-            streamReader1 = new StreamReader(tcpClient1.GetStream());  // 읽기 스트림 연결
-            streamWriter1 = new StreamWriter(tcpClient1.GetStream());  // 쓰기 스트림 연결
-            streamWriter1.AutoFlush = true;  // 쓰기 버퍼 자동으로 뭔가 처리..
+            streamServerReader = new StreamReader(tcpClient1.GetStream());  // 읽기 스트림 연결
+            streamServerWriter = new StreamWriter(tcpClient1.GetStream());  // 쓰기 스트림 연결
+            streamServerWriter.AutoFlush = true;  // 쓰기 버퍼 자동으로 뭔가 처리..
 
             while (tcpClient1.Connected)  // 클라이언트가 연결되어 있는 동안
             {
-                string receiveData1 = streamReader1.ReadLine();  // 수신 데이타를 읽어서 receiveData1 변수에 저장
+                string receiveData1 = streamServerReader.ReadLine();  // 수신 데이타를 읽어서 receiveData1 변수에 저장
                 writeServer_RichTextbox(receiveData1); // 데이타를 수신창에 쓰기                  
             }
         }
@@ -81,11 +108,10 @@ namespace Victor
             rTB_ServerStatus.Invoke((MethodInvoker)delegate { rTB_ServerStatus.ScrollToCaret(); });  // 스크롤을 젤 밑으로.
         }
 
-
         private void Click_ServerWrite(object sender, EventArgs e)
         {
             string sendData1 = rTB_ServerData.Text;  // testBox3 의 내용을 sendData1 변수에 저장
-            streamWriter1.WriteLine(sendData1);  // 스트림라이터를 통해 데이타를 전송
+            streamServerWriter.WriteLine(sendData1);  // 스트림라이터를 통해 데이타를 전송
         }
 
         #endregion
@@ -96,11 +122,9 @@ namespace Victor
         /// https://unininu.tistory.com/475
         /// 
         /// </summary>
-        /// 
-        StreamReader streamReader;  // 데이타 읽기 위한 스트림리더
-        StreamWriter streamWriter;  // 데이타 쓰기 위한 스트림라이터 
+        ///         
 
-        private void Thread_Client_Start()  // '연결하기' 버튼이 클릭되면
+        private void Thread_Client_Start()  
         {
             thread_Client = new Thread(Client_connect);  // Thread 객채 생성, Form과는 별도 쓰레드에서 connect 함수가 실행됨.
             thread_Client.IsBackground = true;  // Form이 종료되면 thread1도 종료.
@@ -109,23 +133,28 @@ namespace Victor
 
         private void Thread_Client_Stop()
         {
-            thread_Client.Abort();
+            if (thread_Client != null)
+            {
+                thread_Client.Abort();
+                thread_Client = null;
+            }
+
         }
 
-        private void Client_connect()  // thread1에 연결된 함수. 메인폼과는 별도로 동작한다.
+        private void Client_connect()  
         {
             TcpClient tcpClient1 = new TcpClient();  // TcpClient 객체 생성
             IPEndPoint ipEnd = new IPEndPoint(IPAddress.Parse(tb_IP.Text), int.Parse(tb_Port.Text));  // IP주소와 Port번호를 할당
             tcpClient1.Connect(ipEnd);  // 서버에 연결 요청
             writeClient_RichTextbox("서버 연결됨...");
 
-            streamReader = new StreamReader(tcpClient1.GetStream());  // 읽기 스트림 연결
-            streamWriter = new StreamWriter(tcpClient1.GetStream());  // 쓰기 스트림 연결
-            streamWriter.AutoFlush = true;  // 쓰기 버퍼 자동으로 뭔가 처리..
+            streamClientReader = new StreamReader(tcpClient1.GetStream());  // 읽기 스트림 연결
+            streamClientWriter = new StreamWriter(tcpClient1.GetStream());  // 쓰기 스트림 연결
+            streamClientWriter.AutoFlush = true;  // 쓰기 버퍼 자동으로 뭔가 처리..
 
             while (tcpClient1.Connected)  // 클라이언트가 연결되어 있는 동안
             {
-                string receiveData1 = streamReader.ReadLine();  // 수신 데이타를 읽어서 receiveData1 변수에 저장
+                string receiveData1 = streamClientReader.ReadLine();  // 수신 데이타를 읽어서 receiveData1 변수에 저장
                 writeClient_RichTextbox(receiveData1);  // 데이타를 수신창에 쓰기
             }
         }
@@ -139,7 +168,7 @@ namespace Victor
         private void Click_ClientWrite(object sender, EventArgs e)
         {
             string sendData1 = rTB_ClientData.Text;  // testBox3 의 내용을 sendData1 변수에 저장
-            streamWriter.WriteLine(sendData1);   // 스트림라이터를 통해 데이타를 전송
+            streamClientWriter.WriteLine(sendData1);   // 스트림라이터를 통해 데이타를 전송
         }
         #endregion
         private void Init_View_Set()
@@ -199,20 +228,20 @@ namespace Victor
                     break;
                 case 311:
                     {
-                        //Pnl_Item.Controls.Remove(m_vw02Common);
-                        //m_vw02Common.Close();                      
                     }
                     break;
                 case 312:
                     {
-                        //m_vw02Loader.Close();
-                        //Pnl_Item.Controls.Remove(m_vw02Loader);
                     }
+                    break;
+                case 313:
+                    {
+                    }
+                        
                     break;
                 default: break;
             }
         }
-
 
         private void Save_UiData()
         {
@@ -318,9 +347,8 @@ namespace Victor
             tb_Name.Text    = row.Cells[(int)eEthernet.Port_Name].Value.ToString();
             tb_IP.Text    = row.Cells[(int)eEthernet.IPaddress].Value.ToString();
             tb_Port.Text    = row.Cells[(int)eEthernet.Port_no].Value.ToString();
-            cb_Host.Text    = row.Cells[(int)eEthernet.Host].Value.ToString();
-            cb_Proc.Text  = row.Cells[(int)eEthernet.Protocol].Value.ToString();
-      
+            cb_Host.Text  = row.Cells[(int)eEthernet.Host].Value.ToString();
+            cb_Proc.Text  = row.Cells[(int)eEthernet.Protocol].Value.ToString();      
         }
 
         //https://soeun-87.tistory.com/31

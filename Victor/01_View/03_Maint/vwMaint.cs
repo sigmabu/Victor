@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 namespace Victor
@@ -50,16 +51,15 @@ namespace Victor
         {
             switch (GVar.m_iPage)
             {
-            //    case 11:
-            //        m_vw01Lst.Close();
-            //        break;
-            //    case 21:
-            //        m_vw02Prm.Close();
-            //        break;
                 case 312:
                     m_vwSerial.Close();
                     pnl_Menu.Controls.Remove(m_vwSerial);
                     break;
+                case 313:
+                    m_vwEthernet.Close();
+                    pnl_Menu.Controls.Remove(m_vwEthernet);
+                    break;
+                default: break;
             }
 
             pnl_Menu.Controls.Clear();
