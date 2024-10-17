@@ -1,4 +1,4 @@
-Label,IN/Out,Name,Coil,Part,Description
+Label,In/Out,Name,Coil,Part,Description
 X0000,In,Main Controller,,Loader,설명 1
 X0001,In,Pneumatic,,Loader,설명 2
 X0002,In,Emergency Safety Controller,,Loader,

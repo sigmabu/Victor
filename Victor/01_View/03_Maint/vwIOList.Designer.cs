@@ -68,9 +68,9 @@
             this.groupBox2.Controls.Add(this.dGV_OutputList);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
-            this.groupBox2.Location = new System.Drawing.Point(646, 2);
+            this.groupBox2.Location = new System.Drawing.Point(643, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(615, 763);
+            this.groupBox2.Size = new System.Drawing.Size(630, 762);
             this.groupBox2.TabIndex = 463;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Output List ";
@@ -99,7 +99,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dGV_OutputList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dGV_OutputList.Location = new System.Drawing.Point(8, 106);
+            this.dGV_OutputList.Location = new System.Drawing.Point(8, 79);
             this.dGV_OutputList.Name = "dGV_OutputList";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
@@ -115,7 +115,7 @@
             this.dGV_OutputList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dGV_OutputList.RowTemplate.Height = 23;
             this.dGV_OutputList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV_OutputList.Size = new System.Drawing.Size(601, 651);
+            this.dGV_OutputList.Size = new System.Drawing.Size(616, 677);
             this.dGV_OutputList.TabIndex = 457;
             this.dGV_OutputList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
             // 
@@ -125,7 +125,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
-            this.button1.Location = new System.Drawing.Point(409, 34);
+            this.button1.Location = new System.Drawing.Point(509, 25);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 48);
             this.button1.TabIndex = 463;
@@ -139,7 +139,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(615, 762);
+            this.groupBox1.Size = new System.Drawing.Size(630, 762);
             this.groupBox1.TabIndex = 463;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input List ";
@@ -150,7 +150,7 @@
             this.btn_WriteServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btn_WriteServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_WriteServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
-            this.btn_WriteServer.Location = new System.Drawing.Point(409, 34);
+            this.btn_WriteServer.Location = new System.Drawing.Point(509, 25);
             this.btn_WriteServer.Name = "btn_WriteServer";
             this.btn_WriteServer.Size = new System.Drawing.Size(115, 48);
             this.btn_WriteServer.TabIndex = 463;
@@ -181,7 +181,7 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dGV_InputList.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dGV_InputList.Location = new System.Drawing.Point(8, 105);
+            this.dGV_InputList.Location = new System.Drawing.Point(8, 79);
             this.dGV_InputList.Name = "dGV_InputList";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
@@ -197,7 +197,7 @@
             this.dGV_InputList.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dGV_InputList.RowTemplate.Height = 23;
             this.dGV_InputList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV_InputList.Size = new System.Drawing.Size(601, 651);
+            this.dGV_InputList.Size = new System.Drawing.Size(616, 677);
             this.dGV_InputList.TabIndex = 457;
             this.dGV_InputList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
             // 

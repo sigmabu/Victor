@@ -9,6 +9,8 @@ using System.Threading;
 using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Contexts;
 using System.Runtime.InteropServices;
+using System.Text;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar;
 
 
 namespace Victor
@@ -37,10 +39,9 @@ namespace Victor
 
         private void Init_View_Set()
         {
-
-
             nSelRow = 0;
-            dGV_InputList.ReadOnly = true;
+            dGV_InputList.ReadOnly = 
+            dGV_OutputList.ReadOnly = true;
 
             sIOListPath = GVar.PATH_EQUIP_IOList;
             int FindDot = sIOListPath.LastIndexOf(".");
@@ -49,7 +50,7 @@ namespace Victor
             sFileName = sIOListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sIOListPath.Replace(sFileName + ".csv", "");
             Read_File_IOList();
-            dGV_SerialList_SelNum(false);
+            dGV_IOList_SelNum(false);
         }
 
         string EnumToString(eRecipGroup eGroup)
@@ -112,14 +113,15 @@ namespace Victor
 
         public int Read_File_IOList()
         {
-            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath,true);
-            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath,false);
+            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, eIO_Kind.In);
+            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, eIO_Kind.Out);
 
             int nLineCnt = 0;
-            sCsvData = CCsv.OpenCSVFile(this.sIOListPath, out nLineCnt);
             int nAdd_InCnt = 0;
             int nAdd_OutCnt = 0;
             int nAdd_SumCnt = 0;
+            
+            sCsvData = CCsv.OpenCSVFile(this.sIOListPath, out nLineCnt);
 
 
             foreach (string str in sCsvData)
@@ -183,43 +185,79 @@ namespace Victor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, true);
-            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, false);
+            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, eIO_Kind.In);
+            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, eIO_Kind.Out);
         }
 
-        public DataTable Display_File_IOListConfig(string filePath, bool bIO_Kind = true)
+        public DataTable Display_File_IOListConfig(string filePath, eIO_Kind eIo_kind = eIO_Kind.In)
         {
+            string sData;
             var dt = new DataTable();
+            string[] keywords = { "IN/OUT", "In", "Out", "Description" };
+            int nWordCnt;
+            int nHeadCnt = 0;
+            int nComaCnt;
+            bool bAdd_Flag;
+            int[] nSkip_Col = new int[(int)eIOArray.End];
+            Array.Clear(nSkip_Col, 0, (int)eIOArray.End);
+
+            StringBuilder sb = new StringBuilder();
+            sb.Clear();
+            string[] sRowwords00;
+
+            int nSkip_Cnt = 0;
 
             // 첫번째 행을 읽어 컬럼명으로 세팅
-            foreach (var headerLine in File.ReadLines(filePath).Take(1))
+            foreach (var headerLine in File.ReadLines(filePath,Encoding.Default).Take(1))
             {
                 foreach (var headerItem in headerLine.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                {
-                    dt.Columns.Add(headerItem.Trim());
+                {                
+                    sData = headerItem;
+                    bAdd_Flag = true;
+                    for (nWordCnt = 0; nWordCnt < keywords.Length; nWordCnt++)
+                    {
+                        if (sData.ToUpper().Contains(keywords[nWordCnt].ToUpper()) == true)
+                        {
+                            sData = sData.ToUpper().Replace(keywords[nWordCnt], "");
+                            bAdd_Flag = false;
+                            nSkip_Col[nHeadCnt] = 1;
+                        }
+                    }
+                    if(bAdd_Flag == true)
+                    {
+                            dt.Columns.Add(sData.Trim());
+                    }
+                    nHeadCnt++;
                 }
             }
             // 나머지 행을 읽어 데이터로 세팅
-            foreach (var line in File.ReadLines(filePath).Skip(1))
+            foreach (var line in File.ReadLines(filePath, Encoding.Default).Skip(1))
             {
                 if (line.Contains("EOF") ||
                     (line.Contains(",") == false) ||
                     string.IsNullOrEmpty(line))
                 {
-                    Console.WriteLine(line);
+                    Console.WriteLine($"문자가 없는 라인 또는 EOF 라인 {line}");
                 }
-                else if ((bIO_Kind == true) && line.Contains(eIO_Kind.Out.ToString()))
+                else if (line.Contains(eIo_kind.ToString()) == false)
                 {
-                }
-                else if ((bIO_Kind == false) && line.Contains(eIO_Kind.In.ToString()))
-                {
+                    Console.WriteLine($"해당 InOut List 아니면 Skip : line => {eIo_kind.ToString()}");
                 }
                 else
                 {
-                    line.Replace("In", "");
-                    line.Replace("Out", "");
-
-                    dt.Rows.Add(line.Split(','));
+                    sRowwords00 = line.ToString().Split(',');
+                    for (nSkip_Cnt = 0; nSkip_Cnt < sRowwords00.Length; nSkip_Cnt++)
+                    {                        
+                        if (nSkip_Col[nSkip_Cnt] == 0)
+                        {
+                            sb.Append(sRowwords00[nSkip_Cnt]);
+                            if ((nSkip_Cnt + 1) >= sRowwords00.Length) sb.Append("\n");
+                            else if ((nSkip_Cnt+2) < sRowwords00.Length) sb.Append(",");                            
+                        }
+                    }
+                    dt.Rows.Add(sb.ToString().Split(','));
+                    //dt.Rows.Add(line.Split(','));
+                    sb.Clear();
                 }
             }
             return dt;
@@ -227,9 +265,9 @@ namespace Victor
 
         private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dGV_SerialList_SelNum(true);
+            dGV_IOList_SelNum(true);
         }
-        private void dGV_SerialList_SelNum(bool bsel = false)
+        private void dGV_IOList_SelNum(bool bsel = false)
         { 
             //if(bsel == false)
             //{

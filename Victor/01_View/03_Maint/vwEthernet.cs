@@ -9,6 +9,7 @@ using System.Threading;
 using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Contexts;
 using System.Runtime.InteropServices;
+using System.Text;
 
 
 namespace Victor
@@ -318,7 +319,7 @@ namespace Victor
             var dt = new DataTable();
 
             // 첫번째 행을 읽어 컬럼명으로 세팅
-            foreach (var headerLine in File.ReadLines(filePath).Take(1))
+            foreach (var headerLine in File.ReadLines(filePath, Encoding.Default).Take(1))
             {
                 foreach (var headerItem in headerLine.Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
                 {
@@ -326,7 +327,7 @@ namespace Victor
                 }
             }
             // 나머지 행을 읽어 데이터로 세팅
-            foreach (var line in File.ReadLines(filePath).Skip(1))
+            foreach (var line in File.ReadLines(filePath, Encoding.Default).Skip(1))
             {
                 if (line.Contains(GVar.EOF) || 
                     (line.Contains(",") == false) ||
