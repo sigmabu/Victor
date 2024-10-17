@@ -293,14 +293,11 @@ namespace Victor
             bool create = CCsv.SaveCSVFile(this.sEthernetPath, sCsvData, overwrite: true);
             return 0;
         }
-
-
         
         private void Click_Open(object sender, EventArgs e)
         {
             Read_File_EthernetConfig();
             //Display_File_SerialConfig();
-
         }
         private void Click_Save(object sender, EventArgs e)
         {

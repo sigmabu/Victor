@@ -47,13 +47,15 @@ public class GVar
         
 }
 
-public class CGcolor
+public class Gcolor
 {
 
     #region Color
-    public Color ColorBase = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-    public Color ColorNotic = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-    public Color ColorWarning = Color.Yellow;
-    public Color ColorError = Color.Red;
+    public static Color ColorBase = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+    public static Color ColorNotic = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+    public static Color ColorWarning = Color.Yellow;
+    public static Color ColorError = Color.Red;
+
+    public static Color Color_OnGreen = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
     #endregion
 }

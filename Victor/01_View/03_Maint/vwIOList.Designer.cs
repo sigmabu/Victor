@@ -41,9 +41,8 @@
             this.Pnl_Item = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dGV_OutputList = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Output = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_WriteServer = new System.Windows.Forms.Button();
             this.dGV_InputList = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.Pnl_Item.SuspendLayout();
@@ -66,8 +65,8 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dGV_OutputList);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.btn_Output);
+            this.groupBox2.ForeColor = System.Drawing.Color.Red;
             this.groupBox2.Location = new System.Drawing.Point(643, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(630, 762);
@@ -80,26 +79,29 @@
             this.dGV_OutputList.AllowUserToAddRows = false;
             this.dGV_OutputList.AllowUserToDeleteRows = false;
             this.dGV_OutputList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGV_OutputList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dGV_OutputList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.dGV_OutputList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dGV_OutputList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dGV_OutputList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dGV_OutputList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dGV_OutputList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dGV_OutputList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dGV_OutputList.Location = new System.Drawing.Point(8, 79);
+            this.dGV_OutputList.Location = new System.Drawing.Point(8, 61);
             this.dGV_OutputList.Name = "dGV_OutputList";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
@@ -115,28 +117,29 @@
             this.dGV_OutputList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dGV_OutputList.RowTemplate.Height = 23;
             this.dGV_OutputList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV_OutputList.Size = new System.Drawing.Size(616, 677);
+            this.dGV_OutputList.Size = new System.Drawing.Size(616, 695);
             this.dGV_OutputList.TabIndex = 457;
-            this.dGV_OutputList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
+            this.dGV_OutputList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_OutputList_CellClick);
             // 
-            // button1
+            // btn_Output
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
-            this.button1.Location = new System.Drawing.Point(509, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 48);
-            this.button1.TabIndex = 463;
-            this.button1.Text = "Write";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_Output.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_Output.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_Output.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Output.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Output.ForeColor = System.Drawing.Color.White;
+            this.btn_Output.Location = new System.Drawing.Point(452, 17);
+            this.btn_Output.Name = "btn_Output";
+            this.btn_Output.Size = new System.Drawing.Size(166, 40);
+            this.btn_Output.TabIndex = 463;
+            this.btn_Output.Text = "Output";
+            this.btn_Output.UseVisualStyleBackColor = false;
+            this.btn_Output.Click += new System.EventHandler(this.Click_Output);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btn_WriteServer);
             this.groupBox1.Controls.Add(this.dGV_InputList);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.ForeColor = System.Drawing.Color.LawnGreen;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(630, 762);
@@ -144,26 +147,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Input List ";
             // 
-            // btn_WriteServer
-            // 
-            this.btn_WriteServer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_WriteServer.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_WriteServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_WriteServer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
-            this.btn_WriteServer.Location = new System.Drawing.Point(509, 25);
-            this.btn_WriteServer.Name = "btn_WriteServer";
-            this.btn_WriteServer.Size = new System.Drawing.Size(115, 48);
-            this.btn_WriteServer.TabIndex = 463;
-            this.btn_WriteServer.Text = "Write";
-            this.btn_WriteServer.UseVisualStyleBackColor = false;
-            // 
             // dGV_InputList
             // 
             this.dGV_InputList.AllowUserToAddRows = false;
             this.dGV_InputList.AllowUserToDeleteRows = false;
             this.dGV_InputList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGV_InputList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dGV_InputList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dGV_InputList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.dGV_InputList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dGV_InputList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -174,14 +165,14 @@
             this.dGV_InputList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dGV_InputList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dGV_InputList.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dGV_InputList.Location = new System.Drawing.Point(8, 79);
+            this.dGV_InputList.Location = new System.Drawing.Point(8, 61);
             this.dGV_InputList.Name = "dGV_InputList";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.Silver;
@@ -192,14 +183,14 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dGV_InputList.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dGV_InputList.RowHeadersVisible = false;
-            this.dGV_InputList.RowHeadersWidth = 62;
+            this.dGV_InputList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dGV_InputList.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dGV_InputList.RowTemplate.Height = 23;
             this.dGV_InputList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV_InputList.Size = new System.Drawing.Size(616, 677);
+            this.dGV_InputList.Size = new System.Drawing.Size(616, 695);
             this.dGV_InputList.TabIndex = 457;
-            this.dGV_InputList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
+            this.dGV_InputList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_InList_CellClick);
             // 
             // vwIOList
             // 
@@ -225,10 +216,9 @@
         private System.Windows.Forms.Panel Pnl_Item;
         private System.Windows.Forms.DataGridView dGV_InputList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_WriteServer;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.DataGridView dGV_OutputList;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Output;
     }
 }

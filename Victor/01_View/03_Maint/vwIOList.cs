@@ -11,6 +11,8 @@ using System.Runtime.Remoting.Contexts;
 using System.Runtime.InteropServices;
 using System.Text;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar;
+using System.Drawing;
+using System.Xml.Linq;
 
 
 namespace Victor
@@ -22,13 +24,17 @@ namespace Victor
         private string sFileName;
 
         private static string[,] sCsvData;
-        static int nSelRow;
+        private static int nSelRow;
+        private static int nInList_Cnt;
+        private static int nOutList_Cnt;
 
+        private static int nEnable_Output;
 
         public vwIOList()
         {
             InitializeComponent();
             Init_View_Set();
+            Init_Timer();
         }
 
         private bool _Release()
@@ -36,9 +42,19 @@ namespace Victor
 
             return true;
         }
+        private void Init_Timer()
+        {
+            System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+            t.Tick += new EventHandler(TimerEvent);
+            t.Interval = 500;
+            t.Start();
+        }
 
         private void Init_View_Set()
         {
+            nEnable_Output = 0;
+            Btn_Output_Set();
+
             nSelRow = 0;
             dGV_InputList.ReadOnly = 
             dGV_OutputList.ReadOnly = true;
@@ -99,6 +115,7 @@ namespace Victor
                     break;
                 case 314:
                     {
+                        nEnable_Output = 0;
                     }
                     break;
                 default: break;
@@ -113,8 +130,8 @@ namespace Victor
 
         public int Read_File_IOList()
         {
-            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, eIO_Kind.In);
-            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, eIO_Kind.Out);
+            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, out nInList_Cnt, eIO_Kind.In);
+            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, out nOutList_Cnt, eIO_Kind.Out);
 
             int nLineCnt = 0;
             int nAdd_InCnt = 0;
@@ -164,8 +181,8 @@ namespace Victor
                 nAdd_SumCnt++;
             }
 
-            dGV_InputList.Rows[0].Selected = true;
-            dGV_OutputList.Rows[0].Selected = true;
+            dGV_InputList.Rows[0].Selected = false;
+            dGV_OutputList.Rows[0].Selected = false;
             return 0;
         }
         public int Write_File_SerialConfig()
@@ -185,18 +202,19 @@ namespace Victor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, eIO_Kind.In);
-            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, eIO_Kind.Out);
+            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, out nInList_Cnt, eIO_Kind.In);
+            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, out nOutList_Cnt, eIO_Kind.Out);
         }
 
-        public DataTable Display_File_IOListConfig(string filePath, eIO_Kind eIo_kind = eIO_Kind.In)
+        public DataTable Display_File_IOListConfig(string filePath, out int nList_Cnt , eIO_Kind eIo_kind = eIO_Kind.In)
         {
             string sData;
             var dt = new DataTable();
             string[] keywords = { "IN/OUT", "In", "Out", "Description" };
             int nWordCnt;
             int nHeadCnt = 0;
-            int nComaCnt;
+            nList_Cnt = 0;
+
             bool bAdd_Flag;
             int[] nSkip_Col = new int[(int)eIOArray.End];
             Array.Clear(nSkip_Col, 0, (int)eIOArray.End);
@@ -233,7 +251,7 @@ namespace Victor
             // 나머지 행을 읽어 데이터로 세팅
             foreach (var line in File.ReadLines(filePath, Encoding.Default).Skip(1))
             {
-                if (line.Contains("EOF") ||
+                if (line.Contains(GVar.EOF) ||
                     (line.Contains(",") == false) ||
                     string.IsNullOrEmpty(line))
                 {
@@ -241,7 +259,15 @@ namespace Victor
                 }
                 else if (line.Contains(eIo_kind.ToString()) == false)
                 {
-                    Console.WriteLine($"해당 InOut List 아니면 Skip : line => {eIo_kind.ToString()}");
+                    Console.WriteLine($"0.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
+                }
+                else if ((line.IndexOf("X".ToUpper())  == 0) && (eIo_kind == eIO_Kind.Out))
+                {
+                    Console.WriteLine($"1.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
+                }
+                else if ((line.IndexOf("Y".ToUpper()) == 0) && (eIo_kind == eIO_Kind.In))
+                {
+                    Console.WriteLine($"2.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
                 }
                 else
                 {
@@ -256,6 +282,7 @@ namespace Victor
                         }
                     }
                     dt.Rows.Add(sb.ToString().Split(','));
+                    nList_Cnt++;
                     //dt.Rows.Add(line.Split(','));
                     sb.Clear();
                 }
@@ -283,7 +310,96 @@ namespace Victor
             //cb_Proc.Text  = row.Cells[(int)eEthernet.Protocol].Value.ToString();      
         }
 
+        private int nToggle = 0;
+        private static int[] nDIN = new int[6] { 1, 3, 10, 21, 25, 28 };
+        private static int[] nDOUT = new int[6] { 3, 3, 9, 26, 33, 56 };
 
+        private void Timer_InPutList()
+        {
+            string sIN_Label;
+            for (int i = 0; i < nInList_Cnt; i++)
+            {
+                sIN_Label = dGV_InputList.Rows[i].Cells[0].Value.ToString();
+                sIN_Label = sIN_Label.Replace("X", "");
+                var result = Utils.HexStr2Int(sIN_Label);
+                foreach (var v  in nDIN)
+                {
+                    if(v == result)
+                    {
+                        dGV_InputList.Rows[i].DefaultCellStyle.ForeColor = (nToggle == 1)? Gcolor.Color_OnGreen : Color.White ;
+                    }
+                }
+                //foreach (var s in sIN_Label)
+                //{
+                //    Console.WriteLine($" sIN_Label = {sIN_Label} ,  0x{result:X2} ({result})");
+                //}                       
+            }
+        }
 
+        private void Timer_OutPutList()
+        {
+            string sOUT_Label;
+            for (int i = 0; i < nOutList_Cnt; i++)
+            {
+                sOUT_Label = dGV_OutputList.Rows[i].Cells[0].Value.ToString();
+                sOUT_Label = sOUT_Label.Replace("Y", "");
+                var result = Utils.HexStr2Int(sOUT_Label);
+                foreach (var v in nDOUT)
+                {
+                    if (v == result)
+                    {
+                        dGV_OutputList.Rows[i].DefaultCellStyle.ForeColor = (nToggle == 1) ? Color.Red : Color.White;
+                    }
+                }                   
+            }
+        }
+        private void TimerEvent(Object myObject, EventArgs myEventArgs)
+        {
+            nToggle ^= 1;
+
+            Timer_InPutList();
+            Timer_OutPutList();
+
+        }
+
+        private void Click_Output(object sender, EventArgs e)
+        {
+            nEnable_Output ^= 1;
+            Btn_Output_Set();
+        }
+
+        private void Btn_Output_Set()
+        {
+            btn_Output.BackColor = (nEnable_Output == 1) ? Color.SteelBlue : Gcolor.ColorBase;
+            btn_Output.ForeColor = (nEnable_Output == 1) ? Color.Red : Color.Gray;
+        }
+
+        private void dGV_OutputList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewColumn item in dGV_OutputList.Columns)
+            {
+                item.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            if (nEnable_Output == 0) return;
+            DataGridViewRow row = dGV_OutputList.SelectedRows[0];   //선택된 Row 값 가져옴.
+            int nSelRow = row.Index;
+            string sOUT_Label = dGV_OutputList.Rows[nSelRow].Cells[0].Value.ToString();
+            sOUT_Label = sOUT_Label.Replace("Y", "");
+            var result = Utils.HexStr2Int(sOUT_Label);
+
+            //ToDo : 보드 Output
+
+            dGV_OutputList.Rows[nSelRow].DefaultCellStyle.ForeColor = (nToggle == 1) ? Color.Red : Color.White;
+
+        }
+
+        private void dGV_InList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewColumn item in dGV_InputList.Columns)
+            {
+                item.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
     }
 }
