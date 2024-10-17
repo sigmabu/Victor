@@ -109,35 +109,60 @@ namespace Victor
 
             bool create = CCsv.SaveCSVFile(this.sIOListPath, sCsvData, overwrite: true);
         }
-        
+
         public int Read_File_IOList()
         {
-            dGV_InputList.DataSource = Display_File_SerialConfig(sIOListPath);
+            dGV_InputList.DataSource = Display_File_EthernetConfig(sIOListPath);
 
             int nLineCnt = 0;
             sCsvData = CCsv.OpenCSVFile(this.sIOListPath, out nLineCnt);
-            int nAddCnt = 0;
+            int nAdd_InCnt = 0;
+            int nAdd_OutCnt = 0;
+            int nAdd_SumCnt = 0;
+
 
             foreach (string str in sCsvData)
             {
-                if(nAddCnt+1>=nLineCnt)
+                if((nAdd_SumCnt + 1) >= nLineCnt)
                 {
                     return -1;
                 }
-                if (string.IsNullOrEmpty(sCsvData[nAddCnt + 1, (int)eIOArray.Label]))
+                else if (string.IsNullOrEmpty(sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Label]))
                 {
                     return -1;
                 }
-                CData.tInList[nAddCnt].sLabel  = sCsvData[nAddCnt + 1, (int)eIOArray.Label];
-                CData.tInList[nAddCnt].sInOut  = sCsvData[nAddCnt + 1, (int)eIOArray.InOut];
-                CData.tInList[nAddCnt].sName   = sCsvData[nAddCnt + 1, (int)eIOArray.Name];
-                CData.tInList[nAddCnt].sCoil   = sCsvData[nAddCnt + 1, (int)eIOArray.Coil];
-                CData.tInList[nAddCnt].sPart   = sCsvData[nAddCnt + 1, (int)eIOArray.Part];
-                CData.tInList[nAddCnt].sDesc   = sCsvData[nAddCnt + 1, (int)eIOArray.Desc];
-                nAddCnt++;
+                else if (sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Label].ToString() == GVar.EOF)
+                {
+                    return -1;
+                }
+                if (sCsvData[nAdd_SumCnt + 1, (int)eIOArray.InOut].ToString() == eIO_Kind.In.ToString())
+                {
+
+                    CData.tInList[nAdd_InCnt].sLabel = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Label];
+                    CData.tInList[nAdd_InCnt].sInOut = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.InOut];
+                    CData.tInList[nAdd_InCnt].sName = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Name];
+                    CData.tInList[nAdd_InCnt].sCoil = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Coil];
+                    CData.tInList[nAdd_InCnt].sPart = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Part];
+                    CData.tInList[nAdd_InCnt].sDesc = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Desc];
+
+                    nAdd_InCnt++;
+                }
+                else
+                {
+                    CData.tOutList[nAdd_OutCnt].sLabel = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Label];
+                    CData.tOutList[nAdd_OutCnt].sInOut = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.InOut];
+                    CData.tOutList[nAdd_OutCnt].sName = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Name];
+                    CData.tOutList[nAdd_OutCnt].sCoil = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Coil];
+                    CData.tOutList[nAdd_OutCnt].sPart = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Part];
+                    CData.tOutList[nAdd_OutCnt].sDesc = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Desc];
+
+                    nAdd_OutCnt++;
+                }
+                nAdd_SumCnt++;
             }
 
             dGV_InputList.Rows[0].Selected = true;
+            dGV_OutputtList.Rows[0].Selected = true;
             return 0;
         }
         public int Write_File_SerialConfig()
@@ -157,10 +182,10 @@ namespace Victor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_InputList.DataSource = Display_File_SerialConfig(sIOListPath);
+            dGV_InputList.DataSource = Display_File_EthernetConfig(sIOListPath);
         }
 
-        public DataTable Display_File_SerialConfig(string filePath)
+        public DataTable Display_File_EthernetConfig(string filePath, bool bIO_Kind = true)
         {
             var dt = new DataTable();
 
@@ -181,6 +206,7 @@ namespace Victor
                 {
                     Console.WriteLine(line);
                 }
+                else if (line.Contains(eIO_Kind.In.ToString()) )
                 else
                 {
                     dt.Rows.Add(line.Split(','));

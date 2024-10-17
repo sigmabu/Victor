@@ -408,7 +408,7 @@
             this.dGV_EthernetList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dGV_EthernetList.Size = new System.Drawing.Size(1257, 125);
             this.dGV_EthernetList.TabIndex = 457;
-            this.dGV_EthernetList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
+            this.dGV_EthernetList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_EthernetList_CellClick);
             // 
             // rTB_ServerStatus
             // 

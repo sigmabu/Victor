@@ -192,7 +192,7 @@ namespace Victor
             // 나머지 행을 읽어 데이터로 세팅
             foreach (var line in File.ReadLines(filePath).Skip(1))
             {
-                if (line.Contains("EOF") || 
+                if (line.Contains(GVar.EOF) || 
                     (line.Contains(",") == false) ||
                     string.IsNullOrEmpty(line))
                 {

@@ -193,7 +193,7 @@ namespace Victor
             sFileName = sEthernetPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sEthernetPath.Replace(sFileName + ".csv", "");
             Read_File_EthernetConfig();
-            dGV_SerialList_SelNum(false);
+            dGV_EthernetList_SelNum(false);
         }
 
         string EnumToString(eRecipGroup eGroup)
@@ -264,7 +264,7 @@ namespace Victor
 
         public int Read_File_EthernetConfig()
         {
-            dGV_EthernetList.DataSource = Display_File_SerialConfig(sEthernetPath);
+            dGV_EthernetList.DataSource = Display_File_EthernetConfig(sEthernetPath);
 
             sCsvData = CCsv.OpenCSVFile(this.sEthernetPath);
             int nArrayCnt = 0;
@@ -310,10 +310,10 @@ namespace Victor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_EthernetList.DataSource = Display_File_SerialConfig(sEthernetPath);
+            dGV_EthernetList.DataSource = Display_File_EthernetConfig(sEthernetPath);
         }
 
-        public DataTable Display_File_SerialConfig(string filePath)
+        public DataTable Display_File_EthernetConfig(string filePath)
         {
             var dt = new DataTable();
 
@@ -328,7 +328,7 @@ namespace Victor
             // 나머지 행을 읽어 데이터로 세팅
             foreach (var line in File.ReadLines(filePath).Skip(1))
             {
-                if (line.Contains("EOF") || 
+                if (line.Contains(GVar.EOF) || 
                     (line.Contains(",") == false) ||
                     string.IsNullOrEmpty(line))
                 {
@@ -342,11 +342,11 @@ namespace Victor
             return dt;
         }
 
-        private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dGV_EthernetList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dGV_SerialList_SelNum(true);
+            dGV_EthernetList_SelNum(true);
         }
-        private void dGV_SerialList_SelNum(bool bsel = false)
+        private void dGV_EthernetList_SelNum(bool bsel = false)
         { 
             if(bsel == false)
             {

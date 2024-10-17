@@ -1530,3 +1530,10 @@ public enum eIOArray
     Desc = 5,
     End
 }
+public enum eIO_Kind
+{
+    In = 0, 
+    Out = 1,
+    end
+}
+
