@@ -112,7 +112,8 @@ namespace Victor
 
         public int Read_File_IOList()
         {
-            dGV_InputList.DataSource = Display_File_EthernetConfig(sIOListPath);
+            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath,true);
+            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath,false);
 
             int nLineCnt = 0;
             sCsvData = CCsv.OpenCSVFile(this.sIOListPath, out nLineCnt);
@@ -162,7 +163,7 @@ namespace Victor
             }
 
             dGV_InputList.Rows[0].Selected = true;
-            dGV_OutputtList.Rows[0].Selected = true;
+            dGV_OutputList.Rows[0].Selected = true;
             return 0;
         }
         public int Write_File_SerialConfig()
@@ -182,10 +183,11 @@ namespace Victor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_InputList.DataSource = Display_File_EthernetConfig(sIOListPath);
+            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, true);
+            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, false);
         }
 
-        public DataTable Display_File_EthernetConfig(string filePath, bool bIO_Kind = true)
+        public DataTable Display_File_IOListConfig(string filePath, bool bIO_Kind = true)
         {
             var dt = new DataTable();
 
@@ -200,15 +202,23 @@ namespace Victor
             // 나머지 행을 읽어 데이터로 세팅
             foreach (var line in File.ReadLines(filePath).Skip(1))
             {
-                if (line.Contains("EOF") || 
+                if (line.Contains("EOF") ||
                     (line.Contains(",") == false) ||
                     string.IsNullOrEmpty(line))
                 {
                     Console.WriteLine(line);
                 }
-                else if (line.Contains(eIO_Kind.In.ToString()) )
+                else if ((bIO_Kind == true) && line.Contains(eIO_Kind.Out.ToString()))
+                {
+                }
+                else if ((bIO_Kind == false) && line.Contains(eIO_Kind.In.ToString()))
+                {
+                }
                 else
                 {
+                    line.Replace("In", "");
+                    line.Replace("Out", "");
+
                     dt.Rows.Add(line.Split(','));
                 }
             }

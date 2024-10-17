@@ -138,15 +138,15 @@ public struct mIOList
     public string sDesc; 
 }
 
-public static class mViewPage
+ class mViewPage
 {
-    public static int nViewMain = 111;
-    public static int nViewRecipeList = 211;
-    public static int nViewRecipeItem = 212;
-    public static int nViewMaint = 311;
-    public static int nViewMaintSerial = 312;
-    public static int nViewMaintEthernet = 313;
-    public static int nViewMaintIOList = 313;
+    public static int nViewMain_111 { get { return 111; } set { } }
+    public static int nViewRecipeList_211 { get { return 211; } set { } }
+    public static int nViewRecipeItem_212 { get { return 212; } set { } }
+    public static int nViewMaint_311 { get { return 311; } set { } }
+    public static int nViewMaintSerial_312 { get { return 312; } set { } }
+    public static int nViewMaintEthernet_313 { get { return 313; } set { } }
+    public static int nViewMaintIOList_314 { get { return 314; } set { } }
 
     public static int nRcpPage { get; set; }
 

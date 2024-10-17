@@ -39,16 +39,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pnl_Item = new System.Windows.Forms.Panel();
-            this.dGV_OutputtList = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dGV_OutputList = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_WriteServer = new System.Windows.Forms.Button();
             this.dGV_InputList = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.Pnl_Item.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_OutputtList)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_OutputList)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_InputList)).BeginInit();
             this.SuspendLayout();
@@ -63,53 +63,9 @@
             this.Pnl_Item.Size = new System.Drawing.Size(1280, 768);
             this.Pnl_Item.TabIndex = 460;
             // 
-            // dGV_OutputtList
-            // 
-            this.dGV_OutputtList.AllowUserToAddRows = false;
-            this.dGV_OutputtList.AllowUserToDeleteRows = false;
-            this.dGV_OutputtList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dGV_OutputtList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dGV_OutputtList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_OutputtList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dGV_OutputtList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGV_OutputtList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dGV_OutputtList.Location = new System.Drawing.Point(8, 106);
-            this.dGV_OutputtList.Name = "dGV_OutputtList";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_OutputtList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dGV_OutputtList.RowHeadersVisible = false;
-            this.dGV_OutputtList.RowHeadersWidth = 62;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dGV_OutputtList.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dGV_OutputtList.RowTemplate.Height = 23;
-            this.dGV_OutputtList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV_OutputtList.Size = new System.Drawing.Size(601, 651);
-            this.dGV_OutputtList.TabIndex = 457;
-            this.dGV_OutputtList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dGV_OutputtList);
+            this.groupBox2.Controls.Add(this.dGV_OutputList);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(646, 2);
@@ -118,6 +74,50 @@
             this.groupBox2.TabIndex = 463;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Output List ";
+            // 
+            // dGV_OutputList
+            // 
+            this.dGV_OutputList.AllowUserToAddRows = false;
+            this.dGV_OutputList.AllowUserToDeleteRows = false;
+            this.dGV_OutputList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dGV_OutputList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dGV_OutputList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_OutputList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGV_OutputList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGV_OutputList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGV_OutputList.Location = new System.Drawing.Point(8, 106);
+            this.dGV_OutputList.Name = "dGV_OutputList";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_OutputList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dGV_OutputList.RowHeadersVisible = false;
+            this.dGV_OutputList.RowHeadersWidth = 62;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dGV_OutputList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dGV_OutputList.RowTemplate.Height = 23;
+            this.dGV_OutputList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dGV_OutputList.Size = new System.Drawing.Size(601, 651);
+            this.dGV_OutputList.TabIndex = 457;
+            this.dGV_OutputList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
             // 
             // button1
             // 
@@ -213,8 +213,8 @@
             this.Name = "vwIOList";
             this.Size = new System.Drawing.Size(1280, 768);
             this.Pnl_Item.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_OutputtList)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_OutputList)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGV_InputList)).EndInit();
             this.ResumeLayout(false);
@@ -227,7 +227,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btn_WriteServer;
         private System.IO.Ports.SerialPort serialPort1;
-        private System.Windows.Forms.DataGridView dGV_OutputtList;
+        private System.Windows.Forms.DataGridView dGV_OutputList;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
     }

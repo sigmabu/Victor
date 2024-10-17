@@ -17,7 +17,7 @@ namespace Victor
 
         public void Open()
         {
-            GVar.m_iPage = 311;
+            GVar.m_iPage = mViewPage.nViewMaint_311;
             vwAdd();
         }
 
@@ -93,8 +93,8 @@ namespace Victor
 
                     pnl_Menu.Controls.Add(m_vwSerial);
                     m_vwSerial.Location = new Point(0, 32);
-                    GVar.m_iPage = mViewPage.nViewMaintSerial;
-                    mViewPage.nMaintPage = mViewPage.nViewMaintSerial;
+                    GVar.m_iPage = mViewPage.nViewMaintSerial_312;
+                    mViewPage.nMaintPage = mViewPage.nViewMaintSerial_312;
                     m_vwSerial.Open();
                     break;
                 case 313:
@@ -104,8 +104,8 @@ namespace Victor
 
                     pnl_Menu.Controls.Add(m_vwEthernet);
                     m_vwEthernet.Location = new Point(0, 32);
-                    GVar.m_iPage = mViewPage.nViewMaintEthernet;
-                    mViewPage.nMaintPage = mViewPage.nViewMaintEthernet;
+                    GVar.m_iPage = mViewPage.nViewMaintEthernet_313;
+                    mViewPage.nMaintPage = mViewPage.nViewMaintEthernet_313;
                     m_vwEthernet.Open();
                     
                     break;
@@ -116,8 +116,8 @@ namespace Victor
 
                     pnl_Menu.Controls.Add(m_vwIOList);
                     m_vwIOList.Location = new Point(0, 32);
-                    GVar.m_iPage = mViewPage.nViewMaintIOList;
-                    mViewPage.nMaintPage = mViewPage.nViewMaintIOList;
+                    GVar.m_iPage = mViewPage.nViewMaintIOList_314;
+                    mViewPage.nMaintPage = mViewPage.nViewMaintIOList_314;
                     m_vwIOList.Open();
 
                     break;

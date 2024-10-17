@@ -44,7 +44,7 @@ namespace Victor
             m_vwMaint   = new vwMaint();
             rdb_Main.Checked = true;
             
-            Call_PnlBase_Change(mViewPage.nViewMain);
+            Call_PnlBase_Change(mViewPage.nViewMain_111);
         }
 
         private void Click_Exit(object sender, EventArgs e)
@@ -87,7 +87,9 @@ namespace Victor
                 case 313:
                     m_vwMaint.Close();
                     break;
-
+                case 314:
+                    m_vwMaint.Close();
+                    break;
                 case 999:
                     //m_vwLogIn.Close();
                     break;
@@ -108,28 +110,28 @@ namespace Victor
                 case 111:
                     pnl_Base.Controls.Add(m_vwMain);
                     m_vwMain.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewMain;
+                    mViewPage.mCurrViewPage = mViewPage.nViewMain_111;
                     break;
                 case 211:
                     pnl_Base.Controls.Add(m_vwRecipeList);
                     m_vwRecipeList.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewRecipeList;
+                    mViewPage.mCurrViewPage = mViewPage.nViewRecipeList_211;
                     break;
                 case 212:
                     pnl_Base.Controls.Add(m_vwRecipeItem);
                     mViewPage.nRcpPage = 1;
                     m_vwRecipeItem.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewRecipeItem;
+                    mViewPage.mCurrViewPage = mViewPage.nViewRecipeItem_212;
                     break;
                 case 311:
                     pnl_Base.Controls.Add(m_vwMaint);
                     m_vwMaint.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewMaint;
+                    mViewPage.mCurrViewPage = mViewPage.nViewMaint_311;
                     break;
                 case 312:
                     //pnl_Base.Controls.Add(m_vwSerial);
                     //m_vwSerial.Open();
-                    //mViewPage.mCurrViewPage = mViewPage.nViewMaintSerial;
+                    //mViewPage.mCurrViewPage = mViewPage.nViewMaintSerial_312;
                     break;
             }
         }
@@ -179,7 +181,7 @@ namespace Victor
 
         private void Click_TitleRecipe(object sender, EventArgs e)
         {            
-            Call_PnlBase_Change(mViewPage.nViewRecipeItem);
+            Call_PnlBase_Change(mViewPage.nViewRecipeItem_212);
         }
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)

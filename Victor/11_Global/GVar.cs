@@ -36,7 +36,7 @@ public class GVar
     /// </summary>
     public static int m_iPage { get; set; }
 
-    public static string EOF = "EOF"
+    public static string EOF = "EOF";
 
     /// <summary>
     /// ini 화일 Section 과 Key 설정
