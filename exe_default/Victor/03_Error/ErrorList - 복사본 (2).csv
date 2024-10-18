@@ -1,7 +1,7 @@
 ﻿No,ErrorCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr
 E0000,0,NONE,,,,,,,,
 E0001,10000,SYS_ERROR,,,,,,,,
-E0002,10001,SYS_EMG_FRONT_LEFT,"In : X0004 입력 확인 ,그리고, 뭘 또 해야 하지… 다음 꺼는..",,,,,,,In : X0004 입력 확인
+E0002,10001,SYS_EMG_FRONT_LEFT,In : X0004 입력 확인,,,,,,,In : X0004 입력 확인
 E0003,10002,SYS_EMG_FRONT_RIGHT,,,,,,,,
 E0004,10003,SYS_EMG_REAR_LEFT,,,,,,,,
 E0005,10004,SYS_EMG_REAR_RIGHT,,,,,,,,

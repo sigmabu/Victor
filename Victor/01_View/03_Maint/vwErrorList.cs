@@ -136,12 +136,80 @@ namespace Victor
 
         public int Read_File_Errorist()
         {
-            dGV_ErrorList.DataSource = Display_File_ErrorList(sErrorListPath, out nErrorList_Cnt, eIO_Kind.In);
+            dGV_ErrorList.DataSource = Display_File_ErrorList(sErrorListPath, out nErrorList_Cnt);
 
             int nLineCnt = 0;
             int nAdd_SumCnt = 0;
-            
-            sCsvData = CCsv.OpenCSVFile(this.sErrorListPath, out nLineCnt);
+            //return 1;
+            using (StreamReader reader = new StreamReader(sErrorListPath))
+            {
+                string all = reader.ReadToEnd();
+                string[] arrAll = all.Replace("\r", "").Split("\n".ToCharArray());
+
+                foreach (string val in arrAll)
+                {
+                    string[] arrVal = val.ToString().Split(',');
+                    if (arrVal[0].Contains("#"))
+                    {
+                        // 주석 문구
+                        continue;
+                    }
+                    else if (arrVal.Length > 2)
+                    {
+                        eErr err;
+                        if (Enum.TryParse(arrVal[2], out err))
+                        {
+                            //0,1      ,2   ,3     ,4    ,5      ,6        ,7      ,8        ,9      ,10
+                            //#,ErrorCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr
+
+                            Array.Clear(CData.tErrorList, nAdd_SumCnt, 1);
+                            CData.tErrorList[nAdd_SumCnt].sNo = arrVal[0];
+                            CData.tErrorList[nAdd_SumCnt].sCode = arrVal[1];
+                            CData.tErrorList[nAdd_SumCnt].sName = arrVal[2];
+                            CData.tErrorList[nAdd_SumCnt].sAction   = (arrVal.Length > 3) ? arrVal[3]  : "";
+                            CData.tErrorList[nAdd_SumCnt].sImage    = (arrVal.Length > 4) ? arrVal[4]  : "";
+                            CData.tErrorList[nAdd_SumCnt].sName_En  = (arrVal.Length > 5) ? arrVal[5]  : "";
+                            CData.tErrorList[nAdd_SumCnt].sAction_En = (arrVal.Length > 6) ? arrVal[6] : "";
+                            CData.tErrorList[nAdd_SumCnt].sName_Ch  = (arrVal.Length > 7) ? arrVal[7]  : "";
+                            CData.tErrorList[nAdd_SumCnt].sAction_Ch = (arrVal.Length > 8) ? arrVal[8] : "";
+                            CData.tErrorList[nAdd_SumCnt].sName_Ch  = (arrVal.Length > 9) ? arrVal[9]  : "";
+                            CData.tErrorList[nAdd_SumCnt].sAction_Ch = (arrVal.Length > 10) ? arrVal[10] : "";
+                            nAdd_SumCnt++;
+                            /*
+                            if (arrVal.Length >= 5)
+                            {
+                                errData.action = arrVal[3];
+                                errData.image = arrVal[4];
+
+                                // 다국어 지원 내용이 존재하면 취득한다.
+                                if (arrVal.Length >= 7)
+                                {
+                                    errData.Name_En = arrVal[5];
+                                    errData.Action_En = arrVal[6];
+
+                                    if (arrVal.Length >= 9)
+                                    {
+                                        errData.Name_Ch = arrVal[7];
+                                        errData.Action_Ch = arrVal[8];
+
+                                        if (arrVal.Length >= 11)
+                                        {
+                                            errData.Name_Kr = arrVal[9];
+                                            errData.Action_Kr = arrVal[10];
+                                        }
+                                    }
+                                }
+                            }
+
+                            _list[err] = errData;
+                            */
+                        }
+                    }
+                }
+            }
+            return 1;
+            /*
+            sCsvData = CCsv.Open_ErrorCSVFile(this.sErrorListPath, nErrorList_Cnt);
 
 
             foreach (string str in sCsvData)
@@ -176,6 +244,7 @@ namespace Victor
 
             dGV_ErrorList.Rows[0].Selected = false;
             return 0;
+            */
         }
         public int Write_File_ErrorConfig()
         {
@@ -192,10 +261,10 @@ namespace Victor
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_ErrorList.DataSource = Display_File_ErrorList(sErrorListPath, out nErrorList_Cnt, eIO_Kind.In);
+            dGV_ErrorList.DataSource = Display_File_ErrorList(sErrorListPath, out nErrorList_Cnt);
         }
 
-        public DataTable Display_File_ErrorList(string filePath, out int nList_Cnt , eIO_Kind eIo_kind = eIO_Kind.In)
+        public DataTable Display_File_ErrorList(string filePath, out int nList_Cnt )
         {
             string sData;
             var dt = new DataTable();
@@ -244,15 +313,16 @@ namespace Victor
             // 나머지 행을 읽어 데이터로 세팅
             foreach (var line in File.ReadLines(filePath, Encoding.Default).Skip(1))
             {
+                int nth = line.IndexOf("E".ToUpper());
                 if (line.Contains(GVar.EOF) ||
                     (line.Contains(",") == false) ||
                     string.IsNullOrEmpty(line))
                 {
                     Console.WriteLine($"문자가 없는 라인 또는 EOF 라인 {line}");
                 }
-                else if (line.Contains(eIo_kind.ToString()) == false)
+                else if (line.IndexOf("E".ToUpper()) != 0)
                 {
-                    Console.WriteLine($"0.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
+                    Console.WriteLine($"첫째 문자가 E 아니면  Skip : {line}");
                 }
                 else
                 {
@@ -264,7 +334,8 @@ namespace Victor
                         {
                             sb.Append(sRowwords00[nSkip_Cnt]);
                             if ((nSkip_Cnt + 1) >= sRowwords00.Length) sb.Append("\n");
-                            if ((nAddWord_Cnt+1) < nHeadWord_Cnt) sb.Append(",");
+                            if ((nAddWord_Cnt + 1) < nHeadWord_Cnt) sb.Append(",");
+                            else break;
                             nAddWord_Cnt++;
                         }
                     }
@@ -277,51 +348,25 @@ namespace Victor
             return dt;
         }
         private void dGV_ErrorList_SelNum(bool bsel = false)
-        { 
-            //if(bsel == false)
-            //{
-            //    dGV_InputtList.Rows[0].Selected = true;
-            //}
-            //DataGridViewRow row = dGV_InputtList.SelectedRows[0];   //선택된 Row 값 가져옴.
-            //nSelRow = row.Index;
+        {
+            if (bsel == false)
+            {
+                dGV_ErrorList.Rows[0].Selected = true;
+            }
+            DataGridViewRow row = dGV_ErrorList.SelectedRows[0];   //선택된 Row 값 가져옴.
+            nSelRow = row.Index;
             //tb_No.Text      = row.Cells[(int)eEthernet.No].Value.ToString();        // row의 컬럼(Cells[0]) = name
-            //tb_Name.Text    = row.Cells[(int)eEthernet.Port_Name].Value.ToString();
+            rTB_ErrTitle.Text    = row.Cells[(int)eErrorArray.No].Value.ToString() + ":" + row.Cells[(int)eErrorArray.Name].Value.ToString();
+            rTB_ErrorCause.Text = CData.tErrorList[nSelRow].sAction.ToString();
             //tb_IP.Text    = row.Cells[(int)eEthernet.IPaddress].Value.ToString();
             //tb_Port.Text    = row.Cells[(int)eEthernet.Port_no].Value.ToString();
             //cb_Host.Text  = row.Cells[(int)eEthernet.Host].Value.ToString();
             //cb_Proc.Text  = row.Cells[(int)eEthernet.Protocol].Value.ToString();      
         }
 
-        private int nToggle = 0;
-        private static int[] nDIN = new int[6] { 1, 3, 10, 21, 25, 28 };
-        private static int[] nDOUT = new int[6] { 3, 3, 9, 26, 33, 56 };
-
-        private void Timer_InPutList()
-        {
-            string sIN_Label;
-            for (int i = 0; i < nErrorList_Cnt; i++)
-            {
-                sIN_Label = dGV_ErrorList.Rows[i].Cells[0].Value.ToString();
-                sIN_Label = sIN_Label.Replace("X", "");
-                var result = Utils.HexStr2Int(sIN_Label);
-                foreach (var v  in nDIN)
-                {
-                    if(v == result)
-                    {
-                        dGV_ErrorList.Rows[i].DefaultCellStyle.ForeColor = (nToggle == 1)? Gcolor.Color_OnGreen : Color.White ;
-                    }
-                }
-                //foreach (var s in sIN_Label)
-                //{
-                //    Console.WriteLine($" sIN_Label = {sIN_Label} ,  0x{result:X2} ({result})");
-                //}                       
-            }
-        }
         private void TimerEvent(Object myObject, EventArgs myEventArgs)
         {
-            nToggle ^= 1;
 
-            Timer_InPutList();
         }
 
         private void Click_Output(object sender, EventArgs e)

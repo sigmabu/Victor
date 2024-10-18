@@ -88,6 +88,7 @@ namespace Victor
                     m_vwMaint.Close();
                     break;
                 case 314:
+                case 315:
                     m_vwMaint.Close();
                     break;
                 case 999:

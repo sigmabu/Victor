@@ -56,8 +56,7 @@ public enum eErrorListGrid
 {
     No = 0,
     ErrCode = 1,
-    Part = 2,
-    Name = 3,
+    Name = 2,
     End
 }
 public enum eErrorArray

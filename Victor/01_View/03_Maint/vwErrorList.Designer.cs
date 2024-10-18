@@ -34,22 +34,22 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pnl_Item = new System.Windows.Forms.Panel();
+            this.grp_Image = new System.Windows.Forms.GroupBox();
+            this.pb_Image = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rTB_ErrorCause = new System.Windows.Forms.RichTextBox();
+            this.rTB_ErrTitle = new System.Windows.Forms.RichTextBox();
             this.btn_Save = new System.Windows.Forms.Button();
             this.grp_Error = new System.Windows.Forms.GroupBox();
             this.dGV_ErrorList = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.grp_Image = new System.Windows.Forms.GroupBox();
-            this.pb_Image = new System.Windows.Forms.PictureBox();
-            this.rTB_ErrTitle = new System.Windows.Forms.RichTextBox();
-            this.rTB_ErrorCause = new System.Windows.Forms.RichTextBox();
             this.Pnl_Item.SuspendLayout();
+            this.grp_Image.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.grp_Error.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_ErrorList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.grp_Image.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Item
@@ -62,6 +62,35 @@
             this.Pnl_Item.Name = "Pnl_Item";
             this.Pnl_Item.Size = new System.Drawing.Size(1280, 768);
             this.Pnl_Item.TabIndex = 460;
+            // 
+            // grp_Image
+            // 
+            this.grp_Image.Controls.Add(this.pb_Image);
+            this.grp_Image.Controls.Add(this.pictureBox1);
+            this.grp_Image.ForeColor = System.Drawing.Color.White;
+            this.grp_Image.Location = new System.Drawing.Point(643, 385);
+            this.grp_Image.Name = "grp_Image";
+            this.grp_Image.Size = new System.Drawing.Size(630, 380);
+            this.grp_Image.TabIndex = 463;
+            this.grp_Image.TabStop = false;
+            this.grp_Image.Text = "Image File";
+            // 
+            // pb_Image
+            // 
+            this.pb_Image.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(100)))));
+            this.pb_Image.Location = new System.Drawing.Point(91, 25);
+            this.pb_Image.Name = "pb_Image";
+            this.pb_Image.Size = new System.Drawing.Size(448, 336);
+            this.pb_Image.TabIndex = 1;
+            this.pb_Image.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(11, 32);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(0, 0);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox2
             // 
@@ -76,6 +105,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Output List ";
             // 
+            // rTB_ErrorCause
+            // 
+            this.rTB_ErrorCause.Location = new System.Drawing.Point(12, 67);
+            this.rTB_ErrorCause.Name = "rTB_ErrorCause";
+            this.rTB_ErrorCause.Size = new System.Drawing.Size(598, 300);
+            this.rTB_ErrorCause.TabIndex = 462;
+            this.rTB_ErrorCause.Text = "Error Cause";
+            // 
+            // rTB_ErrTitle
+            // 
+            this.rTB_ErrTitle.Location = new System.Drawing.Point(12, 29);
+            this.rTB_ErrTitle.Name = "rTB_ErrTitle";
+            this.rTB_ErrTitle.Size = new System.Drawing.Size(488, 30);
+            this.rTB_ErrTitle.TabIndex = 461;
+            this.rTB_ErrTitle.Text = "Error Title";
+            // 
             // btn_Save
             // 
             this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
@@ -83,7 +128,7 @@
             this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.ForeColor = System.Drawing.Color.White;
-            this.btn_Save.Location = new System.Drawing.Point(520, 29);
+            this.btn_Save.Location = new System.Drawing.Point(506, 29);
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(104, 32);
             this.btn_Save.TabIndex = 463;
@@ -121,7 +166,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.LawnGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -146,51 +191,6 @@
             this.dGV_ErrorList.TabIndex = 457;
             this.dGV_ErrorList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_ErrorList_CellClick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(11, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(0, 0);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // grp_Image
-            // 
-            this.grp_Image.Controls.Add(this.pb_Image);
-            this.grp_Image.Controls.Add(this.pictureBox1);
-            this.grp_Image.ForeColor = System.Drawing.Color.White;
-            this.grp_Image.Location = new System.Drawing.Point(643, 385);
-            this.grp_Image.Name = "grp_Image";
-            this.grp_Image.Size = new System.Drawing.Size(630, 380);
-            this.grp_Image.TabIndex = 463;
-            this.grp_Image.TabStop = false;
-            this.grp_Image.Text = "Image File";
-            // 
-            // pb_Image
-            // 
-            this.pb_Image.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(100)))));
-            this.pb_Image.Location = new System.Drawing.Point(91, 25);
-            this.pb_Image.Name = "pb_Image";
-            this.pb_Image.Size = new System.Drawing.Size(448, 336);
-            this.pb_Image.TabIndex = 1;
-            this.pb_Image.TabStop = false;
-            // 
-            // rTB_ErrTitle
-            // 
-            this.rTB_ErrTitle.Location = new System.Drawing.Point(26, 29);
-            this.rTB_ErrTitle.Name = "rTB_ErrTitle";
-            this.rTB_ErrTitle.Size = new System.Drawing.Size(488, 30);
-            this.rTB_ErrTitle.TabIndex = 461;
-            this.rTB_ErrTitle.Text = "Error Title";
-            // 
-            // rTB_ErrorCause
-            // 
-            this.rTB_ErrorCause.Location = new System.Drawing.Point(26, 67);
-            this.rTB_ErrorCause.Name = "rTB_ErrorCause";
-            this.rTB_ErrorCause.Size = new System.Drawing.Size(598, 300);
-            this.rTB_ErrorCause.TabIndex = 462;
-            this.rTB_ErrorCause.Text = "Error Cause";
-            // 
             // vwErrorList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -203,12 +203,12 @@
             this.Name = "vwErrorList";
             this.Size = new System.Drawing.Size(1280, 768);
             this.Pnl_Item.ResumeLayout(false);
+            this.grp_Image.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.grp_Error.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dGV_ErrorList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.grp_Image.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
             this.ResumeLayout(false);
 
         }
