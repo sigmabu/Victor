@@ -10,20 +10,19 @@ using System.Reflection;
 
 namespace Victor
 {
-    public partial class vwIOList : UserControl
+    public partial class vwErrorList : UserControl
     {        
-        private string sIOListPath;
+        private string sErrorListPath;
         private string sFolderPath;
         private string sFileName;
 
         private static string[,] sCsvData;
         private static int nSelRow;
-        private static int nInList_Cnt;
-        private static int nOutList_Cnt;
+        private static int nErrorList_Cnt;
 
         private static int nEnable_Output;
 
-        public vwIOList()
+        public vwErrorList()
         {
             InitializeComponent();
             Init_View_Set();
@@ -33,20 +32,16 @@ namespace Victor
 
         private bool _Release()
         {            
-
             return true;
         }
 
         private void Init_Grid_Set()
         {
-            dGV_InputList.DoubleBuffered(true);
-            dGV_OutputList.DoubleBuffered(true);
+            dGV_ErrorList.DoubleBuffered(true);
 
-            dGV_InputList.Columns[(int)eIOListGrid.Label].Width     = dGV_OutputList.Columns[(int)eIOListGrid.Label].Width  = 70;
-            dGV_InputList.Columns[(int)eIOListGrid.Name].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Name].Width   = 380;
-            dGV_InputList.Columns[(int)eIOListGrid.Coil].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Coil].Width   = 45;
-            dGV_InputList.Columns[(int)eIOListGrid.Part].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Part].Width   = 100;
-
+            dGV_ErrorList.Columns[(int)eErrorListGrid.No].Width         = 70;
+            dGV_ErrorList.Columns[(int)eErrorListGrid.ErrCode].Width   = 100;
+            dGV_ErrorList.Columns[(int)eErrorListGrid.Name].Width      = 425;
         }
         private void Init_Timer()
         {
@@ -62,17 +57,16 @@ namespace Victor
             Btn_Output_Set();
 
             nSelRow = 0;
-            dGV_InputList.ReadOnly = 
-            dGV_OutputList.ReadOnly = true;
+            dGV_ErrorList.ReadOnly = true;
 
-            sIOListPath = GVar.PATH_EQUIP_IOList;
-            int FindDot = sIOListPath.LastIndexOf(".");
-            int Lastsp = sIOListPath.LastIndexOf("\\");
+            sErrorListPath = GVar.PATH_EQUIP_ErrorList;
+            int FindDot = sErrorListPath.LastIndexOf(".");
+            int Lastsp = sErrorListPath.LastIndexOf("\\");
 
-            sFileName = sIOListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
-            sFolderPath = sIOListPath.Replace(sFileName + ".csv", "");
-            Read_File_IOList();
-            dGV_IOList_SelNum(false);
+            sFileName = sErrorListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
+            sFolderPath = sErrorListPath.Replace(sFileName + ".csv", "");
+            Read_File_Errorist();
+            dGV_ErrorList_SelNum(false);
         }
                
 
@@ -81,13 +75,17 @@ namespace Victor
             switch (mViewPage.nMaintPage)
             {
                 case 0:
-                    Read_File_IOList();
+                    Read_File_Errorist();
 
                     break;
                 case 312:
-                    Read_File_IOList();
+                    Read_File_Errorist();
                     break;
                 case 314:
+                    Init_View_Set();
+
+                    break;
+                case 315:
                     Init_View_Set();
 
                     break;
@@ -120,6 +118,12 @@ namespace Victor
                         nEnable_Output = 0;
                     }
                     break;
+                case 315:
+                    {
+                        nEnable_Output = 0;
+                    }
+                    break;
+
                 default: break;
             }
         }
@@ -127,20 +131,17 @@ namespace Victor
         private void Save_UiData()
         {
 
-            bool create = CCsv.SaveCSVFile(this.sIOListPath, sCsvData, overwrite: true);
+            bool create = CCsv.SaveCSVFile(this.sErrorListPath, sCsvData, overwrite: true);
         }
 
-        public int Read_File_IOList()
+        public int Read_File_Errorist()
         {
-            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, out nInList_Cnt, eIO_Kind.In);
-            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, out nOutList_Cnt, eIO_Kind.Out);
+            dGV_ErrorList.DataSource = Display_File_ErrorList(sErrorListPath, out nErrorList_Cnt, eIO_Kind.In);
 
             int nLineCnt = 0;
-            int nAdd_InCnt = 0;
-            int nAdd_OutCnt = 0;
             int nAdd_SumCnt = 0;
             
-            sCsvData = CCsv.OpenCSVFile(this.sIOListPath, out nLineCnt);
+            sCsvData = CCsv.OpenCSVFile(this.sErrorListPath, out nLineCnt);
 
 
             foreach (string str in sCsvData)
@@ -157,67 +158,64 @@ namespace Victor
                 {
                     return -1;
                 }
-                if (sCsvData[nAdd_SumCnt + 1, (int)eIOArray.InOut].ToString() == eIO_Kind.In.ToString())
-                {
 
-                    CData.tInList[nAdd_InCnt].sLabel = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Label];
-                    CData.tInList[nAdd_InCnt].sInOut = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.InOut];
-                    CData.tInList[nAdd_InCnt].sName = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Name];
-                    CData.tInList[nAdd_InCnt].sCoil = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Coil];
-                    CData.tInList[nAdd_InCnt].sPart = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Part];
-                    CData.tInList[nAdd_InCnt].sDesc = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Desc];
-
-                    nAdd_InCnt++;
-                }
-                else
-                {
-                    CData.tOutList[nAdd_OutCnt].sLabel = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Label];
-                    CData.tOutList[nAdd_OutCnt].sInOut = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.InOut];
-                    CData.tOutList[nAdd_OutCnt].sName = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Name];
-                    CData.tOutList[nAdd_OutCnt].sCoil = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Coil];
-                    CData.tOutList[nAdd_OutCnt].sPart = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Part];
-                    CData.tOutList[nAdd_OutCnt].sDesc = sCsvData[nAdd_SumCnt + 1, (int)eIOArray.Desc];
-
-                    nAdd_OutCnt++;
-                }
+                CData.tErrorList[nAdd_SumCnt].sNo       = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.No];
+                CData.tErrorList[nAdd_SumCnt].sCode     = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Code];
+                CData.tErrorList[nAdd_SumCnt].sName     = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Name];
+                CData.tErrorList[nAdd_SumCnt].sAction   = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Action];
+                CData.tErrorList[nAdd_SumCnt].sName_En  = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Name_En];
+                CData.tErrorList[nAdd_SumCnt].sAction_En = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Action_En];
+                CData.tErrorList[nAdd_SumCnt].sName_Ch = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Name_Ch];
+                CData.tErrorList[nAdd_SumCnt].sAction_Ch = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Action_Ch];
+                CData.tErrorList[nAdd_SumCnt].sName_Ch = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Name_Ch];
+                CData.tErrorList[nAdd_SumCnt].sAction_Ch = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Action_Ch];
+                CData.tErrorList[nAdd_SumCnt].sName_Kr = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Name_Kr];
+                CData.tErrorList[nAdd_SumCnt].sAction_Kr = sCsvData[nAdd_SumCnt + 1, (int)eErrorArray.Action_Kr];
                 nAdd_SumCnt++;
             }
 
-            dGV_InputList.Rows[0].Selected = false;
-            dGV_OutputList.Rows[0].Selected = false;
+            dGV_ErrorList.Rows[0].Selected = false;
             return 0;
         }
+        public int Write_File_ErrorConfig()
+        {
+            bool create = CCsv.SaveCSVFile(this.sErrorListPath, sCsvData, overwrite: true);
+            return 0;
+        }
+
         
         private void Click_Open(object sender, EventArgs e)
         {
-            Read_File_IOList();
+            Read_File_Errorist();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dGV_InputList.DataSource = Display_File_IOListConfig(sIOListPath, out nInList_Cnt, eIO_Kind.In);
-            dGV_OutputList.DataSource = Display_File_IOListConfig(sIOListPath, out nOutList_Cnt, eIO_Kind.Out);
+            dGV_ErrorList.DataSource = Display_File_ErrorList(sErrorListPath, out nErrorList_Cnt, eIO_Kind.In);
         }
 
-        public DataTable Display_File_IOListConfig(string filePath, out int nList_Cnt , eIO_Kind eIo_kind = eIO_Kind.In)
+        public DataTable Display_File_ErrorList(string filePath, out int nList_Cnt , eIO_Kind eIo_kind = eIO_Kind.In)
         {
             string sData;
             var dt = new DataTable();
-            string[] keywords = { "IN/OUT", "In", "Out", "Description" };
+            string[] keywords = { "Action", "Image", "Name_En", "Action_En", "Name_Ch" , "Action_Ch", "Name_Kr", "Action_Kr" };
             int nWordCnt;
             int nHeadCnt = 0;
             nList_Cnt = 0;
 
             bool bAdd_Flag;
-            int[] nSkip_Col = new int[(int)eIOArray.End];
-            Array.Clear(nSkip_Col, 0, (int)eIOArray.End);
+            int[] nSkip_Col = new int[(int)eErrorArray.End];
+            Array.Clear(nSkip_Col, 0, (int)eErrorArray.End);
 
             StringBuilder sb = new StringBuilder();
             sb.Clear();
             string[] sRowwords00;
 
+            int nHeadWord_Cnt = 0;
             int nSkip_Cnt = 0;
+
+            int nAddWord_Cnt = 0;
 
             // 첫번째 행을 읽어 컬럼명으로 세팅
             foreach (var headerLine in File.ReadLines(filePath,Encoding.Default).Take(1))
@@ -237,7 +235,8 @@ namespace Victor
                     }
                     if(bAdd_Flag == true)
                     {
-                            dt.Columns.Add(sData.Trim());
+                        dt.Columns.Add(sData.Trim());
+                        nHeadWord_Cnt++;
                     }
                     nHeadCnt++;
                 }
@@ -255,16 +254,9 @@ namespace Victor
                 {
                     Console.WriteLine($"0.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
                 }
-                else if ((line.IndexOf("X".ToUpper())  == 0) && (eIo_kind == eIO_Kind.Out))
-                {
-                    Console.WriteLine($"1.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
-                }
-                else if ((line.IndexOf("Y".ToUpper()) == 0) && (eIo_kind == eIO_Kind.In))
-                {
-                    Console.WriteLine($"2.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
-                }
                 else
                 {
+                    nAddWord_Cnt = 0;
                     sRowwords00 = line.ToString().Split(',');
                     for (nSkip_Cnt = 0; nSkip_Cnt < sRowwords00.Length; nSkip_Cnt++)
                     {                        
@@ -272,7 +264,8 @@ namespace Victor
                         {
                             sb.Append(sRowwords00[nSkip_Cnt]);
                             if ((nSkip_Cnt + 1) >= sRowwords00.Length) sb.Append("\n");
-                            else if ((nSkip_Cnt+2) < sRowwords00.Length) sb.Append(",");                            
+                            if ((nAddWord_Cnt+1) < nHeadWord_Cnt) sb.Append(",");
+                            nAddWord_Cnt++;
                         }
                     }
                     dt.Rows.Add(sb.ToString().Split(','));
@@ -283,12 +276,7 @@ namespace Victor
             }
             return dt;
         }
-
-        private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dGV_IOList_SelNum(true);
-        }
-        private void dGV_IOList_SelNum(bool bsel = false)
+        private void dGV_ErrorList_SelNum(bool bsel = false)
         { 
             //if(bsel == false)
             //{
@@ -311,16 +299,16 @@ namespace Victor
         private void Timer_InPutList()
         {
             string sIN_Label;
-            for (int i = 0; i < nInList_Cnt; i++)
+            for (int i = 0; i < nErrorList_Cnt; i++)
             {
-                sIN_Label = dGV_InputList.Rows[i].Cells[0].Value.ToString();
+                sIN_Label = dGV_ErrorList.Rows[i].Cells[0].Value.ToString();
                 sIN_Label = sIN_Label.Replace("X", "");
                 var result = Utils.HexStr2Int(sIN_Label);
                 foreach (var v  in nDIN)
                 {
                     if(v == result)
                     {
-                        dGV_InputList.Rows[i].DefaultCellStyle.ForeColor = (nToggle == 1)? Gcolor.Color_OnGreen : Color.White ;
+                        dGV_ErrorList.Rows[i].DefaultCellStyle.ForeColor = (nToggle == 1)? Gcolor.Color_OnGreen : Color.White ;
                     }
                 }
                 //foreach (var s in sIN_Label)
@@ -329,31 +317,11 @@ namespace Victor
                 //}                       
             }
         }
-
-        private void Timer_OutPutList()
-        {
-            string sOUT_Label;
-            for (int i = 0; i < nOutList_Cnt; i++)
-            {
-                sOUT_Label = dGV_OutputList.Rows[i].Cells[0].Value.ToString();
-                sOUT_Label = sOUT_Label.Replace("Y", "");
-                var result = Utils.HexStr2Int(sOUT_Label);
-                foreach (var v in nDOUT)
-                {
-                    if (v == result)
-                    {
-                        dGV_OutputList.Rows[i].DefaultCellStyle.ForeColor = (nToggle == 1) ? Color.Red : Color.White;
-                    }
-                }                   
-            }
-        }
         private void TimerEvent(Object myObject, EventArgs myEventArgs)
         {
             nToggle ^= 1;
 
             Timer_InPutList();
-            Timer_OutPutList();
-
         }
 
         private void Click_Output(object sender, EventArgs e)
@@ -364,36 +332,18 @@ namespace Victor
 
         private void Btn_Output_Set()
         {
-            btn_Output.BackColor = (nEnable_Output == 1) ? Color.SteelBlue : Gcolor.ColorBase;
-            btn_Output.ForeColor = (nEnable_Output == 1) ? Color.Red : Color.Gray;
+            btn_Save.BackColor = (nEnable_Output == 1) ? Color.SteelBlue : Gcolor.ColorBase;
+            btn_Save.ForeColor = (nEnable_Output == 1) ? Color.Red : Color.Gray;
         }
-
-        private void dGV_OutputList_CellClick(object sender, DataGridViewCellEventArgs e)
+        
+        private void dGV_ErrorList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataGridViewColumn item in dGV_OutputList.Columns)
+            foreach (DataGridViewColumn item in dGV_ErrorList.Columns)
             {
                 item.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
-            if (nEnable_Output == 0) return;
-            DataGridViewRow row = dGV_OutputList.SelectedRows[0];   //선택된 Row 값 가져옴.
-            int nSelRow = row.Index;
-            string sOUT_Label = dGV_OutputList.Rows[nSelRow].Cells[0].Value.ToString();
-            sOUT_Label = sOUT_Label.Replace("Y", "");
-            var result = Utils.HexStr2Int(sOUT_Label);
-
-            //ToDo : 보드 Output
-
-            dGV_OutputList.Rows[nSelRow].DefaultCellStyle.ForeColor = (nToggle == 1) ? Color.Red : Color.White;
-
-        }
-
-        private void dGV_InList_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            foreach (DataGridViewColumn item in dGV_InputList.Columns)
-            {
-                item.SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
+            dGV_ErrorList_SelNum(true);
         }
     }
 }

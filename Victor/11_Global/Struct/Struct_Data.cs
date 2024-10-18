@@ -126,8 +126,6 @@ public static class mSerial_Env
     public static String[] nStop = new String[4] { "None", "One", "Two", "OnePointFive" };
     public static String[] nParity = new String[5] { "None", "Odd", "Even", "Mark", "Space" };
 }
-
-
 public struct mIOList
 {
     public string sLabel;
@@ -138,7 +136,23 @@ public struct mIOList
     public string sDesc; 
 }
 
- class mViewPage
+public struct mErrorList
+{
+    public string sNo;
+    public string sCode;
+    public string sName;
+
+    public string sImage;
+    public string sAction;
+    public string sName_En;
+    public string sAction_En;
+    public string sName_Ch;
+    public string sAction_Ch;
+    public string sName_Kr;
+    public string sAction_Kr;
+}
+
+class mViewPage
 {
     public static int nViewMain_111 { get { return 111; } set { } }
     public static int nViewRecipeList_211 { get { return 211; } set { } }
@@ -147,6 +161,7 @@ public struct mIOList
     public static int nViewMaintSerial_312 { get { return 312; } set { } }
     public static int nViewMaintEthernet_313 { get { return 313; } set { } }
     public static int nViewMaintIOList_314 { get { return 314; } set { } }
+    public static int nViewMaintErrorList_315 { get { return 315; } set { } }
 
     public static int nRcpPage { get; set; }
 

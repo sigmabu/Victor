@@ -10,6 +10,7 @@ namespace Victor
         private vwSerial m_vwSerial = new vwSerial();
         private vwEthernet m_vwEthernet = new vwEthernet();
         private vwIOList m_vwIOList = new vwIOList();
+        private vwErrorList m_vwErrorList = new vwErrorList();
         public vwMaint()
         {
             InitializeComponent();
@@ -81,15 +82,17 @@ namespace Victor
         {
             pnl_Menu.Controls.Clear();    // Panel 에서 이전 뷰 삭제
 
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+
+
             switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
             {
                 case 311:
                     vwAdd();
                     break;
                 case 312:
-                    panel1.Visible = false;
-                    panel2.Visible = false;
-                    panel3.Visible = false;
 
                     pnl_Menu.Controls.Add(m_vwSerial);
                     m_vwSerial.Location = new Point(0, 32);
@@ -98,9 +101,6 @@ namespace Victor
                     m_vwSerial.Open();
                     break;
                 case 313:
-                    panel1.Visible = false;
-                    panel2.Visible = false;
-                    panel3.Visible = false;
 
                     pnl_Menu.Controls.Add(m_vwEthernet);
                     m_vwEthernet.Location = new Point(0, 32);
@@ -110,15 +110,21 @@ namespace Victor
                     
                     break;
                 case 314:
-                    panel1.Visible = false;
-                    panel2.Visible = false;
-                    panel3.Visible = false;
 
                     pnl_Menu.Controls.Add(m_vwIOList);
                     m_vwIOList.Location = new Point(0, 32);
                     GVar.m_iPage = mViewPage.nViewMaintIOList_314;
                     mViewPage.nMaintPage = mViewPage.nViewMaintIOList_314;
                     m_vwIOList.Open();
+
+                    break;
+                case 315:
+
+                    pnl_Menu.Controls.Add(m_vwErrorList);
+                    m_vwErrorList.Location = new Point(0, 32);
+                    GVar.m_iPage = mViewPage.nViewMaintErrorList_315;
+                    mViewPage.nMaintPage = mViewPage.nViewMaintErrorList_315;
+                    m_vwErrorList.Open();
 
                     break;
             }

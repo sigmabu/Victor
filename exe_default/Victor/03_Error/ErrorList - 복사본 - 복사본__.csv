@@ -1,114 +1,114 @@
-ï»¿#,ErrorCode,sName,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr
+No,ErrorCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr
 0,0,NONE,,,,,,,,
 1,10000,SYS_ERROR,,,,,,,,
-2,10001,SYS_EMG_FRONT_LEFT,In : X0004 ìž…ë ¥ í™•ì¸,,,,,,,In : X0004 ìž…ë ¥ í™•ì¸
+2,10001,SYS_EMG_FRONT_LEFT,In : X0004 ÀÔ·Â È®ÀÎ,,,,,,,In : X0004 ÀÔ·Â È®ÀÎ
 3,10002,SYS_EMG_FRONT_RIGHT,,,,,,,,
 4,10003,SYS_EMG_REAR_LEFT,,,,,,,,
 5,10004,SYS_EMG_REAR_RIGHT,,,,,,,,
 6,10005,SYS_MAIN_VACUUM_OFF_CHECK,,,,,,,,
-7,10006,SYS_WHEEL_FILE_NOT_SELECT,GUI Wheelmode ì—ì„œ File name ì„¤ì • í•„ìš”í•¨.,,,,,,,GUI Wheelmode ì—ì„œ File name ì„¤ì • í•„ìš”í•¨.
+7,10006,SYS_WHEEL_FILE_NOT_SELECT,GUI Wheelmode ¿¡¼­ File name ¼³Á¤ ÇÊ¿äÇÔ.,,,,,,,GUI Wheelmode ¿¡¼­ File name ¼³Á¤ ÇÊ¿äÇÔ.
 8,10007,SYS_WHEEL_FILE_SAVE_ERROR,,,,,,,,
-9,10008,SYS_LEAKAGE_01_CHECK_ERROR,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
-'In : X0060 ~ X0066",,,,,,,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
+9,10008,SYS_LEAKAGE_01_CHECK_ERROR,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
+'In : X0060 ~ X0066",,,,,,,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
 'In : X0060 ~ X0066"
-10,10009,SYS_LEAKAGE_02_CHECK_ERROR,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
-'In : X0060 ~ X0066",,,,,,,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
+10,10009,SYS_LEAKAGE_02_CHECK_ERROR,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
+'In : X0060 ~ X0066",,,,,,,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
 'In : X0060 ~ X0066"
-11,10010,SYS_LEAKAGE_03_CHECK_ERROR,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
-'In : X0060 ~ X0066",,,,,,,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
+11,10010,SYS_LEAKAGE_03_CHECK_ERROR,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
+'In : X0060 ~ X0066",,,,,,,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
 'In : X0060 ~ X0066"
-12,10011,SYS_LEAKAGE_04_CHECK_ERROR,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
-'In : X0060 ~ X0066",,,,,,,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
+12,10011,SYS_LEAKAGE_04_CHECK_ERROR,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
+'In : X0060 ~ X0066",,,,,,,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
 'In : X0060 ~ X0066"
-13,10012,SYS_LEAKAGE_05_CHECK_ERROR,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
-'In : X0060 ~ X0066",,,,,,,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
+13,10012,SYS_LEAKAGE_05_CHECK_ERROR,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
+'In : X0060 ~ X0066",,,,,,,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
 'In : X0060 ~ X0066"
-14,10013,SYS_LEAKAGE_06_CHECK_ERROR,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
-'In : X0060 ~ X0066",,,,,,,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
+14,10013,SYS_LEAKAGE_06_CHECK_ERROR,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
+'In : X0060 ~ X0066",,,,,,,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
 'In : X0060 ~ X0066"
-15,10014,SYS_LEAKAGE_07_CHECK_ERROR,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
-'In : X0060 ~ X0066",,,,,,,"ì„¤ë¹„ ëˆ„ìˆ˜ ë°œìƒ í™•ì¸ í•„ìš”
+15,10014,SYS_LEAKAGE_07_CHECK_ERROR,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
+'In : X0060 ~ X0066",,,,,,,"¼³ºñ ´©¼ö ¹ß»ý È®ÀÎ ÇÊ¿ä
 'In : X0060 ~ X0066"
 16,10015,CHILLER_ALARM_ERROR,,,,,,,,
 17,10016,CHILLER_NOT_RUN_ERROR,,,,,,,,
 18,10017,CHILLER_DIW_01_NOT_ON_ERROR,,,,,,,,
 19,10018,CHILLER_DIW_02_NOT_ON_ERROR,,,,,,,,
-20,300000,STAG_ERROR,Stage 1 Servo on time ì‹œê°„ ì´ˆê³¼,,,,,,,Stage 1 Servo on time ì‹œê°„ ì´ˆê³¼
-21,310000,STAG1_ERROR,Stage 1 Home ì™„ë£Œ ì‹œê°„ ì´ˆê³¼,,,,,,,Stage 1 Home ì™„ë£Œ ì‹œê°„ ì´ˆê³¼
-22,310001,STAGE_1_SERVO_ON_TIMEOUT_ERROR,Stage 1 WarmUp ì§„í–‰ì‹œ Water/ Dress ê°€ë™  ì™„ë£Œ ì‹œê°„ ì´ˆê³¼,,,,,,,Stage 1 WarmUp ì§„í–‰ì‹œ Water/ Dress ê°€ë™  ì™„ë£Œ ì‹œê°„ ì´ˆê³¼
+20,300000,STAG_ERROR,Stage 1 Servo on time ½Ã°£ ÃÊ°ú,,,,,,,Stage 1 Servo on time ½Ã°£ ÃÊ°ú
+21,310000,STAG1_ERROR,Stage 1 Home ¿Ï·á ½Ã°£ ÃÊ°ú,,,,,,,Stage 1 Home ¿Ï·á ½Ã°£ ÃÊ°ú
+22,310001,STAGE_1_SERVO_ON_TIMEOUT_ERROR,Stage 1 WarmUp ÁøÇà½Ã Water/ Dress °¡µ¿  ¿Ï·á ½Ã°£ ÃÊ°ú,,,,,,,Stage 1 WarmUp ÁøÇà½Ã Water/ Dress °¡µ¿  ¿Ï·á ½Ã°£ ÃÊ°ú
 23,310002,STAGE_1_HOMING_TIMEOUT_ERROR,,,,,,,,
 24,310003,STAGE_1_WARMUP_TIMEOUT_ERROR,,,,,,,,
 25,310004,STAGE_1_WAFER_GRINDING_TIMEOUT_ERROR,,,,,,,,
 26,310005,STAGE_1_DRESSING_TIMEOUT_ERROR,,,,,,,,
-27,310006,STAGE_1_TABLE_GRINDING_TIMEOUT_ERROR,"WTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
-X0014 : WHEEL TOOL SETTER CHECK (WTS)",,,,,,,"WTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+27,310006,STAGE_1_TABLE_GRINDING_TIMEOUT_ERROR,"WTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
+X0014 : WHEEL TOOL SETTER CHECK (WTS)",,,,,,,"WTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
 X0014 : WHEEL TOOL SETTER CHECK (WTS)"
-28,310007,STAGE_1_WHEEL_JIG_NOT_CHECK_ERROR,"WTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
-X0014 : WHEEL TOOL SETTER CHECK (WTS)",,,,,,,"WTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+28,310007,STAGE_1_WHEEL_JIG_NOT_CHECK_ERROR,"WTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
+X0014 : WHEEL TOOL SETTER CHECK (WTS)",,,,,,,"WTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
 X0014 : WHEEL TOOL SETTER CHECK (WTS)"
-29,310008,STAGE_1_WHEEL_TOOLSETTER_ON_ERROR,"1. WTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+29,310008,STAGE_1_WHEEL_TOOLSETTER_ON_ERROR,"1. WTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
 X0014 : WHEEL TOOL SETTER CHECK (WTS)
-2. Wheel ì¸¡ì • Base Parameter í™•ì¸ í•„ìš”.",,,,,,,"1. WTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+2. Wheel ÃøÁ¤ Base Parameter È®ÀÎ ÇÊ¿ä.",,,,,,,"1. WTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
 X0014 : WHEEL TOOL SETTER CHECK (WTS)
-2. Wheel ì¸¡ì • Base Parameter í™•ì¸ í•„ìš”."
-30,310009,STAGE_1_WHEEL_TOOLSETTER_OFF_ERROR,"WTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
-X0014 : WHEEL TOOL SETTER CHECK (WTS)",,,,,,,"WTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+2. Wheel ÃøÁ¤ Base Parameter È®ÀÎ ÇÊ¿ä."
+30,310009,STAGE_1_WHEEL_TOOLSETTER_OFF_ERROR,"WTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
+X0014 : WHEEL TOOL SETTER CHECK (WTS)",,,,,,,"WTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
 X0014 : WHEEL TOOL SETTER CHECK (WTS)"
-31,310010,STAGE_1_WHEEL_TOOLSETTER_DETECT_FIND_LIMIT_ERROR,"DTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
-X0015 : DRESS TOOL SETTER CHECK (DTS)",,,,,,,"DTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+31,310010,STAGE_1_WHEEL_TOOLSETTER_DETECT_FIND_LIMIT_ERROR,"DTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
+X0015 : DRESS TOOL SETTER CHECK (DTS)",,,,,,,"DTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
 X0015 : DRESS TOOL SETTER CHECK (DTS)"
-32,310011,STAGE_1_WHEEL_TOOLSETTER_ESCAPE_DOWN_LIMIT_ERROR,"DTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
-X0015 : DRESS TOOL SETTER CHECK (DTS)",,,,,,,"DTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+32,310011,STAGE_1_WHEEL_TOOLSETTER_ESCAPE_DOWN_LIMIT_ERROR,"DTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
+X0015 : DRESS TOOL SETTER CHECK (DTS)",,,,,,,"DTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
 X0015 : DRESS TOOL SETTER CHECK (DTS)"
-33,310012,STAGE_1_DRESS_TOOLSETTER_ON_ERROR,"1. DTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+33,310012,STAGE_1_DRESS_TOOLSETTER_ON_ERROR,"1. DTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
  X0015 : DRESS TOOL SETTER CHECK (DTS)
-2. Dress ì¸¡ì • Base Parameter í™•ì¸ í•„ìš”.",,,,,,,"1. DTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+2. Dress ÃøÁ¤ Base Parameter È®ÀÎ ÇÊ¿ä.",,,,,,,"1. DTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
  X0015 : DRESS TOOL SETTER CHECK (DTS)
-2. Dress ì¸¡ì • Base Parameter í™•ì¸ í•„ìš”."
-34,310013,STAGE_1_DRESS_TOOLSETTER_OFF_ERROR,"DTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
-X0015 : DRESS TOOL SETTER CHECK (DTS)",,,,,,,"DTS ì˜ On/Off ìƒíƒœ ì ê²€ í•„ìš”. 
- - ë¹„ì ‘ì´‰ì‹œ ( On), , ì ‘ì´‰ì‹œ (Off) í™•ì¸ í•„ìš”
+2. Dress ÃøÁ¤ Base Parameter È®ÀÎ ÇÊ¿ä."
+34,310013,STAGE_1_DRESS_TOOLSETTER_OFF_ERROR,"DTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
+X0015 : DRESS TOOL SETTER CHECK (DTS)",,,,,,,"DTS ÀÇ On/Off »óÅÂ Á¡°Ë ÇÊ¿ä. 
+ - ºñÁ¢ÃË½Ã ( On), , Á¢ÃË½Ã (Off) È®ÀÎ ÇÊ¿ä
 X0015 : DRESS TOOL SETTER CHECK (DTS)"
 35,310014,STAGE_1_DRESS_TOOLSETTER_DETECT_FIND_LIMIT_ERROR,,,,,,,,
-36,310015,STAGE_1_DRESS_TOOLSETTER_ESCAPE_DOWN_LIMIT_ERROR,"Pump Flow Low Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
-X0019 : VACUUM PUMP FLOW LOW ALARM CHECK",,,,,,,"Pump Flow Low Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+36,310015,STAGE_1_DRESS_TOOLSETTER_ESCAPE_DOWN_LIMIT_ERROR,"Pump Flow Low Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
+X0019 : VACUUM PUMP FLOW LOW ALARM CHECK",,,,,,,"Pump Flow Low Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X0019 : VACUUM PUMP FLOW LOW ALARM CHECK"
-37,310016,STAGE1_PUMP_ERROR,"Pump Temp Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
-X001A : VACUUM PUMP TEMP. HIGH ALARM CHECK",,,,,,,"Pump Temp Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+37,310016,STAGE1_PUMP_ERROR,"Pump Temp Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
+X001A : VACUUM PUMP TEMP. HIGH ALARM CHECK",,,,,,,"Pump Temp Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X001A : VACUUM PUMP TEMP. HIGH ALARM CHECK"
-38,310017,STAGE1_PUMP_LOW_ERROR,"Pump Overload Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
-X001B : VACUUM PUMP OVERLOAD ALARM CHECK",,,,,,,"Pump Overload Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+38,310017,STAGE1_PUMP_LOW_ERROR,"Pump Overload Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
+X001B : VACUUM PUMP OVERLOAD ALARM CHECK",,,,,,,"Pump Overload Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X001B : VACUUM PUMP OVERLOAD ALARM CHECK"
-39,310018,STAGE1_PUMP_HIGH_ERROR,"Pump Run Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+39,310018,STAGE1_PUMP_HIGH_ERROR,"Pump Run Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X0018 : VACUUM PUMP RUN CHECK
-Y0018 : VACUUM PUMP RUN",,,,,,,"Pump Run Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+Y0018 : VACUUM PUMP RUN",,,,,,,"Pump Run Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X0018 : VACUUM PUMP RUN CHECK
 Y0018 : VACUUM PUMP RUN"
-40,310019,STAGE1_PUMP_OVERLOAD_ERROR,"High pressure Pump Run Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+40,310019,STAGE1_PUMP_OVERLOAD_ERROR,"High pressure Pump Run Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X0018 : VACUUM PUMP RUN CHECK
-Y001D : HIGH PRESSURE PUMP RUN",,,,,,,"High pressure Pump Run Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+Y001D : HIGH PRESSURE PUMP RUN",,,,,,,"High pressure Pump Run Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X0018 : VACUUM PUMP RUN CHECK
 Y001D : HIGH PRESSURE PUMP RUN"
 41,310020,STAGE1_PUMP_RUN_TIMEOUT,,,,,,,,
 42,310021,STAGE1_ADD_PUMP_RUN_TIMEOUT,,,,,,,,
 43,310022,STAGE1_HIGH_PUMP_ALARM_ERROR,,,,,,,,
-44,310023,STAGE1_HIGH_PUMP_RUN_TIMEOUT,"Table air knife open ì—¬ë¶€ í™•ì¸ í•„ìš”
-Y03A : CHUCK TABLE AIR KNIFE OPEN (NORMAL CLOSE)",,,,,,,"Table air knife open ì—¬ë¶€ í™•ì¸ í•„ìš”
+44,310023,STAGE1_HIGH_PUMP_RUN_TIMEOUT,"Table air knife open ¿©ºÎ È®ÀÎ ÇÊ¿ä
+Y03A : CHUCK TABLE AIR KNIFE OPEN (NORMAL CLOSE)",,,,,,,"Table air knife open ¿©ºÎ È®ÀÎ ÇÊ¿ä
 Y03A : CHUCK TABLE AIR KNIFE OPEN (NORMAL CLOSE)"
 45,310024,STAGE_1_WATER_ERROR,,,,,,,,
 46,310025,STAGE_1_TABLE_WATER_NOT_ON_ERROR,,,,,,,,
@@ -116,9 +116,9 @@ Y03A : CHUCK TABLE AIR KNIFE OPEN (NORMAL CLOSE)"
 48,310027,STAGE_1_EJECT_ON_CHECK_ERROR,,,,,,,,
 49,310028,STAGE_1_EJECT_OFF_CHECK_ERROR,,,,,,,,
 50,310029,STAGE_1_VAC_ON_CHECK_ERROR,,,,,,,,
-51,310030,STAGE_1_VAC_OFF_CHECK_ERROR,"Pump Run Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+51,310030,STAGE_1_VAC_OFF_CHECK_ERROR,"Pump Run Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X0018 : VACUUM PUMP RUN CHECK
-Y0018 : VACUUM PUMP RUN",,,,,,,"Pump Run Error ë°œìƒìœ¼ë¡œ I/O ë° Pump ìƒíƒœ í™•ì¸ í•„ìš”
+Y0018 : VACUUM PUMP RUN",,,,,,,"Pump Run Error ¹ß»ýÀ¸·Î I/O ¹× Pump »óÅÂ È®ÀÎ ÇÊ¿ä
 X0018 : VACUUM PUMP RUN CHECK
 Y0018 : VACUUM PUMP RUN"
 52,310031,STAGE_1_CLEAN_ERROR,,,,,,,,
@@ -129,20 +129,20 @@ Y0018 : VACUUM PUMP RUN"
 57,310036,STAGE_1_TOPCLEAN_WATERKNIFE_NOT_ON_ERROR,,,,,,,,
 58,310037,STAGE_1_TOPCLEAN_WATERKNIFE_NOT_OFF_ERROR,,,,,,,,
 59,310038,STAGE_1_WHEEL_CLEAN_ERROR,,,,,,,,
-60,310039,STAGE_1_WATER_NOT_ON_CHECK_ERROR,"Wheel Spindle collant Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
-Y0013 : WHEEL COOLANT ON (NORMAL CLOSE)",,,,,,,"Wheel Spindle collant Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
+60,310039,STAGE_1_WATER_NOT_ON_CHECK_ERROR,"Wheel Spindle collant Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
+Y0013 : WHEEL COOLANT ON (NORMAL CLOSE)",,,,,,,"Wheel Spindle collant Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
 Y0013 : WHEEL COOLANT ON (NORMAL CLOSE)"
-61,310040,STAGE_1_WATER_NOT_OFF_CHECK_ERROR,"Dress Toolsetter air blow Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
-Y0014 : DRESS TOOL SETTER AIR BLOW OPEN (NORMAL CLOSE)",,,,,,,"Dress Toolsetter air blow Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
+61,310040,STAGE_1_WATER_NOT_OFF_CHECK_ERROR,"Dress Toolsetter air blow Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
+Y0014 : DRESS TOOL SETTER AIR BLOW OPEN (NORMAL CLOSE)",,,,,,,"Dress Toolsetter air blow Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
 Y0014 : DRESS TOOL SETTER AIR BLOW OPEN (NORMAL CLOSE)"
-62,310041,STAGE_1_WHEELSPINDLE_COLLANT_NOT_OPEN_ERROR,"Table Front Nozzle Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
-Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)",,,,,,,"Table Front Nozzle Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
+62,310041,STAGE_1_WHEELSPINDLE_COLLANT_NOT_OPEN_ERROR,"Table Front Nozzle Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
+Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)",,,,,,,"Table Front Nozzle Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
 Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)"
-63,310042,STAGE_1_DTS_AIRBLOW_NOT_OPEN_ERROR,"Table Rear Nozzle Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
-Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)",,,,,,,"Table Rear Nozzle Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
+63,310042,STAGE_1_DTS_AIRBLOW_NOT_OPEN_ERROR,"Table Rear Nozzle Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
+Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)",,,,,,,"Table Rear Nozzle Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
 Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)"
-64,310043,STAGE_1_FRONT_WATERNOZZLE_NOT_OPEN_ERROR,"Wheel Tip Nozzle Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
-Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY",,,,,,,"Wheel Tip Nozzle Open Err ë°œìƒìœ¼ë¡œ I/O  ìƒíƒœ í™•ì¸ í•„ìš”
+64,310043,STAGE_1_FRONT_WATERNOZZLE_NOT_OPEN_ERROR,"Wheel Tip Nozzle Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
+Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY",,,,,,,"Wheel Tip Nozzle Open Err ¹ß»ýÀ¸·Î I/O  »óÅÂ È®ÀÎ ÇÊ¿ä
 Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY"
 65,310044,STAGE_1_REAR_WATERNOZZLE_NOT_OPEN_ERROR,,,,,,,,
 66,310045,STAGE_1_WHEELTIP_CLEANNOZZLE_NOT_OPEN_ERROR,,,,,,,,
@@ -150,168 +150,168 @@ Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY"
 68,310047,STAGE_1_WAFER_CLEAN_TIMEOUT_ERROR,,,,,,,,
 69,310048,STAGE_1_TABLE_CLEAN_TIMEOUT_ERROR,,,,,,,,
 70,310049,STAGE_1_WAIT_POSITION_TIMEOUT_ERROR,,,,,,,,
-71,310050,STAGE_1_GRIND_Z_AXIS_WORK_POSITION_CALCULATION_ERROR,"Step Grinding ëª¨ë“œ (Table/Dress/ Step_Mode) Grind Cycle Depthê°€ ""0"" ì´í•˜ ì¼ë•Œ ë°œìƒ.",,,,,,,"Step Grinding ëª¨ë“œ (Table/Dress/ Step_Mode) Grind Cycle Depthê°€ ""0"" ì´í•˜ ì¼ë•Œ ë°œìƒ."
+71,310050,STAGE_1_GRIND_Z_AXIS_WORK_POSITION_CALCULATION_ERROR,"Step Grinding ¸ðµå (Table/Dress/ Step_Mode) Grind Cycle Depth°¡ ""0"" ÀÌÇÏ ÀÏ¶§ ¹ß»ý.",,,,,,,"Step Grinding ¸ðµå (Table/Dress/ Step_Mode) Grind Cycle Depth°¡ ""0"" ÀÌÇÏ ÀÏ¶§ ¹ß»ý."
 72,310051,STAGE_1_GRIND_Z_START_POS_LOW_ERROR,,,,,,,,
-73,310052,STAGE_1_GRIND_Z_END_POS_LOW_ERROR,Spindle Zaxis ìž‘ì—… ì‹œìž‘ ìœ„ì¹˜ê°€ Table ì™€ 0.3 ì´í•˜ ì°¨ì´ê°€ ì—†ìŒ,,,,,,,Spindle Zaxis ìž‘ì—… ì‹œìž‘ ìœ„ì¹˜ê°€ Table ì™€ 0.3 ì´í•˜ ì°¨ì´ê°€ ì—†ìŒ
-74,310053,STAGE_1_WHEEL_THICKNESS_ERROR,Spindle Zaxis ìž‘ì—… ì¢…ë£Œ ìœ„ì¹˜ê°€ Table ì™€ 0.3 ì´í•˜ ì°¨ì´ê°€ ì—†ìŒ,,,,,,,Spindle Zaxis ìž‘ì—… ì¢…ë£Œ ìœ„ì¹˜ê°€ Table ì™€ 0.3 ì´í•˜ ì°¨ì´ê°€ ì—†ìŒ
-75,310054,STAGE_1_WHEEL_THICKNESS_LIMIT_OVER_ERROR,"Wheel tip ì˜ ë‘ê»˜ê°€ Wheel para ì— ì„¤ì •ê°’ì´í•˜ì¼ë•Œ ë°œìƒ.
- - Wheel êµì²´ í•„ìš”.",,,,,,,"Wheel tip ì˜ ë‘ê»˜ê°€ Wheel para ì— ì„¤ì •ê°’ì´í•˜ì¼ë•Œ ë°œìƒ.
- - Wheel êµì²´ í•„ìš”."
-76,310055,STAGE_1_WHEEL_NEED_TO_CHANGE_ERROR,"Wheel tip ì˜ ë‘ê»˜ê°€ ""0.5[mm]"" ì´í•˜ ì¼ë•Œ Error ë°œìƒ
- - Wheel êµì²´ í•„ìš”.",,,,,,,"Wheel tip ì˜ ë‘ê»˜ê°€ ""0.5[mm]"" ì´í•˜ ì¼ë•Œ Error ë°œìƒ
- - Wheel êµì²´ í•„ìš”."
+73,310052,STAGE_1_GRIND_Z_END_POS_LOW_ERROR,Spindle Zaxis ÀÛ¾÷ ½ÃÀÛ À§Ä¡°¡ Table ¿Í 0.3 ÀÌÇÏ Â÷ÀÌ°¡ ¾øÀ½,,,,,,,Spindle Zaxis ÀÛ¾÷ ½ÃÀÛ À§Ä¡°¡ Table ¿Í 0.3 ÀÌÇÏ Â÷ÀÌ°¡ ¾øÀ½
+74,310053,STAGE_1_WHEEL_THICKNESS_ERROR,Spindle Zaxis ÀÛ¾÷ Á¾·á À§Ä¡°¡ Table ¿Í 0.3 ÀÌÇÏ Â÷ÀÌ°¡ ¾øÀ½,,,,,,,Spindle Zaxis ÀÛ¾÷ Á¾·á À§Ä¡°¡ Table ¿Í 0.3 ÀÌÇÏ Â÷ÀÌ°¡ ¾øÀ½
+75,310054,STAGE_1_WHEEL_THICKNESS_LIMIT_OVER_ERROR,"Wheel tip ÀÇ µÎ²²°¡ Wheel para ¿¡ ¼³Á¤°ªÀÌÇÏÀÏ¶§ ¹ß»ý.
+ - Wheel ±³Ã¼ ÇÊ¿ä.",,,,,,,"Wheel tip ÀÇ µÎ²²°¡ Wheel para ¿¡ ¼³Á¤°ªÀÌÇÏÀÏ¶§ ¹ß»ý.
+ - Wheel ±³Ã¼ ÇÊ¿ä."
+76,310055,STAGE_1_WHEEL_NEED_TO_CHANGE_ERROR,"Wheel tip ÀÇ µÎ²²°¡ ""0.5[mm]"" ÀÌÇÏ ÀÏ¶§ Error ¹ß»ý
+ - Wheel ±³Ã¼ ÇÊ¿ä.",,,,,,,"Wheel tip ÀÇ µÎ²²°¡ ""0.5[mm]"" ÀÌÇÏ ÀÏ¶§ Error ¹ß»ý
+ - Wheel ±³Ã¼ ÇÊ¿ä."
 77,310056,STAGE_1_DRESS_THICKNESS_ERROR,,,,,,,,
-78,310057,STAGE_1_DRESSER_THICKNESS_LIMIT_OVER_ERROR,"Dress ì˜ ë‘ê»˜ê°€ Wheel para ì— ì„¤ì •ê°’ì´í•˜ì¼ë•Œ ë°œìƒ.
- - Dress êµì²´ í•„ìš”.",,,,,,,"Dress ì˜ ë‘ê»˜ê°€ Wheel para ì— ì„¤ì •ê°’ì´í•˜ì¼ë•Œ ë°œìƒ.
- - Dress êµì²´ í•„ìš”."
-79,310058,STAGE_1_DRESSER_NEED_TO_CHANGE_ERROR,"Dress ì˜ ë‘ê»˜ê°€ Dressing ì–‘ë³´ë‹¤ ì ì„ë•Œ ë°œìƒ
- - Dress êµì²´ í•„ìš”.",,,,,,,"Dress ì˜ ë‘ê»˜ê°€ Dressing ì–‘ë³´ë‹¤ ì ì„ë•Œ ë°œìƒ
- - Dress êµì²´ í•„ìš”."
-80,310059,STAGE_1_WHEEL_WAFER_NOT_CONTACT_ERROR,"Grinding ì§„í–‰ í›„ Wafer ì˜ ë‘ê»˜ ë³€í™”ê°€ ì—†ìŒ. 
- - Spindle Wheel ì´ Wafer ì— Grinding ê°€ ë˜ì§€ ì•Šì•˜ìŒ.",,,,,,,"Grinding ì§„í–‰ í›„ Wafer ì˜ ë‘ê»˜ ë³€í™”ê°€ ì—†ìŒ. 
- - Spindle Wheel ì´ Wafer ì— Grinding ê°€ ë˜ì§€ ì•Šì•˜ìŒ."
+78,310057,STAGE_1_DRESSER_THICKNESS_LIMIT_OVER_ERROR,"Dress ÀÇ µÎ²²°¡ Wheel para ¿¡ ¼³Á¤°ªÀÌÇÏÀÏ¶§ ¹ß»ý.
+ - Dress ±³Ã¼ ÇÊ¿ä.",,,,,,,"Dress ÀÇ µÎ²²°¡ Wheel para ¿¡ ¼³Á¤°ªÀÌÇÏÀÏ¶§ ¹ß»ý.
+ - Dress ±³Ã¼ ÇÊ¿ä."
+79,310058,STAGE_1_DRESSER_NEED_TO_CHANGE_ERROR,"Dress ÀÇ µÎ²²°¡ Dressing ¾çº¸´Ù ÀûÀ»¶§ ¹ß»ý
+ - Dress ±³Ã¼ ÇÊ¿ä.",,,,,,,"Dress ÀÇ µÎ²²°¡ Dressing ¾çº¸´Ù ÀûÀ»¶§ ¹ß»ý
+ - Dress ±³Ã¼ ÇÊ¿ä."
+80,310059,STAGE_1_WHEEL_WAFER_NOT_CONTACT_ERROR,"Grinding ÁøÇà ÈÄ Wafer ÀÇ µÎ²² º¯È­°¡ ¾øÀ½. 
+ - Spindle Wheel ÀÌ Wafer ¿¡ Grinding °¡ µÇÁö ¾Ê¾ÒÀ½.",,,,,,,"Grinding ÁøÇà ÈÄ Wafer ÀÇ µÎ²² º¯È­°¡ ¾øÀ½. 
+ - Spindle Wheel ÀÌ Wafer ¿¡ Grinding °¡ µÇÁö ¾Ê¾ÒÀ½."
 81,310060,STAGE_1_RECIPE_ERROR,,,,,,,,
-82,310061,STAGE_1_TABLE_RECIPE_GRINDING_LIMIT_OVER_ERROR,"Table Grind Total Amount ì„¤ì • ê°’ì´ WTS Gap ì˜ ê°’ë³´ë‹¤ í´ë•Œ ë°œìƒ. 
- - WTS ì˜ ë†’ì´ ì¡°ì ˆ ë˜ëŠ” Total Amount ì¡°ì • í•„ìš”.",,,,,,,"Table Grind Total Amount ì„¤ì • ê°’ì´ WTS Gap ì˜ ê°’ë³´ë‹¤ í´ë•Œ ë°œìƒ. 
- - WTS ì˜ ë†’ì´ ì¡°ì ˆ ë˜ëŠ” Total Amount ì¡°ì • í•„ìš”."
-83,310062,STAGE_1_TABLE_RECIPE_WTS_GAP_SET_LIMIT_ERROR, -Table ì™€ WTS ì˜ Recipe ì„¤ì • ë†’ì´ì°¨ì´ í™•ì¸ (BaseSetup ìž…ë ¥ ì˜¤ë¥˜),,,,,,, -Table ì™€ WTS ì˜ Recipe ì„¤ì • ë†’ì´ì°¨ì´ í™•ì¸ (BaseSetup ìž…ë ¥ ì˜¤ë¥˜)
-84,310063,STAGE_1_TABLE_RECIPE_DTS_GAP_SET_LIMIT_ERROR, - Table ì™€ DTS ì˜ Recipe ì„¤ì • ë†’ì´ì°¨ì´ í™•ì¸ (BaseSetup ìž…ë ¥ ì˜¤ë¥˜),,,,,,, - Table ì™€ DTS ì˜ Recipe ì„¤ì • ë†’ì´ì°¨ì´ í™•ì¸ (BaseSetup ìž…ë ¥ ì˜¤ë¥˜)
-85,310064,STAGE_1_DRESS_RECIPE_GRINDING_LIMIT_OVER_ERROR," - Dress Grinding Recipe ì„¤ì • Amount í™•ì¸ ê°’ì´ ""0.8"" ì´í•˜ ì°¨ì´ ì¼ë•Œ ë°œìƒ",,,,,,," - Dress Grinding Recipe ì„¤ì • Amount í™•ì¸ ê°’ì´ ""0.8"" ì´í•˜ ì°¨ì´ ì¼ë•Œ ë°œìƒ"
+82,310061,STAGE_1_TABLE_RECIPE_GRINDING_LIMIT_OVER_ERROR,"Table Grind Total Amount ¼³Á¤ °ªÀÌ WTS Gap ÀÇ °ªº¸´Ù Å¬¶§ ¹ß»ý. 
+ - WTS ÀÇ ³ôÀÌ Á¶Àý ¶Ç´Â Total Amount Á¶Á¤ ÇÊ¿ä.",,,,,,,"Table Grind Total Amount ¼³Á¤ °ªÀÌ WTS Gap ÀÇ °ªº¸´Ù Å¬¶§ ¹ß»ý. 
+ - WTS ÀÇ ³ôÀÌ Á¶Àý ¶Ç´Â Total Amount Á¶Á¤ ÇÊ¿ä."
+83,310062,STAGE_1_TABLE_RECIPE_WTS_GAP_SET_LIMIT_ERROR, -Table ¿Í WTS ÀÇ Recipe ¼³Á¤ ³ôÀÌÂ÷ÀÌ È®ÀÎ (BaseSetup ÀÔ·Â ¿À·ù),,,,,,, -Table ¿Í WTS ÀÇ Recipe ¼³Á¤ ³ôÀÌÂ÷ÀÌ È®ÀÎ (BaseSetup ÀÔ·Â ¿À·ù)
+84,310063,STAGE_1_TABLE_RECIPE_DTS_GAP_SET_LIMIT_ERROR, - Table ¿Í DTS ÀÇ Recipe ¼³Á¤ ³ôÀÌÂ÷ÀÌ È®ÀÎ (BaseSetup ÀÔ·Â ¿À·ù),,,,,,, - Table ¿Í DTS ÀÇ Recipe ¼³Á¤ ³ôÀÌÂ÷ÀÌ È®ÀÎ (BaseSetup ÀÔ·Â ¿À·ù)
+85,310064,STAGE_1_DRESS_RECIPE_GRINDING_LIMIT_OVER_ERROR," - Dress Grinding Recipe ¼³Á¤ Amount È®ÀÎ °ªÀÌ ""0.8"" ÀÌÇÏ Â÷ÀÌ ÀÏ¶§ ¹ß»ý",,,,,,," - Dress Grinding Recipe ¼³Á¤ Amount È®ÀÎ °ªÀÌ ""0.8"" ÀÌÇÏ Â÷ÀÌ ÀÏ¶§ ¹ß»ý"
 86,310065,STAGE_1_WAFER_TOPDOWN_RECIPE_GRINDING_LIMIT_OVER_ERROR,,,,,,,,
-87,310066,STAGE_1_WAFER_TOPDOWN_TOTAL_RECIPE_GRINDING_LIMIT_OVER_ERROR,"TopDown mode ì—ì„œ Grinding ì§„í–‰ì‹œ Total Amount ì–‘ì´ ""0""  ì´í•˜ì‹œ ë°œìƒìœ¼ë¡œ ìž¬ì„¤ì • í•„ìš”",,,,,,,"TopDown mode ì—ì„œ Grinding ì§„í–‰ì‹œ Total Amount ì–‘ì´ ""0""  ì´í•˜ì‹œ ë°œìƒìœ¼ë¡œ ìž¬ì„¤ì • í•„ìš”"
-88,310067,STAGE_1_WAFER_TARGET_TOTAL_RECIPE_GRINDING_LIMIT_OVER_ERROR,"Target mode ì—ì„œ Grinding ì§„í–‰ì‹œ Target Amount ì–‘ì´ ""0.2[mm]""  ì´í•˜ì‹œ ë°œìƒìœ¼ë¡œ ìž¬ì„¤ì • í•„ìš”",,,,,,,"Target mode ì—ì„œ Grinding ì§„í–‰ì‹œ Target Amount ì–‘ì´ ""0.2[mm]""  ì´í•˜ì‹œ ë°œìƒìœ¼ë¡œ ìž¬ì„¤ì • í•„ìš”"
-89,310068,STAGE_1_WAFER_TARGET_GRINDING_LIMIT_OVER_ERROR,"Grinding ì§„í–‰ì‹œ ìžìž¬ ë‘ê»˜ê°€ ""0.2[mm]""  ì´í•˜ì‹œ ë°œìƒìœ¼ë¡œ ì¸¡ì •ê°’ ìž¬í™•ì¸ í•„ìš”",,,,,,,"Grinding ì§„í–‰ì‹œ ìžìž¬ ë‘ê»˜ê°€ ""0.2[mm]""  ì´í•˜ì‹œ ë°œìƒìœ¼ë¡œ ì¸¡ì •ê°’ ìž¬í™•ì¸ í•„ìš”"
+87,310066,STAGE_1_WAFER_TOPDOWN_TOTAL_RECIPE_GRINDING_LIMIT_OVER_ERROR,"TopDown mode ¿¡¼­ Grinding ÁøÇà½Ã Total Amount ¾çÀÌ ""0""  ÀÌÇÏ½Ã ¹ß»ýÀ¸·Î Àç¼³Á¤ ÇÊ¿ä",,,,,,,"TopDown mode ¿¡¼­ Grinding ÁøÇà½Ã Total Amount ¾çÀÌ ""0""  ÀÌÇÏ½Ã ¹ß»ýÀ¸·Î Àç¼³Á¤ ÇÊ¿ä"
+88,310067,STAGE_1_WAFER_TARGET_TOTAL_RECIPE_GRINDING_LIMIT_OVER_ERROR,"Target mode ¿¡¼­ Grinding ÁøÇà½Ã Target Amount ¾çÀÌ ""0.2[mm]""  ÀÌÇÏ½Ã ¹ß»ýÀ¸·Î Àç¼³Á¤ ÇÊ¿ä",,,,,,,"Target mode ¿¡¼­ Grinding ÁøÇà½Ã Target Amount ¾çÀÌ ""0.2[mm]""  ÀÌÇÏ½Ã ¹ß»ýÀ¸·Î Àç¼³Á¤ ÇÊ¿ä"
+89,310068,STAGE_1_WAFER_TARGET_GRINDING_LIMIT_OVER_ERROR,"Grinding ÁøÇà½Ã ÀÚÀç µÎ²²°¡ ""0.2[mm]""  ÀÌÇÏ½Ã ¹ß»ýÀ¸·Î ÃøÁ¤°ª ÀçÈ®ÀÎ ÇÊ¿ä",,,,,,,"Grinding ÁøÇà½Ã ÀÚÀç µÎ²²°¡ ""0.2[mm]""  ÀÌÇÏ½Ã ¹ß»ýÀ¸·Î ÃøÁ¤°ª ÀçÈ®ÀÎ ÇÊ¿ä"
 90,310069,STAGE_1_WHEEL_DIAMETER_INFORMATION_ABNORMAL_ERROR,,,,,,,,
-91,310070,STAGE_1_DRESSING_WHEEL_LOSS_LOW_ERROR,"Dressing í›„ì— Dress Loss amount ê°€ ì„¤ì • ìµœì†Œê°’ë³´ë‹¤ ìž‘ì„ë•Œ ë°œìƒìœ¼ë¡œ
-ì •ìƒ Dress ì—¬ë¶€ í™•ì¸ í•„ìš”",,,,,,,"Dressing í›„ì— Dress Loss amount ê°€ ì„¤ì • ìµœì†Œê°’ë³´ë‹¤ ìž‘ì„ë•Œ ë°œìƒìœ¼ë¡œ
-ì •ìƒ Dress ì—¬ë¶€ í™•ì¸ í•„ìš”"
+91,310070,STAGE_1_DRESSING_WHEEL_LOSS_LOW_ERROR,"Dressing ÈÄ¿¡ Dress Loss amount °¡ ¼³Á¤ ÃÖ¼Ò°ªº¸´Ù ÀÛÀ»¶§ ¹ß»ýÀ¸·Î
+Á¤»ó Dress ¿©ºÎ È®ÀÎ ÇÊ¿ä",,,,,,,"Dressing ÈÄ¿¡ Dress Loss amount °¡ ¼³Á¤ ÃÖ¼Ò°ªº¸´Ù ÀÛÀ»¶§ ¹ß»ýÀ¸·Î
+Á¤»ó Dress ¿©ºÎ È®ÀÎ ÇÊ¿ä"
 92,310071,STAGE_1_DRESSING_LOSS_LIMIT_OVER_ERROR,,,,,,,,
 93,310072,STAGE_1_IPG_ERROR,,,,,,,,
-94,310073,STAGE_1_IPG_WATER_NOT_ON_ERROR,"IPG Collant open ì—¬ë¶€ í™•ì¸ í•„ìš”
-Y012 : IPG COOLANT ON (NORMAL CLOSE)",,,,,,,"IPG Collant open ì—¬ë¶€ í™•ì¸ í•„ìš”
+94,310073,STAGE_1_IPG_WATER_NOT_ON_ERROR,"IPG Collant open ¿©ºÎ È®ÀÎ ÇÊ¿ä
+Y012 : IPG COOLANT ON (NORMAL CLOSE)",,,,,,,"IPG Collant open ¿©ºÎ È®ÀÎ ÇÊ¿ä
 Y012 : IPG COOLANT ON (NORMAL CLOSE)"
-95,310074,STAGE_1_IPG_WATER_NOT_OFF_ERROR,"IPG Collant open ì—¬ë¶€ í™•ì¸ í•„ìš”
-Y012 : IPG COOLANT ON (NORMAL CLOSE)",,,,,,,"IPG Collant open ì—¬ë¶€ í™•ì¸ í•„ìš”
+95,310074,STAGE_1_IPG_WATER_NOT_OFF_ERROR,"IPG Collant open ¿©ºÎ È®ÀÎ ÇÊ¿ä
+Y012 : IPG COOLANT ON (NORMAL CLOSE)",,,,,,,"IPG Collant open ¿©ºÎ È®ÀÎ ÇÊ¿ä
 Y012 : IPG COOLANT ON (NORMAL CLOSE)"
-96,310075,STAGE_1_IPG_UP_ERROR,"IPG Up/Down ì¶œë ¥ ë° ì„¼ì„œ ìƒíƒœ í™•ì¸ í•„ìš”
+96,310075,STAGE_1_IPG_UP_ERROR,"IPG Up/Down Ãâ·Â ¹× ¼¾¼­ »óÅÂ È®ÀÎ ÇÊ¿ä
  - X0012 : IPG UP PRESSURE CHECK
- - Y0010 : IPG DOWN (NORMAL UP)",,,,,,,"IPG Up/Down ì¶œë ¥ ë° ì„¼ì„œ ìƒíƒœ í™•ì¸ í•„ìš”
- - X0012 : IPG UP PRESSURE CHECK
- - Y0010 : IPG DOWN (NORMAL UP)"
-97,310076,STAGE_1_IPG_NOT_UP_ERROR,"IPG Up/Down ì¶œë ¥ ë° ì„¼ì„œ ìƒíƒœ í™•ì¸ í•„ìš”
- - X0012 : IPG UP PRESSURE CHECK
- - Y0010 : IPG DOWN (NORMAL UP)",,,,,,,"IPG Up/Down ì¶œë ¥ ë° ì„¼ì„œ ìƒíƒœ í™•ì¸ í•„ìš”
+ - Y0010 : IPG DOWN (NORMAL UP)",,,,,,,"IPG Up/Down Ãâ·Â ¹× ¼¾¼­ »óÅÂ È®ÀÎ ÇÊ¿ä
  - X0012 : IPG UP PRESSURE CHECK
  - Y0010 : IPG DOWN (NORMAL UP)"
-98,310077,STAGE_1_IPG_NOT_DOWN_ERROR,"IPG Up/Down ì¶œë ¥ ë° ì„¼ì„œ ìƒíƒœ í™•ì¸ í•„ìš”
+97,310076,STAGE_1_IPG_NOT_UP_ERROR,"IPG Up/Down Ãâ·Â ¹× ¼¾¼­ »óÅÂ È®ÀÎ ÇÊ¿ä
  - X0012 : IPG UP PRESSURE CHECK
- - Y0010 : IPG DOWN (NORMAL UP)",,,,,,,"IPG Up/Down ì¶œë ¥ ë° ì„¼ì„œ ìƒíƒœ í™•ì¸ í•„ìš”
- - X0012 : IPG UP PRESSURE CHECK
- - Y0010 : IPG DOWN (NORMAL UP)"
-99,310078,STAGE_1_IPG_DOWN_ERROR,"IPG Up/Down ì¶œë ¥ ë° ì„¼ì„œ ìƒíƒœ í™•ì¸ í•„ìš”
- - X0012 : IPG UP PRESSURE CHECK
- - Y0010 : IPG DOWN (NORMAL UP)",,,,,,,"IPG Up/Down ì¶œë ¥ ë° ì„¼ì„œ ìƒíƒœ í™•ì¸ í•„ìš”
+ - Y0010 : IPG DOWN (NORMAL UP)",,,,,,,"IPG Up/Down Ãâ·Â ¹× ¼¾¼­ »óÅÂ È®ÀÎ ÇÊ¿ä
  - X0012 : IPG UP PRESSURE CHECK
  - Y0010 : IPG DOWN (NORMAL UP)"
-100,310079,STAGE_1_IPG_ALARM_ERROR,"IPG Alarm ë°œìƒìœ¼ë¡œ ìž…ë ¥ ë° D-Module ìƒíƒœ í™•ì¸ í•„ìš”
- - X0010 : IPG UNIT ALARM (NC)",,,,,,,"IPG Alarm ë°œìƒìœ¼ë¡œ ìž…ë ¥ ë° D-Module ìƒíƒœ í™•ì¸ í•„ìš”
+98,310077,STAGE_1_IPG_NOT_DOWN_ERROR,"IPG Up/Down Ãâ·Â ¹× ¼¾¼­ »óÅÂ È®ÀÎ ÇÊ¿ä
+ - X0012 : IPG UP PRESSURE CHECK
+ - Y0010 : IPG DOWN (NORMAL UP)",,,,,,,"IPG Up/Down Ãâ·Â ¹× ¼¾¼­ »óÅÂ È®ÀÎ ÇÊ¿ä
+ - X0012 : IPG UP PRESSURE CHECK
+ - Y0010 : IPG DOWN (NORMAL UP)"
+99,310078,STAGE_1_IPG_DOWN_ERROR,"IPG Up/Down Ãâ·Â ¹× ¼¾¼­ »óÅÂ È®ÀÎ ÇÊ¿ä
+ - X0012 : IPG UP PRESSURE CHECK
+ - Y0010 : IPG DOWN (NORMAL UP)",,,,,,,"IPG Up/Down Ãâ·Â ¹× ¼¾¼­ »óÅÂ È®ÀÎ ÇÊ¿ä
+ - X0012 : IPG UP PRESSURE CHECK
+ - Y0010 : IPG DOWN (NORMAL UP)"
+100,310079,STAGE_1_IPG_ALARM_ERROR,"IPG Alarm ¹ß»ýÀ¸·Î ÀÔ·Â ¹× D-Module »óÅÂ È®ÀÎ ÇÊ¿ä
+ - X0010 : IPG UNIT ALARM (NC)",,,,,,,"IPG Alarm ¹ß»ýÀ¸·Î ÀÔ·Â ¹× D-Module »óÅÂ È®ÀÎ ÇÊ¿ä
  - X0010 : IPG UNIT ALARM (NC)"
-101,310080,STAGE_1_IPG_IBM_UPDOWN_VALUE_INVALID_ERROR,"IPG Master ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ ",,,,,,,"IPG Master ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ "
-102,310081,STAGE_1_IPG_IBM_UP_VALUE_INVALID_ERROR,"IPG Master ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ ",,,,,,,"IPG Master ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ "
-103,310082,STAGE_1_IPG_IBM_DOWN_VALUE_INVALID_ERROR,"IPG Master ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ ",,,,,,,"IPG Master ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ "
-104,310083,STAGE_1_IPG_IBO_UPDOWN_VALUE_INVALID_ERROR,"IPG Object ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ ",,,,,,,"IPG Object ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ "
-105,310084,STAGE_1_IPG_IBO_UP_VALUE_INVALID_ERROR,"IPG Object ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ ",,,,,,,"IPG Object ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ "
-106,310085,STAGE_1_IPG_IBO_DOWN_VALUE_INVALID_ERROR,"IPG Object ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ ",,,,,,,"IPG Object ê°€ Base ì—ì„œ Zero ì„¤ì •ì„ ìœ„í•´ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ
- - Up/Down ì •ìƒ ë° IPG ì¸¡ì • ê°’ í™•ì¸ "
-107,310086,STAGE_1_IPG_IBM_TABLE_THICK_LOW_MEASURE_ERROR,"Table Measure ì¤‘ IPG Master ê°€ Table ì—ì„œ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ Base Setup ì—ì„œ ì„¤ì •í•œ ê°’ê³¼ ì°¨ì´ì‚¬ ë°œìƒì‹œ Errror ë°œìƒ
- - Base setup ì„¤ì •ê°’ í™•ì¸ ë° IPG ì¸¡ì •ê°’ í™•ì¸ í•„ìš”.",,,,,,,"Table Measure ì¤‘ IPG Master ê°€ Table ì—ì„œ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ Base Setup ì—ì„œ ì„¤ì •í•œ ê°’ê³¼ ì°¨ì´ì‚¬ ë°œìƒì‹œ Errror ë°œìƒ
- - Base setup ì„¤ì •ê°’ í™•ì¸ ë° IPG ì¸¡ì •ê°’ í™•ì¸ í•„ìš”."
-108,310087,STAGE_1_IPG_IBO_TABLE_THICK_LOW_MEASURE_ERROR,"Table Measure ì¤‘ IPG Object ê°€ Table ì—ì„œ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ Base Setup ì—ì„œ ì„¤ì •í•œ ê°’ê³¼ ì°¨ì´ì‚¬ ë°œìƒì‹œ Errror ë°œìƒ
- - Base setup ì„¤ì •ê°’ í™•ì¸ ë° IPG ì¸¡ì •ê°’ í™•ì¸ í•„ìš”.",,,,,,,"Table Measure ì¤‘ IPG Object ê°€ Table ì—ì„œ ì¸¡ì •ì‹œ ì´ìƒ ê°’ ë°œìƒ Base Setup ì—ì„œ ì„¤ì •í•œ ê°’ê³¼ ì°¨ì´ì‚¬ ë°œìƒì‹œ Errror ë°œìƒ
- - Base setup ì„¤ì •ê°’ í™•ì¸ ë° IPG ì¸¡ì •ê°’ í™•ì¸ í•„ìš”."
+101,310080,STAGE_1_IPG_IBM_UPDOWN_VALUE_INVALID_ERROR,"IPG Master °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ ",,,,,,,"IPG Master °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ "
+102,310081,STAGE_1_IPG_IBM_UP_VALUE_INVALID_ERROR,"IPG Master °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ ",,,,,,,"IPG Master °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ "
+103,310082,STAGE_1_IPG_IBM_DOWN_VALUE_INVALID_ERROR,"IPG Master °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ ",,,,,,,"IPG Master °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ "
+104,310083,STAGE_1_IPG_IBO_UPDOWN_VALUE_INVALID_ERROR,"IPG Object °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ ",,,,,,,"IPG Object °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ "
+105,310084,STAGE_1_IPG_IBO_UP_VALUE_INVALID_ERROR,"IPG Object °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ ",,,,,,,"IPG Object °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ "
+106,310085,STAGE_1_IPG_IBO_DOWN_VALUE_INVALID_ERROR,"IPG Object °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ ",,,,,,,"IPG Object °¡ Base ¿¡¼­ Zero ¼³Á¤À» À§ÇØ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý
+ - Up/Down Á¤»ó ¹× IPG ÃøÁ¤ °ª È®ÀÎ "
+107,310086,STAGE_1_IPG_IBM_TABLE_THICK_LOW_MEASURE_ERROR,"Table Measure Áß IPG Master °¡ Table ¿¡¼­ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý Base Setup ¿¡¼­ ¼³Á¤ÇÑ °ª°ú Â÷ÀÌ»ç ¹ß»ý½Ã Errror ¹ß»ý
+ - Base setup ¼³Á¤°ª È®ÀÎ ¹× IPG ÃøÁ¤°ª È®ÀÎ ÇÊ¿ä.",,,,,,,"Table Measure Áß IPG Master °¡ Table ¿¡¼­ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý Base Setup ¿¡¼­ ¼³Á¤ÇÑ °ª°ú Â÷ÀÌ»ç ¹ß»ý½Ã Errror ¹ß»ý
+ - Base setup ¼³Á¤°ª È®ÀÎ ¹× IPG ÃøÁ¤°ª È®ÀÎ ÇÊ¿ä."
+108,310087,STAGE_1_IPG_IBO_TABLE_THICK_LOW_MEASURE_ERROR,"Table Measure Áß IPG Object °¡ Table ¿¡¼­ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý Base Setup ¿¡¼­ ¼³Á¤ÇÑ °ª°ú Â÷ÀÌ»ç ¹ß»ý½Ã Errror ¹ß»ý
+ - Base setup ¼³Á¤°ª È®ÀÎ ¹× IPG ÃøÁ¤°ª È®ÀÎ ÇÊ¿ä.",,,,,,,"Table Measure Áß IPG Object °¡ Table ¿¡¼­ ÃøÁ¤½Ã ÀÌ»ó °ª ¹ß»ý Base Setup ¿¡¼­ ¼³Á¤ÇÑ °ª°ú Â÷ÀÌ»ç ¹ß»ý½Ã Errror ¹ß»ý
+ - Base setup ¼³Á¤°ª È®ÀÎ ¹× IPG ÃøÁ¤°ª È®ÀÎ ÇÊ¿ä."
 109,310088,STAGE_1_FLOWMETER_ERROR,,,,,,,,
-110,310089,STAGE_1_WHEEL_SPINDLE_CDA_AIR_01_NOT_ON_ERROR,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
- - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)",,,,,,,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
+110,310089,STAGE_1_WHEEL_SPINDLE_CDA_AIR_01_NOT_ON_ERROR,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
+ - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)",,,,,,,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
  - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)"
-111,310090,STAGE_1_WHEEL_SPINDLE_CDA_AIR_02_NOT_ON_ERROR,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
- - X0029 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)",,,,,,,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
+111,310090,STAGE_1_WHEEL_SPINDLE_CDA_AIR_02_NOT_ON_ERROR,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
+ - X0029 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)",,,,,,,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
  - X0029 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)"
-112,310091,STAGE_1_WHEEL_SPINDLE_CDA_AIR_03_NOT_ON_ERROR,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
+112,310091,STAGE_1_WHEEL_SPINDLE_CDA_AIR_03_NOT_ON_ERROR,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
  - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)
- - X0029 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)",,,,,,,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
+ - X0029 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)",,,,,,,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
  - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)
  - X0029 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)"
-113,310092,STAGE_1_WHEEL_SPINDLE_CDA_AIR_01_FLOW_NOT_ON_ERROR,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
- - Flow meter í™•ì¸ í•„ìš”"
-114,310093,STAGE_1_WHEEL_SPINDLE_CDA_AIR_02_FLOW_NOT_ON_ERROR,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
- - Flow meter í™•ì¸ í•„ìš”"
-115,310094,STAGE_1_WHEEL_SPINDLE_CDA_AIR_03_FLOW_NOT_ON_ERROR,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"Wheel CDA Air ì´ Open ë˜ì§€ ì•Šì•„ ë°œìƒìœ¼ë¡œ ìž…/ì¶œë ¥ í™•ì¸ í•„ìš”
- - Flow meter í™•ì¸ í•„ìš”"
-116,310095,STAGE_1_CDA_NOT_OPEN_ERROR,"CDA Air ì´ Open/Close ê°€ ë¹„ì •ìƒìž„
+113,310092,STAGE_1_WHEEL_SPINDLE_CDA_AIR_01_FLOW_NOT_ON_ERROR,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+114,310093,STAGE_1_WHEEL_SPINDLE_CDA_AIR_02_FLOW_NOT_ON_ERROR,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+115,310094,STAGE_1_WHEEL_SPINDLE_CDA_AIR_03_FLOW_NOT_ON_ERROR,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"Wheel CDA Air ÀÌ Open µÇÁö ¾Ê¾Æ ¹ß»ýÀ¸·Î ÀÔ/Ãâ·Â È®ÀÎ ÇÊ¿ä
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+116,310095,STAGE_1_CDA_NOT_OPEN_ERROR,"CDA Air ÀÌ Open/Close °¡ ºñÁ¤»óÀÓ
  - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)
- - Y0028 : CDA 1_2 SELECT (GAUGE, TABLE/IPG)",,,,,,,"CDA Air ì´ Open/Close ê°€ ë¹„ì •ìƒìž„
+ - Y0028 : CDA 1_2 SELECT (GAUGE, TABLE/IPG)",,,,,,,"CDA Air ÀÌ Open/Close °¡ ºñÁ¤»óÀÓ
  - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)
  - Y0028 : CDA 1_2 SELECT (GAUGE, TABLE/IPG)"
-117,310096,STAGE_1_CDA_NOT_CLOSE_ERROR,"CDA Air ì´ Open/Close ê°€ ë¹„ì •ìƒìž„
+117,310096,STAGE_1_CDA_NOT_CLOSE_ERROR,"CDA Air ÀÌ Open/Close °¡ ºñÁ¤»óÀÓ
  - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)
- - Y0028 : CDA 1_2 SELECT (GAUGE, TABLE/IPG)",,,,,,,"CDA Air ì´ Open/Close ê°€ ë¹„ì •ìƒìž„
+ - Y0028 : CDA 1_2 SELECT (GAUGE, TABLE/IPG)",,,,,,,"CDA Air ÀÌ Open/Close °¡ ºñÁ¤»óÀÓ
  - X0028 : MAIN CDA(1 2) ON CHECK (GAUGE,TABLE/IPG)
  - Y0028 : CDA 1_2 SELECT (GAUGE, TABLE/IPG)"
-118,310097,STAGE_1_CDA1_FLOW_NOT_OPEN_ERROR,"CDA Air ì´ Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"CDA Air ì´ Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”"
-119,310098,STAGE_1_CDA2_FLOW_NOT_OPEN_ERROR,"CDA Air ì´ Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"CDA Air ì´ Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”"
-120,310099,STAGE_1_CHUCK_TABLE_PCW_NOT_ON_ERROR,"Table PCW Open/Close ê°€ ë¹„ì •ìƒìž„
+118,310097,STAGE_1_CDA1_FLOW_NOT_OPEN_ERROR,"CDA Air ÀÌ Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"CDA Air ÀÌ Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+119,310098,STAGE_1_CDA2_FLOW_NOT_OPEN_ERROR,"CDA Air ÀÌ Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"CDA Air ÀÌ Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+120,310099,STAGE_1_CHUCK_TABLE_PCW_NOT_ON_ERROR,"Table PCW Open/Close °¡ ºñÁ¤»óÀÓ
  - X0040 : CHUCK TABLE PCW ON CHECK (GAUGE)
- - X0041 : CHUCK TABLE PCW OFF CHECK (GAUGE)",,,,,,,"Table PCW Open/Close ê°€ ë¹„ì •ìƒìž„
+ - X0041 : CHUCK TABLE PCW OFF CHECK (GAUGE)",,,,,,,"Table PCW Open/Close °¡ ºñÁ¤»óÀÓ
  - X0040 : CHUCK TABLE PCW ON CHECK (GAUGE)
  - X0041 : CHUCK TABLE PCW OFF CHECK (GAUGE)"
-121,310100,STAGE_1_CHUCK_TABLE_PCW_FLOW_NOT_ON_ERROR,"Table PCW Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"Table PCW Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”"
-122,310101,STAGE_1_DRESS_PCW_NOT_ON_ERROR,"Dress PCW Open/Close ê°€ ë¹„ì •ìƒìž„
+121,310100,STAGE_1_CHUCK_TABLE_PCW_FLOW_NOT_ON_ERROR,"Table PCW Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"Table PCW Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+122,310101,STAGE_1_DRESS_PCW_NOT_ON_ERROR,"Dress PCW Open/Close °¡ ºñÁ¤»óÀÓ
  - X0042 : DRESS SPINDLE PCW ON CHECK (GAUGE)
- - X0043 : DRESS SPINDLE PCW OFF CHECK (GAUGE)",,,,,,,"Dress PCW Open/Close ê°€ ë¹„ì •ìƒìž„
+ - X0043 : DRESS SPINDLE PCW OFF CHECK (GAUGE)",,,,,,,"Dress PCW Open/Close °¡ ºñÁ¤»óÀÓ
  - X0042 : DRESS SPINDLE PCW ON CHECK (GAUGE)
  - X0043 : DRESS SPINDLE PCW OFF CHECK (GAUGE)"
-123,310102,STAGE_1_DRESS_PCW_NOT_ON_FLOW_ERROR,"Dress PCW Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"Dress PCW Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”"
-124,310103,STAGE_1_WHEEL_SPINDLE_PCW_NOT_ON_ERROR,"Wheel PCW Open/Close ê°€ ë¹„ì •ìƒìž„
+123,310102,STAGE_1_DRESS_PCW_NOT_ON_FLOW_ERROR,"Dress PCW Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"Dress PCW Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+124,310103,STAGE_1_WHEEL_SPINDLE_PCW_NOT_ON_ERROR,"Wheel PCW Open/Close °¡ ºñÁ¤»óÀÓ
  - X0044 : WHEEL SPINDLE PCW ON CHECK (GAUGE)
- - X0045 : WHEEL SPINDLE PCW OFF CHECK (GAUGE)",,,,,,,"Wheel PCW Open/Close ê°€ ë¹„ì •ìƒìž„
+ - X0045 : WHEEL SPINDLE PCW OFF CHECK (GAUGE)",,,,,,,"Wheel PCW Open/Close °¡ ºñÁ¤»óÀÓ
  - X0044 : WHEEL SPINDLE PCW ON CHECK (GAUGE)
  - X0045 : WHEEL SPINDLE PCW OFF CHECK (GAUGE)"
-125,310104,STAGE_1_WHEEL_SPINDLE_PCW_FLOW_NOT_ON_ERROR,"Wheel PCW Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"Wheel PCW Open/Close ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”"
+125,310104,STAGE_1_WHEEL_SPINDLE_PCW_FLOW_NOT_ON_ERROR,"Wheel PCW Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"Wheel PCW Open/Close °¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä"
 126,310105,STAGE_1_PCW_OFF_ERROR,,,,,,,,
-127,310106,STAGE_1_PCW_TEMP_RANGEOVER_ERROR,"PCW ì˜¨ë„ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"PCW ì˜¨ë„ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”"
-128,310107,STAGE_1_DIW1_TEMP_RANGEOVER_ERROR,"DIW 1 ì˜¨ë„ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"DIW 1 ì˜¨ë„ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”"
-129,310108,STAGE_1_DIW2_TEMP_RANGEOVER_ERROR,"DIW 2 ì˜¨ë„ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”",,,,,,,"DIW 2 ì˜¨ë„ê°€ ë¹„ì •ìƒìž„
- - Flow meter í™•ì¸ í•„ìš”"
-130,310109,STAGE_1_TABLE_VACUUM_8_INCH_NOT_ON_ERROR,"Table 8"" Vacuum in ë˜ì§€ ì•ŠìŒ
+127,310106,STAGE_1_PCW_TEMP_RANGEOVER_ERROR,"PCW ¿Âµµ°¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"PCW ¿Âµµ°¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+128,310107,STAGE_1_DIW1_TEMP_RANGEOVER_ERROR,"DIW 1 ¿Âµµ°¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"DIW 1 ¿Âµµ°¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+129,310108,STAGE_1_DIW2_TEMP_RANGEOVER_ERROR,"DIW 2 ¿Âµµ°¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä",,,,,,,"DIW 2 ¿Âµµ°¡ ºñÁ¤»óÀÓ
+ - Flow meter È®ÀÎ ÇÊ¿ä"
+130,310109,STAGE_1_TABLE_VACUUM_8_INCH_NOT_ON_ERROR,"Table 8"" Vacuum in µÇÁö ¾ÊÀ½
  - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
  - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
  - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
@@ -321,28 +321,7 @@ Y012 : IPG COOLANT ON (NORMAL CLOSE)"
  - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
  - Y0035 : CHUCK TABLE 12""_VACUUM ON
  - Y0036 : CHUCK TABLE 12""_WATER ON
- - Y0037 : CHUCK TABLE 12""_AIR BLOW ON",,,,,,,"Table 8"" Vacuum in ë˜ì§€ ì•ŠìŒ
- - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
- - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
- - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
- - X0037 : CHUCK TABLE VACCUM #2  (12/8) OFF CHECK (GAUGE)
- - Y0032 : CHUCK TABLE 8""_VACUUM ON
- - Y0033 : CHUCK TABLE 8""_WATER ON
- - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
- - Y0035 : CHUCK TABLE 12""_VACUUM ON
- - Y0036 : CHUCK TABLE 12""_WATER ON
- - Y0037 : CHUCK TABLE 12""_AIR BLOW ON"
-131,310110,STAGE_1_TABLE_VACUUM_8_INCH_NOT_OFF_ERROR,"Table 8"" Vacuum in ë˜ì§€ ì•ŠìŒ
- - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
- - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
- - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
- - X0037 : CHUCK TABLE VACCUM #2  (12/8) OFF CHECK (GAUGE)
- - Y0032 : CHUCK TABLE 8""_VACUUM ON
- - Y0033 : CHUCK TABLE 8""_WATER ON
- - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
- - Y0035 : CHUCK TABLE 12""_VACUUM ON
- - Y0036 : CHUCK TABLE 12""_WATER ON
- - Y0037 : CHUCK TABLE 12""_AIR BLOW ON",,,,,,,"Table 8"" Vacuum in ë˜ì§€ ì•ŠìŒ
+ - Y0037 : CHUCK TABLE 12""_AIR BLOW ON",,,,,,,"Table 8"" Vacuum in µÇÁö ¾ÊÀ½
  - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
  - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
  - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
@@ -353,7 +332,7 @@ Y012 : IPG COOLANT ON (NORMAL CLOSE)"
  - Y0035 : CHUCK TABLE 12""_VACUUM ON
  - Y0036 : CHUCK TABLE 12""_WATER ON
  - Y0037 : CHUCK TABLE 12""_AIR BLOW ON"
-132,310111,STAGE_1_TABLE_VACUUM_12_INCH_NOT_ON_ERROR,"Table 8"" Vacuum in ë˜ì§€ ì•ŠìŒ
+131,310110,STAGE_1_TABLE_VACUUM_8_INCH_NOT_OFF_ERROR,"Table 8"" Vacuum in µÇÁö ¾ÊÀ½
  - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
  - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
  - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
@@ -363,28 +342,7 @@ Y012 : IPG COOLANT ON (NORMAL CLOSE)"
  - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
  - Y0035 : CHUCK TABLE 12""_VACUUM ON
  - Y0036 : CHUCK TABLE 12""_WATER ON
- - Y0037 : CHUCK TABLE 12""_AIR BLOW ON",,,,,,,"Table 8"" Vacuum in ë˜ì§€ ì•ŠìŒ
- - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
- - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
- - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
- - X0037 : CHUCK TABLE VACCUM #2  (12/8) OFF CHECK (GAUGE)
- - Y0032 : CHUCK TABLE 8""_VACUUM ON
- - Y0033 : CHUCK TABLE 8""_WATER ON
- - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
- - Y0035 : CHUCK TABLE 12""_VACUUM ON
- - Y0036 : CHUCK TABLE 12""_WATER ON
- - Y0037 : CHUCK TABLE 12""_AIR BLOW ON"
-133,310112,STAGE_1_TABLE_VACUUM_12_INCH_NOT_OFF_ERROR,"Table 8"" Vacuum in ë˜ì§€ ì•ŠìŒ
- - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
- - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
- - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
- - X0037 : CHUCK TABLE VACCUM #2  (12/8) OFF CHECK (GAUGE)
- - Y0032 : CHUCK TABLE 8""_VACUUM ON
- - Y0033 : CHUCK TABLE 8""_WATER ON
- - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
- - Y0035 : CHUCK TABLE 12""_VACUUM ON
- - Y0036 : CHUCK TABLE 12""_WATER ON
- - Y0037 : CHUCK TABLE 12""_AIR BLOW ON",,,,,,,"Table 8"" Vacuum in ë˜ì§€ ì•ŠìŒ
+ - Y0037 : CHUCK TABLE 12""_AIR BLOW ON",,,,,,,"Table 8"" Vacuum in µÇÁö ¾ÊÀ½
  - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
  - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
  - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
@@ -395,36 +353,78 @@ Y012 : IPG COOLANT ON (NORMAL CLOSE)"
  - Y0035 : CHUCK TABLE 12""_VACUUM ON
  - Y0036 : CHUCK TABLE 12""_WATER ON
  - Y0037 : CHUCK TABLE 12""_AIR BLOW ON"
-134,310113,STAGE_1_FRONT_NOZZLE_NOT_OPEN_ERROR,"Grind Front Nozzle Open ì´ ë¹„ì •ìƒìž„.
- - Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)",,,,,,,"Grind Front Nozzle Open ì´ ë¹„ì •ìƒìž„.
+132,310111,STAGE_1_TABLE_VACUUM_12_INCH_NOT_ON_ERROR,"Table 8"" Vacuum in µÇÁö ¾ÊÀ½
+ - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
+ - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
+ - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
+ - X0037 : CHUCK TABLE VACCUM #2  (12/8) OFF CHECK (GAUGE)
+ - Y0032 : CHUCK TABLE 8""_VACUUM ON
+ - Y0033 : CHUCK TABLE 8""_WATER ON
+ - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
+ - Y0035 : CHUCK TABLE 12""_VACUUM ON
+ - Y0036 : CHUCK TABLE 12""_WATER ON
+ - Y0037 : CHUCK TABLE 12""_AIR BLOW ON",,,,,,,"Table 8"" Vacuum in µÇÁö ¾ÊÀ½
+ - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
+ - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
+ - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
+ - X0037 : CHUCK TABLE VACCUM #2  (12/8) OFF CHECK (GAUGE)
+ - Y0032 : CHUCK TABLE 8""_VACUUM ON
+ - Y0033 : CHUCK TABLE 8""_WATER ON
+ - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
+ - Y0035 : CHUCK TABLE 12""_VACUUM ON
+ - Y0036 : CHUCK TABLE 12""_WATER ON
+ - Y0037 : CHUCK TABLE 12""_AIR BLOW ON"
+133,310112,STAGE_1_TABLE_VACUUM_12_INCH_NOT_OFF_ERROR,"Table 8"" Vacuum in µÇÁö ¾ÊÀ½
+ - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
+ - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
+ - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
+ - X0037 : CHUCK TABLE VACCUM #2  (12/8) OFF CHECK (GAUGE)
+ - Y0032 : CHUCK TABLE 8""_VACUUM ON
+ - Y0033 : CHUCK TABLE 8""_WATER ON
+ - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
+ - Y0035 : CHUCK TABLE 12""_VACUUM ON
+ - Y0036 : CHUCK TABLE 12""_WATER ON
+ - Y0037 : CHUCK TABLE 12""_AIR BLOW ON",,,,,,,"Table 8"" Vacuum in µÇÁö ¾ÊÀ½
+ - X0034 : CHUCK TABLE VACCUM #1  (12/8) ON CHECK (GAUGE)
+ - X0035 : CHUCK TABLE VACCUM #1  (12/8) OFF CHECK (GAUGE)
+ - X0036 : CHUCK TABLE VACCUM #2  (12/8) ON CHECK (GAUGE)
+ - X0037 : CHUCK TABLE VACCUM #2  (12/8) OFF CHECK (GAUGE)
+ - Y0032 : CHUCK TABLE 8""_VACUUM ON
+ - Y0033 : CHUCK TABLE 8""_WATER ON
+ - Y0034 : CHUCK TABLE 8""_AIR BLOW ON
+ - Y0035 : CHUCK TABLE 12""_VACUUM ON
+ - Y0036 : CHUCK TABLE 12""_WATER ON
+ - Y0037 : CHUCK TABLE 12""_AIR BLOW ON"
+134,310113,STAGE_1_FRONT_NOZZLE_NOT_OPEN_ERROR,"Grind Front Nozzle Open ÀÌ ºñÁ¤»óÀÓ.
+ - Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)",,,,,,,"Grind Front Nozzle Open ÀÌ ºñÁ¤»óÀÓ.
  - Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)"
-135,310114,STAGE_1_FRONT_NOZZLE_NOT_CLOSE_ERROR,"Grind Front Nozzle Open ì´ ë¹„ì •ìƒìž„.
- - Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)",,,,,,,"Grind Front Nozzle Open ì´ ë¹„ì •ìƒìž„.
+135,310114,STAGE_1_FRONT_NOZZLE_NOT_CLOSE_ERROR,"Grind Front Nozzle Open ÀÌ ºñÁ¤»óÀÓ.
+ - Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)",,,,,,,"Grind Front Nozzle Open ÀÌ ºñÁ¤»óÀÓ.
  - Y0040 : GRIND FRONT WORK CLEAN NOZZLE ON (INNER)"
-136,310115,STAGE_1_REAR_NOZZLE_NOT_OPEN_ERROR,"Grind Rear Nozzle Open ì´ ë¹„ì •ìƒìž„.
- - Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)",,,,,,,"Grind Rear Nozzle Open ì´ ë¹„ì •ìƒìž„.
+136,310115,STAGE_1_REAR_NOZZLE_NOT_OPEN_ERROR,"Grind Rear Nozzle Open ÀÌ ºñÁ¤»óÀÓ.
+ - Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)",,,,,,,"Grind Rear Nozzle Open ÀÌ ºñÁ¤»óÀÓ.
  - Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)"
-137,310116,STAGE_1_REAR_NOZZLE_NOT_CLOSE_ERROR,"Grind Rear Nozzle Open ì´ ë¹„ì •ìƒìž„.
- - Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)",,,,,,,"Grind Rear Nozzle Open ì´ ë¹„ì •ìƒìž„.
+137,310116,STAGE_1_REAR_NOZZLE_NOT_CLOSE_ERROR,"Grind Rear Nozzle Open ÀÌ ºñÁ¤»óÀÓ.
+ - Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)",,,,,,,"Grind Rear Nozzle Open ÀÌ ºñÁ¤»óÀÓ.
  - Y0041 : GRIND REAR WORK CLEAN NOZZLE ON (ADDITIONAL)"
-138,310117,STAGE_1_HIGH_PRESSURE_NOZZLE_NOT_OPEN_ERROR,"Grind Rear High Pressure Open ì´ ë¹„ì •ìƒìž„.
- - Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY",,,,,,,"Grind Rear High Pressure Open ì´ ë¹„ì •ìƒìž„.
+138,310117,STAGE_1_HIGH_PRESSURE_NOZZLE_NOT_OPEN_ERROR,"Grind Rear High Pressure Open ÀÌ ºñÁ¤»óÀÓ.
+ - Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY",,,,,,,"Grind Rear High Pressure Open ÀÌ ºñÁ¤»óÀÓ.
  - Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY"
-139,310118,STAGE_1_HIGH_PRESSURE_NOZZLE_NOT_CLOSE_ERROR,"Grind Rear High Pressure Open ì´ ë¹„ì •ìƒìž„.
- - Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY",,,,,,,"Grind Rear High Pressure Open ì´ ë¹„ì •ìƒìž„.
+139,310118,STAGE_1_HIGH_PRESSURE_NOZZLE_NOT_CLOSE_ERROR,"Grind Rear High Pressure Open ÀÌ ºñÁ¤»óÀÓ.
+ - Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY",,,,,,,"Grind Rear High Pressure Open ÀÌ ºñÁ¤»óÀÓ.
  - Y0042 : GRIND WHEEL TIP CLEAN NOZZLE ON (HIGH PRESSURE) RELAY"
-140,310119,STAGE_1_WAFER_LOAD_THICKNESS_LOW_ERROR,"Wafer ì¸¡ì • ë‘ê»˜ê°€ Parameter ì˜ ìž…ë ¥ê°’ ë³´ë‹¤ 0.5[mm] ì´ìƒ ìž‘ì„ë•Œ
- - IPG ì¸¡ì • ê°’ ë° Parameter ìž…ë ¥ê°’ í™•ì¸ í•„ìš”",,,,,,,"Wafer ì¸¡ì • ë‘ê»˜ê°€ Parameter ì˜ ìž…ë ¥ê°’ ë³´ë‹¤ 0.5[mm] ì´ìƒ ìž‘ì„ë•Œ
- - IPG ì¸¡ì • ê°’ ë° Parameter ìž…ë ¥ê°’ í™•ì¸ í•„ìš”"
-141,310120,STAGE_1_WAFER_N_IPGBASE_DIFF_VALUE_LOW_ERROR,"Wafer ì™€ IPG Base ë†’ì´ ì°¨ì´ ê°€ 0.5[mm] ì´í•˜ ì¼ë•Œ
- - IPG ì¸¡ì • ê°’ ë° Parameter ìž…ë ¥ê°’ í™•ì¸ í•„ìš”",,,,,,,"Wafer ì™€ IPG Base ë†’ì´ ì°¨ì´ ê°€ 0.5[mm] ì´í•˜ ì¼ë•Œ
- - IPG ì¸¡ì • ê°’ ë° Parameter ìž…ë ¥ê°’ í™•ì¸ í•„ìš”"
+140,310119,STAGE_1_WAFER_LOAD_THICKNESS_LOW_ERROR,"Wafer ÃøÁ¤ µÎ²²°¡ Parameter ÀÇ ÀÔ·Â°ª º¸´Ù 0.5[mm] ÀÌ»ó ÀÛÀ»¶§
+ - IPG ÃøÁ¤ °ª ¹× Parameter ÀÔ·Â°ª È®ÀÎ ÇÊ¿ä",,,,,,,"Wafer ÃøÁ¤ µÎ²²°¡ Parameter ÀÇ ÀÔ·Â°ª º¸´Ù 0.5[mm] ÀÌ»ó ÀÛÀ»¶§
+ - IPG ÃøÁ¤ °ª ¹× Parameter ÀÔ·Â°ª È®ÀÎ ÇÊ¿ä"
+141,310120,STAGE_1_WAFER_N_IPGBASE_DIFF_VALUE_LOW_ERROR,"Wafer ¿Í IPG Base ³ôÀÌ Â÷ÀÌ °¡ 0.5[mm] ÀÌÇÏ ÀÏ¶§
+ - IPG ÃøÁ¤ °ª ¹× Parameter ÀÔ·Â°ª È®ÀÎ ÇÊ¿ä",,,,,,,"Wafer ¿Í IPG Base ³ôÀÌ Â÷ÀÌ °¡ 0.5[mm] ÀÌÇÏ ÀÏ¶§
+ - IPG ÃøÁ¤ °ª ¹× Parameter ÀÔ·Â°ª È®ÀÎ ÇÊ¿ä"
 142,310121,STAGE_1_WAFER_ERROR,,,,,,,,
-143,310122,STAGE_1_WAFER_IS_EXIST,Table clean ì§„í–‰ì‹œ Wafer ê°€ ìžˆëŠ” ìƒí™©ìœ¼ë¡œ Wafer ì œê±° í›„ ì§„í–‰ í•„ìš”.,,,,,,,Table clean ì§„í–‰ì‹œ Wafer ê°€ ìžˆëŠ” ìƒí™©ìœ¼ë¡œ Wafer ì œê±° í›„ ì§„í–‰ í•„ìš”.
-144,310123,STAGE_1_WAFER_IS_NOT_EXIST,Wafer clean ì§„í–‰ì‹œ Wafer ê°€ ì—†ëŠ” ìƒí™©ìœ¼ë¡œ Wafer íˆ¬ìž… í›„ ì§„í–‰ í•„ìš”.,,,,,,,Wafer clean ì§„í–‰ì‹œ Wafer ê°€ ì—†ëŠ” ìƒí™©ìœ¼ë¡œ Wafer íˆ¬ìž… í›„ ì§„í–‰ í•„ìš”.
-145,310124,STAGE_1_REGENERATIVE_RESISTANCE_THERMAL_CHECK_ERROR,"íšŒìƒì €í•­ì˜ amarl ë°œìƒ
- - X0013 : Regeerative Registance ì˜¨ë„ CHECK (NC)",,,,,,,"íšŒìƒì €í•­ì˜ amarl ë°œìƒ
- - X0013 : Regeerative Registance ì˜¨ë„ CHECK (NC)"
+143,310122,STAGE_1_WAFER_IS_EXIST,Table clean ÁøÇà½Ã Wafer °¡ ÀÖ´Â »óÈ²À¸·Î Wafer Á¦°Å ÈÄ ÁøÇà ÇÊ¿ä.,,,,,,,Table clean ÁøÇà½Ã Wafer °¡ ÀÖ´Â »óÈ²À¸·Î Wafer Á¦°Å ÈÄ ÁøÇà ÇÊ¿ä.
+144,310123,STAGE_1_WAFER_IS_NOT_EXIST,Wafer clean ÁøÇà½Ã Wafer °¡ ¾ø´Â »óÈ²À¸·Î Wafer ÅõÀÔ ÈÄ ÁøÇà ÇÊ¿ä.,,,,,,,Wafer clean ÁøÇà½Ã Wafer °¡ ¾ø´Â »óÈ²À¸·Î Wafer ÅõÀÔ ÈÄ ÁøÇà ÇÊ¿ä.
+145,310124,STAGE_1_REGENERATIVE_RESISTANCE_THERMAL_CHECK_ERROR,"È¸»ýÀúÇ×ÀÇ amarl ¹ß»ý
+ - X0013 : Regeerative Registance ¿Âµµ CHECK (NC)",,,,,,,"È¸»ýÀúÇ×ÀÇ amarl ¹ß»ý
+ - X0013 : Regeerative Registance ¿Âµµ CHECK (NC)"
 146,310125,STAG1_ERROR_END,,,,,,,,
 147,310126,STAG2_ERROR,,,,,,,,
 148,310127,STAGE_2_SERVO_ON_TIMEOUT_ERROR,,,,,,,,

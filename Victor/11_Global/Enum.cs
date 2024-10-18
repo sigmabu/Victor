@@ -52,7 +52,29 @@ public enum eSerial
     Flow_Control = 6,
     End
 }
-
+public enum eErrorListGrid
+{
+    No = 0,
+    ErrCode = 1,
+    Part = 2,
+    Name = 3,
+    End
+}
+public enum eErrorArray
+{
+    No = 0,
+    Code = 1,
+    Name = 2,
+    Image = 3,
+    Action = 4,
+    Name_En = 5,
+    Action_En = 6,
+    Name_Ch = 7,
+    Action_Ch = 8,
+    Name_Kr = 9,
+    Action_Kr = 10,
+    End
+}
 public enum eIOListGrid
 {
     Label = 0,

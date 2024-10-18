@@ -43,6 +43,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_Menu = new System.Windows.Forms.Panel();
+            this.btn_ErrorList = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -95,6 +96,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_ErrorList);
             this.panel1.Controls.Add(this.btn_IOList);
             this.panel1.Controls.Add(this.btn_Network);
             this.panel1.Controls.Add(this.btn_Serial);
@@ -112,7 +114,7 @@
             this.btn_IOList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_IOList.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btn_IOList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_IOList.Location = new System.Drawing.Point(31, 232);
+            this.btn_IOList.Location = new System.Drawing.Point(31, 218);
             this.btn_IOList.Name = "btn_IOList";
             this.btn_IOList.Size = new System.Drawing.Size(323, 50);
             this.btn_IOList.TabIndex = 2;
@@ -258,6 +260,23 @@
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 454;
             // 
+            // btn_ErrorList
+            // 
+            this.btn_ErrorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_ErrorList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btn_ErrorList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ErrorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_ErrorList.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_ErrorList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_ErrorList.Location = new System.Drawing.Point(31, 288);
+            this.btn_ErrorList.Name = "btn_ErrorList";
+            this.btn_ErrorList.Size = new System.Drawing.Size(323, 50);
+            this.btn_ErrorList.TabIndex = 2;
+            this.btn_ErrorList.Tag = "315";
+            this.btn_ErrorList.Text = "Error List";
+            this.btn_ErrorList.UseVisualStyleBackColor = false;
+            this.btn_ErrorList.Click += new System.EventHandler(this.Click_OptionButton);
+            // 
             // vwMaint
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -299,5 +318,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel pnl_Menu;
         private System.Windows.Forms.Button btn_IOList;
+        private System.Windows.Forms.Button btn_ErrorList;
     }
 }

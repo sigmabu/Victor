@@ -115,6 +115,12 @@
     <Compile Include="01_View\02_Recipe\vw02RecipeULoader.Designer.cs">
       <DependentUpon>vw02RecipeULoader.cs</DependentUpon>
     </Compile>
+    <Compile Include="01_View\03_Maint\vwErrorList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\03_Maint\vwErrorList.Designer.cs">
+      <DependentUpon>vwErrorList.cs</DependentUpon>
+    </Compile>
     <Compile Include="01_View\03_Maint\vwEthernet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,7 +180,8 @@
     <Compile Include="13_Util\DoubleBuff.cs" />
     <Compile Include="13_Util\IniFile.cs" />
     <Compile Include="13_Util\Utils.cs" />
-    <Compile Include="15_HW\IODef\IO_Def.cs" />
+    <Compile Include="19_Data\ErrorDef\ErrDefine.cs" />
+    <Compile Include="19_Data\IODef\IO_Def.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\02_Recipe\vw02RecipeULoader.resx">
       <DependentUpon>vw02RecipeULoader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\03_Maint\vwErrorList.resx">
+      <DependentUpon>vwErrorList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\03_Maint\vwEthernet.resx">
       <DependentUpon>vwEthernet.cs</DependentUpon>
