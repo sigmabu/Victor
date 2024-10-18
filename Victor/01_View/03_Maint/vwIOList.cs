@@ -2,18 +2,11 @@
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using System.Net;
-using System.Net.Sockets;
 using System.IO;
-using System.Threading;
-using System.Runtime.CompilerServices;
-using System.Runtime.Remoting.Contexts;
-using System.Runtime.InteropServices;
 using System.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ExplorerBar;
 using System.Drawing;
-using System.Xml.Linq;
-
+using System.Runtime.CompilerServices;
+using System.Reflection;
 
 namespace Victor
 {
@@ -46,10 +39,14 @@ namespace Victor
 
         private void Init_Grid_Set()
         {
+            dGV_InputList.DoubleBuffered_DataGridView(true);
+            dGV_OutputList.DoubleBuffered_DataGridView(true);
+
             dGV_InputList.Columns[(int)eIOListGrid.Label].Width     = dGV_OutputList.Columns[(int)eIOListGrid.Label].Width  = 70;
             dGV_InputList.Columns[(int)eIOListGrid.Name].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Name].Width   = 380;
             dGV_InputList.Columns[(int)eIOListGrid.Coil].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Coil].Width   = 45;
             dGV_InputList.Columns[(int)eIOListGrid.Part].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Part].Width   = 100;
+
         }
         private void Init_Timer()
         {
@@ -77,11 +74,7 @@ namespace Victor
             Read_File_IOList();
             dGV_IOList_SelNum(false);
         }
-
-        string EnumToString(eRecipGroup eGroup)
-        {
-            return eGroup.ToString();
-        }
+               
 
         public void Open()
         {

@@ -171,8 +171,10 @@
     <Compile Include="12_File\CRecipe.cs" />
     <Compile Include="12_File\SingleTone.cs" />
     <Compile Include="13_Util\CCsv.cs" />
+    <Compile Include="13_Util\DoubleBuff.cs" />
     <Compile Include="13_Util\IniFile.cs" />
     <Compile Include="13_Util\Utils.cs" />
+    <Compile Include="15_HW\IODef\IO_Def.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +276,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="01_View\02_Recipe\01_Gerber\" />
+    <Folder Include="14_Driver\01_Motion\" />
+    <Folder Include="14_Driver\02_IO\" />
+    <Folder Include="14_Driver\03_Bank\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
