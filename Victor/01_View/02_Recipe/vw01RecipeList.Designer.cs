@@ -239,7 +239,7 @@
             // 
             // pnl_Menu
             // 
-            this.pnl_Menu.BackColor = System.Drawing.Color.Black;
+            this.pnl_Menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_Menu.Controls.Add(this.pnl_Btn);
             this.pnl_Menu.Controls.Add(this.pnlM_List);
             this.pnl_Menu.Controls.Add(this.pnlM_Grp);

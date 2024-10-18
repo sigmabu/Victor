@@ -34,6 +34,7 @@ namespace Victor
         {
             InitializeComponent();
             Init_View_Set();
+            Init_Grid_Set();
             Init_Timer();
         }
 
@@ -41,6 +42,14 @@ namespace Victor
         {            
 
             return true;
+        }
+
+        private void Init_Grid_Set()
+        {
+            dGV_InputList.Columns[(int)eIOListGrid.Label].Width     = dGV_OutputList.Columns[(int)eIOListGrid.Label].Width  = 70;
+            dGV_InputList.Columns[(int)eIOListGrid.Name].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Name].Width   = 380;
+            dGV_InputList.Columns[(int)eIOListGrid.Coil].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Coil].Width   = 45;
+            dGV_InputList.Columns[(int)eIOListGrid.Part].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Part].Width   = 100;
         }
         private void Init_Timer()
         {
@@ -191,12 +200,10 @@ namespace Victor
             return 0;
         }
 
-
         
         private void Click_Open(object sender, EventArgs e)
         {
             Read_File_IOList();
-            //Display_File_SerialConfig();
 
         }
 

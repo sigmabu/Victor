@@ -117,14 +117,14 @@
             // 
             // pnl_Base
             // 
-            this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             resources.ApplyResources(this.pnl_Base, "pnl_Base");
             this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Base.Name = "pnl_Base";
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.lbl_Main);
             this.panel6.Controls.Add(this.label3);
@@ -145,7 +145,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.lblMessage);
             this.panel5.Controls.Add(this.label19);
@@ -175,7 +175,7 @@
             // 
             // pnlRecipe
             // 
-            this.pnlRecipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.pnlRecipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnlRecipe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlRecipe.Controls.Add(this.lbl_RecipeGroup);
             this.pnlRecipe.Controls.Add(this.lblRecipeName);
@@ -211,7 +211,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.lblInformation);
             this.panel4.Controls.Add(this.lblError);
@@ -282,7 +282,7 @@
             // 
             // pnl_mather
             // 
-            this.pnl_mather.BackColor = System.Drawing.Color.Black;
+            this.pnl_mather.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_mather.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_mather.Controls.Add(this.pb_Login);
             this.pnl_mather.Controls.Add(this.pb_CI);

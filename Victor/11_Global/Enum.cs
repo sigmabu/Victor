@@ -1520,6 +1520,14 @@ public enum eSerial
     End
 }
 
+public enum eIOListGrid
+{
+    Label = 0,
+    Name = 1,
+    Coil = 2,
+    Part = 3,
+    End
+}
 public enum eIOArray
 {
     Label = 0,
