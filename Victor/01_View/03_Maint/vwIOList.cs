@@ -39,8 +39,8 @@ namespace Victor
 
         private void Init_Grid_Set()
         {
-            dGV_InputList.DoubleBuffered_DataGridView(true);
-            dGV_OutputList.DoubleBuffered_DataGridView(true);
+            dGV_InputList.DoubleBuffered(true);
+            dGV_OutputList.DoubleBuffered(true);
 
             dGV_InputList.Columns[(int)eIOListGrid.Label].Width     = dGV_OutputList.Columns[(int)eIOListGrid.Label].Width  = 70;
             dGV_InputList.Columns[(int)eIOListGrid.Name].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Name].Width   = 380;
