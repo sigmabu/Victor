@@ -249,19 +249,19 @@ namespace Victor
                     (line.Contains(",") == false) ||
                     string.IsNullOrEmpty(line))
                 {
-                    Console.WriteLine($"문자가 없는 라인 또는 EOF 라인 {line}");
+                    //Console.WriteLine($"문자가 없는 라인 또는 EOF 라인 {line}");
                 }
                 else if (line.Contains(eIo_kind.ToString()) == false)
                 {
-                    Console.WriteLine($"0.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
+                    //Console.WriteLine($"0.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
                 }
                 else if ((line.IndexOf("X".ToUpper())  == 0) && (eIo_kind == eIO_Kind.Out))
                 {
-                    Console.WriteLine($"1.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
+                    //Console.WriteLine($"1.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
                 }
                 else if ((line.IndexOf("Y".ToUpper()) == 0) && (eIo_kind == eIO_Kind.In))
                 {
-                    Console.WriteLine($"2.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
+                    //Console.WriteLine($"2.해당 InOut List 아니면 Skip : {line} => {eIo_kind.ToString()}");
                 }
                 else
                 {

@@ -141,9 +141,9 @@ public struct mErrorList
     public string sNo;
     public string sCode;
     public string sName;
-
-    public string sImage;
     public string sAction;
+    public string sImage;
+
     public string sName_En;
     public string sAction_En;
     public string sName_Ch;

@@ -64,8 +64,9 @@ public enum eErrorArray
     No = 0,
     Code = 1,
     Name = 2,
-    Image = 3,
-    Action = 4,
+    Action = 3,
+    Image = 4,
+
     Name_En = 5,
     Action_En = 6,
     Name_Ch = 7,
