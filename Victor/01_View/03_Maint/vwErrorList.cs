@@ -62,6 +62,8 @@ namespace Victor
 
             dGV_ErrorList.Columns[(int)eErrorListGrid.Name].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
+            dGV_ErrorList.ReadOnly = true;
+
         }
         private void Init_Timer()
         {
@@ -76,8 +78,7 @@ namespace Victor
             nEnable_Edit = 0;
             Btn_Output_Set();
 
-            nSelRow = 0;
-            dGV_ErrorList.ReadOnly = true;
+            nSelRow = 0;            
 
             sErrorListPath = GVar.PATH_EQUIP_ErrorList;
             int FindDot = sErrorListPath.LastIndexOf(".");
@@ -105,18 +106,18 @@ namespace Victor
             switch (mViewPage.nMaintPage)
             {
                 case 0:
-                    Read_File_ErroList();
+                    //Read_File_ErroList();
 
                     break;
                 case 312:
-                    Read_File_ErroList();
+                    //Read_File_ErroList();
                     break;
                 case 314:
                     Init_View_Set();
 
                     break;
                 case 315:
-                    Init_View_Set();
+                    //Init_View_Set();
 
                     break;
                 default: break;
