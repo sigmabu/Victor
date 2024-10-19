@@ -138,7 +138,6 @@ public struct mIOList
 
 public struct mErrorList
 {
-    public string sNo;
     public string sCode;
     public string sName;
     public string sAction;

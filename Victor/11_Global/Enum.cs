@@ -54,25 +54,23 @@ public enum eSerial
 }
 public enum eErrorListGrid
 {
-    No = 0,
-    ErrCode = 1,
-    Name = 2,
+    ErrCode = 0,
+    Name = 1,
     End
 }
 public enum eErrorArray
 {
-    No = 0,
-    Code = 1,
-    Name = 2,
-    Action = 3,
-    Image = 4,
+    Code = 0,
+    Name = 1,
+    Action = 2,
+    Image = 3,
 
-    Name_En = 5,
-    Action_En = 6,
-    Name_Ch = 7,
-    Action_Ch = 8,
-    Name_Kr = 9,
-    Action_Kr = 10,
+    Name_En = 4,
+    Action_En = 5,
+    Name_Ch = 6,
+    Action_Ch = 7,
+    Name_Kr = 8,
+    Action_Kr = 9,
     End
 }
 public enum eIOListGrid

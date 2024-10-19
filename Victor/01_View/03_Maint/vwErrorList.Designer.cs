@@ -77,7 +77,7 @@
             // 
             // pb_Image
             // 
-            this.pb_Image.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(100)))));
+            this.pb_Image.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pb_Image.Location = new System.Drawing.Point(91, 25);
             this.pb_Image.Name = "pb_Image";
             this.pb_Image.Size = new System.Drawing.Size(448, 336);
@@ -103,7 +103,7 @@
             this.groupBox2.Size = new System.Drawing.Size(630, 376);
             this.groupBox2.TabIndex = 463;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Output List ";
+            this.groupBox2.Text = "Error Detail";
             // 
             // rTB_ErrorCause
             // 
@@ -115,6 +115,8 @@
             // 
             // rTB_ErrTitle
             // 
+            this.rTB_ErrTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rTB_ErrTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.rTB_ErrTitle.Location = new System.Drawing.Point(12, 29);
             this.rTB_ErrTitle.Name = "rTB_ErrTitle";
             this.rTB_ErrTitle.Size = new System.Drawing.Size(488, 30);
@@ -190,6 +192,7 @@
             this.dGV_ErrorList.Size = new System.Drawing.Size(616, 731);
             this.dGV_ErrorList.TabIndex = 457;
             this.dGV_ErrorList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_ErrorList_CellClick);
+            this.dGV_ErrorList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // vwErrorList
             // 
