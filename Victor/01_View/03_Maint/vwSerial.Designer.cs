@@ -356,6 +356,8 @@
             // 
             this.dGV_SerialList.AllowUserToAddRows = false;
             this.dGV_SerialList.AllowUserToDeleteRows = false;
+            this.dGV_SerialList.AllowUserToResizeColumns = false;
+            this.dGV_SerialList.AllowUserToResizeRows = false;
             this.dGV_SerialList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGV_SerialList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dGV_SerialList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;

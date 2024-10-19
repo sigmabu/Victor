@@ -209,6 +209,10 @@ namespace Victor
 
         private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            foreach (DataGridViewColumn item in dGV_SerialList.Columns)
+            {
+                item.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
             dGV_SerialList_SelNum(true);
         }
         private void dGV_SerialList_SelNum(bool bsel = false)

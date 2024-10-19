@@ -414,6 +414,8 @@
             // 
             this.dGV_EthernetList.AllowUserToAddRows = false;
             this.dGV_EthernetList.AllowUserToDeleteRows = false;
+            this.dGV_EthernetList.AllowUserToResizeColumns = false;
+            this.dGV_EthernetList.AllowUserToResizeRows = false;
             this.dGV_EthernetList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dGV_EthernetList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dGV_EthernetList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;

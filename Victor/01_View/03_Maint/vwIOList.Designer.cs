@@ -29,7 +29,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -44,7 +43,6 @@
             this.btn_Output = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dGV_InputList = new System.Windows.Forms.DataGridView();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.Pnl_Item.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_OutputList)).BeginInit();
@@ -78,6 +76,8 @@
             // 
             this.dGV_OutputList.AllowUserToAddRows = false;
             this.dGV_OutputList.AllowUserToDeleteRows = false;
+            this.dGV_OutputList.AllowUserToResizeColumns = false;
+            this.dGV_OutputList.AllowUserToResizeRows = false;
             this.dGV_OutputList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.dGV_OutputList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGV_OutputList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -150,6 +150,8 @@
             // 
             this.dGV_InputList.AllowUserToAddRows = false;
             this.dGV_InputList.AllowUserToDeleteRows = false;
+            this.dGV_InputList.AllowUserToResizeColumns = false;
+            this.dGV_InputList.AllowUserToResizeRows = false;
             this.dGV_InputList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.dGV_InputList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dGV_InputList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -161,7 +163,8 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dGV_InputList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dGV_InputList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGV_InputList.ColumnHeadersHeight = 34;
+            this.dGV_InputList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -214,7 +217,6 @@
         private System.Windows.Forms.Panel Pnl_Item;
         private System.Windows.Forms.DataGridView dGV_InputList;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.DataGridView dGV_OutputList;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btn_Output;

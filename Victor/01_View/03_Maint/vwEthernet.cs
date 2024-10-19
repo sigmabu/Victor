@@ -342,6 +342,10 @@ namespace Victor
 
         private void dGV_EthernetList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            foreach (DataGridViewColumn item in dGV_EthernetList.Columns)
+            {
+                item.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
             dGV_EthernetList_SelNum(true);
         }
         private void dGV_EthernetList_SelNum(bool bsel = false)

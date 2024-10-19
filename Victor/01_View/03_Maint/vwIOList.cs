@@ -47,6 +47,10 @@ namespace Victor
             dGV_InputList.Columns[(int)eIOListGrid.Coil].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Coil].Width   = 45;
             dGV_InputList.Columns[(int)eIOListGrid.Part].Width      = dGV_OutputList.Columns[(int)eIOListGrid.Part].Width   = 100;
 
+            dGV_InputList.RowTemplate.Height = dGV_OutputList.RowTemplate.Height =  30;
+
+            dGV_InputList.ReadOnly = dGV_OutputList.ReadOnly = true;
+
         }
         private void Init_Timer()
         {
