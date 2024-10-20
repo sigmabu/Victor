@@ -161,6 +161,7 @@ class mViewPage
     public static int nViewMaintEthernet_313 { get { return 313; } set { } }
     public static int nViewMaintIOList_314 { get { return 314; } set { } }
     public static int nViewMaintErrorList_315 { get { return 315; } set { } }
+    public static int nViewMaintMotorList_316 { get { return 315; } set { } }
 
     public static int nRcpPage { get; set; }
 

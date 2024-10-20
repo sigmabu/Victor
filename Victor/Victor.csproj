@@ -146,6 +146,12 @@
     <Compile Include="01_View\03_Maint\vwMaint.Designer.cs">
       <DependentUpon>vwMaint.cs</DependentUpon>
     </Compile>
+    <Compile Include="01_View\03_Maint\vwMotorLIst.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\03_Maint\vwMotorList.Designer.cs">
+      <DependentUpon>vwMotorLIst.cs</DependentUpon>
+    </Compile>
     <Compile Include="01_View\03_Maint\vwSerial.cs">
       <SubType>UserControl</SubType>
     </Compile>

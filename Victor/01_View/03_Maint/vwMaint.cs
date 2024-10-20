@@ -11,6 +11,7 @@ namespace Victor
         private vwEthernet m_vwEthernet = new vwEthernet();
         private vwIOList m_vwIOList = new vwIOList();
         private vwErrorList m_vwErrorList = new vwErrorList();
+        private vwMotorList m_vwMotorList = new vwMotorList();
         public vwMaint()
         {
             InitializeComponent();
@@ -64,6 +65,14 @@ namespace Victor
                 case 314:
                     m_vwIOList.Close();
                     pnl_Menu.Controls.Remove(m_vwIOList);
+                    break;
+                case 315:
+                    m_vwErrorList.Close();
+                    pnl_Menu.Controls.Remove(m_vwErrorList);
+                    break;
+                case 316:
+                    m_vwMotorList.Close();
+                    pnl_Menu.Controls.Remove(m_vwMotorList);
                     break;
                 default: break;
             }
@@ -125,6 +134,15 @@ namespace Victor
                     GVar.m_iPage = mViewPage.nViewMaintErrorList_315;
                     mViewPage.nMaintPage = mViewPage.nViewMaintErrorList_315;
                     m_vwErrorList.Open();
+
+                    break;
+                case 316:
+
+                    pnl_Menu.Controls.Add(m_vwMotorList);
+                    m_vwMotorList.Location = new Point(0, 32);
+                    GVar.m_iPage = mViewPage.nViewMaintMotorList_316;
+                    mViewPage.nMaintPage = mViewPage.nViewMaintMotorList_316;
+                    m_vwMotorList.Open();
 
                     break;
             }
