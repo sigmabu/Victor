@@ -523,29 +523,43 @@ namespace Victor
             dGV_ErrorList_SelNum(true);
         }
 
+
         private new void KeyDown(object sender, KeyEventArgs e)
         {
             DataGridViewRow row = dGV_ErrorList.SelectedRows[0];
+            int nColCnt = dGV_ErrorList.RowCount;
             int nIndex = row.Index;
+            int nNewIndex = 0;
 
-            if (e.KeyCode.Equals(Keys.Up))
+            switch (e.KeyCode)
             {
-                dGV_ErrorList.CurrentCell = null;
-                var row0 = dGV_ErrorList.Rows[nIndex];
-                row0.Selected = true;
-                dGV_ErrorList.CurrentCell = row0.Cells[0];
-            }
-            if(e.KeyCode.Equals(Keys.Down))
-            {
-                dGV_ErrorList.CurrentCell = null;
-                var row1 = dGV_ErrorList.Rows[nIndex];
-                row1.Selected = true;
-                dGV_ErrorList.CurrentCell = row1.Cells[0];
-            }
-            row = dGV_ErrorList.SelectedRows[0];
-            int nNewIndex = row.Index;
+                case Keys.Up:
+                    if (nIndex == 0)
+                    {
+                        nNewIndex = 1;
+                    }
+                    else
+                    {
+                        dGV_ErrorList.CurrentCell = null;
+                        var row0 = dGV_ErrorList.Rows[nIndex];
+                        row0.Selected = true;
+                        dGV_ErrorList.CurrentCell = row0.Cells[0];
+                        nNewIndex = row0.Index;
+                    }
 
+                    break;
+                case Keys.Down:
+
+                    dGV_ErrorList.CurrentCell = null;
+                    var row1 = dGV_ErrorList.Rows[nIndex];
+                    row1.Selected = true;
+                    dGV_ErrorList.CurrentCell = row1.Cells[0];
+                    nNewIndex = row1.Index + 2;
+                    break;
+                default:
+                    break;
+            }
             dGV_ErrorList_SelNum(nNewIndex);
-        }
+        }   
     }
 }
