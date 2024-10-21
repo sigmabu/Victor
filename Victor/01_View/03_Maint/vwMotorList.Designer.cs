@@ -60,6 +60,7 @@
             this.lb_Parity = new System.Windows.Forms.Label();
             this.dGV_SerialList = new System.Windows.Forms.DataGridView();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.prgJson = new System.Windows.Forms.PropertyGrid();
             this.Pnl_Item.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_SerialList)).BeginInit();
@@ -116,6 +117,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.prgJson);
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.btn_Close);
             this.groupBox1.Controls.Add(this.btn_Open);
@@ -177,7 +179,7 @@
             this.btn_Open.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.btn_Open.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Open.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.btn_Open.Location = new System.Drawing.Point(199, 131);
+            this.btn_Open.Location = new System.Drawing.Point(511, 200);
             this.btn_Open.Name = "btn_Open";
             this.btn_Open.Size = new System.Drawing.Size(115, 48);
             this.btn_Open.TabIndex = 463;
@@ -202,7 +204,7 @@
             // 
             this.tb_No.Location = new System.Drawing.Point(88, 0);
             this.tb_No.Name = "tb_No";
-            this.tb_No.Size = new System.Drawing.Size(87, 35);
+            this.tb_No.Size = new System.Drawing.Size(87, 26);
             this.tb_No.TabIndex = 461;
             // 
             // cb_Stop
@@ -211,7 +213,7 @@
             this.cb_Stop.FormattingEnabled = true;
             this.cb_Stop.Location = new System.Drawing.Point(255, 82);
             this.cb_Stop.Name = "cb_Stop";
-            this.cb_Stop.Size = new System.Drawing.Size(68, 37);
+            this.cb_Stop.Size = new System.Drawing.Size(68, 28);
             this.cb_Stop.TabIndex = 462;
             // 
             // cb_Parity
@@ -220,7 +222,7 @@
             this.cb_Parity.FormattingEnabled = true;
             this.cb_Parity.Location = new System.Drawing.Point(333, 82);
             this.cb_Parity.Name = "cb_Parity";
-            this.cb_Parity.Size = new System.Drawing.Size(68, 37);
+            this.cb_Parity.Size = new System.Drawing.Size(68, 28);
             this.cb_Parity.TabIndex = 462;
             // 
             // cb_Data
@@ -229,7 +231,7 @@
             this.cb_Data.FormattingEnabled = true;
             this.cb_Data.Location = new System.Drawing.Point(176, 81);
             this.cb_Data.Name = "cb_Data";
-            this.cb_Data.Size = new System.Drawing.Size(68, 37);
+            this.cb_Data.Size = new System.Drawing.Size(68, 28);
             this.cb_Data.TabIndex = 462;
             // 
             // cb_Baud
@@ -238,14 +240,14 @@
             this.cb_Baud.FormattingEnabled = true;
             this.cb_Baud.Location = new System.Drawing.Point(93, 81);
             this.cb_Baud.Name = "cb_Baud";
-            this.cb_Baud.Size = new System.Drawing.Size(68, 37);
+            this.cb_Baud.Size = new System.Drawing.Size(68, 28);
             this.cb_Baud.TabIndex = 462;
             // 
             // tb_Name
             // 
             this.tb_Name.Location = new System.Drawing.Point(19, 82);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(68, 35);
+            this.tb_Name.Size = new System.Drawing.Size(68, 26);
             this.tb_Name.TabIndex = 461;
             // 
             // radio_Save
@@ -259,7 +261,7 @@
             this.radio_Save.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.radio_Save.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radio_Save.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radio_Save.Location = new System.Drawing.Point(535, 69);
+            this.radio_Save.Location = new System.Drawing.Point(507, 59);
             this.radio_Save.Margin = new System.Windows.Forms.Padding(0);
             this.radio_Save.Name = "radio_Save";
             this.radio_Save.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
@@ -283,7 +285,7 @@
             // 
             this.rTB_Write.Location = new System.Drawing.Point(23, 185);
             this.rTB_Write.Name = "rTB_Write";
-            this.rTB_Write.Size = new System.Drawing.Size(533, 381);
+            this.rTB_Write.Size = new System.Drawing.Size(398, 35);
             this.rTB_Write.TabIndex = 460;
             this.rTB_Write.Text = "Write Data List";
             // 
@@ -293,7 +295,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label3.Location = new System.Drawing.Point(678, 148);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(232, 46);
+            this.label3.Size = new System.Drawing.Size(158, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "Read Data  ";
             // 
@@ -303,7 +305,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label2.Location = new System.Drawing.Point(25, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(230, 46);
+            this.label2.Size = new System.Drawing.Size(156, 31);
             this.label2.TabIndex = 0;
             this.label2.Text = "Write Data  ";
             // 
@@ -312,7 +314,7 @@
             this.lb_Data.AutoSize = true;
             this.lb_Data.Location = new System.Drawing.Point(177, 58);
             this.lb_Data.Name = "lb_Data";
-            this.lb_Data.Size = new System.Drawing.Size(96, 29);
+            this.lb_Data.Size = new System.Drawing.Size(67, 20);
             this.lb_Data.TabIndex = 0;
             this.lb_Data.Text = "Data Bit";
             // 
@@ -321,7 +323,7 @@
             this.lb_Baud.AutoSize = true;
             this.lb_Baud.Location = new System.Drawing.Point(84, 58);
             this.lb_Baud.Name = "lb_Baud";
-            this.lb_Baud.Size = new System.Drawing.Size(125, 29);
+            this.lb_Baud.Size = new System.Drawing.Size(86, 20);
             this.lb_Baud.TabIndex = 0;
             this.lb_Baud.Text = "Baud Rate";
             // 
@@ -330,7 +332,7 @@
             this.lb_Stop.AutoSize = true;
             this.lb_Stop.Location = new System.Drawing.Point(256, 59);
             this.lb_Stop.Name = "lb_Stop";
-            this.lb_Stop.Size = new System.Drawing.Size(97, 29);
+            this.lb_Stop.Size = new System.Drawing.Size(66, 20);
             this.lb_Stop.TabIndex = 0;
             this.lb_Stop.Text = "Stop Bit";
             // 
@@ -339,7 +341,7 @@
             this.lb_ComPort.AutoSize = true;
             this.lb_ComPort.Location = new System.Drawing.Point(28, 58);
             this.lb_ComPort.Name = "lb_ComPort";
-            this.lb_ComPort.Size = new System.Drawing.Size(78, 29);
+            this.lb_ComPort.Size = new System.Drawing.Size(51, 20);
             this.lb_ComPort.TabIndex = 0;
             this.lb_ComPort.Text = "Name";
             // 
@@ -348,7 +350,7 @@
             this.lb_Parity.AutoSize = true;
             this.lb_Parity.Location = new System.Drawing.Point(332, 59);
             this.lb_Parity.Name = "lb_Parity";
-            this.lb_Parity.Size = new System.Drawing.Size(107, 29);
+            this.lb_Parity.Size = new System.Drawing.Size(71, 20);
             this.lb_Parity.TabIndex = 0;
             this.lb_Parity.Text = "Parity Bit";
             // 
@@ -378,7 +380,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dGV_SerialList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dGV_SerialList.Location = new System.Drawing.Point(12, 14);
+            this.dGV_SerialList.Location = new System.Drawing.Point(484, 77);
             this.dGV_SerialList.Name = "dGV_SerialList";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
@@ -394,9 +396,16 @@
             this.dGV_SerialList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dGV_SerialList.RowTemplate.Height = 23;
             this.dGV_SerialList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dGV_SerialList.Size = new System.Drawing.Size(1257, 125);
+            this.dGV_SerialList.Size = new System.Drawing.Size(785, 62);
             this.dGV_SerialList.TabIndex = 457;
             this.dGV_SerialList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dGV_SerialList_CellClick);
+            // 
+            // prgJson
+            // 
+            this.prgJson.Location = new System.Drawing.Point(32, 240);
+            this.prgJson.Name = "prgJson";
+            this.prgJson.Size = new System.Drawing.Size(524, 326);
+            this.prgJson.TabIndex = 464;
             // 
             // vwMotorList
             // 
@@ -445,5 +454,6 @@
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Button btn_Open;
         private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.PropertyGrid prgJson;
     }
 }

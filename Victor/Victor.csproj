@@ -60,6 +60,9 @@
     </Reference>
     <Reference Include="Microsoft.Build.Tasks.v4.0" />
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
@@ -238,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\03_Maint\vwMaint.resx">
       <DependentUpon>vwMaint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01_View\03_Maint\vwMotorList.resx">
+      <DependentUpon>vwMotorLIst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="01_View\03_Maint\vwSerial.resx">
       <DependentUpon>vwSerial.cs</DependentUpon>

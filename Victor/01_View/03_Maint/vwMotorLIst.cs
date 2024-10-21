@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using System.IO.Ports;
 using System.Text;
+using Newtonsoft.Json.Linq;
 
 
 namespace Victor
@@ -233,29 +234,11 @@ namespace Victor
         
         private void Click_PortOpen(object sender, EventArgs e)
         {
-            string[] PortNames = SerialPort.GetPortNames();
-            foreach (string portnumber in PortNames)
-            {
-                Console.WriteLine($"Port {portnumber}");
-            }
-
-            if (m232_01.IsOpen == false) //닫혀있을때
-            {
-                try
-                {
-                    m232_01.PortName = tb_Name.Text.ToString(); //콤보박스에서 고른 것을 포트네임으로 넣어준다
-                    m232_01.BaudRate = int.Parse(cb_Baud.SelectedItem.ToString()); //콤보박스에서 고른 것(string)을 int로 변경해서 넣어준다.
-                    m232_01.DataBits = int.Parse(cb_Data.SelectedItem.ToString()); // 8비트 데이터 전송은 고정
-                    m232_01.StopBits = StopBits.One; // stop비트는 1로 고정
-                    m232_01.Parity = Parity.None; // 패리티비트는 없는 걸로
-
-                    m232_01.Open(); // 포트를 열어준다
-                }
-                catch (Exception Err)
-                {
-                    MessageBox.Show(Err.ToString());
-                }
-            }
+            //https://wjunsea.tistory.com/151
+            string jsonfilepath = GVar.PATH_EQUIP_MotorList;
+            string json = File.ReadAllText(jsonfilepath);
+            JObject jsonobj = JObject.Parse(json);
+            this.prgJson.SelectedObject = jsonobj;
         }
 
         private void Click_PortClose(object sender, EventArgs e)
