@@ -1,0 +1,25 @@
+#swAxis : 프로그램 Axis
+#hwAxis : 모션 제어기 Axis
+#name : 사용자 Axis 이름
+#use: 미사용(0)/ 사용 (1)
+#mode: Servor(0)/Step(1)
+#Lead_Pitch : Ball Screw Pitch 단위 um
+#Mv_Dir : CW(0)/ CCW(1)
+#inPosWidth : um 단위
+#pp1 : 1puls 당 이동 거리 단위 um
+#HomeLogic : Home Search methode Only 센서(0)/ 센서and Z_Phase(1)
+#Home_Coil : A(0)/B(1)
+#Limit_Coil: A(0)/B(1)
+#Alarm_Coil A(0)/B(1)
+#Z_Phase : NotUse(0)/1(Use)
+
+swAxis,hwAxis,name,use,mode,Lead_Pitch,Mv_Dir,inPosWidth,pp1, HomeLogic,Home_Coil,Limit_Coil,Alarm_Coil,Z_Phase
+1,1,Mot_01,1,0,5000,0,10,5,0,0,0,0,0
+2,2,Mot_02,1,0,5000,0,10,5,0,0,0,0,0
+3,3,Mot_03,1,0,5000,0,10,5,0,0,0,0,0
+4,4,Mot_04,1,0,5000,0,10,5,0,0,0,0,0
+5,5,Mot_05,1,0,5000,0,10,5,0,0,0,0,0
+6,6,Mot_06,1,0,5000,0,10,5,0,0,0,0,0
+7,7,Mot_07,1,0,5000,0,10,5,0,0,0,0,0
+8,8,Mot_08,1,0,5000,0,10,5,0,0,0,0,0
+EOF

@@ -12,13 +12,12 @@ namespace Victor
 {
     public partial class vwMotorList : UserControl
     {
-        private string sSerialPath;
+        private string sMotorListPath;
         private string sFolderPath;
         private string sFileName;
 
         static string[,] sCsvData;
         static int nSelRow;
-        private SerialPort m232_01 = new SerialPort();
 
         public vwMotorList()
         {
@@ -48,20 +47,17 @@ namespace Victor
             nSelRow = 0;
             dGV_SerialList.ReadOnly = true;
 
-            sSerialPath = GVar.PATH_CONFIG_Serial;
-            int FindDot = sSerialPath.LastIndexOf(".");
-            int Lastsp = sSerialPath.LastIndexOf("\\");
+            sMotorListPath = GVar.PATH_EQUIP_MotorList;
+            int FindDot = sMotorListPath.LastIndexOf(".");
+            int Lastsp = sMotorListPath.LastIndexOf("\\");
 
-            sFileName = sSerialPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
-            sFolderPath = sSerialPath.Replace(sFileName + ".csv", "");
+            sFileName = sMotorListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
+            sFolderPath = sMotorListPath.Replace(sFileName + ".csv", "");
             Read_File_SerialConfig();
             dGV_SerialList_SelNum(false);
         }
 
-        string EnumToString(eRecipGroup eGroup)
-        {
-            return eGroup.ToString();
-        }
+
 
         public void Open()
         {
@@ -106,12 +102,6 @@ namespace Victor
             }
         }
 
-
-        private void Save_UiData()
-        {
-
-            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
-        }
         public int Get_UI_SerialConfig()
         {
             sCsvData[nSelRow + 1, (int)eSerial.No] = tb_No.Text;
@@ -127,9 +117,10 @@ namespace Victor
 
         public int Read_File_SerialConfig()
         {
-            dGV_SerialList.DataSource = Display_File_SerialConfig(sSerialPath);
+            return 0;
+            dGV_SerialList.DataSource = Display_File_SerialConfig(sMotorListPath);
 
-            sCsvData = CCsv.OpenCSVFile(this.sSerialPath);
+            sCsvData = CCsv.OpenCSVFile(this.sMotorListPath);
             int nArrayCnt = 0;
 
             foreach (string str in sCsvData)
@@ -154,18 +145,11 @@ namespace Victor
         }
         public int Write_File_SerialConfig()
         {
-            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
+            bool create = CCsv.SaveCSVFile(this.sMotorListPath, sCsvData, overwrite: true);
             return 0;
         }
+                
 
-
-        
-        private void Click_Open(object sender, EventArgs e)
-        {
-            Read_File_SerialConfig();
-            //Display_File_SerialConfig();
-
-        }
         private void Click_Save(object sender, EventArgs e)
         {
             Get_UI_SerialConfig();
@@ -173,10 +157,6 @@ namespace Victor
             Read_File_SerialConfig();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            dGV_SerialList.DataSource = Display_File_SerialConfig(sSerialPath);
-        }
 
         public DataTable Display_File_SerialConfig(string filePath)
         {
@@ -217,6 +197,7 @@ namespace Victor
         }
         private void dGV_SerialList_SelNum(bool bsel = false)
         {
+            return;
             if (bsel == false)
             {
                 dGV_SerialList.Rows[0].Selected = true;
@@ -234,11 +215,7 @@ namespace Victor
         
         private void Click_PortOpen(object sender, EventArgs e)
         {
-            //https://wjunsea.tistory.com/151
-            string jsonfilepath = GVar.PATH_EQUIP_MotorList;
-            string json = File.ReadAllText(jsonfilepath);
-            JObject jsonobj = JObject.Parse(json);
-            this.prgJson.SelectedObject = jsonobj;
+            sCsvData = CCsv.OpenMotorCSVFile(this.sMotorListPath);
         }
 
         private void Click_PortClose(object sender, EventArgs e)
