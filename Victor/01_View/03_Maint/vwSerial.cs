@@ -110,7 +110,7 @@ namespace Victor
         private void Save_UiData()
         {
 
-            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
+            bool create = CSV.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
         }
         public int Get_UI_SerialConfig()
         {
@@ -120,7 +120,7 @@ namespace Victor
             sCsvData[nSelRow + 1, (int)eSerial.Data_bit] = cb_Data.SelectedItem.ToString();
             sCsvData[nSelRow + 1, (int)eSerial.Stop_bit] = cb_Stop.SelectedItem.ToString();
             sCsvData[nSelRow + 1, (int)eSerial.Parity_bit] = cb_Parity.SelectedItem.ToString();
-            //sCsvData[nSelRow + 1, (int)eSerial.Flow_Control] = cb_Flow.SelectedItem.ToString();                        
+            //csvData[nSelRow + 1, (int)eSerial.Flow_Control] = cb_Flow.SelectedItem.ToString();                        
 
             return 0;
         }
@@ -129,7 +129,7 @@ namespace Victor
         {
             dGV_SerialList.DataSource = Display_File_SerialConfig(sSerialPath);
 
-            sCsvData = CCsv.OpenCSVFile(this.sSerialPath);
+            sCsvData = CSV.OpenCSVFile(this.sSerialPath);
             int nArrayCnt = 0;
 
             foreach (string str in sCsvData)
@@ -138,14 +138,14 @@ namespace Victor
                 {
                     return -1;
                 }
-                //CData.tSerial[0].nNo = sCsvData[1, (int)eSerial.No]; 
+                //CData.tSerial[0].nNo = csvData[1, (int)eSerial.No]; 
                 CData.tSerial[nArrayCnt].sPort_Name = sCsvData[nArrayCnt + 1, (int)eSerial.Port_Name];
                 CData.tSerial[nArrayCnt].sBaud_Rate = sCsvData[nArrayCnt + 1, (int)eSerial.Baud_Rate];
                 CData.tSerial[nArrayCnt].sData_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Data_bit];
                 CData.tSerial[nArrayCnt].sStop_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Stop_bit];
                 CData.tSerial[nArrayCnt].sParity_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Parity_bit];
 
-                //CData.tSerial[nArrayCnt].sFlow_Control = sCsvData[nArrayCnt + 1, (int)eSerial.Flow_Control];
+                //CData.tSerial[nArrayCnt].sFlow_Control = csvData[nArrayCnt + 1, (int)eSerial.Flow_Control];
                 nArrayCnt++;
             }
 
@@ -154,7 +154,7 @@ namespace Victor
         }
         public int Write_File_SerialConfig()
         {
-            bool create = CCsv.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
+            bool create = CSV.SaveCSVFile(this.sSerialPath, sCsvData, overwrite: true);
             return 0;
         }
 

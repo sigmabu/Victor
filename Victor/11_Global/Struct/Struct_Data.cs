@@ -107,8 +107,6 @@ public static class mEthernet_Env
     public static String[] sHost = new String[2] { "Server", "Client"};
     public static String[] sProtocol = new String[2] { "TCP", "UDP"};
 }
-
-
 public struct mSerial
 {
     public int nNo;
@@ -150,6 +148,49 @@ public struct mErrorList
     public string sName_Kr;
     public string sAction_Kr;
 }
+/// <summary>
+/// #swAxis : 프로그램 Axis
+/// #hwAxis : 모션 제어기 Axis
+/// #name : 사용자 Axis 이름
+/// #use: 미사용(0)/ 사용 (1)
+/// #mode: Servor(0)/Step(1)
+/// #Lead_Pitch : Ball Screw Pitch 단위 um
+/// #Mv_Dir : CW(0)/ CCW(1)
+/// #InPosWidth : um 단위
+/// #nPP1 : 1puls 당 이동 거리 단위 um
+/// #HomeLogic : Home Search methode Only 센서(0)/ 센서and Z_Phase(1)
+/// #Home_Coil : A(0)/B(1)
+/// #Limit_Coil: A(0)/B(1)
+/// #Alarm_Coil A(0)/B(1)
+/// #Z_Phase : NotUse(0)/1(Use)
+/// </summary>
+public struct mMotor
+{
+    public int swAxis;
+    public int hwAxis;
+    public string sName;
+    public string sUse;
+    public string sMode;
+    public int nLead_Pitch;
+    public string sMv_Dir;
+    public int nInPosWidth;
+    public int nPP1;
+    public string sHomeLogic;
+    public string sHome_Coil;
+    public string sLimit_Coil;
+    public string sAlarm_Coil;
+    public string sZ_Phase;
+}
+
+public static class mMotor_Env
+{
+    public static string[] sName = new string[2] { "Motor_0", "Motor_1" };
+    public static string[] sUse = new string[2] { "use", "None"};
+    public static string[] sMode = new string[4] { "Servo", "Step", "Torque", "Velocity" };
+    public static string[] sDir = new string[2] { "CW", "CCW" };
+    public static string[] sHome_Logic = new string[2] { "SenSor", "SnZ" };
+    public static string[] sSen_Coil = new string[2] { "NO", "NC" };
+}
 
 class mViewPage
 {
@@ -161,7 +202,7 @@ class mViewPage
     public static int nViewMaintEthernet_313 { get { return 313; } set { } }
     public static int nViewMaintIOList_314 { get { return 314; } set { } }
     public static int nViewMaintErrorList_315 { get { return 315; } set { } }
-    public static int nViewMaintMotorList_316 { get { return 315; } set { } }
+    public static int nViewMaintMotorList_316 { get { return 316; } set { } }
 
     public static int nRcpPage { get; set; }
 

@@ -335,7 +335,7 @@
     <value>84, 6</value>
   </data>
   <data name="lbl_Main.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 24</value>
+    <value>84, 16</value>
   </data>
   <data name="lbl_Main.TabIndex" type="System.Int32, mscorlib">
     <value>476</value>
@@ -368,7 +368,7 @@
     <value>6, 6</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 24</value>
+    <value>57, 16</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>472</value>
@@ -422,7 +422,7 @@
     <value>87, 6</value>
   </data>
   <data name="lblMessage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 24</value>
+    <value>84, 16</value>
   </data>
   <data name="lblMessage.TabIndex" type="System.Int32, mscorlib">
     <value>475</value>
@@ -455,7 +455,7 @@
     <value>6, 6</value>
   </data>
   <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>108, 24</value>
+    <value>71, 16</value>
   </data>
   <data name="label19.TabIndex" type="System.Int32, mscorlib">
     <value>474</value>
@@ -553,7 +553,7 @@
     <value>84, 9</value>
   </data>
   <data name="lbl_RecipeGroup.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 24</value>
+    <value>60, 16</value>
   </data>
   <data name="lbl_RecipeGroup.TabIndex" type="System.Int32, mscorlib">
     <value>471</value>
@@ -586,7 +586,7 @@
     <value>84, 33</value>
   </data>
   <data name="lblRecipeName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 24</value>
+    <value>144, 16</value>
   </data>
   <data name="lblRecipeName.TabIndex" type="System.Int32, mscorlib">
     <value>472</value>
@@ -619,7 +619,7 @@
     <value>6, 33</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 24</value>
+    <value>62, 16</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>471</value>
@@ -652,7 +652,7 @@
     <value>5, 9</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 24</value>
+    <value>62, 16</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>470</value>
@@ -706,7 +706,7 @@
     <value>87, 33</value>
   </data>
   <data name="lblInformation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 24</value>
+    <value>129, 16</value>
   </data>
   <data name="lblInformation.TabIndex" type="System.Int32, mscorlib">
     <value>473</value>
@@ -739,7 +739,7 @@
     <value>87, 9</value>
   </data>
   <data name="lblError.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 24</value>
+    <value>59, 16</value>
   </data>
   <data name="lblError.TabIndex" type="System.Int32, mscorlib">
     <value>472</value>
@@ -772,7 +772,7 @@
     <value>6, 34</value>
   </data>
   <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 24</value>
+    <value>38, 16</value>
   </data>
   <data name="label16.TabIndex" type="System.Int32, mscorlib">
     <value>475</value>
@@ -805,7 +805,7 @@
     <value>6, 9</value>
   </data>
   <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 24</value>
+    <value>52, 16</value>
   </data>
   <data name="label17.TabIndex" type="System.Int32, mscorlib">
     <value>473</value>
@@ -859,7 +859,7 @@
     <value>5, 65</value>
   </data>
   <data name="lbl_SWVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>103, 15</value>
   </data>
   <data name="lbl_SWVersion.TabIndex" type="System.Int32, mscorlib">
     <value>486</value>
@@ -892,7 +892,7 @@
     <value>5, 88</value>
   </data>
   <data name="lbl_Time.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 21</value>
+    <value>122, 15</value>
   </data>
   <data name="lbl_Time.TabIndex" type="System.Int32, mscorlib">
     <value>487</value>

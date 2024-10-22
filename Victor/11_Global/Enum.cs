@@ -98,3 +98,22 @@ public enum eIO_Kind
     end
 }
 
+public enum eMotor
+{
+    swAxis = 0,
+    hwAxis = 1,
+    Name,
+    Use,
+    Mode,
+    Lead_Pitch,
+    Mv_Dir,
+    InPosWidth,
+    PP1,
+    HomeLogic,
+    Home_Coil,
+    Limit_Coil,
+    Alarm_Coil,
+    Z_Phase,
+    end
+}
+

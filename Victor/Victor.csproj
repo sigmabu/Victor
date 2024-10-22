@@ -192,7 +192,7 @@
     <Compile Include="12_File\CLast.cs" />
     <Compile Include="12_File\CRecipe.cs" />
     <Compile Include="12_File\SingleTone.cs" />
-    <Compile Include="13_Util\CCsv.cs" />
+    <Compile Include="13_Util\CSV.cs" />
     <Compile Include="13_Util\DoubleBuff.cs" />
     <Compile Include="13_Util\IniFile.cs" />
     <Compile Include="13_Util\Utils.cs" />

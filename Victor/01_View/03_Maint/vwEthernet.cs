@@ -249,7 +249,7 @@ namespace Victor
         private void Save_UiData()
         {
 
-            bool create = CCsv.SaveCSVFile(this.sEthernetPath, sCsvData, overwrite: true);
+            bool create = CSV.SaveCSVFile(this.sEthernetPath, sCsvData, overwrite: true);
         }
         public int Get_UI_SerialConfig()
         {
@@ -267,7 +267,7 @@ namespace Victor
         {
             dGV_EthernetList.DataSource = Display_File_EthernetConfig(sEthernetPath);
 
-            sCsvData = CCsv.OpenCSVFile(this.sEthernetPath);
+            sCsvData = CSV.OpenCSVFile(this.sEthernetPath);
             int nArrayCnt = 0;
 
             foreach (string str in sCsvData)
@@ -290,7 +290,7 @@ namespace Victor
         }
         public int Write_File_SerialConfig()
         {
-            bool create = CCsv.SaveCSVFile(this.sEthernetPath, sCsvData, overwrite: true);
+            bool create = CSV.SaveCSVFile(this.sEthernetPath, sCsvData, overwrite: true);
             return 0;
         }
         

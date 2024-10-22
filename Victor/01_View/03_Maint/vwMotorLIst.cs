@@ -6,6 +6,8 @@ using System.Windows.Forms;
 using System.IO.Ports;
 using System.Text;
 using Newtonsoft.Json.Linq;
+using System.Drawing;
+using System.Diagnostics;
 
 
 namespace Victor
@@ -16,7 +18,8 @@ namespace Victor
         private string sFolderPath;
         private string sFileName;
 
-        static string[,] sCsvData;
+        static string[,] csvData;
+        static int nMotorCnt = 0;
         static int nSelRow;
 
         public vwMotorList()
@@ -27,44 +30,58 @@ namespace Victor
         private void Init_View_Set()
         {
             int i = 0;
-            for (i = 0; i < mSerial_Env.nBaud.Length; i++)
-            {
-                cb_Baud.Items.Add(mSerial_Env.nBaud[i]);
-            }
-            for (i = 0; i < mSerial_Env.nData.Length; i++)
-            {
-                cb_Data.Items.Add(mSerial_Env.nData[i]);
-            }
-            for (i = 0; i < mSerial_Env.nStop.Length; i++)
-            {
-                cb_Stop.Items.Add(mSerial_Env.nStop[i]);
-            }
-            for (i = 0; i < mSerial_Env.nParity.Length; i++)
-            {
-                cb_Parity.Items.Add(mSerial_Env.nParity[i]);
-            }
-
-            nSelRow = 0;
-            dGV_SerialList.ReadOnly = true;
-
             sMotorListPath = GVar.PATH_EQUIP_MotorList;
             int FindDot = sMotorListPath.LastIndexOf(".");
             int Lastsp = sMotorListPath.LastIndexOf("\\");
 
             sFileName = sMotorListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sMotorListPath.Replace(sFileName + ".csv", "");
-            Read_File_SerialConfig();
-            dGV_SerialList_SelNum(false);
+            if (Read_File_MotorList() == 0)
+            {
+                Process.GetCurrentProcess().Kill();
+            }
+
+            for (i = 0; i < (nMotorCnt -1 ); i++)
+            {
+                cb_0.Items.Add(CData.tMotor[i].swAxis);
+                cb_1.Items.Add(CData.tMotor[i].hwAxis);
+                cb_2.Items.Add(CData.tMotor[i].sName);
+            }
+            for (i = 0; i < (int)mMotor_Env.sMode.Length; i++)
+            {
+                cb_4.Items.Add(mMotor_Env.sMode[i]);
+            }
+            for (i = 0; i < (int)mMotor_Env.sDir.Length; i++)
+            {
+                cb_6.Items.Add(mMotor_Env.sDir[i]);
+            }
+            for (i = 0; i < (int)mMotor_Env.sHome_Logic.Length; i++)
+            {
+                cb_9.Items.Add(mMotor_Env.sHome_Logic[i]);
+            }
+            for (i = 0; i < (int)mMotor_Env.sSen_Coil.Length; i++)
+            {
+                cb_10.Items.Add(mMotor_Env.sSen_Coil[i]);
+                cb_11.Items.Add(mMotor_Env.sSen_Coil[i]);
+                cb_12.Items.Add(mMotor_Env.sSen_Coil[i]);
+            }
+            for (i = 0; i < (int)mMotor_Env.sUse.Length; i++)
+            {
+                cb_13.Items.Add(mMotor_Env.sUse[i]);
+            }
+            nSelRow = 0;
+            dGV_SerialList.ReadOnly = true;
+            Propert_Change(0, true);
+
+            //dGV_SerialList_SelNum(false);
         }
-
-
 
         public void Open()
         {
             switch (mViewPage.nRcpPage)
             {
                 case 0:
-                    Read_File_SerialConfig();
+                    Read_File_MotorList();
 
                     break;
                 case 312:
@@ -102,61 +119,84 @@ namespace Victor
             }
         }
 
-        public int Get_UI_SerialConfig()
+        public int Get_UI_MotorEdit()
         {
-            sCsvData[nSelRow + 1, (int)eSerial.No] = tb_No.Text;
-            sCsvData[nSelRow + 1, (int)eSerial.Port_Name] = tb_Name.Text ;
-            sCsvData[nSelRow + 1, (int)eSerial.Baud_Rate] = cb_Baud.SelectedItem.ToString();
-            sCsvData[nSelRow + 1, (int)eSerial.Data_bit] = cb_Data.SelectedItem.ToString();
-            sCsvData[nSelRow + 1, (int)eSerial.Stop_bit] = cb_Stop.SelectedItem.ToString();
-            sCsvData[nSelRow + 1, (int)eSerial.Parity_bit] = cb_Parity.SelectedItem.ToString();
-            //sCsvData[nSelRow + 1, (int)eSerial.Flow_Control] = cb_Flow.SelectedItem.ToString();                        
+            int nSelName = cb_2.SelectedIndex;
 
+            csvData[nSelName + 1, (int)eMotor.swAxis] = cb_0.SelectedItem.ToString();
+            csvData[nSelName + 1, (int)eMotor.hwAxis] = cb_1.SelectedItem.ToString();
+            csvData[nSelName + 1, (int)eMotor.Name] = cb_2.SelectedItem.ToString();
+            //csvData[nSelName + 1, (int)eMotor.Use] = tB_LeadPitch;
+            csvData[nSelName + 1, (int)eMotor.Mode] = cb_4.SelectedItem.ToString();
+            csvData[nSelName + 1, (int)eMotor.Lead_Pitch] = tB_LeadPitch.Text;
+            csvData[nSelName + 1, (int)eMotor.Mv_Dir] = cb_6.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotor.InPosWidth] = tB_Inposition.Text;
+            csvData[nSelName + 1, (int)eMotor.PP1] = tB_PP1.Text;
+            csvData[nSelName + 1, (int)eMotor.HomeLogic] = cb_9.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotor.Home_Coil] = cb_10.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotor.Limit_Coil] = cb_11.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotor.Alarm_Coil] = cb_12.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotor.Z_Phase] = cb_13.SelectedIndex.ToString();
             return 0;
         }
 
-        public int Read_File_SerialConfig()
+        public int Read_File_MotorList()
         {
-            return 0;
-            dGV_SerialList.DataSource = Display_File_SerialConfig(sMotorListPath);
-
-            sCsvData = CCsv.OpenCSVFile(this.sMotorListPath);
+            nMotorCnt = 0;
             int nArrayCnt = 0;
-
-            foreach (string str in sCsvData)
+            //dGV_SerialList.DataSource = Display_File_SerialConfig(sMotorListPath);
+            csvData = CSV.OpenMotorCSVFile(sMotorListPath, out nMotorCnt);
+            if (csvData == null)
             {
-                if (string.IsNullOrEmpty(sCsvData[nArrayCnt + 1, (int)eSerial.Port_Name]))
+                MessageBox.Show("Read_File_MotorList Error", " MotorList.csv 화일 Abnormal!!", 
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            foreach (string str in csvData)
+            {
+                if (string.IsNullOrEmpty(csvData[nArrayCnt + 1, (int)eMotor.swAxis]))
                 {
                     return -1;
                 }
-                //CData.tSerial[0].nNo = sCsvData[1, (int)eSerial.No]; 
-                CData.tSerial[nArrayCnt].sPort_Name = sCsvData[nArrayCnt + 1, (int)eSerial.Port_Name];
-                CData.tSerial[nArrayCnt].sBaud_Rate = sCsvData[nArrayCnt + 1, (int)eSerial.Baud_Rate];
-                CData.tSerial[nArrayCnt].sData_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Data_bit];
-                CData.tSerial[nArrayCnt].sStop_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Stop_bit];
-                CData.tSerial[nArrayCnt].sParity_bit = sCsvData[nArrayCnt + 1, (int)eSerial.Parity_bit];
+                else if (nArrayCnt >= (nMotorCnt-1))
+                {
+                    break;                    
+                }
+                else {
+                    CData.tMotor[nArrayCnt].swAxis          = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.swAxis]);
+                    CData.tMotor[nArrayCnt].hwAxis          = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.hwAxis]);
+                    CData.tMotor[nArrayCnt].sName           = csvData[nArrayCnt + 1, (int)eMotor.Name];
+                    CData.tMotor[nArrayCnt].sUse            = csvData[nArrayCnt + 1, (int)eMotor.Use];
+                    CData.tMotor[nArrayCnt].sMode           = csvData[nArrayCnt + 1, (int)eMotor.Mode];
+                    CData.tMotor[nArrayCnt].nLead_Pitch     = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.Lead_Pitch]);
+                    CData.tMotor[nArrayCnt].sMv_Dir         = csvData[nArrayCnt + 1, (int)eMotor.Mv_Dir];
+                    CData.tMotor[nArrayCnt].nInPosWidth     = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.InPosWidth]);
+                    CData.tMotor[nArrayCnt].nPP1            = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.PP1]);
+                    CData.tMotor[nArrayCnt].sHomeLogic      = csvData[nArrayCnt + 1, (int)eMotor.HomeLogic];
+                    CData.tMotor[nArrayCnt].sHome_Coil      = csvData[nArrayCnt + 1, (int)eMotor.Home_Coil];
+                    CData.tMotor[nArrayCnt].sLimit_Coil     = csvData[nArrayCnt + 1, (int)eMotor.Limit_Coil];
+                    CData.tMotor[nArrayCnt].sAlarm_Coil     = csvData[nArrayCnt + 1, (int)eMotor.Alarm_Coil];
+                    CData.tMotor[nArrayCnt].sZ_Phase        = csvData[nArrayCnt + 1, (int)eMotor.Z_Phase];
 
-                //CData.tSerial[nArrayCnt].sFlow_Control = sCsvData[nArrayCnt + 1, (int)eSerial.Flow_Control];
-                nArrayCnt++;
+                    nArrayCnt++;
+                }
             }
+            //dGV_SerialList.Rows[0].Selected = true;
+            return 1;
+        }
 
-            dGV_SerialList.Rows[0].Selected = true;
-            return 0;
-        }
-        public int Write_File_SerialConfig()
+        public int Write_File_MotorList()
         {
-            bool create = CCsv.SaveCSVFile(this.sMotorListPath, sCsvData, overwrite: true);
+            bool create = CSV.SaveMotorCSVFile(this.sMotorListPath, csvData, overwrite: true);
             return 0;
-        }
-                
+        }                
 
         private void Click_Save(object sender, EventArgs e)
         {
-            Get_UI_SerialConfig();
-            Write_File_SerialConfig();
-            Read_File_SerialConfig();
+            Get_UI_MotorEdit();
+            Write_File_MotorList();
+            Read_File_MotorList();
         }
-
 
         public DataTable Display_File_SerialConfig(string filePath)
         {
@@ -195,37 +235,56 @@ namespace Victor
             }
             dGV_SerialList_SelNum(true);
         }
+
         private void dGV_SerialList_SelNum(bool bsel = false)
         {
             return;
-            if (bsel == false)
-            {
-                dGV_SerialList.Rows[0].Selected = true;
-            }
-            DataGridViewRow row = dGV_SerialList.SelectedRows[0];   //선택된 Row 값 가져옴.
-            nSelRow = row.Index;
-            tb_No.Text      = row.Cells[(int)eSerial.No].Value.ToString();        // row의 컬럼(Cells[0]) = name
-            tb_Name.Text    = row.Cells[(int)eSerial.Port_Name].Value.ToString();
-            cb_Baud.Text    = row.Cells[(int)eSerial.Baud_Rate].Value.ToString();
-            cb_Data.Text    = row.Cells[(int)eSerial.Data_bit].Value.ToString();
-            cb_Stop.Text    = row.Cells[(int)eSerial.Stop_bit].Value.ToString();
-            cb_Parity.Text  = row.Cells[(int)eSerial.Parity_bit].Value.ToString();
-            //cb_Flow.Text    = row.Cells[6].Value.ToString();
+            //if (bsel == false)
+            //{
+            //    dGV_SerialList.Rows[0].Selected = true;
+            //}
+            //DataGridViewRow row = dGV_SerialList.SelectedRows[0];   //선택된 Row 값 가져옴.
+            //nSelRow = row.Index;
+            //tb_No.Text      = row.Cells[(int)eSerial.No].Value.ToString();        // row의 컬럼(Cells[0]) = name
+            //tb_Name.Text    = row.Cells[(int)eSerial.Port_Name].Value.ToString();
+            //cb_2.Text    = row.Cells[(int)eSerial.Baud_Rate].Value.ToString();
+            //cb_Data.Text    = row.Cells[(int)eSerial.Data_bit].Value.ToString();
+            //cb_Stop.Text    = row.Cells[(int)eSerial.Stop_bit].Value.ToString();
+            //cb_Parity.Text  = row.Cells[(int)eSerial.Parity_bit].Value.ToString();
         }
         
         private void Click_PortOpen(object sender, EventArgs e)
         {
-            sCsvData = CCsv.OpenMotorCSVFile(this.sMotorListPath);
+            int nLineCnt = 0;
+            csvData = CSV.OpenMotorCSVFile(sMotorListPath, out nLineCnt);
         }
 
-        private void Click_PortClose(object sender, EventArgs e)
-        {
 
+        private void Name_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int nSelMotorName = (int)cb_2.SelectedIndex;
+            Propert_Change(nSelMotorName);
         }
-
-        public void PortOpen()
-        {
-            Console.WriteLine($"PortOpen");
+        private void Propert_Change(int nNum ,bool bInit_Falg = false)
+        { 
+            
+            cb_0.Text           = csvData[nNum + 1, (int)eMotor.swAxis];
+            cb_1.Text           = csvData[nNum + 1, (int)eMotor.hwAxis].ToString();
+            if (bInit_Falg == true)
+            {
+                cb_2.SelectedItem = csvData[nNum + 1, (int)eMotor.Name].ToString();
+            }
+            tB_LeadPitch.Text   = csvData[nNum + 1, (int)eMotor.Lead_Pitch];
+            cb_4.SelectedItem = (csvData[nNum + 1, (int)eMotor.Mode]);
+            tB_LeadPitch.Text   = csvData[nNum + 1, (int)eMotor.Lead_Pitch];
+            cb_6.SelectedItem = (csvData[nNum + 1, (int)eMotor.Mv_Dir].ToString());
+            tB_Inposition.Text  = csvData[nNum + 1, (int)eMotor.InPosWidth];
+            tB_PP1.Text         = csvData[nNum + 1, (int)eMotor.PP1];
+            cb_9.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.HomeLogic].ToString());
+            cb_10.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Home_Coil].ToString());
+            cb_11.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Limit_Coil].ToString());
+            cb_12.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Alarm_Coil].ToString());
+            cb_13.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Z_Phase].ToString());
         }
     }
 }

@@ -34,7 +34,6 @@ namespace Victor
         /// Serial Port 설정
         /// </summary>
         public static mSerial[] tSerial = new mSerial[20];
-
         /// <summary>
         /// Ethernet 설정
         /// </summary>
@@ -44,5 +43,10 @@ namespace Victor
         public static mIOList[] tOutList = new mIOList[1024];
 
         public static mErrorList[] tErrorList = new mErrorList[1024];
+
+        /// <summary>
+        /// Motor List
+        /// </summary>
+        public static mMotor[] tMotor = new mMotor[32];
     }
 }

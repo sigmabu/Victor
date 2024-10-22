@@ -131,7 +131,7 @@ namespace Victor
         private void Save_UiData()
         {
 
-            bool create = CCsv.SaveCSVFile(this.sIOListPath, sCsvData, overwrite: true);
+            bool create = CSV.SaveCSVFile(this.sIOListPath, sCsvData, overwrite: true);
         }
 
         public int Read_File_IOList()
@@ -144,7 +144,7 @@ namespace Victor
             int nAdd_OutCnt = 0;
             int nAdd_SumCnt = 0;
             
-            sCsvData = CCsv.OpenCSVFile(this.sIOListPath, out nLineCnt);
+            sCsvData = CSV.OpenCSVFile(this.sIOListPath, out nLineCnt);
 
 
             foreach (string str in sCsvData)

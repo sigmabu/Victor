@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Victor
 {
-    public class CCsv
+    public class CSV
     {
         public static string CSV_DATA_PATH = Path.Combine(Environment.CurrentDirectory, "Data");
 
@@ -165,8 +165,9 @@ namespace Victor
         /// </summary>
         /// <param name="path"></param>
         /// <returns></returns>
-        public static string[,] OpenMotorCSVFile(string path)
+        public static string[,] OpenMotorCSVFile(string path, out int nRowCnt)
         {
+            nRowCnt = 0;
             try
             {
                 if (path.Contains(".csv") == false)
@@ -190,11 +191,19 @@ namespace Victor
 
                             if ((strs[i] == "EOF"))
                             {
-                                break;
+                                result[i, 0] = strs[i];
                             }
-                            else if ((FindDot < 1) || (strs[i] == "#"))
+                            else if ((strs[i] == "endList"))
                             {
-                                continue;
+                                result[i, 0] = strs[i];
+                            }
+                            else if (strs[i].Contains("#"))
+                            {
+                                result[i, 0] = strs[i];
+                            }
+                            else if ((FindDot < 1))
+                            {
+                                result[i,0] = strs[i];
                             }
                             else
                             {
@@ -203,6 +212,7 @@ namespace Victor
                                     result[i, j] = split[j];
                                     //if (strs[i] == "EOF") break;
                                 }
+                                nRowCnt = i;
                             }
                         }
                         return result;
@@ -216,7 +226,6 @@ namespace Victor
 
             return null;
         }
-
 
         /// <summary>
         /// CSV 텍스트 파일 열기
@@ -274,6 +283,7 @@ namespace Victor
 
             return null;
         }
+
         /// <summary>
         /// CSV 텍스트 파일 열기
         /// </summary>
@@ -365,6 +375,75 @@ namespace Victor
                                 nCount++;
                             }
                             
+                        }
+                        writer.WriteLine(sb);
+                        writer.Close();
+                    }
+                }
+                else
+                    Console.WriteLine("이미 파일이 존재합니다.");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return false;
+        }
+
+        public static bool SaveMotorCSVFile(string spath, string[,] sData, bool overwrite = true, bool writeHeader = true)
+        {
+            int nCount = 0;
+            int nArrayCnt = 0;
+            StringBuilder sb = new StringBuilder();
+            StreamWriter writer;
+            try
+            {
+                CreatePathFolder(spath);
+
+                sb.Length = 0;
+                if (!File.Exists(spath) || overwrite)
+                {
+                    using (writer = new StreamWriter(Path.Combine(spath), false, Encoding.Default))
+                    {
+                        nArrayCnt = sData.Length / sData.GetLength(0);
+                        foreach (string str in sData)
+                        {       
+                            if (string.IsNullOrEmpty(str))
+                            {
+                                continue; 
+                            }
+                            else if (str.Contains("EOF"))
+                            {
+                                sb.AppendLine(str);
+                                break;
+                            }
+                            else if ((nCount + 1) >= nArrayCnt)
+                            {
+                                sb.AppendLine(str);
+                                nCount = 0;
+                            }
+                            else if (str.Contains("endList"))
+                            {
+                                sb.AppendLine(str);
+                                continue;
+                            }
+                            //else if (str.Contains(",") == false)
+                            //{
+                            //    sb.AppendLine("");
+                            //    continue ;
+                            //}
+                            else if (str.Contains("#"))
+                            {
+                                sb.AppendLine(str);
+                                continue;
+                            }
+                            else
+                            {
+                                sb.Append(str);
+                                sb.Append(",");
+                                nCount++;
+                            }
+
                         }
                         writer.WriteLine(sb);
                         writer.Close();
