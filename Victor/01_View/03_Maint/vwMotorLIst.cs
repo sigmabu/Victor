@@ -22,6 +22,9 @@ namespace Victor
         static int nMotorCnt = 0;
         static int nSelRow;
 
+        /// <summary>
+        /// 모터 번호 Change 에 따른 동시 Display 모터 번호
+        /// </summary>
         int[,] nGridAxis =
         {
             {0,1, 2, 3},
