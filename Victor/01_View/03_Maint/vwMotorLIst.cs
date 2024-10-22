@@ -29,7 +29,7 @@ namespace Victor
         }
         private void Init_View_Set()
         {
-            int i = 0;
+
             sMotorListPath = GVar.PATH_EQUIP_MotorList;
             int FindDot = sMotorListPath.LastIndexOf(".");
             int Lastsp = sMotorListPath.LastIndexOf("\\");
@@ -41,7 +41,18 @@ namespace Victor
                 Process.GetCurrentProcess().Kill();
             }
 
-            for (i = 0; i < (nMotorCnt -1 ); i++)
+            Init_Property_Setup();
+            //Init_MotorList_Grid_Setup();
+            nSelRow = 0;
+            Propert_Change(0, true);
+
+            //dGV_MotorListGrid_SelNum(false);
+        }
+
+        private void Init_Property_Setup()
+        {
+            int i = 0;
+            for (i = 0; i < (nMotorCnt - 1); i++)
             {
                 cb_0.Items.Add(CData.tMotor[i].swAxis);
                 cb_1.Items.Add(CData.tMotor[i].hwAxis);
@@ -69,13 +80,48 @@ namespace Victor
             {
                 cb_13.Items.Add(mMotor_Env.sUse[i]);
             }
-            nSelRow = 0;
-            dGV_SerialList.ReadOnly = true;
-            Propert_Change(0, true);
-
-            //dGV_SerialList_SelNum(false);
         }
 
+        private void Init_MotorList_Grid_Setup()
+        {
+            dGV_MotorList.DoubleBuffered(true);
+
+            //dGV_MotorList.Columns[(int)eMotorListGrid.swAxis].Width = 70;
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Name].Width = 380;
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Coil].Width = 45;
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Part].Width = 100;
+
+            //dGV_MotorList.Columns[(int)eMotorListGrid.swAxis].HeaderText = "Axis no";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Name+1].HeaderText = "NAME";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Servo+1].HeaderText = "Servo";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Cmd_mm].HeaderText = "Command";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Enc_mm].HeaderText = "Encoder";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Home_End].HeaderText = "Home Complete";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Sen_Home].HeaderText = "Home";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Sen_NLimit].HeaderText = "- Limit";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Sen_PLimit].HeaderText = "+ Limit";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Alarm_In].HeaderText = "Alarm";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.ZPhase_In].HeaderText = "Z Phase";
+            //dGV_MotorList.Columns[(int)eMotorListGrid.Inpos_In].HeaderText = "Inposition";
+
+            dGV_MotorList.Columns[(int)eMotorListGrid.swAxis].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Name].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Servo].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Cmd_mm].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Enc_mm].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Home_End].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Sen_Home].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Sen_NLimit].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Sen_PLimit].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Alarm_In].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.ZPhase_In].Width = 40;
+            dGV_MotorList.Columns[(int)eMotorListGrid.Inpos_In].Width = 40;
+
+            dGV_MotorList.RowTemplate.Height = 30;
+
+            dGV_MotorList.ReadOnly = true;
+
+        }
         public void Open()
         {
             switch (mViewPage.nRcpPage)
@@ -127,7 +173,7 @@ namespace Victor
             csvData[nSelName + 1, (int)eMotor.hwAxis] = cb_1.SelectedItem.ToString();
             csvData[nSelName + 1, (int)eMotor.Name] = cb_2.SelectedItem.ToString();
             //csvData[nSelName + 1, (int)eMotor.Use] = tB_LeadPitch;
-            csvData[nSelName + 1, (int)eMotor.Mode] = cb_4.SelectedItem.ToString();
+            csvData[nSelName + 1, (int)eMotor.Mode] = cb_4.SelectedIndex.ToString();
             csvData[nSelName + 1, (int)eMotor.Lead_Pitch] = tB_LeadPitch.Text;
             csvData[nSelName + 1, (int)eMotor.Mv_Dir] = cb_6.SelectedIndex.ToString();
             csvData[nSelName + 1, (int)eMotor.InPosWidth] = tB_Inposition.Text;
@@ -229,14 +275,14 @@ namespace Victor
 
         private void dGV_SerialList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataGridViewColumn item in dGV_SerialList.Columns)
+            foreach (DataGridViewColumn item in dGV_MotorList.Columns)
             {
                 item.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            dGV_SerialList_SelNum(true);
+            dGV_MotorListGrid_SelNum(true);
         }
 
-        private void dGV_SerialList_SelNum(bool bsel = false)
+        private void dGV_MotorListGrid_SelNum(bool bsel = false)
         {
             return;
             //if (bsel == false)
@@ -275,9 +321,9 @@ namespace Victor
                 cb_2.SelectedItem = csvData[nNum + 1, (int)eMotor.Name].ToString();
             }
             tB_LeadPitch.Text   = csvData[nNum + 1, (int)eMotor.Lead_Pitch];
-            cb_4.SelectedItem = (csvData[nNum + 1, (int)eMotor.Mode]);
+            cb_4.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Mode].ToString());
             tB_LeadPitch.Text   = csvData[nNum + 1, (int)eMotor.Lead_Pitch];
-            cb_6.SelectedItem = (csvData[nNum + 1, (int)eMotor.Mv_Dir].ToString());
+            cb_6.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Mv_Dir].ToString());
             tB_Inposition.Text  = csvData[nNum + 1, (int)eMotor.InPosWidth];
             tB_PP1.Text         = csvData[nNum + 1, (int)eMotor.PP1];
             cb_9.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.HomeLogic].ToString());

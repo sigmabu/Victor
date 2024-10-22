@@ -116,4 +116,19 @@ public enum eMotor
     Z_Phase,
     end
 }
-
+public enum eMotorListGrid
+{
+    swAxis = 0,
+    Name,
+    Servo,
+    Cmd_mm,
+    Enc_mm,
+    Home_End,
+    Sen_Home,
+    Sen_NLimit,
+    Sen_PLimit,    
+    Alarm_In,
+    ZPhase_In,
+    Inpos_In,
+    end
+}

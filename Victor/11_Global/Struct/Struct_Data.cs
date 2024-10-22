@@ -188,7 +188,7 @@ public static class mMotor_Env
     public static string[] sUse = new string[2] { "use", "None"};
     public static string[] sMode = new string[4] { "Servo", "Step", "Torque", "Velocity" };
     public static string[] sDir = new string[2] { "CW", "CCW" };
-    public static string[] sHome_Logic = new string[2] { "SenSor", "SnZ" };
+    public static string[] sHome_Logic = new string[2] { "SenSor", "Sen after Z" };
     public static string[] sSen_Coil = new string[2] { "NO", "NC" };
 }
 
