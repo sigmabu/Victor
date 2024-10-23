@@ -51,6 +51,10 @@ namespace Victor
             dGV_MotorList.ReadOnly = true;
             dGV_MotorList.CurrentCell = null;
 
+            cb_2.FlatStyle = FlatStyle.Flat;
+            cb_2.BackColor = Gcolor.ColorNotic;
+            cb_2.ForeColor = Color.White;
+
         }
 
         private void Init_Timer()
@@ -301,23 +305,6 @@ namespace Victor
 
             //dGV_MotorListGrid_SelNum(true);
         }
-
-        private void dGV_MotorListGrid_SelNum(bool bsel = false)
-        {
-            return;
-            //if (bsel == false)
-            //{
-            //    dGV_SerialList.Rows[0].Selected = true;
-            //}
-            //DataGridViewRow row = dGV_SerialList.SelectedRows[0];   //선택된 Row 값 가져옴.
-            //nSelRow = row.Index;
-            //tb_No.Text      = row.Cells[(int)eSerial.No].Value.ToString();        // row의 컬럼(Cells[0]) = name
-            //tb_Name.Text    = row.Cells[(int)eSerial.Port_Name].Value.ToString();
-            //cb_2.Text    = row.Cells[(int)eSerial.Baud_Rate].Value.ToString();
-            //cb_Data.Text    = row.Cells[(int)eSerial.Data_bit].Value.ToString();
-            //cb_Stop.Text    = row.Cells[(int)eSerial.Stop_bit].Value.ToString();
-            //cb_Parity.Text  = row.Cells[(int)eSerial.Parity_bit].Value.ToString();
-        }
         
         private void Click_PortOpen(object sender, EventArgs e)
         {
@@ -373,5 +360,42 @@ namespace Victor
         {
             dGV_MotorList.CurrentCell = null;
         }
+
+        static bool bClick_Flag = false;
+        private void btn_NJ_MouseDown(object sender, MouseEventArgs e)
+        {
+            bClick_Flag = true;
+            Utils.Delay(100);
+            Console.WriteLine("btn_NJ_MouseDown");
+            while (bClick_Flag)
+            {                
+                // ToDo : LoopEvent
+                Application.DoEvents();
+            }
+            Console.WriteLine("btn_NJ_MouseDown Finish");
+
+        }
+
+        private void btn_PJ_MouseDown(object sender, MouseEventArgs e)
+        {
+            bClick_Flag = true;
+            Utils.Delay(100);
+            Console.WriteLine("btn_PJ_MouseDown");
+            while (bClick_Flag)
+            {
+                // ToDo : LoopEvent
+                Application.DoEvents();
+            }
+            Console.WriteLine("btn_PJ_MouseDown Finish");
+
+
+        }
+
+        private void btn_Jog_MouseUp(object sender, MouseEventArgs e)
+        {
+            bClick_Flag = false;
+
+        }
+
     }
 }

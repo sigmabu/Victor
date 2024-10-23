@@ -28,39 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pnl_Item = new System.Windows.Forms.Panel();
-            this.dGV_MotorList = new System.Windows.Forms.DataGridView();
-            this.gB_Propert = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
             this.tB_LeadPitch = new System.Windows.Forms.TextBox();
-            this.tB_PP1 = new System.Windows.Forms.TextBox();
-            this.tB_Inposition = new System.Windows.Forms.TextBox();
-            this.cb_13 = new System.Windows.Forms.ComboBox();
-            this.cb_12 = new System.Windows.Forms.ComboBox();
-            this.cb_11 = new System.Windows.Forms.ComboBox();
-            this.cb_10 = new System.Windows.Forms.ComboBox();
-            this.cb_9 = new System.Windows.Forms.ComboBox();
-            this.cb_6 = new System.Windows.Forms.ComboBox();
-            this.cb_4 = new System.Windows.Forms.ComboBox();
-            this.cb_1 = new System.Windows.Forms.ComboBox();
-            this.cb_0 = new System.Windows.Forms.ComboBox();
-            this.lb_LeadPitch = new System.Windows.Forms.Label();
-            this.lb_PP1 = new System.Windows.Forms.Label();
-            this.lb_ZPhase = new System.Windows.Forms.Label();
-            this.lb_ACoil = new System.Windows.Forms.Label();
-            this.lb_LimitCoil = new System.Windows.Forms.Label();
-            this.lb_HomeCoil = new System.Windows.Forms.Label();
-            this.lb_HSearch = new System.Windows.Forms.Label();
-            this.lb_Inpos = new System.Windows.Forms.Label();
-            this.lb_MvDir = new System.Windows.Forms.Label();
-            this.lb_Mode = new System.Windows.Forms.Label();
-            this.radio_Save = new System.Windows.Forms.RadioButton();
-            this.lb_hwID = new System.Windows.Forms.Label();
-            this.lb_swID = new System.Windows.Forms.Label();
             this.cb_2 = new System.Windows.Forms.ComboBox();
+            this.tB_PP1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lb_swID = new System.Windows.Forms.Label();
+            this.tB_Inposition = new System.Windows.Forms.TextBox();
+            this.lb_hwID = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.radio_Save = new System.Windows.Forms.RadioButton();
+            this.cb_13 = new System.Windows.Forms.ComboBox();
+            this.lb_Mode = new System.Windows.Forms.Label();
+            this.cb_12 = new System.Windows.Forms.ComboBox();
+            this.lb_MvDir = new System.Windows.Forms.Label();
+            this.cb_11 = new System.Windows.Forms.ComboBox();
+            this.lb_Inpos = new System.Windows.Forms.Label();
+            this.cb_10 = new System.Windows.Forms.ComboBox();
+            this.lb_HSearch = new System.Windows.Forms.Label();
+            this.cb_9 = new System.Windows.Forms.ComboBox();
+            this.lb_HomeCoil = new System.Windows.Forms.Label();
+            this.cb_6 = new System.Windows.Forms.ComboBox();
+            this.lb_LimitCoil = new System.Windows.Forms.Label();
+            this.cb_4 = new System.Windows.Forms.ComboBox();
+            this.lb_ACoil = new System.Windows.Forms.Label();
+            this.cb_1 = new System.Windows.Forms.ComboBox();
+            this.lb_ZPhase = new System.Windows.Forms.Label();
+            this.cb_0 = new System.Windows.Forms.ComboBox();
+            this.lb_PP1 = new System.Windows.Forms.Label();
+            this.lb_LeadPitch = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.txtM_RepSP = new System.Windows.Forms.TextBox();
@@ -92,327 +94,161 @@
             this.txt_Step = new System.Windows.Forms.TextBox();
             this.rdb_1 = new System.Windows.Forms.RadioButton();
             this.rdb_Cust = new System.Windows.Forms.RadioButton();
+            this.dGV_MotorList = new System.Windows.Forms.DataGridView();
             this.Pnl_Item.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_MotorList)).BeginInit();
-            this.gB_Propert.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_MotorList)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_Item
             // 
             this.Pnl_Item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.Pnl_Item.Controls.Add(this.panel1);
             this.Pnl_Item.Controls.Add(this.panel3);
             this.Pnl_Item.Controls.Add(this.dGV_MotorList);
-            this.Pnl_Item.Controls.Add(this.gB_Propert);
             this.Pnl_Item.Location = new System.Drawing.Point(0, 0);
             this.Pnl_Item.Name = "Pnl_Item";
             this.Pnl_Item.Size = new System.Drawing.Size(1280, 768);
             this.Pnl_Item.TabIndex = 460;
             // 
-            // dGV_MotorList
+            // panel1
             // 
-            this.dGV_MotorList.AllowUserToAddRows = false;
-            this.dGV_MotorList.AllowUserToDeleteRows = false;
-            this.dGV_MotorList.AllowUserToResizeColumns = false;
-            this.dGV_MotorList.AllowUserToResizeRows = false;
-            this.dGV_MotorList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.dGV_MotorList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dGV_MotorList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_MotorList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            this.dGV_MotorList.ColumnHeadersHeight = 25;
-            this.dGV_MotorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGV_MotorList.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dGV_MotorList.Location = new System.Drawing.Point(12, 14);
-            this.dGV_MotorList.MultiSelect = false;
-            this.dGV_MotorList.Name = "dGV_MotorList";
-            this.dGV_MotorList.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dGV_MotorList.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dGV_MotorList.RowHeadersVisible = false;
-            this.dGV_MotorList.RowHeadersWidth = 25;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dGV_MotorList.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dGV_MotorList.RowTemplate.Height = 23;
-            this.dGV_MotorList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dGV_MotorList.Size = new System.Drawing.Size(1257, 125);
-            this.dGV_MotorList.TabIndex = 464;
-            this.dGV_MotorList.Leave += new System.EventHandler(this.Grid_Leave);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.tB_LeadPitch);
+            this.panel1.Controls.Add(this.cb_2);
+            this.panel1.Controls.Add(this.tB_PP1);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lb_swID);
+            this.panel1.Controls.Add(this.tB_Inposition);
+            this.panel1.Controls.Add(this.lb_hwID);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.radio_Save);
+            this.panel1.Controls.Add(this.cb_13);
+            this.panel1.Controls.Add(this.lb_Mode);
+            this.panel1.Controls.Add(this.cb_12);
+            this.panel1.Controls.Add(this.lb_MvDir);
+            this.panel1.Controls.Add(this.cb_11);
+            this.panel1.Controls.Add(this.lb_Inpos);
+            this.panel1.Controls.Add(this.cb_10);
+            this.panel1.Controls.Add(this.lb_HSearch);
+            this.panel1.Controls.Add(this.cb_9);
+            this.panel1.Controls.Add(this.lb_HomeCoil);
+            this.panel1.Controls.Add(this.cb_6);
+            this.panel1.Controls.Add(this.lb_LimitCoil);
+            this.panel1.Controls.Add(this.cb_4);
+            this.panel1.Controls.Add(this.lb_ACoil);
+            this.panel1.Controls.Add(this.cb_1);
+            this.panel1.Controls.Add(this.lb_ZPhase);
+            this.panel1.Controls.Add(this.cb_0);
+            this.panel1.Controls.Add(this.lb_PP1);
+            this.panel1.Controls.Add(this.lb_LeadPitch);
+            this.panel1.Location = new System.Drawing.Point(12, 151);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(921, 614);
+            this.panel1.TabIndex = 466;
             // 
-            // gB_Propert
+            // label5
             // 
-            this.gB_Propert.Controls.Add(this.tB_LeadPitch);
-            this.gB_Propert.Controls.Add(this.tB_PP1);
-            this.gB_Propert.Controls.Add(this.tB_Inposition);
-            this.gB_Propert.Controls.Add(this.cb_2);
-            this.gB_Propert.Controls.Add(this.cb_13);
-            this.gB_Propert.Controls.Add(this.cb_12);
-            this.gB_Propert.Controls.Add(this.cb_11);
-            this.gB_Propert.Controls.Add(this.cb_10);
-            this.gB_Propert.Controls.Add(this.cb_9);
-            this.gB_Propert.Controls.Add(this.cb_6);
-            this.gB_Propert.Controls.Add(this.cb_4);
-            this.gB_Propert.Controls.Add(this.cb_1);
-            this.gB_Propert.Controls.Add(this.cb_0);
-            this.gB_Propert.Controls.Add(this.lb_LeadPitch);
-            this.gB_Propert.Controls.Add(this.lb_PP1);
-            this.gB_Propert.Controls.Add(this.lb_ZPhase);
-            this.gB_Propert.Controls.Add(this.lb_ACoil);
-            this.gB_Propert.Controls.Add(this.lb_LimitCoil);
-            this.gB_Propert.Controls.Add(this.lb_HomeCoil);
-            this.gB_Propert.Controls.Add(this.lb_HSearch);
-            this.gB_Propert.Controls.Add(this.lb_Inpos);
-            this.gB_Propert.Controls.Add(this.lb_MvDir);
-            this.gB_Propert.Controls.Add(this.lb_Mode);
-            this.gB_Propert.Controls.Add(this.radio_Save);
-            this.gB_Propert.Controls.Add(this.lb_hwID);
-            this.gB_Propert.Controls.Add(this.lb_swID);
-            this.gB_Propert.ForeColor = System.Drawing.Color.White;
-            this.gB_Propert.Location = new System.Drawing.Point(12, 154);
-            this.gB_Propert.Name = "gB_Propert";
-            this.gB_Propert.Size = new System.Drawing.Size(611, 611);
-            this.gB_Propert.TabIndex = 463;
-            this.gB_Propert.TabStop = false;
-            this.gB_Propert.Text = "Name                                                                            ";
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(81)))), ((int)(((byte)(73)))));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label5.Location = new System.Drawing.Point(3, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(916, 5);
+            this.label5.TabIndex = 469;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tB_LeadPitch
             // 
+            this.tB_LeadPitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.tB_LeadPitch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tB_LeadPitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB_LeadPitch.Location = new System.Drawing.Point(25, 129);
+            this.tB_LeadPitch.Location = new System.Drawing.Point(53, 187);
             this.tB_LeadPitch.Name = "tB_LeadPitch";
             this.tB_LeadPitch.Size = new System.Drawing.Size(110, 22);
             this.tB_LeadPitch.TabIndex = 461;
             this.tB_LeadPitch.Text = "tB_LeadPitch";
             this.tB_LeadPitch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // cb_2
+            // 
+            this.cb_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_2.FormattingEnabled = true;
+            this.cb_2.Location = new System.Drawing.Point(53, 56);
+            this.cb_2.Name = "cb_2";
+            this.cb_2.Size = new System.Drawing.Size(308, 28);
+            this.cb_2.TabIndex = 462;
+            this.cb_2.SelectedIndexChanged += new System.EventHandler(this.Name_SelectedIndexChanged);
+            // 
             // tB_PP1
             // 
+            this.tB_PP1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.tB_PP1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tB_PP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB_PP1.Location = new System.Drawing.Point(139, 191);
+            this.tB_PP1.Location = new System.Drawing.Point(167, 249);
             this.tB_PP1.Name = "tB_PP1";
             this.tB_PP1.Size = new System.Drawing.Size(110, 22);
             this.tB_PP1.TabIndex = 461;
             this.tB_PP1.Text = "P/Um";
             this.tB_PP1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(3, 62);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Name";
+            // 
+            // lb_swID
+            // 
+            this.lb_swID.AutoSize = true;
+            this.lb_swID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_swID.Location = new System.Drawing.Point(85, 100);
+            this.lb_swID.Name = "lb_swID";
+            this.lb_swID.Size = new System.Drawing.Size(47, 16);
+            this.lb_swID.TabIndex = 0;
+            this.lb_swID.Text = "SW no";
+            // 
             // tB_Inposition
             // 
+            this.tB_Inposition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.tB_Inposition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tB_Inposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tB_Inposition.Location = new System.Drawing.Point(25, 191);
+            this.tB_Inposition.Location = new System.Drawing.Point(53, 249);
             this.tB_Inposition.Name = "tB_Inposition";
             this.tB_Inposition.Size = new System.Drawing.Size(110, 22);
             this.tB_Inposition.TabIndex = 461;
             this.tB_Inposition.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // cb_13
+            // lb_hwID
             // 
-            this.cb_13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_13.FormattingEnabled = true;
-            this.cb_13.Location = new System.Drawing.Point(25, 381);
-            this.cb_13.Name = "cb_13";
-            this.cb_13.Size = new System.Drawing.Size(110, 24);
-            this.cb_13.TabIndex = 462;
+            this.lb_hwID.AutoSize = true;
+            this.lb_hwID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hwID.Location = new System.Drawing.Point(176, 100);
+            this.lb_hwID.Name = "lb_hwID";
+            this.lb_hwID.Size = new System.Drawing.Size(48, 16);
+            this.lb_hwID.TabIndex = 0;
+            this.lb_hwID.Text = "HW no";
             // 
-            // cb_12
+            // label4
             // 
-            this.cb_12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_12.FormattingEnabled = true;
-            this.cb_12.Location = new System.Drawing.Point(255, 317);
-            this.cb_12.Name = "cb_12";
-            this.cb_12.Size = new System.Drawing.Size(110, 24);
-            this.cb_12.TabIndex = 462;
-            // 
-            // cb_11
-            // 
-            this.cb_11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_11.FormattingEnabled = true;
-            this.cb_11.Location = new System.Drawing.Point(139, 317);
-            this.cb_11.Name = "cb_11";
-            this.cb_11.Size = new System.Drawing.Size(110, 24);
-            this.cb_11.TabIndex = 462;
-            // 
-            // cb_10
-            // 
-            this.cb_10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_10.FormattingEnabled = true;
-            this.cb_10.Location = new System.Drawing.Point(25, 317);
-            this.cb_10.Name = "cb_10";
-            this.cb_10.Size = new System.Drawing.Size(110, 24);
-            this.cb_10.TabIndex = 462;
-            // 
-            // cb_9
-            // 
-            this.cb_9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_9.FormattingEnabled = true;
-            this.cb_9.Location = new System.Drawing.Point(25, 253);
-            this.cb_9.Name = "cb_9";
-            this.cb_9.Size = new System.Drawing.Size(110, 24);
-            this.cb_9.TabIndex = 462;
-            // 
-            // cb_6
-            // 
-            this.cb_6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_6.FormattingEnabled = true;
-            this.cb_6.Location = new System.Drawing.Point(139, 127);
-            this.cb_6.Name = "cb_6";
-            this.cb_6.Size = new System.Drawing.Size(110, 24);
-            this.cb_6.TabIndex = 462;
-            // 
-            // cb_4
-            // 
-            this.cb_4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_4.FormattingEnabled = true;
-            this.cb_4.Location = new System.Drawing.Point(255, 65);
-            this.cb_4.Name = "cb_4";
-            this.cb_4.Size = new System.Drawing.Size(110, 24);
-            this.cb_4.TabIndex = 462;
-            // 
-            // cb_1
-            // 
-            this.cb_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_1.FormattingEnabled = true;
-            this.cb_1.Location = new System.Drawing.Point(139, 65);
-            this.cb_1.Name = "cb_1";
-            this.cb_1.Size = new System.Drawing.Size(110, 24);
-            this.cb_1.TabIndex = 462;
-            // 
-            // cb_0
-            // 
-            this.cb_0.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_0.FormattingEnabled = true;
-            this.cb_0.Location = new System.Drawing.Point(25, 65);
-            this.cb_0.Name = "cb_0";
-            this.cb_0.Size = new System.Drawing.Size(110, 24);
-            this.cb_0.TabIndex = 462;
-            // 
-            // lb_LeadPitch
-            // 
-            this.lb_LeadPitch.AutoSize = true;
-            this.lb_LeadPitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_LeadPitch.Location = new System.Drawing.Point(45, 105);
-            this.lb_LeadPitch.Name = "lb_LeadPitch";
-            this.lb_LeadPitch.Size = new System.Drawing.Size(70, 16);
-            this.lb_LeadPitch.TabIndex = 0;
-            this.lb_LeadPitch.Text = "Lead Pitch";
-            // 
-            // lb_PP1
-            // 
-            this.lb_PP1.AutoSize = true;
-            this.lb_PP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_PP1.Location = new System.Drawing.Point(173, 168);
-            this.lb_PP1.Name = "lb_PP1";
-            this.lb_PP1.Size = new System.Drawing.Size(38, 16);
-            this.lb_PP1.TabIndex = 0;
-            this.lb_PP1.Text = "P/um";
-            // 
-            // lb_ZPhase
-            // 
-            this.lb_ZPhase.AutoSize = true;
-            this.lb_ZPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ZPhase.Location = new System.Drawing.Point(52, 357);
-            this.lb_ZPhase.Name = "lb_ZPhase";
-            this.lb_ZPhase.Size = new System.Drawing.Size(57, 16);
-            this.lb_ZPhase.TabIndex = 0;
-            this.lb_ZPhase.Text = "Z Phase";
-            // 
-            // lb_ACoil
-            // 
-            this.lb_ACoil.AutoSize = true;
-            this.lb_ACoil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ACoil.Location = new System.Drawing.Point(279, 294);
-            this.lb_ACoil.Name = "lb_ACoil";
-            this.lb_ACoil.Size = new System.Drawing.Size(68, 16);
-            this.lb_ACoil.TabIndex = 0;
-            this.lb_ACoil.Text = "Alarm Coil";
-            // 
-            // lb_LimitCoil
-            // 
-            this.lb_LimitCoil.AutoSize = true;
-            this.lb_LimitCoil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_LimitCoil.Location = new System.Drawing.Point(165, 294);
-            this.lb_LimitCoil.Name = "lb_LimitCoil";
-            this.lb_LimitCoil.Size = new System.Drawing.Size(70, 16);
-            this.lb_LimitCoil.TabIndex = 0;
-            this.lb_LimitCoil.Text = "Home Coil";
-            // 
-            // lb_HomeCoil
-            // 
-            this.lb_HomeCoil.AutoSize = true;
-            this.lb_HomeCoil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_HomeCoil.Location = new System.Drawing.Point(45, 294);
-            this.lb_HomeCoil.Name = "lb_HomeCoil";
-            this.lb_HomeCoil.Size = new System.Drawing.Size(70, 16);
-            this.lb_HomeCoil.TabIndex = 0;
-            this.lb_HomeCoil.Text = "Home Coil";
-            // 
-            // lb_HSearch
-            // 
-            this.lb_HSearch.AutoSize = true;
-            this.lb_HSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_HSearch.Location = new System.Drawing.Point(35, 231);
-            this.lb_HSearch.Name = "lb_HSearch";
-            this.lb_HSearch.Size = new System.Drawing.Size(90, 16);
-            this.lb_HSearch.TabIndex = 0;
-            this.lb_HSearch.Text = "Home Search";
-            // 
-            // lb_Inpos
-            // 
-            this.lb_Inpos.AutoSize = true;
-            this.lb_Inpos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Inpos.Location = new System.Drawing.Point(31, 168);
-            this.lb_Inpos.Name = "lb_Inpos";
-            this.lb_Inpos.Size = new System.Drawing.Size(99, 16);
-            this.lb_Inpos.TabIndex = 0;
-            this.lb_Inpos.Text = "Inpostion Value";
-            // 
-            // lb_MvDir
-            // 
-            this.lb_MvDir.AutoSize = true;
-            this.lb_MvDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_MvDir.Location = new System.Drawing.Point(173, 105);
-            this.lb_MvDir.Name = "lb_MvDir";
-            this.lb_MvDir.Size = new System.Drawing.Size(24, 16);
-            this.lb_MvDir.TabIndex = 0;
-            this.lb_MvDir.Text = "Dir";
-            // 
-            // lb_Mode
-            // 
-            this.lb_Mode.AutoSize = true;
-            this.lb_Mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Mode.Location = new System.Drawing.Point(264, 42);
-            this.lb_Mode.Name = "lb_Mode";
-            this.lb_Mode.Size = new System.Drawing.Size(42, 16);
-            this.lb_Mode.TabIndex = 0;
-            this.lb_Mode.Text = "Mode";
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.label4.Size = new System.Drawing.Size(330, 25);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Property";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // radio_Save
             // 
@@ -421,11 +257,11 @@
             this.radio_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.radio_Save.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
             this.radio_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.radio_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radio_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radio_Save.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.radio_Save.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.radio_Save.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radio_Save.Location = new System.Drawing.Point(479, 460);
+            this.radio_Save.Location = new System.Drawing.Point(204, 433);
             this.radio_Save.Margin = new System.Windows.Forms.Padding(0);
             this.radio_Save.Name = "radio_Save";
             this.radio_Save.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
@@ -437,35 +273,204 @@
             this.radio_Save.UseVisualStyleBackColor = false;
             this.radio_Save.Click += new System.EventHandler(this.Click_Save);
             // 
-            // lb_hwID
+            // cb_13
             // 
-            this.lb_hwID.AutoSize = true;
-            this.lb_hwID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_hwID.Location = new System.Drawing.Point(148, 42);
-            this.lb_hwID.Name = "lb_hwID";
-            this.lb_hwID.Size = new System.Drawing.Size(48, 16);
-            this.lb_hwID.TabIndex = 0;
-            this.lb_hwID.Text = "HW no";
+            this.cb_13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_13.FormattingEnabled = true;
+            this.cb_13.Location = new System.Drawing.Point(53, 439);
+            this.cb_13.Name = "cb_13";
+            this.cb_13.Size = new System.Drawing.Size(110, 24);
+            this.cb_13.TabIndex = 462;
             // 
-            // lb_swID
+            // lb_Mode
             // 
-            this.lb_swID.AutoSize = true;
-            this.lb_swID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_swID.Location = new System.Drawing.Point(57, 42);
-            this.lb_swID.Name = "lb_swID";
-            this.lb_swID.Size = new System.Drawing.Size(47, 16);
-            this.lb_swID.TabIndex = 0;
-            this.lb_swID.Text = "SW no";
+            this.lb_Mode.AutoSize = true;
+            this.lb_Mode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Mode.Location = new System.Drawing.Point(292, 100);
+            this.lb_Mode.Name = "lb_Mode";
+            this.lb_Mode.Size = new System.Drawing.Size(42, 16);
+            this.lb_Mode.TabIndex = 0;
+            this.lb_Mode.Text = "Mode";
             // 
-            // cb_2
+            // cb_12
             // 
-            this.cb_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_2.FormattingEnabled = true;
-            this.cb_2.Location = new System.Drawing.Point(60, -3);
-            this.cb_2.Name = "cb_2";
-            this.cb_2.Size = new System.Drawing.Size(308, 28);
-            this.cb_2.TabIndex = 462;
-            this.cb_2.SelectedIndexChanged += new System.EventHandler(this.Name_SelectedIndexChanged);
+            this.cb_12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_12.FormattingEnabled = true;
+            this.cb_12.Location = new System.Drawing.Point(283, 375);
+            this.cb_12.Name = "cb_12";
+            this.cb_12.Size = new System.Drawing.Size(110, 24);
+            this.cb_12.TabIndex = 462;
+            // 
+            // lb_MvDir
+            // 
+            this.lb_MvDir.AutoSize = true;
+            this.lb_MvDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_MvDir.Location = new System.Drawing.Point(201, 163);
+            this.lb_MvDir.Name = "lb_MvDir";
+            this.lb_MvDir.Size = new System.Drawing.Size(24, 16);
+            this.lb_MvDir.TabIndex = 0;
+            this.lb_MvDir.Text = "Dir";
+            // 
+            // cb_11
+            // 
+            this.cb_11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_11.FormattingEnabled = true;
+            this.cb_11.Location = new System.Drawing.Point(167, 375);
+            this.cb_11.Name = "cb_11";
+            this.cb_11.Size = new System.Drawing.Size(110, 24);
+            this.cb_11.TabIndex = 462;
+            // 
+            // lb_Inpos
+            // 
+            this.lb_Inpos.AutoSize = true;
+            this.lb_Inpos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Inpos.Location = new System.Drawing.Point(59, 226);
+            this.lb_Inpos.Name = "lb_Inpos";
+            this.lb_Inpos.Size = new System.Drawing.Size(99, 16);
+            this.lb_Inpos.TabIndex = 0;
+            this.lb_Inpos.Text = "Inpostion Value";
+            // 
+            // cb_10
+            // 
+            this.cb_10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_10.FormattingEnabled = true;
+            this.cb_10.Location = new System.Drawing.Point(53, 375);
+            this.cb_10.Name = "cb_10";
+            this.cb_10.Size = new System.Drawing.Size(110, 24);
+            this.cb_10.TabIndex = 462;
+            // 
+            // lb_HSearch
+            // 
+            this.lb_HSearch.AutoSize = true;
+            this.lb_HSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_HSearch.Location = new System.Drawing.Point(63, 289);
+            this.lb_HSearch.Name = "lb_HSearch";
+            this.lb_HSearch.Size = new System.Drawing.Size(90, 16);
+            this.lb_HSearch.TabIndex = 0;
+            this.lb_HSearch.Text = "Home Search";
+            // 
+            // cb_9
+            // 
+            this.cb_9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_9.FormattingEnabled = true;
+            this.cb_9.Location = new System.Drawing.Point(53, 311);
+            this.cb_9.Name = "cb_9";
+            this.cb_9.Size = new System.Drawing.Size(110, 24);
+            this.cb_9.TabIndex = 462;
+            // 
+            // lb_HomeCoil
+            // 
+            this.lb_HomeCoil.AutoSize = true;
+            this.lb_HomeCoil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_HomeCoil.Location = new System.Drawing.Point(73, 352);
+            this.lb_HomeCoil.Name = "lb_HomeCoil";
+            this.lb_HomeCoil.Size = new System.Drawing.Size(70, 16);
+            this.lb_HomeCoil.TabIndex = 0;
+            this.lb_HomeCoil.Text = "Home Coil";
+            // 
+            // cb_6
+            // 
+            this.cb_6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_6.FormattingEnabled = true;
+            this.cb_6.Location = new System.Drawing.Point(167, 185);
+            this.cb_6.Name = "cb_6";
+            this.cb_6.Size = new System.Drawing.Size(110, 24);
+            this.cb_6.TabIndex = 462;
+            // 
+            // lb_LimitCoil
+            // 
+            this.lb_LimitCoil.AutoSize = true;
+            this.lb_LimitCoil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_LimitCoil.Location = new System.Drawing.Point(193, 352);
+            this.lb_LimitCoil.Name = "lb_LimitCoil";
+            this.lb_LimitCoil.Size = new System.Drawing.Size(70, 16);
+            this.lb_LimitCoil.TabIndex = 0;
+            this.lb_LimitCoil.Text = "Home Coil";
+            // 
+            // cb_4
+            // 
+            this.cb_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_4.FormattingEnabled = true;
+            this.cb_4.Location = new System.Drawing.Point(283, 123);
+            this.cb_4.Name = "cb_4";
+            this.cb_4.Size = new System.Drawing.Size(110, 24);
+            this.cb_4.TabIndex = 462;
+            // 
+            // lb_ACoil
+            // 
+            this.lb_ACoil.AutoSize = true;
+            this.lb_ACoil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ACoil.Location = new System.Drawing.Point(307, 352);
+            this.lb_ACoil.Name = "lb_ACoil";
+            this.lb_ACoil.Size = new System.Drawing.Size(68, 16);
+            this.lb_ACoil.TabIndex = 0;
+            this.lb_ACoil.Text = "Alarm Coil";
+            // 
+            // cb_1
+            // 
+            this.cb_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_1.FormattingEnabled = true;
+            this.cb_1.Location = new System.Drawing.Point(167, 123);
+            this.cb_1.Name = "cb_1";
+            this.cb_1.Size = new System.Drawing.Size(110, 24);
+            this.cb_1.TabIndex = 462;
+            // 
+            // lb_ZPhase
+            // 
+            this.lb_ZPhase.AutoSize = true;
+            this.lb_ZPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_ZPhase.Location = new System.Drawing.Point(80, 415);
+            this.lb_ZPhase.Name = "lb_ZPhase";
+            this.lb_ZPhase.Size = new System.Drawing.Size(57, 16);
+            this.lb_ZPhase.TabIndex = 0;
+            this.lb_ZPhase.Text = "Z Phase";
+            // 
+            // cb_0
+            // 
+            this.cb_0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.cb_0.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_0.FormattingEnabled = true;
+            this.cb_0.Location = new System.Drawing.Point(53, 123);
+            this.cb_0.Name = "cb_0";
+            this.cb_0.Size = new System.Drawing.Size(110, 24);
+            this.cb_0.TabIndex = 462;
+            // 
+            // lb_PP1
+            // 
+            this.lb_PP1.AutoSize = true;
+            this.lb_PP1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_PP1.Location = new System.Drawing.Point(201, 226);
+            this.lb_PP1.Name = "lb_PP1";
+            this.lb_PP1.Size = new System.Drawing.Size(38, 16);
+            this.lb_PP1.TabIndex = 0;
+            this.lb_PP1.Text = "P/um";
+            // 
+            // lb_LeadPitch
+            // 
+            this.lb_LeadPitch.AutoSize = true;
+            this.lb_LeadPitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_LeadPitch.Location = new System.Drawing.Point(73, 163);
+            this.lb_LeadPitch.Name = "lb_LeadPitch";
+            this.lb_LeadPitch.Size = new System.Drawing.Size(70, 16);
+            this.lb_LeadPitch.TabIndex = 0;
+            this.lb_LeadPitch.Text = "Lead Pitch";
             // 
             // panel3
             // 
@@ -502,9 +507,9 @@
             this.panel3.Controls.Add(this.rdb_1);
             this.panel3.Controls.Add(this.rdb_Cust);
             this.panel3.ForeColor = System.Drawing.SystemColors.Window;
-            this.panel3.Location = new System.Drawing.Point(657, 164);
+            this.panel3.Location = new System.Drawing.Point(939, 151);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(330, 601);
+            this.panel3.Size = new System.Drawing.Size(330, 614);
             this.panel3.TabIndex = 465;
             this.panel3.Tag = "0";
             // 
@@ -760,6 +765,8 @@
             this.btn_PJ.TabIndex = 157;
             this.btn_PJ.Text = "+ JOG";
             this.btn_PJ.UseVisualStyleBackColor = false;
+            this.btn_PJ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_PJ_MouseDown);
+            this.btn_PJ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_MouseUp);
             // 
             // rdb_500
             // 
@@ -801,6 +808,8 @@
             this.btn_NJ.TabIndex = 156;
             this.btn_NJ.Text = "- JOG";
             this.btn_NJ.UseVisualStyleBackColor = false;
+            this.btn_NJ.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_NJ_MouseDown);
+            this.btn_NJ.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_MouseUp);
             // 
             // btn_StepN
             // 
@@ -907,6 +916,56 @@
             this.rdb_Cust.Text = "Custom";
             this.rdb_Cust.UseVisualStyleBackColor = true;
             // 
+            // dGV_MotorList
+            // 
+            this.dGV_MotorList.AllowUserToAddRows = false;
+            this.dGV_MotorList.AllowUserToDeleteRows = false;
+            this.dGV_MotorList.AllowUserToResizeColumns = false;
+            this.dGV_MotorList.AllowUserToResizeRows = false;
+            this.dGV_MotorList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.dGV_MotorList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dGV_MotorList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_MotorList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGV_MotorList.ColumnHeadersHeight = 25;
+            this.dGV_MotorList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGV_MotorList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dGV_MotorList.Location = new System.Drawing.Point(12, 14);
+            this.dGV_MotorList.MultiSelect = false;
+            this.dGV_MotorList.Name = "dGV_MotorList";
+            this.dGV_MotorList.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dGV_MotorList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dGV_MotorList.RowHeadersVisible = false;
+            this.dGV_MotorList.RowHeadersWidth = 25;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dGV_MotorList.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dGV_MotorList.RowTemplate.Height = 23;
+            this.dGV_MotorList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dGV_MotorList.Size = new System.Drawing.Size(1257, 125);
+            this.dGV_MotorList.TabIndex = 464;
+            this.dGV_MotorList.Leave += new System.EventHandler(this.Grid_Leave);
+            // 
             // vwMotorList
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -920,11 +979,11 @@
             this.Size = new System.Drawing.Size(1280, 768);
             this.Load += new System.EventHandler(this.Form_Load);
             this.Pnl_Item.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGV_MotorList)).EndInit();
-            this.gB_Propert.ResumeLayout(false);
-            this.gB_Propert.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGV_MotorList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -934,7 +993,6 @@
         private System.Windows.Forms.RadioButton radio_Save;
         private System.Windows.Forms.Label lb_swID;
         private System.Windows.Forms.ComboBox cb_2;
-        private System.Windows.Forms.GroupBox gB_Propert;
         private System.Windows.Forms.ComboBox cb_4;
         private System.Windows.Forms.ComboBox cb_1;
         private System.Windows.Forms.ComboBox cb_0;
@@ -990,5 +1048,9 @@
         private System.Windows.Forms.TextBox txt_Step;
         private System.Windows.Forms.RadioButton rdb_1;
         private System.Windows.Forms.RadioButton rdb_Cust;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
     }
 }
