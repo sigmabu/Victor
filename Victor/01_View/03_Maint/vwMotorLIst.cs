@@ -24,18 +24,18 @@ namespace Victor
 
         /// <summary>
         /// 모터 번호 Change 에 따른 동시 Display 모터 번호
+        /// 모터 축번호는 1부터 시작
         /// </summary>
         int[,] nGridAxis =
         {
-            {0,1, 2, 3},
-            {1,2, 3, 4},
-            {2,3, 4, 5},
-            {3,4, 5, 6},
-            {4,5, 6, 7},
-            {0,1, 3, 5},
-            {0,1, 5, 6},
-            {0,4, 5, 6},
-            {0,5, 6, 7}
+            {1, 2, 3, 4},
+            {2, 3, 4, 5},
+            {3, 4, 5, 6},
+            {4, 5, 6, 7},
+            {5, 6, 7, 8},
+            {6, 7, 8, 1},
+            {7, 8, 1, 2},
+            {8, 1, 2, 3},
         };
 
 
@@ -44,6 +44,13 @@ namespace Victor
             InitializeComponent();
             Init_View_Set();
             Init_Timer();
+        }
+
+        private void Form_Load(object sender, EventArgs e)
+        {
+            dGV_MotorList.ReadOnly = true;
+            dGV_MotorList.CurrentCell = null;
+
         }
 
         private void Init_Timer()
@@ -119,7 +126,7 @@ namespace Victor
             dt.Columns.Add("Servo");
             dt.Columns.Add("Command");
             dt.Columns.Add("Encoder");
-            dt.Columns.Add("Home Complete");
+            dt.Columns.Add("HD");
             dt.Columns.Add("Home");
             dt.Columns.Add("- Limit");
             dt.Columns.Add("+ Limit");
@@ -147,8 +154,6 @@ namespace Victor
 
             dGV_MotorList.Height = 120;
 
-            dGV_MotorList.ReadOnly = true;
-            dGV_MotorList.CurrentCell = null;
         }
         public void Open()
         {
@@ -291,7 +296,10 @@ namespace Victor
             {
                 item.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            dGV_MotorListGrid_SelNum(true);
+            dGV_MotorList.CurrentCell = null;
+
+
+            //dGV_MotorListGrid_SelNum(true);
         }
 
         private void dGV_MotorListGrid_SelNum(bool bsel = false)
@@ -321,6 +329,7 @@ namespace Victor
         private void Name_SelectedIndexChanged(object sender, EventArgs e)
         {
             int nSelMotorName = (int)cb_2.SelectedIndex;
+
             Propert_Change(nSelMotorName);
             MotorGrid_Change(nSelMotorName);
         }
@@ -351,12 +360,18 @@ namespace Victor
             DataGridViewRow row;
             for (int i = 0; i < 4; i++)
             {
+                Console.WriteLine($"num = {nNum} num + 1 = {nNum + 1}, i= {i} => {nGridAxis[nNum + 1, i]}");
                 row = dGV_MotorList.Rows[i];
-                row.Cells[(int)eMotorListGrid.swAxis].Value = csvData[nGridAxis[nNum + 1, i], (int)eMotor.swAxis];
-                row.Cells[(int)eMotorListGrid.Name].Value = csvData[nGridAxis[nNum + 1, i], (int)eMotor.Name];
-                row.Cells[(int)eMotorListGrid.Servo].Value = csvData[nGridAxis[nNum + 1, i], (int)eMotor.Servo];
+                row.Cells[(int)eMotorListGrid.swAxis].Value = csvData[nGridAxis[nNum , i], (int)eMotor.swAxis];
+                row.Cells[(int)eMotorListGrid.Name].Value = csvData[nGridAxis[nNum , i], (int)eMotor.Name];
+                row.Cells[(int)eMotorListGrid.Servo].Value = csvData[nGridAxis[nNum, i], (int)eMotor.Servo];
             }        
 
+        }
+
+        private void Grid_Leave(object sender, EventArgs e)
+        {
+            dGV_MotorList.CurrentCell = null;
         }
     }
 }
