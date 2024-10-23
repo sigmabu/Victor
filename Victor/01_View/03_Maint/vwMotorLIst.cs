@@ -24,6 +24,7 @@ namespace Victor
 
         /// <summary>
         /// 모터 번호 Change 에 따른 동시 Display 모터 번호
+<<<<<<< HEAD
         /// 모터 축번호는 1부터 시작
         /// </summary>
         int[,] nGridAxis =
@@ -36,6 +37,20 @@ namespace Victor
             {6, 7, 8, 1},
             {7, 8, 1, 2},
             {8, 1, 2, 3},
+=======
+        /// </summary>
+        int[,] nGridAxis =
+        {
+            {0,1, 2, 3},
+            {1,2, 3, 4},
+            {2,3, 4, 5},
+            {3,4, 5, 6},
+            {4,5, 6, 7},
+            {0,1, 3, 5},
+            {0,1, 5, 6},
+            {0,4, 5, 6},
+            {0,5, 6, 7}
+>>>>>>> ae17d53a63da8e64bf605b3e9369d8af90c66197
         };
 
 
@@ -46,6 +61,7 @@ namespace Victor
             Init_Timer();
         }
 
+<<<<<<< HEAD
         private void Form_Load(object sender, EventArgs e)
         {
             dGV_MotorList.ReadOnly = true;
@@ -53,6 +69,8 @@ namespace Victor
 
         }
 
+=======
+>>>>>>> ae17d53a63da8e64bf605b3e9369d8af90c66197
         private void Init_Timer()
         {
             System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
@@ -126,7 +144,11 @@ namespace Victor
             dt.Columns.Add("Servo");
             dt.Columns.Add("Command");
             dt.Columns.Add("Encoder");
+<<<<<<< HEAD
             dt.Columns.Add("HD");
+=======
+            dt.Columns.Add("Home Complete");
+>>>>>>> ae17d53a63da8e64bf605b3e9369d8af90c66197
             dt.Columns.Add("Home");
             dt.Columns.Add("- Limit");
             dt.Columns.Add("+ Limit");
@@ -154,6 +176,11 @@ namespace Victor
 
             dGV_MotorList.Height = 120;
 
+<<<<<<< HEAD
+=======
+            dGV_MotorList.ReadOnly = true;
+            dGV_MotorList.CurrentCell = null;
+>>>>>>> ae17d53a63da8e64bf605b3e9369d8af90c66197
         }
         public void Open()
         {
@@ -360,6 +387,7 @@ namespace Victor
             DataGridViewRow row;
             for (int i = 0; i < 4; i++)
             {
+<<<<<<< HEAD
                 Console.WriteLine($"num = {nNum} num + 1 = {nNum + 1}, i= {i} => {nGridAxis[nNum + 1, i]}");
                 row = dGV_MotorList.Rows[i];
                 row.Cells[(int)eMotorListGrid.swAxis].Value = csvData[nGridAxis[nNum , i], (int)eMotor.swAxis];
@@ -373,5 +401,14 @@ namespace Victor
         {
             dGV_MotorList.CurrentCell = null;
         }
+=======
+                row = dGV_MotorList.Rows[i];
+                row.Cells[(int)eMotorListGrid.swAxis].Value = csvData[nGridAxis[nNum + 1, i], (int)eMotor.swAxis];
+                row.Cells[(int)eMotorListGrid.Name].Value = csvData[nGridAxis[nNum + 1, i], (int)eMotor.Name];
+                row.Cells[(int)eMotorListGrid.Servo].Value = csvData[nGridAxis[nNum + 1, i], (int)eMotor.Servo];
+            }        
+
+        }
+>>>>>>> ae17d53a63da8e64bf605b3e9369d8af90c66197
     }
 }
