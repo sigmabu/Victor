@@ -104,7 +104,7 @@ public enum eMotor
     hwAxis = 1,
     Name,
     Use,
-    Mode,
+    Servo,
     Lead_Pitch,
     Mv_Dir,
     InPosWidth,
