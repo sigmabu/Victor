@@ -198,6 +198,12 @@
     <Compile Include="13_Util\Utils.cs" />
     <Compile Include="19_Data\ErrorDef\ErrDefine.cs" />
     <Compile Include="19_Data\IODef\IO_Def.cs" />
+    <Compile Include="21_Asset\AlKeyBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="21_Asset\AlKeyBoard.Designer.cs">
+      <DependentUpon>AlKeyBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="02_Dialogue\Form_Textinput.resx">
       <DependentUpon>Form_Textinput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="21_Asset\AlKeyBoard.resx">
+      <DependentUpon>AlKeyBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Victor
 {
@@ -77,6 +78,13 @@ namespace Victor
         private void button1_Click(object sender, EventArgs e)
         {
              
+        }
+
+        private void tbTest_Click(object sender, EventArgs e)
+        {
+            var ak = new AlKeyBoard();
+
+            if(ak != null ) tbText.Text = ak.InKey;
         }
     }
 }

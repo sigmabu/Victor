@@ -35,6 +35,7 @@ namespace Victor
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
+            this.tbText = new System.Windows.Forms.TextBox();
             this.pnl_Base.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@ namespace Victor
             // 
             this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Base.Controls.Add(this.tbText);
             this.pnl_Base.Controls.Add(this.button2);
             this.pnl_Base.Controls.Add(this.button1);
             this.pnl_Base.Location = new System.Drawing.Point(3, 33);
@@ -103,6 +105,15 @@ namespace Victor
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 455;
             // 
+            // tbText
+            // 
+            this.tbText.Location = new System.Drawing.Point(371, 102);
+            this.tbText.Name = "tbText";
+            this.tbText.Size = new System.Drawing.Size(788, 26);
+            this.tbText.TabIndex = 3;
+            this.tbText.Text = "InText";
+            this.tbText.Click += new System.EventHandler(this.tbTest_Click);
+            // 
             // vwMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -116,6 +127,7 @@ namespace Victor
             this.Name = "vwMain";
             this.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Base.ResumeLayout(false);
+            this.pnl_Base.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -127,5 +139,6 @@ namespace Victor
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel pnl_Menu;
         private Button button1;
+        private TextBox tbText;
     }
 }

@@ -435,7 +435,7 @@ namespace Victor
             {
                 if (String.IsNullOrEmpty(CData.tErrorList[nSelRow].sImage) == false)
                 {
-                    //PictureBox 컨트롤에 디렉토리 경로의 이미지를 Load 합니다.
+                    //PictureBox 컨트롤에 디렉토리 경로의 이미지를 FormLoad 합니다.
                     string sPath = GVar.PATH_EQUIP_ErrorImageFolder + CData.tErrorList[nSelRow].sImage + ".png";
                     pb_Image.Load(sPath);
                     //Load한 이미지 크기를 PictureBox 컨트롤 크기와 동일하게 맞추어 줍니다.
@@ -461,7 +461,7 @@ namespace Victor
             {
                 if (String.IsNullOrEmpty(CData.tErrorList[nSelRow].sImage) == false)
                 {
-                    //PictureBox 컨트롤에 디렉토리 경로의 이미지를 Load 합니다.
+                    //PictureBox 컨트롤에 디렉토리 경로의 이미지를 FormLoad 합니다.
                     string sPath = GVar.PATH_EQUIP_ErrorImageFolder + CData.tErrorList[nSelRow].sImage + ".png";
                     pb_Image.Load(sPath);
                     //Load한 이미지 크기를 PictureBox 컨트롤 크기와 동일하게 맞추어 줍니다.
