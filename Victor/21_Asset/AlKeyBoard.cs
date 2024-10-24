@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using static System.Windows.Forms.Button;
+using static Victor.AlKeyBoard;
 
 namespace Victor
 { 
@@ -13,13 +14,23 @@ namespace Victor
     /// </summary>
     public partial class AlKeyBoard : Form
     {
-        private int caretPosition;
+        public enum eKeyPadType
+        {
+            Normal,
+            string_Data,
+            Int_data,
+            Double_data,
+            end
+        }
         private string sHitStr = "";
 
+        private int nCharCnt { get; set; }
+        private int nkeyPadType { get; set; }
+        private int nNum { get; set; }
         private int nCaps { get; set; }
         public string InKey { get; private set; }
         public MessageBoxButtons Result { get; private set; }
-        public AlKeyBoard(string str)
+        public AlKeyBoard(string str, eKeyPadType eKaypadType = eKeyPadType.Normal)
         {
             InitializeComponent();
             Result = MessageBoxButtons.AbortRetryIgnore;
@@ -27,18 +38,20 @@ namespace Victor
             Result = MessageBoxButtons.AbortRetryIgnore;
             InKey = str;
             tbInput.Text = str;
+            sHitStr = tbInput.Text;
+            nkeyPadType = (int)eKaypadType;
             nCaps = 0;
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                 Screen.PrimaryScreen.WorkingArea.Height - this.Height);
-            caretPosition = 0;
+            
             tbInput.Text = "";
             nCaps = 0;
             this.ShowDialog();
         }
 
-        public AlKeyBoard(Form mainFrame, string str )
+        public AlKeyBoard(Form mainFrame, string str, eKeyPadType eKaypadType = eKeyPadType.Normal)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.Manual;
@@ -47,15 +60,17 @@ namespace Victor
             Result = MessageBoxButtons.AbortRetryIgnore;
             InKey = str;
             tbInput.Text = str;
+            sHitStr = tbInput.Text;
             nCaps = 0;
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                 Screen.PrimaryScreen.WorkingArea.Height - this.Height);
-            caretPosition = 0;
+            
             this.ShowDialog();
 
         }
+
 
         private void Esc_Click(object sender, EventArgs e)
         {
@@ -68,6 +83,43 @@ namespace Victor
             this.Close();            
         }
 
+        private void Num_KeyBoard_Change()
+        {
+            NUM.BackColor = (nNum == 0) ? Gcolor.ColorBase : Color.White;
+
+            Caps.Enabled = (nNum == 1) ? true : false;
+            Underbar.Enabled = (nNum == 1) ? true : false;
+            SQ.Enabled = (nNum == 1) ? true : false;
+            REST.Enabled = (nNum == 1) ? true : false;
+            
+            QUESTION.Enabled = (nNum == 1) ? true : false;
+            A.Enabled = (nNum == 1) ? true : false;
+            B.Enabled = (nNum == 1) ? true : false;
+            C.Enabled = (nNum == 1) ? true : false;
+            D.Enabled = (nNum == 1) ? true : false;
+            E.Enabled = (nNum == 1) ? true : false;
+            F.Enabled = (nNum == 1) ? true : false;
+            G.Enabled = (nNum == 1) ? true : false;
+            H.Enabled = (nNum == 1) ? true : false;
+            I.Enabled = (nNum == 1) ? true : false;
+            K.Enabled = (nNum == 1) ? true : false;
+            J.Enabled = (nNum == 1) ? true : false;
+            L.Enabled = (nNum == 1) ? true : false;
+            M.Enabled = (nNum == 1) ? true : false;
+            N.Enabled = (nNum == 1) ? true : false;
+            O.Enabled = (nNum == 1) ? true : false;
+            P.Enabled = (nNum == 1) ? true : false;
+            Q.Enabled = (nNum == 1) ? true : false;
+            R.Enabled = (nNum == 1) ? true : false;
+            S.Enabled = (nNum == 1) ? true : false;
+            T.Enabled = (nNum == 1) ? true : false;
+            U.Enabled = (nNum == 1) ? true : false;
+            V.Enabled = (nNum == 1) ? true : false;
+            W.Enabled = (nNum == 1) ? true : false;
+            X.Enabled = (nNum == 1) ? true : false;
+            Y.Enabled = (nNum == 1) ? true : false;
+            Z.Enabled = (nNum == 1) ? true : false;
+        }
         private void Caps_KeyBoard_Change()
         {
             Caps.BackColor = (nCaps == 0) ? Gcolor.ColorBase: Color.White;
@@ -105,6 +157,18 @@ namespace Victor
 
             switch (btn.Name.ToString())
             {
+                case "NUM":
+                    if (nNum == 0)
+                    {
+                        nNum = 1;
+                    }
+                    else
+                    {
+                        nNum = 0;
+                    }
+                    Num_KeyBoard_Change();
+
+                    break;
                 case "Caps":
                     if (nCaps == 0)
                     {
@@ -160,9 +224,17 @@ namespace Victor
                 case "W":
                 case "X":
                 case "Y":
+                case "Z":
                 case "SPACE":
                     sHitStr += btn.Text.ToString();
                     tbInput.Text = sHitStr;
+                    break;
+                case "Bs":
+                    if (tbInput.Text.Length > 0)
+                    {
+                        sHitStr = sHitStr.Remove(sHitStr.Length - 1, 1);
+                        tbInput.Text = sHitStr;
+                    }
                     break;
                 default: break;
             }
@@ -181,7 +253,8 @@ namespace Victor
 
         private void setFocusOnTextBox()
         {
-            tbInput.Select(caretPosition, 0);
+            nCharCnt = tbInput.Text.Length;
+            tbInput.Select(nCharCnt, 0);
             tbInput.Focus();
             tbInput.ScrollToCaret();
         }
