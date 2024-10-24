@@ -82,7 +82,7 @@ namespace Victor
 
         private void tbTest_Click(object sender, EventArgs e)
         {
-            var ak = new AlKeyBoard();
+            var ak = new AlKeyBoard(this.ParentForm, tbText.Text);
 
             if(ak != null ) tbText.Text = ak.InKey;
         }

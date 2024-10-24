@@ -43,21 +43,21 @@
             this.I = new System.Windows.Forms.Button();
             this.O = new System.Windows.Forms.Button();
             this.A = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.J = new System.Windows.Forms.Button();
             this.F = new System.Windows.Forms.Button();
             this.S = new System.Windows.Forms.Button();
-            this.J = new System.Windows.Forms.Button();
+            this.K = new System.Windows.Forms.Button();
             this.G = new System.Windows.Forms.Button();
             this.D = new System.Windows.Forms.Button();
-            this.K = new System.Windows.Forms.Button();
+            this.L = new System.Windows.Forms.Button();
             this.H = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.Z = new System.Windows.Forms.Button();
+            this.M = new System.Windows.Forms.Button();
+            this.V = new System.Windows.Forms.Button();
+            this.X = new System.Windows.Forms.Button();
+            this.B = new System.Windows.Forms.Button();
+            this.C = new System.Windows.Forms.Button();
+            this.N = new System.Windows.Forms.Button();
             this.Bs = new System.Windows.Forms.Button();
             this.Caps = new System.Windows.Forms.Button();
             this.Shift_L = new System.Windows.Forms.Button();
@@ -65,7 +65,6 @@
             this.REST = new System.Windows.Forms.Button();
             this.PERIODE = new System.Windows.Forms.Button();
             this.QUESTION = new System.Windows.Forms.Button();
-            this.Shift_R = new System.Windows.Forms.Button();
             this.no1 = new System.Windows.Forms.Button();
             this.no7 = new System.Windows.Forms.Button();
             this.no4 = new System.Windows.Forms.Button();
@@ -81,505 +80,687 @@
             // 
             // Esc
             // 
-            this.Esc.Location = new System.Drawing.Point(5, 38);
+            this.Esc.BackColor = System.Drawing.Color.White;
+            this.Esc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Esc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Esc.Location = new System.Drawing.Point(19, 63);
+            this.Esc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Esc.Name = "Esc";
-            this.Esc.Size = new System.Drawing.Size(75, 33);
+            this.Esc.Size = new System.Drawing.Size(110, 75);
             this.Esc.TabIndex = 0;
             this.Esc.Text = "Esc";
-            this.Esc.UseVisualStyleBackColor = true;
+            this.Esc.UseVisualStyleBackColor = false;
             this.Esc.Click += new System.EventHandler(this.Esc_Click);
             // 
             // tbInput
             // 
-            this.tbInput.Location = new System.Drawing.Point(5, 11);
+            this.tbInput.BackColor = System.Drawing.Color.Gray;
+            this.tbInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbInput.ForeColor = System.Drawing.Color.Black;
+            this.tbInput.Location = new System.Drawing.Point(15, 5);
+            this.tbInput.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tbInput.Name = "tbInput";
-            this.tbInput.Size = new System.Drawing.Size(666, 21);
+            this.tbInput.Size = new System.Drawing.Size(1248, 53);
             this.tbInput.TabIndex = 1;
-            this.tbInput.Text = "Input Text";
             // 
             // Q
             // 
-            this.Q.Location = new System.Drawing.Point(32, 77);
+            this.Q.BackColor = System.Drawing.Color.White;
+            this.Q.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Q.ForeColor = System.Drawing.Color.Black;
+            this.Q.Location = new System.Drawing.Point(97, 150);
+            this.Q.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Q.Name = "Q";
-            this.Q.Size = new System.Drawing.Size(48, 33);
+            this.Q.Size = new System.Drawing.Size(100, 75);
             this.Q.TabIndex = 0;
             this.Q.Text = "Q";
-            this.Q.UseVisualStyleBackColor = true;
+            this.Q.UseVisualStyleBackColor = false;
             this.Q.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // W
             // 
-            this.W.Location = new System.Drawing.Point(86, 77);
+            this.W.BackColor = System.Drawing.Color.White;
+            this.W.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.W.ForeColor = System.Drawing.Color.Black;
+            this.W.Location = new System.Drawing.Point(199, 150);
+            this.W.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.W.Name = "W";
-            this.W.Size = new System.Drawing.Size(48, 33);
+            this.W.Size = new System.Drawing.Size(100, 75);
             this.W.TabIndex = 0;
             this.W.Text = "W";
-            this.W.UseVisualStyleBackColor = true;
+            this.W.UseVisualStyleBackColor = false;
             this.W.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // E
             // 
-            this.E.Location = new System.Drawing.Point(140, 77);
+            this.E.BackColor = System.Drawing.Color.White;
+            this.E.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.E.ForeColor = System.Drawing.Color.Black;
+            this.E.Location = new System.Drawing.Point(301, 150);
+            this.E.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.E.Name = "E";
-            this.E.Size = new System.Drawing.Size(48, 33);
+            this.E.Size = new System.Drawing.Size(100, 75);
             this.E.TabIndex = 0;
             this.E.Text = "E";
-            this.E.UseVisualStyleBackColor = true;
+            this.E.UseVisualStyleBackColor = false;
             this.E.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // Enter
             // 
-            this.Enter.Location = new System.Drawing.Point(594, 116);
+            this.Enter.BackColor = System.Drawing.Color.White;
+            this.Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Enter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Enter.Location = new System.Drawing.Point(1162, 237);
+            this.Enter.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Enter.Name = "Enter";
-            this.Enter.Size = new System.Drawing.Size(77, 33);
+            this.Enter.Size = new System.Drawing.Size(106, 75);
             this.Enter.TabIndex = 0;
             this.Enter.Text = "Enter";
-            this.Enter.UseVisualStyleBackColor = true;
+            this.Enter.UseVisualStyleBackColor = false;
             this.Enter.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // R
             // 
-            this.R.Location = new System.Drawing.Point(194, 77);
+            this.R.BackColor = System.Drawing.Color.White;
+            this.R.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.R.ForeColor = System.Drawing.Color.Black;
+            this.R.Location = new System.Drawing.Point(403, 150);
+            this.R.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.R.Name = "R";
-            this.R.Size = new System.Drawing.Size(48, 33);
+            this.R.Size = new System.Drawing.Size(100, 75);
             this.R.TabIndex = 0;
             this.R.Text = "R";
-            this.R.UseVisualStyleBackColor = true;
+            this.R.UseVisualStyleBackColor = false;
             this.R.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // T
             // 
-            this.T.Location = new System.Drawing.Point(248, 77);
+            this.T.BackColor = System.Drawing.Color.White;
+            this.T.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.T.ForeColor = System.Drawing.Color.Black;
+            this.T.Location = new System.Drawing.Point(505, 150);
+            this.T.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.T.Name = "T";
-            this.T.Size = new System.Drawing.Size(48, 33);
+            this.T.Size = new System.Drawing.Size(100, 75);
             this.T.TabIndex = 0;
             this.T.Text = "T";
-            this.T.UseVisualStyleBackColor = true;
+            this.T.UseVisualStyleBackColor = false;
             this.T.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // Y
             // 
-            this.Y.Location = new System.Drawing.Point(302, 77);
+            this.Y.BackColor = System.Drawing.Color.White;
+            this.Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Y.ForeColor = System.Drawing.Color.Black;
+            this.Y.Location = new System.Drawing.Point(607, 150);
+            this.Y.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Y.Name = "Y";
-            this.Y.Size = new System.Drawing.Size(48, 33);
+            this.Y.Size = new System.Drawing.Size(100, 75);
             this.Y.TabIndex = 0;
             this.Y.Text = "Y";
-            this.Y.UseVisualStyleBackColor = true;
+            this.Y.UseVisualStyleBackColor = false;
             this.Y.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // SPACE
             // 
-            this.SPACE.Location = new System.Drawing.Point(216, 194);
+            this.SPACE.BackColor = System.Drawing.Color.White;
+            this.SPACE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SPACE.ForeColor = System.Drawing.Color.Black;
+            this.SPACE.Location = new System.Drawing.Point(72, 411);
+            this.SPACE.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.SPACE.Name = "SPACE";
-            this.SPACE.Size = new System.Drawing.Size(264, 33);
+            this.SPACE.Size = new System.Drawing.Size(1132, 75);
             this.SPACE.TabIndex = 0;
             this.SPACE.Text = " ";
-            this.SPACE.UseVisualStyleBackColor = true;
+            this.SPACE.UseVisualStyleBackColor = false;
             this.SPACE.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // U
             // 
-            this.U.Location = new System.Drawing.Point(356, 77);
+            this.U.BackColor = System.Drawing.Color.White;
+            this.U.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.U.ForeColor = System.Drawing.Color.Black;
+            this.U.Location = new System.Drawing.Point(709, 150);
+            this.U.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.U.Name = "U";
-            this.U.Size = new System.Drawing.Size(48, 33);
+            this.U.Size = new System.Drawing.Size(100, 75);
             this.U.TabIndex = 0;
             this.U.Text = "U";
-            this.U.UseVisualStyleBackColor = true;
+            this.U.UseVisualStyleBackColor = false;
             this.U.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // P
             // 
-            this.P.Location = new System.Drawing.Point(518, 77);
+            this.P.BackColor = System.Drawing.Color.White;
+            this.P.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.P.ForeColor = System.Drawing.Color.Black;
+            this.P.Location = new System.Drawing.Point(1015, 150);
+            this.P.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.P.Name = "P";
-            this.P.Size = new System.Drawing.Size(48, 33);
+            this.P.Size = new System.Drawing.Size(100, 75);
             this.P.TabIndex = 0;
             this.P.Text = "P";
-            this.P.UseVisualStyleBackColor = true;
+            this.P.UseVisualStyleBackColor = false;
             this.P.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // I
             // 
-            this.I.Location = new System.Drawing.Point(410, 77);
+            this.I.BackColor = System.Drawing.Color.White;
+            this.I.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.I.ForeColor = System.Drawing.Color.Black;
+            this.I.Location = new System.Drawing.Point(811, 150);
+            this.I.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.I.Name = "I";
-            this.I.Size = new System.Drawing.Size(48, 33);
+            this.I.Size = new System.Drawing.Size(100, 75);
             this.I.TabIndex = 0;
             this.I.Text = "I";
-            this.I.UseVisualStyleBackColor = true;
+            this.I.UseVisualStyleBackColor = false;
             this.I.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // O
             // 
-            this.O.Location = new System.Drawing.Point(464, 77);
+            this.O.BackColor = System.Drawing.Color.White;
+            this.O.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.O.ForeColor = System.Drawing.Color.Black;
+            this.O.Location = new System.Drawing.Point(913, 150);
+            this.O.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.O.Name = "O";
-            this.O.Size = new System.Drawing.Size(48, 33);
+            this.O.Size = new System.Drawing.Size(100, 75);
             this.O.TabIndex = 0;
             this.O.Text = "O";
-            this.O.UseVisualStyleBackColor = true;
+            this.O.UseVisualStyleBackColor = false;
             this.O.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // A
             // 
-            this.A.Location = new System.Drawing.Point(54, 116);
+            this.A.BackColor = System.Drawing.Color.White;
+            this.A.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.A.ForeColor = System.Drawing.Color.Black;
+            this.A.Location = new System.Drawing.Point(132, 237);
+            this.A.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(48, 33);
+            this.A.Size = new System.Drawing.Size(100, 75);
             this.A.TabIndex = 0;
             this.A.Text = "A";
-            this.A.UseVisualStyleBackColor = true;
+            this.A.UseVisualStyleBackColor = false;
             this.A.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // button2
+            // J
             // 
-            this.button2.Location = new System.Drawing.Point(378, 116);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(48, 33);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "J";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Click_Keypad);
+            this.J.BackColor = System.Drawing.Color.White;
+            this.J.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.J.ForeColor = System.Drawing.Color.Black;
+            this.J.Location = new System.Drawing.Point(750, 237);
+            this.J.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.J.Name = "J";
+            this.J.Size = new System.Drawing.Size(100, 75);
+            this.J.TabIndex = 0;
+            this.J.Text = "J";
+            this.J.UseVisualStyleBackColor = false;
+            this.J.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // F
             // 
-            this.F.Location = new System.Drawing.Point(216, 116);
+            this.F.BackColor = System.Drawing.Color.White;
+            this.F.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.F.ForeColor = System.Drawing.Color.Black;
+            this.F.Location = new System.Drawing.Point(441, 237);
+            this.F.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.F.Name = "F";
-            this.F.Size = new System.Drawing.Size(48, 33);
+            this.F.Size = new System.Drawing.Size(100, 75);
             this.F.TabIndex = 0;
             this.F.Text = "F";
-            this.F.UseVisualStyleBackColor = true;
+            this.F.UseVisualStyleBackColor = false;
             this.F.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // S
             // 
-            this.S.Location = new System.Drawing.Point(108, 116);
+            this.S.BackColor = System.Drawing.Color.White;
+            this.S.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.S.ForeColor = System.Drawing.Color.Black;
+            this.S.Location = new System.Drawing.Point(235, 237);
+            this.S.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.S.Name = "S";
-            this.S.Size = new System.Drawing.Size(48, 33);
+            this.S.Size = new System.Drawing.Size(100, 75);
             this.S.TabIndex = 0;
             this.S.Text = "S";
-            this.S.UseVisualStyleBackColor = true;
+            this.S.UseVisualStyleBackColor = false;
             this.S.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // J
+            // K
             // 
-            this.J.Location = new System.Drawing.Point(432, 116);
-            this.J.Name = "J";
-            this.J.Size = new System.Drawing.Size(48, 33);
-            this.J.TabIndex = 0;
-            this.J.Text = "K";
-            this.J.UseVisualStyleBackColor = true;
-            this.J.Click += new System.EventHandler(this.Click_Keypad);
+            this.K.BackColor = System.Drawing.Color.White;
+            this.K.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.K.ForeColor = System.Drawing.Color.Black;
+            this.K.Location = new System.Drawing.Point(853, 237);
+            this.K.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.K.Name = "K";
+            this.K.Size = new System.Drawing.Size(100, 75);
+            this.K.TabIndex = 0;
+            this.K.Text = "K";
+            this.K.UseVisualStyleBackColor = false;
+            this.K.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // G
             // 
-            this.G.Location = new System.Drawing.Point(270, 116);
+            this.G.BackColor = System.Drawing.Color.White;
+            this.G.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.G.ForeColor = System.Drawing.Color.Black;
+            this.G.Location = new System.Drawing.Point(544, 237);
+            this.G.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.G.Name = "G";
-            this.G.Size = new System.Drawing.Size(48, 33);
+            this.G.Size = new System.Drawing.Size(100, 75);
             this.G.TabIndex = 0;
             this.G.Text = "G";
-            this.G.UseVisualStyleBackColor = true;
+            this.G.UseVisualStyleBackColor = false;
             this.G.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // D
             // 
-            this.D.Location = new System.Drawing.Point(162, 116);
+            this.D.BackColor = System.Drawing.Color.White;
+            this.D.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.D.ForeColor = System.Drawing.Color.Black;
+            this.D.Location = new System.Drawing.Point(338, 237);
+            this.D.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.D.Name = "D";
-            this.D.Size = new System.Drawing.Size(48, 33);
+            this.D.Size = new System.Drawing.Size(100, 75);
             this.D.TabIndex = 0;
             this.D.Text = "D";
-            this.D.UseVisualStyleBackColor = true;
+            this.D.UseVisualStyleBackColor = false;
             this.D.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // K
+            // L
             // 
-            this.K.Location = new System.Drawing.Point(486, 116);
-            this.K.Name = "K";
-            this.K.Size = new System.Drawing.Size(48, 33);
-            this.K.TabIndex = 0;
-            this.K.Text = "L";
-            this.K.UseVisualStyleBackColor = true;
-            this.K.Click += new System.EventHandler(this.Click_Keypad);
+            this.L.BackColor = System.Drawing.Color.White;
+            this.L.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L.ForeColor = System.Drawing.Color.Black;
+            this.L.Location = new System.Drawing.Point(956, 237);
+            this.L.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.L.Name = "L";
+            this.L.Size = new System.Drawing.Size(100, 75);
+            this.L.TabIndex = 0;
+            this.L.Text = "L";
+            this.L.UseVisualStyleBackColor = false;
+            this.L.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // H
             // 
-            this.H.Location = new System.Drawing.Point(324, 116);
+            this.H.BackColor = System.Drawing.Color.White;
+            this.H.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.H.ForeColor = System.Drawing.Color.Black;
+            this.H.Location = new System.Drawing.Point(647, 237);
+            this.H.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.H.Name = "H";
-            this.H.Size = new System.Drawing.Size(48, 33);
+            this.H.Size = new System.Drawing.Size(100, 75);
             this.H.TabIndex = 0;
             this.H.Text = "H";
-            this.H.UseVisualStyleBackColor = true;
+            this.H.UseVisualStyleBackColor = false;
             this.H.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // button1
+            // Z
             // 
-            this.button1.Location = new System.Drawing.Point(86, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(48, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Z";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Click_Keypad);
+            this.Z.BackColor = System.Drawing.Color.White;
+            this.Z.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Z.ForeColor = System.Drawing.Color.Black;
+            this.Z.Location = new System.Drawing.Point(132, 324);
+            this.Z.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Z.Name = "Z";
+            this.Z.Size = new System.Drawing.Size(100, 75);
+            this.Z.TabIndex = 0;
+            this.Z.Text = "Z";
+            this.Z.UseVisualStyleBackColor = false;
+            this.Z.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // button3
+            // M
             // 
-            this.button3.Location = new System.Drawing.Point(410, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(48, 33);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "M";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Click_Keypad);
+            this.M.BackColor = System.Drawing.Color.White;
+            this.M.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.M.ForeColor = System.Drawing.Color.Black;
+            this.M.Location = new System.Drawing.Point(750, 324);
+            this.M.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.M.Name = "M";
+            this.M.Size = new System.Drawing.Size(100, 75);
+            this.M.TabIndex = 0;
+            this.M.Text = "M";
+            this.M.UseVisualStyleBackColor = false;
+            this.M.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // button4
+            // V
             // 
-            this.button4.Location = new System.Drawing.Point(248, 155);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 33);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "V";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Click_Keypad);
+            this.V.BackColor = System.Drawing.Color.White;
+            this.V.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.V.ForeColor = System.Drawing.Color.Black;
+            this.V.Location = new System.Drawing.Point(441, 324);
+            this.V.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.V.Name = "V";
+            this.V.Size = new System.Drawing.Size(100, 75);
+            this.V.TabIndex = 0;
+            this.V.Text = "V";
+            this.V.UseVisualStyleBackColor = false;
+            this.V.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // button5
+            // X
             // 
-            this.button5.Location = new System.Drawing.Point(140, 155);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(48, 33);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "X";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Click_Keypad);
+            this.X.BackColor = System.Drawing.Color.White;
+            this.X.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X.ForeColor = System.Drawing.Color.Black;
+            this.X.Location = new System.Drawing.Point(235, 324);
+            this.X.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.X.Name = "X";
+            this.X.Size = new System.Drawing.Size(100, 75);
+            this.X.TabIndex = 0;
+            this.X.Text = "X";
+            this.X.UseVisualStyleBackColor = false;
+            this.X.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // button7
+            // B
             // 
-            this.button7.Location = new System.Drawing.Point(302, 155);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(48, 33);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "B";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Click_Keypad);
+            this.B.BackColor = System.Drawing.Color.White;
+            this.B.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.B.ForeColor = System.Drawing.Color.Black;
+            this.B.Location = new System.Drawing.Point(544, 324);
+            this.B.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.B.Name = "B";
+            this.B.Size = new System.Drawing.Size(100, 75);
+            this.B.TabIndex = 0;
+            this.B.Text = "B";
+            this.B.UseVisualStyleBackColor = false;
+            this.B.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // button8
+            // C
             // 
-            this.button8.Location = new System.Drawing.Point(194, 155);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(48, 33);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "C";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.Click_Keypad);
+            this.C.BackColor = System.Drawing.Color.White;
+            this.C.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C.ForeColor = System.Drawing.Color.Black;
+            this.C.Location = new System.Drawing.Point(338, 324);
+            this.C.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.C.Name = "C";
+            this.C.Size = new System.Drawing.Size(100, 75);
+            this.C.TabIndex = 0;
+            this.C.Text = "C";
+            this.C.UseVisualStyleBackColor = false;
+            this.C.Click += new System.EventHandler(this.Click_Keypad);
             // 
-            // button10
+            // N
             // 
-            this.button10.Location = new System.Drawing.Point(356, 155);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(48, 33);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "N";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.Click_Keypad);
+            this.N.BackColor = System.Drawing.Color.White;
+            this.N.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.N.ForeColor = System.Drawing.Color.Black;
+            this.N.Location = new System.Drawing.Point(647, 324);
+            this.N.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.N.Name = "N";
+            this.N.Size = new System.Drawing.Size(100, 75);
+            this.N.TabIndex = 0;
+            this.N.Text = "N";
+            this.N.UseVisualStyleBackColor = false;
+            this.N.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // Bs
             // 
-            this.Bs.Location = new System.Drawing.Point(572, 77);
+            this.Bs.BackColor = System.Drawing.Color.White;
+            this.Bs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Bs.Location = new System.Drawing.Point(1117, 150);
+            this.Bs.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Bs.Name = "Bs";
-            this.Bs.Size = new System.Drawing.Size(99, 33);
+            this.Bs.Size = new System.Drawing.Size(151, 75);
             this.Bs.TabIndex = 0;
             this.Bs.Text = "BS";
-            this.Bs.UseVisualStyleBackColor = true;
+            this.Bs.UseVisualStyleBackColor = false;
             this.Bs.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // Caps
             // 
-            this.Caps.Location = new System.Drawing.Point(5, 116);
+            this.Caps.BackColor = System.Drawing.Color.White;
+            this.Caps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Caps.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Caps.Location = new System.Drawing.Point(19, 237);
+            this.Caps.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Caps.Name = "Caps";
-            this.Caps.Size = new System.Drawing.Size(43, 33);
+            this.Caps.Size = new System.Drawing.Size(110, 75);
             this.Caps.TabIndex = 0;
             this.Caps.Text = "Caps";
-            this.Caps.UseVisualStyleBackColor = true;
+            this.Caps.UseVisualStyleBackColor = false;
             this.Caps.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // Shift_L
             // 
-            this.Shift_L.Location = new System.Drawing.Point(5, 155);
+            this.Shift_L.BackColor = System.Drawing.Color.White;
+            this.Shift_L.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Shift_L.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.Shift_L.Location = new System.Drawing.Point(19, 324);
+            this.Shift_L.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Shift_L.Name = "Shift_L";
-            this.Shift_L.Size = new System.Drawing.Size(75, 33);
+            this.Shift_L.Size = new System.Drawing.Size(110, 75);
             this.Shift_L.TabIndex = 0;
             this.Shift_L.Text = "Shift";
-            this.Shift_L.UseVisualStyleBackColor = true;
+            this.Shift_L.UseVisualStyleBackColor = false;
             this.Shift_L.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // SQ
             // 
-            this.SQ.Location = new System.Drawing.Point(540, 116);
+            this.SQ.BackColor = System.Drawing.Color.White;
+            this.SQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SQ.ForeColor = System.Drawing.Color.Black;
+            this.SQ.Location = new System.Drawing.Point(1059, 237);
+            this.SQ.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.SQ.Name = "SQ";
-            this.SQ.Size = new System.Drawing.Size(48, 33);
+            this.SQ.Size = new System.Drawing.Size(100, 75);
             this.SQ.TabIndex = 0;
             this.SQ.Text = "\'";
-            this.SQ.UseVisualStyleBackColor = true;
+            this.SQ.UseVisualStyleBackColor = false;
             this.SQ.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // REST
             // 
-            this.REST.Location = new System.Drawing.Point(464, 155);
+            this.REST.BackColor = System.Drawing.Color.White;
+            this.REST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.REST.ForeColor = System.Drawing.Color.Black;
+            this.REST.Location = new System.Drawing.Point(853, 324);
+            this.REST.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.REST.Name = "REST";
-            this.REST.Size = new System.Drawing.Size(48, 33);
+            this.REST.Size = new System.Drawing.Size(100, 75);
             this.REST.TabIndex = 0;
             this.REST.Text = ",";
-            this.REST.UseVisualStyleBackColor = true;
+            this.REST.UseVisualStyleBackColor = false;
             this.REST.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // PERIODE
             // 
-            this.PERIODE.Location = new System.Drawing.Point(518, 155);
+            this.PERIODE.BackColor = System.Drawing.Color.White;
+            this.PERIODE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PERIODE.ForeColor = System.Drawing.Color.Black;
+            this.PERIODE.Location = new System.Drawing.Point(956, 324);
+            this.PERIODE.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.PERIODE.Name = "PERIODE";
-            this.PERIODE.Size = new System.Drawing.Size(48, 33);
+            this.PERIODE.Size = new System.Drawing.Size(100, 75);
             this.PERIODE.TabIndex = 0;
             this.PERIODE.Text = ".";
-            this.PERIODE.UseVisualStyleBackColor = true;
+            this.PERIODE.UseVisualStyleBackColor = false;
             this.PERIODE.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // QUESTION
             // 
-            this.QUESTION.Location = new System.Drawing.Point(572, 155);
+            this.QUESTION.BackColor = System.Drawing.Color.White;
+            this.QUESTION.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QUESTION.ForeColor = System.Drawing.Color.Black;
+            this.QUESTION.Location = new System.Drawing.Point(1059, 324);
+            this.QUESTION.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.QUESTION.Name = "QUESTION";
-            this.QUESTION.Size = new System.Drawing.Size(48, 33);
+            this.QUESTION.Size = new System.Drawing.Size(100, 75);
             this.QUESTION.TabIndex = 0;
             this.QUESTION.Text = "?";
-            this.QUESTION.UseVisualStyleBackColor = true;
+            this.QUESTION.UseVisualStyleBackColor = false;
             this.QUESTION.Click += new System.EventHandler(this.Click_Keypad);
-            // 
-            // Shift_R
-            // 
-            this.Shift_R.Location = new System.Drawing.Point(626, 155);
-            this.Shift_R.Name = "Shift_R";
-            this.Shift_R.Size = new System.Drawing.Size(45, 33);
-            this.Shift_R.TabIndex = 0;
-            this.Shift_R.Text = "Shift";
-            this.Shift_R.UseVisualStyleBackColor = true;
-            this.Shift_R.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no1
             // 
-            this.no1.Location = new System.Drawing.Point(86, 38);
+            this.no1.BackColor = System.Drawing.Color.White;
+            this.no1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no1.ForeColor = System.Drawing.Color.Black;
+            this.no1.Location = new System.Drawing.Point(131, 63);
+            this.no1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no1.Name = "no1";
-            this.no1.Size = new System.Drawing.Size(48, 33);
+            this.no1.Size = new System.Drawing.Size(100, 75);
             this.no1.TabIndex = 0;
             this.no1.Text = "1";
-            this.no1.UseVisualStyleBackColor = true;
+            this.no1.UseVisualStyleBackColor = false;
             this.no1.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no7
             // 
-            this.no7.Location = new System.Drawing.Point(410, 38);
+            this.no7.BackColor = System.Drawing.Color.White;
+            this.no7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no7.ForeColor = System.Drawing.Color.Black;
+            this.no7.Location = new System.Drawing.Point(743, 63);
+            this.no7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no7.Name = "no7";
-            this.no7.Size = new System.Drawing.Size(48, 33);
+            this.no7.Size = new System.Drawing.Size(100, 75);
             this.no7.TabIndex = 0;
             this.no7.Text = "7";
-            this.no7.UseVisualStyleBackColor = true;
+            this.no7.UseVisualStyleBackColor = false;
             this.no7.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no4
             // 
-            this.no4.Location = new System.Drawing.Point(248, 38);
+            this.no4.BackColor = System.Drawing.Color.White;
+            this.no4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no4.ForeColor = System.Drawing.Color.Black;
+            this.no4.Location = new System.Drawing.Point(437, 63);
+            this.no4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no4.Name = "no4";
-            this.no4.Size = new System.Drawing.Size(48, 33);
+            this.no4.Size = new System.Drawing.Size(100, 75);
             this.no4.TabIndex = 0;
             this.no4.Text = "4";
-            this.no4.UseVisualStyleBackColor = true;
+            this.no4.UseVisualStyleBackColor = false;
             this.no4.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no0
             // 
-            this.no0.Location = new System.Drawing.Point(572, 38);
+            this.no0.BackColor = System.Drawing.Color.White;
+            this.no0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no0.ForeColor = System.Drawing.Color.Black;
+            this.no0.Location = new System.Drawing.Point(1049, 63);
+            this.no0.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no0.Name = "no0";
-            this.no0.Size = new System.Drawing.Size(48, 33);
+            this.no0.Size = new System.Drawing.Size(100, 75);
             this.no0.TabIndex = 0;
             this.no0.Text = "0";
-            this.no0.UseVisualStyleBackColor = true;
+            this.no0.UseVisualStyleBackColor = false;
             this.no0.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no2
             // 
-            this.no2.Location = new System.Drawing.Point(140, 38);
+            this.no2.BackColor = System.Drawing.Color.White;
+            this.no2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no2.ForeColor = System.Drawing.Color.Black;
+            this.no2.Location = new System.Drawing.Point(233, 63);
+            this.no2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no2.Name = "no2";
-            this.no2.Size = new System.Drawing.Size(48, 33);
+            this.no2.Size = new System.Drawing.Size(100, 75);
             this.no2.TabIndex = 0;
             this.no2.Text = "2";
-            this.no2.UseVisualStyleBackColor = true;
+            this.no2.UseVisualStyleBackColor = false;
             this.no2.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no8
             // 
-            this.no8.Location = new System.Drawing.Point(464, 38);
+            this.no8.BackColor = System.Drawing.Color.White;
+            this.no8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no8.ForeColor = System.Drawing.Color.Black;
+            this.no8.Location = new System.Drawing.Point(845, 63);
+            this.no8.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no8.Name = "no8";
-            this.no8.Size = new System.Drawing.Size(48, 33);
+            this.no8.Size = new System.Drawing.Size(100, 75);
             this.no8.TabIndex = 0;
             this.no8.Text = "8";
-            this.no8.UseVisualStyleBackColor = true;
+            this.no8.UseVisualStyleBackColor = false;
             this.no8.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no5
             // 
-            this.no5.Location = new System.Drawing.Point(302, 38);
+            this.no5.BackColor = System.Drawing.Color.White;
+            this.no5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no5.ForeColor = System.Drawing.Color.Black;
+            this.no5.Location = new System.Drawing.Point(539, 63);
+            this.no5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no5.Name = "no5";
-            this.no5.Size = new System.Drawing.Size(48, 33);
+            this.no5.Size = new System.Drawing.Size(100, 75);
             this.no5.TabIndex = 0;
             this.no5.Text = "5";
-            this.no5.UseVisualStyleBackColor = true;
+            this.no5.UseVisualStyleBackColor = false;
             this.no5.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no3
             // 
-            this.no3.Location = new System.Drawing.Point(194, 38);
+            this.no3.BackColor = System.Drawing.Color.White;
+            this.no3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no3.ForeColor = System.Drawing.Color.Black;
+            this.no3.Location = new System.Drawing.Point(335, 63);
+            this.no3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no3.Name = "no3";
-            this.no3.Size = new System.Drawing.Size(48, 33);
+            this.no3.Size = new System.Drawing.Size(100, 75);
             this.no3.TabIndex = 0;
             this.no3.Text = "3";
-            this.no3.UseVisualStyleBackColor = true;
+            this.no3.UseVisualStyleBackColor = false;
             this.no3.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no9
             // 
-            this.no9.Location = new System.Drawing.Point(518, 38);
+            this.no9.BackColor = System.Drawing.Color.White;
+            this.no9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no9.ForeColor = System.Drawing.Color.Black;
+            this.no9.Location = new System.Drawing.Point(947, 63);
+            this.no9.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no9.Name = "no9";
-            this.no9.Size = new System.Drawing.Size(48, 33);
+            this.no9.Size = new System.Drawing.Size(100, 75);
             this.no9.TabIndex = 0;
             this.no9.Text = "9";
-            this.no9.UseVisualStyleBackColor = true;
+            this.no9.UseVisualStyleBackColor = false;
             this.no9.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // no6
             // 
-            this.no6.Location = new System.Drawing.Point(356, 38);
+            this.no6.BackColor = System.Drawing.Color.White;
+            this.no6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.no6.ForeColor = System.Drawing.Color.Black;
+            this.no6.Location = new System.Drawing.Point(641, 63);
+            this.no6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.no6.Name = "no6";
-            this.no6.Size = new System.Drawing.Size(48, 33);
+            this.no6.Size = new System.Drawing.Size(100, 75);
             this.no6.TabIndex = 0;
             this.no6.Text = "6";
-            this.no6.UseVisualStyleBackColor = true;
+            this.no6.UseVisualStyleBackColor = false;
             this.no6.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // Underbar
             // 
-            this.Underbar.Location = new System.Drawing.Point(626, 38);
+            this.Underbar.BackColor = System.Drawing.Color.White;
+            this.Underbar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Underbar.ForeColor = System.Drawing.Color.Black;
+            this.Underbar.Location = new System.Drawing.Point(1151, 63);
+            this.Underbar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Underbar.Name = "Underbar";
-            this.Underbar.Size = new System.Drawing.Size(48, 33);
+            this.Underbar.Size = new System.Drawing.Size(110, 75);
             this.Underbar.TabIndex = 0;
             this.Underbar.Text = "_";
-            this.Underbar.UseVisualStyleBackColor = true;
+            this.Underbar.UseVisualStyleBackColor = false;
             this.Underbar.Click += new System.EventHandler(this.Click_Keypad);
             // 
             // AlKeyBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 239);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1280, 493);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.SPACE);
             this.Controls.Add(this.Bs);
-            this.Controls.Add(this.Shift_R);
             this.Controls.Add(this.Shift_L);
             this.Controls.Add(this.Caps);
             this.Controls.Add(this.Enter);
-            this.Controls.Add(this.button10);
+            this.Controls.Add(this.N);
             this.Controls.Add(this.H);
             this.Controls.Add(this.no6);
             this.Controls.Add(this.Y);
@@ -587,41 +768,44 @@
             this.Controls.Add(this.QUESTION);
             this.Controls.Add(this.PERIODE);
             this.Controls.Add(this.REST);
-            this.Controls.Add(this.K);
+            this.Controls.Add(this.L);
             this.Controls.Add(this.no9);
             this.Controls.Add(this.O);
-            this.Controls.Add(this.button8);
+            this.Controls.Add(this.C);
             this.Controls.Add(this.D);
             this.Controls.Add(this.no3);
             this.Controls.Add(this.E);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.B);
             this.Controls.Add(this.G);
             this.Controls.Add(this.no5);
             this.Controls.Add(this.T);
-            this.Controls.Add(this.J);
+            this.Controls.Add(this.K);
             this.Controls.Add(this.no8);
             this.Controls.Add(this.I);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.X);
             this.Controls.Add(this.S);
             this.Controls.Add(this.no2);
             this.Controls.Add(this.W);
             this.Controls.Add(this.Underbar);
             this.Controls.Add(this.no0);
             this.Controls.Add(this.P);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.V);
             this.Controls.Add(this.F);
             this.Controls.Add(this.no4);
             this.Controls.Add(this.R);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.M);
+            this.Controls.Add(this.J);
             this.Controls.Add(this.no7);
             this.Controls.Add(this.U);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Z);
             this.Controls.Add(this.A);
             this.Controls.Add(this.no1);
             this.Controls.Add(this.Q);
             this.Controls.Add(this.Esc);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AlKeyBoard";
@@ -653,21 +837,21 @@
         private System.Windows.Forms.Button I;
         private System.Windows.Forms.Button O;
         private System.Windows.Forms.Button A;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button J;
         private System.Windows.Forms.Button F;
         private System.Windows.Forms.Button S;
-        private System.Windows.Forms.Button J;
+        private System.Windows.Forms.Button K;
         private System.Windows.Forms.Button G;
         private System.Windows.Forms.Button D;
-        private System.Windows.Forms.Button K;
+        private System.Windows.Forms.Button L;
         private System.Windows.Forms.Button H;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Z;
+        private System.Windows.Forms.Button M;
+        private System.Windows.Forms.Button V;
+        private System.Windows.Forms.Button X;
+        private System.Windows.Forms.Button B;
+        private System.Windows.Forms.Button C;
+        private System.Windows.Forms.Button N;
         private System.Windows.Forms.Button Bs;
         private System.Windows.Forms.Button Caps;
         private System.Windows.Forms.Button Shift_L;
@@ -675,7 +859,6 @@
         private System.Windows.Forms.Button REST;
         private System.Windows.Forms.Button PERIODE;
         private System.Windows.Forms.Button QUESTION;
-        private System.Windows.Forms.Button Shift_R;
         private System.Windows.Forms.Button no1;
         private System.Windows.Forms.Button no7;
         private System.Windows.Forms.Button no4;

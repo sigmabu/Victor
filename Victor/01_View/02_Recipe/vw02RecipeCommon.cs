@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Microsoft.VisualBasic.FileIO;
 using Victor;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.Button;
 
 
@@ -59,8 +60,16 @@ namespace Victor
         {
             CData.tRecipe.C_Data.bCValue = (checkBox1.Checked == false) ? false : true;
             CData.tRecipe.C_Data.nCValue = int.Parse(textBox2.Text);
-            CData.tRecipe.C_Data.dCValue = int.Parse(textBox3.Text);
+            CData.tRecipe.C_Data.dCValue = double.Parse(textBox3.Text);
             CData.tRecipe.C_Data.sCValue = textBox4.Text;
+        }
+
+        private void textBox_MouseClick(object sender, MouseEventArgs e)
+        {
+            TextBox tb  = sender as TextBox;
+            var ak = new AlKeyBoard(this.ParentForm, tb.Text);
+
+            if (ak != null) tb.Text = ak.InKey;
         }
     }
 }

@@ -46,7 +46,7 @@ namespace Victor
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(36, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(79, 29);
             this.label2.TabIndex = 459;
             this.label2.Text = "label2";
             // 
@@ -72,7 +72,7 @@ namespace Victor
             this.checkBox1.Location = new System.Drawing.Point(73, 33);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(103, 24);
+            this.checkBox1.Size = new System.Drawing.Size(151, 33);
             this.checkBox1.TabIndex = 461;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,34 +83,37 @@ namespace Victor
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Location = new System.Drawing.Point(176, 138);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(113, 19);
+            this.textBox4.Size = new System.Drawing.Size(113, 28);
             this.textBox4.TabIndex = 460;
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseClick);
             // 
             // textBox3
             // 
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Location = new System.Drawing.Point(176, 106);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(113, 19);
+            this.textBox3.Size = new System.Drawing.Size(113, 28);
             this.textBox3.TabIndex = 460;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseClick);
             // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(176, 74);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(113, 19);
+            this.textBox2.Size = new System.Drawing.Size(113, 28);
             this.textBox2.TabIndex = 460;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBox_MouseClick);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(36, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(79, 29);
             this.label4.TabIndex = 459;
             this.label4.Text = "label4";
             // 
@@ -119,7 +122,7 @@ namespace Victor
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(36, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(79, 29);
             this.label3.TabIndex = 459;
             this.label3.Text = "label3";
             // 
