@@ -40,7 +40,10 @@ namespace Victor
             tbInput.Text = str;
             sHitStr = tbInput.Text;
             nkeyPadType = (int)eKaypadType;
+            Num_KeyBoard_Change();
             nCaps = 0;
+            Caps_KeyBoard_Change();
+
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
@@ -48,6 +51,7 @@ namespace Victor
             
             tbInput.Text = "";
             nCaps = 0;
+            Caps_KeyBoard_Change();
             this.ShowDialog();
         }
 
@@ -61,7 +65,10 @@ namespace Victor
             InKey = str;
             tbInput.Text = str;
             sHitStr = tbInput.Text;
+            nkeyPadType = (int)(eKaypadType);
+            Num_KeyBoard_Change();
             nCaps = 0;
+            Caps_KeyBoard_Change();
 
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
@@ -85,40 +92,41 @@ namespace Victor
 
         private void Num_KeyBoard_Change()
         {
-            NUM.BackColor = (nNum == 0) ? Gcolor.ColorBase : Color.White;
-
-            Caps.Enabled = (nNum == 1) ? true : false;
-            Underbar.Enabled = (nNum == 1) ? true : false;
-            SQ.Enabled = (nNum == 1) ? true : false;
-            REST.Enabled = (nNum == 1) ? true : false;
             
-            QUESTION.Enabled = (nNum == 1) ? true : false;
-            A.Enabled = (nNum == 1) ? true : false;
-            B.Enabled = (nNum == 1) ? true : false;
-            C.Enabled = (nNum == 1) ? true : false;
-            D.Enabled = (nNum == 1) ? true : false;
-            E.Enabled = (nNum == 1) ? true : false;
-            F.Enabled = (nNum == 1) ? true : false;
-            G.Enabled = (nNum == 1) ? true : false;
-            H.Enabled = (nNum == 1) ? true : false;
-            I.Enabled = (nNum == 1) ? true : false;
-            K.Enabled = (nNum == 1) ? true : false;
-            J.Enabled = (nNum == 1) ? true : false;
-            L.Enabled = (nNum == 1) ? true : false;
-            M.Enabled = (nNum == 1) ? true : false;
-            N.Enabled = (nNum == 1) ? true : false;
-            O.Enabled = (nNum == 1) ? true : false;
-            P.Enabled = (nNum == 1) ? true : false;
-            Q.Enabled = (nNum == 1) ? true : false;
-            R.Enabled = (nNum == 1) ? true : false;
-            S.Enabled = (nNum == 1) ? true : false;
-            T.Enabled = (nNum == 1) ? true : false;
-            U.Enabled = (nNum == 1) ? true : false;
-            V.Enabled = (nNum == 1) ? true : false;
-            W.Enabled = (nNum == 1) ? true : false;
-            X.Enabled = (nNum == 1) ? true : false;
-            Y.Enabled = (nNum == 1) ? true : false;
-            Z.Enabled = (nNum == 1) ? true : false;
+            NUM.BackColor = (nkeyPadType != (int)eKeyPadType.Normal) ? Gcolor.ColorBase : Color.White;
+
+            Caps.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            Underbar.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            SQ.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            REST.Enabled = (nkeyPadType != (int)eKeyPadType.Int_data) ? true : false;
+            
+            QUESTION.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            A.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            B.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            C.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            D.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            E.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            F.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            G.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            H.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            I.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            K.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            J.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            L.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            M.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            N.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            O.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            P.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            Q.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            R.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            S.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            T.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            U.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            V.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            W.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            X.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            Y.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
+            Z.Enabled = ((nkeyPadType == (int)eKeyPadType.Normal) || (nkeyPadType == (int)eKeyPadType.string_Data)) ? true : false;
         }
         private void Caps_KeyBoard_Change()
         {
@@ -158,31 +166,36 @@ namespace Victor
             switch (btn.Name.ToString())
             {
                 case "NUM":
-                    if (nNum == 0)
-                    {
-                        nNum = 1;
-                    }
-                    else
-                    {
-                        nNum = 0;
-                    }
+                    nNum ^= 1;
+                    if (nNum == 1) nkeyPadType = (int)eKeyPadType.Double_data;
+                    else nkeyPadType = (int)eKeyPadType.Normal;
                     Num_KeyBoard_Change();
-
                     break;
                 case "Caps":
-                    if (nCaps == 0)
-                    {
-                        nCaps = 1;
-                    }
-                    else
-                    {
-                        nCaps = 0;
-                    }
+                    nCaps ^= 1;
                     Caps_KeyBoard_Change();
                     break;
                 case "Enter":
                     InKey = tbInput.Text;
                     FormClose();
+                    break;
+                case "SPACE":
+                    sHitStr += " ";
+                    tbInput.Text = sHitStr;
+                    break;
+                case "Bs":
+                    if (tbInput.Text.Length > 0)
+                    {
+                        sHitStr = sHitStr.Remove(sHitStr.Length - 1, 1);
+                        tbInput.Text = sHitStr;
+                    }
+                    break;
+                case "Del":
+                    if (tbInput.Text.Length > 0)
+                    {
+                        sHitStr = "";
+                        tbInput.Text = sHitStr;
+                    }
                     break;
                 case "no1":
                 case "no2":
@@ -225,16 +238,8 @@ namespace Victor
                 case "X":
                 case "Y":
                 case "Z":
-                case "SPACE":
                     sHitStr += btn.Text.ToString();
                     tbInput.Text = sHitStr;
-                    break;
-                case "Bs":
-                    if (tbInput.Text.Length > 0)
-                    {
-                        sHitStr = sHitStr.Remove(sHitStr.Length - 1, 1);
-                        tbInput.Text = sHitStr;
-                    }
                     break;
                 default: break;
             }
