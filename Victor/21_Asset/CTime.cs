@@ -104,6 +104,12 @@ public class CTime
         return result;
     }
 
+    public void Set_Delay(int msec)
+    {
+        _setDelay = msec;
+        _target = DateTime.Now.Add(new TimeSpan(0, 0, 0, 0, _setDelay));
+    }
+
     public DateTime Wait(int msec)
     {
         DateTime now = DateTime.Now;

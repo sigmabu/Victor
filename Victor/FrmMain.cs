@@ -225,7 +225,7 @@ namespace Victor
         {
             string view = "FrmMain".PadRight(30);
 
-            CLogManager.Register(ELog.OPL, string.Format("[{0}]  {1}", view, sMsg));
+            CLog.Register(ELog.OPL, string.Format("[{0}]  {1}", view, sMsg));
         }
     }
 }

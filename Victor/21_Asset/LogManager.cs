@@ -51,7 +51,7 @@ using System.Collections.Concurrent;
     }
 
 
-public class CLogManager
+public class CLog
 {
 
     /// <summary>

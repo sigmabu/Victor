@@ -45,7 +45,7 @@ namespace Victor
         /// </summary>
         private static void _Log()
         {
-            CLogManager.Register(ELog.MAIN, "Start log method.");
+            CLog.Register(ELog.MAIN, "Start log method.");
 
             string sPath_Log = GVar.PATH_LOG;
             //string sPath_Spc = GVar.PATH_SPC;
@@ -58,13 +58,13 @@ namespace Victor
             while (true)
             {
                 tMainLog tVal;
-                int iCnt = CLogManager.QueLog.Count;
+                int iCnt = CLog.QueLog.Count;
                 if (iCnt > 0)
                 {
                     for (int i = 0; i < iCnt; i++)
                     {
-                        CLogManager.QueLog.TryDequeue(out tVal);
-                        CLogManager.Save(tVal);
+                        CLog.QueLog.TryDequeue(out tVal);
+                        CLog.Save(tVal);
                     }
                 }
 
