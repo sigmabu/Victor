@@ -24,6 +24,9 @@ namespace Victor
             _thread[(int)EThread.Log].Priority = ThreadPriority.Lowest;
             _thread[(int)EThread.Log].Start();
         }
+        /// <summary>
+        /// Log Save 를 위해 쓰레드 가동
+        /// </summary>
         private static void _Log()
         {
             CLogManager.Register(ELog.MAIN, "Start log method.");
