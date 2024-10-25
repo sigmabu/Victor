@@ -21,7 +21,6 @@ namespace Victor
         public static void Start()
         {
             CData.SPara.iDelPeriod = 10;
-
             // Log 쓰레드 시작
             _thread[(int)EThread.Log] = new Thread(new ThreadStart(_Log));
             _thread[(int)EThread.Log].Priority = ThreadPriority.Lowest;
