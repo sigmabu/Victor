@@ -58,6 +58,7 @@ public class CLogManager
     /// Log를 저장하기 위한 큐
     /// </summary>        
     public static ConcurrentQueue<tMainLog> QueLog = new ConcurrentQueue<tMainLog>();
+
     /// <summary>
     /// Log를 Trace 위한 큐
     /// </summary>        

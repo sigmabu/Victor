@@ -19,15 +19,15 @@ public class GVar
     /// <summary>
     /// settingConfigs Folder Path  StartUp\\settingConfigs\\
     /// </summary>
-    public static readonly string PATH_CONFIG = Application.StartupPath + "\\04_Config\\";
-    public static readonly string PATH_CONFIG_Serial = Application.StartupPath + "\\04_Config\\Serial.csv";
-    public static readonly string PATH_CONFIG_Ethernet = Application.StartupPath + "\\04_Config\\Ethernet.csv";
+    public static readonly string PATH_CONFIG                   = Application.StartupPath + "\\04_Config\\";
+    public static readonly string PATH_CONFIG_Serial            = Application.StartupPath + "\\04_Config\\Serial.csv";
+    public static readonly string PATH_CONFIG_Ethernet          = Application.StartupPath + "\\04_Config\\Ethernet.csv";
 
-    public static readonly string PATH_EQUIP_IOList = Application.StartupPath + "\\05_Equip\\IO\\IOList.csv";
-    public static readonly string PATH_EQUIP_MotorList = Application.StartupPath + "\\05_Equip\\Motion\\motorList.csv";
+    public static readonly string PATH_EQUIP_IOList             = Application.StartupPath + "\\05_Equip\\IO\\IOList.csv";
+    public static readonly string PATH_EQUIP_MotorList          = Application.StartupPath + "\\05_Equip\\Motion\\motorList.csv";
 
-    public static readonly string PATH_EQUIP_ErrorList = Application.StartupPath + "\\03_Error\\ErrorList.xls";
-    public static readonly string PATH_EQUIP_ErrorImageFolder = Application.StartupPath + "\\03_Error\\Image\\";
+    public static readonly string PATH_EQUIP_ErrorList          = Application.StartupPath + "\\03_Error\\ErrorList.xls";
+    public static readonly string PATH_EQUIP_ErrorImageFolder   = Application.StartupPath + "\\03_Error\\Image\\";
     /// <summary>
     /// Device Folder Path  StartUp\\Device\\
     /// </summary>

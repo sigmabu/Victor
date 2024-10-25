@@ -12,6 +12,7 @@ namespace Victor
     {
         Seq = 0,
         Log = 1,
+        End
     }
 
     public static class ThreadManager
@@ -19,11 +20,27 @@ namespace Victor
         private static Thread[] _thread = new Thread[Enum.GetValues(typeof(EThread)).Length];
         public static void Start()
         {
+            CData.SPara.iDelPeriod = 10;
+
             // Log 쓰레드 시작
             _thread[(int)EThread.Log] = new Thread(new ThreadStart(_Log));
             _thread[(int)EThread.Log].Priority = ThreadPriority.Lowest;
             _thread[(int)EThread.Log].Start();
         }
+
+        public static void Release()
+        {
+            int cnt = Enum.GetValues(typeof(EThread)).Length;
+            for (int i = 0; i < cnt; i++)
+            {
+                if (_thread[i] != null)
+                {
+                    _thread[i].Abort();
+                    _thread[i] = null;
+                }
+            }
+        }
+
         /// <summary>
         /// Log Save 를 위해 쓰레드 가동
         /// </summary>

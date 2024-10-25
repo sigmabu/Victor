@@ -206,6 +206,9 @@ namespace Victor
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
+            // 스레드 정지 및 해제
+            ThreadManager.Release();
+
             Application.Exit();
         }
 
