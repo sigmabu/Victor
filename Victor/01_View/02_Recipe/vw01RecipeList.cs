@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace Victor
             GVar.m_iPage = 211;
             vwAdd();
 
-            _GrpListUp();
+            GroupListUp();
             
             // 초기 ListBox Data 설정
             lbxM_Grp.SelectedItem = (string.IsNullOrEmpty(CRecipe.It.Group) == false) ? CRecipe.It.Group : "Empty";
@@ -112,11 +113,12 @@ namespace Victor
                     }
                     sPath = sPath + mForm.Val;
                     Directory.CreateDirectory(sPath);
-                    _GrpListUp();
+                    GroupListUp();
                 }
             }
             catch (Exception err)
             {
+                Trace.WriteLine(err.ToString());
                 MessageBox.Show(err.Message);
             }
             finally
@@ -161,7 +163,7 @@ namespace Victor
 
                         FileSystem.CopyDirectory(sSrc, sDst, UIOption.AllDialogs);
                         CCheckFile.SaveAs("DEVICE", sSrc, sDst);
-                        _GrpListUp();
+                        GroupListUp();
                     }
                 }
             }
@@ -203,7 +205,7 @@ namespace Victor
                         FileSystem.DeleteDirectory(sPath, DeleteDirectoryOption.DeleteAllContents);
                     }
                 }
-                _GrpListUp();
+                GroupListUp();
                 btnM_DApp.Enabled = false;
             }
             catch (Exception err)
@@ -216,7 +218,7 @@ namespace Victor
             }
         }
 
-        private void _GrpListUp()
+        private void GroupListUp()
         {
             int iCnt = 0;
             DirectoryInfo[] aVal;
@@ -239,7 +241,7 @@ namespace Victor
             lbxM_Dev.Items.Clear();
             //m_sGrp = "";
             //m_sDev = "";
-            _RcpListUp();
+            RecipeListUp();
         }
 
         private void lbxM_Grp_SelectedIndexChanged(object sender, EventArgs e)
@@ -248,7 +250,7 @@ namespace Victor
             {
                 m_sGrp = lbxM_Grp.SelectedItem.ToString();
 
-                _RcpListUp();
+                RecipeListUp();
             }
         }
 
@@ -297,7 +299,7 @@ namespace Victor
                     rcp.sDeviceName = mForm.Val;
                     CRecipe.It.CreateRecipe(sPath);
 
-                    _RcpListUp();
+                    RecipeListUp();
 
                     mMsg = new Form_Msg("CreateDeviceFile", "Device file create success", eMsg.Notice);
                     mMsg.ShowDialog();
@@ -369,7 +371,7 @@ namespace Victor
 
                     FileSystem.CopyFile(sSrc, sDst, UIOption.AllDialogs);
 
-                    _RcpListUp();
+                    RecipeListUp();
                 }
             }
             catch (Exception err)
@@ -419,7 +421,7 @@ namespace Victor
 
                 FileSystem.DeleteFile(sPath);
 
-                _RcpListUp();
+                RecipeListUp();
                 btnM_DApp.Enabled = false;
             }
             catch (Exception err)
@@ -432,7 +434,7 @@ namespace Victor
             }
         }
 
-        private void _RcpListUp()
+        private void RecipeListUp()
         {
             string sPath = GVar.PATH_DEVICE + m_sGrp + "\\";
 
@@ -459,7 +461,7 @@ namespace Victor
                 m_sDev = lbxM_Dev.SelectedItem.ToString();
             }
             btnM_DApp.Enabled = true;
-            //_RcpListUp();
+            //RecipeListUp();
         }
 
         private void btnM_DApp_Click(object sender, EventArgs e)

@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Windows.Forms;
-using System.Xml.Linq;
+
 
 namespace Victor
 {
@@ -31,6 +29,7 @@ namespace Victor
             timer1.Start();
 
             Init_App();
+            Init_Run();
         }
 
         private void Init_Screen()
@@ -180,6 +179,25 @@ namespace Victor
         {
             CLast.Load_LastConfig();
         }
+        private void Init_Run()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                thread_start();
+            }
+        }
+
+        private void thread_start()
+        {
+            ThreadManager.Start();
+        }
 
         private void Click_TitleRecipe(object sender, EventArgs e)
         {            
@@ -191,5 +209,20 @@ namespace Victor
             Application.Exit();
         }
 
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            _SetLog( $"radioButton1_Click");
+        }
+
+        /// <summary>
+        /// Manual view에 조작 로그 저장 함수
+        /// </summary>
+        /// <param name="sMsg"></param>
+        private void _SetLog(string sMsg)
+        {
+            string view = "FrmMain".PadRight(30);
+
+            CLogManager.Register(ELog.OPL, string.Format("[{0}]  {1}", view, sMsg));
+        }
     }
 }

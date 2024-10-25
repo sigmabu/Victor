@@ -9,8 +9,7 @@ using System.Threading;
 using System.Windows.Forms;
 
 namespace Victor
-{
-    public class Utils
+{    public class Utils
     {
         /// <summary>
         /// Delay 함수

@@ -64,6 +64,7 @@
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml.Linq" />
@@ -204,6 +205,9 @@
     <Compile Include="21_Asset\AlKeyBoard.Designer.cs">
       <DependentUpon>AlKeyBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="21_Asset\CTime.cs" />
+    <Compile Include="21_Asset\LogManager.cs" />
+    <Compile Include="21_Asset\ThreadManager.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>

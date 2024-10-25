@@ -268,6 +268,7 @@
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Tag = "3";
             this.radioButton1.UseVisualStyleBackColor = false;
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 
             // radioButton2
             // 

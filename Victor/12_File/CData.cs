@@ -48,5 +48,21 @@ namespace Victor
         /// Motor List
         /// </summary>
         public static mMotor[] tMotor = new mMotor[32];
+
+        /// <summary>
+        /// 옵션 구조체
+        /// </summary>
+        public static tServiceOption SPara = new tServiceOption();
+
+        /// <summary>
+        /// Service Option Struct
+        /// </summary>
+        public struct tServiceOption
+        {
+            /// <summary>
+            /// Log 자동 삭제 주기
+            /// </summary>
+            public int iDelPeriod;
+        }
     }
 }

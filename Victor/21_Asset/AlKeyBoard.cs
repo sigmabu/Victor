@@ -78,7 +78,6 @@ namespace Victor
 
         }
 
-
         private void Esc_Click(object sender, EventArgs e)
         {
             FormClose();

@@ -33,6 +33,8 @@ public class GVar
     /// </summary>
     public static readonly string PATH_DEVICE = Application.StartupPath + "\\Device\\";
 
+    public static readonly string PATH_LOG = @"D:\Log_Trace\";
+
     #endregion
 
     /// <summary>
