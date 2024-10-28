@@ -3,8 +3,6 @@ using System.Drawing;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 using static System.Windows.Forms.Button;
-using static Victor.AlKeyBoard;
-
 namespace Victor
 { 
     /// <summary>
