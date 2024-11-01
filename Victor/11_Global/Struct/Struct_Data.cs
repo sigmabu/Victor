@@ -192,6 +192,16 @@ public static class mMotor_Env
     public static string[] sSen_Coil = new string[2] { "NO", "NC" };
 }
 
+public struct mSpcList
+{
+    public string sNo;
+    public string sName;
+    public string sDescrip;
+    public string sXdata;
+    public string sYdata;
+    public string sZdata;
+}
+
 class mViewPage
 {
     public static int nViewMain_111 { get { return 111; } set { } }
@@ -203,6 +213,8 @@ class mViewPage
     public static int nViewMaintIOList_314 { get { return 314; } set { } }
     public static int nViewMaintErrorList_315 { get { return 315; } set { } }
     public static int nViewMaintMotorList_316 { get { return 316; } set { } }
+    public static int nViewSPC_317 { get { return 317; } set { } }
+
 
     public static int nRcpPage { get; set; }
 

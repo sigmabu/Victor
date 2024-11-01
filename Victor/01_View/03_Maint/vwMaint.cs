@@ -12,6 +12,7 @@ namespace Victor
         private vwIOList m_vwIOList = new vwIOList();
         private vwErrorList m_vwErrorList = new vwErrorList();
         private vwMotorList m_vwMotorList = new vwMotorList();
+        private vwSPC m_vwSPC = new vwSPC();
         public vwMaint()
         {
             InitializeComponent();
@@ -74,6 +75,10 @@ namespace Victor
                     m_vwMotorList.Close();
                     pnl_Menu.Controls.Remove(m_vwMotorList);
                     break;
+                case 317:
+                    m_vwSPC.Close();
+                    pnl_Menu.Controls.Remove(m_vwSPC);
+                    break;
                 default: break;
             }
 
@@ -100,6 +105,7 @@ namespace Victor
             {
                 case 311:
                     vwAdd();
+                    lbl_Maint.Text = "MAINTENANCE";
                     break;
                 case 312:
 
@@ -107,6 +113,7 @@ namespace Victor
                     m_vwSerial.Location = new Point(0, 32);
                     GVar.m_iPage = mViewPage.nViewMaintSerial_312;
                     mViewPage.nMaintPage = mViewPage.nViewMaintSerial_312;
+                    lbl_Maint.Text = "MAINTENANCE [Serial port]";
                     m_vwSerial.Open();
                     break;
                 case 313:
@@ -115,6 +122,7 @@ namespace Victor
                     m_vwEthernet.Location = new Point(0, 32);
                     GVar.m_iPage = mViewPage.nViewMaintEthernet_313;
                     mViewPage.nMaintPage = mViewPage.nViewMaintEthernet_313;
+                    lbl_Maint.Text = "MAINTENANCE [Ethernet]";
                     m_vwEthernet.Open();
                     
                     break;
@@ -124,6 +132,7 @@ namespace Victor
                     m_vwIOList.Location = new Point(0, 32);
                     GVar.m_iPage = mViewPage.nViewMaintIOList_314;
                     mViewPage.nMaintPage = mViewPage.nViewMaintIOList_314;
+                    lbl_Maint.Text = "MAINTENANCE [In/Out List]";
                     m_vwIOList.Open();
 
                     break;
@@ -133,6 +142,7 @@ namespace Victor
                     m_vwErrorList.Location = new Point(0, 32);
                     GVar.m_iPage = mViewPage.nViewMaintErrorList_315;
                     mViewPage.nMaintPage = mViewPage.nViewMaintErrorList_315;
+                    lbl_Maint.Text = "MAINTENANCE [Error List]";
                     m_vwErrorList.Open();
 
                     break;
@@ -142,9 +152,21 @@ namespace Victor
                     m_vwMotorList.Location = new Point(0, 32);
                     GVar.m_iPage = mViewPage.nViewMaintMotorList_316;
                     mViewPage.nMaintPage = mViewPage.nViewMaintMotorList_316;
+                    lbl_Maint.Text = "MAINTENANCE [Motor List]";
                     m_vwMotorList.Open();
 
                     break;
+                case 317:
+
+                    pnl_Menu.Controls.Add(m_vwSPC);
+                    m_vwSPC.Location = new Point(0, 32);
+                    GVar.m_iPage = mViewPage.nViewSPC_317;
+                    mViewPage.nMaintPage = mViewPage.nViewSPC_317;
+                    lbl_Maint.Text = "MAINTENANCE [SPC]";
+                    m_vwSPC.Open();
+
+                    break;
+
             }
         }
     }

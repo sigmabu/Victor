@@ -44,6 +44,8 @@ namespace Victor
 
         public static mErrorList[] tErrorList = new mErrorList[1024];
 
+        public static mSpcList[] tSpcList = new mSpcList[1024];
+
         /// <summary>
         /// Motor List
         /// </summary>

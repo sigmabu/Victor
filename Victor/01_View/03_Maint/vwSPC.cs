@@ -10,11 +10,13 @@ using System.Data.OleDb;
 using System.Collections.Generic;
 using System.Diagnostics;
 using DataTable = System.Data.DataTable;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Text;
 
 
 namespace Victor
 {
-    public partial class vwErrorList : UserControl
+    public partial class vwSPC : UserControl
     {
 
         [DllImport("user32.dll", SetLastError = true)]
@@ -25,19 +27,20 @@ namespace Victor
         Excel._Worksheet workSheet = null;		// 워크시트를 의미합니다.
         uint excelProcessId = 0;
 
-        private string Excel03ConString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
+        private string Excel03ConString = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
         private string Excel07ConString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
 
-        private string sErrorListPath;
+        private string sSpcDataPath;
         private string sFolderPath;
         private string sFileName;
 
         private static string[][] sXlsData;
+        private static int nXlsRow_length;
         private static int nSelRow;
 
         private static int nEnable_Edit;
 
-        public vwErrorList()
+        public vwSPC()
         {
             InitializeComponent();
             
@@ -53,16 +56,13 @@ namespace Victor
 
         private void Init_Grid_Set()
         {
-            dGV_ErrorList.DoubleBuffered(true);
+            dGV_DataList.DoubleBuffered(true);
 
-            dGV_ErrorList.Columns[(int)eSpcGrid.DataNo].Width    = 100;
-            dGV_ErrorList.Columns[(int)eSpcGrid.Name].Width       = 495;
-
-            dGV_ErrorList.RowTemplate.Height = 30;
-
-            dGV_ErrorList.Columns[(int)eSpcGrid.Name].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-
-            dGV_ErrorList.ReadOnly = true;
+            dGV_DataList.Columns[(int)eSpcGrid.DataNo].Width    = 100;
+            dGV_DataList.Columns[(int)eSpcGrid.Name].Width      = 495;
+            dGV_DataList.RowTemplate.Height = 30;
+            dGV_DataList.Columns[(int)eSpcGrid.Name].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dGV_DataList.ReadOnly = true;
 
         }
         private void Init_Timer()
@@ -80,24 +80,63 @@ namespace Victor
 
             nSelRow = 0;            
 
-            sErrorListPath = GVar.PATH_EQUIP_ErrorList;
-            int FindDot = sErrorListPath.LastIndexOf(".");
-            int Lastsp = sErrorListPath.LastIndexOf("\\");
+            sSpcDataPath = GVar.PATH_EQUIP_SpcList;
+            int FindDot = sSpcDataPath.LastIndexOf(".");
+            int Lastsp = sSpcDataPath.LastIndexOf("\\");
 
-            sFileName = sErrorListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
-            sFolderPath = sErrorListPath.Replace(sFileName + ".xls", "");
+            sFileName = sSpcDataPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
+            sFolderPath = sSpcDataPath.Replace(sFileName + ".xls", "");
             
-            Read_File_ErroList(true);
+            Read_File_SpcData(true);
+
+            Init_Chart();
         }
 
-        public int Read_File_ErroList(bool bFlag = false)
+        private T IntToEnum<T>(int e)
+        {
+            return (T)(object)e;
+        }
+
+        SeriesChartType IntToEnum(int nSeriesChartType)
+        {
+            return (SeriesChartType)nSeriesChartType;
+        }
+
+        public void Init_Chart()
+        {
+            SeriesChartType eSeriesChartType = IntToEnum(1);
+            int nEnumCnt = System.Enum.GetValues(typeof(SeriesChartType)).Length;
+
+            for (int i = 0; i < nEnumCnt; i++)
+            {
+                eSeriesChartType = IntToEnum(i);
+                cbChartsel.Items.Add(eSeriesChartType);
+            }
+            float Ydata = 0.0f;
+
+            chart_Spc.ChartAreas[0].AxisX.Minimum = 0;
+            chart_Spc.ChartAreas[0].AxisX.Maximum = 100;
+
+            chart_Spc.ChartAreas[0].AxisY.Minimum = 0;
+            chart_Spc.ChartAreas[0].AxisY.Maximum = 100;
+
+            for (int x = 0; x < chart_Spc.ChartAreas[0].AxisX.Maximum; x++)
+            {
+                chart_Spc.Series[0].Points.AddXY(x,Ydata);
+                Ydata += 0.1f;
+            }
+        }
+        public int Read_File_SpcData(bool bFlag = false)
         {
             if (bFlag)
             {
-                sXlsData = ReadExcelData(dGV_ErrorList, sErrorListPath, 1024);
+                sXlsData = ReadExcelData(dGV_DataList, sSpcDataPath, 1024);                
             }
+            nXlsRow_length = sXlsData.GetLength(0);
             GetData_Xls_ErrorList();
-            dGV_ErrorList_SelNum(false);
+            dGV_SpcList_SelNum(false);
+
+
             return 1;
         }
 
@@ -404,93 +443,90 @@ namespace Victor
 
             foreach (var arrVal in sXlsData)
             {
-                //0,1      ,2   ,3     ,4    ,5      ,6        ,7      ,8        ,9      ,10
-                //#,ErrorCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr
+                //0,1      ,2   ,3     ,4    ,5      ,6
+                //#,No,Name,Description,xData,yData,zData
 
-                Array.Clear(CData.tErrorList, nAdd_SumCnt, 1);
-                CData.tErrorList[nAdd_SumCnt].sCode         = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Code]) ? "" : arrVal[(int)eErrorListArray.Code].ToString();
-                CData.tErrorList[nAdd_SumCnt].sName         = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Name]) ? "" : arrVal[(int)eErrorListArray.Name].ToString();
-                CData.tErrorList[nAdd_SumCnt].sAction       = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Action]) ? "" : arrVal[(int)eErrorListArray.Action].ToString();
-                CData.tErrorList[nAdd_SumCnt].sImage        = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Image]) ? "" : arrVal[(int)eErrorListArray.Image].ToString();
-                CData.tErrorList[nAdd_SumCnt].sName_En      = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Name_En]) ? "" : arrVal[(int)eErrorListArray.Name_En].ToString();
-                CData.tErrorList[nAdd_SumCnt].sAction_En    = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Action_En]) ? "" : arrVal[(int)eErrorListArray.Action_En].ToString();
-                CData.tErrorList[nAdd_SumCnt].sName_Ch      = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Name_Ch]) ? "" : arrVal[(int)eErrorListArray.Name_Ch].ToString();
-                CData.tErrorList[nAdd_SumCnt].sAction_Ch    = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Action_Ch]) ? "" : arrVal[(int)eErrorListArray.Action_Ch].ToString();
-                CData.tErrorList[nAdd_SumCnt].sName_Ch      = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Name_Kr]) ? "" : arrVal[(int)eErrorListArray.Name_Kr].ToString();
-                CData.tErrorList[nAdd_SumCnt].sAction_Ch    = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Action_Kr]) ? "" : arrVal[(int)eErrorListArray.Action_Kr].ToString();
+                Array.Clear(CData.tSpcList, nAdd_SumCnt, 1);
+                CData.tSpcList[nAdd_SumCnt].sNo         = String.IsNullOrEmpty(arrVal[(int)eSpcArray.No]) ? ""      : arrVal[(int)eSpcArray.No].ToString();
+                CData.tSpcList[nAdd_SumCnt].sName       = String.IsNullOrEmpty(arrVal[(int)eSpcArray.Name]) ? ""    : arrVal[(int)eSpcArray.Name].ToString();
+                CData.tSpcList[nAdd_SumCnt].sDescrip    = String.IsNullOrEmpty(arrVal[(int)eSpcArray.Description]) ? "" : arrVal[(int)eSpcArray.Description].ToString();
+                CData.tSpcList[nAdd_SumCnt].sXdata      = String.IsNullOrEmpty(arrVal[(int)eSpcArray.xData]) ? ""   : arrVal[(int)eSpcArray.xData].ToString();
+                CData.tSpcList[nAdd_SumCnt].sYdata      = String.IsNullOrEmpty(arrVal[(int)eSpcArray.yData]) ? ""   : arrVal[(int)eSpcArray.yData].ToString();
+                CData.tSpcList[nAdd_SumCnt].sZdata      = String.IsNullOrEmpty(arrVal[(int)eSpcArray.zData]) ? ""   : arrVal[(int)eSpcArray.zData].ToString();
                 nAdd_SumCnt++;
             }
             return 1;
         }
 
-        private void dGV_ErrorList_SelNum(bool bsel = false)
+        private void dGV_SpcList_SelNum(bool bsel = false)
         {
+            StringBuilder sb = new StringBuilder();
+            sb.Clear();
+
             if (bsel == false)
             {
-                dGV_ErrorList.Rows[0].Selected = true;
+                dGV_DataList.Rows[0].Selected = true;
             }
-            DataGridViewRow row = dGV_ErrorList.SelectedRows[0];   //선택된 Row 값 가져옴.
+            DataGridViewRow row = dGV_DataList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index + 1;
-            rTB_ErrTitle.Text = CData.tErrorList[nSelRow].sCode + ":" + CData.tErrorList[nSelRow].sName;
-            rTB_ErrorCause.Text = CData.tErrorList[nSelRow].sAction;
+            rTB_SpcName.Text = CData.tSpcList[nSelRow].sNo + ":" + CData.tSpcList[nSelRow].sName;
+            sb.Append(CData.tSpcList[nSelRow].sDescrip);
+            sb.AppendLine();
+            sb.Append("XData = " + CData.tSpcList[nSelRow].sXdata);
+            sb.AppendLine();
+            sb.Append("YData = " + CData.tSpcList[nSelRow].sYdata);
+            sb.AppendLine();
+            sb.Append("ZData = " + CData.tSpcList[nSelRow].sZdata);
+            sb.AppendLine();
+
+            rTB_SpcData.Text = sb.ToString();
+
             try
             {
-                if (String.IsNullOrEmpty(CData.tErrorList[nSelRow].sImage) == false)
-                {
-                    //PictureBox 컨트롤에 디렉토리 경로의 이미지를 FormLoad 합니다.
-                    string sPath = GVar.PATH_EQUIP_ErrorImageFolder + CData.tErrorList[nSelRow].sImage + ".png";
-                    pb_Image.Load(sPath);
-                    //Load한 이미지 크기를 PictureBox 컨트롤 크기와 동일하게 맞추어 줍니다.
-                    pb_Image.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-                else
-                {
-                    pb_Image.Image = null;
-
-                }
+                
             }
             catch (Exception ex)
             {
             }
         }
 
-        private void dGV_ErrorList_SelNum(int nRow)
+        private void dGV_SpcList_SelNum(int nRow)
         {
+            StringBuilder sb = new StringBuilder();
+            sb.Clear();
+
             nSelRow = nRow;
-            rTB_ErrTitle.Text = CData.tErrorList[nSelRow].sCode + ":" + CData.tErrorList[nSelRow].sName;
-            rTB_ErrorCause.Text = CData.tErrorList[nSelRow].sAction;
+            rTB_SpcName.Text = CData.tSpcList[nSelRow].sNo + ":" + CData.tSpcList[nSelRow].sName;
+
+            sb.Append(CData.tSpcList[nSelRow].sDescrip);
+            sb.AppendLine();
+            sb.Append("XData = " + CData.tSpcList[nSelRow].sXdata);
+            sb.AppendLine();
+            sb.Append("YData = " + CData.tSpcList[nSelRow].sYdata);
+            sb.AppendLine();
+            sb.Append("ZData = " + CData.tSpcList[nSelRow].sZdata);
+            sb.AppendLine();
+
+            rTB_SpcData.Text = sb.ToString();
             try
             {
-                if (String.IsNullOrEmpty(CData.tErrorList[nSelRow].sImage) == false)
-                {
-                    //PictureBox 컨트롤에 디렉토리 경로의 이미지를 FormLoad 합니다.
-                    string sPath = GVar.PATH_EQUIP_ErrorImageFolder + CData.tErrorList[nSelRow].sImage + ".png";
-                    pb_Image.Load(sPath);
-                    //Load한 이미지 크기를 PictureBox 컨트롤 크기와 동일하게 맞추어 줍니다.
-                    pb_Image.SizeMode = PictureBoxSizeMode.StretchImage;
-                }
-                else
-                {
-                    pb_Image.Image = null;
-
-                }
             }
             catch (Exception ex)
             {
             }
         }
 
-        private void Edit_ErrorList_SelNum(bool bsel = false)
+        private void Edit_SpcList_SelNum(bool bsel = false)
         {
             if (bsel == false)
             {
-                dGV_ErrorList.Rows[0].Selected = true;
+                dGV_DataList.Rows[0].Selected = true;
             }
-            DataGridViewRow row = dGV_ErrorList.SelectedRows[0];   //선택된 Row 값 가져옴.
+            DataGridViewRow row = dGV_DataList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index + 1;
  
-            CData.tErrorList[nSelRow].sAction =
-            sXlsData[nSelRow][(int)eErrorListArray.Action] = rTB_ErrorCause.Text;
+            CData.tSpcList[nSelRow].sDescrip =
+            sXlsData[nSelRow][(int)eSpcArray.Description] = rTB_SpcData.Text;
         }
 
         private void TimerEvent(Object myObject, EventArgs myEventArgs)
@@ -504,32 +540,32 @@ namespace Victor
             Btn_Output_Set();
             if (nEnable_Edit == 1)
             {
-                Edit_ErrorList_SelNum();
-                WriteExcelData(sErrorListPath, sXlsData);
+                Edit_SpcList_SelNum();
+                WriteExcelData(sSpcDataPath, sXlsData);
             }
         }
 
         private void Btn_Output_Set()
         {
-            btn_Save.BackColor = (nEnable_Edit == 1) ? Color.SteelBlue : Gcolor.ColorBase;
-            btn_Save.ForeColor = (nEnable_Edit == 1) ? Color.Red : Color.Gray;
+            btn_Save.BackColor = (nEnable_Edit == 1) ? Color.SteelBlue  : Gcolor.ColorBase;
+            btn_Save.ForeColor = (nEnable_Edit == 1) ? Color.Red        : Color.Gray;
         }
         
-        private void dGV_ErrorList_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dGV_SpcList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataGridViewColumn item in dGV_ErrorList.Columns)
+            foreach (DataGridViewColumn item in dGV_DataList.Columns)
             {
                 item.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
 
-            dGV_ErrorList_SelNum(true);
+            dGV_SpcList_SelNum(true);
         }
 
 
         private new void KeyDown(object sender, KeyEventArgs e)
         {
-            DataGridViewRow row = dGV_ErrorList.SelectedRows[0];
-            int nColCnt = dGV_ErrorList.RowCount;
+            DataGridViewRow row = dGV_DataList.SelectedRows[0];
+            int nColCnt = dGV_DataList.RowCount;
             int nIndex = row.Index;
             int nNewIndex = 0;
 
@@ -542,26 +578,82 @@ namespace Victor
                     }
                     else
                     {
-                        dGV_ErrorList.CurrentCell = null;
-                        var row0 = dGV_ErrorList.Rows[nIndex];
+                        dGV_DataList.CurrentCell = null;
+                        var row0 = dGV_DataList.Rows[nIndex];
                         row0.Selected = true;
-                        dGV_ErrorList.CurrentCell = row0.Cells[0];
+                        dGV_DataList.CurrentCell = row0.Cells[0];
                         nNewIndex = row0.Index;
                     }
 
                     break;
                 case Keys.Down:
 
-                    dGV_ErrorList.CurrentCell = null;
-                    var row1 = dGV_ErrorList.Rows[nIndex];
+                    dGV_DataList.CurrentCell = null;
+                    var row1 = dGV_DataList.Rows[nIndex];
                     row1.Selected = true;
-                    dGV_ErrorList.CurrentCell = row1.Cells[0];
+                    dGV_DataList.CurrentCell = row1.Cells[0];
                     nNewIndex = row1.Index + 2;
                     break;
                 default:
                     break;
             }
-            dGV_ErrorList_SelNum(nNewIndex);
-        }   
+            dGV_SpcList_SelNum(nNewIndex);
+        }
+
+        private void cbChartsel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //https://blog.naver.com/kimmingul/221877447894
+
+            string str;
+            grp_Chart.Text = cbChartsel.Text;
+            str = cbChartsel.SelectedItem.ToString();
+            var nSel = (int)cbChartsel.SelectedItem;
+
+            chart_Spc.Series.Clear();
+            switch (nSel)
+            {
+                case 0:
+                    PointChart();
+                    break;
+                case 1:
+                    FastPointChart();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+            }
+        }
+        private void PointChart()
+        {
+            Series Chart1 = chart_Spc.Series.Add("Series5");
+            Chart1.ChartType = SeriesChartType.Point;  // 점
+
+            // 범례1 데이터
+            //for (double i = 0; i < nXlsRow_length * Math.PI; i += 0.1)
+            //{
+            //    Chart1.Points.AddXY(i, CData.tSpcList[nAdd_SumCnt].sXdata);
+            //}
+        }
+
+        private void FastPointChart()
+        {
+            Series Chart1 = chart_Spc.Series.Add("Series1");
+            Chart1.ChartType = SeriesChartType.FastPoint;  // 점
+        }
     }
 }

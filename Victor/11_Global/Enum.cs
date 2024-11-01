@@ -58,7 +58,7 @@ public enum eErrorListGrid
     Name = 1,
     End
 }
-public enum eErrorArray
+public enum eErrorListArray
 {
     Code = 0,
     Name = 1,
@@ -131,4 +131,25 @@ public enum eMotorListGrid
     ZPhase_In,
     Inpos_In,
     end
+}
+
+public enum eSpcGrid
+{
+    DataNo = 0,
+    Name = 1,
+    Description = 2,
+    X_Data = 3,
+    Y_Data = 4,
+    Z_Data = 5,
+    End
+}
+public enum eSpcArray
+{
+    No = 0,
+    Name = 1,
+    Description = 2,
+    xData = 3,
+    yData = 4,
+    zData = 5,
+    End
 }

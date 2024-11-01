@@ -105,20 +105,20 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Error Detail";
             // 
-            // rTB_ErrorCause
+            // rTB_SpcData
             // 
             this.rTB_ErrorCause.Location = new System.Drawing.Point(12, 67);
-            this.rTB_ErrorCause.Name = "rTB_ErrorCause";
+            this.rTB_ErrorCause.Name = "rTB_SpcData";
             this.rTB_ErrorCause.Size = new System.Drawing.Size(488, 300);
             this.rTB_ErrorCause.TabIndex = 462;
             this.rTB_ErrorCause.Text = "Error Cause";
             // 
-            // rTB_ErrTitle
+            // rTB_SpcName
             // 
             this.rTB_ErrTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rTB_ErrTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.rTB_ErrTitle.Location = new System.Drawing.Point(12, 29);
-            this.rTB_ErrTitle.Name = "rTB_ErrTitle";
+            this.rTB_ErrTitle.Name = "rTB_SpcName";
             this.rTB_ErrTitle.Size = new System.Drawing.Size(612, 30);
             this.rTB_ErrTitle.TabIndex = 461;
             this.rTB_ErrTitle.Text = "Error Title";

@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label46 = new System.Windows.Forms.Label();
+            this.lbl_Maint = new System.Windows.Forms.Label();
             this.btn_Serial = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_MotorList = new System.Windows.Forms.Button();
             this.btn_ErrorList = new System.Windows.Forms.Button();
             this.btn_IOList = new System.Windows.Forms.Button();
             this.btn_Network = new System.Windows.Forms.Button();
@@ -44,25 +45,25 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pnl_Menu = new System.Windows.Forms.Panel();
-            this.btn_MotorList = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label46
+            // lbl_Maint
             // 
-            this.label46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(86)))), ((int)(((byte)(29)))));
-            this.label46.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label46.ForeColor = System.Drawing.SystemColors.Control;
-            this.label46.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label46.Location = new System.Drawing.Point(0, 0);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(1280, 30);
-            this.label46.TabIndex = 452;
-            this.label46.Text = "MAINTENANCE";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_Maint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(86)))), ((int)(((byte)(29)))));
+            this.lbl_Maint.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_Maint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_Maint.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_Maint.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.lbl_Maint.Location = new System.Drawing.Point(0, 0);
+            this.lbl_Maint.Name = "lbl_Maint";
+            this.lbl_Maint.Size = new System.Drawing.Size(1280, 30);
+            this.lbl_Maint.TabIndex = 452;
+            this.lbl_Maint.Text = "MAINTENANCE";
+            this.lbl_Maint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_Serial
             // 
@@ -89,7 +90,7 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(26, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 40);
+            this.label1.Size = new System.Drawing.Size(91, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Option";
             // 
@@ -97,6 +98,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btn_MotorList);
             this.panel1.Controls.Add(this.btn_ErrorList);
             this.panel1.Controls.Add(this.btn_IOList);
@@ -108,6 +110,23 @@
             this.panel1.Size = new System.Drawing.Size(389, 679);
             this.panel1.TabIndex = 453;
             // 
+            // btn_MotorList
+            // 
+            this.btn_MotorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_MotorList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btn_MotorList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_MotorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_MotorList.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_MotorList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btn_MotorList.Location = new System.Drawing.Point(31, 344);
+            this.btn_MotorList.Name = "btn_MotorList";
+            this.btn_MotorList.Size = new System.Drawing.Size(323, 50);
+            this.btn_MotorList.TabIndex = 2;
+            this.btn_MotorList.Tag = "316";
+            this.btn_MotorList.Text = "Motor List";
+            this.btn_MotorList.UseVisualStyleBackColor = false;
+            this.btn_MotorList.Click += new System.EventHandler(this.Click_OptionButton);
+            // 
             // btn_ErrorList
             // 
             this.btn_ErrorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
@@ -116,7 +135,7 @@
             this.btn_ErrorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_ErrorList.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btn_ErrorList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_ErrorList.Location = new System.Drawing.Point(31, 288);
+            this.btn_ErrorList.Location = new System.Drawing.Point(31, 278);
             this.btn_ErrorList.Name = "btn_ErrorList";
             this.btn_ErrorList.Size = new System.Drawing.Size(323, 50);
             this.btn_ErrorList.TabIndex = 2;
@@ -133,7 +152,7 @@
             this.btn_IOList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_IOList.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btn_IOList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_IOList.Location = new System.Drawing.Point(31, 218);
+            this.btn_IOList.Location = new System.Drawing.Point(31, 212);
             this.btn_IOList.Name = "btn_IOList";
             this.btn_IOList.Size = new System.Drawing.Size(323, 50);
             this.btn_IOList.TabIndex = 2;
@@ -150,7 +169,7 @@
             this.btn_Network.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn_Network.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btn_Network.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_Network.Location = new System.Drawing.Point(31, 151);
+            this.btn_Network.Location = new System.Drawing.Point(31, 146);
             this.btn_Network.Name = "btn_Network";
             this.btn_Network.Size = new System.Drawing.Size(323, 50);
             this.btn_Network.TabIndex = 2;
@@ -211,7 +230,7 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(26, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 40);
+            this.label2.Size = new System.Drawing.Size(78, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Laser";
             // 
@@ -267,7 +286,7 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(26, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 40);
+            this.label3.Size = new System.Drawing.Size(92, 29);
             this.label3.TabIndex = 0;
             this.label3.Text = "Motion";
             // 
@@ -279,22 +298,22 @@
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 454;
             // 
-            // btn_MotorList
+            // button1
             // 
-            this.btn_MotorList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_MotorList.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btn_MotorList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_MotorList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_MotorList.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_MotorList.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btn_MotorList.Location = new System.Drawing.Point(31, 357);
-            this.btn_MotorList.Name = "btn_MotorList";
-            this.btn_MotorList.Size = new System.Drawing.Size(323, 50);
-            this.btn_MotorList.TabIndex = 2;
-            this.btn_MotorList.Tag = "316";
-            this.btn_MotorList.Text = "Motor List";
-            this.btn_MotorList.UseVisualStyleBackColor = false;
-            this.btn_MotorList.Click += new System.EventHandler(this.Click_OptionButton);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(31, 410);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(323, 50);
+            this.button1.TabIndex = 2;
+            this.button1.Tag = "317";
+            this.button1.Text = "SPC";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Click_OptionButton);
             // 
             // vwMaint
             // 
@@ -303,7 +322,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label46);
+            this.Controls.Add(this.lbl_Maint);
             this.Controls.Add(this.pnl_Menu);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -322,7 +341,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label lbl_Maint;
         private System.Windows.Forms.Button btn_Serial;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
@@ -339,5 +358,6 @@
         private System.Windows.Forms.Button btn_IOList;
         private System.Windows.Forms.Button btn_ErrorList;
         private System.Windows.Forms.Button btn_MotorList;
+        private System.Windows.Forms.Button button1;
     }
 }
