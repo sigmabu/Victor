@@ -45,7 +45,7 @@ namespace Victor
         /// </summary>
         private static void _Log()
         {
-            CLog.Register(ELog.MAIN, "Start log method.");
+            CLog.Write(ELog.MAIN, "Start log method.");
 
             string sPath_Log = GVar.PATH_LOG;
             //string sPath_Spc = GVar.PATH_SPC;

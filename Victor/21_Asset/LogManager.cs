@@ -97,14 +97,21 @@ public class CLog
     /// </summary>
     /// <param name="_eLog"></param>
     /// <param name="msg"></param>
-    public static void Register(ELog _eLog, string msg)
+    public static void Write(ELog _eLog, string msg)
     {
+        StackTrace st = new StackTrace();
+        StackFrame sf = st.GetFrame(1);
+
+        string sMth = sf.GetMethod().Name.PadRight(20);
+
         if (QueLog != null)
         {
+
             tMainLog pLog = new tMainLog();
             pLog.eType = _eLog;
             pLog.dtTime = DateTime.Now;
-            pLog.sMsg = msg;
+            pLog.sMsg = string.Format($"Call : {sMth},");
+            pLog.sMsg += msg;
 #if !DEBUG
                 Trace(log);
 #endif

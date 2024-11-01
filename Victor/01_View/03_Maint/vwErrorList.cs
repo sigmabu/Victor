@@ -266,9 +266,10 @@ namespace Victor
                         }
                     }
                 }
-
+                
                 wookbook.Close(false);
                 excelApp.Quit();
+                CLog.Write(ELog.OPL, string.Format($"Error File {path}, Excel File Close"));
             }
             catch (Exception)
             {
@@ -285,6 +286,7 @@ namespace Victor
                 {
                     Process.GetProcessById((int)excelProcessId).Kill();
                 }
+                CLog.Write(ELog.OPL, string.Format($"Error File {path}, Excel File Release"));
             }
 
             return result.ToArray();

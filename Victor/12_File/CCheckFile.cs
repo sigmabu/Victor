@@ -54,26 +54,26 @@ namespace Victor
                 {
                     Console.WriteLine(changeLog);
                     //if(isNew)
-                    //    CLog.Register(eLog.DSL, title + " : New - log (" + path + ")\r\n" + changeLog);
+                    //    CLog.Write(eLog.DSL, title + " : New - log (" + path + ")\r\n" + changeLog);
                     //else
-                    //    CLog.Register(eLog.DSL, title + " : Changed - log (" + path + ")\r\n" + changeLog);
+                    //    CLog.Write(eLog.DSL, title + " : Changed - log (" + path + ")\r\n" + changeLog);
                 }
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
-                //CLog.Register(eLog.DSL, title + " : Error - log (" + path + ") Msg : " + err.Message);
+                //CLog.Write(eLog.DSL, title + " : Error - log (" + path + ") Msg : " + err.Message);
             }
         }
 
         public static void DeleteLog(string title, string path)
         {
-            //CLog.Register(eLog.DSL, title + " : Delete - log (" + path + ")");
+            //CLog.Write(eLog.DSL, title + " : Delete - log (" + path + ")");
         }
 
         public static void SaveAs(string title, string srcPath, string tarPath)
         {
-            //CLog.Register(eLog.DSL, title + " : SaveAs - log \r\n" + srcPath + " -> " + tarPath +")");
+            //CLog.Write(eLog.DSL, title + " : SaveAs - log \r\n" + srcPath + " -> " + tarPath +")");
         }
 
         private static Dictionary<string, Hashtable> ConvertDicToStr(string str)

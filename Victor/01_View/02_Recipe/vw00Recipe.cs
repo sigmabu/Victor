@@ -90,7 +90,7 @@ namespace Victor
             //string view = "Device view".PadRight(30);
             //string level = CData.Lev.ToString().PadRight(10);
 
-            //CLog.Register(ELog.OPL, string.Format("[{0}]  [Lv:{1}]  {2}", view, level, sMsg));
+            //CLog.Write(ELog.OPL, string.Format("[{0}]  [Lv:{1}]  {2}", view, level, sMsg));
         }
 
         private void rdbMn_CheckedChanged(object sender, EventArgs e)
