@@ -8,6 +8,7 @@ using System.Text;
 using Newtonsoft.Json.Linq;
 using System.Drawing;
 using System.Diagnostics;
+using Victor.HardWare;
 
 
 namespace Victor
@@ -18,7 +19,7 @@ namespace Victor
         private string sFolderPath;
         private string sFileName;
 
-        static string[,] csvData;
+        public static string[,] csvData;
         static int nMotorCnt = 0;
         static int nSelRow;
 
@@ -76,14 +77,16 @@ namespace Victor
             if (Read_File_MotorList() == 0)
             {
                 Process.GetCurrentProcess().Kill();
+                return;
             }
-
-            Init_Property_Setup();
-            Init_MotorList_Grid_Setup();
-            nSelRow = 0;
-            Propert_Change(0, true);
+            else
+            {
+                Init_Property_Setup();
+                Init_MotorList_Grid_Setup();
+                nSelRow = 0;
+                Propert_Change(0, true);
+            }
         }
-
            
 
         private void Init_Property_Setup()
