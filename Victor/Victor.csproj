@@ -33,7 +33,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\exe_default\Victor\</OutputPath>
+    <OutputPath>..\..\..\09_Execute\Victor\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -426,11 +426,14 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PreBuildEvent>
-    </PreBuildEvent>
+    <PreBuildEvent>if not exist "$(TargetDir)\01_dll" mkdir "$(TargetDir)\01_dll"
+
+copy "$(SolutionDir)exe_default\Victor\*l" "$(TargetDir)\"
+</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>move "$(TargetDir)\*.dll" "$(TargetDir)\01_dll"
+move "$(TargetDir)\*.pdb" "$(TargetDir)\01_dll"
+del "$(TargetDir)\*.xml"</PostBuildEvent>
   </PropertyGroup>
 </Project>
