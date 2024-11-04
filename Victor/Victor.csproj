@@ -428,7 +428,7 @@
   <PropertyGroup>
     <PreBuildEvent>if not exist "$(TargetDir)\01_dll" mkdir "$(TargetDir)\01_dll"
 
-copy "$(SolutionDir)exe_default\Victor\*l" "$(TargetDir)\"
+copy "$(SolutionDir)exe_default\Victor\*" "$(TargetDir)\"
 </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
