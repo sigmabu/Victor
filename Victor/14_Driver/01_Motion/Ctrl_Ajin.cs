@@ -20,12 +20,14 @@ namespace Victor.HardWare
 
         public static string[,] csvData;
         static int nMotorCnt = 0;
+        protected uint _uStateValue = 0; // 각종 상태값 조회용 임시변수
+        protected const double MSToSEC = 0.001;                     // Mili-Second -> Second로 변환, 가/감속 지정에 사용된다.
 
         public struct mSTATUS {
             public bool bBusy { get; set; }
             public bool bDone { get; set; }
             public bool bAlarm { get; set; }
-            public bool bHDone { get; set; }
+            public uint uHDone { get; set; }
             public bool bHInpos { get; set; }
 
 
@@ -44,7 +46,7 @@ namespace Victor.HardWare
                 mSts[i].bBusy = true;
                 mSts[i].bDone = true;
                 mSts[i].bAlarm = true;
-                mSts[i].bHDone = true;
+                mSts[i].uHDone = 0x00;
                 mSts[i].bHInpos = true;
 
                 mSts[i].dCmdPulse = 0.0;
@@ -361,7 +363,7 @@ namespace Victor.HardWare
             for (int i = 0; i < axes.Length; i++)
             {
                 // 원점찾기를 초기화 한다.
-                mSts[i].bHDone = false;
+                mSts[i].uHDone = 0x00;
 
                 axis = axes[i];
                 // 지정한 축에 원점검색을 진행합니다.
@@ -405,54 +407,45 @@ namespace Victor.HardWare
         {
             bool ret = true;
             int nRet = 0;
+            uint uTemp_Flag = 0;
             uint Flag = val ? (uint)AXT_MOTION_HOME_RESULT.HOME_SUCCESS : (uint)AXT_MOTION_HOME_RESULT.HOME_SEARCHING;
 
             foreach (int axis in axes)
             {
-                if (IsSim)
+                uTemp_Flag = CAXM.AxmHomeGetResult(axis, ref _uStateValue);
+                if (uTemp_Flag > (uint)AXT_MOTION_HOME_RESULT.HOME_SEARCHING)
                 {
-                    if (_SimConfig.ContainsKey(axis))
-                    {
-                        THwMotConfig Data = _SimConfig[axis];
-                        Data.hDone = val;                          // Home Done 값을 지정
-
-                        _SimConfig[axis] = Data;
-                    }
-                    continue;
+                    mSts[axis].uHDone = uTemp_Flag;
                 }
-
-
-                // 아래 함수를 실행하면 원점찾기 명령이 이미 수행중이라며 오류를 리턴한다.
-                // 아진 제어기에서는 H/W적인 HomeDone flag를 Reset해줄 수 없다.
-                // nRet = (int)CAXM.AxmHomeSetResult(axis, Flag);
-                if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                else if (uTemp_Flag == (uint)AXT_MOTION_HOME_RESULT.HOME_SEARCHING)
                 {
-                    ret = false;            // 수행 실패
-                    Debug.WriteLine($"* CAXM.AxmHomeSetResult({val}) return fail, Axis:{axis}, {nRet}");
+                    mSts[axis].uHDone = uTemp_Flag;
                 }
+                else if (uTemp_Flag == (uint)AXT_MOTION_HOME_RESULT.HOME_SUCCESS)
+                {// 원점찾기 성공적 종료 여부
+                    // 원점찾기를 set 한다.
+                    mSts[axis].uHDone = 1;
+                    SetEncPosition(axis, 0);
+                    Debug.WriteLine($"* CAXM.AxmHomeGetetResult({val}) return sucess, Axis:{axis}, {nRet}");
+                }
+                else
+                {
+                    // 원점찾기를 reset 한다.
+                    mSts[axis].uHDone = 0;
+                }
+                //if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                //{
+                //    ret = false;            // 수행 실패
+                //    Debug.WriteLine($"* CAXM.AxmHomeSetResult({val}) return fail, Axis:{axis}, {nRet}");
+                //}
             }
-
             return ret;
         }
-
         #endregion
 
         // Command position 값을 지정한다.
         public bool SetCommand(int nAxisNo, double dbNewPos)
         {
-            if (IsSim)
-            {
-                if (_SimConfig.ContainsKey(nAxisNo))
-                {
-                    THwMotConfig Data = _SimConfig[nAxisNo];
-                    Data.cmd = dbNewPos;                          // 지령 위치 갱신
-
-                    _SimConfig[nAxisNo] = Data;
-                }
-                return true;
-            }
-
-
             int nRet = (int)CAXM.AxmStatusSetCmdPos(nAxisNo, dbNewPos);
             if (nRet == (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)                    // 함수 수행 결과
             {
@@ -467,19 +460,6 @@ namespace Victor.HardWare
         // Encoder position 값을 지정한다.
         public bool SetEncPosition(int nAxisNo, double dbNewPos)
         {
-            if (IsSim)
-            {
-                if (_SimConfig.ContainsKey(nAxisNo))
-                {
-                    THwMotConfig Data = _SimConfig[nAxisNo];
-                    Data.enc = dbNewPos;                          // feedback 위치 갱신
-
-                    _SimConfig[nAxisNo] = Data;
-                }
-                return true;
-            }
-
-
             int nRet = (int)CAXM.AxmStatusSetActPos(nAxisNo, dbNewPos);
             if (nRet == (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
             {
@@ -508,30 +488,10 @@ namespace Victor.HardWare
             return ret;
         }
 
-
-
         // 지정위치로 이동하도록 지령한다.
         // (각 파라메터의 배열 크기는 상위에서 책임지고 문제가 없도록 지정하여 호출해야한다)
         public bool MovePos(int[] axes, double[] pos, double[] vel, double[] acc, double[] dec)
         {
-            if (IsSim)      // 가상 모드일 경우 지정 위치로 이동을 완료하였다고 지정한다.
-            {
-                for (int i = 0; i < axes.Length; i++)
-                {
-                    if (_SimConfig.ContainsKey(axes[i]))
-                    {
-                        THwMotConfig Data = _SimConfig[axes[i]];
-                        Data.cmd = pos[i];                          // 현재 위치를 목표 위치로 지정
-                        Data.enc = pos[i];
-
-                        _SimConfig[axes[i]] = Data;
-                    }
-                }
-
-                return true;
-            }
-
-
             bool ret = true;
             int nRet = 0;
             uint nProfile = 0;
@@ -596,24 +556,6 @@ namespace Victor.HardWare
         // 지정한 거리만큼 상대이동을 수행한다.
         public bool MoveStep(int[] axes, double[] step, double[] vel, double[] acc, double[] dec)
         {
-            if (IsSim)      // 가상 모드일 경우 지정 위치로 이동을 완료하였다고 지정한다.
-            {
-                for (int i = 0; i < axes.Length; i++)
-                {
-                    if (_SimConfig.ContainsKey(axes[i]))
-                    {
-                        THwMotConfig Data = _SimConfig[axes[i]];
-                        Data.cmd += step[i];                          // 현재 위치를 목표 위치로 지정
-                        Data.enc += step[i];
-
-                        _SimConfig[axes[i]] = Data;
-                    }
-                }
-
-                return true;
-            }
-
-
 
             bool ret = true;
             int nRet = 0;
@@ -679,7 +621,6 @@ namespace Victor.HardWare
         // JOG 이동을 지령한다.
         public bool Jog(int axis, double vel, double acc)
         {
-            if (IsSim) return true;
 
             int nRet = (int)CAXM.AxmMoveVel(axis, vel, (acc * MSToSEC), (acc * MSToSEC));   // JOG 이동 지정
             if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
@@ -717,8 +658,6 @@ namespace Victor.HardWare
         // 지정 축들을 정지 시킨다.
         public bool Stop(int[] axes)
         {
-            if (IsSim) return true;             // 가상 모드일 경우 
-
             bool bRet = true;
             int nRet = 0;
 
@@ -738,8 +677,6 @@ namespace Victor.HardWare
         // 지정 축들을 비상정지 시킨다.
         public bool EStop(int[] axes)
         {
-            if (IsSim) return true;             // 가상 모드일 경우 
-
             bool bRet = true;
             int nRet = 0;
 
