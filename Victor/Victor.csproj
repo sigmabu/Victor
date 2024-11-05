@@ -266,6 +266,7 @@
     <Compile Include="14_Driver\01_Motion\Ctrl_Ajin.cs" />
     <Compile Include="19_Data\ErrorDef\ErrDefine.cs" />
     <Compile Include="19_Data\IODef\IO_Def.cs" />
+    <Compile Include="19_Data\MotorDef\Motor_Def.cs" />
     <Compile Include="21_Asset\AlKeyBoard.cs">
       <SubType>Form</SubType>
     </Compile>

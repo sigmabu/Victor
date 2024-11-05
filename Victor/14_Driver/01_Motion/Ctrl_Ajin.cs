@@ -21,9 +21,38 @@ namespace Victor.HardWare
         public static string[,] csvData;
         static int nMotorCnt = 0;
 
+        public struct mSTATUS {
+            public bool bBusy { get; set; }
+            public bool bDone { get; set; }
+            public bool bAlarm { get; set; }
+            public bool bHDone { get; set; }
+            public bool bHInpos { get; set; }
+
+
+            public double dCmdPulse { get; set; }
+            public double dCmdunit { get; set; }
+            public double dEndPulse { get; set; }
+            public double dEndunit { get; set; }
+        }
+        public static mSTATUS[] mSts = new mSTATUS[(int)eMOT.END];
+
         public Ctrl_Ajin(string sPathName)
         {
             sMotionDataPath = sPathName;
+            for (int i = 0; i < mSts.Length; i++)
+            {
+                mSts[i].bBusy = true;
+                mSts[i].bDone = true;
+                mSts[i].bAlarm = true;
+                mSts[i].bHDone = true;
+                mSts[i].bHInpos = true;
+
+                mSts[i].dCmdPulse = 0.0;
+                mSts[i].dCmdunit = 0.0;
+                mSts[i].dEndPulse = 0.0;
+                mSts[i].dEndunit = 0.0;
+
+            }
             Init_View_Set();
         }
 
@@ -58,7 +87,7 @@ namespace Victor.HardWare
             int nArrayCnt = 0;
             foreach (string str in csvData)
             {
-                if (string.IsNullOrEmpty(csvData[nArrayCnt + 1, (int)eMotor.swAxis]))
+                if (string.IsNullOrEmpty(csvData[nArrayCnt + 1, (int)eMotorConfig.swAxis]))
                 {
                     return -1;
                 }
@@ -68,20 +97,20 @@ namespace Victor.HardWare
                 }
                 else
                 {
-                    CData.tMotor[nArrayCnt].swAxis = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.swAxis]);
-                    CData.tMotor[nArrayCnt].hwAxis = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.hwAxis]);
-                    CData.tMotor[nArrayCnt].sName = csvData[nArrayCnt + 1, (int)eMotor.Name];
-                    CData.tMotor[nArrayCnt].sUse = csvData[nArrayCnt + 1, (int)eMotor.Use];
-                    CData.tMotor[nArrayCnt].sMode = csvData[nArrayCnt + 1, (int)eMotor.Servo];
-                    CData.tMotor[nArrayCnt].nLead_Pitch = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.Lead_Pitch]);
-                    CData.tMotor[nArrayCnt].sMv_Dir = csvData[nArrayCnt + 1, (int)eMotor.Mv_Dir];
-                    CData.tMotor[nArrayCnt].nInPosWidth = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.InPosWidth]);
-                    CData.tMotor[nArrayCnt].nPP1 = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.PP1]);
-                    CData.tMotor[nArrayCnt].sHomeLogic = csvData[nArrayCnt + 1, (int)eMotor.HomeLogic];
-                    CData.tMotor[nArrayCnt].sHome_Coil = csvData[nArrayCnt + 1, (int)eMotor.Home_Coil];
-                    CData.tMotor[nArrayCnt].sLimit_Coil = csvData[nArrayCnt + 1, (int)eMotor.Limit_Coil];
-                    CData.tMotor[nArrayCnt].sAlarm_Coil = csvData[nArrayCnt + 1, (int)eMotor.Alarm_Coil];
-                    CData.tMotor[nArrayCnt].sZ_Phase = csvData[nArrayCnt + 1, (int)eMotor.Z_Phase];
+                    CData.tMotor[nArrayCnt].swAxis = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.swAxis]);
+                    CData.tMotor[nArrayCnt].hwAxis = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.hwAxis]);
+                    CData.tMotor[nArrayCnt].sName = csvData[nArrayCnt + 1, (int)eMotorConfig.Name];
+                    CData.tMotor[nArrayCnt].sUse = csvData[nArrayCnt + 1, (int)eMotorConfig.Use];
+                    CData.tMotor[nArrayCnt].sMode = csvData[nArrayCnt + 1, (int)eMotorConfig.Servo];
+                    CData.tMotor[nArrayCnt].nLead_Pitch = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.Lead_Pitch]);
+                    CData.tMotor[nArrayCnt].sMv_Dir = csvData[nArrayCnt + 1, (int)eMotorConfig.Mv_Dir];
+                    CData.tMotor[nArrayCnt].nInPosWidth = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.InPosWidth]);
+                    CData.tMotor[nArrayCnt].nPP1 = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.PP1]);
+                    CData.tMotor[nArrayCnt].sHomeLogic = csvData[nArrayCnt + 1, (int)eMotorConfig.HomeLogic];
+                    CData.tMotor[nArrayCnt].sHome_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Home_Coil];
+                    CData.tMotor[nArrayCnt].sLimit_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Limit_Coil];
+                    CData.tMotor[nArrayCnt].sAlarm_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Alarm_Coil];
+                    CData.tMotor[nArrayCnt].sZ_Phase = csvData[nArrayCnt + 1, (int)eMotorConfig.Z_Phase];
 
                     nArrayCnt++;
                 }
@@ -96,7 +125,7 @@ namespace Victor.HardWare
             double dGearNumerator = 1000.0;
             uint uInt32Temp;
 
-            //var a = Victor.vwMotorList.csvData[0, (int)eMotor.swAxis];
+            //var a = Victor.vwMotorList.csvData[0, (int)eMotorConfig.swAxis];
             try
             {
                 nRet = CAXL.AxlIsOpened();  // 라이브러리가 Open 되어있는가 ?
@@ -250,21 +279,6 @@ namespace Victor.HardWare
 
             foreach (int axis in axes)
             {
-                if (IsSim)
-                {
-                    if (_SimConfig.ContainsKey(axis))
-                    {
-                        THwMotConfig Data = _SimConfig[axis];
-                        Data.servo = val;                          // Servo On 출력여부를 지정
-                        Data.inPos = val;
-
-                        _SimConfig[axis] = Data;
-                    }
-
-                    continue;
-                }
-
-
                 nRet = (int)CAXM.AxmSignalServoOn(axis, Flag);   // 0x00 : Off,  0x01 : On
                 if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
                 {
@@ -276,7 +290,6 @@ namespace Victor.HardWare
             return ret;
         }
 
-
         // Servo Alarm을 Clear 한다. Alarm clear 시그널을 On 시켜주므로 추후에 Off를 시켜줘야 한다.
         // 이 함수내에서 Sleep을 사용하면 Blocking이 될 수 있으므로 상위 시퀀스에서 delay time을 주고 Off 시켜주는 SetClearOff() 함수를 호출시켜줘야한다.
         public bool SetClear(int[] axes)
@@ -286,19 +299,6 @@ namespace Victor.HardWare
 
             foreach (int axis in axes)
             {
-                if (IsSim)
-                {
-                    if (_SimConfig.ContainsKey(axis))
-                    {
-                        THwMotConfig Data = _SimConfig[axis];
-                        Data.alarm = false;                          // Servo On 출력여부를 지정
-
-                        _SimConfig[axis] = Data;
-                    }
-
-                    continue;
-                }
-
                 nRet = (int)CAXM.AxmSignalServoAlarmReset(axis, 0x01);   // 0x00 : Off,  0x01 : On
                 if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
                 {
@@ -306,28 +306,24 @@ namespace Victor.HardWare
                     Debug.WriteLine($"* CAXM.AxmSignalServoAlarmReset(ON) return fail, Axis:{axis}, {nRet}");
                 }
             }
-
-            Thread.Sleep(250);              // Alarm Reset On 시켜준 뒤에는 반드시 Off 시켜줘야하는데, 상위에서 Off 시켜주는 루틴이 따로없어서 이곳에서 굳이 시간을 지연시켜준 뒤 Off 시켜준다.
+            // Alarm Reset On 시켜준 뒤에는 반드시 Off 
+            Thread.Sleep(250);
 
             // Alarm Reset signal Clear
             foreach (int axis in axes)
             {
-                if (!IsSim)
+                nRet = (int)CAXM.AxmSignalServoAlarmReset(axis, 0x00);   // 0x00 : Off,  0x01 : On
+                if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
                 {
-                    nRet = (int)CAXM.AxmSignalServoAlarmReset(axis, 0x00);   // 0x00 : Off,  0x01 : On
-                    if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
-                    {
-                        ret = false;            // 수행 실패
-                        Debug.WriteLine($"* CAXM.AxmSignalServoAlarmReset(ON) return fail, Axis:{axis}, {nRet}");
-                    }
+                    ret = false;            // 수행 실패
+                    Debug.WriteLine($"* CAXM.AxmSignalServoAlarmReset(ON) return fail, Axis:{axis}, {nRet}");
                 }
             }
-
             return ret;
         }
 
-
-        // Servo Alarm을 Clear 하기위한 AlarmReset 한다. Alarm clear 시그널을 On 시켜주므로 추후에 Off를 시켜줘야 한다.
+        // Servo Alarm을 Clear 하기위한 AlarmReset 한다.
+        // Alarm clear 시그널을 On 시켜주므로 추후에 Off를 시켜줘야 한다.
         // 이 함수내에서 Sleep을 사용하면 Blocking이 될 수 있으므로 상위 시퀀스에서 delay time을 주고 Off 시켜주는 SetClearOff() 함수를 호출시켜줘야한다.
         public bool SetClearOff(int[] axes)
         {
@@ -336,8 +332,6 @@ namespace Victor.HardWare
 
             foreach (int axis in axes)
             {
-                if (IsSim) continue;
-
                 nRet = (int)CAXM.AxmSignalServoAlarmReset(axis, 0x00);  // 0x00 : Off,  0x01 : On
                 if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
                 {
@@ -345,10 +339,63 @@ namespace Victor.HardWare
                     Debug.WriteLine($"* CAXM.AxmSignalServoAlarmReset(OFF) return fail, Axis:{axis}, {nRet}");
                 }
             }
-
             return ret;
         }
 
+        #region 원점 검색
+        // 원점찾기를 지령한다.
+        public bool Home(int[] axes)
+        {
+            bool bRet = true;
+            int nRet = 0;
+            int axis = 0;
+            uint nHomeSignal = 0;
+            int nTemp = 0;
+            uint uTemp = 0;
+            double dTemp = 0.0;
+            uint nLimitStopMode = 0;
+            uint uPosLimit = 0;
+            uint uNegLimit = 0;
+
+
+            for (int i = 0; i < axes.Length; i++)
+            {
+                // 원점찾기를 초기화 한다.
+                mSts[i].bHDone = false;
+
+                axis = axes[i];
+                // 지정한 축에 원점검색을 진행합니다.
+                CAXM.AxmHomeGetMethod(axis, ref nTemp, ref nHomeSignal, ref uTemp, ref dTemp, ref dTemp);
+                CAXM.AxmSignalGetLimit(axis, ref nLimitStopMode, ref uPosLimit, ref uNegLimit);
+                // 원점 검색을 Home Sensor로 사용할 경우 Limit Sensor 를 Disable 로 변경
+                if (nHomeSignal == 4)
+                {
+                    CAXM.AxmSignalSetLimit(axis, 0, 2, 2);
+                }
+                // 원점 검색 시작 
+                nRet = (int)CAXM.AxmHomeSetStart(axis);
+
+                // Limit Sensor 를 Disable 에서 사용자가 초기화 때 설정한 파라메터로 원복
+                if (nHomeSignal == 4)
+                {
+                    CAXM.AxmSignalSetLimit(axis, nLimitStopMode, uPosLimit, uNegLimit);
+                }
+
+                if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                {
+                    Debug.WriteLine($"* CAXM.AxmHomeSetStart({axes[i]}) return fail : {nRet}");
+                    bRet = false;
+                }
+            }
+            return bRet;
+        }
+
+        // 원점찾기를 취소한다.
+        // 아진은 이동을 중지시킨다.
+        public bool HomeCancel(int[] axes)
+        {
+            return Stop(axes);
+        }
 
         // 원점찾기 완료 flag을 지정한다.
         // bool val :
@@ -388,6 +435,7 @@ namespace Victor.HardWare
             return ret;
         }
 
+        #endregion
 
         // Command position 값을 지정한다.
         public bool SetCommand(int nAxisNo, double dbNewPos)
@@ -651,96 +699,6 @@ namespace Victor.HardWare
         public bool OvrPosition(int axis, double pos)
         {
             return true;
-        }
-
-
-        // 원점찾기를 지령한다.
-        public bool Home(int[] axes)
-        {
-            if (IsSim)      // 가상 모드일 경우 지정 위치로 이동을 완료하였다고 지정한다.
-            {
-                for (int i = 0; i < axes.Length; i++)
-                {
-                    if (_SimConfig.ContainsKey(axes[i]))
-                    {
-                        THwMotConfig Data = _SimConfig[axes[i]];
-                        Data.cmd = 0;                          // 현재 위치는 원점이다.
-                        Data.enc = 0;
-                        Data.hDone = true;                      // 원점찾기를 완료하였다.
-
-                        _SimConfig[axes[i]] = Data;
-                    }
-                }
-
-                return true;
-            }
-
-
-
-            bool bRet = true;
-            int nRet = 0;
-            int axis = 0;
-            uint nHomeSignal = 0;
-            int nTemp = 0;
-            uint uTemp = 0;
-            double dTemp = 0.0;
-            uint nLimitStopMode = 0;
-            uint uPosLimit = 0;
-            uint uNegLimit = 0;
-
-
-            // 원점찾기를 초기화 한다.
-            //d SetHomeDone(axes, false);
-
-            for (int i = 0; i < axes.Length; i++)
-            {
-                axis = axes[i];
-                // 지정한 축에 원점검색을 진행합니다.
-
-                //				if (axis == 0)
-                {
-                    CAXM.AxmHomeGetMethod(axis, ref nTemp, ref nHomeSignal, ref uTemp, ref dTemp, ref dTemp);
-
-                    CAXM.AxmSignalGetLimit(axis, ref nLimitStopMode, ref uPosLimit, ref uNegLimit);
-
-                    // 2022.03.21 AJIN HOME Bug
-                    // SMC-2V04 제품 사용 시 POS Limit 감지 중  원점 검색 하면 오동작
-                    // 원점 검색을 Home Sensor로 사용할 경우 Limit Sensor 를 Disable 로 변경
-                    if (nHomeSignal == 4)
-                    {
-                        CAXM.AxmSignalSetLimit(axis, 0, 2, 2);
-                    }
-
-                    // 원점 검색 시작 
-                    nRet = (int)CAXM.AxmHomeSetStart(axis); // axes[i]);
-
-                    // Limit Sensor 를 Disable 에서 사용자가 초기화 때 설정한 파라메터로 원복
-                    if (nHomeSignal == 4)
-                    {
-                        CAXM.AxmSignalSetLimit(axis, nLimitStopMode, uPosLimit, uNegLimit);
-                    }
-
-                    if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
-                    {
-                        Debug.WriteLine($"* CAXM.AxmHomeSetStart({axes[i]}) return fail : {nRet}");
-                        bRet = false;
-                    }
-                }
-                //else
-                //            {
-                //	nRet = (int)CAXM.AxmHomeSetStart(axis); // axes[i]);
-                //}
-            }
-
-
-            return bRet;
-        }
-
-        // 원점찾기를 취소한다.
-        // 아진은 이동을 중지시킨다.
-        public bool HomeCancel(int[] axes)
-        {
-            return Stop(axes);
         }
 
 

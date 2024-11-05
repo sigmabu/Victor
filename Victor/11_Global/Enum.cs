@@ -5,7 +5,6 @@ public enum ELang
     Chinese = 1,
     Korean = 2,
 }
-
 public enum EUser
 {
     Operator  ,
@@ -20,7 +19,6 @@ public enum eMsg
     Warning,
     Error
 }
-
 public enum eRecipGroup
 {
     Common,
@@ -29,7 +27,6 @@ public enum eRecipGroup
     Unloader,
     End
 }
-
 public enum eEthernet
 {
     No = 0,
@@ -40,7 +37,6 @@ public enum eEthernet
     Protocol = 5,
     End
 }
-
 public enum eSerial
 {
     No = 0,
@@ -98,7 +94,7 @@ public enum eIO_Kind
     end
 }
 
-public enum eMotor
+public enum eMotorConfig
 {
     swAxis = 0,
     hwAxis = 1,

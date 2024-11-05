@@ -209,20 +209,20 @@ namespace Victor
         {
             int nSelName = cb_2.SelectedIndex;
 
-            csvData[nSelName + 1, (int)eMotor.swAxis] = cb_0.SelectedItem.ToString();
-            csvData[nSelName + 1, (int)eMotor.hwAxis] = cb_1.SelectedItem.ToString();
-            csvData[nSelName + 1, (int)eMotor.Name] = cb_2.SelectedItem.ToString();
-            //csvData[nSelName + 1, (int)eMotor.Use] = tB_LeadPitch;
-            csvData[nSelName + 1, (int)eMotor.Servo] = cb_4.SelectedIndex.ToString();
-            csvData[nSelName + 1, (int)eMotor.Lead_Pitch] = tB_LeadPitch.Text;
-            csvData[nSelName + 1, (int)eMotor.Mv_Dir] = cb_6.SelectedIndex.ToString();
-            csvData[nSelName + 1, (int)eMotor.InPosWidth] = tB_Inposition.Text;
-            csvData[nSelName + 1, (int)eMotor.PP1] = tB_PP1.Text;
-            csvData[nSelName + 1, (int)eMotor.HomeLogic] = cb_9.SelectedIndex.ToString();
-            csvData[nSelName + 1, (int)eMotor.Home_Coil] = cb_10.SelectedIndex.ToString();
-            csvData[nSelName + 1, (int)eMotor.Limit_Coil] = cb_11.SelectedIndex.ToString();
-            csvData[nSelName + 1, (int)eMotor.Alarm_Coil] = cb_12.SelectedIndex.ToString();
-            csvData[nSelName + 1, (int)eMotor.Z_Phase] = cb_13.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.swAxis] = cb_0.SelectedItem.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.hwAxis] = cb_1.SelectedItem.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.Name] = cb_2.SelectedItem.ToString();
+            //csvData[nSelName + 1, (int)eMotorConfig.Use] = tB_LeadPitch;
+            csvData[nSelName + 1, (int)eMotorConfig.Servo] = cb_4.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.Lead_Pitch] = tB_LeadPitch.Text;
+            csvData[nSelName + 1, (int)eMotorConfig.Mv_Dir] = cb_6.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.InPosWidth] = tB_Inposition.Text;
+            csvData[nSelName + 1, (int)eMotorConfig.PP1] = tB_PP1.Text;
+            csvData[nSelName + 1, (int)eMotorConfig.HomeLogic] = cb_9.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.Home_Coil] = cb_10.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.Limit_Coil] = cb_11.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.Alarm_Coil] = cb_12.SelectedIndex.ToString();
+            csvData[nSelName + 1, (int)eMotorConfig.Z_Phase] = cb_13.SelectedIndex.ToString();
             return 0;
         }
 
@@ -240,7 +240,7 @@ namespace Victor
             }
             foreach (string str in csvData)
             {
-                if (string.IsNullOrEmpty(csvData[nArrayCnt + 1, (int)eMotor.swAxis]))
+                if (string.IsNullOrEmpty(csvData[nArrayCnt + 1, (int)eMotorConfig.swAxis]))
                 {
                     return -1;
                 }
@@ -249,20 +249,20 @@ namespace Victor
                     break;                    
                 }
                 else {
-                    CData.tMotor[nArrayCnt].swAxis          = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.swAxis]);
-                    CData.tMotor[nArrayCnt].hwAxis          = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.hwAxis]);
-                    CData.tMotor[nArrayCnt].sName           = csvData[nArrayCnt + 1, (int)eMotor.Name];
-                    CData.tMotor[nArrayCnt].sUse            = csvData[nArrayCnt + 1, (int)eMotor.Use];
-                    CData.tMotor[nArrayCnt].sMode           = csvData[nArrayCnt + 1, (int)eMotor.Servo];
-                    CData.tMotor[nArrayCnt].nLead_Pitch     = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.Lead_Pitch]);
-                    CData.tMotor[nArrayCnt].sMv_Dir         = csvData[nArrayCnt + 1, (int)eMotor.Mv_Dir];
-                    CData.tMotor[nArrayCnt].nInPosWidth     = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.InPosWidth]);
-                    CData.tMotor[nArrayCnt].nPP1            = int.Parse(csvData[nArrayCnt + 1, (int)eMotor.PP1]);
-                    CData.tMotor[nArrayCnt].sHomeLogic      = csvData[nArrayCnt + 1, (int)eMotor.HomeLogic];
-                    CData.tMotor[nArrayCnt].sHome_Coil      = csvData[nArrayCnt + 1, (int)eMotor.Home_Coil];
-                    CData.tMotor[nArrayCnt].sLimit_Coil     = csvData[nArrayCnt + 1, (int)eMotor.Limit_Coil];
-                    CData.tMotor[nArrayCnt].sAlarm_Coil     = csvData[nArrayCnt + 1, (int)eMotor.Alarm_Coil];
-                    CData.tMotor[nArrayCnt].sZ_Phase        = csvData[nArrayCnt + 1, (int)eMotor.Z_Phase];
+                    CData.tMotor[nArrayCnt].swAxis          = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.swAxis]);
+                    CData.tMotor[nArrayCnt].hwAxis          = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.hwAxis]);
+                    CData.tMotor[nArrayCnt].sName           = csvData[nArrayCnt + 1, (int)eMotorConfig.Name];
+                    CData.tMotor[nArrayCnt].sUse            = csvData[nArrayCnt + 1, (int)eMotorConfig.Use];
+                    CData.tMotor[nArrayCnt].sMode           = csvData[nArrayCnt + 1, (int)eMotorConfig.Servo];
+                    CData.tMotor[nArrayCnt].nLead_Pitch     = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.Lead_Pitch]);
+                    CData.tMotor[nArrayCnt].sMv_Dir         = csvData[nArrayCnt + 1, (int)eMotorConfig.Mv_Dir];
+                    CData.tMotor[nArrayCnt].nInPosWidth     = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.InPosWidth]);
+                    CData.tMotor[nArrayCnt].nPP1            = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.PP1]);
+                    CData.tMotor[nArrayCnt].sHomeLogic      = csvData[nArrayCnt + 1, (int)eMotorConfig.HomeLogic];
+                    CData.tMotor[nArrayCnt].sHome_Coil      = csvData[nArrayCnt + 1, (int)eMotorConfig.Home_Coil];
+                    CData.tMotor[nArrayCnt].sLimit_Coil     = csvData[nArrayCnt + 1, (int)eMotorConfig.Limit_Coil];
+                    CData.tMotor[nArrayCnt].sAlarm_Coil     = csvData[nArrayCnt + 1, (int)eMotorConfig.Alarm_Coil];
+                    CData.tMotor[nArrayCnt].sZ_Phase        = csvData[nArrayCnt + 1, (int)eMotorConfig.Z_Phase];
 
                     nArrayCnt++;
                 }
@@ -326,23 +326,23 @@ namespace Victor
         private void Propert_Change(int nNum ,bool bInit_Falg = false)
         { 
             
-            cb_0.Text           = csvData[nNum + 1, (int)eMotor.swAxis];
-            cb_1.Text           = csvData[nNum + 1, (int)eMotor.hwAxis].ToString();
+            cb_0.Text           = csvData[nNum + 1, (int)eMotorConfig.swAxis];
+            cb_1.Text           = csvData[nNum + 1, (int)eMotorConfig.hwAxis].ToString();
             if (bInit_Falg == true)
             {
-                cb_2.SelectedItem = csvData[nNum + 1, (int)eMotor.Name].ToString();
+                cb_2.SelectedItem = csvData[nNum + 1, (int)eMotorConfig.Name].ToString();
             }
-            tB_LeadPitch.Text   = csvData[nNum + 1, (int)eMotor.Lead_Pitch];
-            cb_4.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Servo].ToString());
-            tB_LeadPitch.Text   = csvData[nNum + 1, (int)eMotor.Lead_Pitch];
-            cb_6.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Mv_Dir].ToString());
-            tB_Inposition.Text  = csvData[nNum + 1, (int)eMotor.InPosWidth];
-            tB_PP1.Text         = csvData[nNum + 1, (int)eMotor.PP1];
-            cb_9.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.HomeLogic].ToString());
-            cb_10.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Home_Coil].ToString());
-            cb_11.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Limit_Coil].ToString());
-            cb_12.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Alarm_Coil].ToString());
-            cb_13.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotor.Z_Phase].ToString());
+            tB_LeadPitch.Text   = csvData[nNum + 1, (int)eMotorConfig.Lead_Pitch];
+            cb_4.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotorConfig.Servo].ToString());
+            tB_LeadPitch.Text   = csvData[nNum + 1, (int)eMotorConfig.Lead_Pitch];
+            cb_6.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotorConfig.Mv_Dir].ToString());
+            tB_Inposition.Text  = csvData[nNum + 1, (int)eMotorConfig.InPosWidth];
+            tB_PP1.Text         = csvData[nNum + 1, (int)eMotorConfig.PP1];
+            cb_9.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotorConfig.HomeLogic].ToString());
+            cb_10.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotorConfig.Home_Coil].ToString());
+            cb_11.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotorConfig.Limit_Coil].ToString());
+            cb_12.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotorConfig.Alarm_Coil].ToString());
+            cb_13.SelectedIndex = int.Parse(csvData[nNum + 1, (int)eMotorConfig.Z_Phase].ToString());
         }
 
         private void MotorGrid_Change(int nNum)
@@ -352,9 +352,9 @@ namespace Victor
             {
                 Console.WriteLine($"num = {nNum} num + 1 = {nNum + 1}, i= {i} => {nGridAxis[nNum + 1, i]}");
                 row = dGV_MotorList.Rows[i];
-                row.Cells[(int)eMotorListGrid.swAxis].Value = csvData[nGridAxis[nNum , i], (int)eMotor.swAxis];
-                row.Cells[(int)eMotorListGrid.Name].Value = csvData[nGridAxis[nNum , i], (int)eMotor.Name];
-                row.Cells[(int)eMotorListGrid.Servo].Value = csvData[nGridAxis[nNum, i], (int)eMotor.Servo];
+                row.Cells[(int)eMotorListGrid.swAxis].Value = csvData[nGridAxis[nNum , i], (int)eMotorConfig.swAxis];
+                row.Cells[(int)eMotorListGrid.Name].Value = csvData[nGridAxis[nNum , i], (int)eMotorConfig.Name];
+                row.Cells[(int)eMotorListGrid.Servo].Value = csvData[nGridAxis[nNum, i], (int)eMotorConfig.Servo];
             }        
 
         }
