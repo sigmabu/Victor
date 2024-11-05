@@ -29,6 +29,7 @@ namespace Victor.HardWare
             public bool bAlarm { get; set; }
             public uint uHDone { get; set; }
             public bool bHInpos { get; set; }
+            public bool bServo_On { get; set; }
 
 
             public double dCmdPulse { get; set; }
@@ -290,6 +291,75 @@ namespace Victor.HardWare
             }
 
             return ret;
+        }
+        public bool GetServo(int[] axes, bool val)
+        {
+            bool ret = true;
+            int nRet = 0;
+            uint Flag = val ? (uint)0x01 : (uint)0x00;
+
+            foreach (int axis in axes)
+            {
+                if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                {
+                    ret = false;            // 수행 실패
+                    Debug.WriteLine($"* CAXM.AxmSignalServoOn({Flag}) return fail, Axis:{axis}, {nRet}");
+                }
+                else if (CAXM.AxmSignalIsServoOn(axis, ref _uStateValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                {
+                    // Servo On 여부
+                    mSts[axis].bServo_On = true;
+                }
+                else
+                {
+                    mSts[axis].bServo_On = false;
+                }
+            }
+            return ret;
+        }
+
+        public bool GetInposition(int[] axes, bool val)
+        {
+            bool ret = true;
+            int nRet = 0;
+            uint uState = 0;
+            uint Flag = val ? (uint)0x01 : (uint)0x00;
+                        
+            foreach (int axis in axes)
+            {
+                nRet = (int)CAXM.AxmStatusReadInMotion(axis, ref uState);
+                if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                {
+                    ret = false;            // 수행 실패
+                    Debug.WriteLine($"* CAXM.AxmSignalServoOn({Flag}) return fail, Axis:{axis}, {nRet}");
+                }
+                else if (nRet == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                {
+                    mSts[axis].bBusy = true;                 // Busy end, In Motion
+                }
+                else
+                    mSts[axis].bBusy = false;                 // Busy, In Motion
+
+            }
+            return ret;
+        }
+
+        public bool Getalarm(int[] axes, bool val)
+        {
+            return true;
+        }
+
+        public bool GetPLimit(int[] axes, bool val)
+        {
+            return true;
+        }
+        public bool GetNLimit(int[] axes, bool val)
+        {
+            return true;
+        }
+        public bool GetHomeSensor(int[] axes, bool val)
+        {
+            return true;
         }
 
         // Servo Alarm을 Clear 한다. Alarm clear 시그널을 On 시켜주므로 추후에 Off를 시켜줘야 한다.
