@@ -3,31 +3,41 @@
     /// <summary>
     /// IO list define
     /// </summary>
-    public enum eIn
+    public enum eIn :uint
     {
         None = 0,
 
         #region Machine Default Input
 
-        EMO_SWITCH_X000 = 10000,
-        MAIN_SWITCH_X001 = 10001,
-        START_SWITCH_X002 = 10002,
-        STOP_SWITCH_X003 = 10003,
-        RESET_SWITCH_X004 = 10004,
-        MANUAL_SWITCH_X005 = 10005,
-        MAIN_DOOR_X006 = 10006,
-        LEFT_DOOR_X007 = 10007,
+        EMO_SWITCH_X000     = 0x0000,
+        MAIN_SWITCH_X001    = 0x0001,
+        START_SWITCH_X002   = 0x0002,
+        STOP_SWITCH_X003    = 0x0003,
+        RESET_SWITCH_X004   = 0x0004,
+        MANUAL_SWITCH_X005  = 0x0005,
+        MAIN_DOOR_X006      = 0x0006,
+        LEFT_DOOR_X007      = 0x0007,
 
-        REGHT_DOOR_X008 = 10008,
-        REAR_DOOR_X009 = 10009,
-        MAIN_AIR00_X00A = 100010,
-        MAIN_AIR01_X00B = 100011,
-        MAIN_AIR02_X00C = 100012,
-        MAIN_POWER00_X00D = 100013,
-        MAIN_POWER01_X00E = 100014,
-        MAIN_POWER02_X00F = 100015,
+        REGHT_DOOR_X008     = 0x0008,
+        REAR_DOOR_X009      = 0x0009,
+        MAIN_AIR00_X00A     = 0x000A,
+        MAIN_AIR01_X00B     = 0x000B,
+        MAIN_AIR02_X00C     = 0x000C,
+        MAIN_POWER00_X00D   = 0x000D,
+        MAIN_POWER01_X00E   = 0x000E,
+        MAIN_POWER02_X00F   = 0x000F,
 
-        MAIN_READY_X010 = 100016,
+        MAIN_READY_X010 = 0x00010,
+        MAIN_READY_X011 = 0x00011,
+        MAIN_READY_X012 = 0x00012,
+        MAIN_READY_X013 = 0x00013,
+        MAIN_READY_X014 = 0x00024,
+        MAIN_READY_X015 = 0x00015,
+        MAIN_READY_X016 = 0x00016,
+        MAIN_READY_X017 = 0x00017,
+        MAIN_READY_X018 = 0x00018,
+        MAIN_READY_X019 = 0x00019,
+        MAIN_READY_X01A = 0x0001A,
         #endregion
         END
     }

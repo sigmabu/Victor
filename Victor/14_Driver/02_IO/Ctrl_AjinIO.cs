@@ -241,40 +241,19 @@ namespace Victor.HardWare
             Debug.WriteLine("! Read_MotionStatus Thread end !");
         }
 
-        public bool ReadInBit(float addr, ref int rtrn)
+        // 지정된 1개 비트의 값을 취득한다.
+        public bool ReadInBit(int nUnitNo, ref uint uValue)
         {
-            //short UnitNo = (short)addr;                           // 정수부분만 취한다.
-            //short BitAddr = (short)((addr - UnitNo) * 100);       // 아진은 32점 표현을 위하여 0 ~ 31까지 2자리  bit offset이 사용된다.
-            //uint uValue = 0;
-            //uint uRet = 0;
+            if (!IsOpen) return false;
+            int nOffset = (int)(uValue) / 1000;
+            uint uAddress = uValue % 1000;            
+            {
+                return CAXD.AxdiReadInportBit(nUnitNo, nOffset, ref uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS;
+            }
 
-            //lock (_lockReadIn)
-            //{
-            //    if (IsOpen)
-            //    {
-            //        try
-            //        {
-            //            uRet = CAXD.AxdiReadInportBit(UnitNo, BitAddr, ref uValue);
-
-            //            if (uRet == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)                  // 읽기에 성공하였다면
-            //            {
-            //                // 읽어온 값을 되돌린다.
-            //                rtrn = (int)uValue;
-            //                return true;
-            //            }
-            //        }
-            //        catch (Exception ex)
-            //        {
-            //            return false;
-            //        }
-            //    }
-            //}
-
-            return true;
+            return false;
         }
 
-
-        // 지정된 1개 비트의 값을 취득한다.
         public bool ReadInBit(int nUnitNo, int nOffset, ref uint uValue)
         {
             if (IsOpen)
@@ -297,37 +276,12 @@ namespace Victor.HardWare
             return false;
         }
 
-
-        // 지정된 1개 바이트의 값을 취득한다.
-        public bool WriteOutByte(int nUnitNo, int nOffset, uint uValue)
-        {
-            if (IsOpen)
-            {
-                return CAXD.AxdoWriteOutportByte(nUnitNo, nOffset, uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS;
-            }
-
-            return false;
-        }
-
-
         // 지정된 1개 출력 비트의 값을 읽는다.
         public bool ReadOutBit(int nUnitNo, int nOffset, ref uint uValue)
         {
             if (IsOpen)
             {
                 return CAXD.AxdoReadOutportBit(nUnitNo, nOffset, ref uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS;
-            }
-
-            return false;
-        }
-
-
-        // 지정된 1개 바이트의 값을 취득한다.
-        public bool ReadOutByte(int nUnitNo, int nOffset, ref uint uValue)
-        {
-            if (IsOpen)
-            {
-                return CAXD.AxdoReadOutportByte(nUnitNo, nOffset, ref uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS;
             }
 
             return false;
@@ -343,6 +297,31 @@ namespace Victor.HardWare
 
             return false;
         }
+
+        // 지정된 1개 바이트의 값을 취득한다.
+        public bool WriteOutByte(int nUnitNo, int nOffset, uint uValue)
+        {
+            if (IsOpen)
+            {
+                return CAXD.AxdoWriteOutportByte(nUnitNo, nOffset, uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS;
+            }
+
+            return false;
+        }
+
+
+
+        // 지정된 1개 바이트의 값을 취득한다.
+        public bool ReadOutByte(int nUnitNo, int nOffset, ref uint uValue)
+        {
+            if (IsOpen)
+            {
+                return CAXD.AxdoReadOutportByte(nUnitNo, nOffset, ref uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS;
+            }
+
+            return false;
+        }
+
 
         #region Analog process
         /// <summary>

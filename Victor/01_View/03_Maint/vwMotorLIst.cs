@@ -402,6 +402,19 @@ namespace Victor
 
         private void btn_RepSp_Click(object sender, EventArgs e)
         {
+            uint a = (uint)eIn.EMO_SWITCH_X000;
+            int na = (int) a;
+
+
+            a = (uint)eIn.MAIN_READY_X010;
+            na = (int)a;
+            a = (uint)eIn.MAIN_POWER01_X00E;
+            na = (int)a;
+            a = (uint)eIn.MAIN_READY_X010;
+            na = (int)a;
+
+
+
             int nSelMotorNo = (int)cb_2.SelectedIndex;
             HW.mMot.Stop(nSelMotorNo);
         }
