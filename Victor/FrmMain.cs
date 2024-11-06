@@ -21,7 +21,7 @@ namespace Victor
         private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("tRecipe : " + eRecipGroup.Common.ToString());
         private vwMaint         m_vwMaint;
         //private vwSerial        m_vwSerial;
-        private HardWare.Ctrl_Ajin mCtrlAjin;// = new HardWare.Ctrl_Ajin(GVar.PATH_EQUIP_MotorList);
+        //private HardWare.Ctrl_Ajin mCtrlAjin;// = new HardWare.Ctrl_Ajin(GVar.PATH_EQUIP_MotorList);
 
         public FrmMain()
         {
@@ -31,7 +31,8 @@ namespace Victor
 
             Init_App();
             Init_Run();
-            mCtrlAjin = new HardWare.Ctrl_Ajin(GVar.PATH_EQUIP_MotorList);
+            //mCtrlAjin = new HardWare.Ctrl_Ajin(GVar.PATH_EQUIP_MotorList);
+
     }
 
         private void Init_Screen()
@@ -50,6 +51,7 @@ namespace Victor
 
         private void Click_Exit(object sender, EventArgs e)
         {
+            Ctrl.mMotion.Close();
             Application.Exit();
         }
 

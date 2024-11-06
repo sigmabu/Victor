@@ -1,19 +1,28 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using Org.BouncyCastle.Ocsp;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace Victor.HardWare
 {
     public class Ctrl_Ajin
     {
-        protected bool IsConnect = false;
+        private object _lockObj = new object();
+        public bool IsOpen { get; private set; } = false;
+        public bool IsLoop = true;
+
         private string sMotionDataPath;
         private string sFolderPath;
         private string sFileName;
@@ -23,21 +32,33 @@ namespace Victor.HardWare
         protected uint _uStateValue = 0; // 각종 상태값 조회용 임시변수
         protected const double MSToSEC = 0.001;                     // Mili-Second -> Second로 변환, 가/감속 지정에 사용된다.
 
+        protected MOTION_INFO tAxis_Info = new MOTION_INFO();         // Motion 정보를 가져오는 임시변수, ReadData()에서 사용
         public struct mSTATUS {
             public bool bBusy { get; set; }
             public bool bDone { get; set; }
             public bool bAlarm { get; set; }
             public uint uHDone { get; set; }
-            public bool bHInpos { get; set; }
+            public bool bHDon { get; set; }
             public bool bServo_On { get; set; }
+            public bool bInpos { get; set; }
+            public bool bHSen { get; set; }
+            public bool bPLSen { get; set; }
+            public bool bNLSen { get; set; }
 
 
-            public double dCmdPulse { get; set; }
-            public double dCmdunit { get; set; }
-            public double dEndPulse { get; set; }
-            public double dEndunit { get; set; }
+            public double dCmdPulse;
+            public double dCmdPos;
+            public double dCmdVel;
+            public double dFbPulse;
+            public double dFbPos;
+            public double dFbVel;
         }
         public static mSTATUS[] mSts = new mSTATUS[(int)eMOT.END];
+
+        /// <summary>
+        /// 데이터 갱신용 스레드
+        /// </summary>
+        private Thread Thread = null;
 
         public Ctrl_Ajin(string sPathName)
         {
@@ -48,18 +69,22 @@ namespace Victor.HardWare
                 mSts[i].bDone = true;
                 mSts[i].bAlarm = true;
                 mSts[i].uHDone = 0x00;
-                mSts[i].bHInpos = true;
+                mSts[i].bHDon = true;
 
                 mSts[i].dCmdPulse = 0.0;
-                mSts[i].dCmdunit = 0.0;
-                mSts[i].dEndPulse = 0.0;
-                mSts[i].dEndunit = 0.0;
+                mSts[i].dCmdPos = 0.0;
+                mSts[i].dFbPulse = 0.0;
+                mSts[i].dFbPos = 0.0;
 
             }
-            Init_View_Set();
+            Init_FilePath();
+            Init_ReadFile_MotorList();
+            Init_Motor();
+            IsLoop = true;
+            Thread_Start();
         }
 
-        private void Init_View_Set()
+        private void Init_FilePath()
         {
             int i = 0;
             int FindDot = sMotionDataPath.LastIndexOf(".");
@@ -67,11 +92,9 @@ namespace Victor.HardWare
 
             sFileName = sMotionDataPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sMotionDataPath.Replace(sFileName + ".csv", "");
-            ReadFile_MotorList();
-            Init_Motor();
         }
 
-        public int ReadFile_MotorList()
+        public int Init_ReadFile_MotorList()
         {
             nMotorCnt = 0;
             csvData = CSV.OpenMotorCSVFile(sMotionDataPath, out nMotorCnt);
@@ -84,43 +107,6 @@ namespace Victor.HardWare
             return 1;
         }
 
-        private int DataTransfer_MotorList()
-        {
-            nMotorCnt = 0;
-            int nArrayCnt = 0;
-            foreach (string str in csvData)
-            {
-                if (string.IsNullOrEmpty(csvData[nArrayCnt + 1, (int)eMotorConfig.swAxis]))
-                {
-                    return -1;
-                }
-                else if (nArrayCnt >= (nMotorCnt - 1))
-                {
-                    break;
-                }
-                else
-                {
-                    CData.tMotor[nArrayCnt].swAxis = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.swAxis]);
-                    CData.tMotor[nArrayCnt].hwAxis = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.hwAxis]);
-                    CData.tMotor[nArrayCnt].sName = csvData[nArrayCnt + 1, (int)eMotorConfig.Name];
-                    CData.tMotor[nArrayCnt].sUse = csvData[nArrayCnt + 1, (int)eMotorConfig.Use];
-                    CData.tMotor[nArrayCnt].sMode = csvData[nArrayCnt + 1, (int)eMotorConfig.Servo];
-                    CData.tMotor[nArrayCnt].nLead_Pitch = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.Lead_Pitch]);
-                    CData.tMotor[nArrayCnt].sMv_Dir = csvData[nArrayCnt + 1, (int)eMotorConfig.Mv_Dir];
-                    CData.tMotor[nArrayCnt].nInPosWidth = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.InPosWidth]);
-                    CData.tMotor[nArrayCnt].nPP1 = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.PP1]);
-                    CData.tMotor[nArrayCnt].sHomeLogic = csvData[nArrayCnt + 1, (int)eMotorConfig.HomeLogic];
-                    CData.tMotor[nArrayCnt].sHome_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Home_Coil];
-                    CData.tMotor[nArrayCnt].sLimit_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Limit_Coil];
-                    CData.tMotor[nArrayCnt].sAlarm_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Alarm_Coil];
-                    CData.tMotor[nArrayCnt].sZ_Phase = csvData[nArrayCnt + 1, (int)eMotorConfig.Z_Phase];
-
-                    nArrayCnt++;
-                }
-            }
-            return 1;
-        }
-
         protected bool Init_Motor()
         {
             int nRet = 0;
@@ -128,16 +114,18 @@ namespace Victor.HardWare
             double dGearNumerator = 1000.0;
             uint uInt32Temp;
 
-            //var a = Victor.vwMotorList.csvData[0, (int)eMotorConfig.swAxis];
             try
             {
                 nRet = CAXL.AxlIsOpened();  // 라이브러리가 Open 되어있는가 ?
                 if (nRet == 0)              // 라이브러리가 초기화 되어있지 않음
                 {
-                    nRet = (int)CAXL.AxlOpen(0);            // AXL 라이브러리Open
-
-                    if (nRet == (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)         // 라이브러리 Open 성공
+                    // AXL 라이브러리Open
+                    nRet = (int)CAXL.AxlOpen(0);
+                    
+                    // 라이브러리 Open 성공
+                    if (nRet == (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)         
                     {
+                        IsOpen = true;
                         Debug.WriteLine($". AXL LibraryOpen() OK, {sFileName} : {nRet}");
 
                         for (int i = 0; i < nMotorCnt; i++)
@@ -247,35 +235,165 @@ namespace Victor.HardWare
             catch (Exception ex)
             {
                 Debug.WriteLine($"* AJin deivice DLL call exception error, {sFileName} : {ex.Message}");
-                //Debug.WriteLine($"! AJin deivice is simulator device");
             }
 
             return (nRet == 0);         // Open 성공여부
         }
 
-        // 장치 사용을 종료시켜준다.
-        protected int _Close()
+        void Thread_Start()
         {
-            try
+            Thread = new Thread(new ThreadStart(Read_Loop));
+            Thread.Start();
+        }
+
+
+        private int DataTransfer_MotorList()
+        {
+            nMotorCnt = 0;
+            int nArrayCnt = 0;
+            foreach (string str in csvData)
             {
-                if (CAXL.AxlIsOpened() != 0)  // 라이브러리가 Open 되어있는가 ?)
+                if (string.IsNullOrEmpty(csvData[nArrayCnt + 1, (int)eMotorConfig.swAxis]))
                 {
-                    // I/O와 Motion은 동일한 AXL 라이브러리를 사용하므로 Motion 쪽에서 종료하도록 하고 이곳에서는 종료하지 않게 한다.
-                    //
-                    //  CAXL.AxlClose();            // 라이브러리를 닫아준다.
+                    return -1;
+                }
+                else if (nArrayCnt >= (nMotorCnt - 1))
+                {
+                    break;
+                }
+                else
+                {
+                    CData.tMotor[nArrayCnt].swAxis = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.swAxis]);
+                    CData.tMotor[nArrayCnt].hwAxis = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.hwAxis]);
+                    CData.tMotor[nArrayCnt].sName = csvData[nArrayCnt + 1, (int)eMotorConfig.Name];
+                    CData.tMotor[nArrayCnt].sUse = csvData[nArrayCnt + 1, (int)eMotorConfig.Use];
+                    CData.tMotor[nArrayCnt].sMode = csvData[nArrayCnt + 1, (int)eMotorConfig.Servo];
+                    CData.tMotor[nArrayCnt].nLead_Pitch = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.Lead_Pitch]);
+                    CData.tMotor[nArrayCnt].sMv_Dir = csvData[nArrayCnt + 1, (int)eMotorConfig.Mv_Dir];
+                    CData.tMotor[nArrayCnt].nInPosWidth = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.InPosWidth]);
+                    CData.tMotor[nArrayCnt].nPP1 = int.Parse(csvData[nArrayCnt + 1, (int)eMotorConfig.PP1]);
+                    CData.tMotor[nArrayCnt].sHomeLogic = csvData[nArrayCnt + 1, (int)eMotorConfig.HomeLogic];
+                    CData.tMotor[nArrayCnt].sHome_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Home_Coil];
+                    CData.tMotor[nArrayCnt].sLimit_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Limit_Coil];
+                    CData.tMotor[nArrayCnt].sAlarm_Coil = csvData[nArrayCnt + 1, (int)eMotorConfig.Alarm_Coil];
+                    CData.tMotor[nArrayCnt].sZ_Phase = csvData[nArrayCnt + 1, (int)eMotorConfig.Z_Phase];
+
+                    nArrayCnt++;
                 }
             }
-            catch (Exception ex)
+            return 1;
+        }
+
+        // 장치 사용을 종료시켜준다.
+        public int Close()
+        {
+
+            if (Thread != null)
             {
-                Debug.WriteLine($"* AJin deivice DLL call exception error : {ex.Message}");
+                Thread.Abort();
+                Thread = null;
             }
 
+            if ((IsOpen))
+            {
+
+                try
+                {
+
+
+                    if (CAXL.AxlIsOpened() != 0)  // 라이브러리가 Open 되어있는가 ?)
+                    {
+                        // I/O와 Motion은 동일한 AXL 라이브러리를 사용하므로 Motion 쪽에서 종료하도록 하고 이곳에서는 종료하지 않게 한다.
+                        //
+                        //  CAXL.AxlClose();            // 라이브러리를 닫아준다.
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"* AJin deivice DLL call exception error : {ex.Message}");
+                }
+            }
             return 0;
         }
 
+        private void Read_Loop()
+        {
+            while (IsLoop) // true)
+            {
+                if (IsOpen)
+                {
+                    Read_MotionStatus();
+                }
+         
+                Thread.Sleep(1);
+            }
+
+            Debug.WriteLine("! Read_MotionStatus Thread end !");
+        }
+
+
+        // Motion 상태를 읽어온다. (loop로 상위에서 모니터링용으로 읽는다)
+        public void Read_MotionStatus()
+        {
+
+            lock (_lockObj)
+            {
+                int naxis = 0;
+                int nRet = 0;
+                uint uState = 0;
+                try
+                {
+                    for (int i = 0; i < (int)eMOT.END; i++)
+                    {
+                        naxis = i;
+                        uState = 0;
+
+                        // Servo On 여부
+                        if (CAXM.AxmSignalIsServoOn(naxis, ref _uStateValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                        {
+                            mSts[naxis].bServo_On = _uStateValue > 0;                          // Servo On 출력여부
+                        }
+
+                        // 원점찾기 성공적 종료 여부
+                        if (CAXM.AxmHomeGetResult(naxis, ref _uStateValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                        {
+                            mSts[naxis].bHDon = _uStateValue == (uint)AXT_MOTION_HOME_RESULT.HOME_SUCCESS;
+                        }
+
+                        // 지정 축의 상태를 읽어온다.
+                        nRet = (int)CAXM.AxmStatusReadMotionInfo(naxis, ref tAxis_Info);
+                        if (nRet == (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                        {
+                            mSts[naxis].bAlarm = (tAxis_Info.uMechSig & 0x10) > 0;  // Alarm
+                            mSts[naxis].bInpos = (tAxis_Info.uMechSig & 0x20) > 0;  // Inpos
+                            mSts[naxis].bHSen = (tAxis_Info.uMechSig & 0x80) > 0;   // Origin sensor
+                            mSts[naxis].bPLSen = (tAxis_Info.uMechSig & 0x01) > 0;  // POT sensor
+                            mSts[naxis].bNLSen = (tAxis_Info.uMechSig & 0x02) > 0;  // NOT sensor
+                        }
+                        // 대체 함수 : AxmStatusReadInMotion()
+                        if ((int)CAXM.AxmStatusReadInMotion(naxis, ref uState) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+                        {
+                            mSts[naxis].bBusy = uState != 0;                 // Busy, In Motion
+                            mSts[naxis].dCmdPos = tAxis_Info.dCmdPos;
+                            mSts[naxis].dFbPos = tAxis_Info.dActPos;
+                        }
+                        else
+                            mSts[naxis].bBusy = (tAxis_Info.uDrvStat & 0x01) > 0;   // Busy, In Motion
+
+                        // 나머지 상태는 개별 조회 함수를 이용해서 검출한다.
+                        CAXM.AxmStatusReadVel(naxis, ref mSts[naxis].dFbVel);   // current velocity
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Read_MotionStatus() Exception error : {ex.Message}");
+                }
+            }
+        }
         // Servo On/Off를 수행한다.
         public bool SetServo(int[] axes, bool val)
         {
+            if (!IsOpen) return false;
             bool ret = true;
             int nRet = 0;
             uint Flag = val ? (uint)0x01 : (uint)0x00;
@@ -292,80 +410,75 @@ namespace Victor.HardWare
 
             return ret;
         }
-        public bool GetServo(int[] axes, bool val)
+        public bool GetServoOn(int axis, bool val)
         {
+            if (!IsOpen) return false;
             bool ret = true;
-            int nRet = 0;
+            bool bRet = false;
             uint Flag = val ? (uint)0x01 : (uint)0x00;
+            bRet = (mSts[axis].bServo_On == val) ? true : false;
 
-            foreach (int axis in axes)
-            {
-                if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
-                {
-                    ret = false;            // 수행 실패
-                    Debug.WriteLine($"* CAXM.AxmSignalServoOn({Flag}) return fail, Axis:{axis}, {nRet}");
-                }
-                else if (CAXM.AxmSignalIsServoOn(axis, ref _uStateValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
-                {
-                    // Servo On 여부
-                    mSts[axis].bServo_On = true;
-                }
-                else
-                {
-                    mSts[axis].bServo_On = false;
-                }
-            }
-            return ret;
+            return bRet;
         }
 
-        public bool GetInposition(int[] axes, bool val)
+        public bool GetInposition(int axis, bool val)
         {
+            if (!IsOpen) return false;
             bool ret = true;
-            int nRet = 0;
-            uint uState = 0;
+            bool bRet = false;
             uint Flag = val ? (uint)0x01 : (uint)0x00;
-                        
-            foreach (int axis in axes)
-            {
-                nRet = (int)CAXM.AxmStatusReadInMotion(axis, ref uState);
-                if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
-                {
-                    ret = false;            // 수행 실패
-                    Debug.WriteLine($"* CAXM.AxmSignalServoOn({Flag}) return fail, Axis:{axis}, {nRet}");
-                }
-                else if (nRet == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
-                {
-                    mSts[axis].bBusy = true;                 // Busy end, In Motion
-                }
-                else
-                    mSts[axis].bBusy = false;                 // Busy, In Motion
+            bRet = (mSts[axis].bInpos == val) ? true : false;
 
-            }
-            return ret;
+            return bRet;
         }
 
-        public bool Getalarm(int[] axes, bool val)
+        public bool Getalarm(int axis, bool val)
         {
-            return true;
+            if (!IsOpen) return false;
+            bool ret = true;
+            bool bRet = false;
+            uint Flag = val ? (uint)0x01 : (uint)0x00;
+            bRet = (mSts[axis].bAlarm == val) ? true : false;
+
+            return bRet;
         }
 
-        public bool GetPLimit(int[] axes, bool val)
+        public bool GetPLimit(int axis, bool val)
         {
-            return true;
+            if (!IsOpen) return false;
+            bool ret = true;
+            bool bRet = false;
+            uint Flag = val ? (uint)0x01 : (uint)0x00;
+            bRet = (mSts[axis].bPLSen == val) ? true : false;
+
+            return bRet;
         }
-        public bool GetNLimit(int[] axes, bool val)
+        public bool GetNLimit(int axis, bool val)
         {
-            return true;
+            if (!IsOpen) return false;
+            bool ret = true;
+            bool bRet = false;
+            uint Flag = val ? (uint)0x01 : (uint)0x00;
+            bRet = (mSts[axis].bNLSen == val) ? true : false;
+
+            return bRet;
         }
-        public bool GetHomeSensor(int[] axes, bool val)
+        public bool GetHomeSensor(int axis, bool val)
         {
-            return true;
+            if (!IsOpen) return false;
+            bool ret = true;
+            bool bRet = false;
+            uint Flag = val ? (uint)0x01 : (uint)0x00;
+            bRet = (mSts[axis].bHSen == val) ? true : false;
+
+            return bRet;
         }
 
         // Servo Alarm을 Clear 한다. Alarm clear 시그널을 On 시켜주므로 추후에 Off를 시켜줘야 한다.
         // 이 함수내에서 Sleep을 사용하면 Blocking이 될 수 있으므로 상위 시퀀스에서 delay time을 주고 Off 시켜주는 SetClearOff() 함수를 호출시켜줘야한다.
         public bool SetClear(int[] axes)
         {
+            if (!IsOpen) return false;
             bool ret = true;
             int nRet = 0;
 
@@ -399,6 +512,7 @@ namespace Victor.HardWare
         // 이 함수내에서 Sleep을 사용하면 Blocking이 될 수 있으므로 상위 시퀀스에서 delay time을 주고 Off 시켜주는 SetClearOff() 함수를 호출시켜줘야한다.
         public bool SetClearOff(int[] axes)
         {
+            if (!IsOpen) return false;
             bool ret = true;
             int nRet = 0;
 
@@ -418,6 +532,7 @@ namespace Victor.HardWare
         // 원점찾기를 지령한다.
         public bool Home(int[] axes)
         {
+            if (!IsOpen) return false;
             bool bRet = true;
             int nRet = 0;
             int axis = 0;
@@ -466,6 +581,7 @@ namespace Victor.HardWare
         // 아진은 이동을 중지시킨다.
         public bool HomeCancel(int[] axes)
         {
+            if (!IsOpen) return false;
             return Stop(axes);
         }
 
@@ -475,6 +591,7 @@ namespace Victor.HardWare
         //			false : 검색 진행중 (미완료)로 지정
         public bool SetHomeDone(int[] axes, bool val)
         {
+            if (!IsOpen) return false;
             bool ret = true;
             int nRet = 0;
             uint uTemp_Flag = 0;
@@ -516,6 +633,7 @@ namespace Victor.HardWare
         // Command position 값을 지정한다.
         public bool SetCommand(int nAxisNo, double dbNewPos)
         {
+            if (!IsOpen) return false;
             int nRet = (int)CAXM.AxmStatusSetCmdPos(nAxisNo, dbNewPos);
             if (nRet == (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)                    // 함수 수행 결과
             {
@@ -530,6 +648,7 @@ namespace Victor.HardWare
         // Encoder position 값을 지정한다.
         public bool SetEncPosition(int nAxisNo, double dbNewPos)
         {
+            if (!IsOpen) return false;
             int nRet = (int)CAXM.AxmStatusSetActPos(nAxisNo, dbNewPos);
             if (nRet == (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
             {
@@ -544,8 +663,8 @@ namespace Victor.HardWare
         // 현재 위치를 0으로 지정한다.
         public bool SetZero(int[] axes)
         {
+            if (!IsOpen) return false;
             bool ret = true;
-
             foreach (int axis in axes)
             {
                 // Command position to zero
@@ -562,6 +681,7 @@ namespace Victor.HardWare
         // (각 파라메터의 배열 크기는 상위에서 책임지고 문제가 없도록 지정하여 호출해야한다)
         public bool MovePos(int[] axes, double[] pos, double[] vel, double[] acc, double[] dec)
         {
+            if (!IsOpen) return false;
             bool ret = true;
             int nRet = 0;
             uint nProfile = 0;
@@ -626,7 +746,7 @@ namespace Victor.HardWare
         // 지정한 거리만큼 상대이동을 수행한다.
         public bool MoveStep(int[] axes, double[] step, double[] vel, double[] acc, double[] dec)
         {
-
+            if (!IsOpen) return false;
             bool ret = true;
             int nRet = 0;
             uint nProfile = 0;
@@ -691,7 +811,7 @@ namespace Victor.HardWare
         // JOG 이동을 지령한다.
         public bool Jog(int axis, double vel, double acc)
         {
-
+            if (!IsOpen) return false;
             int nRet = (int)CAXM.AxmMoveVel(axis, vel, (acc * MSToSEC), (acc * MSToSEC));   // JOG 이동 지정
             if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
             {
@@ -704,11 +824,13 @@ namespace Victor.HardWare
 
         public bool OvrVelocity(int axis, double vel)
         {
+            if (!IsOpen) return false;
             return true;
         }
 
         public bool OvrPosition(int axis, double pos)
         {
+            if (!IsOpen) return false;
             return true;
         }
 
@@ -716,6 +838,7 @@ namespace Victor.HardWare
         // 아진보드에서는 지원 불가, 상위레벨에서 구현해줘야한다.
         public bool Pause(int[] axes)
         {
+            if (!IsOpen) return false;
             return true;
         }
 
@@ -728,6 +851,7 @@ namespace Victor.HardWare
         // 지정 축들을 정지 시킨다.
         public bool Stop(int[] axes)
         {
+            if (!IsOpen) return false;
             bool bRet = true;
             int nRet = 0;
 
@@ -743,10 +867,27 @@ namespace Victor.HardWare
 
             return bRet;
         }
+        public bool Stop(int axis)
+        {
+            if (!IsOpen) return false;
+            bool bRet = true;
+            int nRet = 0;
+
+            nRet = (int)CAXM.AxmMoveSStop(axis);        // 감속 정지 지령
+            if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+            {
+                Debug.WriteLine($"* CAXM.AxmMoveSStop({axis}) return fail : {nRet}");
+                bRet = false;
+            }
+
+            return bRet;
+        }
 
         // 지정 축들을 비상정지 시킨다.
+        //Stop(new int[1] { nSelMotorNo });
         public bool EStop(int[] axes)
         {
+            if (!IsOpen) return false;
             bool bRet = true;
             int nRet = 0;
 
@@ -758,6 +899,21 @@ namespace Victor.HardWare
                     Debug.WriteLine($"* CAXM.AxmMoveEStop({axes[i]}) return fail : {nRet}");
                     bRet = false;
                 }
+            }
+
+            return bRet;
+        }
+        public bool EStop(int axis)
+        {
+            if (!IsOpen) return false;
+            bool bRet = true;
+            int nRet = 0;
+
+            nRet = (int)CAXM.AxmMoveEStop(axis);        // 감속 정지 지령
+            if (nRet != (int)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+            {
+                Debug.WriteLine($"* CAXM.AxmMoveEStop({axis}) return fail : {nRet}");
+                bRet = false;
             }
 
             return bRet;

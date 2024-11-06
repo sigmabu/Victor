@@ -117,7 +117,7 @@ namespace Victor
 
                     break;
                 case 315:
-                    //Init_View_Set();
+                    //Init_FilePath();
 
                     break;
                 default: break;

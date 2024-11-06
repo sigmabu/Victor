@@ -400,5 +400,10 @@ namespace Victor
 
         }
 
+        private void btn_RepSp_Click(object sender, EventArgs e)
+        {
+            int nSelMotorNo = (int)cb_2.SelectedIndex;
+            Ctrl.mMotion.Stop(nSelMotorNo);
+        }
     }
 }

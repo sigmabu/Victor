@@ -551,6 +551,7 @@
             this.btn_RepSp.TabIndex = 180;
             this.btn_RepSp.Text = "STOP";
             this.btn_RepSp.UseVisualStyleBackColor = false;
+            this.btn_RepSp.Click += new System.EventHandler(this.btn_RepSp_Click);
             // 
             // btn_RepSt
             // 
