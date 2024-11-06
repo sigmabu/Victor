@@ -403,7 +403,12 @@ namespace Victor
         private void btn_RepSp_Click(object sender, EventArgs e)
         {
             int nSelMotorNo = (int)cb_2.SelectedIndex;
-            Ctrl.mMotion.Stop(nSelMotorNo);
+            HW.mMot.Stop(nSelMotorNo);
+        }
+
+        private void btn_Move_Click(object sender, EventArgs e)
+        {
+            HW.mMot.Close();
         }
     }
 }

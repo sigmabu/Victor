@@ -51,7 +51,7 @@ namespace Victor
 
         private void Click_Exit(object sender, EventArgs e)
         {
-            Ctrl.mMotion.Close();
+            HW.mMot.Close();
             Application.Exit();
         }
 

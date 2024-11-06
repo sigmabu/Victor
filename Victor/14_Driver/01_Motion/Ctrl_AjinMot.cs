@@ -17,7 +17,7 @@ using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace Victor.HardWare
 {
-    public class Ctrl_Ajin
+    public class Ctrl_AjinMot
     {
         private object _lockObj = new object();
         public bool IsOpen { get; private set; } = false;
@@ -60,7 +60,7 @@ namespace Victor.HardWare
         /// </summary>
         private Thread Thread = null;
 
-        public Ctrl_Ajin(string sPathName)
+        public Ctrl_AjinMot(string sPathName)
         {
             sMotionDataPath = sPathName;
             for (int i = 0; i < mSts.Length; i++)
