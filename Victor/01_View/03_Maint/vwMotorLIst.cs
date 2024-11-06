@@ -402,16 +402,28 @@ namespace Victor
 
         private void btn_RepSp_Click(object sender, EventArgs e)
         {
-            uint a = (uint)eIn.EMO_SWITCH_X000;
-            int na = (int) a;
+            //uint a = (uint)eIn.EMO_SWITCH_X000;
+            //bool bbb = HW.mIo.ReadInBit(a);
 
+            //Int32 uUnitNo = (Int32)(a >> 8);
+            //Int32 nOffset = (Int32)(a & 0xff);
 
-            a = (uint)eIn.MAIN_READY_X010;
-            na = (int)a;
-            a = (uint)eIn.MAIN_POWER01_X00E;
-            na = (int)a;
-            a = (uint)eIn.MAIN_READY_X010;
-            na = (int)a;
+            //int na = (int) a;
+
+            //a = 0x10;
+            //uUnitNo = (Int32)(a >> 8);
+            //nOffset = (Int32)(a & 0xff);
+
+            //na = (int)a;
+
+            //bool bbb = HW.mIo.ReadInBit(a);
+            //a = (uint)0x10;
+            //na = (int)a;
+            //uint b = a >> 1;
+            //a = (uint)eIn.MAIN_POWER01_X00E;
+            //na = (int)a;
+            //a = (uint)eIn.MAIN_READY_X010;
+            //na = (int)a;
 
 
 

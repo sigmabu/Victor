@@ -242,21 +242,29 @@ namespace Victor.HardWare
         }
 
         // 지정된 1개 비트의 값을 취득한다.
-        public bool ReadInBit(int nUnitNo, ref uint uValue)
+        /// <summary>
+        /// uint a = (uint)eIn.EMO_SWITCH_X000;
+        ///  bool bbb = HW.mIo.ReadInBit(a);
+        /// </summary>
+        /// <param name="nIn_No"></param>
+        /// <returns></returns>
+        public bool ReadInBit(uint nIn_No)
         {
             if (!IsOpen) return false;
-            int nOffset = (int)(uValue) / 1000;
-            uint uAddress = uValue % 1000;            
-            {
-                return CAXD.AxdiReadInportBit(nUnitNo, nOffset, ref uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS;
-            }
+            uint uValue = 1;
 
-            return false;
+            Int32 uUnitNo = (Int32)(nIn_No >> 8);
+            Int32 nOffset = (Int32)(nIn_No & 0xff);
+            if (CAXD.AxdiReadInportBit(uUnitNo, nOffset, ref uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+            {
+                return (uValue == 1) ? true : false;
+            }
+            else return false;                
         }
 
         public bool ReadInBit(int nUnitNo, int nOffset, ref uint uValue)
         {
-            if (IsOpen)
+            if (!IsOpen) return false;
             {
                 return CAXD.AxdiReadInportBit(nUnitNo, nOffset, ref uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS;
             }
@@ -288,6 +296,19 @@ namespace Victor.HardWare
         }
 
         // 지정된 1개 비트의 값을 내보낸다.
+        public bool WriteOutBit(uint nOut_No, uint uValue)
+        {
+            if (!IsOpen) return false;
+
+            Int32 uUnitNo = (Int32)(nOut_No >> 8);
+            Int32 nOffset = (Int32)(nOut_No & 0xff);
+            if (CAXD.AxdoWriteOutportBit(uUnitNo, nOffset, uValue) == (uint)AXT_FUNC_RESULT.AXT_RT_SUCCESS)
+            {
+                return true ;
+            }
+            else return false;
+        }
+
         public bool WriteOutBit(int nUnitNo, int nOffset, uint uValue)
         {
             if (IsOpen)
