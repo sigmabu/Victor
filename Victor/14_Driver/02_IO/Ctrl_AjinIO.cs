@@ -23,7 +23,7 @@ namespace Victor.HardWare
         public bool IsOpen { get; private set; } = false;
         public bool IsLoop = true;
 
-        private string sMotionDataPath;
+        private string sIoDataPath;
         private string sFolderPath;
         private string sFileName;
 
@@ -31,29 +31,7 @@ namespace Victor.HardWare
         static int nMotorCnt = 0;
         protected uint _uStateValue = 0; // 각종 상태값 조회용 임시변수
         protected const double MSToSEC = 0.001;                     // Mili-Second -> Second로 변환, 가/감속 지정에 사용된다.
-
-        protected MOTION_INFO tAxis_Info = new MOTION_INFO();         // Motion 정보를 가져오는 임시변수, ReadData()에서 사용
-        public struct mSTATUS {
-            public bool bBusy { get; set; }
-            public bool bDone { get; set; }
-            public bool bAlarm { get; set; }
-            public uint uHDone { get; set; }
-            public bool bHDon { get; set; }
-            public bool bServo_On { get; set; }
-            public bool bInpos { get; set; }
-            public bool bHSen { get; set; }
-            public bool bPLSen { get; set; }
-            public bool bNLSen { get; set; }
-
-
-            public double dCmdPulse;
-            public double dCmdPos;
-            public double dCmdVel;
-            public double dFbPulse;
-            public double dFbPos;
-            public double dFbVel;
-        }
-        public static mSTATUS[] mSts = new mSTATUS[(int)eMOT.END];
+                
 
         /// <summary>
         /// 데이터 갱신용 스레드
@@ -62,21 +40,8 @@ namespace Victor.HardWare
 
         public Ctrl_AjinIo(string sPathName)
         {
-            sMotionDataPath = sPathName;
-            for (int i = 0; i < mSts.Length; i++)
-            {
-                mSts[i].bBusy = true;
-                mSts[i].bDone = true;
-                mSts[i].bAlarm = true;
-                mSts[i].uHDone = 0x00;
-                mSts[i].bHDon = true;
-
-                mSts[i].dCmdPulse = 0.0;
-                mSts[i].dCmdPos = 0.0;
-                mSts[i].dFbPulse = 0.0;
-                mSts[i].dFbPos = 0.0;
-
-            }
+            sIoDataPath = sPathName;
+           
             Init_FilePath();
             Init_ReadFile_IoList();
             Init_Io();
@@ -84,20 +49,25 @@ namespace Victor.HardWare
             Thread_Start();
         }
 
+        public Ctrl_AjinIo()
+        {          
+            
+        }
+
         private void Init_FilePath()
         {
             int i = 0;
-            int FindDot = sMotionDataPath.LastIndexOf(".");
-            int Lastsp = sMotionDataPath.LastIndexOf("\\");
+            int FindDot = sIoDataPath.LastIndexOf(".");
+            int Lastsp = sIoDataPath.LastIndexOf("\\");
 
-            sFileName = sMotionDataPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
-            sFolderPath = sMotionDataPath.Replace(sFileName + ".csv", "");
+            sFileName = sIoDataPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
+            sFolderPath = sIoDataPath.Replace(sFileName + ".csv", "");
         }
 
         public int Init_ReadFile_IoList()
         {
             nMotorCnt = 0;
-            csvData = CSV.OpenMotorCSVFile(sMotionDataPath, out nMotorCnt);
+            csvData = CSV.OpenMotorCSVFile(sIoDataPath, out nMotorCnt);
             if (csvData == null)
             {
                 MessageBox.Show("Read_File_MotorList Error", " MotorList.csv 화일 Abnormal!!",

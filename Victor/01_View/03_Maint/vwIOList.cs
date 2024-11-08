@@ -332,11 +332,13 @@ namespace Victor
                 //    Console.WriteLine($" sIN_Label = {sIN_Label} ,  0x{result:X2} ({result})");
                 //}                       
             }
+
         }
 
         private void Timer_OutPutList()
         {
             string sOUT_Label;
+
             for (int i = 0; i < nOutList_Cnt; i++)
             {
                 sOUT_Label = dGV_OutputList.Rows[i].Cells[0].Value.ToString();
@@ -385,8 +387,10 @@ namespace Victor
             string sOUT_Label = dGV_OutputList.Rows[nSelRow].Cells[0].Value.ToString();
             sOUT_Label = sOUT_Label.Replace("Y", "");
             var result = Utils.HexStr2Int(sOUT_Label);
+            
 
             //ToDo : 보드 Output
+            HW.mIo.WriteOutBit((uint)result, (uint) 1);
 
             dGV_OutputList.Rows[nSelRow].DefaultCellStyle.ForeColor = (nToggle == 1) ? Color.Red : Color.White;
 

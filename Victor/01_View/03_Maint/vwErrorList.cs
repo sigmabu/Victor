@@ -278,6 +278,7 @@ namespace Victor
             finally
             {
                 // Clean up
+
                 ReleaseExcelObject(workSheet);
                 ReleaseExcelObject(wookbook);
                 ReleaseExcelObject(excelApp);
