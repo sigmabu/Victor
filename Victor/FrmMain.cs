@@ -16,10 +16,10 @@ namespace Victor
         private bool isClickedLevelButton = false;
 
         private vwMain          m_vwMain;
-        private vw00Recipe      m_vwRecipe;
-        private vw01RecipeList m_vwRecipeList;
-        private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("tRecipe : " + eRecipGroup.Common.ToString());
-        private vwMaint         m_vwMaint;
+        //private vw00Recipe      m_vwRecipe;
+        //private vw01RecipeList m_vwRecipeList;
+        //private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("tRecipe : " + eRecipGroup.Common.ToString());
+        //private vwMaint         m_vwMaint;
         //private vwSerial        m_vwSerial;
         //private HardWare.Ctrl_Ajin mCtrlAjin;// = new HardWare.Ctrl_Ajin(GVar.PATH_EQUIP_MotorList);
 
@@ -40,10 +40,9 @@ namespace Victor
             GVar.m_iPage = 0;
 
             m_vwMain = new vwMain();
-            m_vwRecipe  = new vw00Recipe();
-            m_vwRecipeList = new vw01RecipeList();
-            
-            m_vwMaint   = new vwMaint();
+            //m_vwRecipe  = new vw00Recipe();
+            //m_vwRecipeList = new vw01RecipeList();            
+            //m_vwMaint   = new vwMaint();
             rdb_Main.Checked = true;
             
             Call_PnlBase_Change(mViewPage.nViewMain_111);
@@ -51,7 +50,7 @@ namespace Victor
 
         private void Click_Exit(object sender, EventArgs e)
         {
-            HW.mMot.Close();
+            //HW.mMot.Close();
             Application.Exit();
         }
 
@@ -71,31 +70,31 @@ namespace Victor
         { 
             switch (GVar.m_iPage)    // 이전 뷰 Close
             {
-                case 111:
-                    m_vwMain.Close();
-                    break;
-                case 211:
-                    m_vwRecipeList.Close();
-                    break;
-                case 212:
-                    m_vwRecipeItem.Close();
-                    break;
-                case 311:
-                    m_vwMaint.Close();
-                    break;
-                case 312:
-                    //m_vwSerial.Close();
-                    m_vwMaint.Close();
-                    break;
-                case 313:
-                    m_vwMaint.Close();
-                    break;
-                case 314:
-                case 315:
-                case 316:
-                case 317:
-                    m_vwMaint.Close();
-                    break;
+                //case 111:
+                //    m_vwMain.Close();
+                //    break;
+                //case 211:
+                //    m_vwRecipeList.Close();
+                //    break;
+                //case 212:
+                //    m_vwRecipeItem.Close();
+                //    break;
+                //case 311:
+                //    m_vwMaint.Close();
+                //    break;
+                //case 312:
+                //    //m_vwSerial.Close();
+                //    m_vwMaint.Close();
+                //    break;
+                //case 313:
+                //    m_vwMaint.Close();
+                //    break;
+                //case 314:
+                //case 315:
+                //case 316:
+                //case 317:
+                //    m_vwMaint.Close();
+                //    break;
                 case 999:
                     //m_vwLogIn.Close();
                     break;
@@ -113,27 +112,27 @@ namespace Victor
 
             switch (GVar.m_iPage)    // 신규 뷰 Open 및 표시
             {
-                case 111:
-                    pnl_Base.Controls.Add(m_vwMain);
-                    m_vwMain.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewMain_111;
-                    break;
-                case 211:
-                    pnl_Base.Controls.Add(m_vwRecipeList);
-                    m_vwRecipeList.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewRecipeList_211;
-                    break;
-                case 212:
-                    pnl_Base.Controls.Add(m_vwRecipeItem);
-                    mViewPage.nRcpPage = 1;
-                    m_vwRecipeItem.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewRecipeItem_212;
-                    break;
-                case 311:
-                    pnl_Base.Controls.Add(m_vwMaint);
-                    m_vwMaint.Open();
-                    mViewPage.mCurrViewPage = mViewPage.nViewMaint_311;
-                    break;
+                //case 111:
+                //    pnl_Base.Controls.Add(m_vwMain);
+                //    m_vwMain.Open();
+                //    mViewPage.mCurrViewPage = mViewPage.nViewMain_111;
+                //    break;
+                //case 211:
+                //    pnl_Base.Controls.Add(m_vwRecipeList);
+                //    m_vwRecipeList.Open();
+                //    mViewPage.mCurrViewPage = mViewPage.nViewRecipeList_211;
+                //    break;
+                //case 212:
+                //    pnl_Base.Controls.Add(m_vwRecipeItem);
+                //    mViewPage.nRcpPage = 1;
+                //    m_vwRecipeItem.Open();
+                //    mViewPage.mCurrViewPage = mViewPage.nViewRecipeItem_212;
+                //    break;
+                //case 311:
+                //    pnl_Base.Controls.Add(m_vwMaint);
+                //    m_vwMaint.Open();
+                //    mViewPage.mCurrViewPage = mViewPage.nViewMaint_311;
+                //    break;
                 case 312:
                     //pnl_Base.Controls.Add(m_vwSerial);
                     //m_vwSerial.Open();
@@ -144,8 +143,7 @@ namespace Victor
 
         private void Display_Recipe()
         {
-            lbl_RecipeGroup.Text = CRecipe.It.Group;
-            lblRecipeName.Text = CRecipe.It.Name;
+           
 
         }
 
