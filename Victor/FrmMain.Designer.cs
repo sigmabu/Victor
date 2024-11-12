@@ -35,23 +35,6 @@
             this.rdb_Main = new System.Windows.Forms.RadioButton();
             this.rdb_Recie = new System.Windows.Forms.RadioButton();
             this.pnl_Base = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.lbl_Main = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lblMessage = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.btn_printScreen = new System.Windows.Forms.Button();
-            this.pnlRecipe = new System.Windows.Forms.Panel();
-            this.lbl_RecipeGroup = new System.Windows.Forms.Label();
-            this.lblRecipeName = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblInformation = new System.Windows.Forms.Label();
-            this.lblError = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.lbl_SWVersion = new System.Windows.Forms.Label();
             this.lbl_Time = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -60,13 +43,18 @@
             this.pb_Login = new System.Windows.Forms.PictureBox();
             this.pb_CI = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.pnlRecipe.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.rbt_BcrRead = new System.Windows.Forms.RadioButton();
+            this.rdb_Grab01 = new System.Windows.Forms.RadioButton();
+            this.rdb_Grab02 = new System.Windows.Forms.RadioButton();
+            this.rdb_ImageSave01 = new System.Windows.Forms.RadioButton();
+            this.rdb_Save02 = new System.Windows.Forms.RadioButton();
+            this.rdb_Setup = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pnl_mather.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_CI)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEXIT
@@ -122,128 +110,6 @@
             this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_Base.Name = "pnl_Base";
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.lbl_Main);
-            this.panel6.Controls.Add(this.label3);
-            resources.ApplyResources(this.panel6, "panel6");
-            this.panel6.Name = "panel6";
-            // 
-            // lbl_Main
-            // 
-            resources.ApplyResources(this.lbl_Main, "lbl_Main");
-            this.lbl_Main.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_Main.Name = "lbl_Main";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label3.Name = "label3";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.lblMessage);
-            this.panel5.Controls.Add(this.label19);
-            this.panel5.Controls.Add(this.btn_printScreen);
-            resources.ApplyResources(this.panel5, "panel5");
-            this.panel5.Name = "panel5";
-            // 
-            // lblMessage
-            // 
-            resources.ApplyResources(this.lblMessage, "lblMessage");
-            this.lblMessage.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblMessage.Name = "lblMessage";
-            // 
-            // label19
-            // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label19.Name = "label19";
-            // 
-            // btn_printScreen
-            // 
-            this.btn_printScreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
-            resources.ApplyResources(this.btn_printScreen, "btn_printScreen");
-            this.btn_printScreen.FlatAppearance.BorderSize = 0;
-            this.btn_printScreen.Name = "btn_printScreen";
-            this.btn_printScreen.UseVisualStyleBackColor = false;
-            // 
-            // pnlRecipe
-            // 
-            this.pnlRecipe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.pnlRecipe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlRecipe.Controls.Add(this.lbl_RecipeGroup);
-            this.pnlRecipe.Controls.Add(this.lblRecipeName);
-            this.pnlRecipe.Controls.Add(this.label7);
-            this.pnlRecipe.Controls.Add(this.label11);
-            resources.ApplyResources(this.pnlRecipe, "pnlRecipe");
-            this.pnlRecipe.Name = "pnlRecipe";
-            this.pnlRecipe.Click += new System.EventHandler(this.Click_TitleRecipe);
-            // 
-            // lbl_RecipeGroup
-            // 
-            resources.ApplyResources(this.lbl_RecipeGroup, "lbl_RecipeGroup");
-            this.lbl_RecipeGroup.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbl_RecipeGroup.Name = "lbl_RecipeGroup";
-            // 
-            // lblRecipeName
-            // 
-            resources.ApplyResources(this.lblRecipeName, "lblRecipeName");
-            this.lblRecipeName.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lblRecipeName.Name = "lblRecipeName";
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label7.Name = "label7";
-            // 
-            // label11
-            // 
-            resources.ApplyResources(this.label11, "label11");
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label11.Name = "label11";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.lblInformation);
-            this.panel4.Controls.Add(this.lblError);
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.label17);
-            resources.ApplyResources(this.panel4, "panel4");
-            this.panel4.Name = "panel4";
-            // 
-            // lblInformation
-            // 
-            resources.ApplyResources(this.lblInformation, "lblInformation");
-            this.lblInformation.ForeColor = System.Drawing.Color.Yellow;
-            this.lblInformation.Name = "lblInformation";
-            // 
-            // lblError
-            // 
-            resources.ApplyResources(this.lblError, "lblError");
-            this.lblError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblError.Name = "lblError";
-            // 
-            // label16
-            // 
-            resources.ApplyResources(this.label16, "label16");
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label16.Name = "label16";
-            // 
-            // label17
-            // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label17.Name = "label17";
-            // 
             // lbl_SWVersion
             // 
             resources.ApplyResources(this.lbl_SWVersion, "lbl_SWVersion");
@@ -285,6 +151,10 @@
             // 
             this.pnl_mather.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_mather.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_mather.Controls.Add(this.richTextBox1);
+            this.pnl_mather.Controls.Add(this.groupBox1);
+            this.pnl_mather.Controls.Add(this.radioButton1);
+            this.pnl_mather.Controls.Add(this.radioButton2);
             this.pnl_mather.Controls.Add(this.pb_Login);
             this.pnl_mather.Controls.Add(this.pb_CI);
             resources.ApplyResources(this.pnl_mather, "pnl_mather");
@@ -310,43 +180,122 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // rbt_BcrRead
+            // 
+            resources.ApplyResources(this.rbt_BcrRead, "rbt_BcrRead");
+            this.rbt_BcrRead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rbt_BcrRead.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rbt_BcrRead.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rbt_BcrRead.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rbt_BcrRead.Name = "rbt_BcrRead";
+            this.rbt_BcrRead.Tag = "101";
+            this.rbt_BcrRead.UseVisualStyleBackColor = false;
+            this.rbt_BcrRead.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // rdb_Grab01
+            // 
+            resources.ApplyResources(this.rdb_Grab01, "rdb_Grab01");
+            this.rdb_Grab01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rdb_Grab01.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rdb_Grab01.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rdb_Grab01.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rdb_Grab01.Name = "rdb_Grab01";
+            this.rdb_Grab01.Tag = "102";
+            this.rdb_Grab01.UseVisualStyleBackColor = false;
+            this.rdb_Grab01.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // rdb_Grab02
+            // 
+            resources.ApplyResources(this.rdb_Grab02, "rdb_Grab02");
+            this.rdb_Grab02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rdb_Grab02.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rdb_Grab02.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rdb_Grab02.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rdb_Grab02.Name = "rdb_Grab02";
+            this.rdb_Grab02.Tag = "104";
+            this.rdb_Grab02.UseVisualStyleBackColor = false;
+            this.rdb_Grab02.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // rdb_ImageSave01
+            // 
+            resources.ApplyResources(this.rdb_ImageSave01, "rdb_ImageSave01");
+            this.rdb_ImageSave01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rdb_ImageSave01.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rdb_ImageSave01.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rdb_ImageSave01.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rdb_ImageSave01.Name = "rdb_ImageSave01";
+            this.rdb_ImageSave01.Tag = "103";
+            this.rdb_ImageSave01.UseVisualStyleBackColor = false;
+            this.rdb_ImageSave01.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // rdb_Save02
+            // 
+            resources.ApplyResources(this.rdb_Save02, "rdb_Save02");
+            this.rdb_Save02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rdb_Save02.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rdb_Save02.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rdb_Save02.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rdb_Save02.Name = "rdb_Save02";
+            this.rdb_Save02.Tag = "105";
+            this.rdb_Save02.UseVisualStyleBackColor = false;
+            this.rdb_Save02.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // rdb_Setup
+            // 
+            resources.ApplyResources(this.rdb_Setup, "rdb_Setup");
+            this.rdb_Setup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rdb_Setup.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rdb_Setup.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rdb_Setup.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rdb_Setup.Name = "rdb_Setup";
+            this.rdb_Setup.Tag = "106";
+            this.rdb_Setup.UseVisualStyleBackColor = false;
+            this.rdb_Setup.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdb_Save02);
+            this.groupBox1.Controls.Add(this.rdb_Setup);
+            this.groupBox1.Controls.Add(this.rdb_ImageSave01);
+            this.groupBox1.Controls.Add(this.rbt_BcrRead);
+            this.groupBox1.Controls.Add(this.rdb_Grab02);
+            this.groupBox1.Controls.Add(this.rdb_Grab01);
+            this.groupBox1.Controls.Add(this.btnEXIT);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.richTextBox1, "richTextBox1");
+            this.richTextBox1.Name = "richTextBox1";
+            // 
             // FrmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             resources.ApplyResources(this, "$this");
             this.ControlBox = false;
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.lbl_Time);
             this.Controls.Add(this.lbl_SWVersion);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.pnlRecipe);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.pnl_Base);
             this.Controls.Add(this.rdb_Maint);
+            this.Controls.Add(this.pnl_mather);
             this.Controls.Add(this.rdb_Main);
             this.Controls.Add(this.rdb_Recie);
-            this.Controls.Add(this.btnEXIT);
-            this.Controls.Add(this.pnl_mather);
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.Window;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.pnlRecipe.ResumeLayout(false);
-            this.pnlRecipe.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.pnl_mather.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_CI)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,23 +308,6 @@
         private System.Windows.Forms.RadioButton rdb_Main;
         private System.Windows.Forms.RadioButton rdb_Recie;
         private System.Windows.Forms.Panel pnl_Base;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label lbl_Main;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button btn_printScreen;
-        private System.Windows.Forms.Panel pnlRecipe;
-        private System.Windows.Forms.Label lbl_RecipeGroup;
-        private System.Windows.Forms.Label lblRecipeName;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblInformation;
-        private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lbl_SWVersion;
         private System.Windows.Forms.Label lbl_Time;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -384,6 +316,14 @@
         private System.Windows.Forms.PictureBox pb_CI;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pb_Login;
+        private System.Windows.Forms.RadioButton rbt_BcrRead;
+        private System.Windows.Forms.RadioButton rdb_Setup;
+        private System.Windows.Forms.RadioButton rdb_Save02;
+        private System.Windows.Forms.RadioButton rdb_ImageSave01;
+        private System.Windows.Forms.RadioButton rdb_Grab02;
+        private System.Windows.Forms.RadioButton rdb_Grab01;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
