@@ -32,10 +32,11 @@ namespace Victor
         {
             this.label46 = new System.Windows.Forms.Label();
             this.pnl_Base = new System.Windows.Forms.Panel();
+            this.tbText = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
-            this.tbText = new System.Windows.Forms.TextBox();
+            this.roundConerButton1 = new Victor.RoundConerButton();
             this.pnl_Base.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@ namespace Victor
             // 
             this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Base.Controls.Add(this.roundConerButton1);
             this.pnl_Base.Controls.Add(this.tbText);
             this.pnl_Base.Controls.Add(this.button2);
             this.pnl_Base.Controls.Add(this.button1);
@@ -63,6 +65,15 @@ namespace Victor
             this.pnl_Base.Name = "pnl_Base";
             this.pnl_Base.Size = new System.Drawing.Size(1274, 768);
             this.pnl_Base.TabIndex = 453;
+            // 
+            // tbText
+            // 
+            this.tbText.Location = new System.Drawing.Point(371, 102);
+            this.tbText.Name = "tbText";
+            this.tbText.Size = new System.Drawing.Size(788, 26);
+            this.tbText.TabIndex = 3;
+            this.tbText.Text = "InText";
+            this.tbText.Click += new System.EventHandler(this.tbTest_Click);
             // 
             // button2
             // 
@@ -105,14 +116,25 @@ namespace Victor
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 455;
             // 
-            // tbText
+            // roundConerButton1
             // 
-            this.tbText.Location = new System.Drawing.Point(371, 102);
-            this.tbText.Name = "tbText";
-            this.tbText.Size = new System.Drawing.Size(788, 26);
-            this.tbText.TabIndex = 3;
-            this.tbText.Text = "InText";
-            this.tbText.Click += new System.EventHandler(this.tbTest_Click);
+            this.roundConerButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundConerButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundConerButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundConerButton1.BorderRadius = 0;
+            this.roundConerButton1.BorderSize = 0;
+            this.roundConerButton1.FlatAppearance.BorderSize = 0;
+            this.roundConerButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundConerButton1.ForeColor = System.Drawing.Color.White;
+            this.roundConerButton1.Location = new System.Drawing.Point(371, 151);
+            this.roundConerButton1.Name = "roundConerButton1";
+            this.roundConerButton1.ShiftString = "";
+            this.roundConerButton1.ShiftStringColor = System.Drawing.Color.Aqua;
+            this.roundConerButton1.Size = new System.Drawing.Size(144, 40);
+            this.roundConerButton1.TabIndex = 4;
+            this.roundConerButton1.Text = "roundConerButton1";
+            this.roundConerButton1.TextColor = System.Drawing.Color.White;
+            this.roundConerButton1.UseVisualStyleBackColor = false;
             // 
             // vwMain
             // 
@@ -140,5 +162,6 @@ namespace Victor
         private System.Windows.Forms.Panel pnl_Menu;
         private Button button1;
         private TextBox tbText;
+        private RoundConerButton roundConerButton1;
     }
 }

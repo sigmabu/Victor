@@ -283,6 +283,10 @@
     <Compile Include="21_Asset\NumKeyBoard.Designer.cs">
       <DependentUpon>NumKeyBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="21_Asset\RoundConerButton.cs" />
+    <Compile Include="21_Asset\RoundConerButton.Designer.cs">
+      <DependentUpon>RoundConerButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="21_Asset\ThreadManager.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
