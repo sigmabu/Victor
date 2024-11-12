@@ -390,8 +390,6 @@ namespace Victor
                 Application.DoEvents();
             }
             Console.WriteLine("btn_PJ_MouseDown Finish");
-
-
         }
 
         private void btn_Jog_MouseUp(object sender, MouseEventArgs e)
@@ -424,7 +422,6 @@ namespace Victor
             //na = (int)a;
             //a = (uint)eIn.MAIN_READY_X010;
             //na = (int)a;
-
 
 
             int nSelMotorNo = (int)cb_2.SelectedIndex;

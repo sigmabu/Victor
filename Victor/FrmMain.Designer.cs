@@ -40,21 +40,23 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.pnl_mather = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdb_Save02 = new System.Windows.Forms.RadioButton();
+            this.rdb_Setup = new System.Windows.Forms.RadioButton();
+            this.rdb_ImageSave01 = new System.Windows.Forms.RadioButton();
+            this.rbt_BcrRead = new System.Windows.Forms.RadioButton();
+            this.rdb_Grab02 = new System.Windows.Forms.RadioButton();
+            this.rdb_Grab01 = new System.Windows.Forms.RadioButton();
             this.pb_Login = new System.Windows.Forms.PictureBox();
             this.pb_CI = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.rbt_BcrRead = new System.Windows.Forms.RadioButton();
-            this.rdb_Grab01 = new System.Windows.Forms.RadioButton();
-            this.rdb_Grab02 = new System.Windows.Forms.RadioButton();
-            this.rdb_ImageSave01 = new System.Windows.Forms.RadioButton();
-            this.rdb_Save02 = new System.Windows.Forms.RadioButton();
-            this.rdb_Setup = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnl_mather.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Login)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_CI)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEXIT
@@ -151,6 +153,7 @@
             // 
             this.pnl_mather.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_mather.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_mather.Controls.Add(this.button2);
             this.pnl_mather.Controls.Add(this.richTextBox1);
             this.pnl_mather.Controls.Add(this.groupBox1);
             this.pnl_mather.Controls.Add(this.radioButton1);
@@ -160,73 +163,27 @@
             resources.ApplyResources(this.pnl_mather, "pnl_mather");
             this.pnl_mather.Name = "pnl_mather";
             // 
-            // pb_Login
+            // richTextBox1
             // 
-            resources.ApplyResources(this.pb_Login, "pb_Login");
-            this.pb_Login.Name = "pb_Login";
-            this.pb_Login.TabStop = false;
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.richTextBox1.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.richTextBox1, "richTextBox1");
+            this.richTextBox1.Name = "richTextBox1";
             // 
-            // pb_CI
+            // groupBox1
             // 
-            this.pb_CI.BackColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.pb_CI, "pb_CI");
-            this.pb_CI.Name = "pb_CI";
-            this.pb_CI.TabStop = false;
-            this.pb_CI.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_CI);
-            this.pb_CI.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_CI);
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // rbt_BcrRead
-            // 
-            resources.ApplyResources(this.rbt_BcrRead, "rbt_BcrRead");
-            this.rbt_BcrRead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.rbt_BcrRead.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.rbt_BcrRead.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.rbt_BcrRead.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.rbt_BcrRead.Name = "rbt_BcrRead";
-            this.rbt_BcrRead.Tag = "101";
-            this.rbt_BcrRead.UseVisualStyleBackColor = false;
-            this.rbt_BcrRead.Click += new System.EventHandler(this.Click_MenuRadioButton);
-            // 
-            // rdb_Grab01
-            // 
-            resources.ApplyResources(this.rdb_Grab01, "rdb_Grab01");
-            this.rdb_Grab01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.rdb_Grab01.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.rdb_Grab01.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.rdb_Grab01.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.rdb_Grab01.Name = "rdb_Grab01";
-            this.rdb_Grab01.Tag = "102";
-            this.rdb_Grab01.UseVisualStyleBackColor = false;
-            this.rdb_Grab01.Click += new System.EventHandler(this.Click_MenuRadioButton);
-            // 
-            // rdb_Grab02
-            // 
-            resources.ApplyResources(this.rdb_Grab02, "rdb_Grab02");
-            this.rdb_Grab02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.rdb_Grab02.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.rdb_Grab02.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.rdb_Grab02.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.rdb_Grab02.Name = "rdb_Grab02";
-            this.rdb_Grab02.Tag = "104";
-            this.rdb_Grab02.UseVisualStyleBackColor = false;
-            this.rdb_Grab02.Click += new System.EventHandler(this.Click_MenuRadioButton);
-            // 
-            // rdb_ImageSave01
-            // 
-            resources.ApplyResources(this.rdb_ImageSave01, "rdb_ImageSave01");
-            this.rdb_ImageSave01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.rdb_ImageSave01.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.rdb_ImageSave01.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
-            this.rdb_ImageSave01.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.rdb_ImageSave01.Name = "rdb_ImageSave01";
-            this.rdb_ImageSave01.Tag = "103";
-            this.rdb_ImageSave01.UseVisualStyleBackColor = false;
-            this.rdb_ImageSave01.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.rdb_Save02);
+            this.groupBox1.Controls.Add(this.rdb_Setup);
+            this.groupBox1.Controls.Add(this.rdb_ImageSave01);
+            this.groupBox1.Controls.Add(this.rbt_BcrRead);
+            this.groupBox1.Controls.Add(this.rdb_Grab02);
+            this.groupBox1.Controls.Add(this.rdb_Grab01);
+            this.groupBox1.Controls.Add(this.btnEXIT);
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.groupBox1, "groupBox1");
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.TabStop = false;
             // 
             // rdb_Save02
             // 
@@ -252,26 +209,85 @@
             this.rdb_Setup.UseVisualStyleBackColor = false;
             this.rdb_Setup.Click += new System.EventHandler(this.Click_MenuRadioButton);
             // 
-            // groupBox1
+            // rdb_ImageSave01
             // 
-            this.groupBox1.Controls.Add(this.rdb_Save02);
-            this.groupBox1.Controls.Add(this.rdb_Setup);
-            this.groupBox1.Controls.Add(this.rdb_ImageSave01);
-            this.groupBox1.Controls.Add(this.rbt_BcrRead);
-            this.groupBox1.Controls.Add(this.rdb_Grab02);
-            this.groupBox1.Controls.Add(this.rdb_Grab01);
-            this.groupBox1.Controls.Add(this.btnEXIT);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            resources.ApplyResources(this.rdb_ImageSave01, "rdb_ImageSave01");
+            this.rdb_ImageSave01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rdb_ImageSave01.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rdb_ImageSave01.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rdb_ImageSave01.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rdb_ImageSave01.Name = "rdb_ImageSave01";
+            this.rdb_ImageSave01.Tag = "103";
+            this.rdb_ImageSave01.UseVisualStyleBackColor = false;
+            this.rdb_ImageSave01.Click += new System.EventHandler(this.Click_MenuRadioButton);
             // 
-            // richTextBox1
+            // rbt_BcrRead
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
-            this.richTextBox1.ForeColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.richTextBox1, "richTextBox1");
-            this.richTextBox1.Name = "richTextBox1";
+            resources.ApplyResources(this.rbt_BcrRead, "rbt_BcrRead");
+            this.rbt_BcrRead.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rbt_BcrRead.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rbt_BcrRead.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rbt_BcrRead.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rbt_BcrRead.Name = "rbt_BcrRead";
+            this.rbt_BcrRead.Tag = "101";
+            this.rbt_BcrRead.UseVisualStyleBackColor = false;
+            this.rbt_BcrRead.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // rdb_Grab02
+            // 
+            resources.ApplyResources(this.rdb_Grab02, "rdb_Grab02");
+            this.rdb_Grab02.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rdb_Grab02.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rdb_Grab02.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rdb_Grab02.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rdb_Grab02.Name = "rdb_Grab02";
+            this.rdb_Grab02.Tag = "104";
+            this.rdb_Grab02.UseVisualStyleBackColor = false;
+            this.rdb_Grab02.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // rdb_Grab01
+            // 
+            resources.ApplyResources(this.rdb_Grab01, "rdb_Grab01");
+            this.rdb_Grab01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.rdb_Grab01.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.rdb_Grab01.FlatAppearance.CheckedBackColor = System.Drawing.Color.SteelBlue;
+            this.rdb_Grab01.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.rdb_Grab01.Name = "rdb_Grab01";
+            this.rdb_Grab01.Tag = "102";
+            this.rdb_Grab01.UseVisualStyleBackColor = false;
+            this.rdb_Grab01.Click += new System.EventHandler(this.Click_MenuRadioButton);
+            // 
+            // pb_Login
+            // 
+            resources.ApplyResources(this.pb_Login, "pb_Login");
+            this.pb_Login.Name = "pb_Login";
+            this.pb_Login.TabStop = false;
+            // 
+            // pb_CI
+            // 
+            this.pb_CI.BackColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.pb_CI, "pb_CI");
+            this.pb_CI.Name = "pb_CI";
+            this.pb_CI.TabStop = false;
+            this.pb_CI.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown_CI);
+            this.pb_CI.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMove_CI);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button1
+            // 
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            resources.ApplyResources(this.button2, "button2");
+            this.button2.Name = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
@@ -293,9 +309,9 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.pnl_mather.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Login)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_CI)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,6 +340,8 @@
         private System.Windows.Forms.RadioButton rdb_Grab01;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 

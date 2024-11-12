@@ -152,7 +152,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;btnEXIT.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="rdb_Maint.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -302,10 +302,10 @@
     <value>Center</value>
   </data>
   <data name="pnl_Base.Location" type="System.Drawing.Point, System.Drawing">
-    <value>256, 144</value>
+    <value>492, 278</value>
   </data>
   <data name="pnl_Base.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1024, 825</value>
+    <value>788, 691</value>
   </data>
   <data name="pnl_Base.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -335,7 +335,7 @@
     <value>5, 65</value>
   </data>
   <data name="lbl_SWVersion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 21</value>
+    <value>103, 15</value>
   </data>
   <data name="lbl_SWVersion.TabIndex" type="System.Int32, mscorlib">
     <value>486</value>
@@ -368,7 +368,7 @@
     <value>5, 88</value>
   </data>
   <data name="lbl_Time.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 21</value>
+    <value>122, 15</value>
   </data>
   <data name="lbl_Time.TabIndex" type="System.Int32, mscorlib">
     <value>487</value>
@@ -437,7 +437,7 @@
     <value>pnl_mather</value>
   </data>
   <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="radioButton2.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -485,7 +485,34 @@
     <value>pnl_mather</value>
   </data>
   <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
+  </data>
+  <data name="button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>294, 191</value>
+  </data>
+  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 41</value>
+  </data>
+  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button2.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button2.Name" xml:space="preserve">
+    <value>button2</value>
+  </data>
+  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+    <value>pnl_mather</value>
+  </data>
+  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>255, 17</value>
@@ -509,6 +536,18 @@
     <value>pnl_mather</value>
   </data>
   <data name="&gt;&gt;richTextBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;rdb_Save02.Name" xml:space="preserve">
@@ -521,7 +560,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rdb_Save02.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;rdb_Setup.Name" xml:space="preserve">
     <value>rdb_Setup</value>
@@ -533,7 +572,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rdb_Setup.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;rdb_ImageSave01.Name" xml:space="preserve">
     <value>rdb_ImageSave01</value>
@@ -545,7 +584,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rdb_ImageSave01.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;rbt_BcrRead.Name" xml:space="preserve">
     <value>rbt_BcrRead</value>
@@ -557,7 +596,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rbt_BcrRead.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;rdb_Grab02.Name" xml:space="preserve">
     <value>rdb_Grab02</value>
@@ -569,7 +608,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rdb_Grab02.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="&gt;&gt;rdb_Grab01.Name" xml:space="preserve">
     <value>rdb_Grab01</value>
@@ -581,7 +620,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rdb_Grab01.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>23, 130</value>
@@ -605,7 +644,7 @@
     <value>pnl_mather</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pb_Login.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -945,7 +984,7 @@
     <value>pnl_mather</value>
   </data>
   <data name="&gt;&gt;pb_Login.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pb_CI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2724,7 +2763,7 @@
     <value>pnl_mather</value>
   </data>
   <data name="&gt;&gt;pb_CI.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="pnl_mather.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -2746,201 +2785,6 @@
   </data>
   <data name="&gt;&gt;pnl_mather.ZOrder" xml:space="preserve">
     <value>4</value>
-  </data>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="rbt_BcrRead.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
-    <value>Button</value>
-  </data>
-  <data name="rbt_BcrRead.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="rbt_BcrRead.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="rbt_BcrRead.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="rbt_BcrRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rbt_BcrRead.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 40</value>
-  </data>
-  <data name="rbt_BcrRead.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="rbt_BcrRead.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 5, 0</value>
-  </data>
-  <data name="rbt_BcrRead.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 62</value>
-  </data>
-  <data name="rbt_BcrRead.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="rbt_BcrRead.Text" xml:space="preserve">
-    <value>BCR Read</value>
-  </data>
-  <data name="rbt_BcrRead.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;rbt_BcrRead.Name" xml:space="preserve">
-    <value>rbt_BcrRead</value>
-  </data>
-  <data name="&gt;&gt;rbt_BcrRead.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbt_BcrRead.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;rbt_BcrRead.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="rdb_Grab01.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
-    <value>Button</value>
-  </data>
-  <data name="rdb_Grab01.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="rdb_Grab01.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="rdb_Grab01.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="rdb_Grab01.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rdb_Grab01.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 134</value>
-  </data>
-  <data name="rdb_Grab01.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="rdb_Grab01.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 5, 0</value>
-  </data>
-  <data name="rdb_Grab01.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 62</value>
-  </data>
-  <data name="rdb_Grab01.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="rdb_Grab01.Text" xml:space="preserve">
-    <value>Grab 01</value>
-  </data>
-  <data name="rdb_Grab01.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;rdb_Grab01.Name" xml:space="preserve">
-    <value>rdb_Grab01</value>
-  </data>
-  <data name="&gt;&gt;rdb_Grab01.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdb_Grab01.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;rdb_Grab01.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="rdb_Grab02.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
-    <value>Button</value>
-  </data>
-  <data name="rdb_Grab02.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="rdb_Grab02.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="rdb_Grab02.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="rdb_Grab02.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rdb_Grab02.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 322</value>
-  </data>
-  <data name="rdb_Grab02.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="rdb_Grab02.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 5, 0</value>
-  </data>
-  <data name="rdb_Grab02.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 62</value>
-  </data>
-  <data name="rdb_Grab02.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="rdb_Grab02.Text" xml:space="preserve">
-    <value>Grab 02</value>
-  </data>
-  <data name="rdb_Grab02.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;rdb_Grab02.Name" xml:space="preserve">
-    <value>rdb_Grab02</value>
-  </data>
-  <data name="&gt;&gt;rdb_Grab02.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdb_Grab02.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;rdb_Grab02.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="rdb_ImageSave01.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
-    <value>Button</value>
-  </data>
-  <data name="rdb_ImageSave01.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="rdb_ImageSave01.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="rdb_ImageSave01.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>TopCenter</value>
-  </data>
-  <data name="rdb_ImageSave01.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="rdb_ImageSave01.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 228</value>
-  </data>
-  <data name="rdb_ImageSave01.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="rdb_ImageSave01.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 5, 0</value>
-  </data>
-  <data name="rdb_ImageSave01.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 62</value>
-  </data>
-  <data name="rdb_ImageSave01.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="rdb_ImageSave01.Text" xml:space="preserve">
-    <value>Save 01</value>
-  </data>
-  <data name="rdb_ImageSave01.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;rdb_ImageSave01.Name" xml:space="preserve">
-    <value>rdb_ImageSave01</value>
-  </data>
-  <data name="&gt;&gt;rdb_ImageSave01.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rdb_ImageSave01.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;rdb_ImageSave01.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="rdb_Save02.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -2988,7 +2832,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rdb_Save02.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="rdb_Setup.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -3036,7 +2880,226 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;rdb_Setup.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="rdb_ImageSave01.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="rdb_ImageSave01.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="rdb_ImageSave01.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="rdb_ImageSave01.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="rdb_ImageSave01.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rdb_ImageSave01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 228</value>
+  </data>
+  <data name="rdb_ImageSave01.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="rdb_ImageSave01.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 5, 0</value>
+  </data>
+  <data name="rdb_ImageSave01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 62</value>
+  </data>
+  <data name="rdb_ImageSave01.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="rdb_ImageSave01.Text" xml:space="preserve">
+    <value>Save 01</value>
+  </data>
+  <data name="rdb_ImageSave01.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;rdb_ImageSave01.Name" xml:space="preserve">
+    <value>rdb_ImageSave01</value>
+  </data>
+  <data name="&gt;&gt;rdb_ImageSave01.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdb_ImageSave01.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rdb_ImageSave01.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="rbt_BcrRead.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="rbt_BcrRead.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="rbt_BcrRead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="rbt_BcrRead.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="rbt_BcrRead.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rbt_BcrRead.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 40</value>
+  </data>
+  <data name="rbt_BcrRead.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="rbt_BcrRead.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 5, 0</value>
+  </data>
+  <data name="rbt_BcrRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 62</value>
+  </data>
+  <data name="rbt_BcrRead.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="rbt_BcrRead.Text" xml:space="preserve">
+    <value>BCR Read</value>
+  </data>
+  <data name="rbt_BcrRead.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;rbt_BcrRead.Name" xml:space="preserve">
+    <value>rbt_BcrRead</value>
+  </data>
+  <data name="&gt;&gt;rbt_BcrRead.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rbt_BcrRead.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rbt_BcrRead.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="rdb_Grab02.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="rdb_Grab02.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="rdb_Grab02.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="rdb_Grab02.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="rdb_Grab02.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rdb_Grab02.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 322</value>
+  </data>
+  <data name="rdb_Grab02.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="rdb_Grab02.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 5, 0</value>
+  </data>
+  <data name="rdb_Grab02.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 62</value>
+  </data>
+  <data name="rdb_Grab02.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="rdb_Grab02.Text" xml:space="preserve">
+    <value>Grab 02</value>
+  </data>
+  <data name="rdb_Grab02.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;rdb_Grab02.Name" xml:space="preserve">
+    <value>rdb_Grab02</value>
+  </data>
+  <data name="&gt;&gt;rdb_Grab02.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdb_Grab02.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rdb_Grab02.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="rdb_Grab01.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
+    <value>Button</value>
+  </data>
+  <data name="rdb_Grab01.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="rdb_Grab01.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="rdb_Grab01.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="rdb_Grab01.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="rdb_Grab01.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 134</value>
+  </data>
+  <data name="rdb_Grab01.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="rdb_Grab01.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 5, 0</value>
+  </data>
+  <data name="rdb_Grab01.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 62</value>
+  </data>
+  <data name="rdb_Grab01.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="rdb_Grab01.Text" xml:space="preserve">
+    <value>Grab 01</value>
+  </data>
+  <data name="rdb_Grab01.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;rdb_Grab01.Name" xml:space="preserve">
+    <value>rdb_Grab01</value>
+  </data>
+  <data name="&gt;&gt;rdb_Grab01.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rdb_Grab01.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;rdb_Grab01.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 624</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 41</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

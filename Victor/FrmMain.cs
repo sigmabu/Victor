@@ -44,7 +44,16 @@ namespace Victor
             //m_vwRecipeList = new vw01RecipeList();            
             //m_vwMaint   = new vwMaint();
             rdb_Main.Checked = true;
-            
+
+            button1 = new Victor.RoundConerButton();
+            button1.Text = "TEST";
+            button1.Visible = true;
+
+            button2 = new Victor.RoundConerButton();
+            button2.Text = "TEST++";
+            button2.Visible = true;
+
+
             Call_PnlBase_Change(mViewPage.nViewMain_111);
         }
 
