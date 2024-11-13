@@ -32,15 +32,15 @@ namespace Victor
         {
             this.label46 = new System.Windows.Forms.Label();
             this.pnl_Base = new System.Windows.Forms.Panel();
+            this.roundBorderPanel1 = new MyUserControl.RoundBorderPanel();
+            this.roundLabel1 = new MyUserControl.RoundLabel();
+            this.orientedTextLabel1 = new Victor.OrientedTextLabel();
+            this.ledToggleButton1 = new MyUserControl.LedToggleButton();
+            this.roundConerButton1 = new Victor.RoundConerButton();
             this.tbText = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
-            this.roundConerButton1 = new Victor.RoundConerButton();
-            this.ledToggleButton1 = new VMS23.LedToggleButton();
-            this.orientedTextLabel1 = new VMS23.OrientedTextLabel();
-            this.roundLabel1 = new MyUserControl.RoundLabel();
-            this.roundBorderPanel1 = new MyUserControl.RoundBorderPanel();
             this.pnl_Base.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,11 +74,93 @@ namespace Victor
             this.pnl_Base.Size = new System.Drawing.Size(1274, 768);
             this.pnl_Base.TabIndex = 453;
             // 
+            // roundBorderPanel1
+            // 
+            this.roundBorderPanel1.BorderColor = System.Drawing.Color.White;
+            this.roundBorderPanel1.BorderWidth = 5;
+            this.roundBorderPanel1.EnableBorder = true;
+            this.roundBorderPanel1.Fill = false;
+            this.roundBorderPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.roundBorderPanel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.roundBorderPanel1.Location = new System.Drawing.Point(690, 459);
+            this.roundBorderPanel1.Name = "roundBorderPanel1";
+            this.roundBorderPanel1.PaddingSize = 5;
+            this.roundBorderPanel1.Radius = 10;
+            this.roundBorderPanel1.Size = new System.Drawing.Size(218, 72);
+            this.roundBorderPanel1.TabIndex = 8;
+            // 
+            // roundLabel1
+            // 
+            this.roundLabel1.AutoSize = true;
+            this.roundLabel1.BackSideColor = System.Drawing.Color.LightGray;
+            this.roundLabel1.BorderColor = System.Drawing.Color.DarkGray;
+            this.roundLabel1.BorderWidth = 1;
+            this.roundLabel1.CornerRadius = 10;
+            this.roundLabel1.EnableRoundAtLeftBtm = false;
+            this.roundLabel1.EnableRoundAtLeftTop = false;
+            this.roundLabel1.EnableRoundAtRightBtm = false;
+            this.roundLabel1.EnableRoundAtRightTop = false;
+            this.roundLabel1.Location = new System.Drawing.Point(687, 413);
+            this.roundLabel1.Name = "roundLabel1";
+            this.roundLabel1.Size = new System.Drawing.Size(98, 20);
+            this.roundLabel1.TabIndex = 7;
+            this.roundLabel1.Text = "roundLabel1";
+            this.roundLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // orientedTextLabel1
+            // 
+            this.orientedTextLabel1.AutoSize = true;
+            this.orientedTextLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.orientedTextLabel1.Location = new System.Drawing.Point(687, 365);
+            this.orientedTextLabel1.Name = "orientedTextLabel1";
+            this.orientedTextLabel1.RotationAngle = 0D;
+            this.orientedTextLabel1.Size = new System.Drawing.Size(145, 20);
+            this.orientedTextLabel1.TabIndex = 6;
+            this.orientedTextLabel1.Text = "orientedTextLabel1";
+            this.orientedTextLabel1.TextDirection = Victor.Direction.Clockwise;
+            this.orientedTextLabel1.TextOrientation = Victor.Orientation.Rotate;
+            // 
+            // ledToggleButton1
+            // 
+            this.ledToggleButton1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.ledToggleButton1.Location = new System.Drawing.Point(689, 289);
+            this.ledToggleButton1.BorderRadius = 1;
+            this.ledToggleButton1.Name = "ledToggleButton1";
+            this.ledToggleButton1.OffColor = System.Drawing.Color.DarkGray;
+            this.ledToggleButton1.OnColor = System.Drawing.Color.OrangeRed;
+            this.ledToggleButton1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.ledToggleButton1.SetLED = false;
+            this.ledToggleButton1.Size = new System.Drawing.Size(241, 57);
+            this.ledToggleButton1.TabIndex = 5;
+            this.ledToggleButton1.Text = "ledToggleButton1";
+            this.ledToggleButton1.Tickness = 5;
+            this.ledToggleButton1.UseVisualStyleBackColor = true;
+            // 
+            // roundConerButton1
+            // 
+            this.roundConerButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundConerButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundConerButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundConerButton1.BorderRadius = 10;
+            this.roundConerButton1.BorderSize = 0;
+            this.roundConerButton1.FlatAppearance.BorderSize = 0;
+            this.roundConerButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundConerButton1.ForeColor = System.Drawing.Color.White;
+            this.roundConerButton1.Location = new System.Drawing.Point(960, 295);
+            this.roundConerButton1.Name = "roundConerButton1";
+            this.roundConerButton1.ShiftString = "";
+            this.roundConerButton1.ShiftStringColor = System.Drawing.Color.Aqua;
+            this.roundConerButton1.Size = new System.Drawing.Size(144, 40);
+            this.roundConerButton1.TabIndex = 4;
+            this.roundConerButton1.Text = "roundConerButton1";
+            this.roundConerButton1.TextColor = System.Drawing.Color.White;
+            this.roundConerButton1.UseVisualStyleBackColor = false;
+            // 
             // tbText
             // 
             this.tbText.Location = new System.Drawing.Point(371, 102);
             this.tbText.Name = "tbText";
-            this.tbText.Size = new System.Drawing.Size(788, 35);
+            this.tbText.Size = new System.Drawing.Size(788, 26);
             this.tbText.TabIndex = 3;
             this.tbText.Text = "InText";
             this.tbText.Click += new System.EventHandler(this.tbTest_Click);
@@ -124,87 +206,6 @@ namespace Victor
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 455;
             // 
-            // roundConerButton1
-            // 
-            this.roundConerButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundConerButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundConerButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundConerButton1.BorderRadius = 0;
-            this.roundConerButton1.BorderSize = 0;
-            this.roundConerButton1.FlatAppearance.BorderSize = 0;
-            this.roundConerButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundConerButton1.ForeColor = System.Drawing.Color.White;
-            this.roundConerButton1.Location = new System.Drawing.Point(960, 295);
-            this.roundConerButton1.Name = "roundConerButton1";
-            this.roundConerButton1.ShiftString = "";
-            this.roundConerButton1.ShiftStringColor = System.Drawing.Color.Aqua;
-            this.roundConerButton1.Size = new System.Drawing.Size(144, 40);
-            this.roundConerButton1.TabIndex = 4;
-            this.roundConerButton1.Text = "roundConerButton1";
-            this.roundConerButton1.TextColor = System.Drawing.Color.White;
-            this.roundConerButton1.UseVisualStyleBackColor = false;
-            // 
-            // ledToggleButton1
-            // 
-            this.ledToggleButton1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            this.ledToggleButton1.Location = new System.Drawing.Point(689, 289);
-            this.ledToggleButton1.Name = "ledToggleButton1";
-            this.ledToggleButton1.OffColor = System.Drawing.Color.DarkGray;
-            this.ledToggleButton1.OnColor = System.Drawing.Color.OrangeRed;
-            this.ledToggleButton1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.ledToggleButton1.SetLED = false;
-            this.ledToggleButton1.Size = new System.Drawing.Size(241, 57);
-            this.ledToggleButton1.TabIndex = 5;
-            this.ledToggleButton1.Text = "ledToggleButton1";
-            this.ledToggleButton1.Tickness = 5;
-            this.ledToggleButton1.UseVisualStyleBackColor = true;
-            // 
-            // orientedTextLabel1
-            // 
-            this.orientedTextLabel1.AutoSize = true;
-            this.orientedTextLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.orientedTextLabel1.Location = new System.Drawing.Point(687, 365);
-            this.orientedTextLabel1.Name = "orientedTextLabel1";
-            this.orientedTextLabel1.RotationAngle = 0D;
-            this.orientedTextLabel1.Size = new System.Drawing.Size(222, 29);
-            this.orientedTextLabel1.TabIndex = 6;
-            this.orientedTextLabel1.Text = "orientedTextLabel1";
-            this.orientedTextLabel1.TextDirection = VMS23.Direction.Clockwise;
-            this.orientedTextLabel1.TextOrientation = VMS23.Orientation.Rotate;
-            // 
-            // roundLabel1
-            // 
-            this.roundLabel1.AutoSize = true;
-            this.roundLabel1.BackSideColor = System.Drawing.Color.LightGray;
-            this.roundLabel1.BorderColor = System.Drawing.Color.DarkGray;
-            this.roundLabel1.BorderWidth = 1;
-            this.roundLabel1.CornerRadius = 10;
-            this.roundLabel1.EnableRoundAtLeftBtm = false;
-            this.roundLabel1.EnableRoundAtLeftTop = false;
-            this.roundLabel1.EnableRoundAtRightBtm = false;
-            this.roundLabel1.EnableRoundAtRightTop = false;
-            this.roundLabel1.Location = new System.Drawing.Point(687, 413);
-            this.roundLabel1.Name = "roundLabel1";
-            this.roundLabel1.Size = new System.Drawing.Size(148, 29);
-            this.roundLabel1.TabIndex = 7;
-            this.roundLabel1.Text = "roundLabel1";
-            this.roundLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // roundBorderPanel1
-            // 
-            this.roundBorderPanel1.BorderColor = System.Drawing.Color.White;
-            this.roundBorderPanel1.BorderWidth = 5;
-            this.roundBorderPanel1.EnableBorder = true;
-            this.roundBorderPanel1.Fill = false;
-            this.roundBorderPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundBorderPanel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.roundBorderPanel1.Location = new System.Drawing.Point(690, 459);
-            this.roundBorderPanel1.Name = "roundBorderPanel1";
-            this.roundBorderPanel1.PaddingSize = 5;
-            this.roundBorderPanel1.Radius = 10;
-            this.roundBorderPanel1.Size = new System.Drawing.Size(218, 72);
-            this.roundBorderPanel1.TabIndex = 8;
-            // 
             // vwMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -234,7 +235,7 @@ namespace Victor
         private RoundConerButton roundConerButton1;
         private MyUserControl.RoundBorderPanel roundBorderPanel1;
         private MyUserControl.RoundLabel roundLabel1;
-        private VMS23.OrientedTextLabel orientedTextLabel1;
-        private VMS23.LedToggleButton ledToggleButton1;
+        private Victor.OrientedTextLabel orientedTextLabel1;
+        private MyUserControl.LedToggleButton ledToggleButton1;
     }
 }

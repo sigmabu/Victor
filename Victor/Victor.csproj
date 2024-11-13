@@ -368,6 +368,9 @@
     <EmbeddedResource Include="21_Asset\AlKeyBoard.resx">
       <DependentUpon>AlKeyBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="21_Asset\LedButton.resx">
+      <DependentUpon>LedButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="21_Asset\NumKeyBoard.resx">
       <DependentUpon>NumKeyBoard.cs</DependentUpon>
     </EmbeddedResource>

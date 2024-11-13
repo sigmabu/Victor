@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace VMS23
+namespace Victor
 {
     public enum Orientation
     {
