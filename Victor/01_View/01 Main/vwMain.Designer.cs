@@ -122,9 +122,11 @@ namespace Victor
             // 
             // ledToggleButton1
             // 
+            this.ledToggleButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.ledToggleButton1.BorderRadius = 1;
+            this.ledToggleButton1.BorderSize = 0;
             this.ledToggleButton1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
             this.ledToggleButton1.Location = new System.Drawing.Point(689, 289);
-            this.ledToggleButton1.BorderRadius = 1;
             this.ledToggleButton1.Name = "ledToggleButton1";
             this.ledToggleButton1.OffColor = System.Drawing.Color.DarkGray;
             this.ledToggleButton1.OnColor = System.Drawing.Color.OrangeRed;
@@ -155,6 +157,7 @@ namespace Victor
             this.roundConerButton1.Text = "roundConerButton1";
             this.roundConerButton1.TextColor = System.Drawing.Color.White;
             this.roundConerButton1.UseVisualStyleBackColor = false;
+            this.roundConerButton1.Click += new System.EventHandler(this.roundConerButton1_Click);
             // 
             // tbText
             // 

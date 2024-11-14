@@ -249,6 +249,7 @@
     <Compile Include="11_Global\Struct\Struct_Data.cs" />
     <Compile Include="12_File\CCheckFile.cs" />
     <Compile Include="12_File\CData.cs" />
+    <Compile Include="12_File\CXml.cs" />
     <Compile Include="12_File\CIni.cs" />
     <Compile Include="12_File\CLast.cs" />
     <Compile Include="12_File\CRecipe.cs" />

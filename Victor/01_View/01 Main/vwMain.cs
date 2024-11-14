@@ -89,5 +89,10 @@ namespace Victor
 
             if(ak != null ) tbText.Text = ak.InKey;
         }
+
+        private void roundConerButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
