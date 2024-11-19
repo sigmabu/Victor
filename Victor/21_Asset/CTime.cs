@@ -110,6 +110,19 @@ public class CTime
         _target = DateTime.Now.Add(new TimeSpan(0, 0, 0, 0, _setDelay));
     }
 
+    /// <summary>
+    /// 지정된 시간을 넘어가면 true 반환, 아직 넘지 못하면 false
+    /// </summary>
+    /// <returns></returns>
+    public bool Chk_Delay()
+    {
+        if (_target >= DateTime.Now)
+        { return false; }
+        else
+        { return true; }
+    }
+
+
     public DateTime Wait(int msec)
     {
         DateTime now = DateTime.Now;

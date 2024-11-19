@@ -188,6 +188,7 @@ namespace Victor
         {
             try
             {
+                CData.Cmariadb = new CMariadb();
             }
             catch (Exception ex)
             {
@@ -211,6 +212,7 @@ namespace Victor
 
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
+            CData.Cmariadb.Stop();
             // 스레드 정지 및 해제
             ThreadManager.Release();
 

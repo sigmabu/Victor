@@ -25,12 +25,15 @@ using System.Collections.Concurrent;
         /// OPL.log    조작로그 : Operate Log -> 조작된 버튼
         /// </summary>
         OPL,
-        /// <summary>
-        /// DSL.log    데이터저장로그 : Data Save Log -> 2개의 파일로 기록, 통채로/변경된부분만
         /// </summary>
-    }
+        /// <summary>
+        /// MARIADB 로그
+        /// </summary>
+        MARIADB,
+    
+}
 
-    public struct tMainLog
+public struct tMainLog
     {
         /// <summary>
         /// 로그의 시퀀스
@@ -197,6 +200,20 @@ public class CLog
 
                     break;
                 }
+            case ELog.MARIADB:
+                {
+                    sSB = new StringBuilder(dir);
+                    sSB.Append("MariaDB\\");
+                    // sSB.Append(type.ToString());
+                    sSB.Append("\\");
+                    if (!Directory.Exists(sSB.ToString())) { Directory.CreateDirectory(sSB.ToString()); }
+                    sSB.Append(name);
+                    sSB.Append(".log");
+                    Check_File_Access(sSB.ToString(), now + "\t" + pLog.sMsg, true);
+
+                    break;
+                }
+
         }
     }
 

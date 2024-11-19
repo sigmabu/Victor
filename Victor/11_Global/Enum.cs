@@ -149,3 +149,43 @@ public enum eSpcArray
     zData = 5,
     End
 }
+
+/// <summary>
+/// Machine 상태
+/// 1.	설비의 상태 우선 순위 : 1)EMG > 2)Auto > 3)Manual > 4)Initial > 5)Error > 6)Alarm >7)Stop,
+///    ㄴ Error/Alarm : 설비 정지 중일 때 Display 됨
+///     : Initial 보다 위의 상태일때는 Error/Alarm 발생시 설비 가동상황 우선 display
+/// </summary>
+public enum EQStatus
+{
+    EMG_Status,     // 설비의 비상 정지 상태 -비상정지 시 설정
+    Run_Status,      // 설비의 Auto run 진행 상태 - 설비의 Auto 진행 시 설정
+    Manual_Status,  // 설비의 Manual 진행 상태 - 설비의 Manual 진행 시 설정
+    All_Initial_Status, // 설비의 All Home 진행 상태 - 설비의 All Home 진행 시 설정
+    Semi_Auto_Status, // Stage 부분 Dual 로 이동시 사용
+
+    Err_Status,     // 설비의 Error 발생 상태 - 설비의 Error 시 설정
+    Alarm_Status,   // 설비의 Warning 발생 상태 - 설비의 Warning 시 설정
+    Stop_Status,    // 설비의 정상 Stop 발생 상태 - 설비의 정상 Stop 시 설정
+
+    //public bool[] bRun_Module_Status = new bool[50];
+}
+
+public enum DbTableName
+{
+    AUXUNIT,
+    AXIS_CMD,
+    AXIS_HOME,
+    AXIS_POS,
+    ERROR,
+    INOUTSIGNAL,
+    MEASURE_RAWDATA,
+    MEASURE_VALUE,
+    PRODUCT,
+    RUN,
+    SPINDLE,
+    WHEEL,
+    WORKPATH,
+
+
+};
