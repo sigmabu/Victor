@@ -20,10 +20,6 @@ namespace Victor
         {
         }
 
-        public static CMariadb Cmariadb { get; set; }
-
-        public static EQStatus EqStatus = EQStatus.Stop_Status;
-
         /// <summary>
         /// 디바이스 구조체
         /// </summary>
@@ -71,5 +67,6 @@ namespace Victor
             /// </summary>
             public int iDelPeriod;
         }
+
     }
 }

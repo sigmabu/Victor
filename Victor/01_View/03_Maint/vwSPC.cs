@@ -86,7 +86,7 @@ namespace Victor
 
             sFileName = sSpcDataPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sSpcDataPath.Replace(sFileName + ".xls", "");
-            
+
             Read_File_SpcData(true);
 
             Init_Chart();

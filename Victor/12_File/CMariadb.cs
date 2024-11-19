@@ -1,15 +1,12 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
 using System.IO;
 using System.Text;
-using System.Diagnostics;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.Data.Common;
-using System.Data;
 using System.Threading;
-using System.Collections.Concurrent;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Victor
 {
@@ -124,7 +121,6 @@ namespace Victor
                     CreateProduct();
                     CreateRun();
 
-
                     IsConnect = true;           // DB 연결 성공
                     CLog.Write(ELog.MARIADB, "DataBase연동 성공");
                 }
@@ -158,7 +154,7 @@ namespace Victor
         {
             this.Connection = new MySqlConnection(connectionString);
             this.Connection.Open();
-        }        
+        }
 
         private void CreateError()
         {
@@ -481,7 +477,7 @@ namespace Victor
         public void InsertInOutData()
         {
             ioRows.Add(string.Format("('{0}','{1}','{2}','{3}','{4}')",
-                CData.EqStatus.ToString(), // 0 : EQ Status
+                GConst.EqStatus.ToString(), // 0 : EQ Status
                 "", // 1 : IN00 (00 byte, 02 byte~31 byte)
                 "", // 2 : IN01 (32byte~63byte)
                 "", // 3 : OUT00 (00 byte, 02 byte~31 byte)
@@ -580,7 +576,6 @@ namespace Victor
             #endregion Wheel Table 생성하기
         }
     }
-
 }
 
 

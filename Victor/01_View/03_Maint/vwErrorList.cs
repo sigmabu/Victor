@@ -86,7 +86,7 @@ namespace Victor
 
             sFileName = sErrorListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
             sFolderPath = sErrorListPath.Replace(sFileName + ".xls", "");
-            
+
             Read_File_ErroList(true);
         }
 

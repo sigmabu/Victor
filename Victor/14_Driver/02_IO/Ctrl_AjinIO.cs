@@ -13,7 +13,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
-using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace Victor.HardWare
 {
