@@ -49,11 +49,18 @@ namespace Victor
 
         #region MySqlCommand
         private MySqlCommand ErrorCommand = new MySqlCommand();
-        private MySqlCommand IoCommand = new MySqlCommand();
-        private MySqlCommand MeasureRawdataCommand = new MySqlCommand();
-        private MySqlCommand MeasureValueCommand = new MySqlCommand();
-        private MySqlCommand ProductCommand = new MySqlCommand();
-        private MySqlCommand RunCommand = new MySqlCommand();
+        private MySqlCommand IoCommand;// = new MySqlCommand();
+        private MySqlCommand MeasureRawdataCommand;// = new MySqlCommand();
+        private MySqlCommand MeasureValueCommand;// = new MySqlCommand();
+        private MySqlCommand ProductCommand;// = new MySqlCommand();
+        private MySqlCommand RunCommand;// = new MySqlCommand();
+
+        //private MySqlCommand ErrorCommand = new MySqlCommand();
+        //private MySqlCommand IoCommand = new MySqlCommand();
+        //private MySqlCommand MeasureRawdataCommand = new MySqlCommand();
+        //private MySqlCommand MeasureValueCommand = new MySqlCommand();
+        //private MySqlCommand ProductCommand = new MySqlCommand();
+        //private MySqlCommand RunCommand = new MySqlCommand();
         #endregion MySqlCommand
         #endregion
 

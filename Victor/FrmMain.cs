@@ -188,8 +188,9 @@ namespace Victor
         {
             try
             {
-                GConst.Cmariadb = null;
-                GConst.Cmariadb = new CMariadb();
+                //CMariadb Cmariadb = new CMariadb();
+                CMariaSql Cmariadb = new CMariaSql();
+                
             }
             catch (Exception ex)
             {
