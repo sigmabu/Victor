@@ -189,7 +189,7 @@ namespace Victor
             try
             {
                 //CMariadb Cmariadb = new CMariadb();
-                CMariaSql Cmariadb = new CMariaSql();
+                //CMariaSql Cmariadb = new CMariaSql();
                 
             }
             catch (Exception ex)

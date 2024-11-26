@@ -185,7 +185,43 @@ public enum DbTableName
     RUN,
     SPINDLE,
     WHEEL,
-    WORKPATH,
+    WORKPATH
 
+};
 
+public struct TErr
+{
+    public int number;
+    public string name;             // Alarm 
+    public string action;
+    public string image;
+
+    // 다국어 지원
+    public string Name_En;          // 영문 알람명
+    public string Name_Kr;          // 한국어 알람명
+    public string Name_Ch;          // 중국어 알라몀
+    public string Action_En;        // 원인 및 조치내용
+    public string Action_Kr;
+    public string Action_Ch;
+}
+
+/// <summary>
+/// Error list
+/// </summary>
+/// 
+
+public enum EErr
+{
+    NONE = 000000,
+
+    // System Error 010000 ~ 019999
+    SYS_ERROR = 010000,
+    SYS_EMG_FRONT_LEFT,
+    SYS_EMG_FRONT_RIGHT,
+    SYS_EMG_REAR_LEFT,
+    SYS_EMG_REAR_RIGHT,
+    SYS_MAIN_VACUUM_OFF_CHECK,
+    SYS_WHEEL_FILE_NOT_SELECT,
+    SYS_WHEEL_FILE_SAVE_ERROR,
+    SYS_EMG_BUTTON_PRESS,                          // 비상 정지 버튼이 눌렸다.
 };

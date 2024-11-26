@@ -50,7 +50,6 @@ namespace Victor
             dGV_InputList.RowTemplate.Height = dGV_OutputList.RowTemplate.Height =  30;
 
             dGV_InputList.ReadOnly = dGV_OutputList.ReadOnly = true;
-
         }
         private void Init_Timer()
         {

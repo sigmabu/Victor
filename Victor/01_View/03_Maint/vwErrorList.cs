@@ -10,45 +10,240 @@ using System.Data.OleDb;
 using System.Collections.Generic;
 using System.Diagnostics;
 using DataTable = System.Data.DataTable;
+using Microsoft.Office.Interop.Excel;
+using System.Linq;
+using System.Text;
 
 
 namespace Victor
 {
     public partial class vwErrorList : UserControl
     {
+        private Dictionary<EErr, TErr> _list = new Dictionary<EErr, TErr>();
 
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+        public EErr Current { get; private set; } = EErr.NONE;
 
-        Excel.Application excelApp = null;		// Excel 프로그램을 의미합니다.
-        Excel.Workbook wookbook = null;				// 통합문서를 의미합니다.
-        Excel._Worksheet workSheet = null;		// 워크시트를 의미합니다.
-        uint excelProcessId = 0;
-
-        private string Excel03ConString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
-        private string Excel07ConString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
-
-        private string sErrorListPath;
+        private string sErrorListPath = GVar.PATH_EQUIP_ErrorList;
         private string sFolderPath;
         private string sFileName;
+        private static int nEnable_Edit;
 
-        private static string[][] sXlsData;
         private static int nSelRow;
 
-        private static int nEnable_Edit;
 
         public vwErrorList()
         {
             InitializeComponent();
-            
-            Init_View_Set();
-            Init_Grid_Set();
-            Init_Timer();
+
+            int FindDot = sErrorListPath.LastIndexOf(".");
+            int Lastsp = sErrorListPath.LastIndexOf("\\");
+
+            sFileName = sErrorListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
+            sFolderPath = sErrorListPath.Replace(sFileName + ".csv", "");
+
+            Init_ErrorList();
+
+            //Init_View_Set();
+            //Init_Grid_Set();
+            //Init_Timer();
         }
 
         private bool _Release()
         {
             return true;
+        }
+        private void Init_ErrorList()
+        {
+            // 리스트 초기화
+            _list = new Dictionary<EErr, TErr>();
+
+            EErr[] errs = (EErr[])Enum.GetValues(typeof(EErr));             // 정의된 Error code 수량만큼 List 생성하여 추가
+            int cnt = errs.Length;
+            for (int i = 0; i < cnt; i++)
+            {
+                TErr err = new TErr();
+                err.number = (int)errs[i];
+                err.name = errs[i].ToString();
+                err.action = string.Empty;
+
+                // 다국어 지원용
+                err.Name_En = string.Empty;
+                err.Name_Kr = string.Empty;
+                err.Name_Ch = string.Empty;
+                err.Action_En = string.Empty;
+                err.Action_Kr = string.Empty;
+                err.Action_Ch = string.Empty;
+
+                _list.Add(errs[i], err);
+            }
+        }
+        private void _Save()
+        {
+            StringBuilder builder = new StringBuilder();
+
+            if (!Directory.Exists(sFolderPath))
+            {
+                Directory.CreateDirectory(sFolderPath);
+            }
+
+            builder.AppendLine("#,ErrCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr");
+
+            // int cnt = _list.Count;
+
+
+            for (int i = 0; i < _list.Count; i++)
+            {
+                EErr err = _list.Keys.ToArray()[i];
+
+                builder.Append($"{i},");
+                builder.Append(_list[err].number + ",");
+                builder.Append(_list[err].name + ",");
+                builder.Append(_list[err].action + ",");
+                builder.Append(_list[err].image + ",");
+
+                builder.Append(_list[err].Name_En + ",");
+                builder.Append(_list[err].Action_En + ",");
+                builder.Append(_list[err].Name_Ch + ",");
+                builder.Append(_list[err].Action_Ch + ",");
+                builder.Append(_list[err].Name_Kr + ",");
+                builder.Append(_list[err].Action_Kr);
+
+                builder.AppendLine();
+            }
+
+            using (StreamWriter writer = new StreamWriter(sErrorListPath))
+            {
+                writer.Write(builder.ToString());
+            }
+        }
+
+        private int Init_Load_ErrorFile_csv()
+        {
+            if (!Directory.Exists(sFolderPath))
+            {
+                Directory.CreateDirectory(sFolderPath);
+            }
+
+            if (!File.Exists(sErrorListPath))
+            {
+                _Save();
+                return 0;
+            }
+
+            using (StreamReader reader = new StreamReader(sErrorListPath))
+            {
+                string all = reader.ReadToEnd();
+                string[] arrAll = all.Replace("\r", "").Split("\n".ToCharArray());
+
+                foreach (string val in arrAll)
+                {
+                    string[] arrVal = val.ToString().Split(',');
+                    if (arrVal[0].Contains("#"))
+                    {
+                        // 주석 문구
+                        continue;
+                    }
+                    else if (arrVal.Length > 2)
+                    {
+                        EErr err;
+                        if (Enum.TryParse(arrVal[2], out err))
+                        {
+                            TErr errData = new TErr();
+
+                            //0,1      ,2   ,3     ,4    ,5      ,6        ,7      ,8        ,9      ,10
+                            //#,ErrCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr
+
+                            errData.number = (int)err;
+                            errData.name = arrVal[2];
+
+                            if (arrVal.Length >= 5)
+                            {
+                                errData.action = arrVal[3];
+                                errData.image = arrVal[4];
+
+                                // 다국어 지원 내용이 존재하면 취득한다.
+                                if (arrVal.Length >= 7)
+                                {
+                                    errData.Name_En = arrVal[5];
+                                    errData.Action_En = arrVal[6];
+
+                                    if (arrVal.Length >= 9)
+                                    {
+                                        errData.Name_Ch = arrVal[7];
+                                        errData.Action_Ch = arrVal[8];
+
+                                        if (arrVal.Length >= 11)
+                                        {
+                                            errData.Name_Kr = arrVal[9];
+                                            errData.Action_Kr = arrVal[10];
+                                        }
+                                    }
+                                }
+                            }
+
+                            _list[err] = errData;
+                        }
+                    }
+                }
+            }
+
+            // 불러오기 이후 다시 저장하여 추가된 Error 항목 저장
+            _Save();
+            return 0;
+        }
+
+        // Code에 정의된 Alarm Name을 표시한다.
+        public string GetName(EErr error)
+        {
+            return _list[error].name;
+        }
+
+
+        // 다국어 지원되는 Alarm 이름을 조회한다.
+        public string GetName2(EErr error, int nLang = -1)
+        {
+            // 다국어 지원이 가능하다면 지정한 언어로 회신해준다.
+            if (nLang == (int)ELang.English)
+            {
+                return _list[error].Name_En;
+            }
+            else if (nLang == (int)ELang.Chinese)
+            {
+                return _list[error].Name_En + "\n" + _list[error].Name_Ch;
+            }
+            else if (nLang == (int)ELang.Korean)
+            {
+                return _list[error].Name_En + "\n" + _list[error].Name_Kr;
+            }
+
+            return _list[error].name;
+        }
+
+
+        // Alarm의 원인 및 조치 내용을 조회한다.
+        public string GetAction(EErr error, int nLang = -1)
+        {
+            // 다국어 지원이 가능하다면 지정한 언어로 회신해준다.
+            if (nLang == (int)ELang.English)
+            {
+                return string.IsNullOrEmpty(_list[error].Action_En) ? _list[error].action : _list[error].Action_En;
+            }
+            else if (nLang == (int)ELang.Chinese)
+            {
+                return string.IsNullOrEmpty(_list[error].Action_Ch) ? _list[error].action : _list[error].Action_Ch;
+            }
+            else if (nLang == (int)ELang.Korean)
+            {
+                return string.IsNullOrEmpty(_list[error].Action_Kr) ? _list[error].action : _list[error].Action_Kr;
+            }
+
+            return _list[error].action;
+        }
+
+
+        public string GetImage(EErr error)
+        {
+            return _list[error].image;
         }
 
         private void Init_Grid_Set()
@@ -75,21 +270,17 @@ namespace Victor
 
         private void Init_View_Set()
         {
+
+
             nEnable_Edit = 0;
             Btn_Output_Set();
 
             nSelRow = 0;            
 
-            sErrorListPath = GVar.PATH_EQUIP_ErrorList;
-            int FindDot = sErrorListPath.LastIndexOf(".");
-            int Lastsp = sErrorListPath.LastIndexOf("\\");
+            Init_Load_ErrorFile_csv();
 
-            sFileName = sErrorListPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
-            sFolderPath = sErrorListPath.Replace(sFileName + ".xls", "");
-
-            Read_File_ErroList(true);
         }
-
+/*
         public int Read_File_ErroList(bool bFlag = false)
         {
             if (bFlag)
@@ -100,7 +291,7 @@ namespace Victor
             dGV_ErrorList_SelNum(false);
             return 1;
         }
-
+        */
         public void Open()
         {
             switch (mViewPage.nMaintPage)
@@ -158,7 +349,7 @@ namespace Victor
                 default: break;
             }
         }
-
+        /*
         private  string[][] ReadExcelData(DataGridView grid, string path,  int numOfColumn)
         {
             string filePath = path;
@@ -423,7 +614,7 @@ namespace Victor
             }
             return 1;
         }
-
+        */
         private void dGV_ErrorList_SelNum(bool bsel = false)
         {
             if (bsel == false)
@@ -490,8 +681,8 @@ namespace Victor
             DataGridViewRow row = dGV_ErrorList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index + 1;
  
-            CData.tErrorList[nSelRow].sAction =
-            sXlsData[nSelRow][(int)eErrorListArray.Action] = rTB_ErrorCause.Text;
+            //CData.tErrorList[nSelRow].sAction =
+            //sXlsData[nSelRow][(int)eErrorListArray.Action] = rTB_ErrorCause.Text;
         }
 
         private void TimerEvent(Object myObject, EventArgs myEventArgs)
@@ -506,7 +697,7 @@ namespace Victor
             if (nEnable_Edit == 1)
             {
                 Edit_ErrorList_SelNum();
-                WriteExcelData(sErrorListPath, sXlsData);
+                //WriteExcelData(sErrorListPath, sXlsData);
             }
         }
 
