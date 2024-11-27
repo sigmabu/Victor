@@ -48,7 +48,7 @@ namespace Victor
         #endregion MysqlConnection
 
         #region MySqlCommand
-        private MySqlCommand ErrorCommand = new MySqlCommand();
+        private MySqlCommand ErrorCommand;// = new MySqlCommand();
         private MySqlCommand IoCommand;// = new MySqlCommand();
         private MySqlCommand MeasureRawdataCommand;// = new MySqlCommand();
         private MySqlCommand MeasureValueCommand;// = new MySqlCommand();

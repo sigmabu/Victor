@@ -13,6 +13,10 @@ using DataTable = System.Data.DataTable;
 using Microsoft.Office.Interop.Excel;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Runtime.InteropServices.ComTypes;
+using MySqlX.XDevAPI.Relational;
+using Renci.SshNet.Common;
 
 
 namespace Victor
@@ -20,6 +24,7 @@ namespace Victor
     public partial class vwErrorList : UserControl
     {
         public EErr Current { get; private set; } = EErr.NONE;
+        static string[,] sCsvData;
 
         private string sErrorListPath = GVar.PATH_EQUIP_ErrorList;
         private string sFolderPath;
@@ -180,7 +185,13 @@ namespace Victor
                 }
             }
             // 불러오기 이후 다시 저장하여 추가된 Error 항목 저장
-            _Save();
+            //_Save();
+            return 0;
+        }
+
+        public int Read_File_Csv(string fileName)
+        {
+            sCsvData = CSV.OpenCSVFile(fileName);
             return 0;
         }
 
@@ -281,6 +292,7 @@ namespace Victor
             nSelRow = 0;            
 
             Init_Load_ErrorFile_csv();
+            Read_File_Csv(sErrorListPath);
 
         }
         public void Open()
@@ -406,6 +418,18 @@ namespace Victor
             }
             DataGridViewRow row = dGV_ErrorList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index + 1;
+
+            //sCsvData[nSelRow + 1, (int)eError.number] = nSelRow;
+            //sCsvData[nSelRow + 1, (int)eError.name] = tb_Name.Text;
+            sCsvData[nSelRow + 1, (int)eError.action] = rTB_ErrorCause.Text;
+            //sCsvData[nSelRow + 1, (int)eError.Data_bit] = cb_Data.SelectedItem.ToString();
+            //sCsvData[nSelRow + 1, (int)eError.Stop_bit] = cb_Stop.SelectedItem.ToString();
+            //sCsvData[nSelRow + 1, (int)eError.Parity_bit] = cb_Parity.SelectedItem.ToString();
+
+            CSV.SaveCSVFile(sErrorListPath, sCsvData, overwrite: true);
+            Init_Load_ErrorFile_csv();
+            Init_Grid_Set();
+
         }
 
         private void TimerEvent(Object myObject, EventArgs myEventArgs)
@@ -421,12 +445,6 @@ namespace Victor
             {
                 Edit_ErrorList_SelNum();
                 Edit_ErrorCause(nSelRow);
-                
-                //EErr err = CData.tErrlist.Keys.ToArray()[nSelRow];
-                //CData.tErrlist[err].action = rTB_ErrorCause.Text;
-
-
-                //WriteExcelData(sErrorListPath, sXlsData);
             }
         }
 

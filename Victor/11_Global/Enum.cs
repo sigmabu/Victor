@@ -189,6 +189,21 @@ public enum DbTableName
 
 };
 
+public enum eError
+{
+    number,
+    name,             // Alarm 
+    action,
+    image,    
+    
+    Name_En,          // 영문 알람명
+    Action_En,          // 영문 알람명
+    Name_Ch,          // 중국어 알라몀
+    Action_Ch,        // 원인 및 조치내용
+    Name_Kr,
+    Action_Kr
+
+}
 public struct TErr
 {
     public int number;

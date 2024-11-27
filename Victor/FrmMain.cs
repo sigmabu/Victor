@@ -20,7 +20,6 @@ namespace Victor
         private vw01RecipeList m_vwRecipeList;
         private vw02RecipeItem m_vwRecipeItem = new vw02RecipeItem("tRecipe : " + eRecipGroup.Common.ToString());
         private vwMaint         m_vwMaint;
-        //private vwSerial        m_vwSerial;
         //private HardWare.Ctrl_Ajin mCtrlAjin;// = new HardWare.Ctrl_Ajin(GVar.PATH_EQUIP_MotorList);
 
         public FrmMain()
@@ -188,7 +187,7 @@ namespace Victor
         {
             try
             {
-                //CMariadb Cmariadb = new CMariadb();
+                CMariadb Cmariadb = new CMariadb();
                 //CMariaSql Cmariadb = new CMariaSql();
                 
             }

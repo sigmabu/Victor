@@ -1,11 +1,33 @@
 #,ErrCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr
 0,0,NONE,,,,,,,,
-1,10000,SYS_ERROR,,,,,,,,
-2,10001,SYS_EMG_FRONT_LEFT,In : X0004 ìž…ë ¥ í™•ì¸,,,,,,,In : X0004 ìž…ë ¥ í™•ì¸
+1,10000,117³â ¸¸¿¡ 11¿ù °¡Àå ¸¹Àº ´«ÀÌ ½×ÀÎ °ÍÀ¸·Î È®ÀÎµÆ´Ù. 27ÀÏ ¿ÀÀü 10½Ã ±âÁØ ¼­¿ï¿¡ °ø½ÄÀûÀ¸·Î 16§¯°¡ ³Ñ´Â ´«ÀÌ ½×¿© 1907³â ±Ù´ëÀûÀÎ ±â»ó°üÃøÀ» ½ÃÀÛÇÑ ÀÌ·¡ °¡Àå ¸¹Àº ´«ÀÌ ½×ÀÎ °ÍÀ¸·Î ³ªÅ¸³µ´Ù. ¼­¿ï µ¿ºÏºÎ Áö¿ª°ú °­¿øµµ µî¿¡´Â 20§¯¿¡ À°¹ÚÇÏ´Â ´«ÀÌ ½×¿´´Ù. ¼öµµ±Ç°ú °­¿ø ³»·ú »êÁö, ÀüºÏ µ¿ºÎ, °æºÏ ºÏµ¿ »êÁö¿¡ ´ë¼³Æ¯º¸°¡ ¹ßÈ¿µÆ´Ù. ±â»óÃ»Àº 28ÀÏ ¿ÀÀü±îÁö Àü±¹ ´ëºÎºÐ Áö¿ª¿¡ ºñ ¶Ç´Â ´«ÀÌ ³»¸®°Ú°í, °­¿ø Áß¡¤³²ºÎ ³»·ú »êÁö¿Í °æºÏ±Ç ³»·úÀº ³»ÀÏ ¿ÀÈÄ±îÁö, °æ±â ³²ºÎ´Â ³»ÀÏ ´ÊÀº ¹ã±îÁö ºñ ¶Ç´Â ´«ÀÌ ÀÌ¾îÁú °ÍÀÌ¶ó°í ¹àÇû´Ù. Ã¹´« »çÁøÀ» ¸ð¾ÆºÃ´Ù., ÀüºÏ µ¿ºÎ, °æºÏ ºÏµ¿ »êÁö¿¡ ´ë¼³Æ¯º¸°¡ ¹ßÈ¿µÆ´Ù. ±â»óÃ»Àº 28ÀÏ ¿ÀÀü±îÁö Àü±¹ ´ëºÎºÐ Áö¿ª¿¡ ºñ ¶Ç´Â ´«ÀÌ ³»¸®°Ú°í, °­¿ø Áß¡¤³²ºÎ ³»·ú »êÁö¿Í °æºÏ±Ç ³»·úÀº ³»ÀÏ ¿ÀÈÄ±îÁö, °æ±â ³²ºÎ´Â ³»ÀÏ ´ÊÀº ¹ã±îÁö ºñ ¶Ç´Â ´«ÀÌ ÀÌ¾îÁú °ÍÀÌ¶ó°í ¹àÇû´Ù. Ã¹´« »çÁøÀ» ¸ð¾ÆºÃ´Ù.,,,,
+2,10001,SYS_EMG_FRONT_LEFT,In : X0004 ?ï¿½ë ¥ ?ï¿½ì¸,,,,,,,In : X0004 ?ï¿½ë ¥ ?ï¿½ì¸
 3,10002,SYS_EMG_FRONT_RIGHT,,,,,,,,
 4,10003,SYS_EMG_REAR_LEFT,,,,,,,,
 5,10004,SYS_EMG_REAR_RIGHT,,,,,,,,
 6,10005,SYS_MAIN_VACUUM_OFF_CHECK,,,,,,,,
-7,10006,SYS_WHEEL_FILE_NOT_SELECT,GUI Wheelmode ì—ì„œ File name ì„¤ì • í•„ìš”í•¨.,,,,,,,GUI Wheelmode ì—ì„œ File name ì„¤ì • í•„ìš”í•¨.
+7,10006,SYS_WHEEL_FILE_NOT_SELECT,GUI Wheelmode ?ï¿½ì„œ File name ?ï¿½ì • ?ï¿½ìš”??,,,,,,,GUI Wheelmode ?ï¿½ì„œ File name ?ï¿½ì • ?ï¿½ìš”??
 8,10007,SYS_WHEEL_FILE_SAVE_ERROR,,,,,,,,
 9,10008,SYS_EMG_BUTTON_PRESS,,,,,,,,
+10,10009,Err010009,,,,,,,,
+11,10010,Err010010,,,,,,,,
+12,10011,Err010011,,,,,,,,
+13,10012,Err010012,,,,,,,,
+14,10013,Err010013,,,,,,,,
+15,10014,Err010014,,,,,,,,
+16,10015,Err010015,,,,,,,,
+17,10016,Err010016,,,,,,,,
+18,10017,Err010017,,,,,,,,
+19,10018,Err010018,,,,,,,,
+20,10019,Err010019,,,,,,,,
+21,10020,Err010020,,,,,,,,
+22,10021,Err010021,,,,,,,,
+23,10022,Err010022,,,,,,,,
+24,10023,Err010023,,,,,,,,
+25,10024,Err010024,,,,,,,,
+26,10025,Err010025,,,,,,,,
+27,10026,Err010026,,,,,,,,
+28,10027,Err010027,,,,,,,,
+29,10028,Err010028,,,,,,,,
+,,,,,,,,,,
+

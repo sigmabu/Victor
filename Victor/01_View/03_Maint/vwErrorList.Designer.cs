@@ -38,9 +38,9 @@
             this.pb_Image = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Save = new System.Windows.Forms.Button();
             this.rTB_ErrorCause = new System.Windows.Forms.RichTextBox();
             this.rTB_ErrTitle = new System.Windows.Forms.RichTextBox();
-            this.btn_Save = new System.Windows.Forms.Button();
             this.grp_Error = new System.Windows.Forms.GroupBox();
             this.dGV_ErrorList = new System.Windows.Forms.DataGridView();
             this.Pnl_Item.SuspendLayout();
@@ -105,6 +105,22 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Error Detail";
             // 
+            // btn_Save
+            // 
+            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Save.ForeColor = System.Drawing.Color.White;
+            this.btn_Save.Location = new System.Drawing.Point(515, 73);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(104, 45);
+            this.btn_Save.TabIndex = 463;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Visible = false;
+            this.btn_Save.Click += new System.EventHandler(this.Click_Output);
+            // 
             // rTB_ErrorCause
             // 
             this.rTB_ErrorCause.Location = new System.Drawing.Point(12, 67);
@@ -122,22 +138,6 @@
             this.rTB_ErrTitle.Size = new System.Drawing.Size(612, 30);
             this.rTB_ErrTitle.TabIndex = 461;
             this.rTB_ErrTitle.Text = "Error Title";
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_Save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
-            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Save.ForeColor = System.Drawing.Color.White;
-            this.btn_Save.Location = new System.Drawing.Point(509, 76);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(104, 67);
-            this.btn_Save.TabIndex = 463;
-            this.btn_Save.Text = "Save";
-            this.btn_Save.UseVisualStyleBackColor = false;
-            this.btn_Save.Visible = false;
-            this.btn_Save.Click += new System.EventHandler(this.Click_Output);
             // 
             // grp_Error
             // 
