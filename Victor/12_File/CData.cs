@@ -43,7 +43,8 @@ namespace Victor
         public static mIOList[] tInList = new mIOList[1024];
         public static mIOList[] tOutList = new mIOList[1024];
 
-        public static mErrorList[] tErrorList = new mErrorList[1024];
+        //public static mErrorList[] tErrorList = new mErrorList[1024];
+        public static Dictionary<EErr, TErr> tErrlist = new Dictionary<EErr, TErr>();
 
         public static mSpcList[] tSpcList = new mSpcList[1024];
 

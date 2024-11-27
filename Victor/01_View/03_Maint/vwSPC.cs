@@ -12,59 +12,124 @@ using System.Diagnostics;
 using DataTable = System.Data.DataTable;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Text;
+using Renci.SshNet.Common;
+using System.Linq;
 
 
 namespace Victor
 {
     public partial class vwSPC : UserControl
     {
-
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
-
-        Excel.Application excelApp = null;		// Excel 프로그램을 의미합니다.
-        Excel.Workbook wookbook = null;				// 통합문서를 의미합니다.
-        Excel._Worksheet workSheet = null;		// 워크시트를 의미합니다.
-        uint excelProcessId = 0;
-
-        private string Excel03ConString = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
-        private string Excel07ConString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR={1}'";
-
-        private string sSpcDataPath;
+        private string sSpcDataPath = GVar.PATH_EQUIP_SpcList;
         private string sFolderPath;
         private string sFileName;
-
-        private static string[][] sXlsData;
-        private static int nXlsRow_length;
-        private static int nSelRow;
-
         private static int nEnable_Edit;
+
+        private static string[,] sCsvData;
+        static int nSelRow;
+        static int nTotalList_Cnt;
 
         public vwSPC()
         {
             InitializeComponent();
-            
+
+            int FindDot = sSpcDataPath.LastIndexOf(".");
+            int Lastsp = sSpcDataPath.LastIndexOf("\\");
+
+            sFileName = sSpcDataPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
+            sFolderPath = sSpcDataPath.Replace(sFileName + ".csv", "");
+
+            nTotalList_Cnt = 0;
+
+            Read_SpcList();
             Init_View_Set();
+
             Init_Grid_Set();
-            Init_Timer();
+            //Init_Timer();
         }
 
         private bool _Release()
         {
             return true;
         }
+        private int Read_SpcList()
+        {
+            int nCnt = 0;
+            if (!Directory.Exists(sFolderPath))
+            {
+                Directory.CreateDirectory(sFolderPath);
+            }
+
+            if (!File.Exists(sSpcDataPath))
+            {
+                //_Save();
+                return 0;
+            }
+
+            using (StreamReader reader = new StreamReader(sSpcDataPath))
+            {
+                string all = reader.ReadToEnd();
+                string[] arrAll = all.Replace("\r", "").Split("\n".ToCharArray());
+
+                foreach (string val in arrAll)
+                {
+                    string[] arrVal = val.ToString().Split(',');
+                    if (arrVal[0].Contains("#"))
+                    {
+                        // 주석 문구
+                        continue;
+                    }
+                    else if (arrVal.Length > 2)
+                    {
+                        CData.tSpcList[nCnt].sNo = arrVal[0];
+                        CData.tSpcList[nCnt].sName = arrVal[1];
+                        CData.tSpcList[nCnt].sDescrip = arrVal[2];
+                        CData.tSpcList[nCnt].sXdata = arrVal[3];
+                        CData.tSpcList[nCnt].sYdata = arrVal[4];
+                        CData.tSpcList[nCnt].sZdata = arrVal[5];
+                    }
+                    nCnt++;
+                }
+            }
+            nTotalList_Cnt = nCnt;
+            // 불러오기 이후 다시 저장하여 추가된 Error 항목 저장
+            //_Save();
+            return 0;
+        }
+
+
 
         private void Init_Grid_Set()
         {
             dGV_DataList.DoubleBuffered(true);
+
+            var dt = new DataTable();
+
+            //dt.Columns.Add(tErrlist[0].number.ToString());
+            //dt.Columns.Add(tErrlist[0].name.ToString());
+            dt.Columns.Add("No");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("X Data");
+            dt.Columns.Add("Y Data");
+            dt.Columns.Add("Z Data");
+            for (int i = 1; i < (nTotalList_Cnt-1); i++)
+            {
+                dt.Rows.Add(CData.tSpcList[i].sNo.ToString(),
+                            CData.tSpcList[i].sName.ToString(),
+                            CData.tSpcList[i].sXdata.ToString(),
+                            CData.tSpcList[i].sYdata.ToString(),
+                            CData.tSpcList[i].sZdata.ToString()
+                            );
+            }
+            dGV_DataList.DataSource = dt;
 
             dGV_DataList.Columns[(int)eSpcGrid.DataNo].Width    = 100;
             dGV_DataList.Columns[(int)eSpcGrid.Name].Width      = 495;
             dGV_DataList.RowTemplate.Height = 30;
             dGV_DataList.Columns[(int)eSpcGrid.Name].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dGV_DataList.ReadOnly = true;
-
         }
+
         private void Init_Timer()
         {
             System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
@@ -79,15 +144,6 @@ namespace Victor
             Btn_Output_Set();
 
             nSelRow = 0;            
-
-            sSpcDataPath = GVar.PATH_EQUIP_SpcList;
-            int FindDot = sSpcDataPath.LastIndexOf(".");
-            int Lastsp = sSpcDataPath.LastIndexOf("\\");
-
-            sFileName = sSpcDataPath.Substring(Lastsp + 1, FindDot - Lastsp - 1);
-            sFolderPath = sSpcDataPath.Replace(sFileName + ".xls", "");
-
-            Read_File_SpcData(true);
 
             Init_Chart();
         }
@@ -126,20 +182,7 @@ namespace Victor
                 Ydata += 0.1f;
             }
         }
-        public int Read_File_SpcData(bool bFlag = false)
-        {
-            if (bFlag)
-            {
-                sXlsData = ReadExcelData(dGV_DataList, sSpcDataPath, 1024);                
-            }
-            nXlsRow_length = sXlsData.GetLength(0);
-            GetData_Xls_ErrorList();
-            dGV_SpcList_SelNum(false);
-
-
-            return 1;
-        }
-
+        
         public void Open()
         {
             switch (mViewPage.nMaintPage)
@@ -198,265 +241,6 @@ namespace Victor
             }
         }
 
-        private  string[][] ReadExcelData(DataGridView grid, string path,  int numOfColumn)
-        {
-            string filePath = path;
-            string fileExtension = Path.GetExtension(path);
-            string header = "Yes";  //rbHeaderYes.Checked ? "Yes" : "No";
-            string connectionString = string.Empty;
-            string sheetName = string.Empty;
-
-            List<string[]> result = new List<string[]>();            
-
-            try
-            {
-                excelApp = new Excel.Application();
-
-                if (excelApp == null)
-                {
-                    MessageBox.Show("엑셀이 설치되지 않았습니다");
-                    return result.ToArray();
-                }
-                // 확장자로 구분하여 커넥션 스트링을 가져옮
-                switch (fileExtension)
-                {
-                    case ".xls":    //Excel 97-03
-                        connectionString = string.Format(Excel03ConString, filePath, header);
-                        break;
-                    case ".xlsx":  //Excel 07
-                        connectionString = string.Format(Excel07ConString, filePath, header);
-                        break;
-                }
-                // 엑셀 프로그램 실행
-
-                
-                GetWindowThreadProcessId(new IntPtr(excelApp.Hwnd), out excelProcessId);
-                // 엑셀 파일 열기
-                wookbook = excelApp.Workbooks.Open(path,false);
-                // 첫번째 Worksheet
-                workSheet = wookbook.Worksheets.get_Item(1) as Excel.Worksheet;   
-                // 현재 Worksheet에서 사용된 Range 전체를 선택
-                Excel.Range rng = workSheet.UsedRange;
-                // Range 데이타를 배열 (1-based array)로
-                object[,] data = (object[,])rng.Value;
-
-                for (int r = 1; r <= data.GetLength(0); r++)
-                {
-                    int length = Math.Min(data.GetLength(1), numOfColumn);
-                    string[] arr = new string[length];
-
-                    for (int c = 1; c <= length; c++)
-                    {
-                        if (data[r, c] == null)
-                        {
-                            continue;
-                        }
-                        else if (data[r, c] is string)
-                        {
-                            arr[c - 1] = data[r, c] as string;
-                        }
-                        else
-                        {
-                            arr[c - 1] = data[r, c].ToString();
-                        }
-                    }
-
-                    for (int i = 0; i < arr.Length; i++)
-                    {
-                        if (string.IsNullOrWhiteSpace(arr[i]) == false)
-                        {
-                            result.Add(arr);
-                            break;
-                        }
-                    }
-                }
-
-                // 첫 번째 시트의 이름을 가져옮
-                using (OleDbConnection con = new OleDbConnection(connectionString))
-                {
-                    using (OleDbCommand cmd = new OleDbCommand())
-                    {
-                        cmd.Connection = con;
-                        con.Open();
-                        DataTable dtExcelSchema = con.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-
-                        sheetName = dtExcelSchema.Rows[0]["TABLE_NAME"].ToString();
-                        con.Close();
-                    }
-                }
-                Console.WriteLine("sheetName = " + sheetName);
-
-
-                // 첫 번째 시트의 데이타를 읽어서 datagridview 에 보이게 함.
-                using (OleDbConnection con = new OleDbConnection(connectionString))
-                {
-                    using (OleDbCommand cmd = new OleDbCommand())
-                    {
-                        using (OleDbDataAdapter oda = new OleDbDataAdapter())
-                        {
-                            DataTable dt = new DataTable();
-                            cmd.CommandText = "SELECT * From [" + sheetName + "]";
-                            cmd.Connection = con;
-                            con.Open();
-                            oda.SelectCommand = cmd;
-                            oda.Fill(dt);
-                            con.Close();
-                            grid.DataSource = dt;
-                        }
-                    }
-                }
-                
-                wookbook.Close(false);
-                excelApp.Quit();
-                CLog.Write(ELog.OPL, string.Format($"Error File {path}, Excel File Close"));
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                // Clean up
-                ReleaseExcelObject(workSheet);
-                ReleaseExcelObject(wookbook);
-                ReleaseExcelObject(excelApp);
-
-                if (excelApp != null && excelProcessId > 0)
-                {
-                    Process.GetProcessById((int)excelProcessId).Kill();
-                }
-                CLog.Write(ELog.OPL, string.Format($"Error File {path}, Excel File Release"));
-            }
-
-            return result.ToArray();
-        }
-        private  bool WriteExcelData(string path, string[][] targetData)
-        {
-            try
-            {
-                // Execute Excel application
-                excelApp = new Excel.Application();
-
-                if (excelApp == null)
-                {
-                    MessageBox.Show("엑셀이 설치되지 않았습니다");
-                    return false;
-                }
-                GetWindowThreadProcessId(new IntPtr(excelApp.Hwnd), out excelProcessId);
-
-                // 엑셀파일 열기 or 새로 만들기
-                bool isFileExist = File.Exists(path);
-                wookbook = isFileExist ? excelApp.Workbooks.Open(path, ReadOnly: false, Editable: true) : excelApp.Workbooks.Add(Missing.Value);
-
-                workSheet = wookbook.Worksheets.get_Item(1) as Excel.Worksheet;
-                // Worksheet 이름 설정하기
-                // ws.Name = targetWorksheetName ;
-
-                int row = targetData.GetLength(0);
-                int column = targetData[0].Length;
-
-                object[,] data = new object[row, column];
-
-                for (int r = 0; r < row; r++)
-                {
-                    for (int c = 0; c < column; c++)
-                    {
-                        data[r, c] = targetData[r][c];
-                    }
-                }
-
-                // row, column 번호로 Cell 접근
-                // Excel.Range rng = ws.Range[ws.Cells[1, 1], ws.Cells[row, column]];
-
-                Excel.Range rng = workSheet.get_Range("A1", Missing.Value);
-                rng = rng.get_Resize(row, column);
-
-                // 저장하는 여러 방법 중 두가지
-                // rng.Value = data;
-                rng.set_Value(Missing.Value, data);
-
-                if (isFileExist)
-                {
-                    wookbook.Save(); // 덮어쓰기
-                }
-                else
-                {
-                    wookbook.SaveCopyAs(path); // 새 파일 만들기
-                }
-
-                wookbook.Close(false);
-                excelApp.Quit();
-            }
-            catch (Exception e)
-            {
-                if (wookbook != null)
-                {
-                    wookbook.Close(SaveChanges: false);
-                }
-                if (excelApp != null)
-                {
-                    excelApp.Quit();
-                }
-
-                return false;
-            }
-            finally
-            {
-                ReleaseExcelObject(workSheet);
-                ReleaseExcelObject(wookbook);
-                ReleaseExcelObject(excelApp);
-
-                if (excelApp != null && excelProcessId > 0)
-                {
-                    Process.GetProcessById((int)excelProcessId).Kill();
-                }
-            }
-
-            return true;
-        }
-
-        private static void ReleaseExcelObject(object obj)
-        {
-            try
-            {
-                if (obj != null)
-                {
-                    Marshal.ReleaseComObject(obj);
-                    obj = null;
-                }
-            }
-            catch (Exception)
-            {
-                obj = null;
-                throw;
-            }
-            finally
-            {
-                GC.Collect();
-            }
-        }
-
-
-        private int GetData_Xls_ErrorList()
-        {
-            int nAdd_SumCnt = 0;
-
-            foreach (var arrVal in sXlsData)
-            {
-                //0,1      ,2   ,3     ,4    ,5      ,6
-                //#,No,Name,Description,xData,yData,zData
-
-                Array.Clear(CData.tSpcList, nAdd_SumCnt, 1);
-                CData.tSpcList[nAdd_SumCnt].sNo         = String.IsNullOrEmpty(arrVal[(int)eSpcArray.No]) ? ""      : arrVal[(int)eSpcArray.No].ToString();
-                CData.tSpcList[nAdd_SumCnt].sName       = String.IsNullOrEmpty(arrVal[(int)eSpcArray.Name]) ? ""    : arrVal[(int)eSpcArray.Name].ToString();
-                CData.tSpcList[nAdd_SumCnt].sDescrip    = String.IsNullOrEmpty(arrVal[(int)eSpcArray.Description]) ? "" : arrVal[(int)eSpcArray.Description].ToString();
-                CData.tSpcList[nAdd_SumCnt].sXdata      = String.IsNullOrEmpty(arrVal[(int)eSpcArray.xData]) ? ""   : arrVal[(int)eSpcArray.xData].ToString();
-                CData.tSpcList[nAdd_SumCnt].sYdata      = String.IsNullOrEmpty(arrVal[(int)eSpcArray.yData]) ? ""   : arrVal[(int)eSpcArray.yData].ToString();
-                CData.tSpcList[nAdd_SumCnt].sZdata      = String.IsNullOrEmpty(arrVal[(int)eSpcArray.zData]) ? ""   : arrVal[(int)eSpcArray.zData].ToString();
-                nAdd_SumCnt++;
-            }
-            return 1;
-        }
 
         private void dGV_SpcList_SelNum(bool bsel = false)
         {
@@ -525,8 +309,8 @@ namespace Victor
             DataGridViewRow row = dGV_DataList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index + 1;
  
-            CData.tSpcList[nSelRow].sDescrip =
-            sXlsData[nSelRow][(int)eSpcArray.Description] = rTB_SpcData.Text;
+            //CData.tSpcList[nSelRow].sDescrip =
+            //sXlsData[nSelRow][(int)eSpcArray.Description] = rTB_SpcData.Text;
         }
 
         private void TimerEvent(Object myObject, EventArgs myEventArgs)
@@ -541,7 +325,7 @@ namespace Victor
             if (nEnable_Edit == 1)
             {
                 Edit_SpcList_SelNum();
-                WriteExcelData(sSpcDataPath, sXlsData);
+                //WriteExcelData(sSpcDataPath, sXlsData);
             }
         }
 

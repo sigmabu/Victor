@@ -19,8 +19,6 @@ namespace Victor
 {
     public partial class vwErrorList : UserControl
     {
-        private Dictionary<EErr, TErr> _list = new Dictionary<EErr, TErr>();
-
         public EErr Current { get; private set; } = EErr.NONE;
 
         private string sErrorListPath = GVar.PATH_EQUIP_ErrorList;
@@ -42,9 +40,9 @@ namespace Victor
             sFolderPath = sErrorListPath.Replace(sFileName + ".csv", "");
 
             Init_ErrorList();
+            Init_View_Set();
 
-            //Init_View_Set();
-            //Init_Grid_Set();
+            Init_Grid_Set();
             //Init_Timer();
         }
 
@@ -55,7 +53,6 @@ namespace Victor
         private void Init_ErrorList()
         {
             // 리스트 초기화
-            _list = new Dictionary<EErr, TErr>();
 
             EErr[] errs = (EErr[])Enum.GetValues(typeof(EErr));             // 정의된 Error code 수량만큼 List 생성하여 추가
             int cnt = errs.Length;
@@ -74,7 +71,7 @@ namespace Victor
                 err.Action_Kr = string.Empty;
                 err.Action_Ch = string.Empty;
 
-                _list.Add(errs[i], err);
+                CData.tErrlist.Add(errs[i], err);
             }
         }
         private void _Save()
@@ -88,29 +85,26 @@ namespace Victor
 
             builder.AppendLine("#,ErrCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr");
 
-            // int cnt = _list.Count;
-
-
-            for (int i = 0; i < _list.Count; i++)
+            // int cnt = tErrlist.Count;
+            for (int i = 0; i < CData.tErrlist.Count; i++)
             {
-                EErr err = _list.Keys.ToArray()[i];
+                EErr err = CData.tErrlist.Keys.ToArray()[i];
 
                 builder.Append($"{i},");
-                builder.Append(_list[err].number + ",");
-                builder.Append(_list[err].name + ",");
-                builder.Append(_list[err].action + ",");
-                builder.Append(_list[err].image + ",");
+                builder.Append(CData.tErrlist[err].number + ",");
+                builder.Append(CData.tErrlist[err].name + ",");
+                builder.Append(CData.tErrlist[err].action + ",");
+                builder.Append(CData.tErrlist[err].image + ",");
 
-                builder.Append(_list[err].Name_En + ",");
-                builder.Append(_list[err].Action_En + ",");
-                builder.Append(_list[err].Name_Ch + ",");
-                builder.Append(_list[err].Action_Ch + ",");
-                builder.Append(_list[err].Name_Kr + ",");
-                builder.Append(_list[err].Action_Kr);
+                builder.Append(CData.tErrlist[err].Name_En + ",");
+                builder.Append(CData.tErrlist[err].Action_En + ",");
+                builder.Append(CData.tErrlist[err].Name_Ch + ",");
+                builder.Append(CData.tErrlist[err].Action_Ch + ",");
+                builder.Append(CData.tErrlist[err].Name_Kr + ",");
+                builder.Append(CData.tErrlist[err].Action_Kr);
 
                 builder.AppendLine();
             }
-
             using (StreamWriter writer = new StreamWriter(sErrorListPath))
             {
                 writer.Write(builder.ToString());
@@ -180,13 +174,11 @@ namespace Victor
                                     }
                                 }
                             }
-
-                            _list[err] = errData;
+                            CData.tErrlist[err] = errData;
                         }
                     }
                 }
             }
-
             // 불러오기 이후 다시 저장하여 추가된 Error 항목 저장
             _Save();
             return 0;
@@ -195,7 +187,7 @@ namespace Victor
         // Code에 정의된 Alarm Name을 표시한다.
         public string GetName(EErr error)
         {
-            return _list[error].name;
+            return CData.tErrlist[error].name;
         }
 
 
@@ -205,18 +197,18 @@ namespace Victor
             // 다국어 지원이 가능하다면 지정한 언어로 회신해준다.
             if (nLang == (int)ELang.English)
             {
-                return _list[error].Name_En;
+                return CData.tErrlist[error].Name_En;
             }
             else if (nLang == (int)ELang.Chinese)
             {
-                return _list[error].Name_En + "\n" + _list[error].Name_Ch;
+                return CData.tErrlist[error].Name_En + "\n" + CData.tErrlist[error].Name_Ch;
             }
             else if (nLang == (int)ELang.Korean)
             {
-                return _list[error].Name_En + "\n" + _list[error].Name_Kr;
+                return CData.tErrlist[error].Name_En + "\n" + CData.tErrlist[error].Name_Kr;
             }
 
-            return _list[error].name;
+            return CData.tErrlist[error].name;
         }
 
 
@@ -226,40 +218,53 @@ namespace Victor
             // 다국어 지원이 가능하다면 지정한 언어로 회신해준다.
             if (nLang == (int)ELang.English)
             {
-                return string.IsNullOrEmpty(_list[error].Action_En) ? _list[error].action : _list[error].Action_En;
+                return string.IsNullOrEmpty(CData.tErrlist[error].Action_En) ? CData.tErrlist[error].action : CData.tErrlist[error].Action_En;
             }
             else if (nLang == (int)ELang.Chinese)
             {
-                return string.IsNullOrEmpty(_list[error].Action_Ch) ? _list[error].action : _list[error].Action_Ch;
+                return string.IsNullOrEmpty(CData.tErrlist[error].Action_Ch) ? CData.tErrlist[error].action : CData.tErrlist[error].Action_Ch;
             }
             else if (nLang == (int)ELang.Korean)
             {
-                return string.IsNullOrEmpty(_list[error].Action_Kr) ? _list[error].action : _list[error].Action_Kr;
+                return string.IsNullOrEmpty(CData.tErrlist[error].Action_Kr) ? CData.tErrlist[error].action : CData.tErrlist[error].Action_Kr;
             }
 
-            return _list[error].action;
+            return CData.tErrlist[error].action;
         }
 
 
         public string GetImage(EErr error)
         {
-            return _list[error].image;
+            return CData.tErrlist[error].image;
         }
 
         private void Init_Grid_Set()
         {
             dGV_ErrorList.DoubleBuffered(true);
 
-            dGV_ErrorList.Columns[(int)eSpcGrid.DataNo].Width    = 100;
-            dGV_ErrorList.Columns[(int)eSpcGrid.Name].Width       = 495;
+            var dt = new DataTable();
+
+            //dt.Columns.Add(tErrlist[0].number.ToString());
+            //dt.Columns.Add(tErrlist[0].name.ToString());
+            dt.Columns.Add("No");
+            dt.Columns.Add("Error Name");
+            for (int i = 1; i < CData.tErrlist.Count; i++)
+            {
+                EErr err = CData.tErrlist.Keys.ToArray()[i];
+                dt.Rows.Add(CData.tErrlist[err].number.ToString(), CData.tErrlist[err].name.ToString());
+            }
+            dGV_ErrorList.DataSource = dt;
+
+            dGV_ErrorList.Columns[(int)eErrorListGrid.ErrCode].Width = 100;
+            dGV_ErrorList.Columns[(int)eErrorListGrid.Name].Width = 495;
 
             dGV_ErrorList.RowTemplate.Height = 30;
 
             dGV_ErrorList.Columns[(int)eSpcGrid.Name].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
 
             dGV_ErrorList.ReadOnly = true;
-
         }
+
         private void Init_Timer()
         {
             System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
@@ -270,8 +275,6 @@ namespace Victor
 
         private void Init_View_Set()
         {
-
-
             nEnable_Edit = 0;
             Btn_Output_Set();
 
@@ -280,18 +283,6 @@ namespace Victor
             Init_Load_ErrorFile_csv();
 
         }
-/*
-        public int Read_File_ErroList(bool bFlag = false)
-        {
-            if (bFlag)
-            {
-                sXlsData = ReadExcelData(dGV_ErrorList, sErrorListPath, 1024);
-            }
-            GetData_Xls_ErrorList();
-            dGV_ErrorList_SelNum(false);
-            return 1;
-        }
-        */
         public void Open()
         {
             switch (mViewPage.nMaintPage)
@@ -349,288 +340,22 @@ namespace Victor
                 default: break;
             }
         }
-        /*
-        private  string[][] ReadExcelData(DataGridView grid, string path,  int numOfColumn)
-        {
-            string filePath = path;
-            string fileExtension = Path.GetExtension(path);
-            string header = "Yes";  //rbHeaderYes.Checked ? "Yes" : "No";
-            string connectionString = string.Empty;
-            string sheetName = string.Empty;
-
-            List<string[]> result = new List<string[]>();            
-
-            try
-            {
-                excelApp = new Excel.Application();
-
-                if (excelApp == null)
-                {
-                    MessageBox.Show("엑셀이 설치되지 않았습니다");
-                    return result.ToArray();
-                }
-                // 확장자로 구분하여 커넥션 스트링을 가져옮
-                switch (fileExtension)
-                {
-                    case ".xls":    //Excel 97-03
-                        connectionString = string.Format(Excel03ConString, filePath, header);
-                        break;
-                    case ".xlsx":  //Excel 07
-                        connectionString = string.Format(Excel07ConString, filePath, header);
-                        break;
-                }
-                // 엑셀 프로그램 실행
-
-                
-                GetWindowThreadProcessId(new IntPtr(excelApp.Hwnd), out excelProcessId);
-                // 엑셀 파일 열기
-                wookbook = excelApp.Workbooks.Open(path,false);
-                // 첫번째 Worksheet
-                workSheet = wookbook.Worksheets.get_Item(1) as Excel.Worksheet;   
-                // 현재 Worksheet에서 사용된 Range 전체를 선택
-                Excel.Range rng = workSheet.UsedRange;
-                // Range 데이타를 배열 (1-based array)로
-                object[,] data = (object[,])rng.Value;
-
-                for (int r = 1; r <= data.GetLength(0); r++)
-                {
-                    int length = Math.Min(data.GetLength(1), numOfColumn);
-                    string[] arr = new string[length];
-
-                    for (int c = 1; c <= length; c++)
-                    {
-                        if (data[r, c] == null)
-                        {
-                            continue;
-                        }
-                        else if (data[r, c] is string)
-                        {
-                            arr[c - 1] = data[r, c] as string;
-                        }
-                        else
-                        {
-                            arr[c - 1] = data[r, c].ToString();
-                        }
-                    }
-
-                    for (int i = 0; i < arr.Length; i++)
-                    {
-                        if (string.IsNullOrWhiteSpace(arr[i]) == false)
-                        {
-                            result.Add(arr);
-                            break;
-                        }
-                    }
-                }
-
-                // 첫 번째 시트의 이름을 가져옮
-                using (OleDbConnection con = new OleDbConnection(connectionString))
-                {
-                    using (OleDbCommand cmd = new OleDbCommand())
-                    {
-                        cmd.Connection = con;
-                        con.Open();
-                        DataTable dtExcelSchema = con.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-
-                        sheetName = dtExcelSchema.Rows[0]["TABLE_NAME"].ToString();
-                        con.Close();
-                    }
-                }
-                Console.WriteLine("sheetName = " + sheetName);
-
-
-                // 첫 번째 시트의 데이타를 읽어서 datagridview 에 보이게 함.
-                using (OleDbConnection con = new OleDbConnection(connectionString))
-                {
-                    using (OleDbCommand cmd = new OleDbCommand())
-                    {
-                        using (OleDbDataAdapter oda = new OleDbDataAdapter())
-                        {
-                            DataTable dt = new DataTable();
-                            cmd.CommandText = "SELECT * From [" + sheetName + "]";
-                            cmd.Connection = con;
-                            con.Open();
-                            oda.SelectCommand = cmd;
-                            oda.Fill(dt);
-                            con.Close();
-                            grid.DataSource = dt;
-                        }
-                    }
-                }
-                
-                wookbook.Close(false);
-                excelApp.Quit();
-                CLog.Write(ELog.OPL, string.Format($"Error File {path}, Excel File Close"));
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                // Clean up
-
-                ReleaseExcelObject(workSheet);
-                ReleaseExcelObject(wookbook);
-                ReleaseExcelObject(excelApp);
-
-                if (excelApp != null && excelProcessId > 0)
-                {
-                    Process.GetProcessById((int)excelProcessId).Kill();
-                }
-                CLog.Write(ELog.OPL, string.Format($"Error File {path}, Excel File Release"));
-            }
-
-            return result.ToArray();
-        }
-        private  bool WriteExcelData(string path, string[][] targetData)
-        {
-            try
-            {
-                // Execute Excel application
-                excelApp = new Excel.Application();
-
-                if (excelApp == null)
-                {
-                    MessageBox.Show("엑셀이 설치되지 않았습니다");
-                    return false;
-                }
-                GetWindowThreadProcessId(new IntPtr(excelApp.Hwnd), out excelProcessId);
-
-                // 엑셀파일 열기 or 새로 만들기
-                bool isFileExist = File.Exists(path);
-                wookbook = isFileExist ? excelApp.Workbooks.Open(path, ReadOnly: false, Editable: true) : excelApp.Workbooks.Add(Missing.Value);
-
-                workSheet = wookbook.Worksheets.get_Item(1) as Excel.Worksheet;
-                // Worksheet 이름 설정하기
-                // ws.Name = targetWorksheetName ;
-
-                int row = targetData.GetLength(0);
-                int column = targetData[0].Length;
-
-                object[,] data = new object[row, column];
-
-                for (int r = 0; r < row; r++)
-                {
-                    for (int c = 0; c < column; c++)
-                    {
-                        data[r, c] = targetData[r][c];
-                    }
-                }
-
-                // row, column 번호로 Cell 접근
-                // Excel.Range rng = ws.Range[ws.Cells[1, 1], ws.Cells[row, column]];
-
-                Excel.Range rng = workSheet.get_Range("A1", Missing.Value);
-                rng = rng.get_Resize(row, column);
-
-                // 저장하는 여러 방법 중 두가지
-                // rng.Value = data;
-                rng.set_Value(Missing.Value, data);
-
-                if (isFileExist)
-                {
-                    wookbook.Save(); // 덮어쓰기
-                }
-                else
-                {
-                    wookbook.SaveCopyAs(path); // 새 파일 만들기
-                }
-
-                wookbook.Close(false);
-                excelApp.Quit();
-            }
-            catch (Exception e)
-            {
-                if (wookbook != null)
-                {
-                    wookbook.Close(SaveChanges: false);
-                }
-                if (excelApp != null)
-                {
-                    excelApp.Quit();
-                }
-
-                return false;
-            }
-            finally
-            {
-                ReleaseExcelObject(workSheet);
-                ReleaseExcelObject(wookbook);
-                ReleaseExcelObject(excelApp);
-
-                if (excelApp != null && excelProcessId > 0)
-                {
-                    Process.GetProcessById((int)excelProcessId).Kill();
-                }
-            }
-
-            return true;
-        }
-
-        private static void ReleaseExcelObject(object obj)
-        {
-            try
-            {
-                if (obj != null)
-                {
-                    Marshal.ReleaseComObject(obj);
-                    obj = null;
-                }
-            }
-            catch (Exception)
-            {
-                obj = null;
-                throw;
-            }
-            finally
-            {
-                GC.Collect();
-            }
-        }
-
-
-        private int GetData_Xls_ErrorList()
-        {
-            int nAdd_SumCnt = 0;
-
-            foreach (var arrVal in sXlsData)
-            {
-                //0,1      ,2   ,3     ,4    ,5      ,6        ,7      ,8        ,9      ,10
-                //#,ErrorCode,Name,Action,Image,Name_En,Action_En,Name_Ch,Action_Ch,Name_Kr,Action_Kr
-
-                Array.Clear(CData.tErrorList, nAdd_SumCnt, 1);
-                CData.tErrorList[nAdd_SumCnt].sCode         = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Code]) ? "" : arrVal[(int)eErrorListArray.Code].ToString();
-                CData.tErrorList[nAdd_SumCnt].sName         = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Name]) ? "" : arrVal[(int)eErrorListArray.Name].ToString();
-                CData.tErrorList[nAdd_SumCnt].sAction       = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Action]) ? "" : arrVal[(int)eErrorListArray.Action].ToString();
-                CData.tErrorList[nAdd_SumCnt].sImage        = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Image]) ? "" : arrVal[(int)eErrorListArray.Image].ToString();
-                CData.tErrorList[nAdd_SumCnt].sName_En      = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Name_En]) ? "" : arrVal[(int)eErrorListArray.Name_En].ToString();
-                CData.tErrorList[nAdd_SumCnt].sAction_En    = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Action_En]) ? "" : arrVal[(int)eErrorListArray.Action_En].ToString();
-                CData.tErrorList[nAdd_SumCnt].sName_Ch      = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Name_Ch]) ? "" : arrVal[(int)eErrorListArray.Name_Ch].ToString();
-                CData.tErrorList[nAdd_SumCnt].sAction_Ch    = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Action_Ch]) ? "" : arrVal[(int)eErrorListArray.Action_Ch].ToString();
-                CData.tErrorList[nAdd_SumCnt].sName_Ch      = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Name_Kr]) ? "" : arrVal[(int)eErrorListArray.Name_Kr].ToString();
-                CData.tErrorList[nAdd_SumCnt].sAction_Ch    = String.IsNullOrEmpty(arrVal[(int)eErrorListArray.Action_Kr]) ? "" : arrVal[(int)eErrorListArray.Action_Kr].ToString();
-                nAdd_SumCnt++;
-            }
-            return 1;
-        }
-        */
         private void dGV_ErrorList_SelNum(bool bsel = false)
         {
             if (bsel == false)
             {
                 dGV_ErrorList.Rows[0].Selected = true;
             }
-            DataGridViewRow row = dGV_ErrorList.SelectedRows[0];   //선택된 Row 값 가져옴.
-            nSelRow = row.Index + 1;
-            rTB_ErrTitle.Text = CData.tErrorList[nSelRow].sCode + ":" + CData.tErrorList[nSelRow].sName;
-            rTB_ErrorCause.Text = CData.tErrorList[nSelRow].sAction;
+            DataGridViewRow nRow = dGV_ErrorList.SelectedRows[0];   //선택된 Row 값 가져옴.
+            if (nRow.Index > (CData.tErrlist.Count - 1)) return;
+            EErr nSelRow = CData.tErrlist.Keys.ToArray()[nRow.Index +1];
+            rTB_ErrTitle.Text = CData.tErrlist[nSelRow].number + ":" + CData.tErrlist[nSelRow].name;
+            rTB_ErrorCause.Text = CData.tErrlist[nSelRow].action;
             try
             {
-                if (String.IsNullOrEmpty(CData.tErrorList[nSelRow].sImage) == false)
+                string sPath = GVar.PATH_EQUIP_ErrorImageFolder + "E" + CData.tErrlist[nSelRow].number + ".png";
+                if (File.Exists(sPath))
                 {
-                    //PictureBox 컨트롤에 디렉토리 경로의 이미지를 FormLoad 합니다.
-                    string sPath = GVar.PATH_EQUIP_ErrorImageFolder + CData.tErrorList[nSelRow].sImage + ".png";
                     pb_Image.Load(sPath);
                     //Load한 이미지 크기를 PictureBox 컨트롤 크기와 동일하게 맞추어 줍니다.
                     pb_Image.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -648,15 +373,16 @@ namespace Victor
 
         private void dGV_ErrorList_SelNum(int nRow)
         {
-            nSelRow = nRow;
-            rTB_ErrTitle.Text = CData.tErrorList[nSelRow].sCode + ":" + CData.tErrorList[nSelRow].sName;
-            rTB_ErrorCause.Text = CData.tErrorList[nSelRow].sAction;
+            //nSelRow = nRow;
+            if (nRow > (CData.tErrlist.Count -1)) return;
+            EErr nSelRow = CData.tErrlist.Keys.ToArray()[nRow];
+            rTB_ErrTitle.Text = CData.tErrlist[nSelRow].number + ":" + CData.tErrlist[nSelRow].name;
+            rTB_ErrorCause.Text = CData.tErrlist[nSelRow].action;
             try
             {
-                if (String.IsNullOrEmpty(CData.tErrorList[nSelRow].sImage) == false)
+                string sPath = GVar.PATH_EQUIP_ErrorImageFolder + "E"+CData.tErrlist[nSelRow].number + ".png";
+                if (File.Exists(sPath))
                 {
-                    //PictureBox 컨트롤에 디렉토리 경로의 이미지를 FormLoad 합니다.
-                    string sPath = GVar.PATH_EQUIP_ErrorImageFolder + CData.tErrorList[nSelRow].sImage + ".png";
                     pb_Image.Load(sPath);
                     //Load한 이미지 크기를 PictureBox 컨트롤 크기와 동일하게 맞추어 줍니다.
                     pb_Image.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -680,9 +406,6 @@ namespace Victor
             }
             DataGridViewRow row = dGV_ErrorList.SelectedRows[0];   //선택된 Row 값 가져옴.
             nSelRow = row.Index + 1;
- 
-            //CData.tErrorList[nSelRow].sAction =
-            //sXlsData[nSelRow][(int)eErrorListArray.Action] = rTB_ErrorCause.Text;
         }
 
         private void TimerEvent(Object myObject, EventArgs myEventArgs)
@@ -697,7 +420,30 @@ namespace Victor
             if (nEnable_Edit == 1)
             {
                 Edit_ErrorList_SelNum();
+                Edit_ErrorCause(nSelRow);
+                
+                //EErr err = CData.tErrlist.Keys.ToArray()[nSelRow];
+                //CData.tErrlist[err].action = rTB_ErrorCause.Text;
+
+
                 //WriteExcelData(sErrorListPath, sXlsData);
+            }
+        }
+
+        /// <summary>
+        /// 이곳은 더 버ㅏ야 할듯
+        /// </summary>
+        /// <param name="nENum"></param>
+        private void Edit_ErrorCause(int nENum)
+        {
+            EErr[] errs = (EErr[])Enum.GetValues(typeof(EErr));             // 정의된 Error code 수량만큼 List 생성하여 추가
+            int cnt = errs.Length;
+            //for (int i = 0; i < cnt; i++)
+            {
+                TErr err = new TErr();
+                err.number = (int)errs[nENum];
+                err.name = errs[nENum].ToString();
+                err.action = string.Empty;
             }
         }
 

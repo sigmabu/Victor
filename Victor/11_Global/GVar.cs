@@ -29,7 +29,7 @@ public class GVar
     public static readonly string PATH_EQUIP_ErrorList          = Application.StartupPath + "\\03_Error\\ErrorList.csv";
     public static readonly string PATH_EQUIP_ErrorImageFolder   = Application.StartupPath + "\\03_Error\\Image\\";
 
-    public static readonly string PATH_EQUIP_SpcList            = Application.StartupPath + "\\05_Equip\\SPC\\SpcData.xls";
+    public static readonly string PATH_EQUIP_SpcList            = Application.StartupPath + "\\05_Equip\\SPC\\SpcData.csv";
     /// <summary>
     /// Device Folder Path  StartUp\\Device\\
     /// </summary>

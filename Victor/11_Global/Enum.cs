@@ -198,11 +198,11 @@ public struct TErr
 
     // 다국어 지원
     public string Name_En;          // 영문 알람명
-    public string Name_Kr;          // 한국어 알람명
+    public string Action_En;          // 영문 알람명
     public string Name_Ch;          // 중국어 알라몀
-    public string Action_En;        // 원인 및 조치내용
+    public string Action_Ch;        // 원인 및 조치내용
+    public string Name_Kr;
     public string Action_Kr;
-    public string Action_Ch;
 }
 
 /// <summary>
@@ -224,4 +224,24 @@ public enum EErr
     SYS_WHEEL_FILE_NOT_SELECT,
     SYS_WHEEL_FILE_SAVE_ERROR,
     SYS_EMG_BUTTON_PRESS,                          // 비상 정지 버튼이 눌렸다.
+    Err010009 = 010009,
+    Err010010 = 010010,
+    Err010011 = 010011,
+    Err010012 = 010012,
+    Err010013 = 010013,
+    Err010014 = 010014,
+    Err010015 = 010015,
+    Err010016 = 010016,
+    Err010017 = 010017,
+    Err010018 = 010018,
+    Err010019 = 010019,
+    Err010020 = 010020,
+    Err010021 = 010021,
+    Err010022 = 010022,
+    Err010023 = 010023,
+    Err010024 = 010024,
+    Err010025 = 010025,
+    Err010026 = 010026,
+    Err010027 = 010027,
+    Err010028 = 010028
 };

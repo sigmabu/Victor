@@ -12,7 +12,7 @@ namespace Victor
         private vwIOList m_vwIOList = new vwIOList();
         private vwErrorList m_vwErrorList = new vwErrorList();
         private vwMotorList m_vwMotorList = new vwMotorList();
-        //private vwSPC m_vwSPC = new vwSPC();
+        private vwSPC m_vwSPC = new vwSPC();
         public vwMaint()
         {
             InitializeComponent();
@@ -76,8 +76,8 @@ namespace Victor
                     pnl_Menu.Controls.Remove(m_vwMotorList);
                     break;
                 case 317:
-                    //m_vwSPC.Close();
-                    //pnl_Menu.Controls.Remove(m_vwSPC);
+                    m_vwSPC.Close();
+                    pnl_Menu.Controls.Remove(m_vwSPC);
                     break;
                 default: break;
             }
@@ -158,12 +158,12 @@ namespace Victor
                     break;
                 case 317:
 
-                    //pnl_Menu.Controls.Add(m_vwSPC);
-                    //m_vwSPC.Location = new Point(0, 32);
-                    //GVar.m_iPage = mViewPage.nViewSPC_317;
-                    //mViewPage.nMaintPage = mViewPage.nViewSPC_317;
-                    //lbl_Maint.Text = "MAINTENANCE [SPC]";
-                    //m_vwSPC.Open();
+                    pnl_Menu.Controls.Add(m_vwSPC);
+                    m_vwSPC.Location = new Point(0, 32);
+                    GVar.m_iPage = mViewPage.nViewSPC_317;
+                    mViewPage.nMaintPage = mViewPage.nViewSPC_317;
+                    lbl_Maint.Text = "MAINTENANCE [SPC]";
+                    m_vwSPC.Open();
 
                     break;
 
