@@ -295,6 +295,7 @@
             resources.ApplyResources(this.pb_Login, "pb_Login");
             this.pb_Login.Name = "pb_Login";
             this.pb_Login.TabStop = false;
+            this.pb_Login.Click += new System.EventHandler(this.pb_Login_Click);
             // 
             // pb_CI
             // 

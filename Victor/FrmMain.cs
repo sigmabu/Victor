@@ -235,5 +235,10 @@ namespace Victor
 
             CLog.Write(ELog.OPL, string.Format("[{0}]  {1}", view, sMsg));
         }
+
+        private void pb_Login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

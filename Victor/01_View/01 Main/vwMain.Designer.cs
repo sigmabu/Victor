@@ -30,6 +30,7 @@ namespace Victor
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label46 = new System.Windows.Forms.Label();
             this.pnl_Base = new System.Windows.Forms.Panel();
             this.roundBorderPanel1 = new MyUserControl.RoundBorderPanel();
@@ -41,7 +42,10 @@ namespace Victor
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pnl_Menu = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnl_Base.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label46
@@ -61,6 +65,7 @@ namespace Victor
             // 
             this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_Base.Controls.Add(this.pictureBox1);
             this.pnl_Base.Controls.Add(this.roundBorderPanel1);
             this.pnl_Base.Controls.Add(this.roundLabel1);
             this.pnl_Base.Controls.Add(this.orientedTextLabel1);
@@ -82,12 +87,13 @@ namespace Victor
             this.roundBorderPanel1.Fill = false;
             this.roundBorderPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.roundBorderPanel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.roundBorderPanel1.Location = new System.Drawing.Point(690, 459);
+            this.roundBorderPanel1.Location = new System.Drawing.Point(886, 361);
             this.roundBorderPanel1.Name = "roundBorderPanel1";
             this.roundBorderPanel1.PaddingSize = 5;
             this.roundBorderPanel1.Radius = 10;
             this.roundBorderPanel1.Size = new System.Drawing.Size(218, 72);
             this.roundBorderPanel1.TabIndex = 8;
+            this.roundBorderPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundBorderPanel1_Paint);
             // 
             // roundLabel1
             // 
@@ -209,6 +215,19 @@ namespace Victor
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 455;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(67, 295);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(304, 241);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 33;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // vwMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -221,8 +240,10 @@ namespace Victor
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "vwMain";
             this.Size = new System.Drawing.Size(1280, 804);
+            this.Load += new System.EventHandler(this.vwMain_Load);
             this.pnl_Base.ResumeLayout(false);
             this.pnl_Base.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +261,7 @@ namespace Victor
         private MyUserControl.RoundLabel roundLabel1;
         private Victor.OrientedTextLabel orientedTextLabel1;
         private MyUserControl.LedToggleButton ledToggleButton1;
+        private PictureBox pictureBox1;
+        private Timer timer1;
     }
 }
