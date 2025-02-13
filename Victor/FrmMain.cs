@@ -25,6 +25,7 @@ namespace Victor
         public FrmMain()
         {
             InitializeComponent();
+            this.FormClosed += new FormClosedEventHandler(FrmMain_FormClosed);
             Init_Screen();
             timer1.Start();
 
@@ -32,7 +33,7 @@ namespace Victor
             Init_Run();
             //mCtrlAjin = new HardWare.Ctrl_Ajin(GVar.PATH_EQUIP_MotorList);
 
-    }
+        }
 
         private void Init_Screen()
         {
@@ -52,6 +53,13 @@ namespace Victor
         {
             HW.mMot.Close();
             Application.Exit();
+        }
+
+        private void MainView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // 폼이 닫힐 때 처리할 작업들
+            SharedMemory_Fun(false);
+            //MessageBox.Show("폼이 닫혔습니다.");
         }
 
         private void Click_MenuRadioButton(object sender, EventArgs e)
@@ -145,7 +153,6 @@ namespace Victor
         {
             lbl_RecipeGroup.Text = CRecipe.It.Group;
             lblRecipeName.Text = CRecipe.It.Name;
-
         }
 
 
@@ -183,10 +190,26 @@ namespace Victor
         {
             CLast.Load_LastConfig();
         }
+
+        private void SharedMemory_Fun(bool bBoot = true)
+        {
+            if (bBoot)
+            {
+                CShared_mem.Init_Shredmemory();
+                CShared_mem.SetMsg(1, 0, 0, "Main Program 이 시작 되었음.");
+            }
+            else
+            {
+                CShared_mem.SetMsg(1, 0, 0, "Main Program 이 종료 되었음.");
+
+            }
+        }
         private void Init_Run()
         {
             try
             {
+                SharedMemory_Fun();
+
                 CMariadb Cmariadb = new CMariadb();
                 //CMariaSql Cmariadb = new CMariaSql();
                 
@@ -237,6 +260,11 @@ namespace Victor
         }
 
         private void pb_Login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

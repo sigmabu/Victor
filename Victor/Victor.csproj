@@ -279,6 +279,9 @@
     <Compile Include="02_Dialogue\Form_Textinput.Designer.cs">
       <DependentUpon>Form_Textinput.cs</DependentUpon>
     </Compile>
+    <Compile Include="04_shardmemory\FileMapping.cs" />
+    <Compile Include="04_shardmemory\SharedMemory.cs" />
+    <Compile Include="04_shardmemory\Typedef.cs" />
     <Compile Include="11_Global\Enum.cs" />
     <Compile Include="11_Global\GConst.cs" />
     <Compile Include="11_Global\GVar.cs" />
@@ -305,6 +308,7 @@
     <Compile Include="14_Driver\01_Motion\Ajiin\AXM.cs" />
     <Compile Include="14_Driver\01_Motion\Ctrl_AjinMot.cs" />
     <Compile Include="14_Driver\02_IO\Ctrl_AjinIO.cs" />
+    <Compile Include="14_Driver\04_TcpIp\Melsec.cs" />
     <Compile Include="14_Driver\HW.cs" />
     <Compile Include="19_Data\ErrorDef\ErrDefine.cs" />
     <Compile Include="19_Data\IODef\IO_Def.cs" />

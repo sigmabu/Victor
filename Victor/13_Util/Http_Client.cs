@@ -1,17 +1,16 @@
-﻿using MySqlX.XDevAPI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
+using System.Text;
 
 namespace Victor
 {
     public partial class Http_Client
     {
         //private static readonly Http_Client client = new Http_Client();
-        private static readonly System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
+        //private static readonly System.Net.Http.HttpClient client = new System.Net.Http.HttpClient();
+        private static readonly HttpClient client = new HttpClient();
 
         private async Task<string> GetRequest(string url)
         {
@@ -58,62 +57,32 @@ namespace Victor
             Console.WriteLine($"PostRequest_Url{url} = {response}");
         }
 
-
-        public static async Task<bool> RequestPostAsync(string url, string postData, StringBuilder responseValue)
+        private async Task<string> FetchDataAsync(string url)
         {
-            try
+            string sRet = "";
+            //using (HttpClient client = new HttpClient())
             {
-                using (System.Net.Http.HttpClient client = new System.Net.Http.HttpClient())
+                try
                 {
-                    // HTTP 헤더 설정
-                    client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko");
-
-                    // 요청 데이터 설정 (application/x-www-form-urlencoded)
-                    HttpContent content = new StringContent(postData, Encoding.UTF8, "application/x-www-form-urlencoded");
-
-                    // HTTP POST 요청 보내기
-                    HttpResponseMessage response = await client.PostAsync(url, content);
-
-                    // HTTP 상태 코드 확인
-                    if (response.IsSuccessStatusCode)
-                    {
-                        // 응답 데이터 읽기
-                        string responseString = await response.Content.ReadAsStringAsync();
-                        responseValue.Clear();
-                        responseValue.Append(responseString);
-                        return true;
-                    }
+                    //string url = "https://jsonplaceholder.typicode.com/posts/1"; // 예제 URL
+                    string response = await client.GetStringAsync(url);
+                    JObject json = JObject.Parse(response);
+                    string title = json["title"].ToString();
+                    sRet = "제목: " + title;
+                    Console.WriteLine($"PostRequest_Url {url} = 제목 {response}");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"PostRequest_Url {url} = 오류 {ex.Message}");
                 }
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"오류 발생: {ex.Message}");
-                return false;
-            }
-
-            return false;
+            return sRet;
         }
-
-        public int nPost_Flag = 0;
-        public async Task RequestPost()
+        public async void FetchDataAsync_Url(string url = "https://www.google.com/")
         {
-            string url = "http://example.com/api";  // 요청할 URL 입력
-            string postData = "key1=value1&key2=value2"; // 전송할 데이터
-            StringBuilder response = new StringBuilder();
-            nPost_Flag = 0;
-
-            bool success = await RequestPostAsync(url, postData, response);
-            if (success)
-            {
-                Console.WriteLine("요청 성공!");
-                Console.WriteLine($"응답: {response}");
-                nPost_Flag = 1;
-            }
-            else
-            {
-                Console.WriteLine("요청 실패!");
-                nPost_Flag = -1;
-            }
+            string jsonData = "{ \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1 }"; // 샘플 데이터
+            //string response = 
+                await FetchDataAsync(url);
         }
 
     }

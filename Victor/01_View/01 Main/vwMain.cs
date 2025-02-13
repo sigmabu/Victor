@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
+//using Victor._21_Asset;
 //using OpenCvSharp;
 
 
@@ -98,23 +89,8 @@ namespace Victor
 
         private void roundConerButton1_Click(object sender, EventArgs e)
         {
-            Http_Client mHttp = new Http_Client();
-
-            //mHttp.Get_Url();
-            mHttp.PostRequest_Url();
-            return;
-            mHttp.RequestPost();
-            if (mHttp.nPost_Flag == -1)
-            {
-                Console.WriteLine("--요청 실패!");
-                Console.WriteLine($"응답: mHttp.nPost_Flag = {mHttp.nPost_Flag}");
-            }
-
-            if (mHttp.nPost_Flag == 1)
-            {
-                Console.WriteLine("--요청 성공!");
-                Console.WriteLine($"응답: mHttp.nPost_Flag = {mHttp.nPost_Flag}");
-            }
+            CShared_mem.SetMsg(1, 0, 0, "TEST 입력 자료 입니다.");
+                    
         }
 
         private void roundBorderPanel1_Paint(object sender, PaintEventArgs e)
