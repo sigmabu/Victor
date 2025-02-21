@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 using System.Windows.Forms;
 
 
@@ -51,7 +46,7 @@ namespace Victor
 
         private void Click_Exit(object sender, EventArgs e)
         {
-            HW.mMot.Close();
+            if(false)HW.mMot.Close();// HW 설치되어 있을때 사용하자
             Application.Exit();
         }
 
@@ -196,12 +191,12 @@ namespace Victor
             if (bBoot)
             {
                 CShared_mem.Init_Shredmemory();
-                CShared_mem.SetMsg(1, 0, 0, "Main Program 이 시작 되었음.");
+                CShared_mem.SetMsg(1, 0, 0, "Main Program 이 시작 되었음.Page=1,X,Y=(0,0)");
+                CShared_mem.SetMsg(1, 200, 21, "Page=1,X,Y=(200,21)");
             }
             else
             {
                 CShared_mem.SetMsg(1, 0, 0, "Main Program 이 종료 되었음.");
-
             }
         }
         private void Init_Run()

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+//using Victor.Logging;
 //using Victor._21_Asset;
 //using OpenCvSharp;
 
@@ -87,10 +88,21 @@ namespace Victor
         //OpenCvSharp.VideoCapture video;
         //Mat mImage = new Mat();
 
+        static int nCount = 0;
+        //private static NLog_Manage Log_W = new NLog_Manage(@"D:\MyLogs\"); //생성후 사용
+
         private void roundConerButton1_Click(object sender, EventArgs e)
         {
-            CShared_mem.SetMsg(1, 0, 0, "TEST 입력 자료 입니다.");
-                    
+            CShared_mem.SetMsg(1, 0, 0, $"TEST 입력 자료 입니다. {nCount}");
+
+            //NLog_Manage.Info($"TEST 입력 자료 입니다 {nCount}");
+            //NLog_Manage Log_W = new NLog_Manage();
+            //Log_W.Info($"TEST 입력 자료 입니다 {nCount}");
+            //NLog_Manage.Info($"TEST 입력 자료 입니다 {nCount}");
+            //LoggerHelper.Instance.Info($"Info 로그 버튼이 클릭되었습니다.");
+            LoggerService.LogInfo($"Info 로그 버튼이 클릭되었습니다.");
+
+            nCount++;
         }
 
         private void roundBorderPanel1_Paint(object sender, PaintEventArgs e)
