@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Ports;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Victor
@@ -162,4 +163,105 @@ namespace Victor
             listBoxPorts.Items.AddRange(ports);
         }
     }    */
+
+    public class SerialFileTransfer
+    {
+        private SerialPort _serialPort;
+        private const int BufferSize = 1024; // 전송 버퍼 크기 (1KB)
+
+        public SerialFileTransfer(string portName, int baudRate = 9600, Parity parity = Parity.None, int dataBits = 8, StopBits stopBits = StopBits.One)
+        {
+            _serialPort = new SerialPort(portName, baudRate, parity, dataBits, stopBits)
+            {
+                ReadTimeout = 500,
+                WriteTimeout = 500
+            };
+        }
+
+        // 파일 전송
+        public void SendFile(string filePath)
+        {
+            if (!File.Exists(filePath))
+            {
+                Console.WriteLine("파일이 존재하지 않습니다.");
+                return;
+            }
+
+            try
+            {
+                _serialPort.Open();
+                byte[] fileBytes = File.ReadAllBytes(filePath);
+                int totalChunks = (int)Math.Ceiling((double)fileBytes.Length / BufferSize);
+
+                for (int i = 0; i < totalChunks; i++)
+                {
+                    int chunkSize = Math.Min(BufferSize, fileBytes.Length - i * BufferSize);
+                    byte[] chunk = new byte[chunkSize];
+                    Array.Copy(fileBytes, i * BufferSize, chunk, 0, chunkSize);
+                    _serialPort.Write(chunk, 0, chunk.Length);
+                    Thread.Sleep(100); // 작은 딜레이 추가 (전송 속도 조정)
+                }
+
+                Console.WriteLine("파일 전송 완료.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"파일 전송 중 오류 발생: {ex.Message}");
+            }
+            finally
+            {
+                if (_serialPort.IsOpen)
+                    _serialPort.Close();
+            }
+        }
+
+        // 파일 수신
+        public void ReceiveFile(string savePath)
+        {
+            try
+            {
+                _serialPort.Open();
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    byte[] buffer = new byte[BufferSize];
+                    int bytesRead;
+
+                    while ((bytesRead = _serialPort.Read(buffer, 0, buffer.Length)) > 0)
+                    {
+                        ms.Write(buffer, 0, bytesRead);
+                    }
+
+                    File.WriteAllBytes(savePath, ms.ToArray());
+                    Console.WriteLine("파일 수신 완료.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"파일 수신 중 오류 발생: {ex.Message}");
+            }
+            finally
+            {
+                if (_serialPort.IsOpen)
+                    _serialPort.Close();
+            }
+        }
+    }
+    /*
+     * public static void Main()
+    {
+        // 송신
+        string sendPortName = "COM1";  // 송신 시 사용할 COM 포트
+        string sendFilePath = @"C:\path\to\send\file.txt";  // 전송할 파일 경로
+
+        SerialFileTransfer sender = new SerialFileTransfer(sendPortName);
+        sender.SendFile(sendFilePath);
+
+        // 수신
+        string receivePortName = "COM2";  // 수신 시 사용할 COM 포트
+        string receiveFilePath = @"C:\path\to\receive\file.txt";  // 수신할 파일 경로
+
+        SerialFileTransfer receiver = new SerialFileTransfer(receivePortName);
+        receiver.ReceiveFile(receiveFilePath);
+    }
+     * */
 }
