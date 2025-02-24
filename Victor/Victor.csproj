@@ -347,6 +347,7 @@
     <Compile Include="12_File\CIni.cs" />
     <Compile Include="12_File\CLast.cs" />
     <Compile Include="12_File\CRecipe.cs" />
+    <Compile Include="12_File\CMariaSqlHelper.cs" />
     <Compile Include="12_File\SingleTone.cs" />
     <Compile Include="13_Util\CSV.cs" />
     <Compile Include="13_Util\CsvHelper.cs" />
