@@ -367,6 +367,7 @@
     <Compile Include="14_Driver\01_Motion\Ctrl_AjinMot.cs" />
     <Compile Include="14_Driver\02_IO\Ctrl_AjinIO.cs" />
     <Compile Include="14_Driver\04_TcpIp\Melsec.cs" />
+    <Compile Include="14_Driver\05_Serial\SerialPortManager.cs" />
     <Compile Include="14_Driver\HW.cs" />
     <Compile Include="19_Data\ErrorDef\ErrDefine.cs" />
     <Compile Include="19_Data\IODef\IO_Def.cs" />
