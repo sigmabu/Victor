@@ -366,6 +366,7 @@
     <Compile Include="14_Driver\01_Motion\Ajiin\AXM.cs" />
     <Compile Include="14_Driver\01_Motion\Ctrl_AjinMot.cs" />
     <Compile Include="14_Driver\02_IO\Ctrl_AjinIO.cs" />
+    <Compile Include="14_Driver\04_TcpIp\EthernetHelper.cs" />
     <Compile Include="14_Driver\04_TcpIp\Melsec.cs" />
     <Compile Include="14_Driver\05_Serial\SerialPortManager.cs" />
     <Compile Include="14_Driver\HW.cs" />
