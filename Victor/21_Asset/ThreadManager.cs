@@ -10,8 +10,10 @@ namespace Victor
 {
     public enum EThread
     {
-        Seq = 0,
-        Log = 1,
+        Seq_0 = 0,
+        Seq_1,
+        Seq_2,
+        Log,
         End
     }
 
@@ -21,10 +23,16 @@ namespace Victor
         public static void Start()
         {
             CData.SPara.iDelPeriod = 10;
+            // 시퀸스 쓰레드 시작
+            _thread[(int)EThread.Seq_0] = new Thread(new ThreadStart(_Seq));
+            _thread[(int)EThread.Seq_0].Priority = ThreadPriority.Lowest;
+            _thread[(int)EThread.Seq_0].Start();
+
             // Log 쓰레드 시작
             _thread[(int)EThread.Log] = new Thread(new ThreadStart(_Log));
             _thread[(int)EThread.Log].Priority = ThreadPriority.Lowest;
             _thread[(int)EThread.Log].Start();
+
         }
 
         public static void Release()
@@ -37,6 +45,20 @@ namespace Victor
                     _thread[i].Abort();
                     _thread[i] = null;
                 }
+            }
+        }
+
+        private static void _Seq()
+        {
+            CLog.Write(ELog.MAIN, "Start log method.");
+            Sequence_00 Seq_00 = new Sequence_00();
+            Sequence_01 Seq_01 = new Sequence_01();
+            Sequence_02 Seq_02 = new Sequence_02();
+            while (true)
+            {
+                Seq_00.Sequence_Run();
+                Seq_01.Sequence_Run();
+                Seq_02.Sequence_Run();
             }
         }
 

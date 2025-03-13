@@ -220,6 +220,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="01_View\01 Main\vwMain_01.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="01_View\01 Main\vwMain_01.Designer.cs">
+      <DependentUpon>vwMain_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="01_View\01 Main\vwMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -408,6 +414,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="21_Asset\ThreadManager.cs" />
+    <Compile Include="51_Sequence\Sequence_02.cs" />
+    <Compile Include="51_Sequence\Sequence_01.cs" />
+    <Compile Include="51_Sequence\Sequence_00.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -416,6 +425,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="01_View\01 Main\vwMain_01.resx">
+      <DependentUpon>vwMain_01.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="01_View\01 Main\vwMain.resx">
       <DependentUpon>vwMain.cs</DependentUpon>
     </EmbeddedResource>
