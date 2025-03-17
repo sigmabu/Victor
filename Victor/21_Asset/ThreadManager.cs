@@ -28,6 +28,15 @@ namespace Victor
             _thread[(int)EThread.Seq_0].Priority = ThreadPriority.Lowest;
             _thread[(int)EThread.Seq_0].Start();
 
+            //_thread[(int)EThread.Seq_1] = new Thread(new ThreadStart(_Seq_1));
+            //_thread[(int)EThread.Seq_1].Priority = ThreadPriority.Lowest;
+            //_thread[(int)EThread.Seq_1].Start();
+
+            //_thread[(int)EThread.Seq_2] = new Thread(new ThreadStart(_Seq_2));
+            //_thread[(int)EThread.Seq_2].Priority = ThreadPriority.Lowest;
+            //_thread[(int)EThread.Seq_2].Start();
+
+
             // Log 쓰레드 시작
             _thread[(int)EThread.Log] = new Thread(new ThreadStart(_Log));
             _thread[(int)EThread.Log].Priority = ThreadPriority.Lowest;
@@ -48,18 +57,52 @@ namespace Victor
             }
         }
 
-        private static void _Seq()
+        static Sequence_00 Seq_00 = new Sequence_00();
+        static Sequence_01 Seq_01 = new Sequence_01();
+        static Sequence_02 Seq_02 = new Sequence_02();
+
+        private static void _Seq_2()
         {
-            CLog.Write(ELog.MAIN, "Start log method.");
-            Sequence_00 Seq_00 = new Sequence_00();
-            Sequence_01 Seq_01 = new Sequence_01();
-            Sequence_02 Seq_02 = new Sequence_02();
+            CLog.Write(ELog.MAIN, "Start 2 log method.");
+            while (true)
+            {
+                Seq_02.Sequence_Run();
+            }
+        }
+        private static void _Seq_1()
+        {
+            CLog.Write(ELog.MAIN, "Start 1 log method.");
+            while (true)
+            {
+                Seq_01.Sequence_Run();
+            }
+        }
+
+        private static void _Seq_0()
+        {
+            CLog.Write(ELog.MAIN, "Start 0 log method.");
             while (true)
             {
                 Seq_00.Sequence_Run();
-                Seq_01.Sequence_Run();
-                Seq_02.Sequence_Run();
             }
+        }
+        private static void _Seq()
+        {
+            CLog.Write(ELog.MAIN, "Start log method.");
+            while (true)
+            {
+                //GConst.EqStatus = EQStatus.EMG_Status;
+                CSys03_Switch.It.Main_Process();     // switch 입출력 및 Buz, TowerLamp Process
+                Process_Run();
+                CSys04_Common.It.Main_Process();
+            }
+        }
+
+        private static void Process_Run()
+        {
+            Seq_00.Run();
+            Seq_01.Run();
+            Seq_02.Run();
         }
 
         /// <summary>

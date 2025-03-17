@@ -357,6 +357,7 @@
     <Compile Include="12_File\SingleTone.cs" />
     <Compile Include="13_Util\CSV.cs" />
     <Compile Include="13_Util\CsvHelper.cs" />
+    <Compile Include="13_Util\CTim.cs" />
     <Compile Include="13_Util\DoubleBuff.cs" />
     <Compile Include="13_Util\ExcelHelper.cs" />
     <Compile Include="13_Util\IniFile.cs" />
@@ -414,6 +415,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="21_Asset\ThreadManager.cs" />
+    <Compile Include="51_Sequence\CSys03_Switch.cs" />
+    <Compile Include="51_Sequence\CSys04_Common.cs" />
     <Compile Include="51_Sequence\Sequence_02.cs" />
     <Compile Include="51_Sequence\Sequence_01.cs" />
     <Compile Include="51_Sequence\Sequence_00.cs" />

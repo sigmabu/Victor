@@ -222,3 +222,66 @@ class mViewPage
     public static int mCurrViewPage { get; set; }
 }
 
+/// <summary>
+/// 시퀀스 운용 플레그
+/// </summary>
+/// 
+public struct TFlag
+{
+    /// <summary>
+    /// 각 Process 의 Initial 진행 시 설정 (종료시 0)
+    /// </summary>
+    public bool init;
+    /// <summary>
+    /// 각 Process 의 Manual 진행 시 설정 (종료시 0)
+    /// </summary>
+    public bool manual;
+    /// <summary>
+    /// 각 Process 의 Run 진행 시 설정 (종료시 0)
+    /// </summary>
+    public bool run;
+    /// <summary>
+    /// 각 Process 의 정지를 하고자 할때 (cycle_depth 종료를 하고자 할때 )  false 설정
+    /// </summary>
+    public bool step;
+    /// <summary>
+    /// 각 Process 의 Stop 진행 시 설정 (종료시 0) false 설정
+    /// </summary>
+    public bool stop;
+}
+
+/// <summary>
+/// Switch Push 상태
+/// </summary>
+public class SWITCH_STATUS
+{
+    // Key 및 센서 동작 상태 변수
+    public bool bEMG_key;
+    public bool bStop_key;
+    public bool bManual_stop_Key;
+    public bool bAuto_key;
+    public bool bReset_key;
+    public bool bDoor_lock;
+
+    public bool bOutput_Halt;
+
+    // 센서 동작에 따른 내부 사용하기 위한 변수
+    public bool bEMG_stop_flag;
+    public bool bError_flag;
+    public bool bStop_flag;
+    public bool bInit_flag;
+    public bool bManual_stop_flag;
+    public bool bRun_flag;
+}
+
+
+public struct CmdKey
+{
+    /// <summary>
+    /// Running Command
+    /// </summary>
+    public bool bRun_flag;
+    public bool bError_flag;
+}
+
+

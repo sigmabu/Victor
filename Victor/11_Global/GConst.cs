@@ -6,6 +6,7 @@ using System.IO;
 using System.Windows.Forms;
 //using Util;
 using Victor;
+using static Victor.Sequence_00;
 
 /// <summary>
 /// Global Const
@@ -22,6 +23,8 @@ namespace Victor
         public static void Release()
         {
         }
+
+        public static EQStatus mEQStatus;
         public static EQStatus EqStatus = EQStatus.Stop_Status;
 
         public static CMariadb Cmariadb { get; set; }

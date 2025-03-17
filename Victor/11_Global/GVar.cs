@@ -53,6 +53,10 @@ public class GVar
     public static string[] ini_RecipeKey { get; set; }
     public static string[][] RecipeKeyName = new string[100][];
 
+    public static SWITCH_STATUS mKeyBtn = new SWITCH_STATUS(); // Push Button 눌림 
+    public static SWITCH_STATUS mKeyGui = new SWITCH_STATUS(); // GUI 에서 Button 눌림
+    public static SWITCH_STATUS mKeyCmd = new SWITCH_STATUS(); // PUSH Button 과 Gui Button  조합하여 사용 하는 내부 버튼 
+
 }
 
 public class Gcolor
@@ -67,3 +71,5 @@ public class Gcolor
     public static Color Color_OnGreen = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(200)))), ((int)(((byte)(30)))));
     #endregion
 }
+
+

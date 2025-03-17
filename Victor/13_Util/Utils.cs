@@ -282,6 +282,21 @@ namespace Victor
                 return "";
             }
         }
+        public static bool bTimeDiff(string startTime, string endTime )
+        {
+            try
+            {
+                DateTime dt1 = Convert.ToDateTime(startTime);
+                DateTime dt2 = Convert.ToDateTime(endTime);
+                TimeSpan ts = dt2 - dt1;
+                return (dt2 != dt1) ? true: false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
 
         public static string GetVariableName<T>(Expression<Func<T>> expr)
         {

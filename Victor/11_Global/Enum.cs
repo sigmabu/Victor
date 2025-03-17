@@ -171,6 +171,7 @@ public enum EQStatus
     //public bool[] bRun_Module_Status = new bool[50];
 }
 
+
 public enum DbTableName
 {
     AUXUNIT,
@@ -260,3 +261,25 @@ public enum EErr
     Err010027 = 010027,
     Err010028 = 010028
 };
+
+
+/// <summary>
+/// Switch 및 lamp On/Off 주기
+/// </summary>
+public class Lamp_flag
+{
+    public bool bFliker_2;// 0.2초 주기 사용
+    public bool bFliker_5;// 0.5초 주기 사용
+}
+
+/// <summary>
+/// Tower lamp On/Off 주기
+/// </summary>
+public class TwrLamp_flag
+{
+    public bool RED_Lamp;   // RED lamp
+    public bool YELL_Lamp;  // YELLOW lamp
+    public bool GREEN_Lamp; // GREEN lamp
+    public bool BLUE_Lamp;  // BLUE lamp
+}
+
