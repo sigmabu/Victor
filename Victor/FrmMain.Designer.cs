@@ -247,14 +247,14 @@
             // lbl_SWVersion
             // 
             resources.ApplyResources(this.lbl_SWVersion, "lbl_SWVersion");
-            this.lbl_SWVersion.BackColor = System.Drawing.Color.Black;
+            this.lbl_SWVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.lbl_SWVersion.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lbl_SWVersion.Name = "lbl_SWVersion";
             // 
             // lbl_Time
             // 
             resources.ApplyResources(this.lbl_Time, "lbl_Time");
-            this.lbl_Time.BackColor = System.Drawing.Color.Black;
+            this.lbl_Time.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.lbl_Time.ForeColor = System.Drawing.Color.White;
             this.lbl_Time.Name = "lbl_Time";
             // 

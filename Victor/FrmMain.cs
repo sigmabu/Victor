@@ -11,7 +11,7 @@ namespace Victor
         private bool isClickedLevelButton = false;
 
         //private vwMain              m_vwMain;
-        private vwMain_01              m_vwMain;
+        private vwMain_01           m_vwMain;
         private vw00Recipe          m_vwRecipe;
         private vw01RecipeList      m_vwRecipeList;
         private vw02RecipeItem      m_vwRecipeItem = new vw02RecipeItem("tRecipe : " + eRecipGroup.Common.ToString());
