@@ -363,6 +363,7 @@
     <Compile Include="13_Util\IniFile.cs" />
     <Compile Include="13_Util\Http_Client.cs" />
     <Compile Include="13_Util\JsonHelpler.cs" />
+    <Compile Include="13_Util\MesManager.cs" />
     <Compile Include="13_Util\Utils.cs" />
     <Compile Include="13_Util\ZipCompress.cs" />
     <Compile Include="14_Driver\01_Motion\Ajiin\AXA.cs" />
