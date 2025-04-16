@@ -14,6 +14,7 @@ namespace Victor
         public vwMain()
         {
             InitializeComponent();
+
         }
         public void Open()
         {

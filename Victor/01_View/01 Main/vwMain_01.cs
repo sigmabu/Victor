@@ -11,9 +11,17 @@ namespace Victor
     {
         private int m_iPage = 0; 
 
+
         public vwMain_01()
         {
             InitializeComponent();
+
+            tbText.Click += (s, e) =>
+            {
+                Form parentForm = this.FindForm();
+                if (parentForm != null)
+                    new VirtualKeyboard(tbText, VirtualKeyboardType.English, parentForm).ShowDialog();
+            };
         }
         public void Open()
         {
@@ -77,6 +85,7 @@ namespace Victor
 
         private void tbTest_Click(object sender, EventArgs e)
         {
+            return;
             //var ak = new AlKeyBoard(this.ParentForm, tbText.Text);
 
             //if(ak != null ) tbText.Text = ak.InKey;
