@@ -1,8 +1,85 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Victor
 {
+    #region Timer 정의
+    
+    //private CTimers[] timers = new CTimers[10];
+
+    //public MainForm()
+    //{
+    //    InitializeComponent();
+    //    for (int i = 0; i < timers.Length; i++)
+    //        timers[i] = new StopWatchHelper();
+    //}
+    //btnStart.Click += (s, e) => timers[index].Start(100);
+    //btnStop.Click += (s, e) => timers[index].Stop();
+    //btnElapsed.Click += (s, e) => lblTime.Text = timers[index].ElapsedMilliseconds() + " ms";
+    //btnNow.Click += (s, e) => lblNow.Text = timers[index].GetCurrentFullTimestamp();
+    //btnEnd.Click += (s, e) => lblEnd.Text = timers[index].End().ToString();
+
+    #endregion
+    public class CTimers
+    {
+        private Stopwatch stopwatch;
+        private long targetDelayMs = -1;
+
+        public CTimers()
+        {
+            stopwatch = new Stopwatch();
+        }
+
+        public void Start(long delayMilliseconds = -1)
+        {
+            targetDelayMs = delayMilliseconds;
+            stopwatch.Restart();
+        }
+
+        public void Stop()
+        {
+            stopwatch.Stop();
+            targetDelayMs = -1;
+        }
+
+        public bool End()
+        {
+            if (targetDelayMs < 0)
+                return false;
+
+            return stopwatch.ElapsedMilliseconds >= targetDelayMs;
+        }
+
+
+        public long ElapsedMilliseconds()
+        {
+            return stopwatch.ElapsedMilliseconds;
+        }
+
+        public string ElapsedTimestamp()
+        {
+            TimeSpan elapsed = stopwatch.Elapsed;
+            DateTime baseTime = new DateTime(1, 1, 1).Add(elapsed);
+            return baseTime.ToString("HH:mm:ss.fff");
+        }
+
+        public void Delay(int milliseconds)
+        {
+            Thread.Sleep(milliseconds);
+        }
+
+        public string GetCurrentFullTimestamp()
+        {
+            return DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss.fff");
+        }
+
+        public string GetCurrentShortTimestamp()
+        {
+            return DateTime.Now.ToString("HH:mm:ss.fff");
+        }
+
+    }
     public class CTim
     {
         private DateTime _target;

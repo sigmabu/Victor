@@ -21,6 +21,9 @@ namespace Victor
         public FrmMain()
         {
             InitializeComponent();
+
+            Console.WriteLine($"C# Version: {Environment.Version}");
+
             this.FormClosed += new FormClosedEventHandler(FrmMain_FormClosed);
             Init_Screen();
             timer1.Start();
@@ -33,6 +36,7 @@ namespace Victor
 
         private void Init_Screen()
         {
+
             GVar.m_iPage = 0;
 
             //m_vwMain = new vwMain();
