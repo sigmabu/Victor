@@ -27,6 +27,7 @@ namespace Victor
             bz2_time,
             bz5_time
         }
+        private CTimers[] timers = new CTimers[10];
 
         private CSys03_Switch()
         {
@@ -34,6 +35,13 @@ namespace Victor
             //m_Time = new CTim[50];
             delay[(int)nTm.bz2_time] = new CTim();
             delay[(int)nTm.bz5_time] = new CTim();
+
+            int i = 0;
+            foreach (var _ in timers)
+            {
+                timers[i++] = new CTimers();
+            }
+
 
             GVar.mKeyGui.bOutput_Halt = false;
 
@@ -308,6 +316,12 @@ namespace Victor
 
         private void _INITIAL_FUN()
         {
+#region 시rks함수 Test
+            //Console.WriteLine($"01 {timers[0].GetCurrentFullTimestamp()}");
+            //if (!timers[0].End()) return;
+            //Console.WriteLine($"02 {timers[0].GetCurrentFullTimestamp()}");
+            //Console.WriteLine($"03 {timers[0].GetCurrentFullTimestamp()}");
+#endregion
             //Prg_cnt = 1;
 
             //DTrace_Message();
@@ -343,6 +357,8 @@ namespace Victor
             }
             else if (NextFun == null)
             {
+                //timers[0].Start(30);
+                Console.WriteLine($"00 {timers[0].GetCurrentFullTimestamp()}");
                 NextFun = _INITIAL_FUN;
                 return;
             }
