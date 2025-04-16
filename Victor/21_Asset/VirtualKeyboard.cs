@@ -3,6 +3,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace Victor
 {
@@ -68,6 +69,98 @@ namespace Victor
             CreateKeyboard();
         }
 
+        private List<Button> keyboardButtons = new List<Button>();
+
+        private void CreateKeyboard_()
+        {
+            // 기존 버튼 삭제
+            foreach (var btn in keyboardButtons)
+                this.Controls.Remove(btn);
+            keyboardButtons.Clear();
+
+            string[][] layout;
+
+            if (keyboardType == VirtualKeyboardType.Integer)
+            {
+                layout = new string[][]
+                {
+            new string[] { "Esc", "1", "2", "3", "4", "5", "-", "Bs" },
+            new string[] { "<-", "6", "7", "8", "9", "0", "Clr", "Del", "Enter" }
+                };
+            }
+            else if (keyboardType == VirtualKeyboardType.Float)
+            {
+                layout = new string[][]
+                {
+            new string[] { "Esc", "1", "2", "3", "4", "5", ".", "-", "Bs" },
+            new string[] { "<-", "6", "7", "8", "9", "0", "Clr", "Del", "Enter" }
+                };
+            }
+            else return;
+
+            int rows = layout.Length;
+            int maxCols = layout.Max(r => r.Length);
+            int margin = 5;
+
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < layout[row].Length; col++)
+                {
+                    Button btn = new Button();
+                    btn.Text = layout[row][col];
+                    btn.Click += (s, e) => HandleKeyPress(btn.Text);
+                    this.Controls.Add(btn);
+                    keyboardButtons.Add(btn);
+                }
+            }
+
+            ResizeKeyboardLayout(); // 초기 사이즈 배치
+        }
+
+        private void ResizeKeyboardLayout()
+        {
+            if (keyboardButtons.Count == 0) return;
+            this.Controls.Add(inputBox);
+            inputBox.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    targetControl.Text = inputBox.Text;
+                    this.Close();
+                }
+            };
+
+            int maxCols = keyboardButtons
+                .Select((b, i) => (i / 2 == 0 ? 8 : 9)) // 정수: 8/9, 실수: 9/9
+                .Max();
+
+            int rows = (keyboardType == VirtualKeyboardType.Float) ? 2 : 2;
+            int margin = 5;
+
+            int width = this.ClientSize.Width;
+            int height = this.ClientSize.Height / 3; // 키보드 높이 지정
+
+            int btnWidth = (width - (margin * (maxCols + 1))) / maxCols;
+            int btnHeight = (height - (margin * (rows + 1))) / rows;
+
+            for (int i = 0; i < keyboardButtons.Count; i++)
+            {
+                int row = (i < maxCols) ? 0 : 1;
+                int col = i % maxCols;
+
+                var btn = keyboardButtons[i];
+                btn.Width = btnWidth;
+                btn.Height = btnHeight;
+                btn.Left = margin + col * (btnWidth + margin);
+                btn.Top = this.ClientSize.Height - height + margin + row * (btnHeight + margin);
+            }
+        }
+
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            ResizeKeyboardLayout(); // 폼 리사이즈 시 버튼도 재배치
+        }
         private void CreateKeyboard()
         {
             this.Controls.Add(inputBox);
@@ -97,10 +190,10 @@ namespace Victor
             switch (keyboardType)
             {
                 case VirtualKeyboardType.Integer:
-                    keyRows = new[] { "1 2 3 4 5", "6 7 8 9 0" };
+                    keyRows = new[] { "1 2 3 4 5", "6 7 8 9 0 -" };
                     break;
                 case VirtualKeyboardType.Float:
-                    keyRows = new[] { "1 2 3 4 5", "6 7 8 9 0 ." };
+                    keyRows = new[] { "1 2 3 4 5", "6 7 8 9 0 - ." };
                     break;
                 case VirtualKeyboardType.Korean:
                     keyRows = new[] {
@@ -111,7 +204,7 @@ namespace Victor
                     break;
                 case VirtualKeyboardType.English:
                     keyRows = new[] {
-                    "1 2 3 4 5 6 7 8 9 0 - =",
+                    "1 2 3 4 5 6 7 8 9 0 _ =",
                     "q w e r t y u i o p",
                     "a s d f g h j k l",
                     "z x c v b n m"

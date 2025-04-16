@@ -22,6 +22,18 @@ namespace Victor
                 if (parentForm != null)
                     new VirtualKeyboard(tbText, VirtualKeyboardType.Korean, parentForm).ShowDialog();
             };
+            tbInt.Click += (s, e) =>
+            {
+                Form parentForm = this.FindForm();
+                if (parentForm != null)
+                    new VirtualKeyboard(tbInt, VirtualKeyboardType.Integer, parentForm).ShowDialog();
+            };
+            tbFloat.Click += (s, e) =>
+            {
+                Form parentForm = this.FindForm();
+                if (parentForm != null)
+                    new VirtualKeyboard(tbFloat, VirtualKeyboardType.Float, parentForm).ShowDialog();
+            };
         }
         public void Open()
         {
