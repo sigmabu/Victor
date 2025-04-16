@@ -1,6 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Linq;
 
 namespace Victor
 {
@@ -201,9 +203,46 @@ namespace Victor
             }
         }
 
+
+        private int[] chosungIndexes = new int[19];  // 초성 인덱스
+        private int[] jungsungIndexes = new int[21];  // 중성 인덱스
+        private int[] jongsungIndexes = new int[28];  // 종성 인덱스
+
         private string ComposeHangul(string input)
         {
-            return input; // 향후 한글 조합 로직 구현 가능
+            // 한글 자모 리스트
+            string[] chosung = { "ㄱ", "ㄲ", "ㄴ", "ㄷ", "ㄸ", "ㄹ", "ㅁ", "ㅂ", "ㅃ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ" };
+            string[] jungsung = { "ㅏ", "ㅐ", "ㅑ", "ㅒ", "ㅓ", "ㅔ", "ㅕ", "ㅖ", "ㅗ", "ㅘ", "ㅙ", "ㅚ", "ㅛ", "ㅜ", "ㅝ", "ㅞ", "ㅟ", "ㅠ", "ㅡ", "ㅢ", "ㅣ" };
+            string[] jongsung = { "", "ㄱ", "ㄲ", "ㄳ", "ㄴ", "ㄵ", "ㄶ", "ㄷ", "ㄹ", "ㄺ", "ㄻ", "ㄼ", "ㄽ", "ㄾ", "ㄿ", "ㅀ", "ㅁ", "ㅂ", "ㅃ", "ㅄ", "ㅅ", "ㅆ", "ㅇ", "ㅈ", "ㅉ", "ㅊ", "ㅋ", "ㅌ", "ㅍ", "ㅎ" };
+
+            // 한글 완성형 조합
+            string result = "";
+            int chosungIndex = -1, jungsungIndex = -1, jongsungIndex = -1;
+
+            foreach (char c in input)
+            {
+                // 초성, 중성, 종성 처리
+                if (chosung.Contains(c.ToString()))
+                {
+                    chosungIndex = Array.IndexOf(chosung, c.ToString());
+                }
+                else if (jungsung.Contains(c.ToString()))
+                {
+                    jungsungIndex = Array.IndexOf(jungsung, c.ToString());
+                }
+                else if (jongsung.Contains(c.ToString()))
+                {
+                    jongsungIndex = Array.IndexOf(jongsung, c.ToString());
+                }
+
+                // 초성, 중성, 종성이 모두 설정되었을 때 완성형 한글 생성
+                if (chosungIndex >= 0 && jungsungIndex >= 0)
+                {
+                    result += (char)(0xAC00 + (chosungIndex * 21 + jungsungIndex) * 28 + jongsungIndex);
+                }
+            }
+
+            return result;
         }
     }
 }

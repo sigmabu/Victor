@@ -20,7 +20,7 @@ namespace Victor
             {
                 Form parentForm = this.FindForm();
                 if (parentForm != null)
-                    new VirtualKeyboard(tbText, VirtualKeyboardType.English, parentForm).ShowDialog();
+                    new VirtualKeyboard(tbText, VirtualKeyboardType.Korean, parentForm).ShowDialog();
             };
         }
         public void Open()
