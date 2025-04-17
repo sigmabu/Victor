@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+
 //using Victor.Logging;
 //using Victor._21_Asset;
 //using OpenCvSharp;
@@ -27,6 +28,9 @@ namespace Victor
                 Form parentForm = this.FindForm();
                 if (parentForm != null)
                     new VirtualKeyboard(tbInt, VirtualKeyboardType.Integer, parentForm).ShowDialog();
+                if (parentForm != null)
+                    VirtualKeyboardModule.ShowKeyboard(VirtualKeyboardType.Integer, tbInt);
+                //btn.Click += (s, e) => VirtualKeyboardModule.ShowKeyboard(VirtualKeyboardType.Korean, inputBox);
             };
             tbFloat.Click += (s, e) =>
             {
