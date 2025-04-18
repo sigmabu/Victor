@@ -22,7 +22,11 @@ namespace Victor
             {
                 Form parentForm = this.FindForm();
                 if (parentForm != null)
-                    new VirtualKeyboard_01(tbText, VirtualKeyboardType.Korean, parentForm).ShowDialog();
+                    Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.English, tbText, parentForm,
+                                                    value =>
+                                                    {
+                                                        tbText.Text = value; // ✅ Enter 시 값 수신
+                                                    });
             };
             tbInt.Click += (s, e) =>
             {

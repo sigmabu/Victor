@@ -102,7 +102,7 @@
             this.tbInput.Location = new System.Drawing.Point(15, 5);
             this.tbInput.Margin = new System.Windows.Forms.Padding(6);
             this.tbInput.Name = "tbInput";
-            this.tbInput.Size = new System.Drawing.Size(1248, 38);
+            this.tbInput.Size = new System.Drawing.Size(1248, 53);
             this.tbInput.TabIndex = 1;
             // 
             // Q
@@ -765,10 +765,10 @@
             // 
             // AlKeyBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1280, 319);
+            this.ClientSize = new System.Drawing.Size(1280, 326);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.SPACE);
             this.Controls.Add(this.Bs);

@@ -29,9 +29,9 @@ namespace Victor
                 case VirtualKeyboardType.Float:
                     keyboard = new FloatkeyboardForm(targetTextBox, owner, OnKeyboardEnter);
                     break;
-                //case VirtualKeyboardType.English:
-                //    keyboard = new EnglishKeyboardForm(targetTextBox);
-                //    break;
+                case VirtualKeyboardType.English:
+                    keyboard = new AlphakeyboardForm(targetTextBox, owner, OnKeyboardEnter);
+                    break;
                 //case VirtualKeyboardType.Korean:
                 //    keyboard = new KoreanKeyboardForm(targetTextBox);
                 //    break;

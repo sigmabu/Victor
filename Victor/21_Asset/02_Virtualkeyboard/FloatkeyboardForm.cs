@@ -41,7 +41,7 @@ namespace Victor
                 }
             };
 
-            btnFloat.Visible = true;
+            btnFloat.Visible = false;
             PERIODE.Visible = true;
 
             // 초기 값 설정
