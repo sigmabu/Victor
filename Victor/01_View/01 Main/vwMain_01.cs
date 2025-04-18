@@ -21,22 +21,23 @@ namespace Victor
             {
                 Form parentForm = this.FindForm();
                 if (parentForm != null)
-                    new VirtualKeyboard(tbText, VirtualKeyboardType.Korean, parentForm).ShowDialog();
+                    new VirtualKeyboard_01(tbText, VirtualKeyboardType.Korean, parentForm).ShowDialog();
             };
             tbInt.Click += (s, e) =>
             {
                 Form parentForm = this.FindForm();
+                //if (parentForm != null)
+                //    new VirtualKeyboard(tbInt, VirtualKeyboardType.Integer, parentForm).ShowDialog();
                 if (parentForm != null)
-                    new VirtualKeyboard(tbInt, VirtualKeyboardType.Integer, parentForm).ShowDialog();
-                if (parentForm != null)
-                    VirtualKeyboardModule.ShowKeyboard(VirtualKeyboardType.Integer, tbInt);
-                //btn.Click += (s, e) => VirtualKeyboardModule.ShowKeyboard(VirtualKeyboardType.Korean, inputBox);
+                    Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.Integer,   
+                                                    tbInt, 
+                                                    parentForm);
             };
             tbFloat.Click += (s, e) =>
             {
                 Form parentForm = this.FindForm();
                 if (parentForm != null)
-                    new VirtualKeyboard(tbFloat, VirtualKeyboardType.Float, parentForm).ShowDialog();
+                    new VirtualKeyboard_01(tbFloat, VirtualKeyboardType.Float, parentForm).ShowDialog();
             };
         }
         public void Open()

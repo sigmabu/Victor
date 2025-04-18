@@ -16,7 +16,7 @@ namespace Victor
         English
     }
 
-    public partial class VirtualKeyboard : Form
+    public partial class VirtualKeyboard_01 : Form
     {
         private Control targetControl;
         private VirtualKeyboardType keyboardType;
@@ -29,7 +29,7 @@ namespace Victor
         private bool isShift = false;
 
 
-        public VirtualKeyboard(Control target, VirtualKeyboardType type, Form owner)
+        public VirtualKeyboard_01(Control target, VirtualKeyboardType type, Form owner)
         {
             InitializeComponent();
             targetControl = target;

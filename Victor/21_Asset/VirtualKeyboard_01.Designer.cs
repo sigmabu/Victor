@@ -1,6 +1,6 @@
 ﻿namespace Victor
 {
-    partial class VirtualKeyboard
+    partial class VirtualKeyboard_01
     {
         /// <summary>
         /// Required designer variable.
