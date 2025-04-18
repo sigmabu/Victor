@@ -10,71 +10,103 @@ using System.Windows.Forms;
 
 namespace Victor
 {
-    public partial class FloatkeyboardForm : Form
+    public partial class FloatkeyboardForm : BasekeyboardForm
     {
-        //private TextBox targetTextBox;
-        private List<Button> buttons = new();
-        public FloatkeyboardForm(TextBox target)
+        private Control targetControl;
+        private Form parentForm;
+        private readonly Action<string> _onEnter;
+
+
+        public FloatkeyboardForm(Control target,Form owner, Action<string> onEnter)
         {
             InitializeComponent();
-            this.targetTextBox = target;
-            this.Resize += (s, e) => ResizeLayout();
-            CreateKeyboard();
-        }
 
+           
+            targetControl = target;
+            parentForm = owner;
+            //this.StartPosition = FormStartPosition.Manual;
+
+
+            this.FormBorderStyle = FormBorderStyle.None; // 타이틀 바 제거
+            this.BackColor = Color.White;
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.Padding = new Padding(2);
+
+            // 회색 테두리
+            this.Paint += (s, e) =>
+            {
+                using (Pen pen = new Pen(Color.Gray, 2))
+                {
+                    e.Graphics.DrawRectangle(pen, 1, 1, this.Width - 2, this.Height - 2);
+                }
+            };
+
+            btnFloat.Visible = true;
+            PERIODE.Visible = true;
+
+            // 초기 값 설정
+            if (targetControl is TextBox || targetControl is Label)
+            {
+                tbInput.Text = targetControl.Text;
+            }
+
+            CreateKeyboard();
+            _onEnter = onEnter;
+        }
         private void CreateKeyboard()
         {
-            string[][] keys =
-            {
-            new[] { "Esc", "1", "2", "3", "4", "5", ".", "-", "Bs" },
-            new[] { "<-", "6", "7", "8", "9", "0", "Clr", "Del", "Enter" }
-        };
-
-            foreach (var row in keys)
-            {
-                foreach (var key in row)
-                {
-                    var btn = new Button { Text = key, Font = new Font("Segoe UI", 12F, FontStyle.Bold) };
-                    btn.Click += (s, e) => OnKeyClick(key);
-                    Controls.Add(btn);
-                    buttons.Add(btn);
-                }
-            }
-
-            ResizeLayout();
+            
         }
 
-        private void ResizeLayout()
+        private void Btn_Click(object sender, EventArgs e)
         {
-            int rows = 2, cols = 9, margin = 5;
-            int w = (ClientSize.Width - margin * (cols + 1)) / cols;
-            int h = (ClientSize.Height - margin * (rows + 1)) / rows;
-
-            for (int i = 0; i < buttons.Count; i++)
-            {
-                int r = i / cols, c = i % cols;
-                buttons[i].SetBounds(margin + c * (w + margin), margin + r * (h + margin), w, h);
-            }
-        }
-
-        private void OnKeyClick(string key)
-        {
+            string sInData ="";
+            string key = (sender as Button).Text;
+            sInData = tbInput.Text;
             switch (key)
             {
-                case "Esc": targetTextBox.Clear(); break;
-                //case "Bs": if (targetTextBox.Text.Length > 0) targetTextBox.Text = targetTextBox.Text[..^1]; break;
+                case "Esc": this.Close(); break;
                 case "Bs":
-                    if (targetTextBox.Text.Length > 0)
-                        targetTextBox.Text = targetTextBox.Text.Substring(0, targetTextBox.Text.Length - 1);
+                    if (tbInput.Text.Length > 0)
+                        tbInput.Text = tbInput.Text.Substring(0, tbInput.Text.Length - 1);
                     break;
-
-                case "Del": targetTextBox.Clear(); break;
-                case "Clr": targetTextBox.Clear(); break;
-                case "<-": /* 생략 */ break;
-                case "Enter": this.Close(); break;
-                case ".": if (!targetTextBox.Text.Contains(".")) targetTextBox.Text += "."; break;
-                default: targetTextBox.Text += key; break;
+                case "Del":tbInput.Clear(); break;
+                case "Clr": tbInput.Clear(); break;
+                case "<-": /* 커서 이동 생략 */ break;
+                case "Enter": _onEnter?.Invoke(tbInput.Text); // Module로 전달();
+                              this.Close(); break;
+                case "-":
+                        if (sInData.IndexOf("-") == 0)
+                        {
+                            tbInput.Text = sInData.Replace("-", "");
+                        }
+                        else if (sInData.IndexOf("-") > 0)
+                        {
+                            tbInput.Text = sInData.Replace("-", "");
+                        }
+                        else if (sInData.IndexOf("-") == -1)  
+                        {
+                            tbInput.Text = "-" + sInData;
+                        }
+                        else if (sInData.Length == 0)
+                        {
+                            tbInput.Text += key;
+                        }
+                            break;
+                case ".":
+                    if (sInData.Contains(".") == false)
+                    {
+                        if (sInData.IndexOf("-") == 0)
+                        {
+                            tbInput.Text = sInData.Replace("-", "-0.");
+                        }else
+                        {
+                            tbInput.Text = "0." + sInData;
+                        }
+                    }
+                    break;
+                default: tbInput.Text += key; break;
             }
-        }
+        }        
     }
 }

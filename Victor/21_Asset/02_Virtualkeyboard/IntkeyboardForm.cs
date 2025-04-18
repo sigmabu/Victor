@@ -21,7 +21,7 @@ namespace Victor
         {
             InitializeComponent();
 
-            _onEnter = onEnter;
+           
             targetControl = target;
             parentForm = owner;
             //this.StartPosition = FormStartPosition.Manual;

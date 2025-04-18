@@ -27,12 +27,8 @@ namespace Victor
             tbInt.Click += (s, e) =>
             {
                 Form parentForm = this.FindForm();
-                //if (parentForm != null)
-                //    new VirtualKeyboard(tbInt, VirtualKeyboardType.Integer, parentForm).ShowDialog();
                 if (parentForm != null)
-                    Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.Integer,   
-                                                    tbInt, 
-                                                    parentForm,
+                    Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.Integer, tbInt, parentForm,
                                                     value =>
                                                     {
                                                         tbInt.Text = value; // ✅ Enter 시 값 수신
@@ -42,7 +38,11 @@ namespace Victor
             {
                 Form parentForm = this.FindForm();
                 if (parentForm != null)
-                    new VirtualKeyboard_01(tbFloat, VirtualKeyboardType.Float, parentForm).ShowDialog();
+                    Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.Float, tbFloat, parentForm,
+                                                    value =>
+                                                    {
+                                                        tbFloat.Text = value; // ✅ Enter 시 값 수신
+                                                    });
             };
         }
         public void Open()

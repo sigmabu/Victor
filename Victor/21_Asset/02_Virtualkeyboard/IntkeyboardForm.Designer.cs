@@ -50,6 +50,11 @@
             this.btnEsc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
+            // inputBox
+            // 
+            this.inputBox.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.inputBox.Size = new System.Drawing.Size(1273, 35);
+            // 
             // Float
             // 
             this.Float.BackColor = System.Drawing.Color.White;
@@ -78,14 +83,14 @@
             // 
             // tbInput
             // 
-            this.tbInput.BackColor = System.Drawing.Color.Gray;
+            this.tbInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.tbInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbInput.ForeColor = System.Drawing.Color.Black;
-            this.tbInput.Location = new System.Drawing.Point(15, 15);
+            this.tbInput.Location = new System.Drawing.Point(10, 8);
             this.tbInput.Margin = new System.Windows.Forms.Padding(6);
             this.tbInput.Name = "tbInput";
-            this.tbInput.Size = new System.Drawing.Size(1248, 38);
+            this.tbInput.Size = new System.Drawing.Size(1248, 53);
             this.tbInput.TabIndex = 35;
             // 
             // btnBs
@@ -328,7 +333,7 @@
             // 
             // IntkeyboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1273, 326);
@@ -361,6 +366,27 @@
             this.Name = "IntkeyboardForm";
             this.Text = "IntkeyboardForm";
             this.TopMost = true;
+            this.Controls.SetChildIndex(this.inputBox, 0);
+            this.Controls.SetChildIndex(this.Esc, 0);
+            this.Controls.SetChildIndex(this.Float, 0);
+            this.Controls.SetChildIndex(this.btnEsc, 0);
+            this.Controls.SetChildIndex(this.no1, 0);
+            this.Controls.SetChildIndex(this.no7, 0);
+            this.Controls.SetChildIndex(this.no4, 0);
+            this.Controls.SetChildIndex(this.no0, 0);
+            this.Controls.SetChildIndex(this.Minus, 0);
+            this.Controls.SetChildIndex(this.no2, 0);
+            this.Controls.SetChildIndex(this.no8, 0);
+            this.Controls.SetChildIndex(this.no5, 0);
+            this.Controls.SetChildIndex(this.no3, 0);
+            this.Controls.SetChildIndex(this.no9, 0);
+            this.Controls.SetChildIndex(this.PERIODE, 0);
+            this.Controls.SetChildIndex(this.no6, 0);
+            this.Controls.SetChildIndex(this.btnEnter, 0);
+            this.Controls.SetChildIndex(this.btnFloat, 0);
+            this.Controls.SetChildIndex(this.btnDel, 0);
+            this.Controls.SetChildIndex(this.btnBs, 0);
+            this.Controls.SetChildIndex(this.tbInput, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

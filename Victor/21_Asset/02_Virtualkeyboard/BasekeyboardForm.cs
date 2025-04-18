@@ -12,10 +12,6 @@ namespace Victor
 {
     public partial class BasekeyboardForm : Form
     {
-        //public BasekeyboardForm()
-        //{
-        //    InitializeComponent();
-        //}
         protected TextBox inputBox = new TextBox();
         public Action<string> OnEnterPressed;
 
