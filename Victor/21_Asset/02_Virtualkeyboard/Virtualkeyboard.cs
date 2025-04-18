@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.VariantTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,46 @@ using System.Windows.Forms;
 namespace Victor
 {
     #region 
-    //btn.Click += (s, e) => VirtualKeyboardModule.ShowKeyboard(VirtualKeyboardType.Korean, inputBox);
+//     tbText.Click += (s, e) =>
+//            {
+//                Form parentForm = this.FindForm();
+//                if (parentForm != null)
+//                    Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.English, tbText, parentForm,
+//                                                    value =>
+//                                                    {
+//                                                        tbText.Text = value; // ✅ Enter 시 값 수신
+//                                                    });
+//            };
+//tbInt.Click += (s, e) =>
+//{
+//    Form parentForm = this.FindForm();
+//    if (parentForm != null)
+//        Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.Integer, tbInt, parentForm,
+//                                        value =>
+//                                        {
+//                                            tbInt.Text = value; // ✅ Enter 시 값 수신
+//                                        });
+//};
+//tbFloat.Click += (s, e) =>
+//{
+//    Form parentForm = this.FindForm();
+//    if (parentForm != null)
+//        Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.Float, tbFloat, parentForm,
+//                                        value =>
+//                                        {
+//                                            tbFloat.Text = value; // ✅ Enter 시 값 수신
+//                                        });
+//};
 
-    #endregion
+#endregion
+
+public enum VirtualKeyboardType
+    {
+        Integer,
+        Float,
+        Korean,
+        English
+    }
     public static class Virtualkeyboard
     {
         private static Action<string> _onValueConfirmed;

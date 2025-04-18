@@ -408,23 +408,11 @@
       <DependentUpon>IntkeyboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="21_Asset\02_Virtualkeyboard\Virtualkeyboard.cs" />
-    <Compile Include="21_Asset\AlKeyBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="21_Asset\AlKeyBoard.Designer.cs">
-      <DependentUpon>AlKeyBoard.cs</DependentUpon>
-    </Compile>
     <Compile Include="21_Asset\CTime.cs" />
     <Compile Include="21_Asset\LedButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="21_Asset\LogManager.cs" />
-    <Compile Include="21_Asset\NumKeyBoard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="21_Asset\NumKeyBoard.Designer.cs">
-      <DependentUpon>NumKeyBoard.cs</DependentUpon>
-    </Compile>
     <Compile Include="21_Asset\OrientedTextLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -441,12 +429,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="21_Asset\ThreadManager.cs" />
-    <Compile Include="21_Asset\VirtualKeyboard_01.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="21_Asset\VirtualKeyboard_01.Designer.cs">
-      <DependentUpon>VirtualKeyboard_01.cs</DependentUpon>
-    </Compile>
     <Compile Include="51_Sequence\CSys03_Switch.cs" />
     <Compile Include="51_Sequence\CSys04_Common.cs" />
     <Compile Include="51_Sequence\Sequence_02.cs" />
@@ -527,17 +509,8 @@
     <EmbeddedResource Include="21_Asset\02_Virtualkeyboard\IntkeyboardForm.resx">
       <DependentUpon>IntkeyboardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="21_Asset\AlKeyBoard.resx">
-      <DependentUpon>AlKeyBoard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="21_Asset\LedButton.resx">
       <DependentUpon>LedButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="21_Asset\NumKeyBoard.resx">
-      <DependentUpon>NumKeyBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="21_Asset\VirtualKeyboard_01.resx">
-      <DependentUpon>VirtualKeyboard_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

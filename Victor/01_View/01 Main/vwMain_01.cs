@@ -115,9 +115,9 @@ namespace Victor
             //var ak = new AlKeyBoard(this.ParentForm, tbText.Text);
 
             //if(ak != null ) tbText.Text = ak.InKey;
-            var ak = new NumKeyBoard(this.ParentForm, tbText.Text);
+            //var ak = new NumKeyBoard(this.ParentForm, tbText.Text);
 
-            if(ak != null ) tbText.Text = ak.InKey;
+            //if(ak != null ) tbText.Text = ak.InKey;
         }
 
         //OpenCvSharp.VideoCapture video;

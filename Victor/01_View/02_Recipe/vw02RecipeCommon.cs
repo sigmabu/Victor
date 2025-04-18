@@ -66,10 +66,10 @@ namespace Victor
 
         private void textBox_MouseClick(object sender, MouseEventArgs e)
         {
-            TextBox tb  = sender as TextBox;
-            var ak = new AlKeyBoard(this.ParentForm, tb.Text);
+            //TextBox tb  = sender as TextBox;
+            //var ak = new AlKeyBoard(this.ParentForm, tb.Text);
 
-            if (ak != null) tb.Text = ak.InKey;
+            //if (ak != null) tb.Text = ak.InKey;
         }
     }
 }
