@@ -14,17 +14,14 @@ namespace Victor
     {
         private Control targetControl;
         private Form parentForm;
-        public class FormLocation
-        {
-            public int x { get; set; }
-            public int y { get; set; }
-        }
+        private readonly Action<string> _onEnter;
 
-        //private TextBox tbInput;
-        private List<Button> buttons = new();
-        public IntkeyboardForm(Control target,Form owner)
+
+        public IntkeyboardForm(Control target,Form owner, Action<string> onEnter)
         {
             InitializeComponent();
+
+            _onEnter = onEnter;
             targetControl = target;
             parentForm = owner;
             //this.StartPosition = FormStartPosition.Manual;
@@ -45,6 +42,7 @@ namespace Victor
             };
 
             btnFloat.Visible = false;
+            PERIODE.Visible = false;
 
             // 초기 값 설정
             if (targetControl is TextBox || targetControl is Label)
@@ -53,6 +51,7 @@ namespace Victor
             }
 
             CreateKeyboard();
+            _onEnter = onEnter;
         }
         private void CreateKeyboard()
         {
@@ -74,7 +73,8 @@ namespace Victor
                 case "Del":tbInput.Clear(); break;
                 case "Clr": tbInput.Clear(); break;
                 case "<-": /* 커서 이동 생략 */ break;
-                case "Enter": RaiseEnter(); break;// this.Close(); break;
+                case "Enter": _onEnter?.Invoke(tbInput.Text); // Module로 전달();
+                              this.Close(); break;
                 case "-":
                         if (sInData.IndexOf("-") == 0)
                         {
@@ -95,13 +95,6 @@ namespace Victor
                             break;
                 default: tbInput.Text += key; break;
             }
-        }
-        public  Action<string> OnEnterPressed; // 콜백 설정
-
-        protected  void RaiseEnter()
-        {
-            OnEnterPressed?.Invoke(tbInput.Text);
-            this.Close(); // 입력 후 키보드 닫기
-        }
+        }        
     }
 }

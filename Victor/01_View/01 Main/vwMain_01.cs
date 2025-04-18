@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlX.XDevAPI.Relational;
+using System;
 using System.Windows.Forms;
 
 //using Victor.Logging;
@@ -31,7 +32,11 @@ namespace Victor
                 if (parentForm != null)
                     Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.Integer,   
                                                     tbInt, 
-                                                    parentForm);
+                                                    parentForm,
+                                                    value =>
+                                                    {
+                                                        tbInt.Text = value; // ✅ Enter 시 값 수신
+                                                    });
             };
             tbFloat.Click += (s, e) =>
             {

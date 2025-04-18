@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Victor
 {
-    public class BasekeyboardForm : Form
+    public partial class BasekeyboardForm : Form
     {
         //public BasekeyboardForm()
         //{
