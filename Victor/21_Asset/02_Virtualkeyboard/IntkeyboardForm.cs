@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Victor
 {
-    public partial class IntkeyboardForm : Form
+    public partial class IntkeyboardForm : BasekeyboardForm
     {
         private Control targetControl;
         private Form parentForm;
@@ -27,7 +27,7 @@ namespace Victor
             InitializeComponent();
             targetControl = target;
             parentForm = owner;
-            this.StartPosition = FormStartPosition.Manual;
+            //this.StartPosition = FormStartPosition.Manual;
 
 
             this.FormBorderStyle = FormBorderStyle.None; // 타이틀 바 제거
@@ -57,58 +57,6 @@ namespace Victor
         private void CreateKeyboard()
         {
             
-        }
-
-        private void CreateKeyboard__()
-        {
-            string[][] keys =
-            {
-            new[] { "Esc", "1", "2", "3", "4", "5", "-", "Bs" },
-            new[] { "<-", "6", "7", "8", "9", "0", "Clr", "Del", "Enter" }
-        };
-
-            foreach (var row in keys)
-            {
-                foreach (var key in row)
-                {
-                    var btn = new Button { Text = key, Font = new Font("Segoe UI", 12F, FontStyle.Bold) };
-                    btn.Click += (s, e) => OnKeyClick(key);
-                    Controls.Add(btn);
-                    buttons.Add(btn);
-                }
-            }
-
-            //ResizeLayout();
-        }
-
-        private void ResizeLayout()
-        {
-            int rows = 2, cols = 9, margin = 5;
-            int w = (ClientSize.Width - margin * (cols + 1)) / cols;
-            int h = (ClientSize.Height - margin * (rows + 1)) / rows;
-
-            for (int i = 0; i < buttons.Count; i++)
-            {
-                int r = i / cols, c = i % cols;
-                buttons[i].SetBounds(margin + c * (w + margin), margin + r * (h + margin), w, h);
-            }
-        }
-
-        private void OnKeyClick(string key)
-        {
-            switch (key)
-            {
-                case "Esc": tbInput.Clear(); break;
-                case "Bs":
-                    if (tbInput.Text.Length > 0)
-                        tbInput.Text = tbInput.Text.Substring(0, tbInput.Text.Length - 1);
-                    break;
-                case "Del": tbInput.Clear(); break;
-                case "Clr": tbInput.Clear(); break;
-                case "<-": /* 커서 이동 생략 */ break;
-                case "Enter": this.Close(); break;
-                default: tbInput.Text += key; break;
-            }
         }
 
         private void Btn_Click(object sender, EventArgs e)

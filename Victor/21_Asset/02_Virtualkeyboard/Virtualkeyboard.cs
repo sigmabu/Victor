@@ -26,7 +26,16 @@ namespace Victor
 
             if (keyboard != null)
             {
-                //keyboard.OnEnterPressed = onEnterCallback;
+                // Enter 키 눌렀을 때 targetControl.Text에 값 전달
+                keyboard.OnEnterPressed = value =>
+                {
+                    if (targetControl is TextBox tb)
+                        tb.Text = value;
+                    else if (targetControl is Label lbl)
+                        lbl.Text = value;
+                    else
+                        MessageBox.Show("지원되지 않는 컨트롤입니다.");
+                };
 
                 // 📍 메인 폼 위치 기준으로 설정
                 int x = owner.Left;
@@ -34,6 +43,7 @@ namespace Victor
                 int w = owner.Bounds.Width;
                 int h = owner.Bounds.Height / 3;
 
+                keyboard.StartPosition = FormStartPosition.Manual;
                 keyboard.Location = new System.Drawing.Point(x, y);
                 keyboard.Size = new System.Drawing.Size(w, h);
                 keyboard.ShowDialog(owner);

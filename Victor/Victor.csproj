@@ -383,6 +383,12 @@
     <Compile Include="19_Data\MotorDef\Motor_Def.cs" />
     <Compile Include="21_Asset\01_Nlog\LoggerHelper.cs" />
     <Compile Include="21_Asset\01_Nlog\NLog_Manage.cs" />
+    <Compile Include="21_Asset\02_Virtualkeyboard\BasekeyboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="21_Asset\02_Virtualkeyboard\BasekeyboardForm.Designer.cs">
+      <DependentUpon>BasekeyboardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="21_Asset\02_Virtualkeyboard\FloatkeyboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
