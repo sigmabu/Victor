@@ -11,18 +11,14 @@ using System.Windows.Forms;
 
 namespace Victor
 {
-    public partial class AlphakeyboardForm : Form
+    public partial class EnglishkeyboardForm : Form
     {
-        //public AlphakeyboardForm()
-        //{
-        //    InitializeComponent();
-        //}
         private Control targetControl;
         private Form parentForm;
         private readonly Action<string> _onEnter;
 
 
-        public AlphakeyboardForm(Control target, Form owner, Action<string> onEnter)
+        public EnglishkeyboardForm(Control target, Form owner, Action<string> onEnter)
         {
             InitializeComponent();
 

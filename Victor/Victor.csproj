@@ -383,11 +383,11 @@
     <Compile Include="19_Data\MotorDef\Motor_Def.cs" />
     <Compile Include="21_Asset\01_Nlog\LoggerHelper.cs" />
     <Compile Include="21_Asset\01_Nlog\NLog_Manage.cs" />
-    <Compile Include="21_Asset\02_Virtualkeyboard\AlphakeyboardForm.cs">
+    <Compile Include="21_Asset\02_Virtualkeyboard\EnglishkeyboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="21_Asset\02_Virtualkeyboard\AlphakeyboardForm.Designer.cs">
-      <DependentUpon>AlphakeyboardForm.cs</DependentUpon>
+    <Compile Include="21_Asset\02_Virtualkeyboard\EnglishkeyboardForm.Designer.cs">
+      <DependentUpon>EnglishkeyboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="21_Asset\02_Virtualkeyboard\BasekeyboardForm.cs">
       <SubType>Form</SubType>
@@ -406,6 +406,12 @@
     </Compile>
     <Compile Include="21_Asset\02_Virtualkeyboard\IntkeyboardForm.Designer.cs">
       <DependentUpon>IntkeyboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="21_Asset\02_Virtualkeyboard\KoreakeyboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="21_Asset\02_Virtualkeyboard\KoreakeyboardForm.Designer.cs">
+      <DependentUpon>KoreakeyboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="21_Asset\02_Virtualkeyboard\Virtualkeyboard.cs" />
     <Compile Include="21_Asset\CTime.cs" />
@@ -500,14 +506,17 @@
     <EmbeddedResource Include="02_Dialogue\Form_Textinput.resx">
       <DependentUpon>Form_Textinput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="21_Asset\02_Virtualkeyboard\AlphakeyboardForm.resx">
-      <DependentUpon>AlphakeyboardForm.cs</DependentUpon>
+    <EmbeddedResource Include="21_Asset\02_Virtualkeyboard\EnglishkeyboardForm.resx">
+      <DependentUpon>EnglishkeyboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="21_Asset\02_Virtualkeyboard\FloatkeyboardForm.resx">
       <DependentUpon>FloatkeyboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="21_Asset\02_Virtualkeyboard\IntkeyboardForm.resx">
       <DependentUpon>IntkeyboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="21_Asset\02_Virtualkeyboard\KoreakeyboardForm.resx">
+      <DependentUpon>KoreakeyboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="21_Asset\LedButton.resx">
       <DependentUpon>LedButton.cs</DependentUpon>

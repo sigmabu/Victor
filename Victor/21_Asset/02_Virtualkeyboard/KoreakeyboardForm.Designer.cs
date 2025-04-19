@@ -1,6 +1,6 @@
-﻿namespace Victor
+﻿namespace Victor._21_Asset._02_Virtualkeyboard
 {
-    partial class AlphakeyboardForm
+    partial class KoreakeyboardForm
     {
         /// <summary>
         /// Required designer variable.
@@ -81,26 +81,26 @@
             // 
             // tbInput
             // 
-            this.tbInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.tbInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tbInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbInput.ForeColor = System.Drawing.Color.Black;
-            this.tbInput.Location = new System.Drawing.Point(13, 9);
+            this.tbInput.Location = new System.Drawing.Point(16, 9);
             this.tbInput.Margin = new System.Windows.Forms.Padding(6);
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(1248, 53);
-            this.tbInput.TabIndex = 50;
+            this.tbInput.TabIndex = 99;
             // 
             // SPACE
             // 
             this.SPACE.BackColor = System.Drawing.Color.White;
             this.SPACE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SPACE.ForeColor = System.Drawing.Color.Black;
-            this.SPACE.Location = new System.Drawing.Point(61, 268);
+            this.SPACE.Location = new System.Drawing.Point(64, 268);
             this.SPACE.Margin = new System.Windows.Forms.Padding(6);
             this.SPACE.Name = "SPACE";
             this.SPACE.Size = new System.Drawing.Size(1132, 50);
-            this.SPACE.TabIndex = 28;
+            this.SPACE.TabIndex = 77;
             this.SPACE.Text = "SPACE";
             this.SPACE.UseVisualStyleBackColor = false;
             this.SPACE.Click += new System.EventHandler(this.Btn_Click);
@@ -110,11 +110,11 @@
             this.Bs.BackColor = System.Drawing.Color.White;
             this.Bs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Bs.Location = new System.Drawing.Point(1110, 117);
+            this.Bs.Location = new System.Drawing.Point(1113, 117);
             this.Bs.Margin = new System.Windows.Forms.Padding(6);
             this.Bs.Name = "Bs";
             this.Bs.Size = new System.Drawing.Size(151, 50);
-            this.Bs.TabIndex = 29;
+            this.Bs.TabIndex = 78;
             this.Bs.Text = "Bs";
             this.Bs.UseVisualStyleBackColor = false;
             this.Bs.Click += new System.EventHandler(this.Btn_Click);
@@ -124,11 +124,11 @@
             this.Del.BackColor = System.Drawing.Color.White;
             this.Del.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Del.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Del.Location = new System.Drawing.Point(1157, 167);
+            this.Del.Location = new System.Drawing.Point(1160, 167);
             this.Del.Margin = new System.Windows.Forms.Padding(6);
             this.Del.Name = "Del";
             this.Del.Size = new System.Drawing.Size(100, 50);
-            this.Del.TabIndex = 30;
+            this.Del.TabIndex = 79;
             this.Del.Text = "Del";
             this.Del.UseVisualStyleBackColor = false;
             this.Del.Click += new System.EventHandler(this.Btn_Click);
@@ -138,11 +138,11 @@
             this.NUM.BackColor = System.Drawing.Color.White;
             this.NUM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUM.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.NUM.Location = new System.Drawing.Point(13, 217);
+            this.NUM.Location = new System.Drawing.Point(16, 217);
             this.NUM.Margin = new System.Windows.Forms.Padding(6);
             this.NUM.Name = "NUM";
             this.NUM.Size = new System.Drawing.Size(100, 50);
-            this.NUM.TabIndex = 31;
+            this.NUM.TabIndex = 80;
             this.NUM.Text = "Num";
             this.NUM.UseVisualStyleBackColor = false;
             this.NUM.Visible = false;
@@ -153,11 +153,11 @@
             this.Caps.BackColor = System.Drawing.Color.White;
             this.Caps.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Caps.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Caps.Location = new System.Drawing.Point(13, 167);
+            this.Caps.Location = new System.Drawing.Point(16, 167);
             this.Caps.Margin = new System.Windows.Forms.Padding(6);
             this.Caps.Name = "Caps";
             this.Caps.Size = new System.Drawing.Size(100, 50);
-            this.Caps.TabIndex = 32;
+            this.Caps.TabIndex = 81;
             this.Caps.Text = "Caps";
             this.Caps.UseVisualStyleBackColor = false;
             this.Caps.Click += new System.EventHandler(this.Btn_Click);
@@ -167,11 +167,11 @@
             this.Enter.BackColor = System.Drawing.Color.White;
             this.Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Enter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Enter.Location = new System.Drawing.Point(1157, 217);
+            this.Enter.Location = new System.Drawing.Point(1160, 217);
             this.Enter.Margin = new System.Windows.Forms.Padding(6);
             this.Enter.Name = "Enter";
             this.Enter.Size = new System.Drawing.Size(100, 50);
-            this.Enter.TabIndex = 33;
+            this.Enter.TabIndex = 82;
             this.Enter.Text = "Enter";
             this.Enter.UseVisualStyleBackColor = false;
             this.Enter.Click += new System.EventHandler(this.Btn_Click);
@@ -181,12 +181,12 @@
             this.N.BackColor = System.Drawing.Color.White;
             this.N.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.N.ForeColor = System.Drawing.Color.Black;
-            this.N.Location = new System.Drawing.Point(637, 217);
+            this.N.Location = new System.Drawing.Point(640, 217);
             this.N.Margin = new System.Windows.Forms.Padding(6);
             this.N.Name = "N";
             this.N.Size = new System.Drawing.Size(100, 50);
-            this.N.TabIndex = 34;
-            this.N.Text = "N";
+            this.N.TabIndex = 83;
+            this.N.Text = "ㅜ";
             this.N.UseVisualStyleBackColor = false;
             this.N.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -195,12 +195,12 @@
             this.H.BackColor = System.Drawing.Color.White;
             this.H.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.H.ForeColor = System.Drawing.Color.Black;
-            this.H.Location = new System.Drawing.Point(637, 167);
+            this.H.Location = new System.Drawing.Point(640, 167);
             this.H.Margin = new System.Windows.Forms.Padding(6);
             this.H.Name = "H";
             this.H.Size = new System.Drawing.Size(100, 50);
-            this.H.TabIndex = 35;
-            this.H.Text = "H";
+            this.H.TabIndex = 84;
+            this.H.Text = "ㅗ";
             this.H.UseVisualStyleBackColor = false;
             this.H.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -209,11 +209,11 @@
             this.no6.BackColor = System.Drawing.Color.White;
             this.no6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no6.ForeColor = System.Drawing.Color.Black;
-            this.no6.Location = new System.Drawing.Point(637, 67);
+            this.no6.Location = new System.Drawing.Point(640, 67);
             this.no6.Margin = new System.Windows.Forms.Padding(6);
             this.no6.Name = "no6";
             this.no6.Size = new System.Drawing.Size(100, 50);
-            this.no6.TabIndex = 36;
+            this.no6.TabIndex = 85;
             this.no6.Text = "6";
             this.no6.UseVisualStyleBackColor = false;
             this.no6.Click += new System.EventHandler(this.Btn_Click);
@@ -223,12 +223,12 @@
             this.Y.BackColor = System.Drawing.Color.White;
             this.Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Y.ForeColor = System.Drawing.Color.Black;
-            this.Y.Location = new System.Drawing.Point(600, 117);
+            this.Y.Location = new System.Drawing.Point(603, 117);
             this.Y.Margin = new System.Windows.Forms.Padding(6);
             this.Y.Name = "Y";
             this.Y.Size = new System.Drawing.Size(100, 50);
-            this.Y.TabIndex = 37;
-            this.Y.Text = "Y";
+            this.Y.TabIndex = 86;
+            this.Y.Text = "ㅛ";
             this.Y.UseVisualStyleBackColor = false;
             this.Y.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -237,11 +237,11 @@
             this.SQ.BackColor = System.Drawing.Color.White;
             this.SQ.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SQ.ForeColor = System.Drawing.Color.Black;
-            this.SQ.Location = new System.Drawing.Point(1053, 167);
+            this.SQ.Location = new System.Drawing.Point(1056, 167);
             this.SQ.Margin = new System.Windows.Forms.Padding(6);
             this.SQ.Name = "SQ";
             this.SQ.Size = new System.Drawing.Size(100, 50);
-            this.SQ.TabIndex = 38;
+            this.SQ.TabIndex = 87;
             this.SQ.Text = "\'";
             this.SQ.UseVisualStyleBackColor = false;
             this.SQ.Click += new System.EventHandler(this.Btn_Click);
@@ -251,11 +251,11 @@
             this.QUESTION.BackColor = System.Drawing.Color.White;
             this.QUESTION.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QUESTION.ForeColor = System.Drawing.Color.Black;
-            this.QUESTION.Location = new System.Drawing.Point(1053, 217);
+            this.QUESTION.Location = new System.Drawing.Point(1056, 217);
             this.QUESTION.Margin = new System.Windows.Forms.Padding(6);
             this.QUESTION.Name = "QUESTION";
             this.QUESTION.Size = new System.Drawing.Size(100, 50);
-            this.QUESTION.TabIndex = 39;
+            this.QUESTION.TabIndex = 88;
             this.QUESTION.Text = "?";
             this.QUESTION.UseVisualStyleBackColor = false;
             this.QUESTION.Click += new System.EventHandler(this.Btn_Click);
@@ -265,11 +265,11 @@
             this.PERIODE.BackColor = System.Drawing.Color.White;
             this.PERIODE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PERIODE.ForeColor = System.Drawing.Color.Black;
-            this.PERIODE.Location = new System.Drawing.Point(949, 217);
+            this.PERIODE.Location = new System.Drawing.Point(952, 217);
             this.PERIODE.Margin = new System.Windows.Forms.Padding(6);
             this.PERIODE.Name = "PERIODE";
             this.PERIODE.Size = new System.Drawing.Size(100, 50);
-            this.PERIODE.TabIndex = 40;
+            this.PERIODE.TabIndex = 89;
             this.PERIODE.Text = ".";
             this.PERIODE.UseVisualStyleBackColor = false;
             this.PERIODE.Click += new System.EventHandler(this.Btn_Click);
@@ -279,11 +279,11 @@
             this.REST.BackColor = System.Drawing.Color.White;
             this.REST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.REST.ForeColor = System.Drawing.Color.Black;
-            this.REST.Location = new System.Drawing.Point(845, 217);
+            this.REST.Location = new System.Drawing.Point(848, 217);
             this.REST.Margin = new System.Windows.Forms.Padding(6);
             this.REST.Name = "REST";
             this.REST.Size = new System.Drawing.Size(100, 50);
-            this.REST.TabIndex = 41;
+            this.REST.TabIndex = 90;
             this.REST.Text = ",";
             this.REST.UseVisualStyleBackColor = false;
             this.REST.Click += new System.EventHandler(this.Btn_Click);
@@ -293,12 +293,12 @@
             this.L.BackColor = System.Drawing.Color.White;
             this.L.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.L.ForeColor = System.Drawing.Color.Black;
-            this.L.Location = new System.Drawing.Point(949, 167);
+            this.L.Location = new System.Drawing.Point(952, 167);
             this.L.Margin = new System.Windows.Forms.Padding(6);
             this.L.Name = "L";
             this.L.Size = new System.Drawing.Size(100, 50);
-            this.L.TabIndex = 42;
-            this.L.Text = "L";
+            this.L.TabIndex = 91;
+            this.L.Text = "ㅣ";
             this.L.UseVisualStyleBackColor = false;
             this.L.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -307,11 +307,11 @@
             this.no9.BackColor = System.Drawing.Color.White;
             this.no9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no9.ForeColor = System.Drawing.Color.Black;
-            this.no9.Location = new System.Drawing.Point(949, 67);
+            this.no9.Location = new System.Drawing.Point(952, 67);
             this.no9.Margin = new System.Windows.Forms.Padding(6);
             this.no9.Name = "no9";
             this.no9.Size = new System.Drawing.Size(100, 50);
-            this.no9.TabIndex = 43;
+            this.no9.TabIndex = 92;
             this.no9.Text = "9";
             this.no9.UseVisualStyleBackColor = false;
             this.no9.Click += new System.EventHandler(this.Btn_Click);
@@ -321,12 +321,12 @@
             this.O.BackColor = System.Drawing.Color.White;
             this.O.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.O.ForeColor = System.Drawing.Color.Black;
-            this.O.Location = new System.Drawing.Point(906, 117);
+            this.O.Location = new System.Drawing.Point(909, 117);
             this.O.Margin = new System.Windows.Forms.Padding(6);
             this.O.Name = "O";
             this.O.Size = new System.Drawing.Size(100, 50);
-            this.O.TabIndex = 44;
-            this.O.Text = "O";
+            this.O.TabIndex = 93;
+            this.O.Text = "ㅐ";
             this.O.UseVisualStyleBackColor = false;
             this.O.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -335,12 +335,12 @@
             this.C.BackColor = System.Drawing.Color.White;
             this.C.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.C.ForeColor = System.Drawing.Color.Black;
-            this.C.Location = new System.Drawing.Point(325, 217);
+            this.C.Location = new System.Drawing.Point(328, 217);
             this.C.Margin = new System.Windows.Forms.Padding(6);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(100, 50);
-            this.C.TabIndex = 45;
-            this.C.Text = "C";
+            this.C.TabIndex = 94;
+            this.C.Text = "ㅊ";
             this.C.UseVisualStyleBackColor = false;
             this.C.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -349,12 +349,12 @@
             this.D.BackColor = System.Drawing.Color.White;
             this.D.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.D.ForeColor = System.Drawing.Color.Black;
-            this.D.Location = new System.Drawing.Point(325, 167);
+            this.D.Location = new System.Drawing.Point(328, 167);
             this.D.Margin = new System.Windows.Forms.Padding(6);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(100, 50);
-            this.D.TabIndex = 46;
-            this.D.Text = "D";
+            this.D.TabIndex = 95;
+            this.D.Text = "ㅇ";
             this.D.UseVisualStyleBackColor = false;
             this.D.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -363,11 +363,11 @@
             this.no3.BackColor = System.Drawing.Color.White;
             this.no3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no3.ForeColor = System.Drawing.Color.Black;
-            this.no3.Location = new System.Drawing.Point(325, 67);
+            this.no3.Location = new System.Drawing.Point(328, 67);
             this.no3.Margin = new System.Windows.Forms.Padding(6);
             this.no3.Name = "no3";
             this.no3.Size = new System.Drawing.Size(100, 50);
-            this.no3.TabIndex = 47;
+            this.no3.TabIndex = 96;
             this.no3.Text = "3";
             this.no3.UseVisualStyleBackColor = false;
             this.no3.Click += new System.EventHandler(this.Btn_Click);
@@ -377,12 +377,12 @@
             this.E.BackColor = System.Drawing.Color.White;
             this.E.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.E.ForeColor = System.Drawing.Color.Black;
-            this.E.Location = new System.Drawing.Point(294, 117);
+            this.E.Location = new System.Drawing.Point(297, 117);
             this.E.Margin = new System.Windows.Forms.Padding(6);
             this.E.Name = "E";
             this.E.Size = new System.Drawing.Size(100, 50);
-            this.E.TabIndex = 48;
-            this.E.Text = "E";
+            this.E.TabIndex = 97;
+            this.E.Text = "ㄷ";
             this.E.UseVisualStyleBackColor = false;
             this.E.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -391,12 +391,12 @@
             this.B.BackColor = System.Drawing.Color.White;
             this.B.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.B.ForeColor = System.Drawing.Color.Black;
-            this.B.Location = new System.Drawing.Point(533, 217);
+            this.B.Location = new System.Drawing.Point(536, 217);
             this.B.Margin = new System.Windows.Forms.Padding(6);
             this.B.Name = "B";
             this.B.Size = new System.Drawing.Size(100, 50);
-            this.B.TabIndex = 27;
-            this.B.Text = "B";
+            this.B.TabIndex = 76;
+            this.B.Text = "ㅠ";
             this.B.UseVisualStyleBackColor = false;
             this.B.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -405,12 +405,12 @@
             this.G.BackColor = System.Drawing.Color.White;
             this.G.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.G.ForeColor = System.Drawing.Color.Black;
-            this.G.Location = new System.Drawing.Point(533, 167);
+            this.G.Location = new System.Drawing.Point(536, 167);
             this.G.Margin = new System.Windows.Forms.Padding(6);
             this.G.Name = "G";
             this.G.Size = new System.Drawing.Size(100, 50);
-            this.G.TabIndex = 49;
-            this.G.Text = "G";
+            this.G.TabIndex = 98;
+            this.G.Text = "ㅎ";
             this.G.UseVisualStyleBackColor = false;
             this.G.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -419,11 +419,11 @@
             this.no5.BackColor = System.Drawing.Color.White;
             this.no5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no5.ForeColor = System.Drawing.Color.Black;
-            this.no5.Location = new System.Drawing.Point(533, 67);
+            this.no5.Location = new System.Drawing.Point(536, 67);
             this.no5.Margin = new System.Windows.Forms.Padding(6);
             this.no5.Name = "no5";
             this.no5.Size = new System.Drawing.Size(100, 50);
-            this.no5.TabIndex = 2;
+            this.no5.TabIndex = 51;
             this.no5.Text = "5";
             this.no5.UseVisualStyleBackColor = false;
             this.no5.Click += new System.EventHandler(this.Btn_Click);
@@ -433,12 +433,12 @@
             this.T.BackColor = System.Drawing.Color.White;
             this.T.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.T.ForeColor = System.Drawing.Color.Black;
-            this.T.Location = new System.Drawing.Point(498, 117);
+            this.T.Location = new System.Drawing.Point(501, 117);
             this.T.Margin = new System.Windows.Forms.Padding(6);
             this.T.Name = "T";
             this.T.Size = new System.Drawing.Size(100, 50);
-            this.T.TabIndex = 24;
-            this.T.Text = "T";
+            this.T.TabIndex = 73;
+            this.T.Text = "ㅅ";
             this.T.UseVisualStyleBackColor = false;
             this.T.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -447,12 +447,12 @@
             this.K.BackColor = System.Drawing.Color.White;
             this.K.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.K.ForeColor = System.Drawing.Color.Black;
-            this.K.Location = new System.Drawing.Point(845, 167);
+            this.K.Location = new System.Drawing.Point(848, 167);
             this.K.Margin = new System.Windows.Forms.Padding(6);
             this.K.Name = "K";
             this.K.Size = new System.Drawing.Size(100, 50);
-            this.K.TabIndex = 3;
-            this.K.Text = "K";
+            this.K.TabIndex = 52;
+            this.K.Text = "ㅏ";
             this.K.UseVisualStyleBackColor = false;
             this.K.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -461,11 +461,11 @@
             this.no8.BackColor = System.Drawing.Color.White;
             this.no8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no8.ForeColor = System.Drawing.Color.Black;
-            this.no8.Location = new System.Drawing.Point(845, 67);
+            this.no8.Location = new System.Drawing.Point(848, 67);
             this.no8.Margin = new System.Windows.Forms.Padding(6);
             this.no8.Name = "no8";
             this.no8.Size = new System.Drawing.Size(100, 50);
-            this.no8.TabIndex = 4;
+            this.no8.TabIndex = 53;
             this.no8.Text = "8";
             this.no8.UseVisualStyleBackColor = false;
             this.no8.Click += new System.EventHandler(this.Btn_Click);
@@ -475,12 +475,12 @@
             this.I.BackColor = System.Drawing.Color.White;
             this.I.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.I.ForeColor = System.Drawing.Color.Black;
-            this.I.Location = new System.Drawing.Point(804, 117);
+            this.I.Location = new System.Drawing.Point(807, 117);
             this.I.Margin = new System.Windows.Forms.Padding(6);
             this.I.Name = "I";
             this.I.Size = new System.Drawing.Size(100, 50);
-            this.I.TabIndex = 5;
-            this.I.Text = "I";
+            this.I.TabIndex = 54;
+            this.I.Text = "ㅑ";
             this.I.UseVisualStyleBackColor = false;
             this.I.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -489,12 +489,12 @@
             this.X.BackColor = System.Drawing.Color.White;
             this.X.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.X.ForeColor = System.Drawing.Color.Black;
-            this.X.Location = new System.Drawing.Point(221, 217);
+            this.X.Location = new System.Drawing.Point(224, 217);
             this.X.Margin = new System.Windows.Forms.Padding(6);
             this.X.Name = "X";
             this.X.Size = new System.Drawing.Size(100, 50);
-            this.X.TabIndex = 6;
-            this.X.Text = "X";
+            this.X.TabIndex = 55;
+            this.X.Text = "ㅌ";
             this.X.UseVisualStyleBackColor = false;
             this.X.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -503,12 +503,12 @@
             this.S.BackColor = System.Drawing.Color.White;
             this.S.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.S.ForeColor = System.Drawing.Color.Black;
-            this.S.Location = new System.Drawing.Point(221, 167);
+            this.S.Location = new System.Drawing.Point(224, 167);
             this.S.Margin = new System.Windows.Forms.Padding(6);
             this.S.Name = "S";
             this.S.Size = new System.Drawing.Size(100, 50);
-            this.S.TabIndex = 7;
-            this.S.Text = "S";
+            this.S.TabIndex = 56;
+            this.S.Text = "ㄴ";
             this.S.UseVisualStyleBackColor = false;
             this.S.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -517,11 +517,11 @@
             this.no2.BackColor = System.Drawing.Color.White;
             this.no2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no2.ForeColor = System.Drawing.Color.Black;
-            this.no2.Location = new System.Drawing.Point(221, 67);
+            this.no2.Location = new System.Drawing.Point(224, 67);
             this.no2.Margin = new System.Windows.Forms.Padding(6);
             this.no2.Name = "no2";
             this.no2.Size = new System.Drawing.Size(100, 50);
-            this.no2.TabIndex = 8;
+            this.no2.TabIndex = 57;
             this.no2.Text = "2";
             this.no2.UseVisualStyleBackColor = false;
             this.no2.Click += new System.EventHandler(this.Btn_Click);
@@ -531,12 +531,12 @@
             this.W.BackColor = System.Drawing.Color.White;
             this.W.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.W.ForeColor = System.Drawing.Color.Black;
-            this.W.Location = new System.Drawing.Point(192, 117);
+            this.W.Location = new System.Drawing.Point(195, 117);
             this.W.Margin = new System.Windows.Forms.Padding(6);
             this.W.Name = "W";
             this.W.Size = new System.Drawing.Size(100, 50);
-            this.W.TabIndex = 9;
-            this.W.Text = "W";
+            this.W.TabIndex = 58;
+            this.W.Text = "ㅈ";
             this.W.UseVisualStyleBackColor = false;
             this.W.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -545,11 +545,11 @@
             this.Underbar.BackColor = System.Drawing.Color.White;
             this.Underbar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Underbar.ForeColor = System.Drawing.Color.Black;
-            this.Underbar.Location = new System.Drawing.Point(1157, 67);
+            this.Underbar.Location = new System.Drawing.Point(1160, 67);
             this.Underbar.Margin = new System.Windows.Forms.Padding(6);
             this.Underbar.Name = "Underbar";
             this.Underbar.Size = new System.Drawing.Size(100, 50);
-            this.Underbar.TabIndex = 10;
+            this.Underbar.TabIndex = 59;
             this.Underbar.Text = "_";
             this.Underbar.UseVisualStyleBackColor = false;
             this.Underbar.Click += new System.EventHandler(this.Btn_Click);
@@ -559,11 +559,11 @@
             this.no0.BackColor = System.Drawing.Color.White;
             this.no0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no0.ForeColor = System.Drawing.Color.Black;
-            this.no0.Location = new System.Drawing.Point(1053, 67);
+            this.no0.Location = new System.Drawing.Point(1056, 67);
             this.no0.Margin = new System.Windows.Forms.Padding(6);
             this.no0.Name = "no0";
             this.no0.Size = new System.Drawing.Size(100, 50);
-            this.no0.TabIndex = 11;
+            this.no0.TabIndex = 60;
             this.no0.Text = "0";
             this.no0.UseVisualStyleBackColor = false;
             this.no0.Click += new System.EventHandler(this.Btn_Click);
@@ -573,12 +573,12 @@
             this.P.BackColor = System.Drawing.Color.White;
             this.P.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.P.ForeColor = System.Drawing.Color.Black;
-            this.P.Location = new System.Drawing.Point(1008, 117);
+            this.P.Location = new System.Drawing.Point(1011, 117);
             this.P.Margin = new System.Windows.Forms.Padding(6);
             this.P.Name = "P";
             this.P.Size = new System.Drawing.Size(100, 50);
-            this.P.TabIndex = 12;
-            this.P.Text = "P";
+            this.P.TabIndex = 61;
+            this.P.Text = "ㅔ";
             this.P.UseVisualStyleBackColor = false;
             this.P.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -587,12 +587,12 @@
             this.V.BackColor = System.Drawing.Color.White;
             this.V.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.V.ForeColor = System.Drawing.Color.Black;
-            this.V.Location = new System.Drawing.Point(429, 217);
+            this.V.Location = new System.Drawing.Point(432, 217);
             this.V.Margin = new System.Windows.Forms.Padding(6);
             this.V.Name = "V";
             this.V.Size = new System.Drawing.Size(100, 50);
-            this.V.TabIndex = 13;
-            this.V.Text = "V";
+            this.V.TabIndex = 62;
+            this.V.Text = "ㅍ";
             this.V.UseVisualStyleBackColor = false;
             this.V.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -601,12 +601,12 @@
             this.F.BackColor = System.Drawing.Color.White;
             this.F.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.F.ForeColor = System.Drawing.Color.Black;
-            this.F.Location = new System.Drawing.Point(429, 167);
+            this.F.Location = new System.Drawing.Point(432, 167);
             this.F.Margin = new System.Windows.Forms.Padding(6);
             this.F.Name = "F";
             this.F.Size = new System.Drawing.Size(100, 50);
-            this.F.TabIndex = 14;
-            this.F.Text = "F";
+            this.F.TabIndex = 63;
+            this.F.Text = "ㄹ";
             this.F.UseVisualStyleBackColor = false;
             this.F.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -615,11 +615,11 @@
             this.no4.BackColor = System.Drawing.Color.White;
             this.no4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no4.ForeColor = System.Drawing.Color.Black;
-            this.no4.Location = new System.Drawing.Point(429, 67);
+            this.no4.Location = new System.Drawing.Point(432, 67);
             this.no4.Margin = new System.Windows.Forms.Padding(6);
             this.no4.Name = "no4";
             this.no4.Size = new System.Drawing.Size(100, 50);
-            this.no4.TabIndex = 15;
+            this.no4.TabIndex = 64;
             this.no4.Text = "4";
             this.no4.UseVisualStyleBackColor = false;
             this.no4.Click += new System.EventHandler(this.Btn_Click);
@@ -629,12 +629,12 @@
             this.R.BackColor = System.Drawing.Color.White;
             this.R.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.R.ForeColor = System.Drawing.Color.Black;
-            this.R.Location = new System.Drawing.Point(396, 117);
+            this.R.Location = new System.Drawing.Point(399, 117);
             this.R.Margin = new System.Windows.Forms.Padding(6);
             this.R.Name = "R";
             this.R.Size = new System.Drawing.Size(100, 50);
-            this.R.TabIndex = 16;
-            this.R.Text = "R";
+            this.R.TabIndex = 65;
+            this.R.Text = "ㄱ";
             this.R.UseVisualStyleBackColor = false;
             this.R.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -643,12 +643,12 @@
             this.M.BackColor = System.Drawing.Color.White;
             this.M.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.M.ForeColor = System.Drawing.Color.Black;
-            this.M.Location = new System.Drawing.Point(741, 217);
+            this.M.Location = new System.Drawing.Point(744, 217);
             this.M.Margin = new System.Windows.Forms.Padding(6);
             this.M.Name = "M";
             this.M.Size = new System.Drawing.Size(100, 50);
-            this.M.TabIndex = 17;
-            this.M.Text = "M";
+            this.M.TabIndex = 66;
+            this.M.Text = "ㅡ";
             this.M.UseVisualStyleBackColor = false;
             this.M.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -657,12 +657,12 @@
             this.J.BackColor = System.Drawing.Color.White;
             this.J.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.J.ForeColor = System.Drawing.Color.Black;
-            this.J.Location = new System.Drawing.Point(741, 167);
+            this.J.Location = new System.Drawing.Point(744, 167);
             this.J.Margin = new System.Windows.Forms.Padding(6);
             this.J.Name = "J";
             this.J.Size = new System.Drawing.Size(100, 50);
-            this.J.TabIndex = 18;
-            this.J.Text = "J";
+            this.J.TabIndex = 67;
+            this.J.Text = "ㅓ";
             this.J.UseVisualStyleBackColor = false;
             this.J.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -671,11 +671,11 @@
             this.no7.BackColor = System.Drawing.Color.White;
             this.no7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no7.ForeColor = System.Drawing.Color.Black;
-            this.no7.Location = new System.Drawing.Point(741, 67);
+            this.no7.Location = new System.Drawing.Point(744, 67);
             this.no7.Margin = new System.Windows.Forms.Padding(6);
             this.no7.Name = "no7";
             this.no7.Size = new System.Drawing.Size(100, 50);
-            this.no7.TabIndex = 19;
+            this.no7.TabIndex = 68;
             this.no7.Text = "7";
             this.no7.UseVisualStyleBackColor = false;
             this.no7.Click += new System.EventHandler(this.Btn_Click);
@@ -685,12 +685,12 @@
             this.U.BackColor = System.Drawing.Color.White;
             this.U.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.U.ForeColor = System.Drawing.Color.Black;
-            this.U.Location = new System.Drawing.Point(702, 117);
+            this.U.Location = new System.Drawing.Point(705, 117);
             this.U.Margin = new System.Windows.Forms.Padding(6);
             this.U.Name = "U";
             this.U.Size = new System.Drawing.Size(100, 50);
-            this.U.TabIndex = 20;
-            this.U.Text = "U";
+            this.U.TabIndex = 69;
+            this.U.Text = "ㅕ";
             this.U.UseVisualStyleBackColor = false;
             this.U.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -699,12 +699,12 @@
             this.Z.BackColor = System.Drawing.Color.White;
             this.Z.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Z.ForeColor = System.Drawing.Color.Black;
-            this.Z.Location = new System.Drawing.Point(117, 217);
+            this.Z.Location = new System.Drawing.Point(120, 217);
             this.Z.Margin = new System.Windows.Forms.Padding(6);
             this.Z.Name = "Z";
             this.Z.Size = new System.Drawing.Size(100, 50);
-            this.Z.TabIndex = 21;
-            this.Z.Text = "Z";
+            this.Z.TabIndex = 70;
+            this.Z.Text = "ㅋ";
             this.Z.UseVisualStyleBackColor = false;
             this.Z.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -713,12 +713,12 @@
             this.A.BackColor = System.Drawing.Color.White;
             this.A.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.A.ForeColor = System.Drawing.Color.Black;
-            this.A.Location = new System.Drawing.Point(117, 167);
+            this.A.Location = new System.Drawing.Point(120, 167);
             this.A.Margin = new System.Windows.Forms.Padding(6);
             this.A.Name = "A";
             this.A.Size = new System.Drawing.Size(100, 50);
-            this.A.TabIndex = 22;
-            this.A.Text = "A";
+            this.A.TabIndex = 71;
+            this.A.Text = "ㅁ";
             this.A.UseVisualStyleBackColor = false;
             this.A.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -727,11 +727,11 @@
             this.no1.BackColor = System.Drawing.Color.White;
             this.no1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.no1.ForeColor = System.Drawing.Color.Black;
-            this.no1.Location = new System.Drawing.Point(117, 67);
+            this.no1.Location = new System.Drawing.Point(120, 67);
             this.no1.Margin = new System.Windows.Forms.Padding(6);
             this.no1.Name = "no1";
             this.no1.Size = new System.Drawing.Size(100, 50);
-            this.no1.TabIndex = 23;
+            this.no1.TabIndex = 72;
             this.no1.Text = "1";
             this.no1.UseVisualStyleBackColor = false;
             this.no1.Click += new System.EventHandler(this.Btn_Click);
@@ -741,12 +741,12 @@
             this.Q.BackColor = System.Drawing.Color.White;
             this.Q.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Q.ForeColor = System.Drawing.Color.Black;
-            this.Q.Location = new System.Drawing.Point(90, 117);
+            this.Q.Location = new System.Drawing.Point(93, 117);
             this.Q.Margin = new System.Windows.Forms.Padding(6);
             this.Q.Name = "Q";
             this.Q.Size = new System.Drawing.Size(100, 50);
-            this.Q.TabIndex = 25;
-            this.Q.Text = "Q";
+            this.Q.TabIndex = 74;
+            this.Q.Text = "ㅂ";
             this.Q.UseVisualStyleBackColor = false;
             this.Q.Click += new System.EventHandler(this.Btn_Click);
             // 
@@ -755,20 +755,19 @@
             this.Esc.BackColor = System.Drawing.Color.White;
             this.Esc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Esc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Esc.Location = new System.Drawing.Point(13, 67);
+            this.Esc.Location = new System.Drawing.Point(16, 67);
             this.Esc.Margin = new System.Windows.Forms.Padding(6);
             this.Esc.Name = "Esc";
             this.Esc.Size = new System.Drawing.Size(100, 50);
-            this.Esc.TabIndex = 26;
+            this.Esc.TabIndex = 75;
             this.Esc.Text = "Esc";
             this.Esc.UseVisualStyleBackColor = false;
             this.Esc.Click += new System.EventHandler(this.Btn_Click);
             // 
-            // AlphakeyboardForm
+            // KoreakeyboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1280, 326);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.SPACE);
@@ -819,15 +818,14 @@
             this.Controls.Add(this.no1);
             this.Controls.Add(this.Q);
             this.Controls.Add(this.Esc);
-            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AlphakeyboardForm";
-            this.Text = "AlphakeyboardForm";
-            this.TopMost = true;
+            this.Name = "KoreakeyboardForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "Koreakeyboard";
             this.ResumeLayout(false);
             this.PerformLayout();
 

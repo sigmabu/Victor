@@ -28,6 +28,16 @@ namespace Victor
                                                         tbText.Text = value; // ✅ Enter 시 값 수신
                                                     });
             };
+            tbtext1.Click += (s, e) =>
+            {
+                Form parentForm = this.FindForm();
+                if (parentForm != null)
+                    Virtualkeyboard.ShowKeyboard(VirtualKeyboardType.Korean, tbtext1, parentForm,
+                                                    value =>
+                                                    {
+                                                        tbtext1.Text = value; // ✅ Enter 시 값 수신
+                                                    });
+            };
             tbInt.Click += (s, e) =>
             {
                 Form parentForm = this.FindForm();

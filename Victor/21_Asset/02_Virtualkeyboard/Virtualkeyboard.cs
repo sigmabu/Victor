@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Victor._21_Asset._02_Virtualkeyboard;
 
 namespace Victor
 {
@@ -68,11 +69,11 @@ public enum VirtualKeyboardType
                     keyboard = new FloatkeyboardForm(targetTextBox, owner, OnKeyboardEnter);
                     break;
                 case VirtualKeyboardType.English:
-                    keyboard = new AlphakeyboardForm(targetTextBox, owner, OnKeyboardEnter);
+                    keyboard = new EnglishkeyboardForm(targetTextBox, owner, OnKeyboardEnter);
                     break;
-                //case VirtualKeyboardType.Korean:
-                //    keyboard = new KoreanKeyboardForm(targetTextBox);
-                //    break;
+                case VirtualKeyboardType.Korean:
+                    keyboard = new KoreakeyboardForm(targetTextBox, owner, OnKeyboardEnter);
+                    break;
                 default:
                     MessageBox.Show("지원되지 않는 키보드 타입입니다.");
                     return;
