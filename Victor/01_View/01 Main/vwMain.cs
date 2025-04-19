@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 //using Victor.Logging;
 //using Victor._21_Asset;
@@ -9,12 +10,13 @@ namespace Victor
 {
     public partial class vwMain : UserControl
     {
-        private int m_iPage = 0; 
+        private int m_iPage = 0;
+        private WebcamInterface webcamInterface = new WebcamInterface();
 
         public vwMain()
         {
             InitializeComponent();
-
+            WebCam_Initial();
         }
         public void Open()
         {
@@ -126,7 +128,22 @@ namespace Victor
             }
 
         }
+        private void WebCam_Initial()
+        {
+            List<PictureBox> webcamBoxes = new List<PictureBox>();
+            webcamBoxes.Add(pbWebCam1);
+            webcamBoxes.Add(pbWebCam2);
+            webcamInterface.InitializeDevices(webcamBoxes);
 
+            //Button startBtn = new Button { Text = "Start", Left = 10, Top = 260 };
+            startBtn.Click += (s, e) => webcamInterface.StartAll();
+
+            //Button stopBtn = new Button { Text = "Stop", Left = 100, Top = 260 };
+            stopBtn.Click += (s, e) => webcamInterface.StopAll();
+
+            //this.Controls.Add(startBtn);
+            //this.Controls.Add(stopBtn);
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             //video.Read(mImage);

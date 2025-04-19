@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 
@@ -10,13 +11,15 @@ namespace Victor
     {
         private bool isClickedLevelButton = false;
 
-        //private vwMain              m_vwMain;
-        private vwMain_01           m_vwMain;
+        private vwMain              m_vwMain;
+        //private vwMain_01           m_vwMain;
         private vw00Recipe          m_vwRecipe;
         private vw01RecipeList      m_vwRecipeList;
         private vw02RecipeItem      m_vwRecipeItem = new vw02RecipeItem("tRecipe : " + eRecipGroup.Common.ToString());
         private vwMaint             m_vwMaint;
         //private HardWare.Ctrl_Ajin mCtrlAjin;// = new HardWare.Ctrl_Ajin(GVar.PATH_EQUIP_MotorList);
+
+
 
         public FrmMain()
         {
@@ -39,8 +42,8 @@ namespace Victor
 
             GVar.m_iPage = 0;
 
-            //m_vwMain = new vwMain();
-            m_vwMain = new vwMain_01();
+            m_vwMain = new vwMain();
+            //m_vwMain = new vwMain_01();
             m_vwRecipe  = new vw00Recipe();
             m_vwRecipeList = new vw01RecipeList();
             
@@ -50,6 +53,7 @@ namespace Victor
             Call_PnlBase_Change(mViewPage.nViewMain_111);
         }
 
+        
         private void Click_Exit(object sender, EventArgs e)
         {
             if(false)HW.mMot.Close();// HW 설치되어 있을때 사용하자

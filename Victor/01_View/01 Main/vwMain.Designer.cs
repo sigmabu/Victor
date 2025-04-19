@@ -33,19 +33,23 @@ namespace Victor
             this.components = new System.ComponentModel.Container();
             this.label46 = new System.Windows.Forms.Label();
             this.pnl_Base = new System.Windows.Forms.Panel();
+            this.pbWebCam1 = new System.Windows.Forms.PictureBox();
+            this.tbText = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pnl_Menu = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pbWebCam2 = new System.Windows.Forms.PictureBox();
+            this.startBtn = new System.Windows.Forms.Button();
+            this.stopBtn = new System.Windows.Forms.Button();
             this.roundBorderPanel1 = new MyUserControl.RoundBorderPanel();
             this.roundLabel1 = new MyUserControl.RoundLabel();
             this.orientedTextLabel1 = new Victor.OrientedTextLabel();
             this.ledToggleButton1 = new MyUserControl.LedToggleButton();
             this.roundConerButton1 = new Victor.RoundConerButton();
-            this.tbText = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pnl_Menu = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnl_Base.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWebCam1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWebCam2)).BeginInit();
             this.SuspendLayout();
             // 
             // label46
@@ -65,7 +69,8 @@ namespace Victor
             // 
             this.pnl_Base.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.pnl_Base.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_Base.Controls.Add(this.pictureBox1);
+            this.pnl_Base.Controls.Add(this.pbWebCam2);
+            this.pnl_Base.Controls.Add(this.pbWebCam1);
             this.pnl_Base.Controls.Add(this.roundBorderPanel1);
             this.pnl_Base.Controls.Add(this.roundLabel1);
             this.pnl_Base.Controls.Add(this.orientedTextLabel1);
@@ -73,103 +78,28 @@ namespace Victor
             this.pnl_Base.Controls.Add(this.roundConerButton1);
             this.pnl_Base.Controls.Add(this.tbText);
             this.pnl_Base.Controls.Add(this.button2);
+            this.pnl_Base.Controls.Add(this.stopBtn);
+            this.pnl_Base.Controls.Add(this.startBtn);
             this.pnl_Base.Controls.Add(this.button1);
             this.pnl_Base.Location = new System.Drawing.Point(3, 33);
             this.pnl_Base.Name = "pnl_Base";
             this.pnl_Base.Size = new System.Drawing.Size(1274, 768);
             this.pnl_Base.TabIndex = 453;
             // 
-            // roundBorderPanel1
+            // pbWebCam1
             // 
-            this.roundBorderPanel1.BorderColor = System.Drawing.Color.White;
-            this.roundBorderPanel1.BorderWidth = 5;
-            this.roundBorderPanel1.EnableBorder = true;
-            this.roundBorderPanel1.Fill = false;
-            this.roundBorderPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.roundBorderPanel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.roundBorderPanel1.Location = new System.Drawing.Point(886, 361);
-            this.roundBorderPanel1.Name = "roundBorderPanel1";
-            this.roundBorderPanel1.PaddingSize = 5;
-            this.roundBorderPanel1.Radius = 10;
-            this.roundBorderPanel1.Size = new System.Drawing.Size(218, 72);
-            this.roundBorderPanel1.TabIndex = 8;
-            this.roundBorderPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundBorderPanel1_Paint);
-            // 
-            // roundLabel1
-            // 
-            this.roundLabel1.AutoSize = true;
-            this.roundLabel1.BackSideColor = System.Drawing.Color.LightGray;
-            this.roundLabel1.BorderColor = System.Drawing.Color.DarkGray;
-            this.roundLabel1.BorderWidth = 1;
-            this.roundLabel1.CornerRadius = 10;
-            this.roundLabel1.EnableRoundAtLeftBtm = false;
-            this.roundLabel1.EnableRoundAtLeftTop = false;
-            this.roundLabel1.EnableRoundAtRightBtm = false;
-            this.roundLabel1.EnableRoundAtRightTop = false;
-            this.roundLabel1.Location = new System.Drawing.Point(687, 413);
-            this.roundLabel1.Name = "roundLabel1";
-            this.roundLabel1.Size = new System.Drawing.Size(98, 20);
-            this.roundLabel1.TabIndex = 7;
-            this.roundLabel1.Text = "roundLabel1";
-            this.roundLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // orientedTextLabel1
-            // 
-            this.orientedTextLabel1.AutoSize = true;
-            this.orientedTextLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.orientedTextLabel1.Location = new System.Drawing.Point(687, 365);
-            this.orientedTextLabel1.Name = "orientedTextLabel1";
-            this.orientedTextLabel1.RotationAngle = 0D;
-            this.orientedTextLabel1.Size = new System.Drawing.Size(145, 20);
-            this.orientedTextLabel1.TabIndex = 6;
-            this.orientedTextLabel1.Text = "orientedTextLabel1";
-            this.orientedTextLabel1.TextDirection = Victor.Direction.Clockwise;
-            this.orientedTextLabel1.TextOrientation = Victor.Orientation.Rotate;
-            // 
-            // ledToggleButton1
-            // 
-            this.ledToggleButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.ledToggleButton1.BorderRadius = 1;
-            this.ledToggleButton1.BorderSize = 0;
-            this.ledToggleButton1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
-            this.ledToggleButton1.Location = new System.Drawing.Point(689, 289);
-            this.ledToggleButton1.Name = "ledToggleButton1";
-            this.ledToggleButton1.OffColor = System.Drawing.Color.DarkGray;
-            this.ledToggleButton1.OnColor = System.Drawing.Color.OrangeRed;
-            this.ledToggleButton1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.ledToggleButton1.SetLED = false;
-            this.ledToggleButton1.Size = new System.Drawing.Size(241, 57);
-            this.ledToggleButton1.TabIndex = 5;
-            this.ledToggleButton1.Text = "ledToggleButton1";
-            this.ledToggleButton1.Tickness = 5;
-            this.ledToggleButton1.UseVisualStyleBackColor = true;
-            // 
-            // roundConerButton1
-            // 
-            this.roundConerButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundConerButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.roundConerButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.roundConerButton1.BorderRadius = 10;
-            this.roundConerButton1.BorderSize = 0;
-            this.roundConerButton1.FlatAppearance.BorderSize = 0;
-            this.roundConerButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundConerButton1.ForeColor = System.Drawing.Color.White;
-            this.roundConerButton1.Location = new System.Drawing.Point(960, 295);
-            this.roundConerButton1.Name = "roundConerButton1";
-            this.roundConerButton1.ShiftString = "";
-            this.roundConerButton1.ShiftStringColor = System.Drawing.Color.Aqua;
-            this.roundConerButton1.Size = new System.Drawing.Size(144, 40);
-            this.roundConerButton1.TabIndex = 4;
-            this.roundConerButton1.Text = "roundConerButton1";
-            this.roundConerButton1.TextColor = System.Drawing.Color.White;
-            this.roundConerButton1.UseVisualStyleBackColor = false;
-            this.roundConerButton1.Click += new System.EventHandler(this.roundConerButton1_Click);
+            this.pbWebCam1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pbWebCam1.Location = new System.Drawing.Point(21, 447);
+            this.pbWebCam1.Name = "pbWebCam1";
+            this.pbWebCam1.Size = new System.Drawing.Size(304, 241);
+            this.pbWebCam1.TabIndex = 9;
+            this.pbWebCam1.TabStop = false;
             // 
             // tbText
             // 
             this.tbText.Location = new System.Drawing.Point(371, 102);
             this.tbText.Name = "tbText";
-            this.tbText.Size = new System.Drawing.Size(788, 26);
+            this.tbText.Size = new System.Drawing.Size(788, 35);
             this.tbText.TabIndex = 3;
             this.tbText.Text = "InText";
             this.tbText.Click += new System.EventHandler(this.tbTest_Click);
@@ -215,18 +145,139 @@ namespace Victor
             this.pnl_Menu.Size = new System.Drawing.Size(1280, 804);
             this.pnl_Menu.TabIndex = 455;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(67, 295);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(304, 241);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // timer1
             // 
             this.timer1.Interval = 33;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pbWebCam2
+            // 
+            this.pbWebCam2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pbWebCam2.Location = new System.Drawing.Point(331, 447);
+            this.pbWebCam2.Name = "pbWebCam2";
+            this.pbWebCam2.Size = new System.Drawing.Size(304, 241);
+            this.pbWebCam2.TabIndex = 9;
+            this.pbWebCam2.TabStop = false;
+            // 
+            // startBtn
+            // 
+            this.startBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.startBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.startBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.startBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.startBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.startBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.startBtn.Location = new System.Drawing.Point(69, 365);
+            this.startBtn.Name = "startBtn";
+            this.startBtn.Size = new System.Drawing.Size(180, 50);
+            this.startBtn.TabIndex = 1;
+            this.startBtn.Tag = "1";
+            this.startBtn.Text = "Start";
+            this.startBtn.UseVisualStyleBackColor = false;
+            this.startBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // stopBtn
+            // 
+            this.stopBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.stopBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.stopBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stopBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.stopBtn.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.stopBtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.stopBtn.Location = new System.Drawing.Point(255, 365);
+            this.stopBtn.Name = "stopBtn";
+            this.stopBtn.Size = new System.Drawing.Size(180, 50);
+            this.stopBtn.TabIndex = 1;
+            this.stopBtn.Tag = "1";
+            this.stopBtn.Text = "Stop";
+            this.stopBtn.UseVisualStyleBackColor = false;
+            this.stopBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // roundBorderPanel1
+            // 
+            this.roundBorderPanel1.BorderColor = System.Drawing.Color.White;
+            this.roundBorderPanel1.BorderWidth = 5;
+            this.roundBorderPanel1.EnableBorder = true;
+            this.roundBorderPanel1.Fill = false;
+            this.roundBorderPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.roundBorderPanel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.roundBorderPanel1.Location = new System.Drawing.Point(886, 361);
+            this.roundBorderPanel1.Name = "roundBorderPanel1";
+            this.roundBorderPanel1.PaddingSize = 5;
+            this.roundBorderPanel1.Radius = 10;
+            this.roundBorderPanel1.Size = new System.Drawing.Size(218, 72);
+            this.roundBorderPanel1.TabIndex = 8;
+            this.roundBorderPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundBorderPanel1_Paint);
+            // 
+            // roundLabel1
+            // 
+            this.roundLabel1.AutoSize = true;
+            this.roundLabel1.BackSideColor = System.Drawing.Color.LightGray;
+            this.roundLabel1.BorderColor = System.Drawing.Color.DarkGray;
+            this.roundLabel1.BorderWidth = 1;
+            this.roundLabel1.CornerRadius = 10;
+            this.roundLabel1.EnableRoundAtLeftBtm = false;
+            this.roundLabel1.EnableRoundAtLeftTop = false;
+            this.roundLabel1.EnableRoundAtRightBtm = false;
+            this.roundLabel1.EnableRoundAtRightTop = false;
+            this.roundLabel1.Location = new System.Drawing.Point(687, 413);
+            this.roundLabel1.Name = "roundLabel1";
+            this.roundLabel1.Size = new System.Drawing.Size(148, 29);
+            this.roundLabel1.TabIndex = 7;
+            this.roundLabel1.Text = "roundLabel1";
+            this.roundLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // orientedTextLabel1
+            // 
+            this.orientedTextLabel1.AutoSize = true;
+            this.orientedTextLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.orientedTextLabel1.Location = new System.Drawing.Point(687, 365);
+            this.orientedTextLabel1.Name = "orientedTextLabel1";
+            this.orientedTextLabel1.RotationAngle = 0D;
+            this.orientedTextLabel1.Size = new System.Drawing.Size(222, 29);
+            this.orientedTextLabel1.TabIndex = 6;
+            this.orientedTextLabel1.Text = "orientedTextLabel1";
+            this.orientedTextLabel1.TextDirection = Victor.Direction.Clockwise;
+            this.orientedTextLabel1.TextOrientation = Victor.Orientation.Rotate;
+            // 
+            // ledToggleButton1
+            // 
+            this.ledToggleButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.ledToggleButton1.BorderRadius = 1;
+            this.ledToggleButton1.BorderSize = 0;
+            this.ledToggleButton1.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold);
+            this.ledToggleButton1.Location = new System.Drawing.Point(689, 289);
+            this.ledToggleButton1.Name = "ledToggleButton1";
+            this.ledToggleButton1.OffColor = System.Drawing.Color.DarkGray;
+            this.ledToggleButton1.OnColor = System.Drawing.Color.OrangeRed;
+            this.ledToggleButton1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.ledToggleButton1.SetLED = false;
+            this.ledToggleButton1.Size = new System.Drawing.Size(241, 57);
+            this.ledToggleButton1.TabIndex = 5;
+            this.ledToggleButton1.Text = "ledToggleButton1";
+            this.ledToggleButton1.Tickness = 5;
+            this.ledToggleButton1.UseVisualStyleBackColor = true;
+            // 
+            // roundConerButton1
+            // 
+            this.roundConerButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundConerButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.roundConerButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.roundConerButton1.BorderRadius = 10;
+            this.roundConerButton1.BorderSize = 0;
+            this.roundConerButton1.FlatAppearance.BorderSize = 0;
+            this.roundConerButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundConerButton1.ForeColor = System.Drawing.Color.White;
+            this.roundConerButton1.Location = new System.Drawing.Point(960, 295);
+            this.roundConerButton1.Name = "roundConerButton1";
+            this.roundConerButton1.ShiftString = "";
+            this.roundConerButton1.ShiftStringColor = System.Drawing.Color.Aqua;
+            this.roundConerButton1.Size = new System.Drawing.Size(144, 40);
+            this.roundConerButton1.TabIndex = 4;
+            this.roundConerButton1.Text = "roundConerButton1";
+            this.roundConerButton1.TextColor = System.Drawing.Color.White;
+            this.roundConerButton1.UseVisualStyleBackColor = false;
+            this.roundConerButton1.Click += new System.EventHandler(this.roundConerButton1_Click);
             // 
             // vwMain
             // 
@@ -243,7 +294,8 @@ namespace Victor
             this.Load += new System.EventHandler(this.vwMain_Load);
             this.pnl_Base.ResumeLayout(false);
             this.pnl_Base.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWebCam1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbWebCam2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,7 +313,10 @@ namespace Victor
         private MyUserControl.RoundLabel roundLabel1;
         private Victor.OrientedTextLabel orientedTextLabel1;
         private MyUserControl.LedToggleButton ledToggleButton1;
-        private PictureBox pictureBox1;
+        private PictureBox pbWebCam1;
         private Timer timer1;
+        private PictureBox pbWebCam2;
+        private Button stopBtn;
+        private Button startBtn;
     }
 }
